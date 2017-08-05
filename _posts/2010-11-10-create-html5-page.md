@@ -14,7 +14,7 @@ This is a very simple tutorial. It won’t teach you how to use ,  or any other 
 Cut-and-paste the code below into your favorite web editor:
 
  
-<pre><code class="language-javascript">
+<pre><code class="language-markup">
 <!DOCTYPE html>
 <html>
   <head>
