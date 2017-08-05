@@ -15,7 +15,7 @@ layout: default
   {% endfor %}
 
   <ul class="post-list">
-    {% for post in site.posts offset:1 limit:4%}
+    {% for post in site.posts offset:1 limit:9%}
       <li>
         <h2>
           <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
