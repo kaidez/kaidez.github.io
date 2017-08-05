@@ -9,7 +9,9 @@
   "scripts": {
     "devserver": "bundle exec jekyll serve"
   },
-  "dependencies": {},
+  "dependencies": {
+    "webpack-concat-plugin": "^1.3.0"
+  },
   "devDependencies": {
     "webpack": "^3.4.1"
   }

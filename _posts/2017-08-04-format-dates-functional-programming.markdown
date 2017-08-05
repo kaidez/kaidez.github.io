@@ -3,6 +3,7 @@ layout: post
 title:  "Format Dates with Functional Programming"
 date:   2017-08-04 22:07:59 -0400
 categories: coding tips
+permalink: /format-dates-functional-programming/
 ---
 The more React code I write, the more of a functional programming "guru" I should be. React demands it but it's a generally a good JavaScript skill to have.
 
