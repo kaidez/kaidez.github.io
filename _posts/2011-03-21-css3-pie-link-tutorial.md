@@ -31,7 +31,7 @@ This tutorial will first create code that’s not friendly for older versions of
 5) Using the web editor of your choice, create an html file called “PIEpage.html” and save it to your main “PIETest” folder.
 6) Copy and paste the code below into “PIEpage.html”:
 
-{% prism markup %}
+<pre><code class="language-markup">
 <!DOCTYPE html>
 <html lang="en">
 
@@ -64,18 +64,18 @@ This tutorial will first create code that’s not friendly for older versions of
     <a href="#" class="links">Test Link</a>
   </body>
 </html>
-{% endprism %}
+</code></pre>
 
 7).  Let’s take a moment to review the stuff in between the  tags:
-{% prism css %}
+<pre><code class="language-css">
 body {
   background-color:#f43a3a;
 }
-{% endprism %}
+</code></pre>
 
 We’re giving the page an orange-ish red background so we can see the transparencies we’re about to create.
 
-{% prism css %}
+<pre><code class="language-css">
 a.links {
   padding: 5px 10px;
   color:#fff;
@@ -85,7 +85,7 @@ a.links {
   -o-border-radius: 14px;
   border-radius: 14px;
 }
-{% endprism %}
+</code></pre>
 
 Any page link with a class name of “links” will have 5 pixels of space on the top and bottom and have 10 pixels of space on the left and right. The link’s text color will be white.
 
@@ -98,11 +98,11 @@ Then we have to add the rounded corners for the background by styling the browse
 *   the -o- vendor prefix targets the Opera browser.
 *   no vendor prefix mentioned as it appears in line 8 is meant to target the other browsers. In this case, it refers to Internet Explorer.
 
-{% prism css %}
+<pre><code class="language-css">
 a.links:hover {
   background: rgba(0, 0, 0, 0.4);
 }
-{% endprism %}
+</code></pre>
 
 
 Any time a link with a class of “links” gets a mouseover, it should shift to the rgba settings we created. In this case, it should be black and have same transparency value as the non-hover CSS class above.
@@ -112,16 +112,16 @@ Any time a link with a class of “links” gets a mouseover, it should shift to
 
 We create a link with a class name of “links” so it responds based on the CSS code above when rolled over as well as rolled off.
 
-9) If you review PIEpage.html in Chrome, it should look like this:  
+9) If you review PIEpage.html in Chrome, it should look like this:
 ![][6]
 
-But if you review it in Internet Explorer 8 or lower, it should look like this:  
+But if you review it in Internet Explorer 8 or lower, it should look like this:
 ![][7]
 
-CSS3 PIE will neaten things up for us.  
+CSS3 PIE will neaten things up for us.
 
 10)   Add code to the a.links class so it looks like this:
-{% prism css %}  
+<pre><code class="language-css">
 a.links {
   padding: 5px 10px;
   color:#fff;
@@ -131,24 +131,24 @@ a.links {
   -moz-border-radius: 14px;
   -o-border-radius: 14px;
   border-radius: 14px;
-  behavior: url(PIEFiles/PIE.htc);  
+  behavior: url(PIEFiles/PIE.htc);
 }
-{% endprism %}
+</code></pre>
 The first line of code adds the -pie- prefix to the background, allowing the CSS3 PIE code to attach our CSS3 rgba values to the background when viewed in older versions of IE.
 
-The second line of code attaches the CSS3 PIE library to our page, giving the page CSS3 functionality. It also forces the rounded corners to appear in IE.  
+The second line of code attaches the CSS3 PIE library to our page, giving the page CSS3 functionality. It also forces the rounded corners to appear in IE.
 
 11)   Now, we add the -pie- prefix to the background of our hover class, allowing the CSS3 PIE code to attach our CSS3 rgba values to the background when viewed in older versions of IE.
-{% prism css %}
+<pre><code class="language-css">
 a.links:hover {
   background: rgba(0, 0, 0, 0.4);
   -pie-background: rgba(0, 0, 0, 0.4);
 }
-{% endprism %}
+</code></pre>
 
 12) So our final code should look like this:
 
-{% prism css %}  
+<pre><code class="language-css">
 body {
   background-color:#f43a3a;
 }
@@ -169,7 +169,7 @@ a.links:hover {
   background: rgba(0, 0, 0, 0.4);
   -pie-background: rgba(0, 0, 0, 0.4);
 }
-{% endprism %}
+</code></pre>
 
 And with that, everything works in all browsers, including IE8, IE7, and yes, IE6.
 
@@ -178,7 +178,7 @@ That’s it but let me make a few points…
 *   CSS3 PIE is in beta as of this article and still in its growing period, so you should keep yourself up to date in terms of its development. [Following them on Twitter][8] is a great idea!
 *   Since IE9+ currently supports all the CSS3 features that CSS3 PIE currently supports, CSS3 PIE is disabled in IE9. At least, for now.
 *   Remember that CSS3 PIE targets IE only. Older versions of Firefox and the Webkit browsers have their own issues in terms of rendering rounded corners and transparencies…this tutorial won’t fix any of them.
-*   In [a previous post about my HTML5 Project][9], I said that I may or may not use CSS3 PIE in the project as it may conflict with Modernizr, which I’ll definitely be using. There was a point in developing this tutorial where I used both CSS3 PIE and Modernizr-the latter was obviously removed in the end but I did perform some browser checks before getting rid of it.  
+*   In [a previous post about my HTML5 Project][9], I said that I may or may not use CSS3 PIE in the project as it may conflict with Modernizr, which I’ll definitely be using. There was a point in developing this tutorial where I used both CSS3 PIE and Modernizr-the latter was obviously removed in the end but I did perform some browser checks before getting rid of it.
 
   In the scope of this tutorial, creating a rounded corner link with transparency, there were no issues. There may be other instances where using these two libraries together causes issues, but the final code result created in this tutorial isn’t one of them.
 

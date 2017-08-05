@@ -75,19 +75,19 @@ Again, I'm a fan of how well Bootstrap does responsive web design and based my L
 
 So since Bootstrap has a media query called `@media (min-width: 1200px)`, I have a file called `min-width-1200.less` that contains the following code:
 
-{% prism css %}
+<pre><code class="language-css">
 @media (min-width: 1200px) {
 
 }
-{% endprism %}
+</code></pre>
 
 And since it also has a media query called `@media screen and (min-width: 768px)`, I have a file called `screen-and-min-width-768.less` that contains the following code:
 
-{% prism css %}
+<pre><code class="language-css">
 @media screen and (min-width: 768px) {
 
 }
-{% endprism %}
+</code></pre>
 
 You get the idea...
 
@@ -131,7 +131,7 @@ The end result of all this is `kdz`: a Node tool that lets me scaffold  a projec
 
 After you install it, typing `kdz` from anywhere in the terminal runs the `--help` command and outputs this:
 
-{% prism markup %}
+<pre><code class="language-markup">
   Usage: "kdz" [options] [command]
 
 
@@ -149,7 +149,7 @@ After you install it, typing `kdz` from anywhere in the terminal runs the `--hel
     -l, --less       download LESS files in "css-build"
     -s, --scss       download Sass files in "css-build"
     -t, --test       do a test scaffold in "test-build"
-{% endprism %}
+</code></pre>
 
 Just two commands for now...`app` and `dt`:
 
@@ -162,7 +162,7 @@ Just two commands for now...`app` and `dt`:
   * SPA-like `Gruntfile.js`, `gulpfile.js` and `package.json` files are downloaded from the `source-spa` directory in the `kdz` repo.
 * The final build looks like this:
 
-{% prism markup %}
+<pre><code class="language-markup">
 ├── build
 |   ├── css
 |   └── js
@@ -178,7 +178,7 @@ Just two commands for now...`app` and `dt`:
 ├── gulpfile.js
 ├── package.json
 └── STYLEGUIDE.md
-{% endprism %}
+</code></pre>
 
 * If the `--test flag` is passed to `kdz app`, a `test-build` folder is created, then a test scaffold goes into that folder. `kdz dt` is a quick way of deleting `test-build` after the testing is done and was used for `kdz` development purposes only. It plays no role in getting a web dev project done.
 
@@ -191,7 +191,7 @@ Along with `--test` and the standard `--help` and `--version`, there are a small
     * a `functions.php` file is downloaded.
 *  The final build looks like this:
 
-{% prism markup %}
+<pre><code class="language-markup">
 
 ├── coffee
 |   └── main.coffee
@@ -205,13 +205,13 @@ Along with `--test` and the standard `--help` and `--version`, there are a small
 ├── gulpfile.js
 ├── package.json
 └── STYLEGUIDE.md
-{% endprism %}
+</code></pre>
 
 * the `--gitignore` option downloads a `.gitignore` file from `source-spa` to the root folder by default. But if the `--wordpress` option is passed, `.gitignore` will be WordPress-specific and downloaded from `source-wordpress`.
 
 * the `--less` option downloads LESS files from `source-spa` to `css-build` and `css-build/imports` by default. But if the `--wordpress` option is passed, the LESS files will be WordPress-specific and downloaded from `source-wordpress`. As mentioned, the `.less` files are named based on Bootstrap-defined media queries so the final build would look like this:
 
-{% prism markup %}
+<pre><code class="language-markup">
 css-build
  ├── style.less
  └── imports
@@ -234,9 +234,9 @@ css-build
      ├── screen-webkit-min-device-pixel-ratio-0.less
      ├── screen-webkit-min-device-pixel-ratio-0
      └── variables.less
-{% endprism %}
+</code></pre>
 
-* the `--scss` option does pretty much what `--less` does, except it downloads Sass files from `source-spa` to `css-build` and `css-build/imports` by default. But if the `--wordpress` option is passed, the Sass files will be WordPress-specific and downloaded from `source-wordpress`.  
+* the `--scss` option does pretty much what `--less` does, except it downloads Sass files from `source-spa` to `css-build` and `css-build/imports` by default. But if the `--wordpress` option is passed, the Sass files will be WordPress-specific and downloaded from `source-wordpress`.
 
 There are slight variations among the LESS and Sass builds based on my self-imposed rules. For example: the `globals.less` file exists for a reason and although there's a `for.less` file, there's no `for.scss` file.
 

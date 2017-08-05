@@ -9,7 +9,7 @@ category: personal
 cat-name: "Personal"
 tags: [javascript, conference, kai]
 ---
-I have to thank my father for getting me into computers. He sampled a lot of personal PCs in the early eighties, from the Kaypro to the Apple II…eventually settling on the Apple Macintosh (what we now call the Mac). I paid attention and followed his lead, resulting in the career that I have now. 
+I have to thank my father for getting me into computers. He sampled a lot of personal PCs in the early eighties, from the Kaypro to the Apple II…eventually settling on the Apple Macintosh (what we now call the Mac). I paid attention and followed his lead, resulting in the career that I have now.
 
 In turn, my son *might* follow my lead and strive for a career in web design and development, but I’m fine if he doesn’t. Ask any parent what they want for their kid and most will answer, “I want them to be happy and healthy.” I’ve heartily adopted this philosophy and while I’ll make sure that he’s afforded every opportunity to succeed, my son could be a janitor for all I care, just so long as he possesses those two characteristics.
 
@@ -21,9 +21,9 @@ If my son wants to do what dear-old dad does for a living, I’ve realized that 
 
 This is the least tech-related tip, but also the most important…
 
-A common belief among high school students is that there’s no need to take classes which have no bearing on their career aspirations. “I want to be a doctor, so how is my French class helping me achieve that goal?” they’ll say, for example. Or, “What’s the point of my passing math class since I want to be a football player?” 
+A common belief among high school students is that there’s no need to take classes which have no bearing on their career aspirations. “I want to be a doctor, so how is my French class helping me achieve that goal?” they’ll say, for example. Or, “What’s the point of my passing math class since I want to be a football player?”
 
-Valid questions that share one easy answer… 
+Valid questions that share one easy answer…
 
 A good doctor does more than perform surgeries. They need to review blood work, memorize the medical histories for ten or more people at a time, teach interns and residents while working…surgery is only part of the job. And do you really want to be a football player, or **any** type of athlete for that matter, that doesn’t have adequate math skills? How will you manage your money if you make it big? [Read this Sports Illustrated article][1] about athletes that didn’t take the time to manage their money and note the end results.
 
@@ -37,7 +37,7 @@ HTML is the web programming language used to create a website’s basic structur
 
 ### 3. After You Learn HTML, Learn About Things That Excites You
 
-I got into web design and development by first learning Flash-an application for creating web-based animation. Flash thrilled me to the point that I couldn’t wait to learn other things like PhotoShop and CSS. 
+I got into web design and development by first learning Flash-an application for creating web-based animation. Flash thrilled me to the point that I couldn’t wait to learn other things like PhotoShop and CSS.
 
 There were certainly things I had to learn but if I didn’t mix that up with things I wanted to learn, I can’t say for sure if I would have pursued a web design/development career.
 
@@ -53,23 +53,23 @@ Take note: as of this article, mobile web use is on the rise. Mobile sites are o
 
 If you’re aiming to be a developer instead of a designer, strong math skills will take you a long way. Web programming is primarily based on **conditional math**, a series of “if-then-else” statements. For example: if you wanted to write a command to determine what days you go to school, it would look something like this:
 
-{% prism javascript %}
+<pre><code class="language-javascript">
  if (dayOfWeek == "Saturday") {
    stayHome();
  } else {
 if (dayOfWeek == "Sunday") {
   stayHome();
-} else { 
+} else {
   goToSchool();
 }
-{% endprism %}
-    
+</code></pre>
+
 
 By no means is this the most optimal code. I would need to “declare a variable” in order for this to work and would also need to load all of the days of the week into an “array.” I could also have written less code for determining the days and, if I was really ambitious, could have written code that checked for school holidays and the summer break. But this is still a good example of math-based web code. And the more math you understand, the more this block of code makes sense on its own.
 
 ### 6. If Your School Doesn’t Have The Proper Web Learning Tools, Take The Initiative And Help To Bring Them In
 
-Almost all of the major software/hardware companies (Adobe, Microsoft and Apple included) offer their goods to educators at a substantial discount. As of this writing, Adobe PhotoShop retails for $500 but a teacher can purchase it for less than $200 before tax and shipping. Share this information with your teachers and see if they have the funds to bring them in. 
+Almost all of the major software/hardware companies (Adobe, Microsoft and Apple included) offer their goods to educators at a substantial discount. As of this writing, Adobe PhotoShop retails for $500 but a teacher can purchase it for less than $200 before tax and shipping. Share this information with your teachers and see if they have the funds to bring them in.
 
 Your teachers should also check out [lynda.com][2]. It’s an online training library that offers TONS of courses on web design and development. PhotoShop, JavaScript, WordPress, HTML…the list goes on. Maybe your teachers can bring that into your school. ***(Note: I have an affiliate program with lynda.com)***
 
@@ -89,7 +89,7 @@ An efficiently-designed website needs to be appealing enough to 1) contribute to
 
 In this case, usability means understanding how people act and react when looking at a website, then designing a website that yields positive results based on that understanding. Knowing how to crop images in PhotoShop and write HTML code won’t help you with any this.
 
-Web design usability has roots in traditional advertising design concepts so in this case, a traditional art school with a good web design program is your best bet. Give the Rhode Island School of Design or the School of Visual Arts in New York a look. Washington, DC’s Corcoran School of Art and the California Institute of the Arts (CalArts) are also worth checking out. 
+Web design usability has roots in traditional advertising design concepts so in this case, a traditional art school with a good web design program is your best bet. Give the Rhode Island School of Design or the School of Visual Arts in New York a look. Washington, DC’s Corcoran School of Art and the California Institute of the Arts (CalArts) are also worth checking out.
 
 ### 9. See If You Can Intern Somewhere Over The Summer
 

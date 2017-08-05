@@ -76,11 +76,11 @@ Tipue needs four separate JS files to work and should be listed in the following
 In the past, setting up this functionality usually meant placing all these files in `<script>` tags on your HTML page in the order above, then putting your custom Tipue code somewhere below them. RequireJS allows for an easier process.
 
 First, we  add the only `<script>` tag we need...it should go as close to the bottom of the page as possible:
-{% prism markup %}
+<pre><code class="language-markup">
 <script data-main="scripts/config" src="scripts/require.js"></script>
-{% endprism %}
+</code></pre>
 
-The info in the `data-main` attribute refers to a file called `config.js` which contains the configurations. The `.js` is purposely left off  because RequireJS *always* assume that the info referenced in this attribute is a JavaScript file.  
+The info in the `data-main` attribute refers to a file called `config.js` which contains the configurations. The `.js` is purposely left off  because RequireJS *always* assume that the info referenced in this attribute is a JavaScript file.
 
 `require.js` refers to the file containing the core RequireJS code.
 
@@ -88,7 +88,7 @@ Both files are in a directory called `scripts`.
 
 The configurations in our `config.js` file look like this:
 
-{% prism javascript %}
+<pre><code class="language-javascript">
 // We're only talking about creating one module here but this is
 // the config setup for creating multiple modules. This is
 // what's being discussed because it's common practice to use
@@ -116,52 +116,52 @@ requirejs.config({
     }
   }
 });
-{% endprism %}
+</code></pre>
 
 Let's break all this down...
 
-{% prism javascript %}
+<pre><code class="language-javascript">
 requirejs.config({
 ...
 });
-{% endprism %}
+</code></pre>
 
 We wrap our code in a JavaScript object that will pass our configurations to the core RequireJS code.
 
-{% prism javascript %}
+<pre><code class="language-javascript">
 baseUrl: "/",
-{% endprism %}
+</code></pre>
 
 `baseURL` represents a relative reference to the location of all the JS files that RequireJS must manage. In this case, the location is the `scripts` folder.
 
 *(Side note: I'm using a very simplified file structure in order to keep this post from being too long, but the RequireJS docs do outline some best practices in terms of organizing your code.  The [Load JavaScript Files section in the RequireJS docs](http://requirejs.org/docs/api.html#jsfiles "Go to the Load JavaScript Files section in the RequireJS docs") is the place to read up on this.)*
-{% prism javascript %}
+<pre><code class="language-javascript">
 deps: ["search"],
-{% endprism %}
+</code></pre>
 
 `deps` is an array of all the dependencies for our site or app.  The dependencies are the code modules that we talked about and are really just `.js` files.  Therefore, the `search` that's mentioned in the array is referring to a file called `search.js` and will contain the code needed to make Tipue work on the site.  We'll get to that code shortly and to be clear, `search.js` is located in the `scripts` folder.
 
 
-{% prism javascript %}
+<pre><code class="language-javascript">
 paths: {
   jquery: "libs/jquery.min", // v.1.10.2
   tipue: "libs/tipuesearch.min",
   tipueset: "libs/tipuesearch_set",
   tipuesetContent: "libs/tipuesearch_content"
 },
-{% endprism %}
+</code></pre>
 `paths` is a JavaScript object that lists the dependencies for the items listed in the `deps` array...you can think of them as the "dependencies of the dependencies". These files are located in a directory called `libs` that's in our `scripts` folder.
 
 As you can see, these are the previously-discussed four files that Tipue needs to function properly on our website. Also note that we're using jQuery 1.10.2: this will be important when we start talking about the last part of the configs.
 
-{% prism javascript %}
+<pre><code class="language-javascript">
 shim: {
   tipue: {
     deps: ["jquery"],
     exports: "tipue"
   }
 }
-{% endprism %}
+</code></pre>
 
 As previously-mentioned, RequireJS is based on the AMD spec which defines a code pattern for loading JS files asynchronously. JavaScript files containing this pattern are said to be "AMD-compliant."
 
@@ -177,7 +177,7 @@ jQuery also doesn't need to be shimmed in. This is because we're using version 1
 
 Now that our configs are set, we need to create the code that runs our Tipue search functionality. This goes into the `search.js` file that we referred to earlier in our `deps` array and looks like this:
 
-{% prism javascript %}
+<pre><code class="language-javascript">
 define(["jquery","tipuesetContent","tipueset","tipue"], function($, tipuesetContent, tipueset, tipue) {
 
   $("#tipue_search_input").tipuesearch({
@@ -187,7 +187,7 @@ define(["jquery","tipuesetContent","tipueset","tipue"], function($, tipuesetCont
   });
 
 });
-{% endprism %}
+</code></pre>
 
 The `define()` method first defines all the code's dependencies in the array, then passes them as parameters for use by a callback function. Note that they're listed in the order outlined above: RequireJS will load things in this order.
 
@@ -212,13 +212,13 @@ While TwentyThirteen preloads jQuery and other JavaScript files into the site's 
 
 As mentioned in the beginning, a default WordPress install contains jQuery other internal JS files. So I figured that I would just bring jQuery into my RequireJS configs by pointing to where WordPress placed it during install via the `paths` object:
 
-{% prism javascript %}
+<pre><code class="language-javascript">
 paths: {
   // This ignores the 'baseURL' setting, but works well for Wordpress
   http://kaidez.com/wp-includes/js/jquery/jquery.js,
   ...
 }
-{% endprism %}
+</code></pre>
 This worked fine for my RequireJS setup but creates potential future problems inside of WordPress.
 <a name="load-js-into-wordpress"></a>
 ## The RIGHT Way To Load jQuery Into WordPress
@@ -235,7 +235,7 @@ As a result, if I installed a WordPress plugin requiring jQuery, WP would load i
 <a name="jquery-requirejs-wordpress"></a>
 ## How To Use jQuery, RequireJS &amp; WordPress Together
 With the 3.5.2/ TwentyTwelve setup, the safest thing to do was to use `wp_enqueue_script` to bring jQuery into the HTML. The code for this would be placed in the just-mentioned `functions.php` file and would look like this:
-{% prism markup %}
+<pre><code class="language-markup">
 <?php
 function my_scripts_method() {
   wp_enqueue_script( 'jquery' );
@@ -243,25 +243,25 @@ function my_scripts_method() {
 
 add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
 ?>
-{% endprism %}
+</code></pre>
 
 This loaded jQuery onto my page while preventing jQuery duplicates from loading, but I wasn't sure how to integrate this setup with my RequireJS functionality.
 
 I surfed the web awhile looking for an answer, eventually posting something on RequireJS' GitHub Issue Tracker. It was at that point that RequireJS creator [James Burke gave me an answer](https://github.com/jrburke/requirejs/issues/622 "James Burke shows how to use RequireJS inside WordPress") so simple that to this day, I'm kicking myself for not figuring it out on my own:
 
 > *"...if jquery is already in the page, what you could do is detect for it before doing [a] require() loading and set it up as the 'jquery' module value:*
-{% prism javascript %}
+<pre><code class="language-javascript">
 if (typeof jQuery === 'function') {
   define('jquery', function () { return jQuery; });
 }
 //Now require your code:
 require(['app'], function (){});
-{% endprism %}
+</code></pre>
 > *This assumes jquery was loaded before the require call. If so, then this approach means requirejs will not load another version of jquery."*
 
 Yup...kicking myself for missing the obvious. Had I stuck with WordPress, I would apply `wp_enqueue_script` to jQuery in using the method above, then setup `search.js` like this:
 
-{% prism javascript %}
+<pre><code class="language-javascript">
 if (typeof jQuery === 'function') {
   define('jquery', function () { return jQuery; });
 }
@@ -275,7 +275,7 @@ define(["jquery","tipuesetContent","tipueset","tipue"], function($, tipuesetCont
   });
 
 });
-{% endprism %}
+</code></pre>
 
 I tested this inside of WordPress and it worked like a charm, but I had to get jQuery on the page via `wp_enqueue_script`. This meant that jQuery would be placed in a `<script>` tag on my page and be excluded from my final RequireJS build.
 

@@ -31,95 +31,95 @@ Let's get started on all this guru stuff by walk through the proper methods for 
 A file that's already been committed to Git can only be deleted from a repo via the command line. Trying to delete repo files by dragging them to the Trash/Recycle Bin (or something similar) is one of the most common Git newbie mistakes.
 
 If you moved a committed file named `oldFileAlreadyDeleted.html` to the Trash, your terminal would return this message when you type `git status`:
-{% prism markup %}
+<pre><code class="language-markup">
 # Changes not staged for commit:
 #   (use "git add/rm <file>..." to update what will be committed)
 #   (use "git checkout -- <file>..." to discard changes in working directory)
 #
 #   deleted:    oldFileAlreadyDeleted.html
-{% endprism %}
+</code></pre>
 
 You now have to delete it with Git via the command line like this:
 
-{% prism markup %}
+<pre><code class="language-markup">
 $ git rm oldFileAlreadyDeleted.html
-{% endprism %}
+</code></pre>
 
 Then commit the delete with a proper `git commit` message:
-{% prism markup %}
+<pre><code class="language-markup">
 $ git commit -m 'remove oldFileAlreadyDeleted.html'
-{% endprism %}
+</code></pre>
 
-If `oldFileAlreadyDeleted.html` is viewable on GitHub, doing a subsequent `git push` will remove it:  
-{% prism markup %}
+If `oldFileAlreadyDeleted.html` is viewable on GitHub, doing a subsequent `git push` will remove it:
+<pre><code class="language-markup">
 $ git push all
-{% endprism %}
+</code></pre>
 
 <a name="how-to-delete-files"></a>
 ## How you should *always* delete files from Git
 Moving forward, any already-committed files  you want to remove from Git and GitHub should be done so using the above command sequence.  For example, if you want to delete a file called `someCommitedFile.html`, you would do so like this:
 
-{% prism markup %}
+<pre><code class="language-markup">
 $ git rm someCommittedFile.html
-{% endprism %}
+</code></pre>
 
 Then write a `git commit` message:
 
-{% prism markup %}
+<pre><code class="language-markup">
 $ git commit -m 'remove someCommittedFile.html'
-{% endprism %}
+</code></pre>
 
-And if `someCommittedFile.html` is viewable on GitHub, doing a `git push` will remove it:  
-{% prism markup %}
+And if `someCommittedFile.html` is viewable on GitHub, doing a `git push` will remove it:
+<pre><code class="language-markup">
 $ git push all
-{% endprism %}
+</code></pre>
 
 <a name="delete-uncommitted-files"></a>
 ## How to delete files that are NOT checked into Git
 Say you want to delete `oldFile.html` and you get this message when you typed `git status`:
-{% prism markup %}
+<pre><code class="language-markup">
 # Untracked files:
 #   (use "git add <file>..." to include in what will be committed)
 #
 #   oldFile.html
-{% endprism %}
+</code></pre>
 
 This means that `oldFile.html` hasn't been checked into Git yet, so just use `rm` to delete it and you're done:
 
-{% prism markup %}
+<pre><code class="language-markup">
 $ rm oldFile.html
-{% endprism %}
+</code></pre>
 
 <a name="delete-folders"></a>
 ## How to delete folders
 __Scenario 1:__ An empty folder (let's call it `someFolder`) cannot be tracked by Git, so it can't be checked into Git as well. It also can't be pushed up to GitHub.
 
 __Scenario 2:__ Git can track the folder once it has content. But if `someFolder` hasn't been committed to the repo yet, you get this message after typing `git status`:
-{% prism markup %}
+<pre><code class="language-markup">
 # Untracked files:
 #   (use "git add <file>..." to include in what will be committed)
 #
 #   someFolder/
-{% endprism %}
+</code></pre>
 
 In either of these two scenarios, `someFolder` can be deleted using the generic `rm` command though, which looks like this:
-{% prism markup %}
+<pre><code class="language-markup">
 $ rm -rf someFolder
-{% endprism %}
+</code></pre>
 
 After a folder has been committed to your repo, *that's* when you can use Git to delete it, and at any time. You use the same remove/commit/push sequence previously discussed:
 
-{% prism markup %}
+<pre><code class="language-markup">
 $ git rm someFolder
-{% endprism %}
+</code></pre>
 
-{% prism markup %}
+<pre><code class="language-markup">
 $ git commit -m 'remove someFolder'
-{% endprism %}
+</code></pre>
 
-{% prism markup %}
+<pre><code class="language-markup">
 $ git push
-{% endprism %}
+</code></pre>
 
 Why do things need to be done this way? First, we need to be clear about the difference between Git and GitHub, as well as how they work together.
 
@@ -134,31 +134,31 @@ If your only Git education up to this point is doing what GitHub tells you to do
 
 So to recap the previously-discussed command sequence, if you have a file called "myFile.html" that you've just created or changed and you want to upload it to GitHub, you would type these three commands in the following order:
 
-{% prism markup %}
+<pre><code class="language-markup">
 $ git add 'myFile.html'
-{% endprism %}
+</code></pre>
 
-{% prism markup %}
+<pre><code class="language-markup">
 $ git commit -m 'add myFile.html'
-{% endprism %}
+</code></pre>
 
-{% prism markup %}
+<pre><code class="language-markup">
 $ git push
-{% endprism %}
+</code></pre>
 
 The sequence for *deleting* files is the same, except for one change: you replace `add` with `rm`, which is the UNIX command for removing things.
 
 So if you wanted to remove "myFile.html" from your repo, your typed-in command sequence would look something like this:
 
-{% prism markup %}
+<pre><code class="language-markup">
 $ git rm 'myFile.html'
-{% endprism %}
-{% prism markup %}
+</code></pre>
+<pre><code class="language-markup">
 $ git commit -m 'remove myFile.html'
-{% endprism %}
-{% prism markup %}
+</code></pre>
+<pre><code class="language-markup">
 $ git push
-{% endprism %}
+</code></pre>
 
 Why is all this necessary? Because Git views any type of update to your repo as a "change." Git can detect these changes but has absolutely no idea what to do with them: it's *your* job to tell Git what to do with them.
 
@@ -189,7 +189,7 @@ It costs money but is worth it. Taught by [Kevin Skoglund](http://www.kevinskogl
 UK-based developer [Kerry Gallagher](http://www.kerrygallagher.co.uk/ "Visit Kerry Gallagher's website") put together a really useful list of Git commands. Print it out and tape it somewhere by your computer.
 
 ### ["Git Is Simpler Than You Think" by Nick Farina »](http://nfarina.com/post/9868516270/git-is-simpler)
-If you want to Git works under the hood, check out this excellent post. Nick Farina opened Git up and spent a lot of time looking at its internal structure. Lots of great info in this post.  
+If you want to Git works under the hood, check out this excellent post. Nick Farina opened Git up and spent a lot of time looking at its internal structure. Lots of great info in this post.
 
 ### ["What is Version Control: Centralized vs. DVCS" by Giancarlo Lionetti »](https://blogs.atlassian.com/2012/02/version-control-centralized-dvcs/ "Learn about centralized and distributed version control systems")
 I *really* want you to understand that Git is a distributed version control system as well as understand what that means. It's the part that makes sharing code via GitHub a snap and, let's be honest, a major reason behind their success. Lionetti provides the most in-depth, easy-to-understand article on the subject that I could find.

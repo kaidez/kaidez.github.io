@@ -69,18 +69,18 @@ I chose [Jade](http://jade-lang.com/ "visit the Jade templating") for this, a ve
 
 So you [use npm to install Jade](https://www.npmjs.org/package/jade "install Jade with npm") on your machine. Then create `.jade` files like this...
 
-{% prism markup %}
+<pre><code class="language-markup">
 doctype html
 html
   head
     title kaidez.com
   body
     h1 My Page Header
-{% endprism %}
+</code></pre>
 
 And with a few keystrokes, this file will output an `.html` file like this
 
-{% prism markup %}
+<pre><code class="language-markup">
 <!doctype html>
 <html>
   <head>
@@ -91,7 +91,7 @@ And with a few keystrokes, this file will output an `.html` file like this
     <p>My Content</p>
   </body>
 </html>
-{% endprism %}
+</code></pre>
 
 I went with Jade because I've been playing with the [MEAN stack](http://mean.io/ "review the MEAN stack") lately and [Express](http://expressjs.com/ "visit Express, the Node-based web server framework") (the "E" in MEAN) likes to use Jade. So I figured it made sense for me to figure out.
 
@@ -99,7 +99,7 @@ Jade has "includes" functionality similar to PHP includes and .NET user controls
 
 So in other words, these two `.jade` files...
 
-{% prism markup %}
+<pre><code class="language-markup">
 //index.jade
 doctype html
 html
@@ -107,17 +107,17 @@ html
   body
     h1 My Page Header
     p My Content
-{% endprism %}
+</code></pre>
 
-{% prism markup %}
+<pre><code class="language-markup">
 //includes/header.jade
 head
   title kaidez.com
-{% endprism %}
+</code></pre>
 
 ...*SHOULD* output a single `.html` file like this...
 
-{% prism markup %}
+<pre><code class="language-markup">
 <!doctype html>
 <html>
   <head>
@@ -128,7 +128,7 @@ head
     <p>My Content</p>
   </body>
 </html>
-{% endprism %}
+</code></pre>
 
 The indentation didn't QUITE work out the way I wanted to when I used a `<header>` tag...not sure why that was after a doing a web search for an answer. I think I can figure out why this is later on down the line, or maybe just asking for an answer on Stack Overflow will work as well.
 
@@ -170,7 +170,7 @@ This whole process was managed by [Modernizr](http://modernizr.com "Read more ab
 
 <small><em><sup>1</sup> the polyfill code has been updated since I first used it, but all works well for both versions.</em></small>
 
-But most importantly, remember that Modernizr has a `Modernizr.load()` method that's based on yepnope.js 
+But most importantly, remember that Modernizr has a `Modernizr.load()` method that's based on yepnope.js
 I applied a custom feature-detect based on one of these pre-written pieces of code: [the ECMAScript 5.1 array feature-detects](https://github.com/Modernizr/Modernizr/blob/master/feature-detects/es5/array.js "See Modernizer's ES5 feature-detect polyfill"). I then placed the code in a file called `forEachTest.js`.
 
 There are two versions of `app.js`: one for desktops and one for mobiles & handhelds. Sitecore uses device detection to decide which one to load.
@@ -178,7 +178,7 @@ There are two versions of `app.js`: one for desktops and one for mobiles & handh
 The .js files look like this:
 
 __forEachTest.js__
-{% prism javascript %}
+<pre><code class="language-javascript">
 /*
  * Make Modernizr test for "Array.prototype.forEach" so it can work
  * cross-browser when building out the single product modules. When
@@ -195,11 +195,11 @@ Modernizr.load({
   yep: "js/app.js",
   nope: ["forEachPolyfill.js", "app.js"]
 });
-{% endprism %}
+</code></pre>
 
 
 __app.js (Mobile/Handheld Version)__
-{% prism javascript %}
+<pre><code class="language-javascript">
 function ScrollContent() {}
 
 /*
@@ -232,10 +232,10 @@ ScrollContent.prototype.buildScrolls = function(element) {
 
 var products = new ScrollContent();
 ["productOne","productTwo","productThree","productFour","productFive","productSix","productSeven"].forEach(products.buildScrolls);
-{% endprism %}
+</code></pre>
 
 And the HTML code for each scroll looks somewhat like this...
-{% prism markup %}
+<pre><code class="language-markup">
 <div id="productOneId">
   <div id="productOneContent">...</div>
 </div>
@@ -257,7 +257,7 @@ And the HTML code for each scroll looks somewhat like this...
 <div id="productSevenId">
   <div id="productSevenContent">...</div>
 </div>
-{% endprism %}
+</code></pre>
 
 The divs that end in "Id" are buttons that run one of the mouse events while the divs that end in "Content" contain the  product images that appear on the mouse events.
 

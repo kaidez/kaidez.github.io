@@ -46,7 +46,7 @@ document.getElementById('words').innerHTML = 'Hello World!';
 </code></pre>
 Let's look at the code and translate it..
 
-The `<script>` tag
+The <code><script></script></code> tag
 
 <pre><code class="language-markup">
 <script type="text/javascript">
@@ -59,12 +59,12 @@ TRANSLATION: create a JavaScript function called loadText(). When this function 
 
 The `<input>` tag
 
-<pre><code class="language-markup"><input type="button" onclick="loadText()" value="Load Some Text!"/> </code></pre>
+<pre><code class="language-markup"> <input type="button" onclick="loadText()" value="Load Some Text!"/> </code></pre>
 TRANSLATION: Whenever this button is clicked, run the loadText() function. This will load that Hello World! copy into that page element with an id of 'words'.
 
 The `<div>` tag
 
-<pre><code class="language-markup"><div id="words"></div></code></pre>
+<pre><code class="language-markup"> <div id="words"></div></code></pre>
 TRANSLATION: This empty `<div>` tag is the page element with an id of 'words,' so this is what's affected when the loadText() function runs. Therefore, this is where the Hello World! text will be placed into when the button is clicked.
 
 An ID must be unique on a web page so in our example, there can only be one page element with an ID of "words." If you need to traverse the DOM with JavaScript to locate multiple page elements with the same name, it's best if you look for tags using the `getElementsByTagName()` function:

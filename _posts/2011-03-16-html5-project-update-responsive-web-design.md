@@ -13,7 +13,7 @@ In 2005, Jesse James Garrett wrote [an excellent article describing and coining 
 
  [1]: http://www.adaptivepath.com/ideas/essays/archives/000385.php
 
-It’s tough to accurately describe this functionality to people not familiar with web development, and it’s even tougher for those people to actually *visualize* this functionality in action (although [this page will help you][2]). But trust me, Garrett’s article changed the game for web programmers. Ajax stretched the imagination of designers and developers, showing them the seemingly infinite list of possibilities of what they could do when creating web applications. 
+It’s tough to accurately describe this functionality to people not familiar with web development, and it’s even tougher for those people to actually *visualize* this functionality in action (although [this page will help you][2]). But trust me, Garrett’s article changed the game for web programmers. Ajax stretched the imagination of designers and developers, showing them the seemingly infinite list of possibilities of what they could do when creating web applications.
 
  [2]: http://kaidez.com/ajax-jquery-html5-work-together/4/
 
@@ -35,15 +35,15 @@ I’d like to present this as an opportunity to our team at work, but I need to 
 ### Setting Up CSS For Responsive Web Design
 
 *Media queries*, a part of the new CSS3 specification, are the linchpin of responsive web design. They’re set up when you link stylesheets to your web page and look somewhat like this:
-{% prism markup %}
+<pre><code class="language-markup">
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
- 
-<link rel="stylesheet" media="screen and (min-width: 600px)" href="large.css" /> 
+
+<link rel="stylesheet" media="screen and (min-width: 600px)" href="large.css" />
 
 <link rel="stylesheet" media="screen and (max-width: 320px)" href="smartPhone.css" />
 
-<link rel="stylesheet" media="screen and (max-width: 600px)" href="tablet.css" /> 
-{% endprism %}
+<link rel="stylesheet" media="screen and (max-width: 600px)" href="tablet.css" />
+</code></pre>
 
 With this code in mind, let’s look at the following scenario:
 
@@ -85,61 +85,61 @@ As I see it, responsive web design must utilize the following:
 * #### The Viewport Meta Tag
     Needed when creating a site for any iOS device, i.e., the iPad and the Phone. It looks like this...
 
-{% prism markup %}
+<pre><code class="language-markup">
 <meta name = "viewport" content = "width = EnterYourOwnWidth">
-{% endprism %} 
+</code></pre>
 
 It’s good to know how the Viewport meta tag works so [read up on it over at the Apple Developer site][10].
 
-*   ***Added Bonus:*** 
+*   ***Added Bonus:***
 #### Marcotte’s Responsive Images JavaScript Library
     Another way to make images more responsive. It’s part of a project that Marcotte did for Filament Group and performs the same functionality as the code over at Unstoppable Robot Ninja, but does so with an external JavaScript library. [Check it out over at GitHub][11].
-                
+
     This method doesn’t work on all browsers as of this article and also requires tweaking the .htaccess file, something I’ve never felt comfortable doing. But [the demo][12] shows that it works well in the browsers that it does support.
 
 ### Responsive Design Issues
-                
+
 But as I said earlier, there are issues, the main one being site optimization.
-                
-Let’s look at my previous code, without the viewport meta tag:              
-                
-The code above will detect a device’s width, then apply the proper CSS file. But while it will apply only one CSS file, it loads all three at once. The fact that you don’t use these files doesn’t matter-they will still load onto your computer. So your computer is loading resources it doesn’t need and won’t use, making things a little sluggish. 
-                
-Also, while either of the fluid image above techniques seem to work well, there’s a chance that you’ll want to load individual images for each stylesheet. Again, depending on which stylesheet is applied, you’re loading things that you don’t need. 
-                
+
+Let’s look at my previous code, without the viewport meta tag:
+
+The code above will detect a device’s width, then apply the proper CSS file. But while it will apply only one CSS file, it loads all three at once. The fact that you don’t use these files doesn’t matter-they will still load onto your computer. So your computer is loading resources it doesn’t need and won’t use, making things a little sluggish.
+
+Also, while either of the fluid image above techniques seem to work well, there’s a chance that you’ll want to load individual images for each stylesheet. Again, depending on which stylesheet is applied, you’re loading things that you don’t need.
+
 This loading of extra, unused resources may not be a big deal if you’re browsing a responsive-designed site on a ethernet cable-connected computer; however, a wireless device (especially one on a public network) will probably have issues.
-                
+
 A simple Google search brings up quite a few articles against issues with responsive web design, [the biggest one coming from web developer Jason Grigsby][13]. My suggestion is to read the negative articles on the subject as well as the positive ones, the Grigsby one at least.
-                
-Despite the articles showcasing the problems, there are quite a few articles providing workarounds to the problems. For starters, Amsterdam-based developer Peter-Paul Koch (aka PPK) counters Grigsby’s article quite nicely with [this article at his Quirksmode blog][14]. And let’s remember that Marcotte supplied both the fluid image code snippet and responsive image JavaScript library mentioned above: when these are applied properly, there’s no need to use multiple images per device. Plus, [Kayla Knight’s responsive web design guideline article over at Smashing Magazine][15] provides some techniques for dealing with the multiple CSS file calls. 
-                
+
+Despite the articles showcasing the problems, there are quite a few articles providing workarounds to the problems. For starters, Amsterdam-based developer Peter-Paul Koch (aka PPK) counters Grigsby’s article quite nicely with [this article at his Quirksmode blog][14]. And let’s remember that Marcotte supplied both the fluid image code snippet and responsive image JavaScript library mentioned above: when these are applied properly, there’s no need to use multiple images per device. Plus, [Kayla Knight’s responsive web design guideline article over at Smashing Magazine][15] provides some techniques for dealing with the multiple CSS file calls.
+
 ### Conclusion
-                
+
 So, yes, the responsive web design concept is new. REALLY new. I do see its promise but am not ready to recommend as “development best practice” at work until I get my hands dirty with it on my own first.
-                
+
 So, again, I’m now researching the possibility redoing [my HTML5 Project wireframes][16] to fit a responsive design so I can fully understand this concept. This will take time but I’m will to work as long as possible to get this done.
-                
+
 ### Resources
-                
+
 There are tons of responsive design resources…here’s a complete list of ones that have helped me. Some of these resources have already been mentioned:
-                
+
 *   [Ethan Marcotte’s original “Responsive Web Design” article at A List Apart][5]
 *   [Marcotte’s “Fluid Grid” article, also over at A List Apart][8]
 *   [Marcotte’s great fluid image JavaScript code over at his Unstoppable Robot Ninja site][9]
 *   [Marcotte’s responsive image JavaScript library over at GitHub][11]
 *   [“Responsive Web Design” episode at “The Big Web Show,” featuring Ethan Marcotte][17]
 *   [Stephen Hay’s “Real-world Responsive Design” lecture at the 2010 Fronteers conference][18]
-*   [PPK’s “Combining media queries and JavaScript” over at his blog][14] 
-*   [Viewport meta tag documentation for iOS on the Safari Web Content Guide][10] 
+*   [PPK’s “Combining media queries and JavaScript” over at his blog][14]
+*   [Viewport meta tag documentation for iOS on the Safari Web Content Guide][10]
 *   [Jason Grigsby’s “CSS Media Query for Mobile is Fool’s Gold” article over at his blog – an argument against responsive web design][13]
-*   [*CSS3 First Look* course over at lynda.com, which includes a GREAT chapter on media queries][19] 
+*   [*CSS3 First Look* course over at lynda.com, which includes a GREAT chapter on media queries][19]
 *   [Kayla Knight’s “Responsive Web Design: What It Is and How To Use It” article over at Smashing Magazine][15]
 *   [Rachel Andrew’s “How To Use CSS3 Media Queries To Create a Mobile Version of Your Website” article, also over at Smashing Magazine][20]
 *   [The LESS framework-a pre-built template for creating responsive web design sites][21]
-*   [mediaqueri.es – a GREAT gallery of responsive web design sites][22] 
+*   [mediaqueri.es – a GREAT gallery of responsive web design sites][22]
 
 **Extra:** As of this article, Ethan Marcotte is set to release a book entitled (surprise!) [“Responsive Web Design” via A Book Apart][23] in a few monthsextension of his two ALA articles along with new content. To be alerted when it’s released, either sign up for their newsletter at the previously-mentioned link or [follow A Book Apart on Twitter][24].
-                    
+
 Feel free to share any responsive web design resources that you like…and your comments!!!! Responsive web design is new so the more info that goes around, the better for all of us.
 
  [8]: http://www.alistapart.com/articles/fluidgrids/

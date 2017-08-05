@@ -31,7 +31,7 @@ Let’s see it in action:
 
 I recently created this test page with the following code:
 
-{% prism markup %}
+<pre><code class="language-markup">
 <section itemscope itemtype="http://www.data-vocabulary.org/Person">
 
   <img itemprop="photo" class="me" width="80" height="80" src="http://en.gravatar.com/userimage/4528928/87cc8430c1f9a5c3b809cdde885f565a.jpg"  alt="[Kai Gittens, circa 2010]">
@@ -49,7 +49,7 @@ I recently created this test page with the following code:
   <span itemprop="title">Founder</span> of <span itemprop="affiliation">kaidez.com</span></dd>
         <dd>
   <span itemprop="title">Web Designer for Revlon/Almay</span></dd>
-    
+
         <dt>Mailing address</dt>
         <dd itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
           <span itemprop="street-address">237 Park Ave.</span>
@@ -65,8 +65,8 @@ I recently created this test page with the following code:
         <li><a href="http://www.twitter.com/kaidez" itemprop="url">Twitter Page  </a></li>
       </ul>
   </section>
-{% endprism %}
- 
+</code></pre>
+
 Let’s breakdown the code…
 
   * Note that the opening `<section>` tag has two attributes: itemscope and itemtype.

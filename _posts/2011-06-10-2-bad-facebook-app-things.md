@@ -9,7 +9,7 @@ category: coding-best-practices
 cat-name: "Code Tips"
 tags: [almay, facebook, practice]
 ---
-# 
+#
 
 For the [Almay/Facebook][1] project I recently worked on, I had to create a Facebook app under their new set of rules, which was interesting.
 
@@ -25,10 +25,10 @@ And it all points back to a JavaScript file named “all.js” that needs to be 
 
 ## 1. CSS Expressions
 
-According to my app page’s [YSlow][3] report, this “all.js” file is capable of inserting three inline CSS expressions on to the page. Affecting Internet Explorer 8 and lower only, CSS expressions are CSS selectors that are updated and manipulated with JavaScript. Here’s the CSS expression example from [YDN page][4]:  
-  
- {% prism css %}background-color: expression( (new Date()).getHours()%2 ? “#B8D4FF” : “#F08A00″ );{% endprism %}
-  
+According to my app page’s [YSlow][3] report, this “all.js” file is capable of inserting three inline CSS expressions on to the page. Affecting Internet Explorer 8 and lower only, CSS expressions are CSS selectors that are updated and manipulated with JavaScript. Here’s the CSS expression example from [YDN page][4]:
+
+ <pre><code class="language-css">background-color: expression( (new Date()).getHours()%2 ? “#B8D4FF” : “#F08A00″ );</code></pre>
+
 Basically, this code updates the background color ever hour; however, it runs much more frequently then that. Simple things like scrolling and mouse movements can fire this code off, which slows down the page overall.
 
  [3]: http://developer.yahoo.com/yslow/

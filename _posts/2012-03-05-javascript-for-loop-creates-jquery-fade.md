@@ -22,7 +22,7 @@ As I saw how people were using the tutorial’s code, a need to make it dynamic 
 
 ## HTML
 
-{% prism markup %}   
+<pre><code class="language-markup">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,35 +30,35 @@ As I saw how people were using the tutorial’s code, a need to make it dynamic 
     <link rel="stylesheet" href="main.css">
     <title>jQuery fade-ins with a JavaScript for() loop</title>
 </head>
-<body>  
+<body>
     <div id="elem0" class="toBeFaded">Here's the first message...</div>
     <div id="elem1" class="toBeFaded">We have second one here...</div>
     <div id="elem2" class="toBeFaded">And here's the third message...</div>
     <div id="elem3" class="toBeFaded">OMG!!! Here's the fourth message!</div>
- 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
- 
+
     <script src="fadeCode.js" defer="defer"></script>
- 
+
 </body>
 </html>
-{% endprism %} 
+</code></pre>
 
 ## CSS (main.css)
 
-{% prism css %} 
+<pre><code class="language-css">
 .toBeFaded {
   display: none;
   position:absolute;
   font-size:70pt;
 }
-{% endprism %}    
+</code></pre>
 
 ## JavaScript (fadeCode.js)
 
-{% prism javascript %} 
+<pre><code class="language-javascript">
 $(function (){
-    	
+
   var yourFade = 1, // the amount of time in seconds that the elements will fade in fade out
   yourDelay = 2, // the amount of time in seconds that there will be a delay between the fade ins and fade outs
   fadeTime = yourFade * 1000, //convert fade seconds to milliseconds (1000)
@@ -68,10 +68,10 @@ $(function (){
   elemNoFade, // Will help us find the last element represent the last element (3)
   i,
   fadingElem;
-    
+
   for (i = 0, allElems = $('.toBeFaded').length, elemNoFade = allElems - 1; i < allElems; i = 1) {
     fadingElem = "#elem" + i;
-    if (i === 0) {	
+    if (i === 0) {
     	$(fadingElem).fadeIn(fadeTime).delay(delayTime).fadeOut(fadeTime);
     } else if (i === elemNoFade) {
     	$(fadingElem).delay(totalTime * i).fadeIn(fadeTime);
@@ -80,7 +80,7 @@ $(function (){
     }
   }
 });
-{% endprism %}
+</code></pre>
 
 What's happening here:
 

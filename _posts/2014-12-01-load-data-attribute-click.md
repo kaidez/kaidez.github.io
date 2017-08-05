@@ -28,27 +28,27 @@ Table of Contents
 How data attributes work
 ---------------------
 Data attributes are attributes that store data in page elements:
-{% prism markup %}
+<pre><code class="language-markup">
 <div id="teamInfo"
      data-team="Chelsea FC"
      data-manager="José Mourinho"
      data-home-pitch="Stanford Bridge">
 </div>
-{% endprism %}
+</code></pre>
 
 The element that contains these data attributes (`<div id="teamInfo">` in the above-example) has an internal property called `dataset` that stores these attributes in an object called `DOMStringMap` (an API introduced with HTML5):
 
-{% prism javascript %}
+<pre><code class="language-javascript">
 console.log(teamInfo.dataset);
 // logs "DOMStringMap {team: "Chelsea FC", manager: "José Mourinho", homePitch: "Stanford Bridge"}"
-{% endprism %}
+</code></pre>
 
 The values in an element's `dataset` property can be accessed individually:
-{% prism javascript %}
+<pre><code class="language-javascript">
 console.log(teamInfo.dataset.team); // logs "Chelsea FC"
 console.log(teamInfo.dataset.manager); // logs "José Mourinho"
 console.log(teamInfo.dataset.homePitch); // logs "Stanford Bridge"
-{% endprism %}
+</code></pre>
 
 All of this means we use JavaScript to find these properties and display them on a web page. But [data attribute manipulation doesn't work in all browsers, specifically, Internet Explorer 10 and lower](http://caniuse.com/#search=dataset), so we need to write fallback code for those situations.
 
@@ -58,7 +58,7 @@ Before we create our final-production-ready code with fallbacks, we'll create so
 A simple example (<a href="http://codepen.io/kaidez/pen/VYLxqG" target="blank">See the  demo</a>)
 ---------------------
 We'll start by creating code that changes just one set of data attributes with JavaScript. Let's start with the CSS, which will be applied to all future code samples and demos:
-{% prism css %}
+<pre><code class="language-css">
 body {
   background: grey;
   color: #000;
@@ -92,10 +92,10 @@ a:hover {
   padding-left: 40px;
   margin: 10px 0;
 }
-{% endprism %}
+</code></pre>
 
 The HTML for this example looks like this:
-{% prism markup %}
+<pre><code class="language-markup">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -109,7 +109,7 @@ The HTML for this example looks like this:
        data-team="Chelsea FC"
        data-manager="José Mourinho"
        data-home-pitch="Stanford Bridge">
-  </div>  
+  </div>
 
   <div id="team" class="dataTarget"></div>
   <div id="manager" class="dataTarget"></div>
@@ -119,10 +119,10 @@ The HTML for this example looks like this:
   <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
 </body>
 </html>
-{% endprism %}
+</code></pre>
 
 And the JavaScript for this example looks like this:
-{% prism javascript %}
+<pre><code class="language-javascript">
 var team = document.querySelector("#team"),
     manager = document.querySelector("#manager"),
     homePitch = document.querySelector("#homePitch");
@@ -137,45 +137,45 @@ $("#chelsea").click(function(event){
   homePitch.innerHTML = teamInfo.dataset.homePitch;
 
 });
-{% endprism %}
+</code></pre>
 
 Breaking down the HTML first:
 
-{% prism markup %}
+<pre><code class="language-markup">
 <a href="#" id="chelsea">Load Chelsea FC Info »</a>
-{% endprism %}
+</code></pre>
 
 In the HTML, clicking on the `id="chelsea` element will load the content stored in the data attributes.
 
-{% prism markup %}
+<pre><code class="language-markup">
 <div id="teamInfo"
      data-team="Chelsea FC"
      data-manager="José Mourinho"
      data-home-pitch="Stanford Bridge">
 </div>
-{% endprism %}
+</code></pre>
 
 Those attributes are listed inside `<div id="teamInfo">` and named `data-team`, `data-home-pitch` and `data-manager`.
 
-{% prism markup %}
+<pre><code class="language-markup">
 <div id="team" class="dataTarget"></div>
 <div id="manager" class="dataTarget"></div>
 <div id="homePitch" class="dataTarget"></div>
-{% endprism %}
+</code></pre>
 
 On mouse clicks, those attribute values will be placed inside the three `div` tags at the bottom. Their ids are: `team`, `manager` and `homePitch`.
 
 Breaking down the JavaScript next...
 
-{% prism javascript %}
+<pre><code class="language-javascript">
 var team = document.querySelector("#team"),
     manager = document.querySelector("#manager"),
     homePitch = document.querySelector("#homePitch");
-{% endprism %}
+</code></pre>
 
 For those `div` tags that we're placing the data attribute values inside of , we're using `document.querySelector()` to store references to them. This will make them easier to find when I start referring to them in this next function...
 
-{% prism javascript %}
+<pre><code class="language-javascript">
 $("#chelsea").click(function(event){
 
   event.preventDefault();
@@ -186,7 +186,7 @@ $("#chelsea").click(function(event){
   homePitch.innerHTML = teamInfo.dataset.homePitch;
 
 });
-{% endprism %}
+</code></pre>
 
 The `$` tells us that we're using jQuery to bind the `jQuery.click` method to the link on the web page which, again, is the one with an id of `#chelsea`. It has a parameter called `event` passed to it, which we'll discuss a little later.
 
@@ -210,9 +210,9 @@ Here's one of the quirks of data attributes...
 As just mentioned, `teamInfo.dataset.team` is a direct reference to the `data-team` attribute...that makes sense. It's also the same thing with the manager information: `teamInfo.dataset.manager` is a direct reference to the `data-manager` attribute.
 
 But those are one-word attributes and our `data-home-pitch` attribute is two words. So the syntax is different:
-{% prism javascript %}
+<pre><code class="language-javascript">
 homePitch.innerHTML = teamInfo.dataset.homePitch;
-{% endprism %}
+</code></pre>
 
 It needs to be this way for two-word data attributes due to how   `dataset` works behind the scenes. Specifically, `dataset` will look at the data attribute names and automatically drop the data- prefix first, removing hyphens next, and finally convert the attribute to camelCase.
 
@@ -228,7 +228,7 @@ Store the data attributes in a link (<a href="http://codepen.io/kaidez/pen/dPoex
 The first example separated the link and the data attribute content for the sake of a clearer explanation, but a real-world use case is to store the attributes in the link being clicked on. Using the same CSS, that code would look like this:
 
 __The HTML__
-{% prism markup %}
+<pre><code class="language-markup">
 ...
 <a href="#"
    id="chelsea"
@@ -242,9 +242,9 @@ __The HTML__
 <div id="manager" class="dataTarget"></div>
 <div id="homePitch" class="dataTarget"></div>
 ...
-{% endprism %}
+</code></pre>
 __The JavaScript__
-{% prism javascript %}
+<pre><code class="language-javascript">
 var team = document.querySelector("#team"),
     manager = document.querySelector("#manager"),
     homePitch = document.querySelector("#homePitch");
@@ -258,7 +258,7 @@ $("#chelsea").click(function(event){
   homePitch.innerHTML = this.dataset.homePitch;
 
 });
-{% endprism %}
+</code></pre>
 
 In the HTML, we've taken the data attributes listed in `<div id="teamInfo">` and placed them inside the `#chelsea` link. This means that `<div id="teamInfo">` is no longer needed so we can get rid of it.
 
@@ -273,7 +273,7 @@ In the previous example, we could have used `chelsea.dataset` instead of `this.d
 Still keeping the CSS the same, we can add a few more links to our HTML while slightly adjusting our JavaScript.  Clicking on each link will load different info onto our page.
 
 __The HTML__
-{% prism markup %}
+<pre><code class="language-markup">
 ...
 <ul>
   <li class="teamListItem">
@@ -317,11 +317,11 @@ __The HTML__
 <div id="team" class="dataTarget"></div>
 <div id="manager" class="dataTarget"></div>
 <div id="homePitch" class="dataTarget"></div>
-...  
-{% endprism %}
+...
+</code></pre>
 
 __The JavaScript__
-{% prism javascript %}
+<pre><code class="language-javascript">
 var team = document.querySelector("#team"),
     manager = document.querySelector("#manager"),
     homePitch = document.querySelector("#homePitch");
@@ -335,7 +335,7 @@ var team = document.querySelector("#team"),
   homePitch.innerHTML = this.dataset.homePitch;
 
 });
-{% endprism %}
+</code></pre>
 
 In the HTML we've removed the id property while adding a class called `teamLink` for each of our links.  We're also no longer targeting the id in the `jQuery.click` method and, instead, targeting this new `teamLink` class.
 
@@ -347,7 +347,7 @@ Use `getAttribute()` as fallback code for `dataset` (<a href="http://codepen.io/
 `dateset` is awesome but, as mentioned in the beginning, isn't cross-browser compliant and doesn't work in all browsers. We can write fallback code with the `getAttribute()` method for those browsers, specifically IE 10 and lower.
 
 The CSS and HTML stay the same while the JavaScript goes through some changes...
-{% prism javascript %}
+<pre><code class="language-javascript">
 var team = document.querySelector("#team"),
     manager = document.querySelector("#manager"),
     homePitch = document.querySelector("#homePitch"),
@@ -376,7 +376,7 @@ $(".teamLink").click(function(event){
   homePitch.innerHTML = homePitchValue;
 
 });
-{% endprism %}
+</code></pre>
 
 We've add three new variables without giving them a value: `teamValue`, `managerValue` and `homePitchValue.` From there, we make sure that every time a link is clicked, it first checks to see if our links have a `dataset` property.
 

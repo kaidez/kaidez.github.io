@@ -13,13 +13,13 @@ I used the following code to create the image rollovers for [the recent Almay pr
 
  [1]: http://kaidez.com/almay-project-using-html5-net-jquery/
 
-Truthfully, I wasn't going to post this: I found it on another site and felt that re-posting it here would be claiming it as my own creation. But I found quite a few other sites using the exact same script, so I'm not the only one re-posting it. Plus, this rollover code works…well I might add. It doesn't use CSS, making it much more cross-browser compliant; it's not as buggy as some other JavaScript rollover code I've encountered, and it gets the job done with very little code. 
+Truthfully, I wasn't going to post this: I found it on another site and felt that re-posting it here would be claiming it as my own creation. But I found quite a few other sites using the exact same script, so I'm not the only one re-posting it. Plus, this rollover code works…well I might add. It doesn't use CSS, making it much more cross-browser compliant; it's not as buggy as some other JavaScript rollover code I've encountered, and it gets the job done with very little code.
 
-I'm viewing all those other re-posts as an endorsement of how almost-perfect this code is. Here's my endorsement: 
+I'm viewing all those other re-posts as an endorsement of how almost-perfect this code is. Here's my endorsement:
 
-{% prism markup %}
+<pre><code class="language-markup">
 
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
 <meta charset="UTF-8" />
@@ -29,37 +29,37 @@ I'm viewing all those other re-posts as an endorsement of how almost-perfect thi
 
 <script type="text/javascript">
 $(document).ready(function() {
-$("img.rollover").hover( 
-function() { this.src = this.src.replace("_off", "_on"); 
-}, 
-function() { this.src = this.src.replace("_on", "_off"); 
+$("img.rollover").hover(
+function() { this.src = this.src.replace("_off", "_on");
+},
+function() { this.src = this.src.replace("_on", "_off");
 });
-}); 
+});
 </script>
 
 </head>
-<body> 
+<body>
 
-<a href="#"><img src="imageOne_off.png" class="rollover" /></a> 
+<a href="#"><img src="imageOne_off.png" class="rollover" /></a>
 <br />
 <a href="#"><img src="imageTwo_off.png" class="rollover" /></a>
 
 </body>
 </html>
-    
-{% endprism %}
+
+</code></pre>
 
 First, make sure that you create your rollover images. Each individual rollover needs two images attached to it: one named 'yourFilename_off.gif' and the other named 'yourFilename_on.gif'. As long as these images are of the same file type, it doesn't matter what file type it is. GIF, JPEG, PNG…it doesn't matter. For this example, I have four images that will be used in two rollovers:
 
-{% prism markup %}
-imageOne_off.png  
+<pre><code class="language-markup">
+imageOne_off.png
 
-imageOne_on.png 
+imageOne_on.png
 
-imageTwo_off.png  
+imageTwo_off.png
 
-imageTwo_off.png  
-{% endprism %}
+imageTwo_off.png
+</code></pre>
 
 
 And now the code breakdown…
@@ -72,25 +72,25 @@ Next, we tell jQuery that every time an image tag with a class name of “rollov
 
 *   it should see if the image contains the word “\_on” in the filename…if it does, replace it with “\_off” which will force the “_off” version of image to load.
 
-{% prism javascript %}
+<pre><code class="language-javascript">
 <script type="text/javascript">
 $(document).ready(function() {
-$("img.rollover").hover( 
-function() { this.src = this.src.replace("_off", "_on"); 
-}, 
-function() { this.src = this.src.replace("_on", "_off"); 
+$("img.rollover").hover(
+function() { this.src = this.src.replace("_off", "_on");
+},
+function() { this.src = this.src.replace("_on", "_off");
 });
-}); 
+});
 </script>
-{% endprism %}
-    
-    
+</code></pre>
+
+
 And from here, we just place the images on the web page, making sure that they have a class name of “rollover”:
-{% prism markup %}
-<a href="#"><img src="imageOne_off.png" class="rollover" /></a> 
+<pre><code class="language-markup">
+<a href="#"><img src="imageOne_off.png" class="rollover" /></a>
 <br />
 <a href="#"><img src="imageTwo_off.png" class="rollover" /></a>
-{% endprism %}
+</code></pre>
 
 That's it!!! The best rollover code I've ever used!!!
 

@@ -20,7 +20,7 @@ has-home-img: web-components-demo.jpg
 
 I spent some time hacking Web Components during a long flight layover and it was time well spent. I put together a small demo, just so I could better understand Web Components as a whole.
 
-Web Components is a concept composed of four sub-concepts, but I just focused on two of them for the demo: <em>templates</em> and <em>Shadow DOM</em>...primarily templates. At the time of this post, implementing Web Components neatly across the different browsers and devices requires a polyfill library like [Polymer](http://www.polymer-project.org/ "visit the Polymer Web Components Library") or [X-Tag](http://x-tags.org/ "visit the X-tag Web Components Library"), but I wanted to study the internal workings of each sub-concept before diving into the polyfills. 
+Web Components is a concept composed of four sub-concepts, but I just focused on two of them for the demo: <em>templates</em> and <em>Shadow DOM</em>...primarily templates. At the time of this post, implementing Web Components neatly across the different browsers and devices requires a polyfill library like [Polymer](http://www.polymer-project.org/ "visit the Polymer Web Components Library") or [X-Tag](http://x-tags.org/ "visit the X-tag Web Components Library"), but I wanted to study the internal workings of each sub-concept before diving into the polyfills.
 
 ### A quick Web Components description
 Web Components are a set of emerging technologies working their way towards a firm specification, thanks to the hard work of the W3C. The goal of Web Components is to allow developers to create custom elements with HTML, CSS and JavaScript...these elements can also be thought of as widgets.
@@ -29,7 +29,7 @@ An great example of this is the `<github-card>` custom element. If you have a Gi
 
 The four sub-concepts that make up Web Components are:
 
-1. *__Templates__*: a chunk of formatted HTML that can be cloned, inserted and rendered based on instructions you give it. [Read more &raquo;](http://www.html5rocks.com/en/tutorials/webcomponents/template/ "Read more about Web Component templates") 
+1. *__Templates__*: a chunk of formatted HTML that can be cloned, inserted and rendered based on instructions you give it. [Read more &raquo;](http://www.html5rocks.com/en/tutorials/webcomponents/template/ "Read more about Web Component templates")
 2. *__Shadow DOM__*: an encapsulated separate DOM that you can add code to. It's best to think of it as "a DOM within your DOM." [Read more &raquo;](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/ "Read more about Web Component Shadow DOM")
 3. *__Custom Elements__*: the ability to create custom page tags, such as `<github-card>`. [Read more &raquo;](http://www.html5rocks.com/en/tutorials/webcomponents/customelements/)
 4. *__HTML Imports__*: the ability to load in small pieces of HTML code into your page when needed via `<link>` tags. [Read more&raquo;](http://www.html5rocks.com/en/tutorials/webcomponents/imports/ "Read more about Web Component HTML Imports")
@@ -46,7 +46,7 @@ I've read about all of these sub-concepts (including decorators) but  played wit
 For the templates, I wanted to display a simple list of books based on a small JavaScript data object. Things started out like this...
 
 __index.html__
-{% prism markup %}
+<pre><code class="language-markup">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,10 +100,10 @@ __index.html__
   </div>
 </body>
 </html>
-{% endprism %}
+</code></pre>
 
 __css/styles.css__
-{% prism css %}
+<pre><code class="language-css">
 body {
   margin: 20px;
 }
@@ -118,10 +118,10 @@ footer {
   margin-top: 30px;
   text-align: center;
 }
-{% endprism %}
+</code></pre>
 
 __scripts/main.js__
-{% prism javascript %}
+<pre><code class="language-javascript">
 (function(){
 
   var jsBooks = {
@@ -150,7 +150,7 @@ __scripts/main.js__
       "amazonLink": "http://amzn.to/1lPP6pn"
     }
   };
-  
+
   var template = document.querySelector("#singleBook"),
     templateContent = template.content,
     host = document.querySelector("#allBooks"),
@@ -163,7 +163,7 @@ __scripts/main.js__
       amazonLink = jsBooks[key].amazonLink;
 
     templateContent.querySelector("img").src = image;
-    templateContent.querySelector("img").alt 
+    templateContent.querySelector("img").alt
     = templateContent.querySelector("#bookTitle").innerHTML
     = title;
     templateContent.querySelector("#bookAuthor").innerHTML = author;
@@ -171,7 +171,7 @@ __scripts/main.js__
     root.appendChild(document.importNode(templateContent, true));
   }
 })();
-{% endprism %}
+</code></pre>
 
 `index.html` contains both `normalize.css` and the main Twitter Bootstrap CSS file. Bootstrap is providing responsive functionality, but is mostly here to make parts of the site look pretty. `styles.css` adds extra styling to some page elements and has a very small role in the project.
 
@@ -187,15 +187,15 @@ Note that some parts of `<article>` are empty:
 
 This empty parts will be populated with our object data...let's look at that...
 
-{% prism javascript %}
+<pre><code class="language-javascript">
 (function(){
 ...
 })();
-{% endprism %}
+</code></pre>
 
 Everything's wrapped in an [IIFE](http://benalman.com/news/2010/11/immediately-invoked-function-expression/ "Read more about IIFEs").
 
-{% prism javascript %}
+<pre><code class="language-javascript">
 var jsBooks = {
   "book1" : {
     "title": "Object-Oriented Javascript",
@@ -205,16 +205,16 @@ var jsBooks = {
   },
 ...
 };
-{% endprism %}
+</code></pre>
 
 The JavaScript data object. There's only one item one listed here but it contains four items altogether, each about a particular JavaScript book.  Each item has a `title`, `author`, `image` and `amazonLink` property.
 
-{% prism javascript %}
+<pre><code class="language-javascript">
 var template = document.querySelector("#singleBook"),
   templateContent = template.content,
   host = document.querySelector("#allBooks"),
-  root = host.createShadowRoot(); 
-{% endprism %}
+  root = host.createShadowRoot();
+</code></pre>
 
 Starting to create the Shadow DOM. I'm creating a single var pattern to define four variables...
 
@@ -223,54 +223,54 @@ Starting to create the Shadow DOM. I'm creating a single var pattern to define f
   * `host` is a direct reference to what's known as the "shadow host" and it's the page element where template content gets load into.  That's the `<section id="allBooks">` page element in this case. This is commonly referred to as the "shadow host" and it can have any variable name you want, but it's convention to name it "host."
   * `root` is a direct reference to what's known as the "shadow root" and it's referring to the content that that gets generated <em>INSIDE</em> the template. Thanks to the `host.createShadowRoot()` line, I'm placing this content inside of `host`, which, again, is the `<section id="allBooks">` element...it may be easier to think of it as the actual Shadow DOM. When the content has fully loaded into the root, it gets returned to the web page as a document fragment...[read more about document fragments](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment "Read about document fragments") It also can also have any variable name you want to give it, but it's convention to name it "root."
 
-{% prism javascript %}
+<pre><code class="language-javascript">
 for (key in jsBooks) {
 ...
 };
-{% endprism %}
+</code></pre>
 
 A for...in loop will populate the template with the content in the "jsBooks" object. That code needs to be broken down...
 
-{% prism javascript %}
+<pre><code class="language-javascript">
 var title = jsBooks[key].title,
   author = jsBooks[key].author,
   image = jsBooks[key].image,
   amazonLink = jsBooks[key].amazonLink;
-{% endprism %}
+</code></pre>
 
 Assign simple variable references to all the single item properties in the `jsBooks` object.
 
-{% prism javascript %}
+<pre><code class="language-javascript">
 templateContent.querySelector("img").src = image;
-{% endprism %}
+</code></pre>
 
 Look for the `<img>` tag in the template and populate its `src` attribute with whatever the value is of the "image" property at the time of the loop.
 
-{% prism javascript %}
-templateContent.querySelector("img").alt 
+<pre><code class="language-javascript">
+templateContent.querySelector("img").alt
   = templateContent.querySelector("#bookTitle").innerHTML
   = title;
-{% endprism %}
+</code></pre>
 
 Look for the `<img>` tag in the template and populate its `alt` attribute with whatever the value is of the "title" property at the time of the loop.
 
 At the same time, look for the `#bookTitle` element in the template (one of the `<span>` tags) and populate it with whatever the value is of the "title" property is at the time of the loop.
 
-{% prism javascript %}
+<pre><code class="language-javascript">
 templateContent.querySelector("#bookAuthor").innerHTML = author;
-{% endprism %}
+</code></pre>
 
 Look for the `#bookAuthor` element in the template (the other `<span>` tag) and populate it with whatever the value is of the "author" property at the time of the loop.
 
-{% prism javascript %}
+<pre><code class="language-javascript">
 templateContent.querySelector("#btnPurchase").href = amazonLink;
-{% endprism %}
+</code></pre>
 
 Look for the `#btnPurchase` element in the template (the only `a` tag) and populate its "href" attribute with whatever the value is of the current `amazonLink` property at the time of the loop.
 
-{% prism javascript %}
+<pre><code class="language-javascript">
 root.appendChild(document.importNode(templateContent, true));
-{% endprism %}
+</code></pre>
 
 Okay, we need to spend some time talking about this line of code...
 
@@ -295,13 +295,13 @@ This is happening because, as mentioned above, the code inside the template can'
 ### Import the styles
 `styles.css` doesn't need to interact with the layout but the other two have to.  The solution is to use `@import` inside the template's `<style>` tag to bring both of them in:
 
-{% prism css %}
+<pre><code class="language-css">
 <style>
   @import url("css/normalize.min.css");
   @import url("css/bootstrap.min.css");
 ...
 </style>
-{% endprism %}
+</code></pre>
 
 Using `@import` is frowned upon from a performance standpoint, but it's how this particular problem gets solved. And as Google's Rob Dodson points out in his [excellent Web Components article](http://css-tricks.com/modular-future-web-components/ "Read Rob Dodson's great Web Component article on CSS Tricks"), using Polymer avoids doing this by bringing in the stylesheets with XHR requests.
 
@@ -310,28 +310,28 @@ But there's another problem: by doing deep clones of template content at each lo
 <img src="/img/shadow-root-02.png" class="imgBorderMaxWidth" alt="The shadow host in the shadow root">
 
 ### Adjust the loop
-This can be fixed by changing the loop procedure: every time the loop runs, deep-copy <em>just</em> the article tag by referring to its "templateArticle" class, then append it to the section tag. Leave the loop after it's ended, then append the style tag to section, which is the shadow host. 
+This can be fixed by changing the loop procedure: every time the loop runs, deep-copy <em>just</em> the article tag by referring to its "templateArticle" class, then append it to the section tag. Leave the loop after it's ended, then append the style tag to section, which is the shadow host.
 
 This requires changing the end of the JavaScript from this...
 
-{% prism javascript %}
+<pre><code class="language-javascript">
 (function(){
 ...
     root.appendChild(document.importNode(templateContent, true));
   }
 })();
-{% endprism %}
+</code></pre>
 
 ...to this
 
-{% prism javascript %}
+<pre><code class="language-javascript">
 (function(){
 ...
     root.appendChild(document.importNode(templateContent.querySelector(".templateArticle"), true));
   }
   root.appendChild(document.importNode(templateContent.querySelector("style"), true));
 })();
-{% endprism %}
+</code></pre>
 
 And now there's only one style tag inside the shadow root and it's properly applying the styles.
 
