@@ -7,7 +7,7 @@
   "author": "Kai Gittens <kai.gittens@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "echo foo"
+    "devserver": "bundle exec jekyll serve"
   },
   "dependencies": {},
   "devDependencies": {
