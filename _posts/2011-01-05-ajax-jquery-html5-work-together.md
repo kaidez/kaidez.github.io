@@ -11,13 +11,13 @@ tags: [ajax, jquery, html5]
 ---
 __(Update: February 18, 2015: This article is outdated and somewhat indicates that AJAX, jQuery and HTML5 need to work together at all times, which isn't true. You may want to read my more [thorough tutorial on AJAX and jQuery](/ajax-tutorial/). Also, if you want to understand what HTML5 is, check out my previous post, ["A Simple Explanation of HTML5"](/simple-html5-explanation/).)__
 
-AJAX, jQuery and HTML5 are big buzz words in the web design/development community nowadays. While getting these web technologies to work together is exciting, the programming required to do this isn't new.  
+AJAX, jQuery and HTML5 are big buzz words in the web design/development community nowadays. While getting these web technologies to work together is exciting, the programming required to do this isn't new.
 
-AJAX, jQuery and HTML5 work together through the use of *page tags, page IDs* and *page classes* that exist between the two  tags of a web page. The JavaScript functionality embedded in jQuery and AJAX finds these tags , IDs and classes (which we'll now call *page elements*) and "does" something to them; maybe it changes their background color, maybe it's loading copy into them. Either way, it's doing *something* to them.  
+AJAX, jQuery and HTML5 work together through the use of *page tags, page IDs* and *page classes* that exist between the two  tags of a web page. The JavaScript functionality embedded in jQuery and AJAX finds these tags , IDs and classes (which we'll now call *page elements*) and "does" something to them; maybe it changes their background color, maybe it's loading copy into them. Either way, it's doing *something* to them.
 
-This process of "finding and doing something" to these page elements with JavaScript is more commonly known as *"traversing the DOM"*. Simply put, ***traversing the DOM is the key to getting AJAX, jQuery and HTML5 to work together***.  
+This process of "finding and doing something" to these page elements with JavaScript is more commonly known as *"traversing the DOM"*. Simply put, ***traversing the DOM is the key to getting AJAX, jQuery and HTML5 to work together***.
 
-Web developers have used DOM traversal for years so, again, there really isn't that much new programming involved when it comes to syncing up AJAX, jQuery and HTML5. Still, a layman's description of how all this works may be required, so I'll give it a try.  
+Web developers have used DOM traversal for years so, again, there really isn't that much new programming involved when it comes to syncing up AJAX, jQuery and HTML5. Still, a layman's description of how all this works may be required, so I'll give it a try.
 
 <h2>Traversing the DOM The Old School Way With JavaScript</h2>
 
@@ -25,7 +25,7 @@ DOM stands for Document Object Model. All the page elements live within the DOM,
 
 Here's some HTML5-ready page code that uses it:
 
-{% prism markup %}  
+<pre><code class="language-javascript">
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
@@ -43,7 +43,7 @@ document.getElementById('words').innerHTML = 'Hello World!';
 <div id="words"></div>
 </body>
 </html>
-{% endprism %}
+</code></pre>
 Let's look at the code and translate it..
 
 The `<script>` tag
@@ -54,21 +54,21 @@ function loadText() {
 document.getElementById('words').innerHTML = 'Hello World!';
 }
 </script>
-{% endprism %}
+</code></pre>
 TRANSLATION: create a JavaScript function called loadText(). When this function runs, it should find a page element with an id of 'words' and place some text inside of it that says Hello World!
 
 The `<input>` tag
 
-{% prism markup %}<input type="button" onclick="loadText()" value="Load Some Text!"/> {% endprism %}
+<pre><code class="language-javascript"><input type="button" onclick="loadText()" value="Load Some Text!"/> </code></pre>
 TRANSLATION: Whenever this button is clicked, run the loadText() function. This will load that Hello World! copy into that page element with an id of 'words'.
 
 The `<div>` tag
 
-{% prism javascript %}<div id="words"></div>{% endprism %}
+{% prism javascript %}<div id="words"></div></div></pre>
 TRANSLATION: This empty `<div>` tag is the page element with an id of 'words,' so this is what's affected when the loadText() function runs. Therefore, this is where the Hello World! text will be placed into when the button is clicked.
 
 An ID must be unique on a web page so in our example, there can only be one page element with an ID of "words." If you need to traverse the DOM with JavaScript to locate multiple page elements with the same name, it's best if you look for tags using the `getElementsByTagName()` function:
-{% prism markup %}
+<pre><code class="language-javascript">
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
@@ -88,7 +88,7 @@ var bottomDiv=document.getElementsByTagName("p")[1].innerHTML = "Goodbye World";
 <p></p>
 </body>
 </html>
-{% endprism %}
+</code></pre>
 The function now creates two variables: one that looks for the first `<p>` tag on the page and one that looks for the second one. And since computers start counting at 0, each `<p>` tag is named `[0]` and `[1]`, respectively. Just as before, the function executes when the button is clicked; when that happens, text gets loaded into each `<p>` tag.
 
 It would be easier if you could find page elements with class names instead of tag names And you can traverse the DOM with `getElementsByClassName()`, but it doesn't always work when using JavaScript.
@@ -101,7 +101,7 @@ jQuery is an extensive JavaScript library that, when attached to a web page, mak
 
 As cool as these effects are, the fact that jQuery makes DOM traversal easier is, I believe, its best feature. Let's load the phrase "Hello World!" into a `<div>` tag with an ID like we did in our previous example, but with jQuery instead of JavaScript:
 
-{% prism markup %}
+<pre><code class="language-javascript">
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
@@ -122,17 +122,17 @@ $('#words').html("Hello World");
 <div id="words"></div>
 </body>
 </html>
-{% endprism %}
+</code></pre>
 We attached the jQuery library stored at Google Libraries to our web page:
 
-{% prism markup %}
+<pre><code class="language-javascript">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"></script>
-{% endprism %}
+</code></pre>
 Then we use the jQuery code in bold to create a function that traverses the DOM to find the <div> tag and loads text into it when it's clicked. We just did this in JavaScript and now did it with jQuery, and used a little less code in the process.
 
 Also with jQuery, we can now traverse the DOM with ease to locate classes, even if we have to locate more than one:
 
-{% prism markup %}
+<pre><code class="language-javascript">
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
@@ -154,10 +154,10 @@ $('.words').html("Hello World");
 <div class="words"></div>
 </body>
 </html>
-{% endprism %}
+</code></pre>
 And yes, jQuery lets us traverse the DOM to locate tags, multiple ones if we need to:
 
-{% prism markup %}
+<pre><code class="language-javascript">
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
@@ -179,7 +179,7 @@ $('p').html("Hello World");
 <p></p>
 </body>
 </html>
-{% endprism %}
+</code></pre>
 
 This was easy so let's do something more advanced and add AJAX to our discussion.
 
@@ -200,7 +200,7 @@ As I said, "almost" all browsers contain XMLHttpRequest. Not surprisingly, Inter
 
 The following code detects the browser, determines which version of AJAX to use based on the detection, then creates a JavaScript function that uses AJAX to load a text file that's stored on the server called `ajaxCopy.txt` **(NOTE: you can only test this code if you upload it to your website)**:
 
-{% prism markup %}
+<pre><code class="language-javascript">
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
@@ -252,11 +252,11 @@ xhrObject.send(null);
 </body>
 </html>
 
-{% endprism %}
+</code></pre>
 
 It's smart to know how this code works and if you're a beginner, you should write it out for practice. After you understand it, you can use jQuery's AJAX-related .load() function which does everything for you (NOTE: you can only test this code if you upload it to your website):
 
-{% prism markup %}
+<pre><code class="language-javascript">
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
@@ -277,7 +277,7 @@ $('#words').load("ajaxCopy.txt");
 <div id="words"></div>
 </body>
 </html>
-{% endprism %}
+</code></pre>
 jQuery's motto is "write less, do more." The above example really live up to that motto.
 
 <h2>Start Using HTML5 With AJAX and jQuery</h2>
@@ -288,7 +288,7 @@ Since HTML5 is tag-based and tags can have IDs and classes attached to them, tra
 
 Here's the previous code example that uses jQuery, AJAX, and the new HTML5 `<button>` tag instead of input **(NOTE: you can only test this code if you upload it to your website and you view it in an HTML5-ready browser...Google Chrome is the best one as of this post)**:
 
-{% prism markup %}
+<pre><code class="language-javascript">
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
@@ -309,9 +309,9 @@ $('#words').load("ajaxCopy.txt");
 <div id="words"></div>
 </body>
 </html>
-{% endprism %}
+</code></pre>
 Building on this, here's an example that uses jQuery, AJAX, the new HTML5 button tag and the new HTML5 `<section>` tag **(NOTE: you can only test this code if you upload it to your website and you view it in an HTML5-ready browser...Google Chrome is the best one as of this post)**:
-{% prism markup %}
+<pre><code class="language-javascript">
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
@@ -335,10 +335,10 @@ $('section').load("ajaxCopy.txt");
 </article>
 </body>
 </html>
-{% endprism %}
+</button></body>
 Let's build on this one last time: here's an example that uses jQuery, AJAX, the new HTML5 `<button>` tag, and the new HTML5 `<section>` tag. But the `<section>` tag now has an ID: **(NOTE: you can only test this code if you upload it to your website and you view it in an HTML5-ready browser…Google Chrome is the best one as of this post)**:
 
-{% prism markup %}
+<pre><code class="language-javascript">
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
@@ -362,7 +362,7 @@ $('#words').load("ajaxCopy.txt");
 </article>
 </body>
 </html>
-{% endprism %}
+</code></pre>
 That's it for the coding examples. I've really only scratched the surface on what it takes to use AJAX, jQuery and HTML5 together on a web page. And in terms of the more-complicated HTML APIs like `<canvas>`, there are lots of jQuery HTML5 plug-ins that makes the APIs easier to implement.
 
 But the point of this post was to clarify how easy it is to use AJAX, jQuery and HTML5 in tandem with each other. I think you have enough to get started here.
