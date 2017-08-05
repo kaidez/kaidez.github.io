@@ -1,0 +1,16 @@
+{
+  "name": "kaidez.com",
+  "version": "3.0.0",
+  "description": "personal blog of Kai Gittens",
+  "main": "n/a",
+  "repository": "https://github.com/kaidez/kaidez.github.io.git",
+  "author": "Kai Gittens <kai.gittens@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo foo"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^3.4.1"
+  }
+}
