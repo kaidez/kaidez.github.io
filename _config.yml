@@ -43,3 +43,10 @@ plugins:
 
 exclude:
   - js-build/
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - webpack.config.js
+  - yarn.lock
+  - .DS_Store
+  - _includes/.DS_Store
