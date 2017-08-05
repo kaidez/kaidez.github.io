@@ -4,18 +4,19 @@ comments: true
 author: Kai Gittens
 permalink: /reasons-design-websites-internet-explorer-6/
 layout: post
-meta-excerpt: HTML5 Gallery, mostly maintained by the HTML5 expert over at HTML5 Doctor, is added to kaidez.com's Coolsite list
-category: coding-best-practices
+excerpt: HTML5 Gallery, mostly maintained by the HTML5 expert over at HTML5 Doctor, is added to kaidez.com's Coolsite list
+categories: coding-best-practices
 cat-name: "Code Tips"
 tags: [Internet Explorer]
+og-image: default-image.jpg
 ---
-# 
+#
 
 Bring up Internet Explorer Version 6 to a seasoned web designer and you’ll get an earful.
 
-Real quick: Internet Explorer 6, or IE 6, is exactly as its name implies. It’s the sixth version of Microsoft’s Internet Explorer browser….it’s REALLY old! 
+Real quick: Internet Explorer 6, or IE 6, is exactly as its name implies. It’s the sixth version of Microsoft’s Internet Explorer browser….it’s REALLY old!
 
-Whenever a web designer designs a website, there’s a 70/30 chance that IE6 will not display the design properly. And since there are quite a few people out there still using it, some designers feel obliged to write extra code to insure that IE6 displays things right. 
+Whenever a web designer designs a website, there’s a 70/30 chance that IE6 will not display the design properly. And since there are quite a few people out there still using it, some designers feel obliged to write extra code to insure that IE6 displays things right.
 
 There’s a strong belief that web designers should ignore this obligation and simply stop coding for IE6 when creating websites, hereby forcing those still using it to stop. My boss and I have had an on/off discussion in recent months and he somewhat supports this view.
 

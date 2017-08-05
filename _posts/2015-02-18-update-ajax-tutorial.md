@@ -3,9 +3,9 @@ title: "AJAX Tutorial Update"
 comments: true
 author: Kai Gittens
 layout: post
-meta-excerpt: kaidez's old AJAX tutorial was updated. jQuery AJAX is discussed in depth and there's a short discussion on JavaScript Promises.
+excerpt: kaidez's old AJAX tutorial was updated. jQuery AJAX is discussed in depth and there's a short discussion on JavaScript Promises.
 permalink: /update-ajax-tutorial/
-category: personal
+categories: personal
 cat-name: "Personal"
 has-home-img: ajax-image.jpg
 tags: [ajax, javascript, kaidez]

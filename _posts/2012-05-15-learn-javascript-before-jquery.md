@@ -4,8 +4,8 @@ comments: true
 author: Kai Gittens
 permalink: /learn-javascript-before-jquery/
 layout: post
-meta-excerpt: A list of good reasons why it's better to learn JavaScript before jQuery. A short learning resource list at the end to help you get started.
-category: coding-best-practices
+excerpt: A list of good reasons why it's better to learn JavaScript before jQuery. A short learning resource list at the end to help you get started.
+categories: coding-best-practices
 cat-name: "Code Tips"
 has-thumbnail: jQjS.png
 tags: [javascript, beginner, jquery, best practice]
@@ -136,8 +136,8 @@ I’ll toot my own horn here and mention my last post on [great JavaScript books
 
  [31]: http://kaidez.com/useful-javascript-books/
 
-### [Codecademy »][32] 
-Great for beginners. It starts you at the JavaScript basics, building you up to creating structured JavaScript applications. Most importantly, [Mozilla Developer Network lists Codecademy as an excellent introductory level learning resource][33], which is a ringing endorsement.  
+### [Codecademy »][32]
+Great for beginners. It starts you at the JavaScript basics, building you up to creating structured JavaScript applications. Most importantly, [Mozilla Developer Network lists Codecademy as an excellent introductory level learning resource][33], which is a ringing endorsement.
 
 ### [jQuery Fundamentals »][34]
 Written by [Rebecca Murphey][35] who is, hands down, my favorite web developer right now. *jQuery Fundamentals* teaches you jQuery the right way: by teaching you the JavaScript basics and best practices first.

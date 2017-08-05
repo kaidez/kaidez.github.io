@@ -3,9 +3,9 @@ title: "Goodbye, Revlon"
 comments: true
 author: Kai Gittens
 layout: post
-meta-excerpt: After almost ten years, I'm leaving Revlon to pursue a exciting new opportunity.
+excerpt: After almost ten years, I'm leaving Revlon to pursue a exciting new opportunity.
 permalink: /revlon/
-category: personal
+categories: personal
 cat-name: "Personal"
 has-home-img: revlon-badge.jpg
 ---
@@ -17,7 +17,7 @@ But while I was doing the web stack work that I liked (HTML, CSS, JavaScript), I
 
 I'm moving onto a company called [Everyday Health](http://www.everydayhealth.com/ "Visit Everyday Health") which, as per its Company Overview, is "a leading provider of digital health and wellness solutions."  It also has a TON of web stack work that needs to get done for all its various web properties.
 
-I'm excited about the work I'll be doing at Everyday Health, but am NOT excited about leaving Revlon. Revlon had its ups and downs like any other company and some of the downs were really bad, but there were many, many, many more ups than there were downs. 
+I'm excited about the work I'll be doing at Everyday Health, but am NOT excited about leaving Revlon. Revlon had its ups and downs like any other company and some of the downs were really bad, but there were many, many, many more ups than there were downs.
 
 The biggest "up" was the extended family I found at the company and leaving all those people sucks. I send a special shout-out to Max Slabyak, whom I worked with for almost all the time I was with Revlon.
 

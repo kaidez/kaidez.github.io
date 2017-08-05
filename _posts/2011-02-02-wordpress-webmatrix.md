@@ -4,8 +4,8 @@ comments: true
 author: Kai Gittens
 layout: post
 permalink: /wordpress-webmatrix/
-meta-excerpt: Using WebMatrix to create a WordPress development site
-category: coding-best-practices
+excerpt: Using WebMatrix to create a WordPress development site
+categories: coding-best-practices
 cat-name: "Code Tips"
 tags: [wordpress]
 ---
@@ -31,7 +31,7 @@ WebDeploy functionality in WebMatrix allows for an easier deployment from your d
 
 I can’t see WebMatrix becoming my main web development tool. It’s not robust enough for real web-based object-oriented programming and Microsoft Visual Studio is much better at interacting with databases. But am starting to see the advantages for using different web dev tools for different products. And since I have access to five computers when you combine work and home, I can probably do this without overloading resources.
 
-Therefore, when I redesign my blog (which won’t be for a while), I may use this method; developing code on my PC with Web Matrix and then deploying it to my live site. 
+Therefore, when I redesign my blog (which won’t be for a while), I may use this method; developing code on my PC with Web Matrix and then deploying it to my live site.
 
 In the meantime, read these links:
 

@@ -3,11 +3,12 @@ title: My HTML5 Applications
 comments: true
 author: Kai Gittens
 layout: post
-meta-excerpt: I'm starting to narrow down what my favorite HTML5 tools are.
+excerpt: I'm starting to narrow down what my favorite HTML5 tools are.
 permalink: /kaidez-html5-apps/
-category: coding-best-practices
+categories: coding-best-practices
 cat-name: "Code Tips"
 tags: [html5]
+og-image: default-image.jpg
 ---
 As mentioned, [The HTML5 Project][1] is basically me creating a (hopefully) pure HTML5 and CSS3 website, the end result being my getting my head around both technologies. I still have to work out things like wireframes and SEO but I’ve just about narrowed down what applications and code frameworks I’ll be using.
 

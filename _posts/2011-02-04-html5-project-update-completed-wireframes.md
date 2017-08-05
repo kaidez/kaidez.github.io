@@ -4,12 +4,12 @@ comments: true
 author: Kai Gittens
 layout: post
 permalink: /html5-project-update-completed-wireframes/
-meta-excerpt: HTML5 wireframe preview of kaidez.com portfolio site
-category: personal
+excerpt: HTML5 wireframe preview of kaidez.com portfolio site
+categories: personal
 cat-name: "Personal"
 tags: [html5]
 ---
-***Read the entire “Wirefame Series”***  
+***Read the entire “Wirefame Series”***
 *** Intro | [Page 1»][1] | [Page 2»][2] | [Page 3»][3]***
 
  [1]: /html5-project-series-1-homepage-wireframe/
@@ -46,10 +46,10 @@ The pages are broken down as follows:
 *   **Contact Page** – yet again, self-explanatory
 *   **Niko’s Playlist Page ** – this bears some explaining. My son loooooves Katy Perry and Beyonce…good for him but there’s only so much of this I can deal with. I’ve been sitting with him in front of my computer once a day, pumping everything from Sonny Rollins to the Clash to Slum Village in his ear. He responds to some of it positively so this page will document what he likes while injecting a little humor to the site.
 
-Enough talk, here’s the gallery *(updated Feb 6, 2011):*  
+Enough talk, here’s the gallery *(updated Feb 6, 2011):*
 
 
-My initial plan was to post the complete set of wireframes and discuss them in depth in the same article. But I have a lot to discuss here so ***I’m going to break the discussion up in a three-article series***. 
+My initial plan was to post the complete set of wireframes and discuss them in depth in the same article. But I have a lot to discuss here so ***I’m going to break the discussion up in a three-article series***.
 
 The series’ articles, starting with the next one, will be:
 

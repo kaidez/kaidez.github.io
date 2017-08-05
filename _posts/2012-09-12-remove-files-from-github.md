@@ -2,10 +2,10 @@
 title: 'TUTORIAL: Remove Files From GitHub'
 comments: true
 author: Kai Gittens
-meta-excerpt: Get quick answers first, then learn how Git works with GitHub. This post also has an excellent list of Git/GitHub learning links at the end.
+excerpt: Get quick answers first, then learn how Git works with GitHub. This post also has an excellent list of Git/GitHub learning links at the end.
 layout: post
 permalink: /remove-files-from-github/
-category: tutorials
+categories: tutorials
 cat-name: "Tutorials"
 has-home-img: gitTutorial.jpg
 tags: [git, github]

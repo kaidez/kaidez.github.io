@@ -4,8 +4,8 @@ comments: true
 author: Kai Gittens
 layout: post
 permalink: /html5-project-update-january-21-2011/
-meta-excerpt: My HTML5 Project will use HTML5, CSS3, jQuery, Modernizr, maybe CSS PIE, and will be a portfolio of my work and experiments.
-category: personal
+excerpt: My HTML5 Project will use HTML5, CSS3, jQuery, Modernizr, maybe CSS PIE, and will be a portfolio of my work and experiments.
+categories: personal
 cat-name: "Personal"
 tags: [html5, jQuery, modernizr]
 ---
@@ -15,7 +15,7 @@ My [HTML5 Project][1] is a centerpiece of this blog. I’ve been slacking on it 
 
 I’m going to create a personal portfolio of my web design/development work: both at Revlon and freelance. My initial goal was to create another blog, but I struggled to find a topic. Plus, I want to monetize it which meant doing a lot of research in order find the *right* topic.
 
-I don’t want to rush the research process and want to make the right decision in terms of a monetized blog, but I also want to start developing in HTML5 *now*. Therefore, creating an HTML5 portfolio site seems to be the right move for now. 
+I don’t want to rush the research process and want to make the right decision in terms of a monetized blog, but I also want to start developing in HTML5 *now*. Therefore, creating an HTML5 portfolio site seems to be the right move for now.
 
 That being said, here’s my plan for said site:
 

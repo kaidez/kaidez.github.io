@@ -4,10 +4,11 @@ comments: true
 author: Kai Gittens
 layout: post
 permalink: /review-pro-html5-programming/
-meta-excerpt: A review of the Pro HTML5 Programming by Apress
-category: reviews
+excerpt: A review of the Pro HTML5 Programming by Apress
+categories: reviews
 cat-name: "Reviews"
 tags: [javascript, review]
+og-image: default-image.jpg
 ---
 There are quite a few HTML5 books on the market right now. Some are better than others.
 

@@ -4,8 +4,8 @@ comments: true
 author: Kai Gittens
 layout: post
 permalink: /html5-boilerplate-video/
-meta-excerpt: Paul Irish's HTML5 Boilerplate video is extremely informative as it demonstrates many great CSS and JavaScript hacks and best practices
-category: coding-best-practices
+excerpt: Paul Irish's HTML5 Boilerplate video is extremely informative as it demonstrates many great CSS and JavaScript hacks and best practices
+categories: coding-best-practices
 cat-name: "Code Tips"
 tags: [html5]
 ---

@@ -3,9 +3,9 @@ title: 'New York Times Article On HTML5 &#038; Their New HTML5 Site'
 comments: true
 author: Kai Gittens
 layout: post
-meta-excerpt: A great New York Times piece on HTML5 application development and a demo of their new HTML5 Skimmer site
+excerpt: A great New York Times piece on HTML5 application development and a demo of their new HTML5 Skimmer site
 permalink: /new-york-times-article-html5-html5-site/
-category: coding-best-practices
+categories: coding-best-practices
 cat-name: "Code Tips"
 tags: [html5, kai]
 ---

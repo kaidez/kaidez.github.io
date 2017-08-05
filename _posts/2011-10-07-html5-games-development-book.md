@@ -4,8 +4,8 @@ comments: true
 author: Kai Gittens
 layout: post
 permalink: /html5-games-development-book/
-meta-excerpt: Great book for learning HTML5 games development as well as web development best practices. Discusses offline storage, Canvas, node.js & more!
-category: reviews
+excerpt: Great book for learning HTML5 games development as well as web development best practices. Discusses offline storage, Canvas, node.js & more!
+categories: reviews
 cat-name: "Reviews"
 has-thumbnail: html5GamesThumb.jpg
 tags: [book, review, beginner]
@@ -29,7 +29,7 @@ The book is certainly good for learning HTML5 gaming development but I have to s
 
 *   **Canvas** – this is one of the most talked about HTML5 APIs…*HTML5 Games* covers it well and in-depth.
 *   **Cache manifest & local storage** – sorely underrated as of this article, both of these things allow for the creation of browser-based games and web applications that can run without an internet connection. *HTML5 Games* reviews them very early on.
-*   **The importance of JavaScript in HTML5 application development** – My opinion is that this point hasn’t been drilled enough into the heads of web designers with limited web development skills. If that’s you, read this book and you’ll be better-prepared. 
+*   **The importance of JavaScript in HTML5 application development** – My opinion is that this point hasn’t been drilled enough into the heads of web designers with limited web development skills. If that’s you, read this book and you’ll be better-prepared.
 *   **JavaScript best practices** – things like “limit your global JavaScript variables!” are mentioned. This is good.
 
 Factor these four topics in with the ones mentioned earlier (node.js, JSON, etc.) and *HTML5 Games* is a pretty good primer of the most-desired web dev skillsets employees are looking for as of this article. Page 2 of the book states that it’s for game designers, but I think that any intermediate web developer can better their coding habits if they go through the six exercises. You become a better developer by working on many different projects…working on gaming projects like the ones discussed in the book is no exception.

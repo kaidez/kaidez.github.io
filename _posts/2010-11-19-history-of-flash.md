@@ -3,17 +3,18 @@ title: A Short History of Flash (how I saw it)
 comments: true
 author: Kai Gittens
 layout: post
-meta-excerpt: kaidez's view of Flash's evolution, rise and (somewhat) fall.
+excerpt: kaidez's view of Flash's evolution, rise and (somewhat) fall.
 permalink: /history-of-flash/
-category: personal
+categories: personal
 cat-name: "Personal"
 tags: [flash, me]
+og-image: default-image.jpg
 ---
-One reason why I'm curious about HTML5 is because of Apple's issues with the Adobe Flash web animation program.  
+One reason why I'm curious about HTML5 is because of Apple's issues with the Adobe Flash web animation program.
 
 About a year ago from this post, Steve Jobs called Flash a "memory hog" and stated that Apple wouldn't support it on either the iPhone, iPad or iPod Touch.  He said that these devices would instead use HTML5 and Quicktime to display video, even though Flash is the unspoken web video standard.
 
-Steve said this at a time when it looked like the iPhone would rule the smartphone market for awhile and the iPad would be the cool new gadget everyone wanted.  It's a year later and the iPhone is losing market share to Google's Android while the iPad is "cool," but not as "cool" as Apple thought it would be.  
+Steve said this at a time when it looked like the iPhone would rule the smartphone market for awhile and the iPad would be the cool new gadget everyone wanted.  It's a year later and the iPhone is losing market share to Google's Android while the iPad is "cool," but not as "cool" as Apple thought it would be.
 
 <img src="/img/flashLogo.jpg" class="post-pic" />
 This isn't all because of Apple's lack of Flash support for its products, but it's partially due to it.  They may know this and the fact [the Flash-ready Sky Fire web browser][1] the Flash-ready Sky Fire web browser can be installed on the iPhone and iPod Touch could be a sign that they're rethinking their position.
@@ -33,9 +34,9 @@ Flash is the brainchild of software developer [Jonathan Gay][3].  He started out
 
 FutureSplash gained enough high-profile customers, like Disney, to gain the attention of a California-based graphics software company called Macromedia, who already had a web animation program called ShockWave.  But they felt that FutureSplash had promise so they brought the application's parent company in 1996 and renamed the application Flash.
 ##The Big Moment
-Flash versions 1 through 3 required that web designers create almost all their animations by hand with a mouse.  You could use light scripting commands to start and stop animations, but not much else.  
+Flash versions 1 through 3 required that web designers create almost all their animations by hand with a mouse.  You could use light scripting commands to start and stop animations, but not much else.
 
-All that changed in 1999 when Macromedia bundled ActionScript 1.0 with Flash 4.  ActionScript was a full programming language that allowed for the creation of extremely complex web animations within Flash.  Plus, it allowed Flash to communicate with backend database setups like MySQL and Java, meaning that data could easily pass to and from a Flash site: you could create the coolest looking e-commerce site in Flash if you wanted to.  
+All that changed in 1999 when Macromedia bundled ActionScript 1.0 with Flash 4.  ActionScript was a full programming language that allowed for the creation of extremely complex web animations within Flash.  Plus, it allowed Flash to communicate with backend database setups like MySQL and Java, meaning that data could easily pass to and from a Flash site: you could create the coolest looking e-commerce site in Flash if you wanted to.
 
 Thanks to ActionScript, Flash showed the world how limitless web design was and it caused a design movement as revolutionary as Bauhaus (it didn't tick people off like Bauhaus did, but it  caused a revolution anyway).  A lot of great web design agencies spurred the Flash revolution, including [Balthaser][4], [WEBAGENT007][5], the highly influential [2Advanced][6] and the now defunct, extremely arrogant Kioken Studios.  A website designed in Flash cost double the price of one that wasn't, and people paid the money anyway.  Flash sites were everywhere.
 
@@ -56,7 +57,7 @@ Online video streaming benefited the most from super high-speed internet connect
 
 Flash solved this problem by presenting the FLV format to the public in 2003.  Someone could now import almost any type of video into Flash and with a click a few buttons, an FLV would come out.
 
-The FLV was flexible: it was a video file that displayed in any type of web browser that supported Flash, which all of them did. Macromedia increased the flexibility by licensing the FLV to other software developers, meaning that you didn't need to buy Flash to create an FLV.  You could used one of the many cheaper alternatives that came about. 
+The FLV was flexible: it was a video file that displayed in any type of web browser that supported Flash, which all of them did. Macromedia increased the flexibility by licensing the FLV to other software developers, meaning that you didn't need to buy Flash to create an FLV.  You could used one of the many cheaper alternatives that came about.
 
 I'm of the opinion that at this point, Adobe had seen enough.  Macromedia had always been their main competitor in the graphics software field, but the overlap was small.  Macromedia's most successful products were the ones geared towards web programmers, like web design program Dreamweaver and the ColdFusion database platform, while their graphic design products were just okay.  It was the reverse with Adobe: their PhotoShop, Illustrator and InDesign products were standards in the design world but their one web design tool, GoLive, was a bust.
 

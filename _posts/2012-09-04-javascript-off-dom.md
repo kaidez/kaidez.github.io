@@ -3,14 +3,14 @@ title: 'SCREENCAST TUTORIAL: Using JavaScript Off-DOM'
 comments: true
 author: Kai Gittens
 layout: post
-meta-excerpt: How to create/change page elements off-DOM with JavaScript. Discusses createDocumentFragment, cloneNode, appendChild, jQuery .attr() & more.
+excerpt: How to create/change page elements off-DOM with JavaScript. Discusses createDocumentFragment, cloneNode, appendChild, jQuery .attr() & more.
 permalink: /javascript-off-dom/
-category: tutorials
+categories: tutorials
 cat-name: "Tutorials"
 has-thumbnail: jsLogo.png
 tags: [javascript,  screencast, tute]
 ---
-  
+
 Using JavaScript off-DOM is an efficient way to manipulate web page content. By “work off-DOM,” I mean “work inside of the browser memory instead of on a web page.”
 
 A simple web search will display lots of good reasons for doing off-DOM JS. In my case, I was working on a personal project where it looked like I would need to do it so I could set my page up in a specific way. I may not need to do this anymore but still gained knowledge on doing off-DOM JavaScript and want to share what I learned.
@@ -35,7 +35,7 @@ While certain aspects of this tutorial are for the beginner, I am assuming that 
  [2]: https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Statements/var
  [3]: https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array
 
-I used a slide deck in this screencast, which has a boatload of useful links at the end…view it [here][4]. 
+I used a slide deck in this screencast, which has a boatload of useful links at the end…view it [here][4].
 
  [4]: http://slides.kaidez.com/work-off-dom/
 

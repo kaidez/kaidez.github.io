@@ -4,8 +4,8 @@ comments: true
 author: Kai Gittens
 layout: post
 permalink: /html5-project-series-2-work-subcategory-playlist-wireframes/
-meta-excerpt: Part Two of my explanation on how I created wireframed my HTML5 site before I developed and designed it
-category: personal
+excerpt: Part Two of my explanation on how I created wireframed my HTML5 site before I developed and designed it
+categories: personal
 cat-name: "Personal"
 tags: [html5]
 ---
@@ -37,10 +37,10 @@ This article is structured as follows:
  [9]: #playlist
  [10]: #summary
 
-  
+
 ## Wireframe Review
 
-  
+
 First, let’s look at all these pages…
 
  
@@ -49,26 +49,26 @@ Now, let’s break it all down…
 
 ## The Main Work Page
 
-[![][12]][12] 
+[![][12]][12]
 
  
 
 This page was laid out using methods discussed in great detail [in my last article][2] where I discuss  tags and  &  tags. So I’m just going to skim over this page’s explanation:
 
 *   While the HTML5 specification (from here on referred to as *the spec*) encourages you to use  as little as possible, it’s fine to use it if it’s your only option. I needed to wrap and position three  tags ***which were not related to each other***, so  was my only option. [*Read where I discuss  use in greater detail »*][12]
-*   The page displays three subcategory rows: Experiments, Freelance and Day Job. Each row contains samples of my work. Since the samples are of the same type and ***are related to one another***, I’ve put each sample in an  tag and wrapped the grouped samples in a  tag. [*Read where I discuss  and  use in greater detail »*][13] 
+*   The page displays three subcategory rows: Experiments, Freelance and Day Job. Each row contains samples of my work. Since the samples are of the same type and ***are related to one another***, I’ve put each sample in an  tag and wrapped the grouped samples in a  tag. [*Read where I discuss  and  use in greater detail »*][13]
 
 ## The Three Work Subcategory pages and the  Tag
 
 You’ll notice that I highlighted the two phrases above that discuss “related elements”…this was done so I could neatly segue into the discussion about the  tag.
 
-The spec says, if page elements are related to each other, code your page so the relationship is obvious to search engines and machine readers.  does this very well: it’s basically saying the following sentence out loud to the engines and readers: 
+The spec says, if page elements are related to each other, code your page so the relationship is obvious to search engines and machine readers.  does this very well: it’s basically saying the following sentence out loud to the engines and readers:
 
 > “All of the content inside of me is related to some main content that’s very close by”
 
 Let’s look at how I did it on the Experiments page:
 
-[![][16]][16] 
+[![][16]][16]
 
  
 
@@ -80,7 +80,7 @@ Based on the location of the  tag, it’s tempting to treat it like a traditiona
 
 ## Niko’s Playlist Page
 
-[![][17]][17] 
+[![][17]][17]
 
  
 

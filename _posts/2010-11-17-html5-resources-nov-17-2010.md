@@ -3,11 +3,12 @@ title: 2 HTML5 Resources I Like
 comments: true
 author: Kai Gittens
 layout: post
-meta-excerpt: Great HTML5 learning resources
+excerpt: Great HTML5 learning resources
 permalink: /html5-resources-nov-17-2010/
-category: coding-best-practices
+categories: coding-best-practices
 cat-name: "Code Tips"
 tags: [html5, html5 video]
+og-image: default-image.jpg
 ---
 ## Video For Everybody!
 

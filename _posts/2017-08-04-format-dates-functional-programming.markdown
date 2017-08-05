@@ -2,7 +2,7 @@
 layout: post
 title:  "Format Dates with Functional Programming"
 date:   2017-08-04 22:07:59 -0400
-categories: coding tips
+categories: coding-best-practices
 permalink: /format-dates-functional-programming/
 excerpt: Use JavaScript functional programming to format dates with the Date() object. Includes a React example.
 og-image: functional-programming-react.jpg

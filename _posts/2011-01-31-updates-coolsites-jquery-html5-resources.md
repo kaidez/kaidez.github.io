@@ -4,8 +4,8 @@ comments: true
 author: Kai Gittens
 layout: post
 permalink: /updates-coolsites-jquery-html5-resources/
-meta-excerpt: Additions to my list of resources to help you learn web design and development and my Coolsites list, including a Sitecore and .NET development blog
-category: personal
+excerpt: Additions to my list of resources to help you learn web design and development and my Coolsites list, including a Sitecore and .NET development blog
+categories: personal
 cat-name: "Personal"
 tags: [html5, sitecore, css3]
 ---

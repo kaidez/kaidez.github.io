@@ -4,8 +4,8 @@ comments: true
 author: Kai Gittens
 layout: post
 permalink: /coolsite-html5-readiness/
-meta-excerpt: HTML5 Readiness neatly displays browser support for HTML5 and CSS3
-category: coding-best-practices
+excerpt: HTML5 Readiness neatly displays browser support for HTML5 and CSS3
+categories: coding-best-practices
 cat-name: "Code Tips"
 tags: [html5, css3]
 ---

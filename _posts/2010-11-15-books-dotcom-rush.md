@@ -4,24 +4,25 @@ comments: true
 author: Kai Gittens
 layout: post
 permalink: /books-dotcom-rush/
-meta-excerpt: Michael Lewis and Joseph Menn wrote to great books on the Dot-com Rush.
-category: reviews
+excerpt: Michael Lewis and Joseph Menn wrote to great books on the Dot-com Rush.
+categories: reviews
 cat-name: "Reviews"
 tags: [book, review]
+og-image: default-image.jpg
 ---
 Facebook, Twitter and Apple play a huge role in our daily routines nowadays, and cloud computing seems poised to do the same. But we should remember that none of this would be so had the Dot-com Rush never happened.
 
-The Dot-com Rush (or, the Internet Bubble) refers to the period from roughly 1994 to 2000, when a combination of new technological products, mainstream press hype and *very* high stock prices pushed the internet into the mainstream. Product-wise, AOL bought in-home internet connections to the general public while Microsoft spent billions to make their Windows 95 operating system a success, with each product making it easier for average folks to surf the web. 
+The Dot-com Rush (or, the Internet Bubble) refers to the period from roughly 1994 to 2000, when a combination of new technological products, mainstream press hype and *very* high stock prices pushed the internet into the mainstream. Product-wise, AOL bought in-home internet connections to the general public while Microsoft spent billions to make their Windows 95 operating system a success, with each product making it easier for average folks to surf the web.
 
-The success of Windows 95 sent Microsoft’s stock price through the roof, turning the company’s employees who accumulated loads of MSoft stock over the years into millionaires…secretaries and janitors included. Outsiders took that and another incident (which I’ll get to shortly) as proof that “easy money” actually existed. From there, tons of internet startups, most of them stupid and short-sighted, pop up out of nowhere. Their CEOs made sure their startup name contained “.com,” filed initial public offerings and got rich in a matter of weeks. 
+The success of Windows 95 sent Microsoft’s stock price through the roof, turning the company’s employees who accumulated loads of MSoft stock over the years into millionaires…secretaries and janitors included. Outsiders took that and another incident (which I’ll get to shortly) as proof that “easy money” actually existed. From there, tons of internet startups, most of them stupid and short-sighted, pop up out of nowhere. Their CEOs made sure their startup name contained “.com,” filed initial public offerings and got rich in a matter of weeks.
 
 All this pushed global stock markets to record highs, causing average investors to jump on the bandwagon and buy as much tech stock as they could in search for instant wealth. So began the Dot-com Bubble. People eventually realized how stupid and short-sighted these companies were and stopped buying not just those stocks, but *all* stocks, pushing the markets to instant lows. So burst the Bubble.
 
 The burst didn’t stop the growth of the internet, it just forced internet companies to act smarter. Case in point: Yahoo! rose to prominence during the bubble while Google rose to prominence after it burst. So looking at the Dot-com Rush as a business case study isn’t a bad idea. There are a lot of books on the subject, most of which are so-so. Either they don’t tell the whole story or they tell it poorly. And when I think about books that I would suggest on the subject, only two come to mind:
 
 
-## The New New Thing  
-*by Michael Lewis*  
+## The New New Thing
+*by Michael Lewis*
 
 <img src="/img/NewNewThing.jpg" alt="The New New Thing book image" class="post-pic">
 Writer Michael Lewis has been getting a lot of props for his coverage of the 2008 financial crisis. His Pulitzer-winning article [“The End”][1] along with his series of Vanity Fair articles were combined and paraphrased to create his most recent novel, [*The Big Short*][2]. This precedes his first novel, the phenomenal [*Liar's Poker*][3] which chronicled both the birth of mortgage-backed security and the Michael Milken junk bond scandal.
@@ -34,7 +35,7 @@ Netscape’s IPO wasn’t successful because of a great product, just the promis
 
 Netscape would eventually be overshadowed by Microsoft’s Internet Explorer and become a shell of its former self, but its IPO changed the course of American economics in a way that only the 1929 stock market crash can compare. It’s an important party of the story of how we got here, internet-wise, and should be studied by all.
 
-## All the Rave: The Rise and Fall of Shawn Fanning’s Napster  
+## All the Rave: The Rise and Fall of Shawn Fanning’s Napster
 *by Joseph Menn*
 <img src="/img/AllTheRave.jpg" alt="All The Rave book image" class="post-pic">
 A funny by-product of the Dot-com Bubble was the arrogance of dot-com company CEOs. Most loved to talk about how their company would change the business sector they were in: if a startup based on selling cars showed up, its CEO told anyone in earshot how their company would create a revolutionary way of buying and selling cars and do away with the need for car dealerships. All predicted high levels of success, almost all failed.

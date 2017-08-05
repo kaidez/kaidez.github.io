@@ -4,8 +4,8 @@ comments: true
 author: Kai Gittens
 layout: post
 permalink: /tutorial-simple-jquery-fade-in-fade-out/
-meta-excerpt: An easy jQuery tutorial to fade in and fade out two images with a delay
-category: tutorials
+excerpt: An easy jQuery tutorial to fade in and fade out two images with a delay
+categories: tutorials
 cat-name: "Tutorials"
 tags: [ajax, jquery, html5]
 ---

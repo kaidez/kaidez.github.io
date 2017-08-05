@@ -4,14 +4,14 @@ comments: true
 author: Kai Gittens
 layout: post
 permalink: /nyc-social-media-week-event-recap-cross-mobile-promotion/
-meta-excerpt: The cross mobile promotion panel at NY Social Media Week used Nielsen and comScore stats to show how brands use mobile to promote products
-category: reviews
+excerpt: The cross mobile promotion panel at NY Social Media Week used Nielsen and comScore stats to show how brands use mobile to promote products
+categories: reviews
 cat-name: "Reviews"
 tags: [mobile, review]
 ---
 *Correction: In a previous version of this article, Farrah Bostic was incorrectly identified as Kristin Volk in a photo caption, and vice versa. All of the opening statistics, starting with “only 30% of the mobile users have a smartphone,” were incorrectly attributed to coming from Kristen Volk only).*
 
-As mentioned in my last post, a friend at JWT got me into the top two panels for [NYC Social Media Week 2011][1]: the social listening one, titled **“Pay Attention! Social Listening Done Right;” **and the mobile promotion one, titled **Cross-Mobile Brand Strategy**. 
+As mentioned in my last post, a friend at JWT got me into the top two panels for [NYC Social Media Week 2011][1]: the social listening one, titled **“Pay Attention! Social Listening Done Right;” **and the mobile promotion one, titled **Cross-Mobile Brand Strategy**.
 
 
 
@@ -62,7 +62,7 @@ Another impressive group...
 <figcaption class="post-image-caption">My badge for the Cross Mobile Event</figcaption>
 </figure>
 
- 
+
 <h2 id="audience">The Audience</h2>
 
 The last point is a surprise…
@@ -89,7 +89,7 @@ The panelists from left to right: moderator Stefan Gromoll of DOTGO, Kristin Vol
 
 
 The panelists presented lot of data early on in the discussion, most of which wasn't that surprising. But they had to present it to get the point across:
- 
+
  * only 30% of the mobile users have a smartphone…the rest have regular cell phones.
  * 5 trillion texts were sent out in 2010
  * there will be an estimated 9 trillion texts were sent out in 2015

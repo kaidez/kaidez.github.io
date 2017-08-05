@@ -4,8 +4,8 @@ comments: true
 author: Kai Gittens
 layout: post
 permalink: /web-components-demo/
-meta-excerpt: A Web Components demo using just templates and Shadow DOM, mostly templates. Post includes many links to Web Component learning resources.
-category: coding-best-practices
+excerpt: A Web Components demo using just templates and Shadow DOM, mostly templates. Post includes many links to Web Component learning resources.
+categories: coding-best-practices
 cat-name: "Code Tips"
 tags: [web components, shadow DOM, templates]
 has-home-img: web-components-demo.jpg

@@ -3,9 +3,9 @@ title: "REVIEW: Downloaded"
 comments: true
 author: Kai Gittens
 layout: post
-meta-excerpt: The Napster documentary recaps the company’s story and the atmosphere it created, but it doesn't tell the whole story.
+excerpt: The Napster documentary recaps the company’s story and the atmosphere it created, but it doesn't tell the whole story.
 permalink: /downloaded-movie-review/
-category: reviews
+categories: reviews
 cat-name: "Reviews"
 has-home-img: napster-movie-pic.jpg
 tags: [review]
@@ -24,7 +24,7 @@ Napster's rise began at the tail-end of the dotcom rush, just as the old economy
 
 It shows how Fanning and the other Napster developers would work around the clock to improve the software, all of whom would get a the rush after solving and figuring out problems. Combine that with many of them living and partying together, and a camaraderie was created among the team as it continued to better the Napster software.  In effect, *Downloaded* provides an excellent snapshot of the hacking culture that's so prevalent nowadays.
 
-Music artists such as Henry Rollins, Noel Gallagher from Oasis and DJ Spooky (who also created *Downloaded's* soundtrack) make excellent points about the how music business was way behind on tech. Music biz men like Chris Blackwell from Island Records, Seymour Stein from Sire and former Sony Music CEO Don Ienner provide an excellent historical perspective of the music biz. 
+Music artists such as Henry Rollins, Noel Gallagher from Oasis and DJ Spooky (who also created *Downloaded's* soundtrack) make excellent points about the how music business was way behind on tech. Music biz men like Chris Blackwell from Island Records, Seymour Stein from Sire and former Sony Music CEO Don Ienner provide an excellent historical perspective of the music biz.
 
 Also interviewed is Hilary Rosen, who was president of the Recording Industry Association of America (RIAA) at the time of the Napster incident, and whom was painted as public enemy number one by the pro-Naspter community during the legal fight. While she certainly makes arguments in favor of the music industry, she also concedes that the industry got rid of their technology departments, which allowed things like Napster to come about. In terms of other music biz mistakes, Chris Blackwell properly counters the record label's argument that Napster was taking money out of musician's pockets, pointing out that the labels didn't pay them that much anyway.
 

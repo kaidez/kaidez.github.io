@@ -4,8 +4,8 @@ comments: true
 author: Kai Gittens
 layout: post
 permalink: /html5-seo-microdata/
-meta-excerpt: HTML5's Microdata feature is a good tactic if properly formatted
-category: coding-best-practices
+excerpt: HTML5's Microdata feature is a good tactic if properly formatted
+categories: coding-best-practices
 cat-name: "Code Tips"
 tags: [html5]
 ---

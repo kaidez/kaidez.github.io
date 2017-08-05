@@ -3,9 +3,9 @@ title: "TUTORIAL: Filter Content With jQuery.filter() & jQuery Selectors"
 comments: true
 author: Kai Gittens
 layout: post
-meta-excerpt: Use jQuery.filter() & Attribute Selectors with HTML5 data attributes to filter out specific content on a click. Includes a code demo.
+excerpt: Use jQuery.filter() & Attribute Selectors with HTML5 data attributes to filter out specific content on a click. Includes a code demo.
 permalink: /filter-content-jquery/
-category: tutorials
+categories: tutorials
 cat-name: "Tutorials"
 has-home-img: jquery-filter.jpg
 tags: [jquery, javascript, data attributes]

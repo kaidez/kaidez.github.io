@@ -3,9 +3,9 @@ title: 'Using RequireJS In WordPress'
 comments: true
 author: Kai Gittens
 layout: post
-meta-excerpt: Learn how to use RequireJS in WordPress. Includes a walk-through of how RequireJS works and how WordPress manages JavaScript internally.
+excerpt: Learn how to use RequireJS in WordPress. Includes a walk-through of how RequireJS works and how WordPress manages JavaScript internally.
 permalink: /requirejs-wordpress/
-category: coding-best-practices
+categories: coding-best-practices
 cat-name: "Code Tips"
 has-home-img: require-wordpress.jpg
 tags: [RequireJS, Wordpress, jQuery, AMD, javascript]

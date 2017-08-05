@@ -4,8 +4,8 @@ comments: true
 author: Kai Gittens
 layout: post
 permalink: /html5-project-boilerplate-theme-wordpress/
-meta-excerpt: Walk-through of Aaron T. Grogg's excellent HTML5 Boilerplate-based WordPress theme. Includes a great admin screen for custom configuration.
-category: coding-best-practices
+excerpt: Walk-through of Aaron T. Grogg's excellent HTML5 Boilerplate-based WordPress theme. Includes a great admin screen for custom configuration.
+categories: coding-best-practices
 cat-name: "Code Tips"
 tags: [html5, wordpress]
 ---
@@ -15,14 +15,14 @@ tags: [html5, wordpress]
  [2]: https://github.com/paulirish/html5-boilerplate/wiki
  [3]: http://kaidez.com/html5-boilerplate-video/
 
-With [the wireframes][4] completed for the portfolio site for [my HTML5 Project][5], I’ve been researching the best way to use HTML5 page tags while developing within WordPress. 
+With [the wireframes][4] completed for the portfolio site for [my HTML5 Project][5], I’ve been researching the best way to use HTML5 page tags while developing within WordPress.
 
  [4]: http://kaidez.com/html5-project-update-completed-wireframes/
  [5]: http://kaidez.com/html5-project/
 
 My initial plan was to duplicate the default TwentyTen theme that comes with WordPress, then convert it to HTML5. I REALLY didn’t want to use a pre-built WP HTML5 theme, preferring to instead convert the  tags to HTML5 myself, learning things as I go. In other words, I wanted to figure out the answers to the test myself instead of copying off of someone else’s paper.
 
-I was going to use [the excellent HTML5 Boilerplate][1] as a coding guide to hack TwentyTen up until I found [Aaron T. Grogg’s awesome Boilerplate Theme for WordPress][6]. Based on HTML5 Boilerplate’s structure and another WP theme called [Starkers][7], it does everything I need. It correctly inserts all the Boilerplate CSS and JavaScript files while providing a bare page code layout that forces me to figure things out on my own while coding. 
+I was going to use [the excellent HTML5 Boilerplate][1] as a coding guide to hack TwentyTen up until I found [Aaron T. Grogg’s awesome Boilerplate Theme for WordPress][6]. Based on HTML5 Boilerplate’s structure and another WP theme called [Starkers][7], it does everything I need. It correctly inserts all the Boilerplate CSS and JavaScript files while providing a bare page code layout that forces me to figure things out on my own while coding.
 
  [6]: http://wordpress.org/extend/themes/boilerplate
  [7]: http://starkerstheme.com/
@@ -44,7 +44,7 @@ The theme uses the same layout and external file structure that made HTML5 Boile
  [10]: http://html5doctor.com/html-5-reset-stylesheet/
  [11]: http://www.alistapart.com/articles/responsive-web-design/
 
-Best of all, the Boilerplate theme installs a really good Admin panel under the appearance tab in WordPress. With this, you can pick and choose which files and functionality you want to include on your site. You don’t want to use Modernizr on your site? Un-check a box in the admin panel. Prefer to install and update jQuery core file on your own instead of the theme auto-installing it for you? Un-check a box in the admin panel. 
+Best of all, the Boilerplate theme installs a really good Admin panel under the appearance tab in WordPress. With this, you can pick and choose which files and functionality you want to include on your site. You don’t want to use Modernizr on your site? Un-check a box in the admin panel. Prefer to install and update jQuery core file on your own instead of the theme auto-installing it for you? Un-check a box in the admin panel.
 
 [View a screenshot of the Boilerplate Admin panel][12].
 

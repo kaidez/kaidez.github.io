@@ -2,15 +2,16 @@
 title: New Almay Facebook Page I Worked On
 comments: true
 author: Kai Gittens
-meta-excerpt: kaidez developed Almay's Facebook What's New page following some best practices in terms of mobile web development.
+excerpt: kaidez developed Almay's Facebook What's New page following some best practices in terms of mobile web development.
 layout: post
 permalink: /almay-facebook-page/
-category: personal
+categories: personal
 cat-name: "Personal"
 tags: [mobile, almay, html5, facebook, kai]
+og-image: default-image.jpg
 ---
 
-On June 2, 2011, Almay, which is wholly owned by [my employer][1], updated the[ What’s New section of its Facebook page][2], which I coded up. I spent four days developing it under the new Facebook app rules and another two dealing with an Internet Explorer bug. 
+On June 2, 2011, Almay, which is wholly owned by [my employer][1], updated the[ What’s New section of its Facebook page][2], which I coded up. I spent four days developing it under the new Facebook app rules and another two dealing with an Internet Explorer bug.
 
  [1]: http://www.revlon.com/
  [2]: http://www.facebook.com/almay

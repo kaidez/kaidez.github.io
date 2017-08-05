@@ -3,9 +3,9 @@ title: Media Queries Are Important
 comments: true
 author: Kai Gittens
 layout: post
-meta-excerpt: CSS3 media queries can help sites perform better in Google search results and the W3C officially recommends them as a web standard.
+excerpt: CSS3 media queries can help sites perform better in Google search results and the W3C officially recommends them as a web standard.
 permalink: /media-queries-important/
-category: coding-best-practices
+categories: coding-best-practices
 cat-name: "Code Tips"
 has-home-img: HP-media-queries.jpg
 tags: [css3, media queries, best practice]
@@ -26,7 +26,7 @@ Let’s discuss the W3C’s actions first and they need to be placed in their pr
 
 ## The W3C & Media Queries
 
-The W3C is the web standards watchdog, doing its best to enforce them globally. A potential standard goes through five phases of approval: “Working Draft,” “Last Call Working Draft,” “Candidate Recommendation,” “Proposed Recommendation” and “Recommendation.” There is some variation among the various standards committees but they all share these five phases. 
+The W3C is the web standards watchdog, doing its best to enforce them globally. A potential standard goes through five phases of approval: “Working Draft,” “Last Call Working Draft,” “Candidate Recommendation,” “Proposed Recommendation” and “Recommendation.” There is some variation among the various standards committees but they all share these five phases.
 
 Nothing reaches Recommendation status until all of its features are 100% implemented in at least two web browsers and if you’re familiar with the [Browser Wars][4], you know that’s an uphill battle. Case in point: the CSS2 specification was released in 1996 but didn’t reach Recommendation status until 2011.
 
@@ -55,7 +55,7 @@ If you have both a desktop and mobile version of your site, Google must crawl bo
 
 A responsive website built with media queries keeps both the desktop and mobile versions under one URL, reducing the amount of time it takes Google to find and parse content. And if you make it easy for them, they’ll *try* help you as best as they can.
 
-This action falls in line with Google’s growing love affair with fast-loading sites. They’ve invested heavily in their [PageSpeed suite of site optimization tools for web developers][9] and grabbed site speed guru [Steve Souders][10] from Yahoo. Plus, they announced in 2010 that [a fast-loading site *can* get a higher search rank][11]. While it carries a low weight and affects less than 1% of sites, the sum is greater than the parts. Because site speed matters so much to mobile devices, Google is paying strict attention to it at a much higher level than their competitors. 
+This action falls in line with Google’s growing love affair with fast-loading sites. They’ve invested heavily in their [PageSpeed suite of site optimization tools for web developers][9] and grabbed site speed guru [Steve Souders][10] from Yahoo. Plus, they announced in 2010 that [a fast-loading site *can* get a higher search rank][11]. While it carries a low weight and affects less than 1% of sites, the sum is greater than the parts. Because site speed matters so much to mobile devices, Google is paying strict attention to it at a much higher level than their competitors.
 
  [9]: https://developers.google.com/speed/pagespeed/
  [10]: http://stevesouders.com/

@@ -3,9 +3,9 @@ title: Easy-To-Read Version of The HTML5 Specification
 comments: true
 author: Kai Gittens
 layout: post
-meta-excerpt: Ben Schwarz gives us HTML5-A technical specification for Web developers, translating WHATWG's HTML5 arduous spec into layman's terms
+excerpt: Ben Schwarz gives us HTML5-A technical specification for Web developers, translating WHATWG's HTML5 arduous spec into layman's terms
 permalink: /easy-to-read-html5-spec/
-category: coding-best-practices
+categories: coding-best-practices
 cat-name: "Code Tips"
 tags: [html5]
 ---

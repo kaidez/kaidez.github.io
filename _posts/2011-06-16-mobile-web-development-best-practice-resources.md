@@ -4,13 +4,13 @@ comments: true
 author: Kai Gittens
 permalink: /mobile-web-development-best-practice-resources/
 layout: post
-meta-excerpt: Great mobile web development best practice resource list-includes site speed gurus, blogs & a podcast featuring jQuery creator, John Resig. 
-category: coding-best-practices
+excerpt: Great mobile web development best practice resource list-includes site speed gurus, blogs & a podcast featuring jQuery creator, John Resig.
+categories: coding-best-practices
 cat-name: "Code Tips"
 has-thumbnail: mobileBestPractices.jpg
 tags: [mobile, html5, jquery, steve souders, practice]
 ---
-# 
+#
 
 My last batch of articles have discussed which mobile web development best practices I’ve adopted. I obviously can’t claim them as my own creation and should share my resources for these practices.
 
@@ -18,7 +18,7 @@ Some are more mobile-specific then others but all focus on optimizing sites for 
 
 ## 1) Steve Souders
 
-The one that really showed developers the way in terms of creating fast-loading sites. Formerly at Yahoo! and now at Google, [Steve Souders][1] is *the* speed site guru mostly on the strength of his two books: [*High Performance Web Sites*][2] and [*Even Faster Websites*][3]. Paul Irish took the best tips from both of these books and applied them to the [HTML5 Boilerplate build script][4]. 
+The one that really showed developers the way in terms of creating fast-loading sites. Formerly at Yahoo! and now at Google, [Steve Souders][1] is *the* speed site guru mostly on the strength of his two books: [*High Performance Web Sites*][2] and [*Even Faster Websites*][3]. Paul Irish took the best tips from both of these books and applied them to the [HTML5 Boilerplate build script][4].
 
  [1]: http://stevesouders.com/
  [2]: http://www.amazon.com/gp/product/0596529309?ie=UTF8&tag=stevsoud-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596529309
@@ -43,7 +43,7 @@ Right now, Yahoo! is to site optimization what Google is to SEO: a well-respecte
  [8]: http://www.yuiblog.com/blog/category/performance/
  [9]: http://www.phpied.com/
 
-Yahoo! also maintains the Yahoo! Developer Network blog (YDN), which doesn’t have the depth of site speed advice that YUI does, but is still good. Their “[Best Practices for Speeding Up Your Web Site][10]” article is pretty much required reading for any web developer right now, plus, YDN maintains the awesome Steve Souders-created [YSlow browser plugin][11], used for testing a web page’s optimization. 
+Yahoo! also maintains the Yahoo! Developer Network blog (YDN), which doesn’t have the depth of site speed advice that YUI does, but is still good. Their “[Best Practices for Speeding Up Your Web Site][10]” article is pretty much required reading for any web developer right now, plus, YDN maintains the awesome Steve Souders-created [YSlow browser plugin][11], used for testing a web page’s optimization.
 
  [10]: http://developer.yahoo.com/performance/rules.html
  [11]: http://developer.yahoo.com/yslow/
@@ -65,7 +65,7 @@ Prior to jQ Mobile’s release, Resig did a boatload of mobile device research, 
 
 ## 5) HTML5 Boilerplate Build Script
 
-[I’ve mentioned this before][15] but let me be crystal clear right now: HTML5 Boilerplate’s build script does an incredible job of optimizing site files. With a simple command line prompt (or Windows batch file), you can run all your site files through YUI Compresser, optipng, jpegtran and many other applications to dramatically reduce their file size. The end-result is a faster-loading site. 
+[I’ve mentioned this before][15] but let me be crystal clear right now: HTML5 Boilerplate’s build script does an incredible job of optimizing site files. With a simple command line prompt (or Windows batch file), you can run all your site files through YUI Compresser, optipng, jpegtran and many other applications to dramatically reduce their file size. The end-result is a faster-loading site.
 
  [15]: http://kaidez.com/html5-boilerplate-version-1/
 

@@ -4,7 +4,7 @@ comments: true
 author: Kai Gittens
 layout: post
 permalink: /lynda-kaidez/
-meta-excerpt: kaidez has recorded Ember.js and Backbone.js courses for lynda.com, a leading online learning company.
+excerpt: kaidez has recorded Ember.js and Backbone.js courses for lynda.com, a leading online learning company.
 category: null
 cat-name: "null"
 tags: [lynda, backbone, emberjs]

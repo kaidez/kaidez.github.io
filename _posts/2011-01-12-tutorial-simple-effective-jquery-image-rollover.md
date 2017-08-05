@@ -4,8 +4,8 @@ comments: true
 author: Kai Gittens
 layout: post
 permalink: /tutorial-simple-effective-jquery-image-rollover/
-meta-excerpt: A very popular, cross-browser complaint jQuery image rollover
-category: tutorials
+excerpt: A very popular, cross-browser complaint jQuery image rollover
+categories: tutorials
 cat-name: "Tutorials"
 tags: [ajax, jquery, html5]
 ---

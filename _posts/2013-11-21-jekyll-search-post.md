@@ -3,9 +3,9 @@ title: 'TUTORIAL: Jekyll Search with Non-JavaScript/CSS Fallback'
 comments: true
 author: Kai Gittens
 layout: post
-meta-excerpt: jQuery-powered search functionality for a Jekyll site with fallback code if JS or CSS is disabled. Look at the demo before using the code.
+excerpt: jQuery-powered search functionality for a Jekyll site with fallback code if JS or CSS is disabled. Look at the demo before using the code.
 permalink: /custom-jekyll-search/
-category: tutorials
+categories: tutorials
 cat-name: "Tutorials"
 has-home-img: jekyllSearchPostImage.jpg
 tags: [jekyll, jquery, accessibility, javascript, tutorial]

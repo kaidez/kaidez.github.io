@@ -4,10 +4,11 @@ comments: true
 author: Kai Gittens
 layout: post
 permalink: /almay-project-using-html5-net-jquery/
-meta-excerpt: Kaidez developed four micro-sites for Almay using HTML5 video, jQuery, .NET and CSS
-category: personal
+excerpt: Kaidez developed four micro-sites for Almay using HTML5 video, jQuery, .NET and CSS
+categories: personal
 cat-name: "Personal"
 tags: [almay, css, .NET]
+og-image: default-image.jpg
 ---
 [Almay][1], which is wholly-owned by [my employer][2], launched four new products this week:
 
@@ -30,7 +31,7 @@ Breaking down my code…
 
 ### CSS
 
-All the microsites shared the same skeletal layout so I created a global CSS template for this in about two hours. 
+All the microsites shared the same skeletal layout so I created a global CSS template for this in about two hours.
 
 ### .NET
 

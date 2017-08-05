@@ -3,9 +3,9 @@ title: 5 Useful JavaScript Books
 comments: true
 author: Kai Gittens
 layout: post
-meta-excerpt: Great, useful JavaScript books listed from easiest to hardest. Authors include John Resig, Douglas Crockford and Stoyan Stefanov.
+excerpt: Great, useful JavaScript books listed from easiest to hardest. Authors include John Resig, Douglas Crockford and Stoyan Stefanov.
 permalink: /useful-javascript-books/
-category: reviews
+categories: reviews
 cat-name: "Reviews"
 has-thumbnail: goodPartsThumb.jpg
 tags: [javascript, beginner, book]
@@ -46,7 +46,7 @@ Regardless of its limited coverage of JavaScript’s OOP possibilities, *Visual 
 
 <img src="http://ecx.images-amazon.com/images/I/41BIxA3nsNL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg" alt="Object-Oriented JavaScript by Stoyan Stefanov" class="post-pic ">I’ll get straight to the point: this is an *excellent* book!
 
-Embellishing a bit more, Yahoo developer Stefanov does an awesome job of teaching the reader how to treat JavaScript as a full-on object-oriented language. He also does an awesome job of explaining the “hows” and “whys” job of the code exercises. 
+Embellishing a bit more, Yahoo developer Stefanov does an awesome job of teaching the reader how to treat JavaScript as a full-on object-oriented language. He also does an awesome job of explaining the “hows” and “whys” job of the code exercises.
 
 *OOJ* does cover JavaScript basics like variables and arrays, but not as in-depth as *Visual QuickStart Guide*. And it doesn’t matter because every topic he discusses, inheritance, closures, prototypes, getters, setters-all of it is useful in today’s JavaScript environment and are discussed in-depth.
 
@@ -82,7 +82,7 @@ This is not a book for beginners and the author says so in the Preface. Except f
 
  []: http://www.amazon.com/gp/product/0596517742/ref=as_li_qf_sp_asin_il?ie=UTF8&tag=kaidez-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596517742
 
-Written by Douglas Crockford, the creator of JSON who also works at Yahoo, this book has had tremendous influence on the JavaScript community since it’s 2008 publication. Dig thru the core files of jQuery and Modernizr and you’ll see that they’re chocked full of best practices mentioned in the *The Good Parts* or, as many refer to it, “the Crockford Book.” 
+Written by Douglas Crockford, the creator of JSON who also works at Yahoo, this book has had tremendous influence on the JavaScript community since it’s 2008 publication. Dig thru the core files of jQuery and Modernizr and you’ll see that they’re chocked full of best practices mentioned in the *The Good Parts* or, as many refer to it, “the Crockford Book.”
 
 Many, many things that you first learn in JavaScript will need to be unlearned after reading *The Good Parts*. Iterators, the `new` keyword, switch/case statements…be prepared to throw some of these away.
 

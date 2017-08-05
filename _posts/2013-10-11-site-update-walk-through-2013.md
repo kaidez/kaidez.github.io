@@ -4,8 +4,8 @@ comments: true
 author: Kai Gittens
 layout: post
 permalink: /site-redesign-2013/
-meta-excerpt: kaidez.com uses Jekyll as a blog engine, Grunt as a task runner, RequireJS for modular JavaScript management, & Bower for package management
-category: personal
+excerpt: kaidez.com uses Jekyll as a blog engine, Grunt as a task runner, RequireJS for modular JavaScript management, & Bower for package management
+categories: personal
 cat-name: "Personal"
 tags: [jekyll, bower, requirejs, grunt, amd]
 has-home-img: site-relaunch.jpg
@@ -31,11 +31,11 @@ The README uses a lot of verbose code-speak so a non-verbose (but also lengthy) 
 12. [Post-Launch Tasks](#post-launch-tasks)
 13. [Conclusion](#conclusion)
 
-<a name="wordpress"></a> 
-### Goodbye, WordPress... 
+<a name="wordpress"></a>
+### Goodbye, WordPress...
 My initial plan was to design the site on top of WordPress while severely limiting its role on the front-end. WordPress would oversee the back-end (manage data, optimize SQL, etc.) but do little in terms of managing any JavaScript and CSS. That would be my job, particularly the JavaScript.
 
-WordPress manages its internal JS libraries in a way that kept me from controlling the JavaScript the way I wanted to ([read more about this](/requirejs-wordpress/ "Read kaidez's Using RequireJS In WordPress' post")). I probably could have lived with this but chose to be anal-retentive about it and moved away from WordPress. 
+WordPress manages its internal JS libraries in a way that kept me from controlling the JavaScript the way I wanted to ([read more about this](/requirejs-wordpress/ "Read kaidez's Using RequireJS In WordPress' post")). I probably could have lived with this but chose to be anal-retentive about it and moved away from WordPress.
 
 <a name="jekyll" title="go to the jekyll section of this article"></a>
 ### ...Hello, Jekyll
@@ -249,7 +249,7 @@ I wanted a hosting package that would run my site as well as let me install thin
 
 Going with either DV Managed, Rackspace or AWS meant installing a LAMP stack on my own, which I'd never done up to that point. So I wanted SOME tech support in case I needed help and Rackspace seemed to pride itself on NOT providing any. So they were out.
 
-Media Temple has EXCELLENT customer service but DV Managed was bit more expensive then a general AWS package. So I passed on upgrading my MT account and planned on hooking up with AWS at some point. 
+Media Temple has EXCELLENT customer service but DV Managed was bit more expensive then a general AWS package. So I passed on upgrading my MT account and planned on hooking up with AWS at some point.
 
 AWS also doesn't provide tech support but I got a better vibe from them, customer service-wise.  Plus, their popularity is steadily increasing to the point that there's tons of documentation for their various services online. So much so that I figured out how to install a LAMP stack on [a (somewhat) free AWS Usage Tier](http://aws.amazon.com/free/ "Read more about AWS's free Usage Tier").
 
@@ -313,7 +313,7 @@ But I'm obviously critical about the CSS and somewhat critical of how some thing
 
   * __Modify Grunt some more__: Grunt tasks can be configured to some very finite degrees and I know that I can do more in this area. The image minification task is acting odd...need to figure that out. Also, some tasks are repetitive, particularly with the Bower stuff. Grunt has a programmatic API that (I think) can help [make things DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself "What is the DRY principle?") but I need to delve into it some more.
 
-  * __Clean up the CSS &amp; Sass__: Again, I KNOW that the CSS/Sass in its current format could be cleaned up and optimized.  And I do want to make it work in IE8. My hope is to do all this using [OOCSS principles](http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/ "Smashing Magazine Article about OOCSS").  
+  * __Clean up the CSS &amp; Sass__: Again, I KNOW that the CSS/Sass in its current format could be cleaned up and optimized.  And I do want to make it work in IE8. My hope is to do all this using [OOCSS principles](http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/ "Smashing Magazine Article about OOCSS").
 
   * __Make the mobile menu/searchbox run off of CSS transitions instead of jQuery__: when the site's width is set to 568px or less in a media query-enabled browser, both the menu and searchbox will only appear and disappear by clicking on some buttons at the top.This show/hide animation is powered by jQuery but powering it off of CSS3 animations is the more optimal approach (read more about this [here](http://dev.opera.com/articles/view/css3-vs-jquery-animations/)). Doing this means restructuring the header and I was too close to being done with the redesign to do all that.  So this may be done later and if so, it will also be an opportunity to redo the header from a styling standpoint.
 

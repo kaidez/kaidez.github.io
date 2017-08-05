@@ -4,12 +4,12 @@ comments: true
 author: Kai Gittens
 layout: post
 permalink: /nyc-social-media-week-event-recap-social-listening/
-meta-excerpt: The social listening panel at NYC Social Media Week showed how companies like Pepsi track their products within the social networks
-category: reviews
+excerpt: The social listening panel at NYC Social Media Week showed how companies like Pepsi track their products within the social networks
+categories: reviews
 cat-name: "Reviews"
 tags: [social networking, review]
 ---
-[Social Media Week][1] is a semi-annual global conference covering all things social media-related. It runs concurrently in ten cities across globe, reaching as far as Istanbul. Of course, my home base of NYC was one of the ten cities. 
+[Social Media Week][1] is a semi-annual global conference covering all things social media-related. It runs concurrently in ten cities across globe, reaching as far as Istanbul. Of course, my home base of NYC was one of the ten cities.
 
  [1]: http://socialmediaweek.org/
 
@@ -44,9 +44,9 @@ Pretty impressive, I’d say…
 
 *   Michael Learmonth, Digital Editor, Ad Age (Moderator)
 *   Kyle Monson, Senior Technology Editor, JWT
-*   Shiv Singh, Head of Digital for PepsiCo Beverages 
+*   Shiv Singh, Head of Digital for PepsiCo Beverages
 *   Brian Clark, CEO, GMD Studios
-*   Ed Sullivan, Vice President, Strategic Alliances, Radian 6 
+*   Ed Sullivan, Vice President, Strategic Alliances, Radian 6
 *   Michael Jaindl, Chief Client Officer, Buddy Media
 
  
@@ -66,22 +66,22 @@ Nothing really surprising here:
 
 
 <h2 id="panelContent">The Panel Discussion Content</h2>
-All the panelists said they used social listening to measure a variety of user statistics from Twitter, Facebook, the blogosphere, etc., then made a decision on how to best react to the stats, if they reacted at all. Singh at PepsiCo provided such an example: 
+All the panelists said they used social listening to measure a variety of user statistics from Twitter, Facebook, the blogosphere, etc., then made a decision on how to best react to the stats, if they reacted at all. Singh at PepsiCo provided such an example:
 
-For the 2011 Super Bowl, his company ran one of the first and most talked-about TV spots: the [Brisk Iced Tea][10] ad featuring an animated Eminem. While tracking response to the ad on Twitter, members of the PepsiCo social media team in New York discovered an Eminem promotional party in Brooklyn and decided to pay a visit. They arrived at the party to discover not only an extremely positive response to the ad, but also to their product. 
+For the 2011 Super Bowl, his company ran one of the first and most talked-about TV spots: the [Brisk Iced Tea][10] ad featuring an animated Eminem. While tracking response to the ad on Twitter, members of the PepsiCo social media team in New York discovered an Eminem promotional party in Brooklyn and decided to pay a visit. They arrived at the party to discover not only an extremely positive response to the ad, but also to their product.
 
  [10]: http://www.drinkbrisk.com/
 
-There were some examples of how too much listening could be a bad thing, the prime example coming from Clark at GMD Studios. He recalled the story of the *very* early Twitter promotion of *Snakes On A Plane*, which occurred while the film was in post-production. Movie geeks tweeted how *they* thought the movie’s storyline should run. The filmmakers took the tweets to heart and, as they were in post-production, re-edited the movie to so that the storyline matched the geek’s suggestions. The result: *Snakes* opened to a tepid response from movie-goers; there’s no direct proof that the film was great to begin with and that the Twitter users made the film worse, but they sure didn’t make it better.  
+There were some examples of how too much listening could be a bad thing, the prime example coming from Clark at GMD Studios. He recalled the story of the *very* early Twitter promotion of *Snakes On A Plane*, which occurred while the film was in post-production. Movie geeks tweeted how *they* thought the movie’s storyline should run. The filmmakers took the tweets to heart and, as they were in post-production, re-edited the movie to so that the storyline matched the geek’s suggestions. The result: *Snakes* opened to a tepid response from movie-goers; there’s no direct proof that the film was great to begin with and that the Twitter users made the film worse, but they sure didn’t make it better.
 <figcaption class="post-image-box">
 <img src="/img/packedHouse.jpg" />
 <figcaption class="post-image-caption">A packed house for the event!</figcaption>
 </figcaption>
-  
-This "hit-or-miss" scenario led to a lot of agreement between the panelists. They all conceded that while social listening is an important part of the process, it’s not an exact science when it comes reaching consumers. Social networks like Facebook and Twitter may have reached critical mass on the communication level, they said, but no one has perfected the process of using them to sell products.  
-  
-But they all agreed that the best way to reach consumers was by finding the best "influencers" within the social networks: people with influence and authority that can spread the word about a product *if* they like it. If you’ve read [*Purple Cow* by Seth Godin][12] (and every budding entrepreneur should read it), think of influencers as "sneezers spreading the ideavirus."  
-  
+
+This "hit-or-miss" scenario led to a lot of agreement between the panelists. They all conceded that while social listening is an important part of the process, it’s not an exact science when it comes reaching consumers. Social networks like Facebook and Twitter may have reached critical mass on the communication level, they said, but no one has perfected the process of using them to sell products.
+
+But they all agreed that the best way to reach consumers was by finding the best "influencers" within the social networks: people with influence and authority that can spread the word about a product *if* they like it. If you’ve read [*Purple Cow* by Seth Godin][12] (and every budding entrepreneur should read it), think of influencers as "sneezers spreading the ideavirus."
+
 The influencers may be the brass ring that companies reach for, but every panelist was adamant that they were interested in *every* customer and not just the tastemakers. They "socially listen" to every response that Twitter, Facebook and the like send out. They may not react but they listen.
 
 
@@ -116,9 +116,9 @@ Check out their application interface, or Engagement Console, in this video:
 
 No matter its importance and what tracking tools are out there, all the panelists agreed that the social listening process is a slippery slope. Clark said it best: "There’s a fine line between research and stalking." How much should we be listening to? What do we do after we hear things? Should we be doing anything at all?
 
-And what about the limits of Facebook, the biggest social network out there right now? For all the public outcries about how Facebook invades our privacy, they clearly don’t share a lot of enduser information with third parties, if they share it at all. Think about it: only your approved friends can see *all* of your FB wall and profile content, and vice versa. 
+And what about the limits of Facebook, the biggest social network out there right now? For all the public outcries about how Facebook invades our privacy, they clearly don’t share a lot of enduser information with third parties, if they share it at all. Think about it: only your approved friends can see *all* of your FB wall and profile content, and vice versa.
 
-Companies have to deal with this limitation as well. 5 trillion people could "Like" Pepsi on Facebook tomorrow, but Pepsi won’t know anything about them unless the consumer lets them in, and many don’t. Not even Radian6 can track everything on FB, which Ed Sullivan, VP of Radian6 and part of this panel discussion, confirmed.  
+Companies have to deal with this limitation as well. 5 trillion people could "Like" Pepsi on Facebook tomorrow, but Pepsi won’t know anything about them unless the consumer lets them in, and many don’t. Not even Radian6 can track everything on FB, which Ed Sullivan, VP of Radian6 and part of this panel discussion, confirmed.
 
 <figcaption class="post-image-box">
 <img src="/img/panelists.jpg" />
@@ -127,17 +127,17 @@ Companies have to deal with this limitation as well. 5 trillion people could "Li
 
 Someone on the panel cited Nielsen numbers saying that 25% of all time spent online is on Facebook. So there’s some valuable consumer data on FB, so valuable that Singh from PepsiCo suggested that Facebook CEO Mark Zuckerberg is probably "kept up at night by the fact that he didn’t make Facebook content more publicly available."
 
-All of this led to a vigorous debate among the panelists about how to deal with the limitations.  
+All of this led to a vigorous debate among the panelists about how to deal with the limitations.
 
 <h2 id="limitSolutions">The Solution To The Limits</h2>
 
 Outside of utilizing Facebook Connect, which provides *some* information to companies about Facebook users, none of the panelists had an answer about what to do about the FB issue. But there were some agreed-upon best practices:
 
 *   **Try to satisfy all customers, not just the influencers** – This was already mentioned but since all the panelists couldn’t stress this point enough, it bears repeating. There is great success to be found by providing great customer service across the board.
-*   **Don’t rush to do something just because you can** – Shiv Singh of PepsiCo, the most insightful one on the panel, described his three pillars of social listening: **Listen. Respond. React.**  
-      
+*   **Don’t rush to do something just because you can** – Shiv Singh of PepsiCo, the most insightful one on the panel, described his three pillars of social listening: **Listen. Respond. React.**
+
     According to Singh, whenever Pepsi "hears" something going with their brand inside social media, the PR, Web and Marketing departments meet as a team to discuss the next step. Sometimes they react, sometimes they don’t. But their reactions are carefully gauged.
-*   **If your brand gets a negative reaction within the social networks, don’t respond to it unless you can fix the problem ** – Customers reacting negatively to your product inside the social networks is the cost of doing business. All the panelists agreed that trying to solve everyone’s problem is impossible. But they also agreed that solving a problem is one of the best ways to build customer loyalty…even if you’re building it one customer at a time. So fixing a problem that you actually *can* fix is always a good idea. That housewife in Idaho that simply "didn’t like" your product and decided to tell her 27 followers on Twitter about it? Well, you have to pick your battles. 
+*   **If your brand gets a negative reaction within the social networks, don’t respond to it unless you can fix the problem ** – Customers reacting negatively to your product inside the social networks is the cost of doing business. All the panelists agreed that trying to solve everyone’s problem is impossible. But they also agreed that solving a problem is one of the best ways to build customer loyalty…even if you’re building it one customer at a time. So fixing a problem that you actually *can* fix is always a good idea. That housewife in Idaho that simply "didn’t like" your product and decided to tell her 27 followers on Twitter about it? Well, you have to pick your battles.
 
 
 <h2 id="conclusion">Conclusion</h2>

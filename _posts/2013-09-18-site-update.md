@@ -4,8 +4,8 @@ comments: true
 author: Kai Gittens
 layout: post
 permalink: /site-update/
-meta-excerpt: A quick update about the status of kaidez.com, including the announcing of a new, upcoming site design.
-category: personal
+excerpt: A quick update about the status of kaidez.com, including the announcing of a new, upcoming site design.
+categories: personal
 cat-name: "Personal"
 tags: [html5, kai]
 ---

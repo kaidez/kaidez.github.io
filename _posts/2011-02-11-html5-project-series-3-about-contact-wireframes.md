@@ -4,13 +4,13 @@ comments: true
 author: Kai Gittens
 layout: post
 permalink: /html5-project-series-3-about-contact-wireframes/
-meta-excerpt: Final article in the HTML5 wireframe series for the kaidez portfolio site
-category: personal
+excerpt: Final article in the HTML5 wireframe series for the kaidez portfolio site
+categories: personal
 cat-name: "Personal"
 tags: [html5]
 ---
 
-***Read the entire “Wirefame Series”  
+***Read the entire “Wirefame Series”
 [Intro»][1]  [Page 1»][2]  [Page 2»][3]  Page 3»***
 
  [1]: http://kaidez.com/html5-project-update-completed-wireframes/
@@ -40,24 +40,24 @@ This article is structured as follows:
 
 ## Wireframe Review
 
-First, let’s look at the pages:  
-  
+First, let’s look at the pages:
+
 Now, let’s break it all down…
 
  
 
-## The  Tag 
+## The  Tag
 
 Page elements like ,  and  were discussed in the series’ first article so [feel free to read that here][2] if you want to learn more about those things. That article also discussed the  tag: we’ll be revisiting that tag.
 
 [HTML5 Doctor][5] gave us some advice on how to use the various HTML5 page content tag…let’s look at that again:
 
-> *   Would the content would make sense on its own in a feed reader? If so use 
-> *   Is the content related? If so use 
-> *   Finally if there’s no semantic relationship use 
-> 
+> *   Would the content would make sense on its own in a feed reader? If so use
+> *   Is the content related? If so use
+> *   Finally if there’s no semantic relationship use
+>
 > [Read the whole article (no pun intended) »][11]
-> 
+>
 >  
 
  [11]: http://html5doctor.com/the-article-element/
@@ -97,7 +97,7 @@ As far as sketching out the directory structure, I’ll be using WordPress which
 
 > “research WordPress page layouts to understand the best way to convert them to HTML5″
 
-I’m going to duplicate WordPress’ TwentyTen theme into a child theme, then tweak the child them to my own design. **This is going to be a lot of work**: I’ve started to look at the TwentyTen code and there’s a lot I have to tweak, but I’ve done it before so I should be OK. Update: instead of tweaking the TwentyTen theme to suit my needs, I’ll be tweaking using [Aaron Grogg’s HTML5-ready Boilerplate theme][17].) 
+I’m going to duplicate WordPress’ TwentyTen theme into a child theme, then tweak the child them to my own design. **This is going to be a lot of work**: I’ve started to look at the TwentyTen code and there’s a lot I have to tweak, but I’ve done it before so I should be OK. Update: instead of tweaking the TwentyTen theme to suit my needs, I’ll be tweaking using [Aaron Grogg’s HTML5-ready Boilerplate theme][17].)
 
  [17]: http://wordpress.org/extend/themes/boilerplate
 
