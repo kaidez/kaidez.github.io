@@ -40,16 +40,18 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-gems:
-  - jekyll-redirect-from
+plugins: [jekyll-redirect-from, jekyll-paginate]
 
 exclude:
-  - js-build/
   - Gemfile
   - Gemfile.lock
   - general_notes.md
+  - js-build/
   - package.json
   - webpack.config.js
   - yarn.lock
   - .DS_Store
   - _includes/.DS_Store
+
+paginate: 10
+paginate_path: "/blog/page:num/"
