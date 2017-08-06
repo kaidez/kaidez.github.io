@@ -7,7 +7,7 @@ excerpt: kaidez recalls the best about Steve Jobs
 permalink: /remembering-steve-jobs/
 categories: personal
 cat-name: "Personal"
-has-thumbnail: sjPicThumb.jpg
+og-image: default-image.jpg
 tags: [rant, kai]
 ---
 I’m sitting here, typing away on my Mac Intel, syncing podcasts to my iPhone, my Powermac G4 self-customed web server humming two feet away, wondering what’s the best way to recall a visionary in writing. It’s tough…a loss like this doesn’t happen everyday.

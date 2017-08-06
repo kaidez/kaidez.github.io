@@ -8,7 +8,7 @@ excerpt: kaidez has recorded Ember.js and Backbone.js courses for lynda.com, a l
 category: null
 cat-name: "null"
 tags: [lynda, backbone, emberjs]
-has-home-img: kaidez-lynda.jpg
+og-image: kaidez-lynda.jpg
 ---
 If you [follow me on Twitter](http://twitter.com/kaidez "follow kaidez on Twitter"), you know that I've been recording JavaScript-based courses for [lynda.com](http://lynda.com "visit lynda.com: a leading online learning company"). My second of two courses was uploaded to their site the day before this post's publish date.
 

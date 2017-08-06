@@ -8,6 +8,7 @@ excerpt: A quick update about the status of kaidez.com, including the announcing
 categories: personal
 cat-name: "Personal"
 tags: [html5, kai]
+og-image: default-image.jpg
 ---
 
 I'm still coding but haven't blogged in awhile. So it's time to not only get back to blogging but to also redesign this blog. Here's the whole story…

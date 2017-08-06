@@ -8,7 +8,7 @@ excerpt: kaidez developed the RevlonProBrands.com site using GitHub Atom, Jade, 
 categories: personal
 cat-name: "Personal"
 tags: [revlon, atom, jade, oocss, gulp, grunt, Modernizr, yepnope, GitHub]
-has-home-img: revlon-pro-brands.jpg
+og-image: revlon-pro-brands.jpg
 ---
 Revlon, my employer, recently launched [RevlonProBrands.com](http://www.revlonprobrands.com/us "visit RevlonProBrands.com"), a one-page site that  acts as a sales tool for the company's sales reps. It was designed by a Colorado web shop and passed on to Revlon's internal web team for integration into a [Sitecore](http://www.sitecore.net/ "visit Sitecore: a .NET based content management system") environment.
 

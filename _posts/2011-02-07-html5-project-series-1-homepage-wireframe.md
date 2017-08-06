@@ -7,6 +7,7 @@ permalink: /html5-project-series-1-homepage-wireframe/
 excerpt: Wireframes for the kaidez portfolio site of New York/Jersey City, N.J. based web designer, Kai Gittens, who also works at Revlon and Almay
 categories: personal
 cat-name: "Personal"
+og-image: default-image.jpg
 tags: [html5]
 ---
 ***Read the entire “Wirefame Series”

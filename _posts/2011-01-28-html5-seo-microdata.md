@@ -7,6 +7,7 @@ permalink: /html5-seo-microdata/
 excerpt: HTML5's Microdata feature is a good tactic if properly formatted
 categories: coding-best-practices
 cat-name: "Code Tips"
+og-image: default-image.jpg
 tags: [html5]
 ---
 *MUCH thanks to at Oli Studholme at HTML5 Doctor for helping me understand this!!!!*

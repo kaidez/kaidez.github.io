@@ -7,7 +7,7 @@ excerpt: kaidez created a WordPress site for a Montclair, NJ hair salon, with a 
 permalink: /parlor-redesign/
 categories: personal
 cat-name: "Personal"
-has-home-img: parlor-redesign.jpg
+og-image: parlor-redesign.jpg
 tags: [personal, wordpress]
 ---
 Many, many, many years ago, I created a Flash site for a close friend of mine's Montclair, NJ hair salon, Parlor Hair Studio. At the time, I was really good with Flash and was able to design and develop a site that was aligned with the times.

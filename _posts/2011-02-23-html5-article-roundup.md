@@ -7,6 +7,7 @@ permalink: /html5-article-roundup/
 excerpt: A list of great HTML5 articles compiled by kaidez
 categories: reviews
 cat-name: "Reviews"
+og-image: default-image.jpg
 tags: [html5, review]
 ---
 

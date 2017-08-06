@@ -7,6 +7,7 @@ excerpt: "A negative review of Peachpit Press' jQuery: Visual Quickstart Guide, 
 permalink: /review-jquery-visual-quickstart-guide/
 categories: reviews
 cat-name: "Reviews"
+og-image: default-image.jpg
 tags: [jquery, review, book]
 ---
 

@@ -7,6 +7,7 @@ excerpt: An extensive article with tips, resources and ideas for high school stu
 permalink: /10-tips-high-school-students-web-designers-web-developers/
 categories: personal
 cat-name: "Personal"
+og-image: default-image.jpg
 tags: [javascript, conference, kai]
 ---
 I have to thank my father for getting me into computers. He sampled a lot of personal PCs in the early eighties, from the Kaypro to the Apple II…eventually settling on the Apple Macintosh (what we now call the Mac). I paid attention and followed his lead, resulting in the career that I have now.

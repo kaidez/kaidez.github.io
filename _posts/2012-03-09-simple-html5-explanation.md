@@ -7,7 +7,7 @@ excerpt: A lengthy but simple explanation of what HTML5 is with suggestions on h
 permalink: /simple-html5-explanation/
 categories: coding-best-practices
 cat-name: "Code Tips"
-has-thumbnail: html5Thumb.png
+og-image: default-image.jpg
 tags: [html5, best practice]
 ---
 

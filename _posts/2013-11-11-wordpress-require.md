@@ -7,7 +7,7 @@ excerpt: Learn how to use RequireJS in WordPress. Includes a walk-through of how
 permalink: /requirejs-wordpress/
 categories: coding-best-practices
 cat-name: "Code Tips"
-has-home-img: require-wordpress.jpg
+og-image: require-wordpress.jpg
 tags: [RequireJS, Wordpress, jQuery, AMD, javascript]
 ---
 As mentioned in [my 2013 site redesign post](/site-redesign-2013/ "A walk-through of how kaidez.com was redesigned"), I started redesigning this site on top of [WordPress](http://wordpress.org/ "Go to WordPress.org") but eventually switched over to [Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site"). This was because my goal was to use [RequireJS](http://requirejs.org/ "Go to requirejs.org") to control all the site's JavaScript in a specific way, and WordPress kept me from doing this.

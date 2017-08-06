@@ -7,6 +7,7 @@ excerpt: Stefanos Kofopoulos from pestaola.gr shares some excellent usability & 
 permalink: /video-lecture-wordpress-usability-analytics/
 categories: coding-best-practices
 cat-name: "Code Tips"
+og-image: default-image.jpg
 tags: [wordpress]
 ---
 I came across this really good video over at [WordPress.tv.][1] Stefanos Kofopoulos, founder of the Greece-based [pestaola.gr][2] lifestyle blog, provides some *great* tips on creating a better usability experience on a WordPress self-hosted site. Most of the tips are either ones I’ve already implemented on this site, or plan to in the near future after seeing this lecture.

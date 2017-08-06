@@ -7,6 +7,7 @@ permalink: /wordpress-webmatrix/
 excerpt: Using WebMatrix to create a WordPress development site
 categories: coding-best-practices
 cat-name: "Code Tips"
+og-image: default-image.jpg
 tags: [wordpress]
 ---
 HAPPY GROUNDHOG DAY!!!!!!!!!!!!!

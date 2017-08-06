@@ -8,6 +8,7 @@ permalink: /mitchum-html5-site/
 categories: personal
 cat-name: "Personal"
 tags: [css, jquery, mitchum, html5, microsoft, kai]
+og-image: default-image.jpg
 ---
 
 It has been INSANELY busy at work lately, hence, no blog posts in over a month. One of the projects that has literally kept me up late is the new Mitchum deodorant website. And yes, HTML5 was used.

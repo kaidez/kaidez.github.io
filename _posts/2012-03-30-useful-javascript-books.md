@@ -7,7 +7,7 @@ excerpt: Great, useful JavaScript books listed from easiest to hardest. Authors 
 permalink: /useful-javascript-books/
 categories: reviews
 cat-name: "Reviews"
-has-thumbnail: goodPartsThumb.jpg
+og-image: default-image.jpg
 tags: [javascript, beginner, book]
 ---
 

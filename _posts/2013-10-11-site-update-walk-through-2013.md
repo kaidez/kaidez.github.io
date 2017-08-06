@@ -8,7 +8,7 @@ excerpt: kaidez.com uses Jekyll as a blog engine, Grunt as a task runner, Requir
 categories: personal
 cat-name: "Personal"
 tags: [jekyll, bower, requirejs, grunt, amd]
-has-home-img: site-relaunch.jpg
+og-image: site-relaunch.jpg
 ---
 After over 2,000 Git commits, kaidez.com gets a long-overdue redesign. It was a struggle due to limited free time, but it was also a lot of fun and an excellent learning experience.
 

@@ -7,6 +7,7 @@ excerpt: JavaScript for loop dynamically creates a jQuery fade in/fade out effec
 permalink: /javascript-for-loop-creates-jquery-fade/
 categories: tutorials
 cat-name: "Tutorials"
+og-image: default-image.jpg
 tags: [javascript, screencast, tute]
 ---
 

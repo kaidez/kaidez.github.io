@@ -7,6 +7,7 @@ permalink: /coolsite-html5-readiness/
 excerpt: HTML5 Readiness neatly displays browser support for HTML5 and CSS3
 categories: coding-best-practices
 cat-name: "Code Tips"
+og-image: default-image.jpg
 tags: [html5, css3]
 ---
 *Note: This site no longer includes a 'Coolsites' section.*

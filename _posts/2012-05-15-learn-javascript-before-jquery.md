@@ -7,7 +7,7 @@ layout: post
 excerpt: A list of good reasons why it's better to learn JavaScript before jQuery. A short learning resource list at the end to help you get started.
 categories: coding-best-practices
 cat-name: "Code Tips"
-has-thumbnail: jQjS.png
+og-image: default-image.jpg
 tags: [javascript, beginner, jquery, best practice]
 ---
 A project came up at work involving [Node][1], the software system that allows JavaScript to run server-side instead of client-side. I wasn’t involved in the project but wanted to play with the code once it landed in production and wanted to be ready if ever asked to support it. So I set Node up on my Mac laptop, read parts of its documentation and found some beginning Node learning resources online.

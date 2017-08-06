@@ -7,7 +7,7 @@ excerpt: jQuery-powered search functionality for a Jekyll site with fallback cod
 permalink: /custom-jekyll-search/
 categories: tutorials
 cat-name: "Tutorials"
-has-home-img: jekyllSearchPostImage.jpg
+og-image: jekyllSearchPostImage.jpg
 tags: [jekyll, jquery, accessibility, javascript, tutorial]
 ---
 <a href="/samples/jekyll-search/" class="demoLink" target="blank">VIEW THE DEMO</a>

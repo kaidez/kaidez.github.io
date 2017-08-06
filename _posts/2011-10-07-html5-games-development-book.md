@@ -7,7 +7,7 @@ permalink: /html5-games-development-book/
 excerpt: Great book for learning HTML5 games development as well as web development best practices. Discusses offline storage, Canvas, node.js & more!
 categories: reviews
 cat-name: "Reviews"
-has-thumbnail: html5GamesThumb.jpg
+og-image: default-image.jpg
 tags: [book, review, beginner]
 ---
 

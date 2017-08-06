@@ -7,7 +7,7 @@ excerpt: CSS3 media queries can help sites perform better in Google search resul
 permalink: /media-queries-important/
 categories: coding-best-practices
 cat-name: "Code Tips"
-has-home-img: HP-media-queries.jpg
+og-image: HP-media-queries.jpg
 tags: [css3, media queries, best practice]
 ---
 

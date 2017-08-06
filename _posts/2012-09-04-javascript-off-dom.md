@@ -7,7 +7,7 @@ excerpt: How to create/change page elements off-DOM with JavaScript. Discusses c
 permalink: /javascript-off-dom/
 categories: tutorials
 cat-name: "Tutorials"
-has-thumbnail: jsLogo.png
+og-image: default-image.jpg
 tags: [javascript,  screencast, tute]
 ---
 

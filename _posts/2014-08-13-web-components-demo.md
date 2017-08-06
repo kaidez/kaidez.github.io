@@ -8,7 +8,7 @@ excerpt: A Web Components demo using just templates and Shadow DOM, mostly templ
 categories: coding-best-practices
 cat-name: "Code Tips"
 tags: [web components, shadow DOM, templates]
-has-home-img: web-components-demo.jpg
+og-image: web-components-demo.jpg
 ---
 <p class="clearfix">
   <ul>

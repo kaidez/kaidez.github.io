@@ -7,6 +7,7 @@ permalink: /html5-video-tips-january-2011/
 excerpt: HTML5 Video Tips from kaidez
 categories: coding-best-practices
 cat-name: "Code Tips"
+og-image: default-image.jpg
 tags: [html5, mobile]
 ---
 Setting up HTML5 video for [my recent Almay project][1] was certainly a learning experience (thanks to Max at [image0][2] for the help during this part of the project). Here’s what I learned…and will *never* forget:

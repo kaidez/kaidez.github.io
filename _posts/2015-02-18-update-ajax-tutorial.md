@@ -7,7 +7,7 @@ excerpt: kaidez's old AJAX tutorial was updated. jQuery AJAX is discussed in dep
 permalink: /update-ajax-tutorial/
 categories: personal
 cat-name: "Personal"
-has-home-img: ajax-image.jpg
+og-image: ajax-image.jpg
 tags: [ajax, javascript, kaidez]
 ---
 Happy 10th Birthday AJAX!!!!

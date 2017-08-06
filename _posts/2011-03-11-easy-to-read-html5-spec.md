@@ -7,6 +7,7 @@ excerpt: Ben Schwarz gives us HTML5-A technical specification for Web developers
 permalink: /easy-to-read-html5-spec/
 categories: coding-best-practices
 cat-name: "Code Tips"
+og-image: default-image.jpg
 tags: [html5]
 ---
 Lots of thanks and praises to Australian web developer, [Ben Schwarz][1] for creating [HTML5-A technical specification for Web developers][2]. It takes the somewhat rigorously-written [HTML5-A technical specification for Web developers][3]and rewords it in a very easy-to-read format.

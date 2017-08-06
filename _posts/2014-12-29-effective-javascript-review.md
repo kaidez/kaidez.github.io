@@ -7,7 +7,7 @@ excerpt: Excellent book that explains complicated JavaScript concepts like API d
 permalink: /effective-javascript-review/
 categories: reviews
 cat-name: "Reviews"
-has-home-img: effective-js.jpg
+og-image: effective-js.jpg
 tags: [review, javascript]
 ---
 *"It very well may be the best JavaScript book ever written...read it!"*

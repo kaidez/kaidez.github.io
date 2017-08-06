@@ -7,7 +7,7 @@ excerpt: A demo of how to optimize CSS with Gulp, Grunt and tasks like uncss and
 permalink: /css-build-demo/
 categories: coding-best-practices
 cat-name: "Code Tips"
-has-home-img: css-build-demo.jpg
+og-image: css-build-demo.jpg
 tags: [javascript, gulp, css, screencast]
 ---
 I interviewed a consultant once to help with some web projects at Revlon. As should be expected, I quizzed her on some various frameworks and libraries to gauge how up-to-date her skill-set was.

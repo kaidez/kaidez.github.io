@@ -7,6 +7,7 @@ permalink: /html5-project-series-3-about-contact-wireframes/
 excerpt: Final article in the HTML5 wireframe series for the kaidez portfolio site
 categories: personal
 cat-name: "Personal"
+og-image: default-image.jpg
 tags: [html5]
 ---
 

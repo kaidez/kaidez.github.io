@@ -8,7 +8,7 @@ excerpt: kaidez's Git/GitHub tutorial is updated to be shorter, provide informat
 categories: personal
 cat-name: "Personal"
 tags: [git, github]
-has-home-img: gitTutorial.jpg
+og-image: gitTutorial.jpg
 ---
 The good news is, my "Remove Files From GitHub" tutorial is showing up in a lot of search results....an average of 1400 appearances a month. The not-so-good news is, the click-throughs are low...an average of 25 a month.
 

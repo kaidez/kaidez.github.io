@@ -8,7 +8,7 @@ excerpt: "Use mouse clicks to load information stored in data attributes onto a 
 categories: tutorials
 cat-name: "Tutorials"
 tags: [html5, javascript]
-has-home-img: data-attribute.jpg
+og-image: data-attribute.jpg
 ---
 A recent project at work *almost* required my creating functionality that loaded content stored in HTML5 data attributes onto a web page with mouse clicks. At that point, I had used data attributes in practice code a bit, but readily admitted to not knowing everything about them.
 

@@ -7,6 +7,7 @@ permalink: /nyc-social-media-week-event-recap-social-listening/
 excerpt: The social listening panel at NYC Social Media Week showed how companies like Pepsi track their products within the social networks
 categories: reviews
 cat-name: "Reviews"
+og-image: default-image.jpg
 tags: [social networking, review]
 ---
 [Social Media Week][1] is a semi-annual global conference covering all things social media-related. It runs concurrently in ten cities across globe, reaching as far as Istanbul. Of course, my home base of NYC was one of the ten cities.

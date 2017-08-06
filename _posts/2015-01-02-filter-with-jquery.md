@@ -7,7 +7,7 @@ excerpt: Use jQuery.filter() & Attribute Selectors with HTML5 data attributes to
 permalink: /filter-content-jquery/
 categories: tutorials
 cat-name: "Tutorials"
-has-home-img: jquery-filter.jpg
+og-image: jquery-filter.jpg
 tags: [jquery, javascript, data attributes]
 ---
 <a href="http://codepen.io/kaidez/pen/azmRXm" class="demoLink" target="blank">VIEW THE DEMO</a>

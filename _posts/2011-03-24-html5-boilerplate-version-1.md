@@ -7,6 +7,7 @@ excerpt: A quick review of HTML5 Boilerplate version 1.0, discussing the new bui
 permalink: /html5-boilerplate-version-1/
 categories: coding-best-practices
 cat-name: "Code Tips"
+og-image: default-image.jpg
 tags: [html5]
 ---
 As if it wasn’t awesome already, the [HTML5 Boilerplate][2] just got awesome-er.

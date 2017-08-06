@@ -7,7 +7,7 @@ layout: post
 permalink: /remove-files-from-github/
 categories: tutorials
 cat-name: "Tutorials"
-has-home-img: gitTutorial.jpg
+og-image: gitTutorial.jpg
 tags: [git, github]
 ---
 
