@@ -26,12 +26,14 @@
 <meta property="og:image" content="/img/{{page.og-image}}"/>
 <meta property="og:image:width" content="700"/>
 <meta property="og:image:height" content="300"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:description" content="{{ page.excerpt }}"/>
-<meta name="twitter:title" content="{{ page.title }} » kaidez"/><meta name="twitter:site" content="@kaidez"/>
-<meta name="twitter:image" content="/img/{{page.og-image}}"/>
-<meta name="twitter:creator" content="@kaidez"/>
 
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@kaidez"/>
+<meta name="twitter:creator" content="@kaidez"/>
+<meta name="twitter:title" content="{{ page.title }} » kaidez"/>
+<meta name="twitter:image" content="/img/{{page.og-image}}"/>
+<meta name="twitter:description" content="{{ page.excerpt }}"/>
 
   {% if jekyll.environment == 'production' and site.google_analytics %}
   {% include google-analytics.html %}

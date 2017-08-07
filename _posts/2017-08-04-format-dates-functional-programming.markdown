@@ -151,17 +151,17 @@ class Time extends React.Component {
     const seconds = getWholeDate.getSeconds()
 
   return (
-    <div>
+    &lt;div&gt;
       It's {this.convertMilitaryTime(hours)}:
       {this.addZero(minutes)}:
       {this.addZero(seconds)} on {monthName[monthIndex]} {this.addZero(day)}, {year}
-    </div>
+    &lt;/div&gt;
     );
   }
 }
 
 ReactDOM.render(
-  <Time />,
+  &gt;Time /&lt;,
   document.getElementById('time')
 );
 </code></pre>
