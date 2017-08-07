@@ -161,7 +161,7 @@ class Time extends React.Component {
 }
 
 ReactDOM.render(
-  &gt;Time /&lt;,
+  &lt;Time /&gt;,
   document.getElementById('time')
 );
 </code></pre>
