@@ -5,12 +5,15 @@
 
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-
+  <link href="https://fonts.googleapis.com/css?family=Khula|Poiret+One" rel="stylesheet">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <link rel="stylesheet" href="{{ "/css/prism.css" | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
-
+  <style type="text/css">
+    font-family: 'Khula', sans-serif;
+    font-family: 'Poiret One', cursive;
+  </style>
 
 <link rel="canonical" href="http://kaidez.com{{page.permalink}}"/><meta property="og:locale" content="en_US"/>
 <meta property="og:type" content="article"/>
