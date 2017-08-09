@@ -25,12 +25,12 @@ Here’s how I did it:
 
 <pre><code class="language-markup">
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">
-<head>
-<meta charset="UTF-8" />
-<title>A Simple jQuery Fade In/Fade Out</title>
+&lt;html dir="ltr" lang="en-US"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;A Simple jQuery Fade In/Fade Out&lt;/title&gt;
 
-<style>
+&lt;style&gt;
 #picOne, #picTwo {
 position:absolute;
 display: none;
@@ -40,27 +40,27 @@ display: none;
 width:100px;
 height:100px;
 }
-</style>
+&lt;/style&gt;
 
-<script src="http://code.jquery.com/jquery-1.4.4.min.js" type="text/javascript"></script>
+&lt;script src="http://code.jquery.com/jquery-1.4.4.min.js" type="text/javascript"&gt;&lt;/script&gt;
 
-<script type="text/javascript">
+&lt;script type="text/javascript"&gt;
 $(document).ready(function() {
     $('#picOne').fadeIn(1500).delay(3500).fadeOut(1500);
     $('#picTwo').delay(5000).fadeIn(1500);
 });
-</script>
+&lt;/script&gt;
 
-</head>
-<body>
+&lt;/head&gt;
+&lt;body&gt;
 
-<div id="pics">
-<img src="firstPic.gif" width="100" height="100" id="picOne" />
-<img src="secondPic.gif" width="100" height="100" id="picTwo" />
-</div>
+&lt;div id="pics"&gt;
+&lt;img src="firstPic.gif" width="100" height="100" id="picOne" /&gt;
+&lt;img src="secondPic.gif" width="100" height="100" id="picTwo" /&gt;
+&lt;/div&gt;
 
-</body>
-</html>
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 
 Let’s review the specific parts of the code that make the fade in/fade out work..
@@ -98,16 +98,16 @@ $('#picTwo').delay(5000).fadeIn(1500);
 We place our two images in our “pics”  tag. The images and  tag are of equal width and height. And since the images were styled with position: absolute, they will be stacked one on top of the other. Whichever one is listed first is the one on top:
 
 <pre><code class="language-markup">
-<div id="pics">
-<img src="firstPic.gif" width="100" height="100" id="picOne" />
-<img src="secondPic.gif" width="100" height="100" id="picTwo" />
-</div>
+&lt;div id="pics"&gt;
+&lt;img src="firstPic.gif" width="100" height="100" id="picOne" /&gt;
+&lt;img src="secondPic.gif" width="100" height="100" id="picTwo" /&gt;
+&lt;/div&gt;
 </code></pre>
 
 That should do it…but let me make two points:
 
   * I used transparent GIFs for this because transparent PNGs looked weird when they faded in and out. Of course, you can use a JPEG if your images don’t need to be transparent.  
 
-  * Properly syncing the various fades took a little planning. Note the combined time for .fadeIn() and .delay() for the first image is five seconds, equal to the timing on the .delay() for the second image. Also note that the first image takes 1.5 seconds to fade out while the second one takes the same amount of time to fade in. This keeps everything neat.
+  * Properly syncing the various fades took a little planning. Note the combined time for <code>.fadeIn()</code> and <code>.delay()</code> for the first image is five seconds, equal to the timing on the <code>.delay()</code> for the second image. Also note that the first image takes 1.5 seconds to fade out while the second one takes the same amount of time to fade in. This keeps everything neat.
 
 My HTML5 video posts are coming soon but another short jQuery-related post is coming next.

@@ -15,15 +15,10 @@ og-image: default-image.jpg
  [1]: http://almay.com/
  [2]: http://revlon.com/
 
-*   [almay wake-up™ makeup][3]
-*   [almay intense i-color smoky-i™ kit][4]
-*   [almay smart shade smart balance™ powder][5]
-*   [almay one coat get up and grow™ mascara][6]
-
- [3]: http://www.almay.com/microsites/WakeUpMakeup/Default.aspx
- [4]: http://www.almay.com/microsites/IICSmokyIKit/Default.aspx
- [5]: http://www.almay.com/microsites/SmartShadeBalance/Default.aspx
- [6]: http://www.almay.com/microsites/GetUp/Default.aspx
+*   almay wake-up™ makeup
+*   almay intense i-color smoky-i™ kit
+*   almay smart shade smart balance™ powder
+*   almay one coat get up and grow™ mascara
 
 Each product required a unique micro-site: the other web designer mocked them up in PhotoShop, I then converted the design to page code with CSS, .NET, jQuery and HTML5. Visual Studio 2008 was my development environment.
 
