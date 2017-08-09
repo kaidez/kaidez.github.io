@@ -63,7 +63,3 @@ Lecture-wise, Lynda is pretty interesting. Most of their lectures are listed und
 <h2 class="post-subheading">Price</h2>
 
 On the individual level, Lynda offers both a monthly an annual subscription price. Each price structure offers two pricing tiers: one for just the courses and one for courses and the exercise files. My lynda.com experience convinced me that having the exercise files is a *must*, especially for the developer-related courses. If you’re on a budget, I’d suggest starting off with the monthly subscription with exercise files for $37.50. If you have the cash (and the time) go for the yearly subscription at $375.00.
-
-If you’re still on the fence, [take a free 7-day trial of Lynda.com][4].
-
- [4]: http://www.lynda.com/promo/trial/Default.aspx?lpk35=1833&utm_medium=affiliate&utm_source=ldc_affiliate&utm_content=655&utm_campaign=CD2146&bid=655&aid=CD2146&opt=

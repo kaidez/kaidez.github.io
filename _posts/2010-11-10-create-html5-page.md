@@ -17,15 +17,15 @@ Cut-and-paste the code below into your favorite web editor:
  
 <pre><code class="language-markup">
 <!DOCTYPE html>
-<html>
-  <head>
-   <title>Your First HTML5 Page</title>
-   <meta charset=”UTF-8″ />
-  </head>
-  <body>
+&lt;html&gt;
+  &lt;head&gt;
+   &lt;title&gt;Your First HTML5 Page&lt;/title&gt;
+   &lt;meta charset=”UTF-8″ /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
      Your content goes here.
-  </body>
-</html>
+  &lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 
 
