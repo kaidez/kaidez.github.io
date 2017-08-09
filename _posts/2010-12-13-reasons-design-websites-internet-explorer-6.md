@@ -10,8 +10,6 @@ cat-name: "Code Tips"
 tags: [Internet Explorer]
 og-image: default-image.jpg
 ---
-#
-
 Bring up Internet Explorer Version 6 to a seasoned web designer and you’ll get an earful.
 
 Real quick: Internet Explorer 6, or IE 6, is exactly as its name implies. It’s the sixth version of Microsoft’s Internet Explorer browser….it’s REALLY old!
