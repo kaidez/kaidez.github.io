@@ -345,7 +345,6 @@ $('section').load("ajaxCopy.txt");
 </article>
 </body>
 </html>
-</button></body>
 </code></pre>
 Let's build on this one last time: here's an example that uses jQuery, AJAX, the new HTML5 `<button>` tag, and the new HTML5 `<section>` tag. But the `<section>` tag now has an ID: **(NOTE: you can only test this code if you upload it to your website and you view it in an HTML5-ready browser…Google Chrome is the best one as of this post)**:
 
@@ -373,7 +372,6 @@ $('#words').load("ajaxCopy.txt");
 &lt;/article&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-&lt;/section&gt;&lt;/section&gt;
 </code></pre>
 
 That's it for the coding examples. I've really only scratched the surface on what it takes to use AJAX, jQuery and HTML5 together on a web page. And in terms of the more-complicated HTML APIs like `<canvas>`, there are lots of jQuery HTML5 plug-ins that makes the APIs easier to implement.
