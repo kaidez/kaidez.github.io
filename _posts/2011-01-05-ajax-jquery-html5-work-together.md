@@ -323,28 +323,28 @@ $('#words').load("ajaxCopy.txt");
 Building on this, here's an example that uses jQuery, AJAX, the new HTML5 button tag and the new HTML5 `<section>` tag **(NOTE: you can only test this code if you upload it to your website and you view it in an HTML5-ready browser...Google Chrome is the best one as of this post)**:
 <pre><code class="language-markup">
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">
-<head>
-<meta charset="UTF-8" />
-<title>AJAX Detection And Data Loading Using New School jQuery & HTML5: Example # 2</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"></script>
-<script type="text/javascript">
+&lt;html dir="ltr" lang="en-US"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;AJAX Detection And Data Loading Using New School jQuery & HTML5: Example # 2&lt;/title&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
 $(document).ready(function(){
 $("button").click(function () {
 $('section').load("ajaxCopy.txt");
 });
 });
-</script>
-</head>
-<body>
-<button type="button"Load Some Copy!</button>
-<br /><br />
-<article>
-<section>
-</section>
-</article>
-</body>
-</html>
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;button type="button"Load Some Copy!&lt;/button&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;article&gt;
+&lt;section&gt;
+&lt;/section&gt;
+&lt;/article&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 Let's build on this one last time: here's an example that uses jQuery, AJAX, the new HTML5 `<button>` tag, and the new HTML5 `<section>` tag. But the `<section>` tag now has an ID: **(NOTE: you can only test this code if you upload it to your website and you view it in an HTML5-ready browser…Google Chrome is the best one as of this post)**:
 
