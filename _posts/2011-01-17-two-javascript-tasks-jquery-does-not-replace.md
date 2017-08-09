@@ -43,13 +43,11 @@ The main reason for detecting browser types is if you’re writing multiple code
 
 Now for the confusing part…
 
-jQuery actually *does* offer an alternative to `navigator.userAgent` in the form of the .browser property, but the jQuery team strongly recommends that you don’t use it!!!! In order for .browser to actually work, navigator.userAgent still needs to be working behind the scenes in the jQuery library. And since many recommend avoiding navigator.userAgent altogether, the team says “we don’t think that you should use .browser.” They further state that .browser will be implemented in future versions, most likely via a plug-in.
+jQuery actually *does* offer an alternative to `navigator.userAgent` in the form of the .browser property, but the jQuery team strongly recommends that you don’t use it!!!! In order for .browser to actually work, navigator.userAgent still needs to be working behind the scenes in the jQuery library. And since many recommend avoiding navigator.userAgent altogether, the team says “we don’t think that you should use <code>.browser</code>.” They further state that .browser will be implemented in future versions, most likely via a plug-in.
 
 So to recap: jQuery offers a coding alternative to a piece of JavaScript code that everyone says is bad, but their alternative code still needs the bad code to work properly. Because of this, the jQuery dev team recommends avoiding their alternative altogether, but promises to include it in a future version. Do you see the confusion?
 
-It’s important to note that even *if* you use the .browser property in your code, it can only detect Internet Explorer, Firefox, Opera and the various Webkit browsers. In other words, it can’t detect Androids or older Blackberries and it may or may not detect iPhones, newer Blackberries and the various tablets like the iPad and the new [Blackberry Playbook][3].
-
- [3]: http://us.blackberry.com/playbook-tablet/
+It’s important to note that even *if* you use the .browser property in your code, it can only detect Internet Explorer, Firefox, Opera and the various Webkit browsers. In other words, it can’t detect Androids or older Blackberries and it may or may not detect iPhones, newer Blackberries and the various tablets like the iPad and the new Blackberry Playbook.
 
 As an alternative to .browser, jQuery offers the .support property which detects browser-specific properties. The jQuery documentation goes in great detail on [how to use .support][4] as well as [why you shouldn’t use <em>.browser</em>][5]. I suggest that you read up on both of them before you attempt you use the code.
 

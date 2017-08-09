@@ -19,6 +19,4 @@ I’m proud to announce that ***my first guest post ever*** can now be seen at [
 
 Thanks to Catalin Zorzini at Inspired Mag for the opportunity!!
 
- []: http://www.inspiredm.com/
-
 I was supposed to post another jQuery related article but I was really excited to announce this!!! The jQuery article will appear next Monday….sorry for the delay.

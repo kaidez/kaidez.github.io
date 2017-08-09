@@ -19,16 +19,15 @@ Truthfully, I wasn't going to post this: I found it on another site and felt tha
 I'm viewing all those other re-posts as an endorsement of how almost-perfect this code is. Here's my endorsement:
 
 <pre><code class="language-markup">
-
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">
-<head>
-<meta charset="UTF-8" />
-<title>A Simple jQuery Image Rollover</title>
+&lt;html dir="ltr" lang="en-US"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;A Simple jQuery Image Rollover&lt;/title&gt;
 
-<script src="http://code.jquery.com/jquery-1.4.4.min.js" type="text/javascript"></script>
+&lt;script src="http://code.jquery.com/jquery-1.4.4.min.js" type="text/javascript"&gt;&lt;/script&gt;
 
-<script type="text/javascript">
+&lt;script type="text/javascript"&gt;
 $(document).ready(function() {
 $("img.rollover").hover(
 function() { this.src = this.src.replace("_off", "_on");
@@ -36,18 +35,17 @@ function() { this.src = this.src.replace("_off", "_on");
 function() { this.src = this.src.replace("_on", "_off");
 });
 });
-</script>
+&lt;/script&gt;
 
-</head>
-<body>
+&lt;/head&gt;
+&lt;body&gt;
 
-<a href="#"><img src="imageOne_off.png" class="rollover" /></a>
-<br />
-<a href="#"><img src="imageTwo_off.png" class="rollover" /></a>
+&lt;a href="#"&gt;&lt;img src="imageOne_off.png" class="rollover" /&gt;&lt;/a&gt;
+&lt;br /&gt;
+&lt;a href="#"&gt;&lt;img src="imageTwo_off.png" class="rollover" /&gt;&lt;/a&gt;
 
-</body>
-</html>
-
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 
 First, make sure that you create your rollover images. Each individual rollover needs two images attached to it: one named 'yourFilename_off.gif' and the other named 'yourFilename_on.gif'. As long as these images are of the same file type, it doesn't matter what file type it is. GIF, JPEG, PNG…it doesn't matter. For this example, I have four images that will be used in two rollovers:
@@ -74,7 +72,7 @@ Next, we tell jQuery that every time an image tag with a class name of “rollov
 *   it should see if the image contains the word “\_on” in the filename…if it does, replace it with “\_off” which will force the “_off” version of image to load.
 
 <pre><code class="language-javascript">
-<script type="text/javascript">
+&lt;script type="text/javascript"&gt;
 $(document).ready(function() {
 $("img.rollover").hover(
 function() { this.src = this.src.replace("_off", "_on");
@@ -82,15 +80,15 @@ function() { this.src = this.src.replace("_off", "_on");
 function() { this.src = this.src.replace("_on", "_off");
 });
 });
-</script>
+&lt;/script&gt;
 </code></pre>
 
 
 And from here, we just place the images on the web page, making sure that they have a class name of “rollover”:
 <pre><code class="language-markup">
-<a href="#"><img src="imageOne_off.png" class="rollover" /></a>
-<br />
-<a href="#"><img src="imageTwo_off.png" class="rollover" /></a>
+&lt;a href="#"&gt;&lt;img src="imageOne_off.png" class="rollover" /&gt;&lt;/a&gt;
+&lt;br /&gt;
+&lt;a href="#"&gt;&lt;img src="imageTwo_off.png" class="rollover" /&gt;&lt;/a&gt;
 </code></pre>
 
 That's it!!! The best rollover code I've ever used!!!
