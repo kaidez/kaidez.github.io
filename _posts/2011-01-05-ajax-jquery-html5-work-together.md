@@ -92,7 +92,7 @@ var bottomDiv=document.getElementsByTagName("p")[1].innerHTML = "Goodbye World";
 <p></p>
 </body>
 </html>
-</div></pre>
+</div></code></pre>
 The function now creates two variables: one that looks for the first `<p>` tag on the page and one that looks for the second one. And since computers start counting at 0, each `<p>` tag is named `[0]` and `[1]`, respectively. Just as before, the function executes when the button is clicked; when that happens, text gets loaded into each `<p>` tag.
 
 It would be easier if you could find page elements with class names instead of tag names And you can traverse the DOM with `getElementsByClassName()`, but it doesn't always work when using JavaScript.
@@ -127,11 +127,13 @@ $('#words').html("Hello World");
 </body>
 </html>
 </div></p>
+</code></pre>
 We attached the jQuery library stored at Google Libraries to our web page:
 
 <pre><code class="language-markup">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"></script>
 </div></p>
+</code></pre>
 Then we use the jQuery code in bold to create a function that traverses the DOM to find the <div> tag and loads text into it when it's clicked. We just did this in JavaScript and now did it with jQuery, and used a little less code in the process.
 
 Also with jQuery, we can now traverse the DOM with ease to locate classes, even if we have to locate more than one:
@@ -159,6 +161,7 @@ $('.words').html("Hello World");
 </body>
 </html>
 </div></p>
+</code></pre>
 And yes, jQuery lets us traverse the DOM to locate tags, multiple ones if we need to:
 
 <pre><code class="language-markup">
@@ -184,6 +187,7 @@ $('p').html("Hello World");
 </body>
 </html>
 </div></p>
+</code></pre>
 
 This was easy so let's do something more advanced and add AJAX to our discussion.
 
@@ -257,7 +261,7 @@ xhrObject.send(null);
 </html>
 
 </div></p>
-
+</code></pre>
 It's smart to know how this code works and if you're a beginner, you should write it out for practice. After you understand it, you can use jQuery's AJAX-related .load() function which does everything for you (NOTE: you can only test this code if you upload it to your website):
 
 <pre><code class="language-markup">
@@ -282,6 +286,7 @@ $('#words').load("ajaxCopy.txt");
 </body>
 </html>
 </div></p>
+</code></pre>
 jQuery's motto is "write less, do more." The above example really live up to that motto.
 
 <h2>Start Using HTML5 With AJAX and jQuery</h2>
@@ -314,6 +319,7 @@ $('#words').load("ajaxCopy.txt");
 </body>
 </html>
 </button></nav>
+</code></pre>
 Building on this, here's an example that uses jQuery, AJAX, the new HTML5 button tag and the new HTML5 `<section>` tag **(NOTE: you can only test this code if you upload it to your website and you view it in an HTML5-ready browser...Google Chrome is the best one as of this post)**:
 <pre><code class="language-markup">
 <!DOCTYPE html>
@@ -340,6 +346,7 @@ $('section').load("ajaxCopy.txt");
 </body>
 </html>
 </button></body>
+</code></pre>
 Let's build on this one last time: here's an example that uses jQuery, AJAX, the new HTML5 `<button>` tag, and the new HTML5 `<section>` tag. But the `<section>` tag now has an ID: **(NOTE: you can only test this code if you upload it to your website and you view it in an HTML5-ready browser…Google Chrome is the best one as of this post)**:
 
 <pre><code class="language-markup">
@@ -367,6 +374,8 @@ $('#words').load("ajaxCopy.txt");
 </body>
 </html>
 </section></section>
+</code></pre>
+
 That's it for the coding examples. I've really only scratched the surface on what it takes to use AJAX, jQuery and HTML5 together on a web page. And in terms of the more-complicated HTML APIs like `<canvas>`, there are lots of jQuery HTML5 plug-ins that makes the APIs easier to implement.
 
 But the point of this post was to clarify how easy it is to use AJAX, jQuery and HTML5 in tandem with each other. I think you have enough to get started here.
@@ -400,22 +409,22 @@ Some of these links may overlap a bit: a jQuery resource that I listed may belon
 Because using AJAX, jQuery and HTML5 together is a hot topic, my goal is to update this list every time I come across a new resource.
 
 *updated July 26th, 2013*
-###DOM
+### DOM
 * [JavaScript InnerHTML Tutorial at Tizag.com](http://www.tizag.com/javascriptT/javascript-innerHTML.php)
 * [BOOK: Beginning JavaScript With DOM Scripting And Ajax](http://beginningjavascript.com/)
 
-###AJAX
+### AJAX
 * [Jesse James Garret article that first used the term 'AJAX.'](http://www.adaptivepath.com/ideas/ajax-new-approach-web-applications)
 * [Wikipedia article on XMLHttpRequest](http://en.wikipedia.org/wiki/XMLHttpRequest)
 
-###jQuery
+### jQuery
 * [jQuery Home Page](http://jquery.com/)
 * [jQuery Documentation Page](http://api.jquery.com/)
 * [jQuery Ajax Category Page](http://api.jquery.com/category/ajax/)
 * [jQuery UI](http://jqueryui.com/)
 * [jQuery Essential Training course at Lynda.com](http://www.lynda.com/jQuery-tutorials/essential-training/48370-2.html?srchtrk=index%3A7%0Alinktypeid%3A2%0Aq%3Ajquery%0Apage%3A1%0As%3Arelevance%0Asa%3Atrue%0Aproducttypeid%3A4&utm_medium=affiliate&utm_source=ldc_affiliate&utm_content=524&utm_campaign=CD2146&bid=524&aid=CD2146&opt=)
 
-###HTML5
+### HTML5
 * [Dive Into HTML5](http://diveintohtml5.info/)
 * [Dive Into HTML5 Peeks, Pokes and Pointers Page](http://diveintohtml5.info/peeks-pokes-and-pointers.html)
 * [HTML5 Doctor](http://html5doctor.com)
