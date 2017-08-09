@@ -1,5 +1,5 @@
 ---
-title: HTML5, <del>SEO</del> and Microdata
+title: "HTML5, <del>SEO</del> and Microdata"
 comments: true
 author: Kai Gittens
 layout: post
@@ -12,7 +12,7 @@ tags: [html5]
 ---
 *MUCH thanks to at Oli Studholme at HTML5 Doctor for helping me understand this!!!!*
 
-*Update July 28, 2013: Not only are many points in this post erroneous, but the correct points are a bit outdated. The [schema.org](http://schema.org/) library is recommened for marking up microdata instead of the older data-vocabulary.org one.*
+*Update July 28, 2013: Not only are many points in this post erroneous, but the correct points are a bit outdated. The [schema.org](http://schema.org/) library is recommend for marking up microdata instead of the older data-vocabulary.org one.*
 
 *Update February 21, 2011: Oli looked at this post and suggested some code & semantics changes. Simply put, there are a lot of semantic mistakes in this article. The code below was changed as per his suggestions but the semantics were many. So many that it was easier to create a new post listing them instead of editing this article. Review the code below as it contains his edits, then [read my post listing his semantic suggestions](update-html5seomicrodata-post/). – k*
 
