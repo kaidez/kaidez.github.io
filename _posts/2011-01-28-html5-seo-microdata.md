@@ -1,5 +1,5 @@
 ---
-title: "HTML5, <del>SEO</del> and Microdata"
+title: "HTML5, &lt;del&gt;SEO&lt;/del&gt; and Microdata"
 comments: true
 author: Kai Gittens
 layout: post
@@ -33,50 +33,50 @@ Let’s see it in action:
 I recently created this test page with the following code:
 
 <pre><code class="language-markup">
-<section itemscope itemtype="http://www.data-vocabulary.org/Person">
+&lt;section itemscope itemtype="http://www.data-vocabulary.org/Person">
 
-  <img itemprop="photo" class="me" width="80" height="80" src="http://en.gravatar.com/userimage/4528928/87cc8430c1f9a5c3b809cdde885f565a.jpg"  alt="[Kai Gittens, circa 2010]">
+  &lt;img itemprop="photo" class="me" width="80" height="80" src="http://en.gravatar.com/userimage/4528928/87cc8430c1f9a5c3b809cdde885f565a.jpg"  alt="[Kai Gittens, circa 2010]"&lt;
 
-  <h1 class="entry-title">About Kai Gittens, AKA Kaidez</h1>
-  <br />
-  <h2>Posted by Kai Gittens  on January 24th</abbr></h2>
-  <br />
-  <h2 class="updated">January 24, 2011</time></h2>
-      <dl>
-        <dt>Name</dt>
-        <dd itemprop="name">Kai Gittens</dd>
-   <dt>Position</dt>
-        <dd>
-  <span itemprop="title">Founder</span> of <span itemprop="affiliation">kaidez.com</span></dd>
-        <dd>
-  <span itemprop="title">Web Designer for Revlon/Almay</span></dd>
+  &lt;h1 class="entry-title"&gt;About Kai Gittens, AKA Kaidez&lt;/h1&gt;
+  &lt;br /&gt;
+  &lt;h2&gt;Posted by Kai Gittens on January &lt;abbr&gt;24th&lt;/abbr&gt;&lt;/h2&gt;
+  &lt;br /&gt;
+  &lt;h2 class="updated">&lt;time&gt;January 24, 2011&lt;/time&gt;&lt;/h2&gt;
+      &lt;dl&gt;
+        &lt;dt&gt;Name&lt;/dt&gt;
+        &lt;dd itemprop="name">Kai Gittens&lt;/dd&gt;
+        &gt;dt&gt;Position&lt;/dt&gt;
+        &lt;dd&gt;
+        &lt;span itemprop="title">Founder&lt;/span&gt; of &lt;span itemprop="affiliation">kaidez.com&lt;/span&gt;&lt;/dd&gt;
+        &lt;dd&gt;
+        &lt;span itemprop="title">Web Designer for Revlon/Almay&lt;/span&gt;&lt;/dd&gt;
 
-        <dt>Mailing address</dt>
-        <dd itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
-          <span itemprop="street-address">237 Park Ave.</span>
+        &lt;dt&gt;Mailing address&lt;/dt&gt;
+        &lt;dd itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
+          &lt;span itemprop="street-address">237 Park Ave.&lt;/span&gt;
 
-          <span itemprop="locality">New York  </span>,   <span itemprop="region">NY </span> <span itemprop="postal-code">10017</span>
-          <span itemprop="country-name">USA  </span>
-        </dd>
-      </dl>
-      <h2>Social Networking Info  </h2>
-      <ul>
-        <li><a href="http://kaidez.com/" itemprop="url">Blog</a></li>
-        <li><a href="http://facebook.com/kaidez" itemprop="url">Facebook Profile</a></li>
-        <li><a href="http://www.twitter.com/kaidez" itemprop="url">Twitter Page  </a></li>
-      </ul>
-  </section>
+          &lt;span itemprop="locality">New York &lt;/span&gt;,   &lt;span itemprop="region">NY &lt;/span&gt; &lt;span itemprop="postal-code">10017&lt;/span&gt;
+          &lt;span itemprop="country-name">USA  &lt;/span&gt;
+        &lt;/dd&gt;
+      &lt;/dl&gt;
+      &lt;h2&gt;Social Networking Info &lt;/h2&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="http://kaidez.com/" itemprop="url">Blog&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://facebook.com/kaidez" itemprop="url">Facebook Profile&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://www.twitter.com/kaidez" itemprop="url">Twitter Page  &lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+  &lt;/section&gt;
 </code></pre>
 
 Let’s breakdown the code…
 
-  * Note that the opening `<section>` tag has two attributes: itemscope and itemtype.
-  * `itemscope` tells the browser that everything within the `<section>` tags is microdata and should be treated as such.
-  * `itemtype` attaches the microdata to the "Person" vocabulary library stored at <del>[data-vocabulary.org](http://www.data-vocabulary.org/)</del> [schema.org/] (http://schema.org/), the common data vocabulary collaboration of several major search engines.
-  * For every piece of data within the `<section>` tag (name, address, etc.) an itemprop attribute needs to be applied to it. Look at the code and copy it like I did in terms of assign values.
+  * Note that the opening `&lt;section>&gt; tag has two attributes: itemscope and itemtype.
+  * `itemscope` tells the browser that everything within the `&lt;section>&gt; tags is microdata and should be treated as such.
+  * `itemtype` attaches the microdata to the "Person" vocabulary library stored at <del>[data-vocabulary.org](http://www.data-vocabulary.org/)</del> [schema.org/](http://schema.org/), the common data vocabulary collaboration of several major search engines.
+  * For every piece of data within the `&lt;section>&gt; tag (name, address, etc.) an itemprop attribute needs to be applied to it. Look at the code and copy it like I did in terms of assign values.
   * All the data is then sent to Google and if it comes up in their search results, it will look like this:
 
-<img src="../img/microdataSample.png" />
+<img src="/img/microdataSample.png" />
 
 If you need more proof of this result, see what information comes back when my test page is plugged into [Google’s Rich Snippets Testing Tool](http://www.google.com/webmasters/tools/richsnippets?url=http%3A%2F%2Fkaidez.com%2Fwp-content%2Fthemes%2Fkaidez%2FkaidezUnique%2FScript%2FmicrodataTest.html&view==).
 
@@ -97,14 +97,14 @@ Some other HTML5 SEO things...
   * Microdata only works if placed into a page with the bare minimum of HTML5 formatting. [Read my tutorial on this](/create-html5-page/).
   * If you try to hide microdata on your page (i.e. putting it into a page tag set to display:none), Google will totally ignore it.
   * Microdata must be placed in the main content of your web page; if you place it among header or footer content, Google will totally ignore it.
-  * <del>Bing and Yahoo! use microdata as well. To be fair, Bing was the first search engine to use it…go and read more about this.</del> So erroneus, it's not even funny.
+  * &lt;del&gt;Bing and Yahoo! use microdata as well. To be fair, Bing was the first search engine to use it…go and read more about this.&lt;/del&gt; So erroneus, it's not even funny.
   * Update (Jan 28, 2011): this may or may not be true…am in the middle of verifying this.
   * Update (Feb 02, 2011): Have to strikethrough this line…see this comment below.
   * "Person" is just one of nine vocabularies currently stored over at data-vocabulary.org. The complete list as of this post is: Person, Event, Organization, Product, Review, Review-aggregate, Breadcrumb, Offer and Offer-aggregate. [Go and read about all of them](http://schema.org/).
   * Note that one of the vocabularies is named "Products." So if you’re selling stuff online, microdata can help you.
   * If you want reviews of your products to appear in search results, take note of the "Review" and "Review-aggregate" vocabularies.
   * One of best uses of microdata is to create a well-designed digital business card, or a vCard. [Many web designers use this tactic; see some of their work](http://www.queness.com/post/524/32-amazing-mini-vcard-websites-with-slick-javascript-animation).
-  * Even though I use the `<section>` tag in my example, don’t read too much into this. Google has adopted a "wait-and-see" policy in terms of applying HTML5 elements to their search algorithm. Many believe that the `<article>` tag will eventually get a lot of SEO weight since it’s the main spot for page content.
+  * Even though I use the `&lt;section>&gt; tag in my example, don’t read too much into this. Google has adopted a "wait-and-see" policy in terms of applying HTML5 elements to their search algorithm. Many believe that the `<article>` tag will eventually get a lot of SEO weight since it’s the main spot for page content.
   * Microdata does not diminish the importance of the old rules of SEO. Commit the info in [Google’s Webmaster Tools documentation](https://support.google.com/webmasters/answer/35769) to memory and remember that good, relevant content is always the best way to getting a good site rank. Also remember that the meta keywords tag is completely worthless, [just like Google says it is](http://googlewebmastercentral.blogspot.com/2009/09/google-does-not-use-keywords-meta-tag.html).
 
 In closing, remember that microdata works if used properly. So let’s all now take a blood oath and promise not to use it to create spam bait and ruin the party for everyone.
