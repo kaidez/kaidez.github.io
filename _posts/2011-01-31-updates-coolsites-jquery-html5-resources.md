@@ -26,10 +26,8 @@ I created [a list of learning resources at the end of my recent AJAX, jQuery and
  [3]: http://www.alistapart.com/articles/previewofhtml5/
  [4]: http://www.alistapart.com/articles/semanticsinhtml5/
 
-I also added the [image0 blog][5] to the “Coding Favorite Sites” section of my right-hand sidebar. It’s run by my co-worker Max, who’s taught me a lot about the some basic object-oriented programing principles over the years and I’m grateful for his assistance. He continues to discuss OOP on his blog, mostly from the .NET side of things. If you develop for Sitecore, the .NET-based content management system, check out his [Sitecore Series][6]. He’s been doing Sitecore development for over a year and will have a lot to say about.
+I also added the image0 blog to the “Coding Favorite Sites” section of my right-hand sidebar. It’s run by my co-worker Max, who’s taught me a lot about the some basic object-oriented programing principles over the years and I’m grateful for his assistance. He continues to discuss OOP on his blog, mostly from the .NET side of things. If you develop for Sitecore, the .NET-based content management system, check out his Sitecore Series. He’s been doing Sitecore development for over a year and will have a lot to say about.
 
- [5]: http://blog.image0.com/
- [6]: http://blog.image0.com/tag/sitecore-series/
 
 Sadly, the day I added the two ALA pieces, I removed [CSS3.info][7] from the “Coding Favorite Sites.” It’s a good source for CSS3, just not one of the first places I go for CSS3 information. Plus, it isn’t updated frequently enough for me to keep visiting it.
 
