@@ -1,5 +1,5 @@
 ---
-title: 'CNN calls the do not track option a &#8220;Google killer&#8221;'
+title: 'CNN calls the do not track option a "Google killer"'
 comments: true
 author: Kai Gittens
 layout: post
