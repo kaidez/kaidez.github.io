@@ -56,4 +56,3 @@ The two books above, I believe, best chronicle the beginning and end of the Dot-
 [3]: http://www.amazon.com/Liars-Poker-Michael-Lewis/dp/039333869X/ref=sr_1_1?s=books&ie=UTF8&qid=1373150233&sr=1-1
 [4]: http://www.amazon.com/New-Thing-Silicon-Valley-Story/dp/0140296468/
 [5]: http://www.amazon.com/All-Rave-Shawn-Fannings-Napster/dp/B000ENBO0S/
-</p>
