@@ -59,8 +59,8 @@ I hope you come back frequently to kaidez.com, but I provide a variety of simple
 
 *   [Facebook][3]
 *   [Twitter][4]
-
- [3]: http://www.facebook.com/kaidez
+g
+ [3]: http://www.facebook.com/kaidezblog
  [4]: http://twitter.com/kaidez
 
 The list above is big. Do you think I’m taking on too much? Or too little? Is there anything else that I should be focusing on? Lemme know!!!!!!!
