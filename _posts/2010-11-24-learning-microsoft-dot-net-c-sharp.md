@@ -1,9 +1,9 @@
 ---
-title: 'I&#8217;m Focusing On .NET C#'
+title: "I'm Focusing On .NET C#""
 comments: true
 author: Kai Gittens
 layout: post
-excerpt: kaidez lays out a plan on how he&#8217;ll learn .NET/C#.
+excerpt: kaidez lays out a plan on how he'll learn .NET/C#.
 permalink: /learning-microsoft-dot-net-c-sharp/
 categories: personal
 cat-name: "Personal"
