@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "kaidez.com 2015 site redesign"
 date:   2015-11-20 22:07:59 -0400
 categories: personal

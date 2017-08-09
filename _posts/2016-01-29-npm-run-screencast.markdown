@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  " SCREENCAST: Build Tasks With “npm run”
 "
 date:   2016-01-29 22:07:59 -0400

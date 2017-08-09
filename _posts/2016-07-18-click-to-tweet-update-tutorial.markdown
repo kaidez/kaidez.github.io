@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Click To Tweet Tutorial Update"
 date:   2016-07-18 22:07:59 -0400
 categories: personal

@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Format Dates with Functional Programming"
 date:   2017-08-04 22:07:59 -0400
 categories: coding-best-practices

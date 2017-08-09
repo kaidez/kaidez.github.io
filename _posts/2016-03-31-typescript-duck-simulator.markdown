@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "The “Head First” Duck Simulator In Typescript
 "
 date:   2016-03-31 22:07:59 -0400

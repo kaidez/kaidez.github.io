@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Write Code Every F–king Day!"
 date:   2015-06-15 22:07:59 -0400
 categories: personal

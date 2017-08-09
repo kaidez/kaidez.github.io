@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Click to Tweet Link Created Dynamically With JS"
 date:   2015-07-30 22:07:59 -0400
 categories: tutorials

@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Babel Setup For Beginners"
 date:   2016-05-12 22:07:59 -0400
 categories: coding-tips
