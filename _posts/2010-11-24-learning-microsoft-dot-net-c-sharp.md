@@ -1,5 +1,5 @@
 ---
-title: "I'm Focusing On .NET C#""
+title: "I'm Focusing On .NET C#"
 comments: true
 author: Kai Gittens
 layout: post
