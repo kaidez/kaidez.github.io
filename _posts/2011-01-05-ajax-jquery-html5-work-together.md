@@ -74,25 +74,25 @@ TRANSLATION: This empty `div` tag is the page element with an id of 'words,' so 
 An ID must be unique on a web page so in our example, there can only be one page element with an ID of "words." If you need to traverse the DOM with JavaScript to locate multiple page elements with the same name, it's best if you look for tags using the `getElementsByTagName()` function:
 <pre><code class="language-markup">
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">
-<head>
-<meta charset="UTF-8" />
-<title>Load Text Into Multiple Tags Using JavaScript</title>
-<script type="text/javascript">
+&lt;html dir="ltr" lang="en-US"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;Load Text Into Multiple Tags Using JavaScript&lt;/title&gt;
+&lt;script type="text/javascript"&gt;
 function loadText() {
 var topDiv=document.getElementsByTagName("p")[0].innerHTML = "Hello World";
 var bottomDiv=document.getElementsByTagName("p")[1].innerHTML = "Goodbye World";
 }
-</script>
-</head>
-<body>
-<input type='button' onclick='loadText()' value='Load Some Copy!'/>
-<br />
-<p></p>
-<p></p>
-</body>
-</html>
-</div></code></pre>
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;input type='button' onclick='loadText()' value='Load Some Copy!'/&gt;
+&lt;br /&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;/div&gt;</code></pre>
 The function now creates two variables: one that looks for the first `<p>` tag on the page and one that looks for the second one. And since computers start counting at 0, each `<p>` tag is named `[0]` and `[1]`, respectively. Just as before, the function executes when the button is clicked; when that happens, text gets loaded into each `<p>` tag.
 
 It would be easier if you could find page elements with class names instead of tag names And you can traverse the DOM with `getElementsByClassName()`, but it doesn't always work when using JavaScript.
@@ -107,32 +107,30 @@ As cool as these effects are, the fact that jQuery makes DOM traversal easier is
 
 <pre><code class="language-markup">
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">
-<head>
-<meta charset="UTF-8" />
-<title>Load Text Into An ID Using jQuery</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"></script>
-<script type="text/javascript">
+&lt;html dir="ltr" lang="en-US"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;Load Text Into An ID Using jQuery&lt;/title&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
 $(document).ready(function(){
 $("input").click(function () {
 $('#words').html("Hello World");
 });
 });
-</script>
-</head>
-<body>
-<input type="button" value="Load Some Copy!"/>
-<br />
-<div id="words"></div>
-</body>
-</html>
-</div></p>
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;input type="button" value="Load Some Copy!"/&gt;
+&lt;br /&gt;
+&lt;div id="words"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 We attached the jQuery library stored at Google Libraries to our web page:
 
 <pre><code class="language-markup">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"></script>
-</div></p>
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"&lt;&lt;/script&lt;
 </code></pre>
 Then we use the jQuery code in bold to create a function that traverses the DOM to find the <div> tag and loads text into it when it's clicked. We just did this in JavaScript and now did it with jQuery, and used a little less code in the process.
 
@@ -140,53 +138,51 @@ Also with jQuery, we can now traverse the DOM with ease to locate classes, even 
 
 <pre><code class="language-markup">
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">
-<head>
-<meta charset="UTF-8" />
-<title>Load Text Into Multiple Classes Using jQuery</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"></script>
-<script type="text/javascript">
+&lt;html dir="ltr" lang="en-US"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;Load Text Into Multiple Classes Using jQuery&lt;/title&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
 $(document).ready(function(){
 $("input").click(function () {
 $('.words').html("Hello World");
 });
 });
-</script>
-</head>
-<body>
-<input type='button' value='Load Some Copy!'/>
-<br />
-<div class="words"></div>
-<div class="words"></div>
-</body>
-</html>
-</div></p>
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;input type='button' value='Load Some Copy!'/&gt;
+&lt;br /&gt;
+&lt;div class="words"&gt;&lt;/div&gt;
+&lt;div class="words"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 And yes, jQuery lets us traverse the DOM to locate tags, multiple ones if we need to:
 
 <pre><code class="language-markup">
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">
-<head>
-<meta charset="UTF-8" />
-<title>Load Text Into A Tag With jQuery</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"></script>
-<script type="text/javascript">
+&lt;html dir="ltr" lang="en-US"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;Load Text Into A Tag With jQuery&lt;/title&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
 $(document).ready(function(){
 $("input").click(function () {
 $('p').html("Hello World");
 });
 });
-</script>
-</head>
-<body>
-<input type='button' value='Load Some Copy!'/>
-<br />
-<p></p>
-<p></p>
-</body>
-</html>
-</div></p>
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;input type='button' value='Load Some Copy!'/&gt;
+&lt;br /&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 
 This was easy so let's do something more advanced and add AJAX to our discussion.
@@ -210,82 +206,79 @@ The following code detects the browser, determines which version of AJAX to use 
 
 <pre><code class="language-markup">
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">
-<head>
-<meta charset="UTF-8" />
-<title>AJAX Detection And Data Loading With JavaScript</title>
-<script type="text/javascript">
-<!--create a variable to store the XMLHttpRequest object, but don't use it it yet-->
+&lt;html dir="ltr" lang="en-US">
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;AJAX Detection And Data Loading With JavaScript&lt;/title&gt;
+&lt;script type="text/javascript"&gt;
+&lt;!--create a variable to store the XMLHttpRequest object, but don't use it it yet--&gt;
 var xhrObject = false;
 
-<!--If this browser isn't IE 6, store XMLHttpRequest() in our variable-->
+&lt;!--If this browser isn't IE 6, store XMLHttpRequest() in our variable--&gt;
 if (window.XMLHttpRequest) {
 xhrObject = new XMLHttpRequest();
 
-<!--But if this browser is IE 6, store ActiveXObject in our variable-->
+&lt;!--But if this browser is IE 6, store ActiveXObject in our variable--&gt;
 } else if (window.ActiveXObject) {
 xhrObject = new ActiveXObject("Microsoft.XMLHTTP");
 }
 
-<!--Create a function with 2 parameters: one for copy, one for a <div> to load it into-->
+&lt;!--Create a function with 2 parameters: one for copy, one for a &lt;div&gt; to load it into--&gt;
 function loadCopy(externalTextFile, externalTextDiv) {
 
-<!--if we can use AJAX-->
+&lt;!--if we can use AJAX--&gt;
 if(xhrObject) {
 
-<!--create a new variable that traverses the DOM and finds the <div> tag we put into our second parameter-->
+&lt;!--create a new variable that traverses the DOM and finds the &lt;div&gt; tag we put into our second parameter--&gt;
 var pageText = document.getElementById(externalTextDiv);
 
-<!--use AJAX to place a text file we put in our first parameter-->
+&lt;!--use AJAX to place a text file we put in our first parameter--&gt;
 xhrObject.open("GET",externalTextFile);
 
-<!--if our AJAX variable found our data and the server is ready to send it out, bundle our data as a text string-->
+&lt;!--if our AJAX variable found our data and the server is ready to send it out, bundle our data as a text string--&gt;
 xhrObject.onreadystatechange = function () {
 if(xhrObject.readyState == 4 && xhrObject.status == 200) {
 pageText.innerHTML = xhrObject.responseText; } }
 
-<!--send our data out-->
+&lt;!--send our data out--&gt;
 xhrObject.send(null);
 }
 }
-</script>
-</head>
-<body>
-<form>
-<!--Run the 'loadCopy' function when this button is clicked. Find the 'ajaxCopy.txt' on the server and load it into a <div> with an id of 'words'.-->
-<input type='button' value='Load Some Copy!' onclick="loadCopy('ajaxCopy.txt','words')"/>
-<br /><br />
-<div id="words"></div>
-</form>
-</body>
-</html>
-
-</div></p>
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form&gt;
+&lt;!--Run the 'loadCopy' function when this button is clicked. Find the 'ajaxCopy.txt' on the server and load it into a &lt;div&gt; with an id of 'words'.--&gt;
+&lt;input type='button' value='Load Some Copy!' onclick="loadCopy('ajaxCopy.txt','words')"/&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;div id="words"&gt;&lt;/div&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 It's smart to know how this code works and if you're a beginner, you should write it out for practice. After you understand it, you can use jQuery's AJAX-related .load() function which does everything for you (NOTE: you can only test this code if you upload it to your website):
 
 <pre><code class="language-markup">
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">
-<head>
-<meta charset="UTF-8" />
-<title>AJAX Detection And Data Loading With jQuery</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"></script>
-<script type="text/javascript">
+&lt;html dir="ltr" lang="en-US"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;AJAX Detection And Data Loading With jQuery&lt;/title&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
 $(document).ready(function(){
 $("input").click(function () {
 $('#words').load("ajaxCopy.txt");
 });
 });
-</script>
-</head>
-<body>
-<input type='button' value='Load Some Copy!'/>
-<br /><br />
-<div id="words"></div>
-</body>
-</html>
-</div></p>
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;input type='button' value='Load Some Copy!'/&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;div id="words"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 jQuery's motto is "write less, do more." The above example really live up to that motto.
 
