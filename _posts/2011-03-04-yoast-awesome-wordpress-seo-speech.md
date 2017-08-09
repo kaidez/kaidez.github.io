@@ -1,5 +1,5 @@
 ---
-title: 'Yoast&#8217;s Awesome WordPress SEO Speech'
+title: "Yoast's Awesome WordPress SEO Speech"
 comments: true
 author: Kai Gittens
 layout: post

@@ -1,5 +1,5 @@
 ---
-title: 'HTML5 Project: WIREFRAME SERIES #2 –  WORK &#038; NIKO&#8217;S PLAYLIST PAGES'
+title: 'HTML5 Project: WIREFRAME SERIES #2 –  WORK &#038; NIKO&lsquo;S PLAYLIST PAGES'
 comments: true
 author: Kai Gittens
 layout: post
