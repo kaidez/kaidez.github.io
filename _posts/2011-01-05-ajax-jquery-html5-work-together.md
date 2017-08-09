@@ -299,26 +299,26 @@ Here's the previous code example that uses jQuery, AJAX, and the new HTML5 `<but
 
 <pre><code class="language-markup">
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">
-<head>
-<meta charset="UTF-8" />
-<title>AJAX Detection And Data Loading Using New School jQuery # HTML5: Example # 1</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"></script>
-<script type="text/javascript">
+&lt;html dir="ltr" lang="en-US"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;AJAX Detection And Data Loading Using New School jQuery # HTML5: Example # 1&lt;/title&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
 $(document).ready(function(){
 $("button").click(function () {
 $('#words').load("ajaxCopy.txt");
 });
 });
-</script>
-</head>
-<body>
-<button type="button">Load Some Copy!</button>
-<br /><br />
-<div id="words"></div>
-</body>
-</html>
-</button></nav>
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;button type="button"&gt;Load Some Copy!&lt;/button&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;div id="words"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;/button&gt;&lt;/nav&gt;
 </code></pre>
 Building on this, here's an example that uses jQuery, AJAX, the new HTML5 button tag and the new HTML5 `<section>` tag **(NOTE: you can only test this code if you upload it to your website and you view it in an HTML5-ready browser...Google Chrome is the best one as of this post)**:
 <pre><code class="language-markup">
@@ -350,30 +350,30 @@ $('section').load("ajaxCopy.txt");
 Let's build on this one last time: here's an example that uses jQuery, AJAX, the new HTML5 `<button>` tag, and the new HTML5 `<section>` tag. But the `<section>` tag now has an ID: **(NOTE: you can only test this code if you upload it to your website and you view it in an HTML5-ready browser…Google Chrome is the best one as of this post)**:
 
 <pre><code class="language-markup">
-<!DOCTYPE html>
-<html dir="ltr" lang="en-US">
-<head>
-<meta charset="UTF-8" />
-<title>AJAX Detection And Data Loading Using New School jQuery & HTML5: Example # 3</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"></script>
-<script type="text/javascript">
+&lt;!DOCTYPE html&gt;
+&lt;html dir="ltr" lang="en-US"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;AJAX Detection And Data Loading Using New School jQuery & HTML5: Example # 3&lt;/title&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
 $(document).ready(function(){
 $("button").click(function () {
 $('#words').load("ajaxCopy.txt");
 });
 });
-</script>
-</head>
-<body>
-<button type="button">Load Some Copy!</button>
-<br /><br />
-<article>
-<section id="words">
-</section>
-</article>
-</body>
-</html>
-</section></section>
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;button type="button"&gt;Load Some Copy!&lt;/button&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;article&gt;
+&lt;section id="words"&gt;
+&lt;/section&gt;
+&lt;/article&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;/section&gt;&lt;/section&gt;
 </code></pre>
 
 That's it for the coding examples. I've really only scratched the surface on what it takes to use AJAX, jQuery and HTML5 together on a web page. And in terms of the more-complicated HTML APIs like `<canvas>`, there are lots of jQuery HTML5 plug-ins that makes the APIs easier to implement.
