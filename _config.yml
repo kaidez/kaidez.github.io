@@ -42,9 +42,6 @@ plugins:
 
 plugins: [jekyll-redirect-from, jekyll-paginate, jekyll-sitemap]
 
-gems:
-  - jekyll-assets
-
 exclude:
   - Gemfile
   - Gemfile.lock
