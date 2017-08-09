@@ -23,7 +23,7 @@ This isn't all because of Apple's lack of Flash support for its products, but it
 
 Flash is how I got into this business so it will always be close to my heart.  The Apple stuff made think about how far Flash has come and from my point of view, it's come a long way.
 
-##The Beginning
+## The Beginning
 *(Disclaimer: I wasn't there for Flash's beginning and don't claim to be a Flash guru like [Colin Moock][2], but I was there a little before it got big and can more than get the job done with the application).*
 
 [2]: http://www.oreillynet.com/pub/au/568
@@ -33,7 +33,7 @@ Flash is the brainchild of software developer [Jonathan Gay][3].  He started out
 [3]: http://www.adobe.com/macromedia/events/john_gay/
 
 FutureSplash gained enough high-profile customers, like Disney, to gain the attention of a California-based graphics software company called Macromedia, who already had a web animation program called ShockWave.  But they felt that FutureSplash had promise so they brought the application's parent company in 1996 and renamed the application Flash.
-##The Big Moment
+## The Big Moment
 Flash versions 1 through 3 required that web designers create almost all their animations by hand with a mouse.  You could use light scripting commands to start and stop animations, but not much else.
 
 All that changed in 1999 when Macromedia bundled ActionScript 1.0 with Flash 4.  ActionScript was a full programming language that allowed for the creation of extremely complex web animations within Flash.  Plus, it allowed Flash to communicate with backend database setups like MySQL and Java, meaning that data could easily pass to and from a Flash site: you could create the coolest looking e-commerce site in Flash if you wanted to.
@@ -43,14 +43,14 @@ Thanks to ActionScript, Flash showed the world how limitless web design was and 
 [4]: http://www.balthaserstudios.com/
 [5]: http://www.webagent007.com/
 [6]: http://2advanced.com/
-##The Problem
+## The Problem
 Flash sites looked good but had a weakness: the content within them couldn't easily be found by search engines.  The engines could find a site that *used* Flash, but not copy and images within it.
 
 This wasn't a big deal when Yahoo! and Alta Vista were the main search engines: they found and ranked sites using many other factors besides content.   But when Google became *the* main search engine, they deemed it that sites with the best content got the best ranks.  Thankfully, they provided web developers with all sorts of information on how to get good rankings: utilizing this info on your site didn't guarantee you good rankings, but it upped your chances.
 
 Google clearly stated that Flash didn't raise your chances, it lowered them.  Web designers followed suit.  Less Flash sites were created resulting in less commercial sales of Flash.  Many developers were now buying the program to create browser-based video games so Macromedia survived, but they still took a small financial hit.
 
-##The Big Moment, Part II
+## The Big Moment, Part II
 Meanwhile, cable and fiber optics were bringing super high-speed internet connections to homes.  This allowed for large files to be transmitted over the web at a faster rate.
 
 Online video streaming benefited the most from super high-speed internet connections, or broadband.  But what type of video was the best for web use?  Apple wanted people to use their QuickTime format while Windows Media was being promoted by its owner, Microsoft.  There were other video formats out there, all being promoted by their respective owners.
