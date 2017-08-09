@@ -1,5 +1,5 @@
 ---
-title: "HTML5, &lt;del&gt;SEO&lt;/del&gt; and Microdata"
+title: HTML5, SEO and Microdata
 comments: true
 author: Kai Gittens
 layout: post
@@ -35,7 +35,7 @@ I recently created this test page with the following code:
 <pre><code class="language-markup">
 &lt;section itemscope itemtype="http://www.data-vocabulary.org/Person">
 
-  &lt;img itemprop="photo" class="me" width="80" height="80" src="http://en.gravatar.com/userimage/4528928/87cc8430c1f9a5c3b809cdde885f565a.jpg"  alt="[Kai Gittens, circa 2010]"&lt;
+  &lt;img itemprop="photo" class="me" width="80" height="80" src="http://en.gravatar.com/userimage/4528928/87cc8430c1f9a5c3b809cdde885f565a.jpg"  alt="[Kai Gittens, circa 2010]"&gt;
 
   &lt;h1 class="entry-title"&gt;About Kai Gittens, AKA Kaidez&lt;/h1&gt;
   &lt;br /&gt;
@@ -45,7 +45,7 @@ I recently created this test page with the following code:
       &lt;dl&gt;
         &lt;dt&gt;Name&lt;/dt&gt;
         &lt;dd itemprop="name">Kai Gittens&lt;/dd&gt;
-        &gt;dt&gt;Position&lt;/dt&gt;
+        &lt;dt&gt;Position&lt;/dt&gt;
         &lt;dd&gt;
         &lt;span itemprop="title">Founder&lt;/span&gt; of &lt;span itemprop="affiliation">kaidez.com&lt;/span&gt;&lt;/dd&gt;
         &lt;dd&gt;
@@ -72,7 +72,7 @@ Let’s breakdown the code…
 
   * Note that the opening `&lt;section>&gt; tag has two attributes: itemscope and itemtype.
   * `itemscope` tells the browser that everything within the `&lt;section>&gt; tags is microdata and should be treated as such.
-  * `itemtype` attaches the microdata to the "Person" vocabulary library stored at <del>[data-vocabulary.org](http://www.data-vocabulary.org/)</del> [schema.org/](http://schema.org/), the common data vocabulary collaboration of several major search engines.
+  * `itemtype` attaches the microdata to the "Person" vocabulary library stored at <del>[data-vocabulary.org](http://www.data-vocabulary.org/)</del> [schema.org](http://schema.org/), the common data vocabulary collaboration of several major search engines.
   * For every piece of data within the `&lt;section>&gt; tag (name, address, etc.) an itemprop attribute needs to be applied to it. Look at the code and copy it like I did in terms of assign values.
   * All the data is then sent to Google and if it comes up in their search results, it will look like this:
 
@@ -84,27 +84,27 @@ I’ve done a variety of Google searches trying to get this snippet to come up�
 
 Microdata isn’t really that new of a concept: it’s similar to existing technologies such as RDFa and microformats. But RDFa needs to be written in XHTML, which is headed for W3C deprecation; while microformats don’t really work without CSS, meaning you’ll have write extra code. Getting microdata to work requires writing non-deprecated HTML5 code and nothing else.
 
-Speaking of microformats using CSS classes, here’s a quick FYI: placing the above-code into a Twenty Ten-themed WordPress page will still send you a positive result when placed into the Rich Snippet tool, but generate a warning saying that certain things are missing...[see the results with the warning here](http://www.google.com/webmasters/tools/richsnippets?url=http%3A%2F%2Fkaidez.com%2Fabout-kaidez%2F&view=%3D). It’s due to the fact that Twenty Ten, which is HTML5-ready, uses a lot of the same CSS classes as the ones used by the ‘hatom’ feed format, which is similar to the RSS feed.
+Speaking of microformats using CSS classes, here’s a quick FYI: placing the above-code into a Twenty Ten-themed WordPress page will still send you a positive result when placed into the Rich Snippet tool, but generate a warning saying that certain things are missing. It’s due to the fact that Twenty Ten, which is HTML5-ready, uses a lot of the same CSS classes as the ones used by the `hatom` feed format, which is similar to the RSS feed.
 
 I plugged the code into this blog’s About Page and got that warning. Since this blog design is based on Twenty Ten and uses hatom classes like `entry-title` and `entry-content`, the presence of these classes is forcing the Snippet tool to look for hatom feed content in my About page. And as the lack of an author class makes the hatom data incomplete, the error shows up. I could fix this by putting a tag with a class named author somewhere on my post pages, but I’m happy with my design so I’m not going to do this.
 
 If you want to get a feel of how much microdata is out there, check out the Operator plug-in for Firefox. It inserts a toolbar that detects microdata along with RDFa and Microformats, showing you what data is being collected and its potential use...especially for e-commerce. Plug in Operator, then do some general web surfing while paying attention to the toolbar…you’d be surprised what you’ll find out.
 
-For further reading, the awesome [HTML5 microdata tutorial at HTML Goodies](https://support.google.com/webmasters/?hl=en&rd=1#topic=21997) and [HTML5 Doctor’s microdata article](http://html5doctor.com/microdata/) are great starting points on the subject. After that, [read what Mark Pilgrim has to say about microdata](http://diveintohtml5.info/extensibility.html) and definitely [read Google’s microdata documentation](https://support.google.com/webmasters/?hl=en&rd=1#topic=21997).
+For further reading, [HTML5 Doctor’s microdata article](http://html5doctor.com/microdata/) is a great starting pointa on the subject. After that, [read what Mark Pilgrim has to say about microdata](http://diveintohtml5.info/extensibility.html) and definitely [read Google’s microdata documentation](https://support.google.com/webmasters/?hl=en&rd=1#topic=21997).
 
 Some other HTML5 SEO things...
 
   * Microdata only works if placed into a page with the bare minimum of HTML5 formatting. [Read my tutorial on this](/create-html5-page/).
   * If you try to hide microdata on your page (i.e. putting it into a page tag set to display:none), Google will totally ignore it.
   * Microdata must be placed in the main content of your web page; if you place it among header or footer content, Google will totally ignore it.
-  * &lt;del&gt;Bing and Yahoo! use microdata as well. To be fair, Bing was the first search engine to use it…go and read more about this.&lt;/del&gt; So erroneus, it's not even funny.
+  * ~~Bing and Yahoo! use microdata as well. To be fair, Bing was the first search engine to use it…go and read more about this.~~; So erroneus, it's not even funny.
   * Update (Jan 28, 2011): this may or may not be true…am in the middle of verifying this.
   * Update (Feb 02, 2011): Have to strikethrough this line…see this comment below.
   * "Person" is just one of nine vocabularies currently stored over at data-vocabulary.org. The complete list as of this post is: Person, Event, Organization, Product, Review, Review-aggregate, Breadcrumb, Offer and Offer-aggregate. [Go and read about all of them](http://schema.org/).
   * Note that one of the vocabularies is named "Products." So if you’re selling stuff online, microdata can help you.
   * If you want reviews of your products to appear in search results, take note of the "Review" and "Review-aggregate" vocabularies.
   * One of best uses of microdata is to create a well-designed digital business card, or a vCard. [Many web designers use this tactic; see some of their work](http://www.queness.com/post/524/32-amazing-mini-vcard-websites-with-slick-javascript-animation).
-  * Even though I use the `&lt;section>&gt; tag in my example, don’t read too much into this. Google has adopted a "wait-and-see" policy in terms of applying HTML5 elements to their search algorithm. Many believe that the `<article>` tag will eventually get a lot of SEO weight since it’s the main spot for page content.
+  * Even though I use the `<section>` tag in my example, don’t read too much into this. Google has adopted a "wait-and-see" policy in terms of applying HTML5 elements to their search algorithm. Many believe that the `<article>` tag will eventually get a lot of SEO weight since it’s the main spot for page content.
   * Microdata does not diminish the importance of the old rules of SEO. Commit the info in [Google’s Webmaster Tools documentation](https://support.google.com/webmasters/answer/35769) to memory and remember that good, relevant content is always the best way to getting a good site rank. Also remember that the meta keywords tag is completely worthless, [just like Google says it is](http://googlewebmastercentral.blogspot.com/2009/09/google-does-not-use-keywords-meta-tag.html).
 
 In closing, remember that microdata works if used properly. So let’s all now take a blood oath and promise not to use it to create spam bait and ruin the party for everyone.

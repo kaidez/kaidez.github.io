@@ -16,13 +16,12 @@ The more I read about HTML5, CSS3 and jQuery, the more cool online resources I n
 
 I created [a list of learning resources at the end of my recent AJAX, jQuery and HTML5 article][1], saying that I’d update it with new links when I could. I’ve since added three extra resources:
 
- [1]: http://kaidez.com/ajax-jquery-html5-work-together/7/
+ [1]: http://kaidez.com/ajax-jquery-html5-work-together/
 
-*   [“Improve your jQuery – 25 excellent tips” by Jon Hobbs-Smith][2] *(added January 11, 2011)* – Over at the British-based TVI Design. I’ve already started to apply some of these tips to my work.
 *   [“A Preview of HTML 5″ by Lachlan Hunt][3] *(added January 24, 2011)* – Posted on the awesome “A List Apart” site. Over three years old as of this post and *still* valid.
 *   [“Semantics in HTML 5″ by John Allsopp][4]* (added January 24, 2011)* – A great review of the HTML5 rules, also posted on “A List Apart.”
 
- [2]: http://www.tvidesign.co.uk/blog/improve-your-jquery-25-excellent-tips.aspx
+improve-your-jquery-25-excellent-tips.aspx
  [3]: http://www.alistapart.com/articles/previewofhtml5/
  [4]: http://www.alistapart.com/articles/semanticsinhtml5/
 

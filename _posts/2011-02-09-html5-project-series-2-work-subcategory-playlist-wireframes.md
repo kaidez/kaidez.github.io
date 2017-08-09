@@ -41,20 +41,14 @@ This article is structured as follows:
 
 ## Wireframe Review
 
-
 First, let’s look at all these pages…
 
  
-
 Now, let’s break it all down…
 
 ## The Main Work Page
-
-[![][12]][12]
-
- 
-
-This page was laid out using methods discussed in great detail [in my last article][2] where I discuss  tags and  &  tags. So I’m just going to skim over this page’s explanation:
+<img src="/img/Work.jpg" />
+This page was laid out using methods discussed in great detail [in my last article](/html5-project-series-1-homepage-wireframe/) whereI discuss  tags and  &  tags. So I’m just going to skim over this page’s explanation:
 
 *   While the HTML5 specification (from here on referred to as *the spec*) encourages you to use  as little as possible, it’s fine to use it if it’s your only option. I needed to wrap and position three  tags ***which were not related to each other***, so  was my only option. [*Read where I discuss  use in greater detail »*][12]
 *   The page displays three subcategory rows: Experiments, Freelance and Day Job. Each row contains samples of my work. Since the samples are of the same type and ***are related to one another***, I’ve put each sample in an  tag and wrapped the grouped samples in a  tag. [*Read where I discuss  and  use in greater detail »*][13]
@@ -81,15 +75,13 @@ Based on the location of the  tag, it’s tempting to treat it like a traditiona
 
 ## Niko’s Playlist Page
 
-[![][17]][17]
+<img src="/img/Playlist.jpg" />
 
- 
-
-This page shares the same  /  ***Read the entire “Wirefame Series”: [Intro»][1] | [Page 1»][2] | Page 2» | [Page 3»][3]***
+***Read the entire “Wirefame Series”:
+[Intro»][1] | [Page 1»][2] | Page 2» | [Page 3»][3]***
 
  [9]: /img/Work.jpg
- [12]: http://kaidez.com/html5-project-series-1-homepage-wireframe/#div
+ [12]: http://kaidez.com/html5-project-series-1-homepage-wireframe/
  [13]: http://kaidez.com/html5-project-series-1-homepage-wireframe/#articleSection
- []: /img/Experiments-02.jpg
+ [16]: /img/Experiments-02.jpg
  [15]: http://html5doctor.com/aside-revisited/
- [16]: /img/Playlist.jpg

@@ -81,7 +81,7 @@ There were some examples of how too much listening could be a bad thing, the pri
 
 This "hit-or-miss" scenario led to a lot of agreement between the panelists. They all conceded that while social listening is an important part of the process, it’s not an exact science when it comes reaching consumers. Social networks like Facebook and Twitter may have reached critical mass on the communication level, they said, but no one has perfected the process of using them to sell products.
 
-But they all agreed that the best way to reach consumers was by finding the best "influencers" within the social networks: people with influence and authority that can spread the word about a product *if* they like it. If you’ve read [*Purple Cow* by Seth Godin][12] (and every budding entrepreneur should read it), think of influencers as "sneezers spreading the ideavirus."
+But they all agreed that the best way to reach consumers was by finding the best "influencers" within the social networks: people with influence and authority that can spread the word about a product *if* they like it. If you’ve read *Purple Cow* by Seth Godin (and every budding entrepreneur should read it), think of influencers as "sneezers spreading the ideavirus."
 
 The influencers may be the brass ring that companies reach for, but every panelist was adamant that they were interested in *every* customer and not just the tastemakers. They "socially listen" to every response that Twitter, Facebook and the like send out. They may not react but they listen.
 

@@ -4,7 +4,7 @@ comments: true
 author: Kai Gittens
 excerpt: AJAX, jQuery and HTML5 are big buzz words in the web design/development community nowadays.  While getting these web technologies to work together is exciting, the programming required to do this isn't new.
 layout: post
-date:   2011-02-05 22:07:59 -0400
+date:   2011-01-05 22:07:59 -0400r
 permalink: /ajax-jquery-html5-work-together/
 categories: tutorials
 cat-name: "Tutorial"

@@ -1,5 +1,5 @@
 ---
-title: 'WordPress &#038; WebMatrix'
+title: 'WordPress & WebMatrix'
 comments: true
 author: Kai Gittens
 layout: post
@@ -10,6 +10,8 @@ cat-name: "Code Tips"
 og-image: default-image.jpg
 tags: [wordpress]
 ---
+<em><a href="http://www.microsoft.com/web/webmatrix/">Update: Microsoft now recommends Visual Studio Code over Web Matrix</a></em>
+
 HAPPY GROUNDHOG DAY!!!!!!!!!!!!!
 
 This post actually started off as a referral to [a great WordPress.tv video on how to install a WordPress development site on a Windows machine with Microsoft WebMatrix][1]. But when I started doing extra research on the subject, I learned quite a bit about WebMatrix’s potential.
@@ -36,9 +38,7 @@ Therefore, when I redesign my blog (which won’t be for a while), I may use thi
 
 In the meantime, read these links:
 
-*   [MSDN WebMatrix Site][2]
 *   [Free MSDN Course on Webmatrix Development][3]
 *   [Video snippet on Installing a WordPress development site on a Windows machine with Microsoft WebMatrix][1]
 
- [2]: http://www.microsoft.com/web/webmatrix/
  [3]: http://www.microsoft.com/web/post/web/post/Web-Development-101-Part-1-Getting-Started-with-WebMatrix

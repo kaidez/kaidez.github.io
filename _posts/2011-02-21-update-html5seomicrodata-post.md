@@ -30,11 +30,11 @@ I changed the example code on that article as per his comments…here are some o
 
 *   > “itemtype attaches the microdata to the “Person” vocabulary library stored at data-vocabulary.org.”
 
-    -> “itemtype indicates the microdata item uses the “Person” vocabulary” — there’s no requirement for anything to be at itemtype URLs, they’re just acting as unique names. If browsers accessed itemtype URLs it’d be a DDOS ![;)][4]
+    -> “itemtype indicates the microdata item uses the “Person” vocabulary” — there’s no requirement for anything to be at itemtype URLs, they’re just acting as unique names. If browsers accessed itemtype URLs it’d be a DDOS !
 
 *   > “But RDFa needs to be written in XHTML, which is headed for W3C deprecation”
 
-    not true -> [http://dev.w3.org/html5/rdfa/][5] and I think it’s a little early for “headed for W3C depreciation” just yet ![;)][4]
+    not true -> [http://dev.w3.org/html5/rdfa/][5] and I think it’s a little early for “headed for W3C depreciation” just yet !
 
 *   > “microformats don’t really work without CSS”
 
@@ -68,7 +68,6 @@ I changed the example code on that article as per his comments…here are some o
 
     Google have a dedicated SEO guide too, that you might enjoy:
 
- [4]: http://localhost:8888/wp-includes/images/smilies/icon_wink.gif
  [5]: http://dev.w3.org/html5/rdfa/ "HTML RDFa 1.1"
  [6]: http://html5doctor.com/microdata/ "Extending HTML5 — Microdata | HTML5 Doctor"
  [7]: http://html5doctor.com/microdata/#meta "Extending HTML5 — Microdata | HTML5 Doctor"
