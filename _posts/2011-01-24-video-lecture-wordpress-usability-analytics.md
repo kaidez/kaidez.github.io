@@ -28,4 +28,4 @@ I’m an advocate of getting your site to display on as many devices and browser
 
 Great lecture!! View it below and take notes!!!!!
 
-<embed type="application/x-shockwave-flash" src="http://s0.videopress.com/player.swf?v=1.03" width="400" height="300" wmode="direct" seamlesstabbing="true" allowfullscreen="true" allowscriptaccess="always" overstretch="true" flashvars="guid=E1lnAt3r&amp;isDynamicSeeking=true"></embed>
+<embed type="application/x-shockwave-flash" src="http://s0.videopress.com/player.swf?v=1.03" width="400" height="300" wmode="direct" seamlesstabbing="true" allowfullscreen="true" allowscriptaccess="always" overstretch="true" flashvars="guid=E1lnAt3r&amp;isDynamicSeeking=true">
