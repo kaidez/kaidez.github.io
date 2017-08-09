@@ -26,9 +26,7 @@ On many occasions, they’ll provide sidebar content going into even greater det
 
 *jQuery: Visual Quickstart Guide* doesn’t do any of this. It provides coding examples, all of which work, but the hand-holding that the VQS series is known for is sorely missed. Like other VQS books, it provides short tips at the end of some lessons and all the code examples are available for download, but the positive comparison stops there.
 
-To be clear: this is, by no means, the worst tech learning book I’ve ever read and it’s probably not even the worst book put out by Peachpit Press. This book certainly won’t stop me from using either Peachpit Press or Visual Quickstart Guide products in the future. In fact, I’m currently looking at [their Ruby book][3] as a potential purchase.
-
- [3]: http://gan.doubleclick.net/gan_click?lid=41000000012871747&pid=9780321553850&adurl=http://search.barnesandnoble.com/Ruby/Larry-Ullman/e/9780321553850&usg=AFHzDLt3WZbbT4USISTTDbmius34drXNYw&pubid=21000000000317732
+To be clear: this is, by no means, the worst tech learning book I’ve ever read and it’s probably not even the worst book put out by Peachpit Press. This book certainly won’t stop me from using either Peachpit Press or Visual Quickstart Guide products in the future. In fact, I’m currently looking at their Ruby book as a potential purchase.
 
 I looked at the Ruby and other recent VQS releases prior to writing this review and they all had the positive characteristics mentioned above, so the series doesn’t appear to losing its quality. And I’ll repeat myself-THE CODE EXAMPLES IN THIS BOOK WORK!!!!!!!!
 

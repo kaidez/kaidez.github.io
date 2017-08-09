@@ -25,15 +25,14 @@ Table of Contents
 7. [Conclusion](#conclusion)
 
 <a name="how-data attributes-work"></a>
-How data attributes work
----------------------
+## How data attributes work
 Data attributes are attributes that store data in page elements:
 <pre><code class="language-markup">
-<div id="teamInfo"
+&lt;div id="teamInfo"
      data-team="Chelsea FC"
      data-manager="José Mourinho"
-     data-home-pitch="Stanford Bridge">
-</div>
+     data-home-pitch="Stanford Bridge"&gt;
+&lt;/div&gt;
 </code></pre>
 
 The element that contains these data attributes (`<div id="teamInfo">` in the above-example) has an internal property called `dataset` that stores these attributes in an object called `DOMStringMap` (an API introduced with HTML5):
@@ -55,8 +54,7 @@ All of this means we use JavaScript to find these properties and display them on
 Before we create our final-production-ready code with fallbacks, we'll create some incremental examples to gain a better understanding of how all this works.
 
 <a name="simple-example"></a>
-A simple example (<a href="http://codepen.io/kaidez/pen/VYLxqG" target="blank">See the  demo</a>)
----------------------
+## A simple example (<a href="http://codepen.io/kaidez/pen/VYLxqG" target="blank">See the  demo</a>)
 We'll start by creating code that changes just one set of data attributes with JavaScript. Let's start with the CSS, which will be applied to all future code samples and demos:
 <pre><code class="language-css">
 body {
@@ -97,28 +95,28 @@ a:hover {
 The HTML for this example looks like this:
 <pre><code class="language-markup">
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>TUTORIAL: Change "data" Attributes with Mouse Clicks</title>
-</head>
-<body>
-  <a href="#" id="chelsea">Load Chelsea FC Info »</a>
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;TUTORIAL: Change "data" Attributes with Mouse Clicks&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;a href="#" id="chelsea"&gt;Load Chelsea FC Info »&lt;/a&gt;
 
-  <div id="teamInfo"
+  &lt;div id="teamInfo"
        data-team="Chelsea FC"
        data-manager="José Mourinho"
-       data-home-pitch="Stanford Bridge">
-  </div>
+       data-home-pitch="Stanford Bridge"&gt;
+  &lt;/div&gt;
 
-  <div id="team" class="dataTarget"></div>
-  <div id="manager" class="dataTarget"></div>
-  <div id="homePitch" class="dataTarget"></div>
+  &lt;div id="team" class="dataTarget"&gt;&lt;/div&gt;
+  &lt;div id="manager" class="dataTarget"&gt;&lt;/div&gt;
+  &lt;div id="homePitch" class="dataTarget"&gt;&lt;/div&gt;
 
-  <!-- Note that we're using the oldIE-friendly version of jQuery -->
-  <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-</body>
-</html>
+  &lt;!-- Note that we're using the oldIE-friendly version of jQuery --&gt;
+  &lt;script src="http://code.jquery.com/jquery-1.11.1.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 
 And the JavaScript for this example looks like this:
@@ -142,25 +140,25 @@ $("#chelsea").click(function(event){
 Breaking down the HTML first:
 
 <pre><code class="language-markup">
-<a href="#" id="chelsea">Load Chelsea FC Info »</a>
+&lt;a href="#" id="chelsea"&gt;Load Chelsea FC Info »&lt;/a&gt;
 </code></pre>
 
 In the HTML, clicking on the `id="chelsea` element will load the content stored in the data attributes.
 
 <pre><code class="language-markup">
-<div id="teamInfo"
+&lt;div id="teamInfo"
      data-team="Chelsea FC"
      data-manager="José Mourinho"
      data-home-pitch="Stanford Bridge">
-</div>
+&lt;/div&gt;
 </code></pre>
 
 Those attributes are listed inside `<div id="teamInfo">` and named `data-team`, `data-home-pitch` and `data-manager`.
 
 <pre><code class="language-markup">
-<div id="team" class="dataTarget"></div>
-<div id="manager" class="dataTarget"></div>
-<div id="homePitch" class="dataTarget"></div>
+&lt;div id="team" class="dataTarget"&gt;&lt;/div&gt;
+&lt;div id="manager" class="dataTarget"&gt;&lt;/div&gt;
+&lt;div id="homePitch" class="dataTarget"&gt;&lt;/div&gt;
 </code></pre>
 
 On mouse clicks, those attribute values will be placed inside the three `div` tags at the bottom. Their ids are: `team`, `manager` and `homePitch`.
@@ -202,9 +200,8 @@ Depending on the page layout, this will force the page to jump to the top. Which
 
 *(Side note: read more about [event.PreventDefault() on MDN](https://developer.mozilla.org/en-US/docs/Web/API/event.preventDefault). There's also the similar [event.stopPropagation() on MDN](https://developer.mozilla.org/en-US/docs/Web/API/event.stopPropagation), but that blocks events a little more obtrusively then `event.PreventDefault()`.)*
 
-<a name="proper-naming-data attributes"></a>
+## <a name="proper-naming-data attributes"></a>
 Proper naming of data attributes (<a href="http://codepen.io/kaidez/pen/WbvEab" target="blank">See the  demo</a>)
----------------------
 Here's one of the quirks of data attributes...
 
 As just mentioned, `teamInfo.dataset.team` is a direct reference to the `data-team` attribute...that makes sense. It's also the same thing with the manager information: `teamInfo.dataset.manager` is a direct reference to the `data-manager` attribute.
@@ -222,25 +219,24 @@ Adjust the code so it says `data-home-pitch` and it will work fine.  But from th
 
 Because of this, I suggest keeping your data attributes and `dataset` properties at a two-word minimum.  `data-home-pitch` and `teamInfo.dataset.homePitch` are fine...`data-home-team-pitch` and `teamInfo.dataset.homeTeamPitch` may work, but are too verbose.
 
-<a name="store-data attributes-link"></a>
+## <a name="store-data attributes-link"></a>
 Store the data attributes in a link (<a href="http://codepen.io/kaidez/pen/dPoexg" target="blank">See the  demo</a>)
----------------------
 The first example separated the link and the data attribute content for the sake of a clearer explanation, but a real-world use case is to store the attributes in the link being clicked on. Using the same CSS, that code would look like this:
 
 __The HTML__
 <pre><code class="language-markup">
 ...
-<a href="#"
+&lt;a href="#"
    id="chelsea"
    data-team="Chelsea FC"
    data-manager="José Mourinho"
    data-home-pitch="Stanford Bridge">
    Load Chelsea FC Info »
-</a>
+&lt;/a&gt;
 
-<div id="team" class="dataTarget"></div>
-<div id="manager" class="dataTarget"></div>
-<div id="homePitch" class="dataTarget"></div>
+&lt;div id="team" class="dataTarget">&lt;/div&gt;
+&lt;div id="manager" class="dataTarget"&gt;&lt;/div&gt;
+&lt;div id="homePitch" class="dataTarget"&gt;&lt;/div&gt;
 ...
 </code></pre>
 __The JavaScript__
@@ -264,10 +260,7 @@ In the HTML, we've taken the data attributes listed in `<div id="teamInfo">` and
 
 In the JavaScript, we've replaced all the `teamInfo.dataset` references to `this.dataset`. `this` is a direct reference to the `#chelsea` link context, meaning it sees everything connected to it...including the data attributes.
 
-<a name="store-data attributes-multiple-link"></a>
-Store the data attributes in multiple links (<a href="http://codepen.io/kaidez/pen/GgJYLZ" target="blank">See the  demo</a>)
----------------------
-
+## Store the data attributes in multiple links (<a href="http://codepen.io/kaidez/pen/GgJYLZ" target="blank">See the  demo</a>)
 In the previous example, we could have used `chelsea.dataset` instead of `this.dataset`. But by using `this`, our code is reusable and lets us create multiple links that use the same functionality.
 
 Still keeping the CSS the same, we can add a few more links to our HTML while slightly adjusting our JavaScript.  Clicking on each link will load different info onto our page.
@@ -275,48 +268,48 @@ Still keeping the CSS the same, we can add a few more links to our HTML while sl
 __The HTML__
 <pre><code class="language-markup">
 ...
-<ul>
-  <li class="teamListItem">
-    <a href="#"
+&lt;ul&gt;
+  &lt;li class="teamListItem"&gt;
+    &lt;a href="#"
        class="teamLink"
        data-team="Chelsea FC"
        data-manager="José Mourinho"
-       data-home-pitch="Stanford Bridge">
+       data-home-pitch="Stanford Bridge"&gt;
        Load Chelsea FC Info »
-    </a>
-  </li>
-  <li class="teamListItem">
-    <a href="#"
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="teamListItem"&gt;
+    &lt;a href="#"
       class="teamLink"
       data-team="Real Madrid"
       data-manager="Carlo Ancelotti"
-      data-home-pitch="Santiago Bernabéu">
+      data-home-pitch="Santiago Bernabéu"&gt;
       Load Real Madrid Info »
-    </a>
-  </li>
-  <li class="teamListItem">
-    <a href="#"
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="teamListItem"&gt;
+    &lt;a href="#"
        class="teamLink"
       data-team="AC Milan"
       data-manager="Filippo Inzaghi"
-      data-home-pitch="San Siro">
+      data-home-pitch="San Siro"&gt;
       Load AC Milan Info »
-    </a>
-  </li>
-  <li class="teamListItem">
-    <a href="#"
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="teamListItem"&gt;
+    &lt;a href="#"
       class="teamLink"
       data-team="Paris Saint-Germain"
       data-manager="Laurent Blanc"
-      data-home-pitch="Parc des Princes">
+      data-home-pitch="Parc des Princes"&gt;
       Load Paris Saint-Germain Info »
-    </a>
-  </li>
-</ul>
+    &lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-<div id="team" class="dataTarget"></div>
-<div id="manager" class="dataTarget"></div>
-<div id="homePitch" class="dataTarget"></div>
+&lt;div id="team" class="dataTarget"&gt;&lt;/div&gt;
+&lt;div id="manager" class="dataTarget"&gt;&lt;/div&gt;
+&lt;div id="homePitch" class="dataTarget"&gt;&lt;/div&gt;
 ...
 </code></pre>
 
@@ -341,9 +334,8 @@ In the HTML we've removed the id property while adding a class called `teamLink`
 
 So every time a link with the `teamLink` class gets clicked, the `this` keyword forces our JavaScript code to look at the data attributes for that link only, then load them onto the page.
 
-<a name="getattribute-fallback"></a>
+## <a name="getattribute-fallback"></a>
 Use `getAttribute()` as fallback code for `dataset` (<a href="http://codepen.io/kaidez/pen/QwbJBZ" target="blank">See the  demo</a>)
----------------------
 `dateset` is awesome but, as mentioned in the beginning, isn't cross-browser compliant and doesn't work in all browsers. We can write fallback code with the `getAttribute()` method for those browsers, specifically IE 10 and lower.
 
 The CSS and HTML stay the same while the JavaScript goes through some changes...
@@ -386,9 +378,8 @@ But if the `dataset` property DOES exist, we'll just say that those new variable
 
 We've made sure that the `teamValue`, `managerValue` and `homePitchValue` variables are properly storing the data attributes values, regardless of whether or not the browser supports `dataset`. So in order to get those values on the page, we just need to tell our code to look at those variable values and place them inside the elements we pre-defined awhile ago with `document.querySelector()`.
 
-<a name="conclusion"></a>
+## <a name="conclusion"></a>
 Conclusion
-----------
 This was a very basic data attribute implementation and, quite frankly, data attribute implementations should be simple. Each link isn't overloaded with data attributes that have over 100 character lines of copy.
 
 Were that my data structure or something even more complicated, I would use a pure JS implementation and ignore data attributes. That was my opinion at the start of this but reading well-respected developer [Divya Manian's excellent `dataset` post](https://dev.opera.com/articles/introduction-to-datasets/) justifies my feelings.

@@ -26,9 +26,7 @@ A common belief among high school students is that there’s no need to take cla
 
 Valid questions that share one easy answer…
 
-A good doctor does more than perform surgeries. They need to review blood work, memorize the medical histories for ten or more people at a time, teach interns and residents while working…surgery is only part of the job. And do you really want to be a football player, or **any** type of athlete for that matter, that doesn’t have adequate math skills? How will you manage your money if you make it big? [Read this Sports Illustrated article][1] about athletes that didn’t take the time to manage their money and note the end results.
-
- [1]: http://sportsillustrated.cnn.com/vault/article/magazine/MAG1153364/index.htm
+A good doctor does more than perform surgeries. They need to review blood work, memorize the medical histories for ten or more people at a time, teach interns and residents while working…surgery is only part of the job. And do you really want to be a football player, or **any** type of athlete for that matter, that doesn’t have adequate math skills? How will you manage your money if you make it big?
 
 In other words, **the point of taking seemingly unrelated high school classes is to learn how to think and organize multiple tasks**, skills you’ll need in the web field…or any job field for that matter.
 

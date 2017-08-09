@@ -12,11 +12,11 @@ tags: [rwd, html5, media queries]
 ---
 In 2005, Jesse James Garrett wrote [an excellent article describing and coining the term “Ajax.”][1] He demonstrated Ajax as a method of using multiple web programming languages to neatly load content onto a web page *without* actually refreshing the page.
 
- [1]: http://www.adaptivepath.com/ideas/essays/archives/000385.php
+ [1]: http://adaptivepath.org/ideas/ajax-new-approach-web-applications/
 
 It’s tough to accurately describe this functionality to people not familiar with web development, and it’s even tougher for those people to actually *visualize* this functionality in action (although [this page will help you][2]). But trust me, Garrett’s article changed the game for web programmers. Ajax stretched the imagination of designers and developers, showing them the seemingly infinite list of possibilities of what they could do when creating web applications.
 
- [2]: http://kaidez.com/ajax-jquery-html5-work-together/4/
+ [2]: http://kaidez.com/ajax-jquery-html5-work-together/
 
 Google has given us the most widely-used Ajax applications: Gmail, Maps and their [Suggest functionality][3], just to name a few. And many others besides Google have given us great Ajax applications as well but the point is, Garrett’s article got the creative juices flowing for lots of designers and developers. By showing them what was possible, he made them rethink their entire creative process.
 
