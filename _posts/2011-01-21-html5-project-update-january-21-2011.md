@@ -36,11 +36,10 @@ That being said, here’s my plan for said site:
 
 *   implementing CSS3.
 *   using both the [jQuery][4] and [Modernizr][5] JavaScript libraries.
-*   ***hand-coding*** in Dreamweaver to take advantage of [its great HTML5 code-hinting][6].
+*   ***hand-coding*** in Dreamweaver to take advantage of its great HTML5 code-hinting
 
  [4]: http://jquery.com/
  [5]: http://www.modernizr.com/
- [6]: http://labs.adobe.com/downloads/html5pack.html
 
 ## Two things I haven’t made a firm decision on:
 

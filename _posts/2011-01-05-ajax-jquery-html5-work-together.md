@@ -4,6 +4,7 @@ comments: true
 author: Kai Gittens
 excerpt: AJAX, jQuery and HTML5 are big buzz words in the web design/development community nowadays.  While getting these web technologies to work together is exciting, the programming required to do this isn't new.
 layout: post
+date:   2011-02-05 22:07:59 -0400
 permalink: /ajax-jquery-html5-work-together/
 categories: tutorials
 cat-name: "Tutorial"
@@ -28,45 +29,47 @@ Here's some HTML5-ready page code that uses it:
 
 <pre><code class="language-javascript">
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">
-<head>
-<meta charset="UTF-8" />
-<title>Load Text Into An ID Using JavaScript</title>
-<script type="text/javascript">
+&lt;html dir="ltr" lang="en-US"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;Load Text Into An ID Using JavaScript&lt;/title&gt;
+&lt;script type="text/javascript"&gt;
 function loadText() {
 document.getElementById('words').innerHTML = 'Hello World!';
 }
-</script>
-</head>
-<body>
-<input type="button" onclick="loadText()" value="Load Some Copy!"/>
-<br />
-<div id="words"></div>
-</body>
-</html>
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;input type="button" onclick="loadText()" value="Load Some Copy!"/&gt;
+&lt;br /&gt;
+&lt;div id="words"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 Let's look at the code and translate it..
 
-The <code><script></script></code> tag
+The `script` tag
 
 <pre><code class="language-markup">
-<script type="text/javascript">
+&lt;script type="text/javascript"&gt;
 function loadText() {
 document.getElementById('words').innerHTML = 'Hello World!';
 }
-</script>
+&lt;/script&gt;
 </code></pre>
 TRANSLATION: create a JavaScript function called loadText(). When this function runs, it should find a page element with an id of 'words' and place some text inside of it that says Hello World!
 
 The `<input>` tag
 
-<pre><code class="language-markup"> <input type="button" onclick="loadText()" value="Load Some Text!"/> </code></pre>
+<pre><code class="language-markup">
+&lt;input type="button" onclick="loadText()" value="Load Some Text!"/&gt;
+</code></pre>
 TRANSLATION: Whenever this button is clicked, run the loadText() function. This will load that Hello World! copy into that page element with an id of 'words'.
 
 The `<div>` tag
 
-<pre><code class="language-markup"> <div id="words"></div></code></pre>
-TRANSLATION: This empty `<div>` tag is the page element with an id of 'words,' so this is what's affected when the loadText() function runs. Therefore, this is where the Hello World! text will be placed into when the button is clicked.
+<pre><code class="language-markup"> &lt;div id="words"&gt;&lt;/div&gt;</code></pre>
+TRANSLATION: This empty `div` tag is the page element with an id of 'words,' so this is what's affected when the loadText() function runs. Therefore, this is where the Hello World! text will be placed into when the button is clicked.
 
 An ID must be unique on a web page so in our example, there can only be one page element with an ID of "words." If you need to traverse the DOM with JavaScript to locate multiple page elements with the same name, it's best if you look for tags using the `getElementsByTagName()` function:
 <pre><code class="language-markup">
