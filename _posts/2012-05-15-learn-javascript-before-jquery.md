@@ -67,7 +67,6 @@ Now, let’s look at this list:
 *   [script.aculo.us][11]
 *   [Prototype][12]
 *   [MooTools][13]
-*   [Spine][14]
 *   [Backbone][15]
 *   [JSON][16]
 *   [JSONselect][17]
@@ -83,7 +82,7 @@ Now, let’s look at this list:
 *   [Jasmine][27]
 *   [github.js][28]
 
- [5]: http://docs.jquery.com/Plugins/Authoring
+ [5]: http://learn.jquery.com/plugins/basic-plugin-creation/
  [6]: http://howtonode.org/how-to-module
  [7]: http://modernizr.com/
  [8]: http://yepnopejs.com/
@@ -92,10 +91,9 @@ Now, let’s look at this list:
  [11]: http://script.aculo.us/
  [12]: http://www.prototypejs.org/
  [13]: http://mootools.net/
- [14]: http://spinejs.com/
- [15]: http://documentcloud.github.com/backbone/
+ [15]: http://backbonejs.org/
  [16]: http://www.json.org/
- [17]: http://jsonselect.org/#overview
+ [17]: https://github.com/lloyd/JSONSelect
  [18]: http://phonegap.com/
  [19]: http://www.appcelerator.com/platform/titanium-sdk
  [20]: https://developer.mozilla.org/en/HTML/Canvas
@@ -105,7 +103,7 @@ Now, let’s look at this list:
  [24]: https://github.com/janl/mustache.js
  [25]: http://handlebarsjs.com/
  [26]: https://github.com/jquery/qunit
- [27]: http://pivotal.github.com/jasmine/
+ [27]: https://jasmine.github.io/
  [28]: http://fitzgen.github.com/github-api/
 
 …you get the idea.
@@ -137,7 +135,7 @@ I’ll toot my own horn here and mention my last post on [great JavaScript books
  [31]: http://kaidez.com/useful-javascript-books/
 
 ### [Codecademy »][32]
-Great for beginners. It starts you at the JavaScript basics, building you up to creating structured JavaScript applications. Most importantly, [Mozilla Developer Network lists Codecademy as an excellent introductory level learning resource][33], which is a ringing endorsement.
+Great for beginners. It starts you at the JavaScript basics, building you up to creating structured JavaScript applications.
 
 ### [jQuery Fundamentals »][34]
 Written by [Rebecca Murphey][35] who is, hands down, my favorite web developer right now. *jQuery Fundamentals* teaches you jQuery the right way: by teaching you the JavaScript basics and best practices first.
@@ -148,7 +146,6 @@ Paul Irish walks you through the core JavaScript code behind the jQuery library,
 Think I left some reasons or resources out? Feel free to comment. AND NO SPAM!! I know what it looks like.
 
  [32]: http://www.codecademy.com/
- [33]: https://developer.mozilla.org/en-US/learn/javascript
  [34]: http://jqfundamentals.com/
  [35]: http://rmurphey.com/
  [36]: http://www.youtube.com/watch?v=i_qE1iAmjFg
