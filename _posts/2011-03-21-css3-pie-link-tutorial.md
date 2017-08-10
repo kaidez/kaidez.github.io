@@ -34,13 +34,13 @@ This tutorial will first create code that’s not friendly for older versions of
 
 <pre><code class="language-markup">
 <!DOCTYPE html>
-<html lang="en">
+&lt;html lang="en"&gt;
 
-<head>
-  <meta charset="UTF-8">
-  <title>A CSS3 Rollover for Internet Explorer 6 thru 8</title>
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;A CSS3 Rollover for Internet Explorer 6 thru 8&lt;/title&gt;
 
-  <style>
+  &lt;style&gt;
     body {
       background-color:#f43a3a;
     }
@@ -58,13 +58,13 @@ This tutorial will first create code that’s not friendly for older versions of
     a.links:hover {
       background: rgba(0, 0, 0, 0.4);
     }
-  </style>
+  &lt;/style&gt;
 
-  </head>
-  <body>
-    <a href="#" class="links">Test Link</a>
-  </body>
-</html>
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;a href="#" class="links"&gt;Test Link&lt;/a&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 
 7).  Let’s take a moment to review the stuff in between the  tags:

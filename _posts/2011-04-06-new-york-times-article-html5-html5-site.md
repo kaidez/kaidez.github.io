@@ -1,5 +1,5 @@
 ---
-title: 'New York Times Article On HTML5 &#038; Their New HTML5 Site'
+title: "New York Times Article On HTML5: Their New HTML5 Site"
 comments: true
 author: Kai Gittens
 layout: post
@@ -10,7 +10,7 @@ cat-name: "Code Tips"
 og-image: default-image.jpg
 tags: [html5, kai]
 ---
-The New York Times was hot stuff in the HTML5 sector of the Twitterverse over the March 26/27 weekend of 2011. Reason being, their [“HTML5 Is Breathing New Life Into the Web”][1] article and [their new Skimmer site](http://www.nytimes.com/skimmer/#/Top News).
+The New York Times was hot stuff in the HTML5 sector of the Twitterverse over the March 26/27 weekend of 2011. Reason being, their [“HTML5 Is Breathing New Life Into the Web”][1] article and their new Skimmer site.
 
  [1]: http://www.nytimes.com/2011/03/27/business/27unboxed.html
 
@@ -27,8 +27,6 @@ Still, I think HTML5 will go far. Too many in the open source community, includi
  [6]: http://paulirish.com/
  [7]: /html5-article-roundup/
 
-The article also announced the launch of their HTML5-driven [Skimmer site][8], which provides a scannable layout of snippets of their just published articles. It appears to be implementing a responsive web design, but I couldn’t find any media queries when I checked the CSS code. They could be there and I just didn’t see them…will keep looking.
-
- [8]: http://www.nytimes.com/skimmer/
+The article also announced the launch of their HTML5-driven Skimmer site, which provides a scannable layout of snippets of their just published articles. It appears to be implementing a responsive web design, but I couldn’t find any media queries when I checked the CSS code. They could be there and I just didn’t see them…will keep looking.
 
 While it crashed my iPhone, it’s still a good-looking site.

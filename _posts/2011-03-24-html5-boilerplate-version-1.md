@@ -25,7 +25,7 @@ While there are lots of small code updates, there are also three important addit
 *   **Documentation**: Pretty much every question about Boilerplate is answered here. Contains a few broken links as of this post but it’s still comprehensive.
 
  [5]: http://jqueryui.com/download
- [6]: http://modernizr.github.com/Modernizr/2.0-beta/
+ [6]: http://modernizr.github.com/
  [7]: http://initializr.com/
 
 There are also **two new how-to videos**: a getting started one by Manian (great for newbies) and a build script walk-through by Irish.

@@ -16,7 +16,7 @@ In 2005, Jesse James Garrett wrote [an excellent article describing and coining 
 
 It’s tough to accurately describe this functionality to people not familiar with web development, and it’s even tougher for those people to actually *visualize* this functionality in action (although [this page will help you][2]). But trust me, Garrett’s article changed the game for web programmers. Ajax stretched the imagination of designers and developers, showing them the seemingly infinite list of possibilities of what they could do when creating web applications.
 
- [2]: http://kaidez.com/ajax-jquery-html5-work-together/
+ [2]: /ajax-tutorial/
 
 Google has given us the most widely-used Ajax applications: Gmail, Maps and their [Suggest functionality][3], just to name a few. And many others besides Google have given us great Ajax applications as well but the point is, Garrett’s article got the creative juices flowing for lots of designers and developers. By showing them what was possible, he made them rethink their entire creative process.
 
@@ -37,13 +37,13 @@ I’d like to present this as an opportunity to our team at work, but I need to 
 
 *Media queries*, a part of the new CSS3 specification, are the linchpin of responsive web design. They’re set up when you link stylesheets to your web page and look somewhat like this:
 <pre><code class="language-markup">
-<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+&lt;meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"&gt;
 
-<link rel="stylesheet" media="screen and (min-width: 600px)" href="large.css" />
+&lt;link rel="stylesheet" media="screen and (min-width: 600px)" href="large.css" /&gt;
 
-<link rel="stylesheet" media="screen and (max-width: 320px)" href="smartPhone.css" />
+&lt;link rel="stylesheet" media="screen and (max-width: 320px)" href="smartPhone.css" /&gt;
 
-<link rel="stylesheet" media="screen and (max-width: 600px)" href="tablet.css" />
+&lt;link rel="stylesheet" media="screen and (max-width: 600px)" href="tablet.css" /&gt;
 </code></pre>
 
 With this code in mind, let’s look at the following scenario:
@@ -87,7 +87,7 @@ As I see it, responsive web design must utilize the following:
     Needed when creating a site for any iOS device, i.e., the iPad and the Phone. It looks like this...
 
 <pre><code class="language-markup">
-<meta name = "viewport" content = "width = EnterYourOwnWidth">
+&lt;meta name = "viewport" content = "width = EnterYourOwnWidth"&gt;
 </code></pre>
 
 It’s good to know how the Viewport meta tag works so [read up on it over at the Apple Developer site][10].
@@ -148,7 +148,7 @@ Feel free to share any responsive web design resources that you like…and your 
  [10]: http://developer.apple.com/library/safari/#documentation/appleapplications/reference/safariwebcontent/UsingtheViewport/UsingtheViewport.html
  [11]: https://github.com/filamentgroup/Responsive-Images
  [12]: http://filamentgroup.com/examples/responsive-images/
- [13]: http://www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/
+ [13]: https://cloudfour.com/thinks/css-media-query-for-mobile-is-fools-gold/
  [14]: http://www.quirksmode.org/blog/archives/2010/08/combining_media.html
  [15]: http://www.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/
  [16]: http://kaidez.com/html5-project-update-completed-wireframes/

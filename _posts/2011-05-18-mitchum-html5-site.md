@@ -13,12 +13,10 @@ og-image: default-image.jpg
 
 It has been INSANELY busy at work lately, hence, no blog posts in over a month. One of the projects that has literally kept me up late is the new Mitchum deodorant website. And yes, HTML5 was used.
 
-[Mitchum][1], which is wholly owned by [my employer][2], launched a new site on Sunday, May 15, 2011. While Max over at [image0][3], set up the back-end development on Sitecore and managed the development process with Scrummy (check out his in-depth post about this [here][4]), I wired up the front-end code. As with [a previous site I worked on for my bosses][5], I just hooked up most of the front-end code and didn’t design it.
+[Mitchum][1], which is wholly owned by [my employer][2], launched a new site on Sunday, May 15, 2011. While Max over at image0], set up the back-end development on Sitecore and managed the development process with Scrummy, I wired up the front-end code. As with [a previous site I worked on for my bosses][5], I just hooked up most of the front-end code and didn’t design it.
 
  [1]: http://www.mitchum.com/
  [2]: http://www.revlon.com/
- [3]: http://blog.image0.com/
- [4]: http://blog.image0.com/sitecore/inside-look-at-a-web-project/
  [5]: http://kaidez.com/almay-project-using-html5-net-jquery/
 
 Despite the tight time constraint and late nights, this was a pretty easy project. I walked away with two major positives: I used a lot of cool new front-end development tools in my work and really refined the process of “thinking” like a developer.
@@ -64,7 +62,7 @@ Factor in all the reading on mobile design and media queries that I’ve been do
 
 Coding Mitchum was a good project for me…I’m glad I did it.
 
-Again, check out Max’s post [here][4] to see what he did on the back-end.
+Again, check out Max’s post here to see what he did on the back-end.
 
  [6]: http://html5boilerplate.com/
  [7]: http://www.modernizr.com/

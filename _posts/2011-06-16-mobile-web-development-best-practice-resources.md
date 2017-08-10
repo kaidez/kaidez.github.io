@@ -31,9 +31,8 @@ Web developer Peter-Paul Koch, also known as PPK, is next on the speed guru list
 
  [5]: http://www.quirksmode.org/mobile/
 
-As he lives in Amsterdam, PPK can perform thorough tests on the [Symbian][6] browser, which not only gets heavy usage in Europe, but is also the world’s most popular mobile web browser. So…American-based web developers need to read his Symbiam results on his [Quirksmode blog][7] because they will have to code for it sooner than later.
+As he lives in Amsterdam, PPK can perform thorough tests on the Symbian browser, which not only gets heavy usage in Europe, but is also the world’s most popular mobile web browser. So…American-based web developers need to read his Symbiam results on his [Quirksmode blog][7] because they will have to code for it sooner than later.
 
- [6]: http://symbian.nokia.com/
  [7]: http://www.quirksmode.org/
 
 ## 3) Yahoo’s YUI and YDN blogs
@@ -47,10 +46,6 @@ Yahoo! also maintains the Yahoo! Developer Network blog (YDN), which doesn’t h
 
  [10]: http://developer.yahoo.com/performance/rules.html
  [11]: http://developer.yahoo.com/yslow/
-
-*(A related side-note: Yahoo released a [beta version of YSlow for Mobile][12] the day before this article’s posting. I downloaded it and believe me when I say that you should too). *
-
- [12]: http://developer.yahoo.com/blogs/ydn/posts/2011/06/yslowmobile/
 
 ## 4) YayQuery podcast with John Resig
 

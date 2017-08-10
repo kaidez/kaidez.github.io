@@ -121,24 +121,24 @@ We started with alerts for the sake of easy explanation-now let’s create somet
 
 <pre><code class="language-markup">
 <!DOCTYPE html>
-<html lang="en">
-<head>
- <meta charset="utf-8">
- <title>The NYC subway can teach you about closures!</title>
-</head>
-<body>
-<ul>
- <li><a href="#" id="eTrain">Catch the G train by taking the E Train</a></li>
- <li><a href="#" id="fTrain">Catch the G train by taking the F Train</a></li>
- <li><a href="#" id="nTrain">Catch the G train by taking the N Train</a></li>
-</ul>
+&lt;html lang="en"&gt;
+&lt;head&gt;
+ &lt;meta charset="utf-8"&gt;
+ &lt;title&gt;The NYC subway can teach you about closures!&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;ul&gt;
+ &lt;li&gt;&lt;a href="#" id="eTrain"&gt;Catch the G train by taking the E Train&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#" id="fTrain"&gt;Catch the G train by taking the F Train&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#" id="nTrain"&gt;Catch the G train by taking the N Train&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-<div id="myRoute"></div>
+&lt;div id="myRoute"&gt;&lt;/div&gt;
 
-<script src="http://code.jquery.com/jquery-1.7.2.js"></script>
-<script src="scripts.js"></script>
-</body>
-</html>
+&lt;script src="http://code.jquery.com/jquery-1.7.2.js"&gt;&lt;/script&gt;
+&lt;script src="scripts.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 
 [2]: # Our simple HTML5-formatted page has three links, each with unique page ID. Using jQuery (note the jQuery core library is attached), our links will run the our JavaScript when clicked. Our JavaScript code will go in the `scripts.js` file.
@@ -302,12 +302,6 @@ Another excellent article by this California-based developer. His closure exampl
  [6]: http://vimeo.com/1967261
 
 Hilarious presentation from this UK-based developer.
-
-### [meta-excerpt from John Resig’s Upcoming Book, *Secrets of the JavaScript Ninja* »][7]
-
- [7]: http://www.manning.com/free/meta-excerpt_resig.html
-
-jQuery creator John Resig has written extensively on JavaScript closures. This sample content about closures from his upcoming book is, I think, his most in-depth article on the subject. It’s probably the toughest read on this list, but a great read nonetheless. Registration is required.
 
 ## Conclusion
 

@@ -25,24 +25,24 @@ As I saw how people were using the tutorial’s code, a need to make it dynamic 
 
 <pre><code class="language-markup">
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="main.css">
-    <title>jQuery fade-ins with a JavaScript for() loop</title>
-</head>
-<body>
-    <div id="elem0" class="toBeFaded">Here's the first message...</div>
-    <div id="elem1" class="toBeFaded">We have second one here...</div>
-    <div id="elem2" class="toBeFaded">And here's the third message...</div>
-    <div id="elem3" class="toBeFaded">OMG!!! Here's the fourth message!</div>
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;link rel="stylesheet" href="main.css"&gt;
+    &lt;title&gt;jQuery fade-ins with a JavaScript for() loop&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="elem0" class="toBeFaded"&gt;Here's the first message...&lt;/div&gt;
+    &lt;div id="elem1" class="toBeFaded"&gt;We have second one here...&lt;/div&gt;
+    &lt;div id="elem2" class="toBeFaded"&gt;And here's the third message...&lt;/div&gt;
+    &lt;div id="elem3" class="toBeFaded"&gt;OMG!!! Here's the fourth message!&lt;/div&gt;
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
 
-    <script src="fadeCode.js" defer="defer"></script>
+    &lt;script src="fadeCode.js" defer="defer"&gt;&lt;/script&gt;
 
-</body>
-</html>
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 
 ## CSS (main.css)
