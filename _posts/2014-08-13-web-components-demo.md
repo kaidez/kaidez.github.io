@@ -9,6 +9,8 @@ categories: coding-best-practices
 cat-name: "Code Tips"
 tags: [web components, shadow DOM, templates]
 og-image: web-components-demo.jpg
+redirect_from:
+  - web-components-demo/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+kaidez-blog+%28kaidez%29
 ---
 <p class="clearfix">
   <ul>
@@ -175,9 +177,9 @@ __scripts/main.js__
 
 `index.html` contains both `normalize.css` and the main Twitter Bootstrap CSS file. Bootstrap is providing responsive functionality, but is mostly here to make parts of the site look pretty. `styles.css` adds extra styling to some page elements and has a very small role in the project.
 
-Past that, there's some basic HTML but there's also the Web Component-centric template tag that has an ID of `singleBook`. The code inside of `<template>` contains HTML and some CSS in a `<style>` tag.
+Past that, there's some basic HTML but there's also the Web Component-centric template tag that has an ID of `singleBook`. The code inside of <code><template></code> contains HTML and some CSS in a <code><style></code> tag.
 
-The template contains an `<article>` tag: this is where the book data in the JS object will be parsed as content. The template tag is also inert, meaning it's not visible on page load and can't communicate with any outside code until we say so.
+The template contains an <code><article></code> tag: this is where the book data in the JS object will be parsed as content. The template tag is also inert, meaning it's not visible on page load and can't communicate with any outside code until we say so.
 
 Note that some parts of `<article>` are empty:
 
@@ -296,11 +298,11 @@ This is happening because, as mentioned above, the code inside the template can'
 `styles.css` doesn't need to interact with the layout but the other two have to.  The solution is to use `@import` inside the template's `<style>` tag to bring both of them in:
 
 <pre><code class="language-css">
-<style>
+&lt;style&gt;
   @import url("css/normalize.min.css");
   @import url("css/bootstrap.min.css");
 ...
-</style>
+&lt;/style&gt;
 </code></pre>
 
 Using `@import` is frowned upon from a performance standpoint, but it's how this particular problem gets solved. And as Google's Rob Dodson points out in his [excellent Web Components article](http://css-tricks.com/modular-future-web-components/ "Read Rob Dodson's great Web Component article on CSS Tricks"), using Polymer avoids doing this by bringing in the stylesheets with XHR requests.

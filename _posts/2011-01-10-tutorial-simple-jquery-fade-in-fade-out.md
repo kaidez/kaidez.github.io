@@ -9,6 +9,8 @@ categories: tutorials
 cat-name: "Tutorials"
 og-image: default-image.jpg
 tags: [ajax, jquery, html5]
+redirect_from:
+  - /tutorial-simple-jquery/
 ---
 *Update: March 3rd, 2012: the code below is simple and will do the job. But if you’re looking for something more dynamic, [please see this code’s update][1]. It still uses jQuery, but uses a for() loop to make things dynamic. A detailed screencast tutorial on how to create a JavaScript for() loop is included as well!*
 

@@ -2,6 +2,8 @@
 title: 'Sitemap'
 layout: page
 permalink: /sitemap/
+redirect_from:
+  - /sitemap-index.xml
 ---
 <h2>Posts related to: 'Tutorials'</h2>
 {% for post in site.categories.tutorials %}
