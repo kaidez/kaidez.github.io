@@ -81,7 +81,7 @@ But I will say this...
 <a name="personal"></a>
 ### On a personal note...
 
-Personally, it was really good to get back into WordPress development. [Jekyll](http://jekyllrb.com/ "Read more about the Jekyll static site generator") was used to create the version of this site current to this post's publish date, and it has benefits. But there are things that are just too easy to do with WordPress.
+Personally, it was really good to get back into WordPress development. [Jekyll](http://jekyllrb.com/ "Read more about the Jekyll static site generator") was used` to create the version of this site current to this post's publish date, and it has benefits. But there are things that are just too easy to do with WordPress.
 
 As a result of this, I will probably redesign this site using WordPress in the (hopefully) not-too-distant future. I'll go into more detail on what's easier when that redesign happens.
 
