@@ -1,5 +1,5 @@
 ---
-title: 'Where I&#039;ve Been...Upcoming Site Update'
+title: "Where I've Been...Upcoming Site Update"
 comments: true
 author: Kai Gittens
 layout: post

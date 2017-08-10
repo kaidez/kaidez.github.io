@@ -64,22 +64,22 @@ Let's look at version 1 of the code we'll be using:
 
 <pre><code class="language-markup">
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Search For Content</title>
-</head>
-<body>
-  <h1>Search here...</h1>
-  <form action="http://google.com/search" method="get">
-    <fieldset role="search">
-      <!-- change the "value" attribute below to point to your site -->
-      <input type="hidden" name="q" value="site:yoursite.com"/>
-      <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-    </fieldset>
-  </form>
-</body>
-</html>
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Search For Content&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Search here...&lt;/h1&gt;
+  &lt;form action="http://google.com/search" method="get"&gt;
+    &lt;fieldset role="search"&gt;
+      &lt;!-- change the "value" attribute below to point to your site --&gt;
+      &lt;input type="hidden" name="q" value="site:yoursite.com"/&gt;
+      &lt;input class="search" type="text" name="q" results="0" placeholder="Search"/&gt;
+    &lt;/fieldset&gt;
+  &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 Note the setting of the `value` attribute in the first `<input>` tag: "yoursite.com". You would need to change this to whatever your site URL is. Once that's done, any searches entered into this searchbox will return the results for that site, and return them inside a standard Google search results page.
 
@@ -116,45 +116,45 @@ Let's review these files...
 __index.html__
 <pre><code class="language-markup">
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-<head>
-  <meta charset="UTF-8">
-  <title>Search For Content</title>
-  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-  <link href="css/tipuesearch.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
-  <script src="js/detect.js"></script>
-</head>
-<body>
-  <div id="container" class="containerClass">
-  <h1>Search here...</h1>
+&lt;html lang="en" class="no-js"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Search For Content&lt;/title&gt;
+  &lt;link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet"&gt;
+  &lt;link href="css/tipuesearch.css" rel="stylesheet"&gt;
+  &lt;link href="css/styles.css" rel="stylesheet"&gt;
+  &lt;script src="js/detect.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id="container" class="containerClass"&gt;
+  &lt;h1&gt;Search here...&lt;/h1&gt;
 
-    <!-- Tipue Search box will go here -->
-    <div id="searchbox"> </div>
+    &lt;!-- Tipue Search box will go here --&gt;
+    &lt;div id="searchbox"&gt; &lt;/div&gt;
 
-    <!-- Google CSE search box starts here -->
-    <div id="no-js-searchbox">
-      <form action="http://google.com/search" method="get">
-        <fieldset role="search">
-          <!-- change the "value" attribute below to point to your site -->
-          <input type="hidden" name="q" value="site:yoursite.com"/>
-          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-        </fieldset>
-      </form>
-    </div>
-    <!-- Google CSE search box ends here -->
+    &lt;!-- Google CSE search box starts here --&gt;
+    &lt;div id="no-js-searchbox"&gt;
+      &lt;form action="http://google.com/search" method="get"&gt;
+        &lt;fieldset role="search"&gt;
+          &lt;!-- change the "value" attribute below to point to your site --&gt;
+          &lt;input type="hidden" name="q" value="site:yoursite.com"/&gt;
+          &lt;input class="search" type="text" name="q" results="0" placeholder="Search"/&gt;
+        &lt;/fieldset&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;!-- Google CSE search box ends here --&gt;
 
-  </div>
+  &lt;/div&gt;
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.2.min.js"><\/script>')</script>
-  <script src="js/tipuesearch_content.js"></script>
-  <script src="js/tipuesearch_set.js"></script>
-  <script src="js/tipuesearch.min.js"></script>
-  <script src="js/scripts.js"></script>
+  &lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"&gt;&lt;/script&gt;
+  &lt;script&gt;window.jQuery || document.write('&lt;script src="js/libs/jquery-1.10.2.min.js"&gt;&lt;\/script&gt;')&lt;/script&gt;
+  &lt;script src="js/tipuesearch_content.js"&gt;&lt;/script&gt;
+  &lt;script src="js/tipuesearch_set.js"&gt;&lt;/script&gt;
+  &lt;script src="js/tipuesearch.min.js"&gt;&lt;/script&gt;
+  &lt;script src="js/scripts.js"&gt;&lt;/script&gt;
 
-</body>
-</html>
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 
 The key parts of the file:
@@ -174,47 +174,47 @@ The key parts of the file:
 __search.html__
 <pre><code class="language-markup">
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-<head>
-  <meta charset="UTF-8">
-  <title>Search Results</title>
-  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-  <link href="css/tipuesearch.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
-  <script src="js/detect.js"></script>
-</head>
-<body>
-  <div id="container" class="containerClass">
-  <h1>Search Results</h1>
+&lt;html lang="en" class="no-js"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Search Results&lt;/title&gt;
+  &lt;link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet"&gt;
+  &lt;link href="css/tipuesearch.css" rel="stylesheet"&gt;
+  &lt;link href="css/styles.css" rel="stylesheet"&gt;
+  &lt;script src="js/detect.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id="container" class="containerClass"&gt;
+  &lt;h1&gt;Search Results&lt;/h1&gt;
 
-    <!-- Tipue Search box will go here -->
-    <div id="searchbox"> </div>
+    &lt;!-- Tipue Search box will go here --&gt;
+    &lt;div id="searchbox"&gt; &lt;/div&gt;
 
-    <!-- Google CSE search box starts here -->
-    <div id="no-js-searchbox">
-      <form action="http://google.com/search" method="get">
-        <fieldset role="search">
-          <!-- change the "value" attribute below to point to your site -->
-          <input type="hidden" name="q" value="site:yoursite.com"/>
-          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-        </fieldset>
-      </form>
-    </div>
-    <!-- Google CSE search box ends here -->
+    &lt;!-- Google CSE search box starts here --&gt;
+    &lt;div id="no-js-searchbox"&gt;
+      &lt;form action="http://google.com/search" method="get"&gt;
+        &lt;fieldset role="search"&gt;
+          &lt;!-- change the "value" attribute below to point to your site --&gt;
+          &lt;input type="hidden" name="q" value="site:yoursite.com"/&gt;
+          &lt;input class="search" type="text" name="q" results="0" placeholder="Search"/&gt;
+        &lt;/fieldset&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;!-- Google CSE search box ends here --&gt;
 
-  </div>
+  &lt;/div&gt;
 
-  <div id="tipue_search_content"></div>
+  &lt;div id="tipue_search_content"&gt;&lt;/div&gt;
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.2.min.js"><\/script>')</script>
-  <script src="js/tipuesearch_content.js"></script>
-  <script src="js/tipuesearch_set.js"></script>
-  <script src="js/tipuesearch.min.js"></script>
-  <script src="js/scripts.js"></script>
+  &lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"&gt;&lt;/script&gt;
+  &lt;script&gt;window.jQuery || document.write('&lt;script src="js/libs/jquery-1.10.2.min.js"&gt;&lt;\/script&gt;')&lt;/script&gt;
+  &lt;script src="js/tipuesearch_content.js"&gt;&lt;/script&gt;
+  &lt;script src="js/tipuesearch_set.js"&gt;&lt;/script&gt;
+  &lt;script src="js/tipuesearch.min.js"&gt;&lt;/script&gt;
+  &lt;script src="js/scripts.js"&gt;&lt;/script&gt;
 
-</body>
-</html>
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 
 Again, `search.html` is the page where Tipue returns the search results.  It's similar to `index.html` but has an extra tag: `<div id="tipue_search_content"></div>`. This is the page element where Tipue places the search results.
@@ -306,10 +306,10 @@ Let's now go to step two and build our Tipue search functionality.
 
 We now need to create the Tipue search box off-DOM with JavaScript, then load it onto the page. Specifically, we need to create a form on both pages that looks like this:
 <pre><code class="language-markup">
-<form action="search.html" role="search">
-  <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
-  <input type="submit" value="Search">
-</form>
+&lt;form action="search.html" role="search"&gt;
+  &lt;input type="text" name="q" id="tipue_search_input" placeholder="Search..."&gt;
+  &lt;input type="submit" value="Search"&gt;
+&lt;/form&gt;
 </code></pre>
 
 We'll add this code to our already-existing `js/scripts.js` file so it will now look like this:
@@ -610,7 +610,7 @@ While this code works, there are a few things to keep in mind:
 
 * Because of how we've structured it, this code will run every time a page loads so we need to check its performance. On the average, the off-DOM building and JS/CSS detection code takes 0.6-0.9 milliseconds to run. But this code is in the same file as the code that executes Tipue searches, so that number can jump to around 1.2 milliseconds to run when such a search is invoked...it didn't get any higher than that.  This isn't bad but it's something to keep in mind.
 
-* Hiding elements using `display:none` is generally frowned upon from an accessibility standpoint. [The Yahoo! dev team has been recommending another method since 2010](http://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html) and it's in wide use, but implementing it would mean that the Google search box would be picked up by a screen reader as well as the Tab key.  That means that two search boxes could have been picked up by the various accessibility methods and caused a major headache. For that reason, I stuck with `display:none`.
+* Hiding elements using `display:none` is generally frowned upon from an accessibility standpoint. But I stuck with it due to some other weird (minor) accessibility issues.
 
 <a name="conclusion"></a>
 ## Conclusion

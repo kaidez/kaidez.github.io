@@ -77,7 +77,7 @@ In the past, setting up this functionality usually meant placing all these files
 
 First, we  add the only `<script>` tag we need...it should go as close to the bottom of the page as possible:
 <pre><code class="language-markup">
-<script data-main="scripts/config" src="scripts/require.js"></script>
+&lt;script data-main="scripts/config" src="scripts/require.js"&lt;&lt;/script&lt;
 </code></pre>
 
 The info in the `data-main` attribute refers to a file called `config.js` which contains the configurations. The `.js` is purposely left off  because RequireJS *always* assume that the info referenced in this attribute is a JavaScript file.
@@ -200,7 +200,7 @@ The callback function contains our custom code, which does the following tasks:
 
 Our code is done. When our HTML page loads into a browser, `scripts/require.js` looks at the configurations in `scripts/config` and notices the `deps: ["search"]` setting, which refers to `scripts/search.js`.  It then sees that `search` needs four files to work properly, all of which are listed in the `paths` object.
 
-RequireJS loads these four files and `scripts/search.js` into the `<head>` tag, and in the proper order. If the `<script>` tag is placed as close to the bottom of the page as possible, all the files will usually load in a manner that doesn't slow down your site's/app's load time. The code in `scripts/search.js` executes after everything loads.
+RequireJS loads these four files and <code>scripts/search.js</code> into the <code><head></head></code> tag, and in the proper order. If the <code><script></code> tag is placed as close to the bottom of the page as possible, all the files will usually load in a manner that doesn't slow down your site's/app's load time. The code in `scripts/search.js` executes after everything loads.
 
 *(Side note: your project's RequireJS files can be concatenated and minified down to a single file, but discussing this is outside the scope of this post. The [RequireJS optimization docs](http://requirejs.org/docs/optimization.html "Learn about optimizing RequireJS") outline how to get this done. Plus, Cary Landholt has [a great YouTube screencast on RequireJS Optimization](http://www.youtube.com/watch?v=m6VNhqKDM4E, "Check out Cary Landholt's screencast on optimizing RequireJS").)*
 
@@ -236,13 +236,13 @@ As a result, if I installed a WordPress plugin requiring jQuery, WP would load i
 ## How To Use jQuery, RequireJS &amp; WordPress Together
 With the 3.5.2/ TwentyTwelve setup, the safest thing to do was to use `wp_enqueue_script` to bring jQuery into the HTML. The code for this would be placed in the just-mentioned `functions.php` file and would look like this:
 <pre><code class="language-markup">
-<?php
+&lt;?php
 function my_scripts_method() {
   wp_enqueue_script( 'jquery' );
 }
 
 add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
-?>
+?&gt;
 </code></pre>
 
 This loaded jQuery onto my page while preventing jQuery duplicates from loading, but I wasn't sure how to integrate this setup with my RequireJS functionality.

@@ -85,7 +85,7 @@ Instead, I designed this site within a browser using various desktop and remote 
 ### Mobile First
 "Mobile First" has gone from a buzz word to a *de facto* standard. It basically means "develop and position content for mobile devices before doing so for desktop devices"...this should always be applied to both content strategy and code.
 
-No issues with applying Mobile First to my content strategy. I did a complete content audit of my previous site based on [the ROT principle](http://blog.braintraffic.com/2011/08/content-strategy-can-save-us-all-from-slobdom/ "What is ROT when talking about content strategy"), then either eliminated lots of content I didn't need or moved it to the bottom of the page.
+No issues with applying Mobile First to my content strategy. I did a complete content audit of my previous site based on the ROT principle, then either eliminated lots of content I didn't need or moved it to the bottom of the page.
 
 Going Mobile First with the code was a bit of problem that still needs to be cleaned up a bit. This site is responsive via CSS3 media queries and I implemented [the method outlined by Jon Korpi](http://www.jonikorpi.com/leaving-old-IE-behind/), coding a vertically thin, non-responsive layout outside the media queries, with the help of [Sass](http://sass-lang.com/ "Learn about the Sass CSS preprocessor" ), of course.  All of this is for the benefit of oldIE.
 
@@ -231,15 +231,13 @@ Making a site accessible to people with disabilities is also a good SEO practice
 * started marking up the links with a `title` attribute for easy tab-throughs (this will be "in progress" for a quite while).
 * ran some pages through a screen-reader.
 * turned off all styles and read the unstyled page content out loud (which is basically what a screen-reader does).
-* made sure that any elements that needed to be hidden were done so properly as per [Yahoo's accessibility suggestions](http://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html "Accessibility suggestions from Yahoo"). There are a few spots that I didn't do this, but it's mostly done site-wide.
+* made sure that any elements that needed to be hidden were done so properly as per some old accessibility suggestions from Yahoo. There are a few spots that I didn't do this, but it's mostly done site-wide.
 
 If you don't think making your site accessible to people with disabilities is worth your time, you're dead wrong. Accessibility is important...especially on mobile. Austin Seraphin [eloquently explains why](http://behindthecurtain.us/2010/06/12/my-first-week-with-the-iphone/ "Austin Seraphin article on iPhone providing great accessibility functions for the disabled").
 
 If you still need convincing after reading that, refer to what [Jen Kramer](http://www.jenkramer.org/ "Go to technology instructor Jen Kramer's site") says:
 
 > *"Websites that are built to be accessible will also be accessible your number one blind user: Google."*
-
-All this being said, spending some time on [the Yahoo! Accessibility blog](http://yaccessibilityblog.com/library/ "Go to Yahoo!'s Accessibility blog") is time well spent.
 
 <a name="web-hosting"></a>
 ### Web Hosting

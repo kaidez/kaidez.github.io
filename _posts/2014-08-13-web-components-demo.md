@@ -36,7 +36,7 @@ The four sub-concepts that make up Web Components are:
 
  *(all the above "Read more &raquo;" links courtesy of [HTML5 Rocks](http://www.html5rocks.com/ "Go to HTML5 Rocks")):*
 
-While things like &lt;github-card> utilize all the sub-concepts, each one can function on its own quite nicely. But when they all work together, they form Web Components...conceptually, it's best to think of WC in the same way as AJAX, where a group of technologies work together to perform a single task.
+While things like <code>&lt;github-card&gt;</code> utilize all the sub-concepts, each one can function on its own quite nicely. But when they all work together, they form Web Components...conceptually, it's best to think of WC in the same way as AJAX, where a group of technologies work together to perform a single task.
 
 *(Side note: there's another sub-concept called "decorators" but lots of developers don't like it, so there's not a lot of focus in terms of finalizing its specification. It may disappear.)*
 
@@ -48,23 +48,23 @@ For the templates, I wanted to display a simple list of books based on a small J
 __index.html__
 <pre><code class="language-markup">
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>JavaScript Books</title>
-  <link rel="stylesheet" href="css/normalize.min.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <div id="container">
-    <header>
-      <h1 class="page-header">JavaScript Books</h1>
-      <h2>Built with templates & Shadow DOM</h1>
-    </header>
-    <template id="singleBook">
-      <style>
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;title&gt;JavaScript Books&lt;/title&gt;
+  &lt;link rel="stylesheet" href="css/normalize.min.css"&gt;
+  &lt;link rel="stylesheet" href="css/bootstrap.min.css"&gt;
+  &lt;link rel="stylesheet" href="css/styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id="container"&gt;
+    &lt;header&gt;
+      &lt;h1 class="page-header"&gt;JavaScript Books&lt;/h1&gt;
+      &lt;h2&gt;Built with templates & Shadow DOM&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;template id="singleBook"&gt;
+      &lt;style&gt;
         .templateArticle {
           display: inline-block;
           margin: 6px;
@@ -82,24 +82,24 @@ __index.html__
         #bookTitle {
           font-style: italic;
         }
-      </style>
-      <article class="templateArticle panel panel-default">
-        <header class="panel-heading">
-          <h2 class="panel-title bookTitleClass">
-            <span id="bookTitle"></span>
-            <br />
-            by <span id="bookAuthor"></span>
-          </h2>
-        </header>
-        <img src="" alt="" class="thumbnail">
-        <a href="" id="btnPurchase" class="btn btn-primary" role="button" target="blank">Buy at Amazon</a>
-      </article>
-    </template>
-    <section id="allBooks" class="allBooksClass"></section>
-    <script src="scripts/main.js"></script>
-  </div>
-</body>
-</html>
+      &lt;/style&gt;
+      &lt;article class="templateArticle panel panel-default"&gt;
+        &lt;header class="panel-heading"&gt;
+          &lt;h2 class="panel-title bookTitleClass"&gt;
+            &lt;span id="bookTitle"&gt;&lt;/span&gt;
+            &lt;br /&gt;
+            by &lt;span id="bookAuthor"&gt;&lt;/span&gt;
+          &lt;/h2&gt;
+        &lt;/header&gt;
+        &lt;img src="" alt="" class="thumbnail"&gt;
+        &lt;a href="" id="btnPurchase" class="btn btn-primary" role="button" target="blank"&gt;Buy at Amazon&lt;/a&gt;
+      &lt;/article&gt;
+    &lt;/template&gt;
+    &lt;section id="allBooks" class="allBooksClass"&gt;&lt;/section&gt;
+    &lt;script src="scripts/main.js"&gt;&lt;/script&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 
 __css/styles.css__
@@ -354,7 +354,7 @@ Most profoundly, Microsoft has made no firm decision on what Web Component featu
 
 Pointing out the IE issues makes a nice segue to polyfills...take note that Polymer is the most popular Web Component polyfill for now, but only supports IE 10 and up.  Read more on [Polymer's Browser Compatibility page](http://www.polymer-project.org/resources/compatibility.html "Read about browser compatibility for Polymer").
 
-X-Tag isn't as feature-rich as Polymer but supports a wider array of browsers, including IE 9 and up. Read more on [X-Tag's Docs page](http://x-tags.org/docs "Read about browser compatibility for X-Tags").
+X-Tag isn't as feature-rich as Polymer but supports a wider array of browsers, including IE 9 and up. Read more on [X-Tag's Docs page](http://x-tag.github.io/docs "Read about browser compatibility for X-Tags").
 
 ### Conclusion
 Using something like Polymer or X-Tag is what's needed to use Web Components in production-level code right now, but these libraries work ON TOP of Web Components. So it's best to learn the underlying code first.

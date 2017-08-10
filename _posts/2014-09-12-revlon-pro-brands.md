@@ -16,7 +16,7 @@ There wasn't a need for lots complicated client-side code, but working on this p
 
 <h2 class="tableOfContentsHeader">Table of Contents</h2>
 1. [GitHub Atom](#atom)
-2. [Jade](#jade)
+2. [Jade (now Pug)](#jade)
 3. [OOCSS](#oocss)
 4. [Modernizr &amp; yepnope](#modernizr-yepnope)
 5. [Grunt &amp; Gulp](#grunt-gulp)
@@ -62,12 +62,12 @@ I'm not yet ready to leave Sublime Text for Atom...I've gotten extremely comfort
 
 But this may change.  Will probably go full-on Atom for next project and put to the test.
 <a name="jade"></a>
-### Jade
+### Jade (now Pug)
 RevlonProBrands.com is a *responsive/adaptive/insert-another-buzzword-here* website, but Sitecore is using server-side code to load in two versions of the page: one for desktops and another for everything else. So it made sense to use some sort of development-level templating system that would apply the common parts to each page.
 
-I chose [Jade](http://jade-lang.com/ "visit the Jade templating") for this, a very simple templating engine that compile pages into HTML. In terms of what code you have to write to get things done, Jade is similar to things like [LESS](http://lesscss.org/ "visit LESS, a JavaScript-based CSS processor") and [Haml](http://haml.info/ "visit Haml, an HTML abstraction markup language") in the sense that indentation defines block structure.
+I chose [Jade (now called Pug)](https://pugjs.org/ "visit the Pug templating") for this, a very simple templating engine that compile pages into HTML. In terms of what code you have to write to get things done, Jade is similar to things like [LESS](http://lesscss.org/ "visit LESS, a JavaScript-based CSS processor") and [Haml](http://haml.info/ "visit Haml, an HTML abstraction markup language") in the sense that indentation defines block structure.
 
-So you [use npm to install Jade](https://www.npmjs.org/package/jade "install Jade with npm") on your machine. Then create `.jade` files like this...
+So you [use npm to install Pug](https://github.com/pugjs/pug "install Pug with npm") on your machine. Then create `.jade` files like this...
 
 <pre><code class="language-markup">
 doctype html
@@ -82,22 +82,22 @@ And with a few keystrokes, this file will output an `.html` file like this
 
 <pre><code class="language-markup">
 <!doctype html>
-<html>
-  <head>
-    <title>kaidez.com</title>
-  </head>
-  <body>
-    <h1>My Page Header</h1>
-    <p>My Content</p>
-  </body>
-</html>
+&lt;html&lt;
+  &lt;head&lt;
+    &lt;title&lt;kaidez.com&lt;/title&lt;
+  &lt;/head&lt;
+  &lt;body&lt;
+    &lt;h1&lt;My Page Header&lt;/h1&lt;
+    &lt;p&lt;My Content&lt;/p&lt;
+  &lt;/body&lt;
+&lt;/html&lt;
 </code></pre>
 
-I went with Jade because I've been playing with the [MEAN stack](http://mean.io/ "review the MEAN stack") lately and [Express](http://expressjs.com/ "visit Express, the Node-based web server framework") (the "E" in MEAN) likes to use Jade. So I figured it made sense for me to figure out.
+I went with Pug because I've been playing with the [MEAN stack](http://mean.io/ "review the MEAN stack") lately and [Express](http://expressjs.com/ "visit Express, the Node-based web server framework") (the "E" in MEAN) likes to use Jade. So I figured it made sense for me to figure out.
 
-Jade has "includes" functionality similar to PHP includes and .NET user controls. In other words, small parts of page code can be broken out into their own files and then embedded into other pages for output.
+Pug has "includes" functionality similar to PHP includes and .NET user controls. In other words, small parts of page code can be broken out into their own files and then embedded into other pages for output.
 
-So in other words, these two `.jade` files...
+So in other words, these two `.pug` files...
 
 <pre><code class="language-markup">
 //index.jade
@@ -118,16 +118,16 @@ head
 ...*SHOULD* output a single `.html` file like this...
 
 <pre><code class="language-markup">
-<!doctype html>
-<html>
-  <head>
-    <title>kaidez.com</title>
-  </head>
-  <body>
-    <h1>My Page Header</h1>
-    <p>My Content</p>
-  </body>
-</html>
+&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;kaidez.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;My Page Header&lt;/h1&gt;
+    &lt;p&gt;My Content&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 
 The indentation didn't QUITE work out the way I wanted to when I used a `<header>` tag...not sure why that was after a doing a web search for an answer. I think I can figure out why this is later on down the line, or maybe just asking for an answer on Stack Overflow will work as well.
@@ -183,7 +183,7 @@ __forEachTest.js__
  * Make Modernizr test for "Array.prototype.forEach" so it can work
  * cross-browser when building out the single product modules. When
  * the test passes, "Modernizr.foreach" is attached to the list of
- * Modernizr classes in the <html> tag.
+ * Modernizr classes in the &lt;html&gt; tag.
  */
 Modernizr.addTest("foreach", function(){
   var forEachFunc = Array.prototype.forEach;
@@ -236,27 +236,27 @@ var products = new ScrollContent();
 
 And the HTML code for each scroll looks somewhat like this...
 <pre><code class="language-markup">
-<div id="productOneId">
-  <div id="productOneContent">...</div>
-</div>
-<div id="productTwoId">
-  <div id="productTwoContent">...</div>
-</div>
-<div id="productThreeId">
-  <div id="productThreeContent">...</div>
-</div>
-<div id="productFourId">
-  <div id="productFourContent">...</div>
-</div>
-<div id="productFiveId">
-  <div id="productFiveContent">...</div>
-</div>
-<div id="productSixId">
-  <div id="productSixContent">...</div>
-</div>
-<div id="productSevenId">
-  <div id="productSevenContent">...</div>
-</div>
+&lt;div id="productOneId"&gt;
+  &lt;div id="productOneContent"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="productTwoId"&gt;
+  &lt;div id="productTwoContent"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="productThreeId"&gt;
+  &lt;div id="productThreeContent"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="productFourId"&gt;
+  &lt;div id="productFourContent"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="productFiveId"&gt;
+  &lt;div id="productFiveContent"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="productSixId"&gt;
+  &lt;div id="productSixContent"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="productSevenId"&gt;
+  &lt;div id="productSevenContent"&gt;...&lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
 
 The divs that end in "Id" are buttons that run one of the mouse events while the divs that end in "Content" contain the  product images that appear on the mouse events.
