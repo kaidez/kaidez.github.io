@@ -23,7 +23,7 @@ Times have changed: Flash doesn't work on mobile, is not SEO-friendly, is not ea
 6. [Conclusion](#conclusion)
 
 <a name="client-requirements"></a>
-###Client Requirements
+### Client Requirements
 
 The client requirements were very straightforward:
 
@@ -38,14 +38,14 @@ The client requirements were very straightforward:
 * make as SEO-friendly as possible.
 
 <a name="modern-design"></a>
-###A Modern Design
+### A Modern Design
 
 My friend requested a clean, minimalist design...which is actually hard to do. This is because minimalist/flat/Swiss/whatever designs require doing more with less.
 
 You have to use whitespace, fonts and color in ways that conveys an inviting design. This takes time: it actually took about three weeks of image mock-up iterations before all parties were in agreement with the final look-and-feel.
 
 <a name="wordpress-bootstrap"></a>
-###Using WordPress &amp; Bootstrap
+### Using WordPress &amp; Bootstrap
 
 My friend wanted to use WordPress to both contain the design and that was no-brainer. Other content management systems like Joomla and Drupal have their strengths, but WordPress made more sense for this project due to its ease of use and wider swath of community plugin support.
 
@@ -60,7 +60,7 @@ Speaking of stylesheets, I used the core CSS file that comes with [Twitter Boots
 *(Side note: this project needed to be scaffolded with Bootstrap and a few other WordPress-centric files. I did this using my custom "kdz" tool...[see it on GitHub](https://github.com/kaidez/kdz "See custom kdz scaffolding tool on GitHub") and [read my blog post on this](/kdz-build-tool/ "Read about kaidez's custom scaffolding tool, kdz")).*
 
 <a name="local-seo"></a>
-###Local SEO
+### Local SEO
 
 Managing search engine optimization is pretty easy with WordPress. It's SEO-ready out of the box and if you then install [Yoast's WordPress SEO plugin](https://wordpress.org/plugins/wordpress-seo/ "Read more about Yoast's WordPress SEO plugin"), configuring SEO on your WordPress site is a straightforward process.
 
@@ -79,13 +79,13 @@ But I will say this...
 * offline SEO is just as important as online SEO.
 
 <a name="personal"></a>
-###On a personal note...
+### On a personal note...
 
 Personally, it was really good to get back into WordPress development. [Jekyll](http://jekyllrb.com/ "Read more about the Jekyll static site generator") was used to create the version of this site current to this post's publish date, and it has benefits. But there are things that are just too easy to do with WordPress.
 
 As a result of this, I will probably redesign this site using WordPress in the (hopefully) not-too-distant future. I'll go into more detail on what's easier when that redesign happens.
 
 <a name="conclusion"></a>
-###Conclusion
+### Conclusion
 
 There are a few post-launch tasks that need to be performed, but none of them are show-stoppers for not delivering a site that the client wanted. Everyone was happy when the site was launched so I really can't ask for anything more.

@@ -42,7 +42,7 @@ A few notes first...
 
 I had a project at work where I had to create a single page website using a standard HTML5/CSS/JavaScript web stack. The project tooling was set up like this in my dev environment:
 
-* [Jade](http://jade-lang.com/ "Review the Jade HTML template engine") was used for HTML5 pre-processing.
+* [Jade](https://pugjs.org/ "Review the Jade HTML template engine") was used for HTML5 pre-processing.
 * [LESS](http://lesscss.org/ "Review the LESS pre-processor") was used for CSS pre-processing.
 * [CoffeeScript](http://coffeescript.org/ "Review the CoffeeScript JS pre-processor") was used for JavaScript pre-processing.
 * I used the core CSS file that comes with [Twitter Bootstrap](http://getbootstrap.com/ "Review Twitter Bootstrap") because it I'm very productive when using it to build a responsive web design.

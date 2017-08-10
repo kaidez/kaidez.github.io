@@ -64,38 +64,38 @@ a:hover {
 The `index.html` file looks like this...
 <pre><code class="language-markup">
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Filter Content On A Click With jQuery</title>
-    <link rel="stylesheet" href="styles.css" media="all" />
-  </head>
-  <body>
-    <h1>Filter by team</h1>
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Filter Content On A Click With jQuery&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css" media="all" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Filter by team&lt;/h1&gt;
 
-    <!-- The Teams -->
-    <a href="#" class="btn-player" data-team="chelsea">Chelsea</a>
-    <a href="#" class="btn-player" data-team="psg">Paris St-Germain</a>
-    <a href="#" class="btn-player" data-team="real-madrid">Real Madrid</a>
-    <a href="#" class="btn-player" data-team="barcelona">Barcelona</a>
-    <a href="#" id="btn-show-all">SHOW ALL PLAYERS</a>
+    &lt;!-- The Teams --&gt;
+    &lt;a href="#" class="btn-player" data-team="chelsea"&gt;Chelsea&lt;/a&gt;
+    &lt;a href="#" class="btn-player" data-team="psg"&gt;Paris St-Germain&lt;/a&gt;
+    &lt;a href="#" class="btn-player" data-team="real-madrid"&gt;Real Madrid&lt;/a&gt;
+    &lt;a href="#" class="btn-player" data-team="barcelona"&gt;Barcelona&lt;/a&gt;
+    &lt;a href="#" id="btn-show-all"&gt;SHOW ALL PLAYERS&lt;/a&gt;
 
-    <!-- The Players -->
-    <div class="player" data-players-team="chelsea">Cesc Fabregas</div>
-    <div class="player" data-players-team="psg">Zlatan Ibrahimović</div>
-    <div class="player" data-players-team="real-madrid">Cristiano Ronaldo</div>
-    <div class="player" data-players-team="chelsea">Didier Drogba</div>
-    <div class="player" data-players-team="chelsea">John Terry</div>
-    <div class="player" data-players-team="barcelona">Lionel Messi</div>
-    <div class="player" data-players-team="real-madrid">Sergio Ramos</div>
-    <div class="player" data-players-team="chelsea">Thibault Courtois</div>
-    <div class="player" data-players-team="psg">Thiago Motta</div>
+    &lt;!-- The Players --&gt;
+    &lt;div class="player" data-players-team="chelsea"&gt;Cesc Fabregas&lt;/div&gt;
+    &lt;div class="player" data-players-team="psg"&gt;Zlatan Ibrahimović&lt;/div&gt;
+    &lt;div class="player" data-players-team="real-madrid"&gt;Cristiano Ronaldo&lt;/div&gt;
+    &lt;div class="player" data-players-team="chelsea"&gt;Didier Drogba&lt;/div&gt;
+    &lt;div class="player" data-players-team="chelsea"&gt;John Terry&lt;/div&gt;
+    &lt;div class="player" data-players-team="barcelona"&gt;Lionel Messi&lt;/div&gt;
+    &lt;div class="player" data-players-team="real-madrid"&gt;Sergio Ramos&lt;/div&gt;
+    &lt;div class="player" data-players-team="chelsea"&gt;Thibault Courtois&lt;/div&gt;
+    &lt;div class="player" data-players-team="psg"&gt;Thiago Motta&lt;/div&gt;
 
-    <!-- Note that we're using the oldIE-friendly version of jQuery -->
-    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-    <script src="main.js"></script>
-  </body>
-</html>
+    &lt;!-- Note that we're using the oldIE-friendly version of jQuery --&gt;
+    &lt;script src="http://code.jquery.com/jquery-1.11.1.js"&gt;&lt;/script&gt;
+    &lt;script src="main.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 <a name="2-html-sections"></a>
 ### The 2 sections of the HTML
