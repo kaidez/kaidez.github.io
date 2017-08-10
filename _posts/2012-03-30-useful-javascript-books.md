@@ -23,14 +23,11 @@ I have a [lynda.com][1] account so lately, I’ve used that as learning resource
 
 Some books are better than others. I’ve read *a lot* of JavaScript books in the year before this article’s publish date. So as far as *those* books go, I’ve created a list of JS books which, I think, helps with the filtering process and lists only the best ones…so far. Here they are:
 
-## [1. *JavaScript: Visual QuickStart Guide (8th Edition)* by Dori Smith & Tom Negrino][2]![][3]
+## [1. *JavaScript: Visual QuickStart Guide (8th Edition)* by Dori Smith & Tom Negrino][2]
 
  [2]: http://www.amazon.com/gp/product/0321772970/ref=as_li_qf_sp_asin_tl?ie=UTF8&tag=kaidez-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0321772970
- [3]: http://www.assoc-amazon.com/e/ir?t=kaidez-20&l=as2&o=1&a=0321772970
 
-[![][5]][5]![][3]The best book for the JavaScript newbie. Every new edition migrates with the JavaScript trends: from image rollovers and cookie baking to DOM scripting to AJAX to object literals. The 8th addition keeps the tradition.
-
- []: http://www.amazon.com/gp/product/0321772970/ref=as_li_qf_sp_asin_il?ie=UTF8&tag=kaidez-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0321772970
+The best book for the JavaScript newbie. Every new edition migrates with the JavaScript trends: from image rollovers and cookie baking to DOM scripting to AJAX to object literals. The 8th addition keeps the tradition.
 
 While the book does cover the trends, it also provides detailed step-by-step instructions on things that the JavaScript beginner needs to know: what a variable is, how to create an array, why are external JS files the right way to go, and so on. And it moves on from the basics to tutorials on more advanced topics such as reading data from a web server with AJAX and a few jQuery techniques. It ends with a great list of other learning resources in its “Where to Learn More” appendix.
 
@@ -42,9 +39,9 @@ A beginner’s JS book doesn’t need to cover every single thing about objects,
 
 Regardless of its limited coverage of JavaScript’s OOP possibilities, *Visual QuickStart Guide* is still the first book I recommend to someone who wants to learn JavaScript, but knows absolutely nothing about it.
 
-## [2. *Object-Oriented JavaScript* by Stoyan Stefanov][5]![][6]
+## [2. *Object-Oriented JavaScript* by Stoyan Stefanov][6]
 
-<img src="http://ecx.images-amazon.com/images/I/41BIxA3nsNL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg" alt="Object-Oriented JavaScript by Stoyan Stefanov" class="post-pic ">I’ll get straight to the point: this is an *excellent* book!
+[6]: https://www.amazon.com/Object-Oriented-JavaScript-2nd-Stoyan-Stefanov/dp/1849693129/ref=sr_1_2?s=books&ie=UTF8&qid=1502327185&sr=1-2&keywords=object+oriented+programming++stoyanI’ll get straight to the point: this is an *excellent* book!
 
 Embellishing a bit more, Yahoo developer Stefanov does an awesome job of teaching the reader how to treat JavaScript as a full-on object-oriented language. He also does an awesome job of explaining the “hows” and “whys” job of the code exercises.
 
@@ -60,27 +57,21 @@ Also, [Stefanov is working on the 2nd Edition of this book.][9] He’ll be tackl
 
 Despite the spelling errors and imminent updated version, any beginning developer with a little-better-than basic understanding of JS *has* to read the first edition of *Object-Oriented JavaScript*. That’s it…no more, no less.
 
-## [3. *JavaScript Patterns* by Stoyan Stefanov][10]![][11]
+## [3. *JavaScript Patterns* by Stoyan Stefanov][10]
 
  [10]: http://www.amazon.com/gp/product/0596806752/ref=as_li_tf_tl?ie=UTF8&tag=kaidez-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596806752
- [11]: http://www.assoc-amazon.com/e/ir?t=kaidez-20&l=as2&o=1&a=0596806752
 
-[![][13]][13]![][11]Another Stoyan Stefanov book, this one explains some excellent best practices such as the right way to structure for loops, when to use `hasOwnProperty`, and yes, proper JavaScript patterns. Stefanov did apply a few of these best practices in his *OOJ* coding samples but in *Patterns*, he explains the meaning behind them.
-
- []: http://www.amazon.com/gp/product/0596806752/ref=as_li_tf_il?ie=UTF8&tag=kaidez-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596806752
+Another Stoyan Stefanov book, this one explains some excellent best practices such as the right way to structure for loops, when to use `hasOwnProperty`, and yes, proper JavaScript patterns. Stefanov did apply a few of these best practices in his *OOJ* coding samples but in *Patterns*, he explains the meaning behind them.
 
 This book also drives home the importance of keeping the global space as clean as possible. Stefanov’s tips on namespacing patterns, inheritance and encapsulation are must-learns.
 
 This is not a book for beginners and the author says so in the Preface. Except for the first two chapters, reading this book without frustration requires an intermediate understanding of JavaScript, particularly objects.
 
-## [4. *JavaScript: The Good Parts* by Douglas Crockford][13]![][14]
+## [4. *JavaScript: The Good Parts* by Douglas Crockford][13]
 
  [13]: http://www.amazon.com/gp/product/0596517742/ref=as_li_tf_tl?ie=UTF8&tag=kaidez-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596517742
- [14]: http://www.assoc-amazon.com/e/ir?t=kaidez-20&l=as2&o=1&a=0596517742
 
-[![][16]][16]![][14]This article is slightly implying that *Object-Oriented JavaScript* is the best JavaScript book, which is subjective to other’s opinions. But no one can deny that *JavaScript: The Good Parts* is the most important book.
-
- []: http://www.amazon.com/gp/product/0596517742/ref=as_li_qf_sp_asin_il?ie=UTF8&tag=kaidez-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596517742
+This article is slightly implying that *Object-Oriented JavaScript* is the best JavaScript book, which is subjective to other’s opinions. But no one can deny that *JavaScript: The Good Parts* is the most important book.
 
 Written by Douglas Crockford, the creator of JSON who also works at Yahoo, this book has had tremendous influence on the JavaScript community since it’s 2008 publication. Dig thru the core files of jQuery and Modernizr and you’ll see that they’re chocked full of best practices mentioned in the *The Good Parts* or, as many refer to it, “the Crockford Book.”
 
@@ -88,14 +79,11 @@ Many, many things that you first learn in JavaScript will need to be unlearned a
 
 As with *JavaScript Patterns*, the Crockford book is not for beginners…REALLY not for beginners. Those that can’t do anything dynamic with JS outside of making a few alerts will find this book a tough read.
 
-## [5. *Pro JavaScript Techniques* by John Resig][16]![][17]
+## [5. *Pro JavaScript Techniques* by John Resig][16]
 
  [16]: http://www.amazon.com/gp/product/1590597273/ref=as_li_tf_tl?ie=UTF8&tag=kaidez-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1590597273
- [17]: http://www.assoc-amazon.com/e/ir?t=kaidez-20&l=as2&o=1&a=1590597273
 
 I’ll be completely upfront here: I’ve read most of this book, but not all of it. Plus, I haven’t implemented a lot of the new stuff I learned from it.
-
- []: http://www.amazon.com/gp/product/1590597273/ref=as_li_tf_il?ie=UTF8&tag=kaidez-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1590597273
 
 But this first book by jQuery creator John Resig stands out because it takes key JavaScript concepts, like AJAX and DOM manipulation, and expands on them with step-by-step exercises. It also covers JavaScript testing which is Resig’s most underrated skill.
 
