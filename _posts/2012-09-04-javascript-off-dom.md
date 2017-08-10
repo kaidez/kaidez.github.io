@@ -35,10 +35,6 @@ While certain aspects of this tutorial are for the beginner, I am assuming that 
  [2]: https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Statements/var
  [3]: https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array
 
-I used a slide deck in this screencast, which has a boatload of useful links at the end…view it [here][4].
-
- [4]: http://slides.kaidez.com/work-off-dom/
-
 And, of course, the tutorial’s final code on GitHub is [here][5].
 
  [5]: https://github.com/kaidez/work-off-dom-tutorial

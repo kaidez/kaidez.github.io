@@ -24,34 +24,35 @@ Let's get started on all this guru stuff by walk through the proper methods for 
 4. [How to delete folders](#delete-folders "How to delete folders in Git")
 5. [A simple explanation of how Git & GitHub work](#simple-git-explanation "A simple explanation of how Git & GitHub work")
 6. [Further Git &amp; GitHub Reading](#further-git-github-reading "Further Git and GitHub Reading")
-7. [Conslusion](#conclusion "Conslusion")
+7. [Conclusion](#conclusion "Conclusion")
 
 <a name="files-already-deleted"></a>
 ## If you deleted an already-committed file outside of the command line
 A file that's already been committed to Git can only be deleted from a repo via the command line. Trying to delete repo files by dragging them to the Trash/Recycle Bin (or something similar) is one of the most common Git newbie mistakes.
 
 If you moved a committed file named `oldFileAlreadyDeleted.html` to the Trash, your terminal would return this message when you type `git status`:
-<pre><code class="language-markup">
+
+<pre><code class="language-git">
 # Changes not staged for commit:
-#   (use "git add/rm <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
+#   (use "git add/rm &lt;file&gt;..." to update what will be committed)
+#   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
 #
 #   deleted:    oldFileAlreadyDeleted.html
 </code></pre>
 
 You now have to delete it with Git via the command line like this:
 
-<pre><code class="language-markup">
+<pre><code class="language-git">
 $ git rm oldFileAlreadyDeleted.html
 </code></pre>
 
 Then commit the delete with a proper `git commit` message:
-<pre><code class="language-markup">
+<pre><code class="language-git">
 $ git commit -m 'remove oldFileAlreadyDeleted.html'
 </code></pre>
 
 If `oldFileAlreadyDeleted.html` is viewable on GitHub, doing a subsequent `git push` will remove it:
-<pre><code class="language-markup">
+<pre><code class="language-git">
 $ git push all
 </code></pre>
 
@@ -59,34 +60,34 @@ $ git push all
 ## How you should *always* delete files from Git
 Moving forward, any already-committed files  you want to remove from Git and GitHub should be done so using the above command sequence.  For example, if you want to delete a file called `someCommitedFile.html`, you would do so like this:
 
-<pre><code class="language-markup">
+<pre><code class="language-git">
 $ git rm someCommittedFile.html
 </code></pre>
 
 Then write a `git commit` message:
 
-<pre><code class="language-markup">
+<pre><code class="language-git">
 $ git commit -m 'remove someCommittedFile.html'
 </code></pre>
 
 And if `someCommittedFile.html` is viewable on GitHub, doing a `git push` will remove it:
-<pre><code class="language-markup">
+<pre><code class="language-git">
 $ git push all
 </code></pre>
 
 <a name="delete-uncommitted-files"></a>
 ## How to delete files that are NOT checked into Git
 Say you want to delete `oldFile.html` and you get this message when you typed `git status`:
-<pre><code class="language-markup">
+<pre><code class="language-git">
 # Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
+#   (use "git add &lt;file&gt;..." to include in what will be committed)
 #
 #   oldFile.html
 </code></pre>
 
 This means that `oldFile.html` hasn't been checked into Git yet, so just use `rm` to delete it and you're done:
 
-<pre><code class="language-markup">
+<pre><code class="language-git">
 $ rm oldFile.html
 </code></pre>
 
@@ -95,29 +96,29 @@ $ rm oldFile.html
 __Scenario 1:__ An empty folder (let's call it `someFolder`) cannot be tracked by Git, so it can't be checked into Git as well. It also can't be pushed up to GitHub.
 
 __Scenario 2:__ Git can track the folder once it has content. But if `someFolder` hasn't been committed to the repo yet, you get this message after typing `git status`:
-<pre><code class="language-markup">
+<pre><code class="language-git">
 # Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
+#   (use "git add &lt;file&gt;..." to include in what will be committed)
 #
 #   someFolder/
 </code></pre>
 
 In either of these two scenarios, `someFolder` can be deleted using the generic `rm` command though, which looks like this:
-<pre><code class="language-markup">
+<pre><code class="language-git">
 $ rm -rf someFolder
 </code></pre>
 
 After a folder has been committed to your repo, *that's* when you can use Git to delete it, and at any time. You use the same remove/commit/push sequence previously discussed:
 
-<pre><code class="language-markup">
+<pre><code class="language-git">
 $ git rm someFolder
 </code></pre>
 
-<pre><code class="language-markup">
+<pre><code class="language-git">
 $ git commit -m 'remove someFolder'
 </code></pre>
 
-<pre><code class="language-markup">
+<pre><code class="language-git">
 $ git push
 </code></pre>
 
@@ -134,15 +135,15 @@ If your only Git education up to this point is doing what GitHub tells you to do
 
 So to recap the previously-discussed command sequence, if you have a file called "myFile.html" that you've just created or changed and you want to upload it to GitHub, you would type these three commands in the following order:
 
-<pre><code class="language-markup">
+<pre><code class="language-git">
 $ git add 'myFile.html'
 </code></pre>
 
-<pre><code class="language-markup">
+<pre><code class="language-git">
 $ git commit -m 'add myFile.html'
 </code></pre>
 
-<pre><code class="language-markup">
+<pre><code class="language-git">
 $ git push
 </code></pre>
 
@@ -150,13 +151,13 @@ The sequence for *deleting* files is the same, except for one change: you replac
 
 So if you wanted to remove "myFile.html" from your repo, your typed-in command sequence would look something like this:
 
-<pre><code class="language-markup">
+<pre><code class="language-git">
 $ git rm 'myFile.html'
 </code></pre>
-<pre><code class="language-markup">
+<pre><code class="language-git">
 $ git commit -m 'remove myFile.html'
 </code></pre>
-<pre><code class="language-markup">
+<pre><code class="language-git">
 $ git push
 </code></pre>
 
@@ -194,7 +195,7 @@ If you want to Git works under the hood, check out this excellent post. Nick Far
 ### ["What is Version Control: Centralized vs. DVCS" by Giancarlo Lionetti »](https://blogs.atlassian.com/2012/02/version-control-centralized-dvcs/ "Learn about centralized and distributed version control systems")
 I *really* want you to understand that Git is a distributed version control system as well as understand what that means. It's the part that makes sharing code via GitHub a snap and, let's be honest, a major reason behind their success. Lionetti provides the most in-depth, easy-to-understand article on the subject that I could find.
 
-### [*Pro Git* by Scott Chacon »](http://git-scm.com/book, "Read the free Pro Git Book")
+### [*Pro Git* by Scott Chacon »](http://git-scm.com/book "Read the free Pro Git Book")
 *The* Git Book, and it's free! It's a little dense and doesn't flow as easily as these other resources…I'll admit that I haven't read all of it. But I have read enough of it to know that it's an important Git resource.
 
 <a name="conclusion"></a>
