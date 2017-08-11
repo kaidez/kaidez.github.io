@@ -24,7 +24,8 @@ github_username:  kaidez
 
 # Build settings
 markdown: kramdown
-theme: minima
+# theme: minima
+theme: kaidez
 plugins:
   - jekyll-feed
 
