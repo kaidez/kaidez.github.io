@@ -15,7 +15,6 @@
 }
 
 .nav {
-  float: right;
   line-height: $base-line-height * $base-font-size * 2.25;
 
   font-family: 'Poiret One', cursive;
@@ -98,6 +97,10 @@
   }
 }
 
+.trigger {
+  margin:  0 auto;
+  text-align: center;
+}
 
 
 /**
