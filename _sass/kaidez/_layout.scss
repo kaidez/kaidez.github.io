@@ -8,15 +8,10 @@
   position: relative;
 }
 
-.site-title {
+.logo {
   margin: 0 auto;
   float: left;
-  background: url(/img/kaidez-logo.svg);
-
-  &,
-  &:visited {
-    color: $grey-color-dark;
-  }
+  display: block;
 }
 
 .site-nav {
