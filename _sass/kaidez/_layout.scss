@@ -71,6 +71,11 @@
       }
     }
 
+    .trigger {
+      margin: 0 auto;
+      text-align: center;
+    }
+
     input ~ .trigger {
       clear: both;
       display: none;
