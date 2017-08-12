@@ -14,7 +14,7 @@
   display: block;
 }
 
-.site-nav {
+.nav {
   float: right;
   line-height: $base-line-height * $base-font-size * 2.25;
 
@@ -168,7 +168,7 @@
 /**
  * Page content
  */
-.page-content {
+.content {
   padding: $spacing-unit 0;
 }
 
@@ -191,7 +191,6 @@
 }
 
 .post-link {
-  display: block;
   @include relative-font-size(1.5);
 }
 
