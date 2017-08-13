@@ -22,12 +22,18 @@
   }
 
   &__nav {
-    &--page-link {
+    &--page-link,
+    &--page-link:visited {
       margin: 0 14px;
-      color: #fff;
+      color: #b149dc;
 
       font-family: 'Poiret One', cursive;
       font-weight: 900;
+    }
+    &--page-link:hover {
+      margin: 0 14px;
+      color: #b149dc;
+      text-decoration: underline;
     }
   }
 
