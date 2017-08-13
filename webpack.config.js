@@ -15,7 +15,7 @@ module.exports = {
       }
     ],
   },
-  entry: './js-build/helpers.js',
+  entry: './js-build/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'js')
