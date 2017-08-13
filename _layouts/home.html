@@ -19,7 +19,7 @@ layout: default
 
   <ul class="post-list">
     {% for post in site.posts offset:1 limit:9%}
-      <li>
+      <li class="post-link-hook" data-url="{{ post.url | relative_url }}">
         <h2>
           <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </h2>
