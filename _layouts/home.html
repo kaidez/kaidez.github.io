@@ -4,7 +4,7 @@ layout: default
 <div class="home">
   {{ content }}
   {% for post in site.posts limit:1 %}
-  <div class="content__last-post" itemscope itemtype="http://schema.org/Article">
+  <div class="content__last-post" itemscope itemtype="http://schema.org/Article" data-url="{{ post.url | relative_url }}">
     <span itemscope itemtype="https://schema.org/ImageObject">
       {% if post.thumb-image %}
       <img src="/img/{{post.thumb-image}}" class="content--post-image" alt="Image for {{post.title}}"/>
