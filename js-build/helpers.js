@@ -1,11 +1,16 @@
 const helpers = () => {
   const getPostDiv =  document.querySelectorAll(".post-link-hook");
 
-  for (var i = 0; i < getPostDiv.length; i++) {
+  for (let i = 0; i < getPostDiv.length; i++) {
+
     getPostDiv[i].addEventListener('click', (event) => {
-        alert("boo-ya!!!!")
+      event.preventDefault();
+      const getArticleLink = getPostDiv[0].dataset.url
+      window.location = getArticleLink;
     });
-}
+
+  }
+
 }
 
 export default helpers;

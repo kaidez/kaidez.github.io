@@ -76,6 +76,7 @@ var _helpers2 = _interopRequireDefault(_helpers);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// Run helpers code
 (0, _helpers2.default)();
 
 /***/ }),
@@ -86,16 +87,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 var helpers = function helpers() {
-    var getPostDiv = document.querySelectorAll(".post-link-hook");
+  var getPostDiv = document.querySelectorAll(".post-link-hook");
 
-    for (var i = 0; i < getPostDiv.length; i++) {
-        getPostDiv[i].addEventListener('click', function (event) {
-            alert("boo-ya!!!!");
-        });
-    }
+  for (var i = 0; i < getPostDiv.length; i++) {
+
+    getPostDiv[i].addEventListener('click', function (event) {
+      event.preventDefault();
+      var getArticleLink = getPostDiv[0].dataset.url;
+      window.location = getArticleLink;
+    });
+  }
 };
 
 exports.default = helpers;
