@@ -1,8 +1,7 @@
 <header class="header" role="banner">
-
   <div class="header__wrapper">
     {% include logo.html %}
-    <nav class="nav">
+    <nav class="header__nav">
       <input type="checkbox" id="nav-trigger" class="nav-trigger" />
       <label for="nav-trigger">
         <span class="menu-icon">
@@ -15,10 +14,10 @@
       </label>
 
       <div class="trigger">
-        <a class="page-link" href="/blog">Blog</a>
-        <a class="page-link" href="/articles">Articles</a>
-        <a class="page-link" href="/lynda-kaidez">kaidez on lynda.com</a>
-        <a class="page-link" href="/ajax-tutorial">AJAX Tutorial</a>
+        <a class="header__nav--page-link" href="/blog">Blog</a>
+        <a class="header__nav--page-link" href="/articles">Articles</a>
+        <a class="header__nav--page-link" href="/lynda-kaidez">kaidez on lynda.com</a>
+        <a class="header__nav--page-link" href="/ajax-tutorial">AJAX Tutorial</a>
       </div>
     </nav>
   </div>

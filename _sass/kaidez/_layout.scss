@@ -7,6 +7,30 @@
   // Positioning context for the mobile navigation icon
   position: relative;
 
+  color: #fff;
+  background: #000;
+
+  &__logo {
+    width: 202px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  &__colophon {
+    position: relative;
+    top: -11px;
+  }
+
+  &__nav {
+    &--page-link {
+      margin: 0 14px;
+      color: #fff;
+
+      font-family: 'Poiret One', cursive;
+      font-weight: 900;
+    }
+  }
+
 }
 
 .logo {
