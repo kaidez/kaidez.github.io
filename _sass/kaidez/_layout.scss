@@ -59,6 +59,7 @@
     border-radius: 6px;
     padding: 16px;
     line-height: 1.2;
+
     &:after {
       content: "";
       display: table;
@@ -70,6 +71,10 @@
     width: 90px;
     float: left;
     padding: 0 10px 10px 0;
+  }
+
+  &--cursor {
+    cursor: pointer;
   }
 
   &--post-header {
