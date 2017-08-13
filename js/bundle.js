@@ -70,7 +70,23 @@
 "use strict";
 
 
-alert("foo");
+var _helpers = __webpack_require__(1);
+
+var _helpers2 = _interopRequireDefault(_helpers);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = helpers;
 
 /***/ })
 /******/ ]);
