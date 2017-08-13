@@ -1,4 +1,8 @@
-const helpers = () => {
+/**
+ *
+ */
+
+export const divClick = () => {
   const getPostDiv =  document.querySelectorAll(".post-link-hook");
 
   for (let i = 0; i < getPostDiv.length; i++) {
@@ -12,5 +16,3 @@ const helpers = () => {
   }
 
 }
-
-export default helpers;

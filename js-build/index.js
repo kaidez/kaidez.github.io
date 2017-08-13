@@ -1,4 +1,4 @@
-import helpers from "./helpers"
+import { divClick } from "./helpers"
 
-// Run helpers code
-helpers()
+// Run divClick code
+divClick()

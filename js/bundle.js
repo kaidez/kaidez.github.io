@@ -72,12 +72,8 @@
 
 var _helpers = __webpack_require__(1);
 
-var _helpers2 = _interopRequireDefault(_helpers);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// Run helpers code
-(0, _helpers2.default)();
+// Run divClick code
+(0, _helpers.divClick)();
 
 /***/ }),
 /* 1 */
@@ -89,7 +85,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var helpers = function helpers() {
+/**
+ *
+ */
+
+var divClick = exports.divClick = function divClick() {
   var getPostDiv = document.querySelectorAll(".post-link-hook");
 
   for (var i = 0; i < getPostDiv.length; i++) {
@@ -101,8 +101,6 @@ var helpers = function helpers() {
     });
   }
 };
-
-exports.default = helpers;
 
 /***/ })
 /******/ ]);
