@@ -10,3 +10,5 @@ set up 301 redirects for:
 -http://www.kaidez.com/html5-project/
 
 add effective javascript pic
+
+look at http://sailsjs.com/get-started for footer inspiration
