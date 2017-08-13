@@ -2,12 +2,14 @@
   "name": "kaidez.com",
   "version": "3.0.0",
   "description": "personal blog of Kai Gittens",
-  "main": "n/a",
+  "main": "index.js",
   "repository": "https://github.com/kaidez/kaidez.github.io.git",
   "author": "Kai Gittens <kai.gittens@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start": "bundle exec jekyll serve",
+    "watch": "webpack --watch",
+    "build": "webpack",
     "image-minify": "imagemin image-minify/* --out-dir=img/"
   },
   "dependencies": {
