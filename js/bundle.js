@@ -92,13 +92,17 @@ Object.defineProperty(exports, "__esModule", {
 var divClick = exports.divClick = function divClick() {
   var getPostDiv = document.querySelectorAll(".post-link-hook");
 
-  for (var i = 0; i < getPostDiv.length; i++) {
+  var _loop = function _loop(i) {
 
     getPostDiv[i].addEventListener('click', function (event) {
       event.preventDefault();
-      var getArticleLink = getPostDiv[0].dataset.url;
+      var getArticleLink = getPostDiv[i].dataset.url;
       window.location = getArticleLink;
     });
+  };
+
+  for (var i = 0; i < getPostDiv.length; i++) {
+    _loop(i);
   }
 };
 
