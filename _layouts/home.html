@@ -4,16 +4,16 @@ layout: default
 <div class="home">
   {{ content }}
   {% for post in site.posts limit:1 %}
-  <div class="content__last-post">
-    <h2>
-      The last post I wrote was <a class="post-link" href="{{ post.url | relative_url }}"><em>{{ post.title | escape }}</em></a>
-    </h2>
-    <div>
+  <div class="content__last-post" itemscope itemtype="http://schema.org/Article">
+    <span itemscope itemtype="https://schema.org/ImageObject">
       {% if post.thumb-image %}
-        <img src="/img/{{post.thumb-image}}" class="content--post-image" />
-      {% endif %}
-      {{ post.excerpt | escape }}
-    </div>
+      <img src="/img/{{post.thumb-image}}" class="content--post-image" alt="Image for {{post.title}}"/>
+    {% endif %}
+    </span>
+    <h2 class="content--post-header-last" itemprop="name">
+      The last post I wrote was <a class="post-link" href="{{ post.url | relative_url }}" itemprop="url">{{ post.title | escape }}</a>
+    </h2>
+    {{ post.excerpt | escape }}
   </div>
   {% endfor %}
 
