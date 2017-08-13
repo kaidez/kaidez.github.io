@@ -46,6 +46,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - general_notes.md
+  - image-minify/
   - js-build/
   - package.json
   - webpack.config.js
