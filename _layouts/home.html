@@ -4,7 +4,7 @@ layout: default
 <div class="home">
   {{ content }}
   {% for post in site.posts limit:1 %}
-  <div class="content__last-post post-link-hook" itemscope itemtype="http://schema.org/Article" data-url="{{ post.url | relative_url }}">
+  <div class="content__last-post post-link-hook content--cursor" itemscope itemtype="http://schema.org/Article" data-url="{{ post.url | relative_url }}">
     <span itemscope itemtype="https://schema.org/ImageObject">
       {% if post.thumb-image %}
       <img src="/img/{{post.thumb-image}}" class="content--post-image" alt="Image for {{post.title}}"/>
@@ -19,7 +19,7 @@ layout: default
 
   <ul class="post-list">
     {% for post in site.posts offset:1 limit:9%}
-      <li class="post-link-hook" data-url="{{ post.url | relative_url }}">
+      <li class="post-link-hook" class="content--cursor" data-url="{{ post.url | relative_url }}">
         <h2>
           <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </h2>
