@@ -9,7 +9,7 @@ export const divClick = () => {
 
     getPostDiv[i].addEventListener('click', (event) => {
       event.preventDefault();
-      const getArticleLink = getPostDiv[0].dataset.url
+      const getArticleLink = getPostDiv[i].dataset.url
       window.location = getArticleLink;
     });
 
