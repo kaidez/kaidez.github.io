@@ -3,6 +3,7 @@
  */
 .header {
   min-height: $spacing-unit * 1.865;
+  padding-bottom: 20px;
 
   // Positioning context for the mobile navigation icon
   position: relative;
@@ -22,6 +23,12 @@
   }
 
   &__nav {
+    font-size: 20px;
+    margin: 0 14px;
+    color: #b149dc;
+
+    font-family: 'Poiret One', cursive;
+    font-weight: 900;
     &--page-link,
     &--page-link:visited {
       margin: 0 14px;
@@ -29,6 +36,7 @@
 
       font-family: 'Poiret One', cursive;
       font-weight: 900;
+      text-decoration: none;
     }
     &--page-link:hover {
       margin: 0 14px;
@@ -37,6 +45,15 @@
     }
   }
 
+}
+
+/**
+ * Site content
+ */
+.content {
+  &__last-post {
+    margin-bottom: 30px;
+  }
 }
 
 .logo {

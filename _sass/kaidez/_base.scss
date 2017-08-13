@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: $spacing-unit / 8;
 }
 
 
@@ -93,17 +93,6 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: $brand-color;
-  text-decoration: none;
-
-  &:visited {
-    color: $brand-color;
-  }
-
-  &:hover {
-    color: darken($brand-color, 15%);
-    text-decoration: underline;
-  }
 
   .social-media-list &:hover {
     text-decoration: none;
@@ -167,7 +156,7 @@ pre {
  * Wrappers
  */
 .header__wrapper,
-.main__wrapper,
+.content__wrapper,
 .footer__wrapper {
   max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
   max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
