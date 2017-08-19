@@ -73,7 +73,7 @@
 var _helpers = __webpack_require__(1);
 
 // Run divClick code
-(0, _helpers.divClick)();
+_helpers.divClick;
 
 /***/ }),
 /* 1 */
@@ -85,26 +85,27 @@ var _helpers = __webpack_require__(1);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-/**
- *
- */
+var getPostDiv = document.querySelectorAll(".post-link-hook");
 
-var divClick = exports.divClick = function divClick() {
-  var getPostDiv = document.querySelectorAll(".post-link-hook");
-
+var doEventOnElement = function doEventOnElement(element, getEvent, fn) {
   var _loop = function _loop(i) {
-
-    getPostDiv[i].addEventListener('click', function (event) {
+    element[i].addEventListener(getEvent, function (event) {
       event.preventDefault();
-      var getArticleLink = getPostDiv[i].dataset.url;
-      window.location = getArticleLink;
+      fn(element[i]);
     });
   };
 
-  for (var i = 0; i < getPostDiv.length; i++) {
+  for (var i = 0; i < element.length; i++) {
     _loop(i);
   }
 };
+
+function goToPage(el) {
+  var getArticleLink = el.dataset.url;
+  window.location = getArticleLink;
+}
+
+var divClick = exports.divClick = doEventOnElement(getPostDiv, 'click', goToPage);
 
 /***/ })
 /******/ ]);

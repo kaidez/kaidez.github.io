@@ -1,18 +1,17 @@
-/**
- *
- */
+const getPostDiv =  document.querySelectorAll(".post-link-hook");
 
-export const divClick = () => {
-  const getPostDiv =  document.querySelectorAll(".post-link-hook");
-
-  for (let i = 0; i < getPostDiv.length; i++) {
-
-    getPostDiv[i].addEventListener('click', (event) => {
-      event.preventDefault();
-      const getArticleLink = getPostDiv[i].dataset.url
-      window.location = getArticleLink;
-    });
-
+const doEventOnElement = (element, getEvent, fn) => {
+  for (let i = 0; i < element.length; i++) {
+    element[i].addEventListener(getEvent, event => {
+      event.preventDefault()
+      fn(element[i])
+    })
   }
-
 }
+
+function goToPage(el) {
+  const getArticleLink = el.dataset.url
+  window.location = getArticleLink;
+}
+
+export const divClick = doEventOnElement(getPostDiv, 'click', goToPage)
