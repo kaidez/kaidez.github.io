@@ -322,6 +322,10 @@ a.post-link {
     }
   }
 
+  p {
+    margin-bottom: 16px;
+  }
+
   h3 {
     @include relative-font-size(1.625);
 

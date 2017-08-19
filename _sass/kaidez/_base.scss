@@ -8,7 +8,10 @@ dl, dd, ol, ul, figure {
   padding: 0;
 }
 
-
+a:link,
+a:visited {
+  color: #b149dc;
+}
 
 /**
  * Basic styling
