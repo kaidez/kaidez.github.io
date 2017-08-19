@@ -90,7 +90,6 @@ var getPostDiv = document.querySelectorAll(".post-link-hook");
 var doEventOnElement = function doEventOnElement(element, getEvent, fn) {
   var _loop = function _loop(i) {
     element[i].addEventListener(getEvent, function (event) {
-      event.preventDefault();
       fn(element[i]);
     });
   };
