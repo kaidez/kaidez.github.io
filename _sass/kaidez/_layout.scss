@@ -47,14 +47,17 @@
 
 }
 
+a.post-link {
+  text-decoration: none;
+  color: #b149dc;
+}
+
 .post-link-hook:hover a.post-link {
   text-decoration: underline;
   color: #a779ba;
 }
 
-a.post-link {
-  text-decoration: none;
-}
+
 /**
  * Site content
  */
