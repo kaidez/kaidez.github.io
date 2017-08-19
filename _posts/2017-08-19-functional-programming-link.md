@@ -11,9 +11,9 @@ thumb-image: functional-programming-react-thumb.jpg
 ---
 I lost my WordPress blog due to a sloppy, newbie-to-databases error: more on that in a later post. I've been rebuilding it slowly with Jekyll, adding new functionality here and there.
 
-One thing I added was functionality where post links wrapped in <code>div</code> tags on the home page go to their respective link when that <code>div</code> gets clicked.  Applying that functionality to <em>ALL</em> of those links required aå function: Functional programming made sense here.
+One functionality thing I added was on the home page, where post links wrapped in <code>div</code> tags go to their respective link when that <code>div</code> gets clicked.  To apply that functionality to <em>ALL</em> of those links, functional programming made sense here.
 
-The file structure looks like this:
+The file structure looks like this, roughly:
 <pre class=" language-markup">
   <code class=" language-markup">
 ├── build
@@ -74,7 +74,7 @@ The best way to understand this is by looking at <code>build/index.html</code>:
   </code>
 </pre>
 
-Note that all the <code>div</code>'s have a <code>post-link-hook</code> class and a <code>data-url</code> attribute. Our JavaScript will use both of these things make the <code>div</code> tags clickable links without the need for an <code><a></code> tag.
+Note that all the <code>div</code>'s have a <code>post-link-hook</code> class and a <code>data-url</code> attribute. Our JavaScript will use both of these things make the <code>div</code> tags clickable links without the need for an <code>a</code> tag.
 
 The JavaScript will be built out to the <code>bundle.js</code> file. The styles are in the <code>styles.css</code>, which is pretty basic:
 
@@ -92,11 +92,11 @@ The JavaScript will be built out to the <code>bundle.js</code> file. The styles 
   </code>
 </pre>
 
-Style for those <code>div</code>s...Not much special here. I should point out that <code>div</code>s have a <code>cursor: pointer</code> property, allowing for a link hand cursor to appear when they're hovered over, making them act like links.
+Style for those <code>div</code>s...nothing special here. I should point out that <code>div</code>s have a <code>cursor: pointer</code> setting, allowing for a link hand cursor to appear when they're hovered over, making them act like links.
 
-My code used ES6 things like <code>const</code>, <code>let</code> and arrow functions. The popular way to safely run this code cross-browser is with <a href="https://webpack.js.org/">webpack</a> and <a href="http://babeljs.io/">Babel</a>, which I set up as follows...
+Our code uses ES6 things like <code>const</code>, <code>let</code>, arrow functions and object destructuring. The popular way to make this code cross-browser compatible is with <a href="https://webpack.js.org/">webpack</a> and <a href="http://babeljs.io/">Babel</a>.
 
-The <code>package.json</code> file looks like this:
+The setup for this starts in the <code>package.json</code>:
 <pre><code class="language-json">
 {
   "name": "kaidez.com",
@@ -122,13 +122,13 @@ The <code>package.json</code> file looks like this:
 The three key things here are:
 <ol class="post-content__list">
   <li class="post-content--list-item">
-    The <code>main</code> property which is optional here. It's the entry point for the webpack build, which would work even if this property wasn't here.  But doing so is a <em>de facto</em> best practice for webpack.
+    The <code>main</code> property which is optional here. It's the entry point for the webpack build, which would work even if this property wasn't here.  But doing so is a <em>de facto</em> webpack best practice.
   </li>
   <li class="post-content--list-item">
-    The <code>scripts</code> property which contains two tasks: <code>build</code> which builds out the production-ready JavaScript code via webpack and <code>watch</code>, which watches for changes to the your <code>.js</code> source files and runs that build.  These source files are in the <code>js-build</code> directory listed above and the tasks can be run using either <a href="https://yarnpkg.com/">Yarn</a> or <a href="https://www.npmjs.com/">npm</a>...I used Yarn.
+    The <code>scripts</code> property which contains two tasks: <code>build</code> which builds out the production-ready <code>build/bundle.js</code> file via webpack, and <code>watch</code>, which watches for changes to the your <code>.js</code> source files and runs that build.  These source files are in the <code>js-build</code> directory listed above and the tasks can be run using either <a href="https://yarnpkg.com/">Yarn</a> or <a href="https://www.npmjs.com/">npm</a>...I used Yarn.
   </li>
   <li class="post-content--list-item">
-    The <code>devDependencies</code> property which provides the packages needed to let webpack build ES6 out to a the more cross-browser friendly ES5 syntax.
+    The <code>devDependencies</code> property which provides the packages needed to let webpack build ES6 out to the more cross-browser friendly ES5 syntax.
   </li>
 </ol>
 
@@ -172,5 +172,8 @@ import { divClick } from "./helpers"
 divClick
 </code></pre>
 
-I'm using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">ES6 destructuring</a> to import <code>divClick</code> from the <code>helpers.js</code>.
+I'm using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">ES6 destructuring</a> to import <code>divClick</code> from this files one and only dependency: <code>helpers.js</code>.
+
+
+
 I try to implement a little functional programming in all my work, even if it's just for practice. I recently went through such a practice when I had to format a date with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">JavaScript's Date() object</a> in a React component.
