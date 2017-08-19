@@ -314,6 +314,12 @@ a.post-link {
 .post-content {
   margin-bottom: $spacing-unit;
 
+  &__list {}
+  &--list-item {
+    margin-bottom: 20px;
+  }
+
+
   h2 {
     @include relative-font-size(2);
 
