@@ -92,6 +92,7 @@ The JavaScript will be built out to the <code>bundle.js</code> file. The styles 
   </code>
 </pre>
 
+Style for those <code>div</code>s...Not much special here. I should point out that <code>div</code>s have a <code>cursor: pointer</code> property, allowing for a link hand cursor to appear when they're hovered over, making them act like links.
 
 My code used ES6 things like <code>const</code>, <code>let</code> and arrow functions. The popular way to safely run this code cross-browser is with <a href="https://webpack.js.org/">webpack</a> and <a href="http://babeljs.io/">Babel</a>, which I set up as follows...
 
