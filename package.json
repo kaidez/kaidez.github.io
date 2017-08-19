@@ -1,19 +1,16 @@
 {
   "name": "kaidez.com",
   "version": "3.0.0",
-  "description": "personal blog of Kai Gittens",
-  "main": "index.js",
+  "description": "Personal blog of Kai Gittens",
   "repository": "https://github.com/kaidez/kaidez.github.io.git",
   "author": "Kai Gittens <kai.gittens@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start": "bundle exec jekyll serve",
-    "watch": "webpack --watch",
+    "draft": "jekyll build --drafts",
     "build": "webpack",
+    "watch": "webpack --watch",
     "image-minify": "imagemin image-minify/* --out-dir=img/"
-  },
-  "dependencies": {
-    "webpack-concat-plugin": "^1.4.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
