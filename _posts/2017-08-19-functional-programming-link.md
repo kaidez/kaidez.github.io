@@ -9,9 +9,9 @@ excerpt: Use JavaScript functional programming to set click-to-link functionalit
 og-image: functional-programming-react.jpg
 thumb-image: functional-programming-react-thumb.jpg
 ---
-I lost my WordPress blog due to a sloppy, newbie-to-databases error: more on that in a later post. I've been rebuilding it slowly with Jekyll, adding new functionality here and there.
+I lost my WordPress blog due to a sloppy, newbie-to-databases error. I've been rebuilding it slowly with Jekyll, adding new functionality here and there.
 
-One thing I added was on the home page, where post snippets inside <code>div</code>'s go to their respective link when they get clicked.  To apply that functionality to <em>ALL</em> of those links, functional programming made sense.
+One thing I added was on the home page, where post snippets inside <code>div</code>s go to their respective link when they get clicked.  To apply that functionality to <em>ALL</em> of those links, functional programming made sense.
 
 The file structure looks like this, roughly:
 <pre class=" language-markup">
@@ -37,7 +37,7 @@ The file structure looks like this, roughly:
 └── webpack.config.js
   </code>
 </pre>
-The best way to understand this is by looking at <code>build/index.html</code>:
+The best way to start understand the code is by looking at <code>build/index.html</code>:
 <pre class=" language-markup">
   <code class=" language-markup">
 &lt;!-- index.html --&gt;
@@ -76,9 +76,9 @@ The best way to understand this is by looking at <code>build/index.html</code>:
   </code>
 </pre>
 
-Note that all the <code>div</code>'s have a <code>post-link-hook</code> class and a <code>data-url</code> attribute. Our JavaScript will use both of these things make the <code>div</code> tags clickable links without the need for an <code>a</code> tag.
+Note that all the <code>div</code> tags have a <code>post-link-hook</code> class and a <code>data-url</code> attribute. Our JavaScript will use both of these things make the <code>div</code>s clickable links without the need for an <code>a</code> tag.
 
-The core JavaScript is in <code>bundle.js</code> file. The styles are in the <code>styles.css</code>, which is pretty basic:
+The core JavaScript is in <code>build/bundle.js</code> file. The styles are in the <code>build/styles.css</code>, which is pretty basic:
 
 <pre><code class="language-css">
 /* build/styles.css */
@@ -95,9 +95,9 @@ The core JavaScript is in <code>bundle.js</code> file. The styles are in the <co
 }
   </code>
 </pre>
-The styling for those <code>div</code>s is pretty basic. I should point out that <code>div</code>s have a <code>cursor: pointer</code> setting, allowing for a link hand cursor to appear when they're hovered over, making them act like links.
+Very basic styles here that are applied to all the <code>div</code> tags. I should point out that <code>div</code>s have a <code>cursor: pointer</code> setting, allowing for a link hand cursor to appear when they're hovered over, making them act like links.
 
-Our code uses ES6 things like <code>const</code>, <code>let</code>, arrow functions and object destructuring. The popular way to make this code cross-browser compatible is with <a href="https://webpack.js.org/">webpack</a> and <a href="http://babeljs.io/">Babel</a>.
+Our code uses ES6 things like <code>const</code>, <code>let</code>, arrow functions and object destructuring. The (current) popular way to make this code cross-browser compatible is with <a href="https://webpack.js.org/">webpack</a> and <a href="http://babeljs.io/">Babel</a>.
 
 The setup for webpack/Babel starts in <code>package.json</code>:
 <pre><code class="language-json">
@@ -125,7 +125,7 @@ The setup for webpack/Babel starts in <code>package.json</code>:
 The three key things here are:
 <ol class="post-content__list">
   <li class="post-content--list-item">
-    The <code>main</code> property which is optional here. It's the entry point for the webpack build, which would work even if this property wasn't here.  But doing so is a <em>de facto</em> webpack best practice.
+    The <code>main</code> property which is optional here. It's the entry point for the webpack build, which works even if this property isn't here.  But doing so is a <em>de facto</em> webpack best practice in terms of documenting what the entry point is.
   </li>
   <li class="post-content--list-item">
     The <code>scripts</code> property which contains two tasks: <code>build</code> which builds out the production-ready <code>build/bundle.js</code> file via webpack, and <code>watch</code>, which watches for changes to the your <code>.js</code> source files and runs that build.  These source files are in the <code>js-build</code> directory listed above and the tasks can be run using either <a href="https://yarnpkg.com/">Yarn</a> or <a href="https://www.npmjs.com/">npm</a>...I used Yarn.
@@ -180,7 +180,7 @@ import { divClick } from "./helpers"
 divClick
 </code></pre>
 
-I'm using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">ES6 destructuring</a> to import <code>divClick</code> from this file's only dependency: <code>helpers.js</code>. And <code>helpers.js</code> is contains the code for our link functionality:
+I'm using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">ES6 destructuring</a> to import <code>divClick</code> from this file's only dependency: <code>helpers.js</code>. And <code>helpers.js</code> contains the code for our link functionality:
 <pre><code class="language-js">
 // js-build/helper.js
 
@@ -207,7 +207,7 @@ const getPostDiv =  document.querySelectorAll(".post-link-hook");
 ...
 </code></pre>
 
-<code>getPostDiv</code> is a reference to all page elements of with a class name of <code>post-link-hook</code>, which is all the <code>div</code>'s on <code>index.html</code>. <code>getPostDiv</code> returns this group of elements as an array.
+<code>getPostDiv</code> refers to any page elements of with a class name of <code>post-link-hook</code>, which is all the <code>div</code>s in <code>index.html</code>. <code>getPostDiv</code> returns this group of elements as an array.
 
 <pre><code class="language-js">
 ...
@@ -221,7 +221,7 @@ const doEventOnElement = (element, getEvent, fn) => {
 ...
 </code></pre>
 
-<code>doEventOnElement</code> is a function that takes our <strong> elements array</strong> and builds functionality where performing some <strong>event</strong> on each element (like <code>click</code>) runs a <strong>function</strong>.
+<code>doEventOnElement</code> is a function that takes our <strong><em>elements array</em></strong> and builds functionality where performing some <strong><em>event</em></strong> on each element (like <code>click</code>) runs a <strong><em>function</em></strong>.
 <ul class="post-content__list">
   <li class="post-content--list-item">The <code>element</code> parameter refers to the element array</li>
   <li class="post-content--list-item">The <code>getEvent</code> parameter refers to the event</li>
@@ -240,7 +240,7 @@ function goToPage(el) {
 }
 ...
 </code></pre>
-<code>goToPage</code> is the function that runs when a <code>div</code> is clicked. It's job is to go to a particular web page.
+<code>goToPage</code> is the function that runs when a <code>div</code> is clicked. Its job is to go to a particular web page.
 
 It does this by accepting a parameter <code>el</code>, which is expected to be a page element. <code>el</code> is expected to have a <code>data-url</code> attribute that can be accessed by looking at <code>el.dataset.url</code> which, by the way, all our <code>div</code> tags have.
 
@@ -251,4 +251,21 @@ Once <code>goToPage</code> resolves all that, <code>goToPage</code> loads  <code
 export const divClick = doEventOnElement(getPostDiv, 'click', goToPage)
 </code></pre>
 
-I try to implement a little functional programming in all my work, even if it's just for practice. I recently went through such a practice when I had to format a date with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">JavaScript's Date() object</a> in a React component.
+We create a constant called <code>divClick</code>. It's exported out as dependency, which we saw in <code>js-build/index.js</code>.
+
+<code>divClick</code> contains an instance of <code>doEventOnElement()</code> which takes three paramters:
+
+<ol class="post-content__list">
+  <li class="post-content--list-item">
+    <code>getPostDiv</code> which is the constant defined earlier an represents the elements that should be affected by our code. It's an array list of all the <code>div</code> tags with the <code>post-link-hook</code> class.
+  </li>
+  <li class="post-content--list-item">
+    <code>'click'</code> is the event that should actually affect the <code>div</code> tags. i.e. when we click on <code>div</code>s something should happen.
+  </li>
+  <li class="post-content--list-item">
+    <code>goToPage</code> is the "something" that should happen. It's the function that looks for the URLs stored in each element's <code>data-url</code> attribute and loads the URL into the page.
+  </li>
+</ol>
+It's important to note that we're passing a function as a parameter here, which is a big deal in functional programming. Whenever you see or hear the phrase "functions are first class objects in JavaScript", passing functions as parameters is one of the many reasons why that's true.
+
+And it's <strong>VERY</strong> important to note what happens when that function actually gets passed as a parameter.  In the context of our code, that means looking at <code>doEventOnElement()</code>.
