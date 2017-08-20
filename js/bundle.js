@@ -100,7 +100,6 @@ var doEventOnElement = function doEventOnElement(element, getEvent, fn) {
 };
 
 function goToPage(el) {
-  alert("foobarkai");
   window.location = el.dataset.url;
 }
 
