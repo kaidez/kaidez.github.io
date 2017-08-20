@@ -269,3 +269,32 @@ We create a constant called <code>divClick</code>. It's exported out as dependen
 It's important to note that we're passing a function as a parameter here, which is a big deal in functional programming. Whenever you see or hear the phrase "functions are first class objects in JavaScript", passing functions as parameters is one of the many reasons why that's true.
 
 And it's <strong>VERY</strong> important to note what happens when that function actually gets passed as a parameter.  In the context of our code, that means looking at <code>doEventOnElement()</code>.
+
+The last parameter passed to <code>doEventOnElement()</code> is <code>fn</code>. And in our code, that's the <code>goToPage()</code> function.
+
+So when <code>fn</code> runs in the <code>for</code> loop like this...
+<pre><code class="language-js">
+fn(element[i])
+</code></pre>
+
+It looks like this when the <code>fn</code> param is set...
+<pre><code class="language-js">
+goToPage(element[i])
+</code></pre>
+
+We built <code>goToPage()</code> to expect an element: that will be defined by <code>element[i]</code>. And since we set the <code>element</element> parameter to be <code>getPostDiv</code>, the function in the <code>for</code> loop look like this...
+<pre><code class="language-js">
+goToPage(getPostDiv[i])
+</code></pre>
+So as the loop iterates over an element array, it will look like this when it hits the array's second item...
+<pre><code class="language-js">
+goToPage(getPostDiv[1])
+</code></pre>
+
+And from there, it will look at the <code>data-url</code> attribute in the second item and treat it as a link.
+
+This was something that took me some time to grasp while learning functionzl programming. It can be a bit mind-bending but understanding it is key.
+
+In closing and <a href="/format-dates-functional-programming/">like I said in my last post</a>, I try to implement JavaScript functional programming wherever I can, even if it's just for practice. Code like this may be too much for the task at hand, but I'm glad I did it...even if just for practice.
+
+Feel free to ask questions or make suggestions.
