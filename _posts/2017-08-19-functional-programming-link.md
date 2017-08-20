@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Set Up Link Functionality with Functional Programming"
+title:  "Setup Link Functionality with Functional Programming"
 date:   2017-08-19 05:07:59 -0400
 categories: tutorials
 permalink: /functional-programming-link/
@@ -11,11 +11,11 @@ thumb-image: functional-programming-react-thumb.jpg
 ---
 I lost my WordPress blog due to a sloppy, newbie-to-databases error. I've been rebuilding it slowly with Jekyll, adding new functionality here and there.
 
-One thing I added was on the home page, where post snippets inside <code>div</code>s go to their respective link when they get clicked.  To apply that functionality to <em>ALL</em> of those links, functional programming made sense.
+One thing I added was on the homepage, where post snippets inside <code>div</code>s go to their respective link when they get clicked.  To apply that functionality to <em>ALL</em> of those links, functional programming made sense.
 
 The file structure looks like this, roughly:
 <pre class=" language-markup">
-  <code class=" language-markup">
+ <code class=" language-markup">
 ├── build
 |   ├── 01-post
 |       └── index.html
@@ -35,11 +35,11 @@ The file structure looks like this, roughly:
 ├── .babelrc
 ├── package.json
 └── webpack.config.js
-  </code>
+ </code>
 </pre>
 The best way to start understand the code is by looking at <code>build/index.html</code>:
 <pre class=" language-markup">
-  <code class=" language-markup">
+ <code class=" language-markup">
 &lt;!-- index.html --&gt;
 
 <!DOCTYPE html>
@@ -54,22 +54,22 @@ The best way to start understand the code is by looking at <code>build/index.htm
 &lt;body&gt;
 
   &lt;div class="post-link-hook" data-url="01-post"&gt;
-    The link to the first post.
+   The link to the first post.
   &lt;/div&gt;
 
   &lt;div class="post-link-hook" data-url="02-post"&gt;
-    The link to the second post.
+   The link to the second post.
   &lt;/div&gt;
 
   &lt;div class="post-link-hook" data-url="03-post"&gt;
-    The link to the third post.
+   The link to the third post.
   &lt;/div&gt;
 
   &lt;div class="post-link-hook" data-url="04-post"&gt;
-    The link to the fourth post.
+   The link to the fourth post.
   &lt;/div&gt;
 
-  &lt;script type="text/javascript" src="bundle.js"&gt;&lt;/script&gt;
+ &lt;script type="text/javascript" src="bundle.js"&gt;&lt;/script&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;
@@ -93,7 +93,7 @@ The core JavaScript is in <code>build/bundle.js</code> file. The styles are in t
   border-radius: 5px;
   cursor: pointer;
 }
-  </code>
+ </code>
 </pre>
 Very basic styles here that are applied to all the <code>div</code> tags. I should point out that <code>div</code>s have a <code>cursor: pointer</code> setting, allowing for a link hand cursor to appear when they're hovered over, making them act like links.
 
@@ -120,7 +120,7 @@ The setup for webpack/Babel starts in <code>package.json</code>:
     "webpack": "^3.5.5"
   }
 }
-  </code>
+ </code>
 </pre>
 The three key things here are:
 <ol class="post-content__list">
@@ -156,7 +156,7 @@ module.exports = {
         test: /\.js$/,
         exclude: /(node_modules)/,
         use: {
-          loader: 'babel-loader'
+         loader: 'babel-loader'
         }
       }
     ]
@@ -214,7 +214,7 @@ const getPostDiv =  document.querySelectorAll(".post-link-hook");
 const doEventOnElement = (element, getEvent, fn) => {
   for (let i = 0; i < element.length; i++) {
     element[i].addEventListener(getEvent, event => {
-      fn(element[i])
+     fn(element[i])
     })
   }
 }
@@ -223,9 +223,9 @@ const doEventOnElement = (element, getEvent, fn) => {
 
 <code>doEventOnElement</code> is a function that takes our <strong><em>elements array</em></strong> and builds functionality where performing some <strong><em>event</em></strong> on each element (like <code>click</code>) runs a <strong><em>function</em></strong>.
 <ul class="post-content__list">
-  <li class="post-content--list-item">The <code>element</code> parameter refers to the element array</li>
-  <li class="post-content--list-item">The <code>getEvent</code> parameter refers to the event</li>
-  <li class="post-content--list-item">The <code>fn</code> parameter refers to the function</li>
+ <li class="post-content--list-item">The <code>element</code> parameter refers to the element array</li>
+ <li class="post-content--list-item">The <code>getEvent</code> parameter refers to the event</li>
+ <li class="post-content--list-item">The <code>fn</code> parameter refers to the function</li>
 </ul>
 
 <code>doEventOnElement</code> loops through the array items and places an event listener on each item. The event listener runs the event which, again, is defined by the <code>getEvent</code> parameter.
@@ -253,14 +253,14 @@ export const divClick = doEventOnElement(getPostDiv, 'click', goToPage)
 
 We create a constant called <code>divClick</code>. It's exported out as dependency, which we saw in <code>js-build/index.js</code>.
 
-<code>divClick</code> contains an instance of <code>doEventOnElement()</code> which takes three paramters:
+<code>divClick</code> contains an instance of <code>doEventOnElement()</code> which takes three parameters:
 
 <ol class="post-content__list">
   <li class="post-content--list-item">
-    <code>getPostDiv</code> which is the constant defined earlier an represents the elements that should be affected by our code. It's an array list of all the <code>div</code> tags with the <code>post-link-hook</code> class.
+   <code>getPostDiv</code> which is the constant defined earlier an represents the elements that should be affected by our code. It's an array list of all the <code>div</code> tags with the <code>post-link-hook</code> class.
   </li>
   <li class="post-content--list-item">
-    <code>'click'</code> is the event that should actually affect the <code>div</code> tags. i.e. when we click on <code>div</code>s something should happen.
+   <code>'click'</code> is the event that should actually affect the <code>div</code> tags. i.e. when we click on <code>div</code>s something should happen.
   </li>
   <li class="post-content--list-item">
     <code>goToPage</code> is the "something" that should happen. It's the function that looks for the URLs stored in each element's <code>data-url</code> attribute and loads the URL into the page.
@@ -293,7 +293,7 @@ goToPage(getPostDiv[1])
 
 And from there, it will look at the <code>data-url</code> attribute in the second item and treat it as a link.
 
-This was something that took me some time to grasp while learning functionzl programming. It can be a bit mind-bending but understanding it is key.
+This was something that took me some time to grasp while learning functional programming. It can be a bit mind-bending but understanding it is key.
 
 In closing and <a href="/format-dates-functional-programming/">like I said in my last post</a>, I try to implement JavaScript functional programming wherever I can, even if it's just for practice. Code like this may be too much for the task at hand, but I'm glad I did it...even if just for practice.
 
