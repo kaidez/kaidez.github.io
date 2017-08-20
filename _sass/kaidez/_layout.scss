@@ -52,9 +52,18 @@ a.post-link {
   color: #b149dc;
 }
 
-.post-link-hook:hover a.post-link {
-  text-decoration: underline;
-  color: #a779ba;
+.post-link-hook {
+  transition: all 0.1s ease-in;
+  background: transparent;
+
+  &:hover {
+    background: #e5d7f4;
+
+    & a.post-link {
+      text-decoration: underline;
+      color: #a779ba;
+    }
+  }
 }
 
 
@@ -79,9 +88,11 @@ a.post-link {
   }
 
   &--post-image {
-    width: 90px;
+    width: 110px;
     float: left;
-    padding: 0 10px 10px 0;
+
+    margin: 0 10px 10px 0;
+    border: 1px solid #ffffff
   }
 
   &--cursor {
@@ -92,7 +103,7 @@ a.post-link {
     margin-bottom: 14px;
 
     &-last {
-      margin-bottom: 16px;
+      margin-bottom: 10px;
       font-weight: 700;
     }
   }
