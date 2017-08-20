@@ -195,8 +195,7 @@ const doEventOnElement = (element, getEvent, fn) => {
 }
 
 function goToPage(el) {
-  const getArticleLink = el.dataset.url
-  window.location = getArticleLink
+  window.location = el.dataset.url
 }
 
 export const divClick = doEventOnElement(getPostDiv, 'click', goToPage)
@@ -237,11 +236,16 @@ I get that this MIGHT be confusing, but walking through the <code>goToPage</code
 <pre><code class="language-js">
 ...
 function goToPage(el) {
-  const getArticleLink = el.dataset.url
-  window.location = getArticleLink
+  window.location = el.dataset.url
 }
 ...
 </code></pre>
+<code>goToPage</code> is the function that runs when a <code>div</code> is clicked. It's job is to go to a particular web page.
+
+It does this by accepting a parameter <code>el</code>, which is expected to be a page element. <code>el</code> is expected to have a <code>data-url</code> attribute that can be accessed by looking at <code>el.dataset.url</code> which, by the way, all our <code>div</code> tags have.
+
+Once <code>goToPage</code> resolves all that, <code>goToPage</code> loads  <code>el.dataset.url</code> as a relative URL with the help of the <code>window.location</code> property. It will then forward to that page.
+
 <pre><code class="language-js">
 ...
 export const divClick = doEventOnElement(getPostDiv, 'click', goToPage)

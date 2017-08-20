@@ -9,8 +9,7 @@ const doEventOnElement = (element, getEvent, fn) => {
 }
 
 function goToPage(el) {
-  const getArticleLink = el.dataset.url
-  window.location = getArticleLink
+  window.location = el.dataset.url
 }
 
 export const divClick = doEventOnElement(getPostDiv, 'click', goToPage)

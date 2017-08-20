@@ -100,8 +100,8 @@ var doEventOnElement = function doEventOnElement(element, getEvent, fn) {
 };
 
 function goToPage(el) {
-  var getArticleLink = el.dataset.url;
-  window.location = getArticleLink;
+  alert("foobarkai");
+  window.location = el.dataset.url;
 }
 
 var divClick = exports.divClick = doEventOnElement(getPostDiv, 'click', goToPage);
