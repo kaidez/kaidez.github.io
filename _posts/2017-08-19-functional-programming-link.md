@@ -222,18 +222,29 @@ const doEventOnElement = (element, getEvent, fn) => {
 ...
 </code></pre>
 
-<code>doEventOnElement</code> is a function that takes our array of elements and builds functionality where performing some event on each element (like <code>click</code>) runs a function. The <code>element</code> parameter, refers to the element array, the <code>getEvent</code> parameter refers to the event and the <code>fn</code> parameter refers to the function.
-<ol class="post-content__list">
-  <li class="post-content--list-item">
-    The <code>main</code> property which is optional here. It's the entry point for the webpack build, which would work even if this property wasn't here.  But doing so is a <em>de facto</em> webpack best practice.
-  </li>
-  <li class="post-content--list-item">
-    <code>element</code> .
-  </li>
-  <li class="post-content--list-item">
-    The <code>devDependencies</code> property which provides the packages needed to let webpack build ES6 out to the more cross-browser friendly ES5 syntax.
-  </li>
-</ol>
+<code>doEventOnElement</code> is a function that takes our <strong> elements array</strong> and builds functionality where performing some <strong>event</strong> on each element (like <code>click</code>) runs a <strong>function</strong>.
+<ul class="post-content__list">
+  <li class="post-content--list-item">The <code>element</code> parameter refers to the element array</li>
+  <li class="post-content--list-item">The <code>getEvent</code> parameter refers to the event</li>
+  <li class="post-content--list-item">The <code>fn</code> parameter refers to the function</li>
+</ul>
 
+<code>doEventOnElement</code> loops through the array items and places an event listener on each item. The event listener runs the event which, again, is defined by the <code>getEvent</code> parameter.
+
+<code>doEventOnElement</code> also allows a callback function to run our other function defined by <code>fn</code>.  And <code>fn</code> takes a parameter as well: the <code>element</code> parameter we defined in the beginning.
+
+I get that this MIGHT be confusing, but walking through the <code>goToPage</code> function may clarify things:
+<pre><code class="language-js">
+...
+function goToPage(el) {
+  const getArticleLink = el.dataset.url
+  window.location = getArticleLink
+}
+...
+</code></pre>
+<pre><code class="language-js">
+...
+export const divClick = doEventOnElement(getPostDiv, 'click', goToPage)
+</code></pre>
 
 I try to implement a little functional programming in all my work, even if it's just for practice. I recently went through such a practice when I had to format a date with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">JavaScript's Date() object</a> in a React component.
