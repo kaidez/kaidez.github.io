@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title:  "Setup Link Functionality with Functional Programming"
-date:   2017-08-21 04:00:59 -0400
+date:   2017-08-19 04:00:59 -0400
 categories: tutorials
 permalink: /functional-programming-link/
 excerpt: Use JavaScript functional programming to set click-to-link functionality on a set of elements. Code sample has a basic webpack/Babel setup.
