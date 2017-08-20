@@ -11,7 +11,7 @@ thumb-image: functional-programming-react-thumb.jpg
 ---
 I lost my WordPress blog due to a sloppy, newbie-to-databases error: more on that in a later post. I've been rebuilding it slowly with Jekyll, adding new functionality here and there.
 
-One functionality thing I added was on the home page, where post links wrapped in <code>div</code> tags go to their respective link when that <code>div</code> gets clicked.  To apply that functionality to <em>ALL</em> of those links, functional programming made sense here.
+One thing I added was on the home page, where post snippets inside <code>div</code>'s go to their respective link when they get clicked.  To apply that functionality to <em>ALL</em> of those links, functional programming made sense.
 
 The file structure looks like this, roughly:
 <pre class=" language-markup">
@@ -40,6 +40,8 @@ The file structure looks like this, roughly:
 The best way to understand this is by looking at <code>build/index.html</code>:
 <pre class=" language-markup">
   <code class=" language-markup">
+&lt;!-- index.html --&gt;
+
 <!DOCTYPE html>
 &lt;html lang="en"&gt;
 &lt;head&gt;
@@ -76,9 +78,11 @@ The best way to understand this is by looking at <code>build/index.html</code>:
 
 Note that all the <code>div</code>'s have a <code>post-link-hook</code> class and a <code>data-url</code> attribute. Our JavaScript will use both of these things make the <code>div</code> tags clickable links without the need for an <code>a</code> tag.
 
-The JavaScript will be built out to the <code>bundle.js</code> file. The styles are in the <code>styles.css</code>, which is pretty basic:
+The core JavaScript is in <code>bundle.js</code> file. The styles are in the <code>styles.css</code>, which is pretty basic:
 
 <pre><code class="language-css">
+/* build/styles.css */
+
 .post-link-hook {
   width: 400px;
   height: 72px;
@@ -91,20 +95,19 @@ The JavaScript will be built out to the <code>bundle.js</code> file. The styles 
 }
   </code>
 </pre>
-
-Style for those <code>div</code>s...nothing special here. I should point out that <code>div</code>s have a <code>cursor: pointer</code> setting, allowing for a link hand cursor to appear when they're hovered over, making them act like links.
+The styling for those <code>div</code>s is pretty basic. I should point out that <code>div</code>s have a <code>cursor: pointer</code> setting, allowing for a link hand cursor to appear when they're hovered over, making them act like links.
 
 Our code uses ES6 things like <code>const</code>, <code>let</code>, arrow functions and object destructuring. The popular way to make this code cross-browser compatible is with <a href="https://webpack.js.org/">webpack</a> and <a href="http://babeljs.io/">Babel</a>.
 
-The setup for this starts in the <code>package.json</code>:
+The setup for webpack/Babel starts in <code>package.json</code>:
 <pre><code class="language-json">
+// package.json
+
 {
   "name": "kaidez.com",
   "version": "3.0.0",
   "description": "Personal blog of Kai Gittens",
   "main": "index.js",
-  "repository": "https://github.com/kaidez/kaidez.github.io.git",
-  "author": "Kai Gittens &lt;kai.gittens@gmail.com&gt;",
   "license": "MIT",
   "scripts": {
     "build": "webpack",
@@ -134,6 +137,7 @@ The three key things here are:
 
 The <code>.babelrc</code> file uses Babel's default settings, which let Babel transform ES6 syntax to ES5 syntax.
 <pre><code class="language-json">
+// .babelrc
 {
   "presets": ["env"]
 }
@@ -141,6 +145,8 @@ The <code>.babelrc</code> file uses Babel's default settings, which let Babel tr
 
 <code>webpack.config.js</code> looks like this:
 <pre><code class="language-js">
+// webpack.config.js
+
 const path = require('path');
 
 module.exports = {
@@ -164,16 +170,70 @@ module.exports = {
 </code></pre>
 webpack will look at the entry point of the file, <code>js-build/index.js</code>, which lists any dependency files needed to build out our site's JavaScript code. It will then transform any ES6 into ES5, and save things out in a file named <code>build/bundle.js</code>.
 
-That <code>js-build/index.js</code> entry point file is real simple due the small amount of code here. Entry point files are always much more detailed, but this simple one looks like this:
+That <code>js-build/index.js</code> entry point file is real simple due to the small amount of code here. Entry point files are always much more detailed, but this simple one looks like this:
 <pre><code class="language-js">
+// js-build/index.js
+
 import { divClick } from "./helpers"
 
 // Run divClick code
 divClick
 </code></pre>
 
-I'm using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">ES6 destructuring</a> to import <code>divClick</code> from this files one and only dependency: <code>helpers.js</code>.
+I'm using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">ES6 destructuring</a> to import <code>divClick</code> from this file's only dependency: <code>helpers.js</code>. And <code>helpers.js</code> is contains the code for our link functionality:
+<pre><code class="language-js">
+// js-build/helper.js
 
+const getPostDiv =  document.querySelectorAll(".post-link-hook");
+
+const doEventOnElement = (element, getEvent, fn) => {
+  for (let i = 0; i < element.length; i++) {
+    element[i].addEventListener(getEvent, event => {
+      fn(element[i])
+    })
+  }
+}
+
+function goToPage(el) {
+  const getArticleLink = el.dataset.url
+  window.location = getArticleLink
+}
+
+export const divClick = doEventOnElement(getPostDiv, 'click', goToPage)
+</code></pre>
+
+Breaking this code down...
+<pre><code class="language-js">
+const getPostDiv =  document.querySelectorAll(".post-link-hook");
+...
+</code></pre>
+
+<code>getPostDiv</code> is a reference to all page elements of with a class name of <code>post-link-hook</code>, which is all the <code>div</code>'s on <code>index.html</code>. <code>getPostDiv</code> returns this group of elements as an array.
+
+<pre><code class="language-js">
+...
+const doEventOnElement = (element, getEvent, fn) => {
+  for (let i = 0; i < element.length; i++) {
+    element[i].addEventListener(getEvent, event => {
+      fn(element[i])
+    })
+  }
+}
+...
+</code></pre>
+
+<code>doEventOnElement</code> is a function that takes our array of elements and builds functionality where performing some event on each element (like <code>click</code>) runs a function. The <code>element</code> parameter, refers to the element array, the <code>getEvent</code> parameter refers to the event and the <code>fn</code> parameter refers to the function.
+<ol class="post-content__list">
+  <li class="post-content--list-item">
+    The <code>main</code> property which is optional here. It's the entry point for the webpack build, which would work even if this property wasn't here.  But doing so is a <em>de facto</em> webpack best practice.
+  </li>
+  <li class="post-content--list-item">
+    <code>element</code> .
+  </li>
+  <li class="post-content--list-item">
+    The <code>devDependencies</code> property which provides the packages needed to let webpack build ES6 out to the more cross-browser friendly ES5 syntax.
+  </li>
+</ol>
 
 
 I try to implement a little functional programming in all my work, even if it's just for practice. I recently went through such a practice when I had to format a date with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">JavaScript's Date() object</a> in a React component.
