@@ -9,6 +9,7 @@ excerpt: Use JavaScript functional programming to set click-to-link functionalit
 og-image: functional-programming-react.jpg
 thumb-image: functional-programming-react-thumb.jpg
 ---
+<a href="/samples/functional-programming-click-tutorial/">See the demo &raquo;</a> <a href="https://github.com/kaidez/functional-programming-click-tutorial/">Grab the code from Github &raquo;</a>
 I lost my WordPress blog due to a sloppy, "newbie-to-databases" error. I've been rebuilding it slowly with <a href="https://jekyllrb.com/">Jekyll</a>, adding new functionality here and there.
 
 One thing I added was on the homepage, where post snippets inside <code>div</code>s go to a certain link when they get clicked.  To apply that functionality to <em>ALL</em> those links, functional programming made sense.
