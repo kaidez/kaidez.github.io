@@ -53,7 +53,7 @@ Also, it didn't help that DOM implementation differed across web browsers. The b
 
 However, clients liked the visual results provided by DOM manipulation. So it remained a best practice, evolved to be more efficient over time, and that was that.
 
-<h3>...Next Came The Quite Time</h3>
+<h3>...Next Came The Quiet Time</h3>
 Internet stocks were rising high starting in the mid nineties...they came crashing down in the early 2000s. Few "Internet-only" companies were profitable: as a result, other companies, including Microsoft, said the Internet was a "passing fad."
 
 Internet companies, as a whole, didn't die out during this quiet time. They just experimented with a lot of cool Internet things while no one was watching and pressuring them to get everything right.
@@ -62,4 +62,6 @@ Mozilla rose to prominence during this time. Apple would release the Mac OS X op
 
 And companies like Google would play around with a little-known piece of browser technology called <code>XMLHttpRequest</code>. It allowed data to load onto the page without the page needing to be fully refreshed.
 
-Google used <code>XMLHttpRequest</code> to build Gmail and Google Maps, two apps that load new data on the page without refreshing it. And there were other companies that did similar things
+Google used <code>XMLHttpRequest</code> to build Gmail and Google Maps, two apps that load new data on the page without refreshing it. <code>XMLHttpRequest</code> was awesome and were other companies created apps with the same functionality.
+
+But as awesome as it was, <code>XMLHttpRequest</code> didn't change (most of) the world's opinion that the Internet was a fad. That all changed when a Canadian-born web developer wrote a certain blog post.
