@@ -33,4 +33,4 @@ This makes sense. While <code>document.getElementById()</code> would become the 
 So the 1999 book <em>not</em> covering it does make sense. But once that spec acheived Canidate Reco status, things changed...a lot.
 
 <h3>...And Then Came The DOM</h3>
-Not only would <code>document.getElementById()</code> be the main starting point for DOM manipulation, it would also expose developers to the DOM API as a whole. Once they saw how they could use this API to manipulate the page, it led to a burst of creativity.
+Using <code>document.getElementById()</code> as main entry point for DOM manipulation exposed developers to the DOM API as a whole. And once they saw how they could use this API to manipulate the page, it inspired a burst of creativity.
