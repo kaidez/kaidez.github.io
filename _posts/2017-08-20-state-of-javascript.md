@@ -67,6 +67,8 @@ Google used <code>XMLHttpRequest</code> to build Gmail and Google Maps, two apps
 But as awesome as it was, <code>XMLHttpRequest</code> didn't change (most of) the world's opinion that the Internet was a fad.
 
 <h3>A Guy Writes A Blog Post...</h3>
-That all changed when web developer Jesse James Garrett wrote an article labeling apps that used <code>XMLHttpRequest</code> as "Ajax applications."
+That all changed when web developer Jesse James Garrett wrote an article labeling apps that used <code>XMLHttpRequest</code> as "AJAX applications."
 
-The article outlined how to build a web page that could load content without using page refreshes.
+The article outlined how to build a web page that could load content without using page refreshes. In order to build AJAX apps, it said, you needed <code>XMLHttpRequest</code>, CSS, JavaScript and, of course, the DOM.
+
+The web development creativity inspired by the DOM API was far outshone by the creativity inspired by AJAX.
