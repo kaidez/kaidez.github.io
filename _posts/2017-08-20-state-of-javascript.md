@@ -22,15 +22,33 @@ This is the first JavaScript book I ever brought:
 
 It was published by Dori Smith and the late, (very) great Tom Negrino. I don't use it as a reference any more, but keep it for sentimental reasons.
 
-It was written in 1999, about four years after the initial JavaSript release. But it covers most the things that made JavaScript popular at that initial release: Image manipulation, scrolling status bars, Java integration, etc.
+It was written in 1999, about four years after the initial JavaScript release. But it covers most the things that made JavaScript popular at that initial release: Image manipulation, scrolling status bars, Java integration, etc.
 
 The book covers functions really well: it's the source from where I learned JS functions. It even cover cookies: <em>the first real instance of JavaScript state management.</em>
 
 And there's also 33 pages covering Dynamic HTML (DHTML) that covers DOM manipulation methods at that now seem dated. But all the manipulation is done with <code>document.all</code>.
 
-This makes sense. While <code>document.getElementById()</code> would become the primary way to initiate DOM manipulation, the spec it was part of (DOM Level 2) wouldn't reach Canidate Recommendation until 2000.
+<h3>...And Then Came Love For The DOM</h3>
+While <code>document.getElementById()</code> would become the primary way to initiate DOM manipulation, the spec it was part of (DOM Level 2) wouldn't reach Canidate Recommendation until 2000. So the 1999 book <em>not</em> covering it does make sense. But once that spec acheived Candidate Reco status, things changed.
 
-So the 1999 book <em>not</em> covering it does make sense. But once that spec acheived Canidate Reco status, things changed...a lot.
-
-<h3>...And Then Came The DOM</h3>
 Using <code>document.getElementById()</code> as main entry point for DOM manipulation exposed developers to the DOM API as a whole. And once they saw how they could use this API to manipulate the page, it inspired a burst of creativity.
+
+This creativity was mostly noticed in things like drop-down menus and animations, but there were some cool DHTML hacks for state management. Many still in use to this day.
+
+The most popular hack was to add a class with a Boolean-type name to an element once JavaScript did something. For example: if a dropdown menu could be opened on a mobile device, a class on <code>body</code> would tell the page if it were visible or not:
+
+<pre class=" language-markup">
+  <code class=" language-markup">
+  &lt;!-- If the menu is in a hidden state --&gt;
+  &lt;body class="isHidden"&gt;
+
+  &lt;!-- If the menu is in visible state --&gt;
+  &lt;body class="isVisible"&gt;
+  </code>
+</pre>
+
+Front-end developers primarily loved manipulating the DOM while back-end developers primarily hated it. Updating data using something like the DOM API was simply something the latter wasn't used to.
+
+Also, it didn't help that DOM implementation differed across web browsers. The browser wars were still going on at this time, so writing code for two or three browsers seemed inefficient.
+
+However, clients liked the visual results provided by DOM manipulation. So it remained a best practice, evolved to be more efficient over time, and that was that.
