@@ -64,4 +64,9 @@ And companies like Google would play around with a little-known piece of browser
 
 Google used <code>XMLHttpRequest</code> to build Gmail and Google Maps, two apps that load new data on the page without refreshing it. <code>XMLHttpRequest</code> was awesome and were other companies created apps with the same functionality.
 
-But as awesome as it was, <code>XMLHttpRequest</code> didn't change (most of) the world's opinion that the Internet was a fad. That all changed when a Canadian-born web developer wrote a certain blog post.
+But as awesome as it was, <code>XMLHttpRequest</code> didn't change (most of) the world's opinion that the Internet was a fad.
+
+<h3>A Guy Writes A Blog Post...</h3>
+That all changed when web developer Jesse James Garrett wrote an article labeling apps that used <code>XMLHttpRequest</code> as "Ajax applications."
+
+The article outlined how to build a web page that could load content without using page refreshes.
