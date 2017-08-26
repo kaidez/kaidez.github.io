@@ -60,4 +60,4 @@ Internet companies, as a whole, didn't die out during this quiet time. They just
 
 Mozilla rose to prominence during this time. Apple would release the Mac OS X operating system, setting them up for the world dominance they currently enjoy.
 
-And companies like Google would play around with a little-known browser technology called <code>XMLHttpRequest</code>
+And companies like Google would play around with a little-known piece of browser technology called <code>XMLHttpRequest</code>. It allowed data to load onto the page without the page needing to be fully refreshed.
