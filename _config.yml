@@ -40,7 +40,7 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-plugins: [jekyll-redirect-from, jekyll-paginate, jekyll-sitemap]
+plugins: [jekyll-redirect-from, jekyll-paginate, jekyll-sitemap, jekyll-seo-tag]
 
 exclude:
   - Gemfile
@@ -57,3 +57,15 @@ exclude:
 
 paginate: 10
 paginate_path: "/blog/page/:num/"
+
+author: Kai Gittens
+name: Kai Gittens
+
+social:
+  name: Kai Gittens
+  links:
+    - https://twitter.com/kaidez
+    - https://www.facebook.com/kaidezblog
+    - https://www.linkedin.com/in/kaigittens/
+    - https://plus.google.com/+KaiGittens
+    - https://github.com/kaidez
