@@ -316,6 +316,7 @@ a.post-link {
     }
 
   &__title {
+    text-align: center;
     @include relative-font-size(2.625);
     letter-spacing: -1px;
     line-height: 1;
