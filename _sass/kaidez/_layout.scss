@@ -308,54 +308,66 @@ a.post-link {
 /**
  * Posts
  */
-.post-header {
-  margin-bottom: $spacing-unit;
-}
 
-.post-title {
-  @include relative-font-size(2.625);
-  letter-spacing: -1px;
-  line-height: 1;
+.post {
 
-  @include media-query($on-laptop) {
-    @include relative-font-size(2.25);
-  }
-}
+  &__header {
+    margin-bottom: $spacing-unit;
+    }
 
-.post-content {
-  margin-bottom: $spacing-unit;
-
-  &__list {}
-  &--list-item {
-    margin-bottom: 20px;
-  }
-
-
-  h2 {
-    @include relative-font-size(2);
+  &__title {
+    @include relative-font-size(2.625);
+    letter-spacing: -1px;
+    line-height: 1;
 
     @include media-query($on-laptop) {
-      @include relative-font-size(1.75);
+      @include relative-font-size(2.25);
     }
   }
 
-  p {
-    margin-bottom: 16px;
+  &__meta {
+    font-size: $small-font-size;
+    color: $grey-color;
   }
 
-  h3 {
-    @include relative-font-size(1.625);
+  &__content {
+    margin-bottom: $spacing-unit;
 
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.375);
+    &--list-item {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      @include relative-font-size(2);
+
+      @include media-query($on-laptop) {
+        @include relative-font-size(1.75);
+      }
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      @include relative-font-size(1.625);
+
+      @include media-query($on-laptop) {
+        @include relative-font-size(1.375);
+      }
+    }
+
+    h4 {
+      @include relative-font-size(1.25);
+
+      @include media-query($on-laptop) {
+        @include relative-font-size(1.125);
+      }
     }
   }
-
-  h4 {
-    @include relative-font-size(1.25);
-
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.125);
-    }
+  &__image {
+    max-width: 100%;
+    margin: 0 auto;
+    display: inherit;
   }
 }
