@@ -9,7 +9,7 @@ excerpt: A rant about how React, Redux and similar tools are part of JavaScript'
 og-image: state-of-javascript.jpg
 thumb-image: state-of-javascript-thumb.jpg
 ---
-React and Redux have demonstrated the value of well-implemented application state management in JavaScript to web developers. Despite this, developers complain about it.
+React and Redux have shown developers the value of well-implemented application state management withrin JavaScript. Despite this, developers complain about React and Redux quite often.
 
 I'd like to think the breakdown of developers that do and don't complain about React/Redux is 50/50, and that some of the complaints are valid. Nevertheless, good JavaScript state management was bound to happen, especially when reviewing how the language has progressed over the years.
 
@@ -22,20 +22,20 @@ This is the first JavaScript book I ever brought:
 
 It was published by Dori Smith and the late, (very) great Tom Negrino. I don't use it as a reference any more, but keep it for sentimental reasons.
 
-It was written in 1999, about four years after the initial JavaScript release. But it covers most the things that made JavaScript popular at that initial release: Image manipulation, scrolling status bars, Java integration, etc.
+It was written in 1999, about four years after the initial JavaScript release. But it covers the things that made JavaScript popular after that release: image manipulation, scrolling status bars, Java integration, etc.
 
-The book covers functions really well: it's the source from where I learned JS functions. It even cover cookies: <em>the first real instance of JavaScript state management.</em>
+The book covers functions really well: it's where I first learned JS functions. It even cover cookies: <em>the first real instance of JavaScript state management.</em>
 
-And there's also 33 pages covering Dynamic HTML (DHTML) that covers DOM manipulation methods at that now seem dated. But all the manipulation is done with <code>document.all</code>.
+And there's also 33 pages on Dynamic HTML (DHTML), demonstrating DOM manipulation methods at that now seem dated. All the manipulation in the book is done with <code>document.all</code>.
 
 <h3>...And Then Came Love For The DOM</h3>
-While <code>document.getElementById()</code> would become the primary way to initiate DOM manipulation, the spec it was part of (DOM Level 2) wouldn't reach Canidate Recommendation until 2000. So the 1999 book <em>not</em> covering it does make sense. But once that spec acheived Candidate Reco status, things changed.
+While <code>document.getElementById()</code> would become the primary way to initiate DOM manipulation, the spec it was part of (DOM Level 2) wouldn't reach Candidate Recommendation until 2000. So a 1999 book <em>not</em> covering it makes sense but once that spec achieved Candidate Reco status, things changed.
 
 Using <code>document.getElementById()</code> as main entry point for DOM manipulation exposed developers to the DOM API as a whole. And once they saw how they could use this API to manipulate the page, it inspired a burst of creativity.
 
-This creativity was mostly noticed in things like drop-down menus and animations, but there were some cool DHTML hacks for state management. Many still in use to this day.
+This creativity was mostly noticed in things like drop-down menus and animations, but there were some cool DHTML "hacks" for state management. Many still in use to this day.
 
-The most popular hack was to add a class with a Boolean-type name to an element once JavaScript did something. For example: if a dropdown menu could be opened on a mobile device, a class on <code>body</code> would tell the page if it were visible or not:
+The most popular hack was to add a class with a Boolean-type name to an element once JavaScript did something. For example: if a dropdown menu could be opened on a mobile device, a class on <code>body</code> the page would use this class to see if it were visible or not:
 
 <pre class=" language-markup">
   <code class=" language-markup">
@@ -52,3 +52,12 @@ Front-end developers primarily loved manipulating the DOM while back-end develop
 Also, it didn't help that DOM implementation differed across web browsers. The browser wars were still going on at this time, so writing code for two or three browsers seemed inefficient.
 
 However, clients liked the visual results provided by DOM manipulation. So it remained a best practice, evolved to be more efficient over time, and that was that.
+
+<h3>...Next Came The Quite Time</h3>
+Internet stocks were rising high starting in the mid nineties...they came crashing down in the early 2000s. Few "internet-only" companies were profitable: as a result, other companies, including Microsoft, said the internet was a "passing fad."
+
+Internet companies, as a whole, didn't die out during this quiet time. They just experimented with a lot of cool internet things while no one was watching and pressuring them to get everything right.
+
+Mozilla rose to prominence during this time. Apple would release the Mac OS X operating system, setting them up for the world dominance they currently enjoy.
+
+And companies like Google would play around with a little-known browser technology called <code>XMLHttpRequest</code>
