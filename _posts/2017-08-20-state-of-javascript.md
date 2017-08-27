@@ -26,7 +26,7 @@ It was written in 1999, about four years after the initial JavaScript release. B
 
 The book covers functions really well: it's where I first learned JS functions. It even cover cookies: <em>the first real instance of JavaScript state management.</em>
 
-And there's also 33 pages on Dynamic HTML (DHTML), demonstrating DOM manipulation methods that now seem dated. All the manipulation in the book is done with <code>document.all</code>.
+And there's also 33 pages on Dynamic HTML (DHTML), demonstrating DOM manipulation methods that now seem dated. All the manipulation in the book is done with <code>document.all</code>, not <code>document.getElementById()</code>.
 
 <h3>...And Then Came Love For The DOM</h3>
 While <code>document.getElementById()</code> would become the primary way to initiate DOM manipulation, the spec it was part of (DOM Level 2) wouldn't reach Candidate Recommendation until 2000. So a 1999 book <em>not</em> covering it makes sense but once that spec achieved Candidate Reco status, things changed.
@@ -42,7 +42,7 @@ The most popular hack was to add a class with a Boolean-type name to an element 
   &lt;!-- If the menu is in a hidden state --&gt;
   &lt;body class="isHidden"&gt;
 
-  &lt;!-- If the menu is in visible state --&gt;
+  &lt;!-- If the menu is in a visible state --&gt;
   &lt;body class="isVisible"&gt;
   </code>
 </pre>
@@ -54,9 +54,9 @@ Also, it didn't help that DOM implementation differed across web browsers. The b
 However, clients liked the visual results provided by DOM manipulation. So it remained a best practice, evolved to be more efficient over time, and that was that.
 
 <h3>...Next Came The Quiet Time</h3>
-Internet stocks were rising high starting in the mid nineties...they came crashing down in the early 2000s. Few "web-only" companies were profitable: as a result, other companies, including Microsoft, said the web was a "passing fad."
+Internet stocks that rose high starting in the mid nineties came crashing down in the early 2000s. Few "web-only" companies were profitable and as a result, other companies, including Microsoft, said the web was a "passing fad."
 
-As a whole, web companies, didn't die out during this quiet time. They just experimented with a lot of cool web things while no one was watching, removed from the constant pressure to get the things right.
+As a whole, web-only companies, didn't die out during this quiet time. They just experimented with cool web technologies while no one was watching, removed from the constant pressure to get the things right.
 
 Mozilla rose to prominence during this time. Apple would release the Mac OS X operating system, setting them up for the world dominance they currently enjoy.
 
@@ -71,7 +71,7 @@ That all changed when web developer <a href="http://adaptivepath.org/ideas/ajax-
 
 The article outlined how to build a web page that could load content without using page refreshes. In order to build AJAX apps, it said, you needed <code>XMLHttpRequest</code>, CSS, JavaScript and, of course, the DOM.
 
-The web development creativity inspired by the DOM API was far outshone by the creativity inspired by AJAX. AJAX let developers build games, calendar apps, word processing apps, whatever you can think of.
+The creativity inspired by the DOM API was far outshone by the creativity inspired by AJAX. AJAX let developers build games, calendar apps, word processing apps, whatever you can think of.
 
 With the sudden burst of AJAX-inspired creativity, the web got its second wind in the business world. Everyone started paying attention to it again.
 
