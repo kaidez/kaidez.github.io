@@ -11,9 +11,7 @@ thumb-image: state-of-javascript-thumb.jpg
 ---
 React and Redux have demonstrated the value of well-implemented application state management within JavaScript. Despite this, developers complain about React and Redux quite often.
 
-I'd like to think the breakdown of developers that do and don't complain about React/Redux is 50/50, and that some of the complaints are valid. Nevertheless, good JavaScript state management was bound to happen, especially when reviewing how the language has progressed over the years.
-
-<em>(Author's note: I used <a href="https://devchat.tv/js-jabber/124-jsj-the-origin-of-javascript-with-brendan-eich">Brendan Eich's awesome interview on JS Jabber</a> as a reference to some of the historical stuff mentioned in this post...It's worth a listen.)</em>
+I'd like to think the breakdown of developers that do and don't complain about React/Redux is 50/50, and that some of the complaints are valid. Nevertheless, good JavaScript state management was bound to happen, especially when reviewing the key moments in JavaScript's evolution.
 
 <h3>In The Beginning...</h3>
 This is the first JavaScript book I ever brought:
@@ -78,4 +76,4 @@ With the sudden burst of AJAX-inspired creativity, the web got its second wind i
 <h3>...JSON takes it from here</h3>
 Next came <a href="http://www.json.org/">JSON</a>, which was a uniform data format for the browser. It didn't fully eliminate the need to for backend database systems, but it certainly lessened the browsers dependencies on them.
 
-The data was in the form of a standard object/POJO/whatever that could easily extracted with JavaScript. Whether you were using PHP, .NET, Java etc. or a specific SQL set up, JSON just worked.
+The data was in the form of a standard object/POJO/whatever that could easily be extracted with JavaScript. Whether you were using PHP, .NET, Java, etc., or a specific SQL set up, JSON just worked.
