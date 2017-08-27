@@ -73,9 +73,9 @@ The article outlined how to build a web page that could load content without usi
 
 The web development creativity inspired by the DOM API was far outshone by the creativity inspired by AJAX. AJAX let developers build games, calendar apps, word processing apps, whatever you can think of.
 
-With the sudden burst of AJAX-inspired creativity, the web got its second wind in the business world.
+With the sudden burst of AJAX-inspired creativity, the web got its second wind in the business world. Everyone started paying attention to it again.
 
 <h3>...JSON takes it from here</h3>
 Next came <a href="http://www.json.org/">JSON</a>, which was a uniform data format for the browser. It didn't fully eliminate the need to for backend database systems, but it certainly lessened the browsers dependencies on them.
 
-The data was in the form of a standard object that could easily extracted with JavaScript.
+The data was in the form of a standard object/POJO/whatever that could easily extracted with JavaScript. Whether you were using PHP, .NET, Java etc. or a specific SQL set up, JSON just worked.
