@@ -26,7 +26,7 @@ It was written in 1999, about four years after the initial JavaScript release. B
 
 The book covers functions really well: it's where I first learned JS functions. It even cover cookies: <em>the first real instance of JavaScript state management.</em>
 
-And there's also 33 pages on Dynamic HTML (DHTML), demonstrating DOM manipulation methods at that now seem dated. All the manipulation in the book is done with <code>document.all</code>.
+And there's also 33 pages on Dynamic HTML (DHTML), demonstrating DOM manipulation methods that now seem dated. All the manipulation in the book is done with <code>document.all</code>.
 
 <h3>...And Then Came Love For The DOM</h3>
 While <code>document.getElementById()</code> would become the primary way to initiate DOM manipulation, the spec it was part of (DOM Level 2) wouldn't reach Candidate Recommendation until 2000. So a 1999 book <em>not</em> covering it makes sense but once that spec achieved Candidate Reco status, things changed.
