@@ -281,34 +281,9 @@ a.post-link {
   padding: $spacing-unit 0;
 }
 
-.page-heading {
-  @include relative-font-size(1.25);
-}
-
-.post-list {
-  margin-left: 0;
-  list-style: none;
-
-  > li {
-    margin-bottom: $spacing-unit;
-  }
-}
-
-.post-meta {
-  font-size: $small-font-size;
-  color: $grey-color;
-}
-
-.post-link {
-  @include relative-font-size(1.5);
-}
-
-
-
 /**
  * Posts
  */
-
 .post {
 
   &__header {
@@ -372,3 +347,34 @@ a.post-link {
     display: inherit;
   }
 }
+
+.blog-list-item {
+  margin-bottom: 28px;
+
+  &__header {
+    margin-bottom: 0;
+    line-height: 40px;
+  }
+
+  &__content {}
+
+}
+.page-heading {
+  @include relative-font-size(1.25);
+}
+
+.post-list {
+  margin-left: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: $spacing-unit;
+  }
+}
+
+.post-link {
+  @include relative-font-size(1.5);
+}
+
+
+

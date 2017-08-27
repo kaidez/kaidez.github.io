@@ -54,21 +54,28 @@ Also, it didn't help that DOM implementation differed across web browsers. The b
 However, clients liked the visual results provided by DOM manipulation. So it remained a best practice, evolved to be more efficient over time, and that was that.
 
 <h3>...Next Came The Quiet Time</h3>
-Internet stocks were rising high starting in the mid nineties...they came crashing down in the early 2000s. Few "Internet-only" companies were profitable: as a result, other companies, including Microsoft, said the Internet was a "passing fad."
+Internet stocks were rising high starting in the mid nineties...they came crashing down in the early 2000s. Few "web-only" companies were profitable: as a result, other companies, including Microsoft, said the web was a "passing fad."
 
-Internet companies, as a whole, didn't die out during this quiet time. They just experimented with a lot of cool Internet things while no one was watching and pressuring them to get everything right.
+web companies, as a whole, didn't die out during this quiet time. They just experimented with a lot of cool web things while no one was watching and pressuring them to get everything right.
 
 Mozilla rose to prominence during this time. Apple would release the Mac OS X operating system, setting them up for the world dominance they currently enjoy.
 
-And companies like Google would play around with a little-known piece of browser technology called <code>XMLHttpRequest</code>. It allowed data to load onto the page without the page needing to be fully refreshed.
+And companies like Google would play around with a little-known piece of web browser technology called <code>XMLHttpRequest</code>. It allowed data to load onto the page without the page needing to be fully refreshed.
 
 Google used <code>XMLHttpRequest</code> to build Gmail and Google Maps, two apps that load new data on the page without refreshing it. <code>XMLHttpRequest</code> was awesome and were other companies created apps with the same functionality.
 
-But as awesome as it was, <code>XMLHttpRequest</code> didn't change (most of) the world's opinion that the Internet was a fad.
+But as awesome as it was, <code>XMLHttpRequest</code> didn't change (most of) the world's opinion that the web was a fad.
 
-<h3>A Guy Writes A Blog Post...</h3>
+<h3>...A Guy Writes A Blog Post</h3>
 That all changed when web developer Jesse James Garrett wrote an article labeling apps that used <code>XMLHttpRequest</code> as "AJAX applications."
 
 The article outlined how to build a web page that could load content without using page refreshes. In order to build AJAX apps, it said, you needed <code>XMLHttpRequest</code>, CSS, JavaScript and, of course, the DOM.
 
-The web development creativity inspired by the DOM API was far outshone by the creativity inspired by AJAX.
+The web development creativity inspired by the DOM API was far outshone by the creativity inspired by AJAX. AJAX let developers build games, calendar apps, word processing apps, whatever you can think of.
+
+With the wide array of apps that could be with AJAX, the web got its second wind in the business world.
+
+<h3>...JSON takes it from here</h3>
+Next came <a href="http://www.json.org/">JSON</a>, which was a uniform data format for the browser. It didn't fully eliminate the need to for backend database systems, but it certainly lessened the browsers dependencies on them.
+
+The data was in the form of a standard object that could easily extracted with JavScript.
