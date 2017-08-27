@@ -79,4 +79,4 @@ Next came <a href="http://www.json.org/">JSON</a>, which was a uniform data form
 The data was in the form of a standard object/POJO/whatever that could easily be extracted with JavaScript. Whether you were using PHP, .NET, Java, etc., or a specific SQL set up, JSON just worked.
 
 <h3>...The DOM Is Still With Us</h3>
-It's key to note that DOM manipulation was still in wide use among developers at this point. There were still issues
+It's key to note that DOM manipulation was still in wide use among developers at this point. It still had issues, but the developer community defined enough best practices to manage those issues.
