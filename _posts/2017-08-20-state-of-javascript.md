@@ -9,7 +9,7 @@ excerpt: A rant about how React, Redux and similar tools are part of JavaScript'
 og-image: state-of-javascript.jpg
 thumb-image: state-of-javascript-thumb.jpg
 ---
-React and Redux have shown developers the value of well-implemented application state management within JavaScript. Despite this, developers complain about React and Redux quite often.
+React and Redux have demonstrated the value of well-implemented application state management within JavaScript. Despite this, developers complain about React and Redux quite often.
 
 I'd like to think the breakdown of developers that do and don't complain about React/Redux is 50/50, and that some of the complaints are valid. Nevertheless, good JavaScript state management was bound to happen, especially when reviewing how the language has progressed over the years.
 
@@ -20,9 +20,9 @@ This is the first JavaScript book I ever brought:
 
 <img src="/img/js-book.jpg" class="post__image" />
 
-It was published by Dori Smith and the late, (very) great Tom Negrino. I don't use it as a reference any more, but keep it for sentimental reasons.
+It was published by Dori Smith and the late, (very) great Tom Negrino. I don't use it as a reference anymore, but keep it for sentimental reasons.
 
-It was written in 1999, about four years after the initial JavaScript release. But it covers the things that made JavaScript popular after that release: image manipulation, scrolling status bars, Java integration, etc.
+It was written in 1999, about four years after the initial JavaScript release. But it covers the things that made JavaScript popular at that time: image manipulation, scrolling status bars, Java integration, etc.
 
 The book covers functions really well: it's where I first learned JS functions. It even cover cookies: <em>the first real instance of JavaScript state management.</em>
 
@@ -56,7 +56,7 @@ However, clients liked the visual results provided by DOM manipulation. So it re
 <h3>...Next Came The Quiet Time</h3>
 Internet stocks were rising high starting in the mid nineties...they came crashing down in the early 2000s. Few "web-only" companies were profitable: as a result, other companies, including Microsoft, said the web was a "passing fad."
 
-web companies, as a whole, didn't die out during this quiet time. They just experimented with a lot of cool web things while no one was watching and pressuring them to get everything right.
+As a whole, web companies, didn't die out during this quiet time. They just experimented with a lot of cool web things while no one was watching, removed from the constant pressure to get the things right.
 
 Mozilla rose to prominence during this time. Apple would release the Mac OS X operating system, setting them up for the world dominance they currently enjoy.
 
@@ -67,15 +67,15 @@ Google used <code>XMLHttpRequest</code> to build Gmail and Google Maps, two apps
 But as awesome as it was, <code>XMLHttpRequest</code> didn't change (most of) the world's opinion that the web was a fad.
 
 <h3>...A Guy Writes A Blog Post</h3>
-That all changed when web developer Jesse James Garrett wrote an article labeling apps that used <code>XMLHttpRequest</code> as "AJAX applications."
+That all changed when web developer <a href="http://adaptivepath.org/ideas/ajax-new-approach-web-applications/">Jesse James Garrett wrote an article</a> labeling apps that used <code>XMLHttpRequest</code> as "AJAX applications."
 
 The article outlined how to build a web page that could load content without using page refreshes. In order to build AJAX apps, it said, you needed <code>XMLHttpRequest</code>, CSS, JavaScript and, of course, the DOM.
 
 The web development creativity inspired by the DOM API was far outshone by the creativity inspired by AJAX. AJAX let developers build games, calendar apps, word processing apps, whatever you can think of.
 
-With the wide array of apps that could be with AJAX, the web got its second wind in the business world.
+With the sudden burst of AJAX-inspired creativity, the web got its second wind in the business world.
 
 <h3>...JSON takes it from here</h3>
 Next came <a href="http://www.json.org/">JSON</a>, which was a uniform data format for the browser. It didn't fully eliminate the need to for backend database systems, but it certainly lessened the browsers dependencies on them.
 
-The data was in the form of a standard object that could easily extracted with JavScript.
+The data was in the form of a standard object that could easily extracted with JavaScript.
