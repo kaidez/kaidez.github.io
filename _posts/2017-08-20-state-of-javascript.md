@@ -79,3 +79,4 @@ Next came <a href="http://www.json.org/">JSON</a>, which was a uniform data form
 The data was in the form of a standard object/POJO/whatever that could easily be extracted with JavaScript. Whether you were using PHP, .NET, Java, etc., or a specific SQL set up, JSON just worked.
 
 <h3>...The DOM Is Still With Us</h3>
+I
