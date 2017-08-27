@@ -45,6 +45,11 @@
     }
   }
 
+  &--hidden-text {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+  }
+
 }
 
 a.post-link {
