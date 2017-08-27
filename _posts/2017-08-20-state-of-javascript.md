@@ -77,3 +77,5 @@ With the sudden burst of AJAX-inspired creativity, the web got its second wind i
 Next came <a href="http://www.json.org/">JSON</a>, which was a uniform data format for the browser. It didn't fully eliminate the need to for backend database systems, but it certainly lessened the browsers dependencies on them.
 
 The data was in the form of a standard object/POJO/whatever that could easily be extracted with JavaScript. Whether you were using PHP, .NET, Java, etc., or a specific SQL set up, JSON just worked.
+
+<h3>...The DOM's Still With Us</h3>
