@@ -282,9 +282,10 @@ a.post-link {
 }
 
 /**
- * Posts
+ * Posts & Pages
  */
-.post {
+.post,
+.page {
 
   &__header {
     margin-bottom: $spacing-unit;
@@ -348,12 +349,21 @@ a.post-link {
   }
 }
 
-.blog-list-item {
-  margin-bottom: 28px;
+.category__description {
+  margin-bottom: $bottom-margin;
+}
+
+.article-list-item,
+.blog-list-item,
+.page-list-item,
+.category-list-item  {
+  margin-bottom: $bottom-margin;
 
   &__header {
     margin-bottom: 0;
     line-height: 40px;
+
+    font-size: 32px;
   }
 
   &__content {}
