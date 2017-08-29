@@ -49,6 +49,8 @@ Front-end developers primarily loved manipulating the DOM while back-end develop
 
 Also, it didn't help that DOM implementation differed across web browsers. The browser wars were still going on at this time, so writing code for two or three browsers seemed inefficient.
 
+Above all, the DOM was slow...REALLY slow. Using JavaScript to adjust the DOM didn't take hours, but the time it DID take was long by software standards.
+
 However, clients liked the visual results provided by DOM manipulation. So it remained a best practice, evolved to be more efficient over time, and that was that.
 
 <h3>...Next Came The Quiet Time</h3>
@@ -78,13 +80,15 @@ Next came <a href="http://www.json.org/">JSON</a>, which was a uniform data form
 
 The data was in the form of a standard object that could easily be extracted with JavaScript. No matter what your database looked like or what language it used, JSON just worked.
 
-It's key to note that DOM manipulation was still in wide use among developers at this point. It still had issues, but the developer community defined best practices, like using <a href="http://jquery.com/">jQuery</a>, to manage those issues the best that it could.
-
 <h3>...Now, The Frameworks</h3>
 With AJAX, JSON and DOM best practices in place, it made sense to encapsulate them in complete software bundles. One-stop pieces of software that gave developers all the tools they needed to build an app.
 
 That's where frameworks came in. <a href="http://www.javascriptmvc.com/">JavaScript MVC</a>, <a href="https://dojotoolkit.org/">Dojo</a> and <a href="http://backbonejs.org/">Backbone</a> were the first popular ones, then came Angular, Ember, Dart, Knockout...and on and on.
 
 <h3>...The ES6 Makeover Arrives</h3>
-Then JavaScript got a major update called ES6, or ES2015.
-<h3>...And Here Comes React</h3>
+Then JavaScript got a major update called ES6, or ES2015. Its syntax and features closely matched those of the more traditional languages, Java, C#, etc.
+
+<h3>...At (Roughly) The Same Time That React Arrives</h3>
+
+
+It's key to note that DOM manipulation was still in wide use among developers at this point. It still had issues, but the developer community defined best practices, like using <a href="http://jquery.com/">jQuery</a>, to manage those issues the best that it could.
