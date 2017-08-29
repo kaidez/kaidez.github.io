@@ -15,11 +15,15 @@
     width: 202px;
     margin: 0 auto;
     display: block;
+
+    &--h1 {
+      margin-bottom: 0;
+    }
   }
 
   &__colophon {
     position: relative;
-    top: -11px;
+    top: -21px;
   }
 
   &__nav {
@@ -48,6 +52,7 @@
   &--hidden-text {
     position: absolute;
     clip: rect(1px 1px 1px 1px);
+    margin-bottom: 0;
   }
 
 }
