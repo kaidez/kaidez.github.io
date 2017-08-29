@@ -85,4 +85,6 @@ With AJAX, JSON and DOM best practices in place, it made sense to encapsulate th
 
 That's where frameworks came in. <a href="http://www.javascriptmvc.com/">JavaScript MVC</a>, <a href="https://dojotoolkit.org/">Dojo</a> and <a href="http://backbonejs.org/">Backbone</a> were the first popular ones, then came Angular, Ember, Dart, Knockout...and on and on.
 
-<h3>...And Here comes React</h3>
+<h3>...The ES6 Makeover Arrives</h3>
+Then JavaScript got a major update called ES6, or ES2015.
+<h3>...And Here Comes React</h3>
