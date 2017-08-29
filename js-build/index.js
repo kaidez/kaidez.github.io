@@ -7,7 +7,7 @@ import { Navigation } from "./components/Navigation"
 // Run divClick code
 divClick
 
-// Load the Nav
+// Load <Navigation /> into <nav id="navReactEntryPoint" />
 render(
   <Navigation />,
   document.getElementById('navReactEntryPoint')
