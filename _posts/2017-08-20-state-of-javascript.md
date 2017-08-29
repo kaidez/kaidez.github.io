@@ -20,20 +20,20 @@ This is the first JavaScript book I ever brought:
 
 It was published by Dori Smith and the late, (very) great Tom Negrino. I don't use it as a reference anymore, but keep it for sentimental reasons.
 
-It was written in 1999, about four years after the initial JavaScript release. But it covers the things that made JavaScript popular at that time: image manipulation, scrolling status bars, Java integration, etc.
+It was written in 1999, about four years after the initial JavaScript release. But it covers things that made JavaScript popular at that time: image manipulation, scrolling status bars, Java integration, etc.
 
 The book covers functions really well: it's where I first learned JS functions. It even cover cookies: <em>the first real instance of JavaScript state management.</em>
 
-And there's also 33 pages on Dynamic HTML (DHTML), demonstrating DOM manipulation methods that now seem dated. All the manipulation in the book is done with <code>document.all</code>, not <code>document.getElementById()</code>.
+And there's also 33 pages on Dynamic HTML (DHTML), demonstrating DOM manipulation methods that now seem dated. All the manipulation in the book is done with <code>document.all</code> and <code>document.getElementById()</code> isn't mentioned at all.
 
-<h3>...And Then Came Love For The DOM</h3>
+<h3>...Then Came Love For The DOM</h3>
 While <code>document.getElementById()</code> would become the primary way to initiate DOM manipulation, the spec it was part of (DOM Level 2) wouldn't reach Candidate Recommendation until 2000. So a 1999 book <em>not</em> covering it makes sense but once that spec achieved Candidate Reco status, things changed.
 
 Using <code>document.getElementById()</code> as main entry point for DOM manipulation exposed developers to the DOM API as a whole. And once they saw how they could use this API to manipulate the page, it inspired a burst of creativity.
 
 This creativity was mostly noticed in things like drop-down menus and animations, but there were some cool DHTML "hacks" for state management. Many still in use to this day.
 
-The most popular hack was to add a class with a Boolean-type name to an element once JavaScript did something. For example: if a dropdown menu could be opened on a mobile device, a class on <code>body</code> the page would use this class to see if it were visible or not:
+The most popular hack was to add a class with a Boolean-type name to an element once JavaScript did something. For example: JS could toggle a class on the <code>body</code> tag, telling the browser it was visible:
 
 <pre class=" language-markup">
   <code class=" language-markup">
@@ -54,7 +54,7 @@ However, clients liked the visual results provided by DOM manipulation. So it re
 <h3>...Next Came The Quiet Time</h3>
 Internet stocks that rose high starting in the mid nineties came crashing down in the early 2000s. Few "web-only" companies were profitable and as a result, other companies, including Microsoft, said the web was a "passing fad."
 
-As a whole, web-only companies, didn't die out during this quiet time. They just experimented with cool web technologies while no one was watching, removed from the constant pressure to get the things right.
+As a whole, web-only companies, didn't die out during this quiet time. They just experimented with cool web technologies while no one was watching, removed from the constant pressure from others to get everything right.
 
 Mozilla rose to prominence during this time. Apple would release the Mac OS X operating system, setting them up for the world dominance they currently enjoy.
 
@@ -65,17 +65,24 @@ Google used <code>XMLHttpRequest</code> to build Gmail and Google Maps, two apps
 But as awesome as it was, <code>XMLHttpRequest</code> didn't change (most of) the world's opinion that the web was a fad.
 
 <h3>...A Guy Writes A Blog Post</h3>
-That all changed when web developer <a href="http://adaptivepath.org/ideas/ajax-new-approach-web-applications/">Jesse James Garrett wrote an article</a> labeling apps that used <code>XMLHttpRequest</code> as "AJAX applications."
+That all changed when web developer <a href="http://adaptivepath.org/ideas/ajax-new-approach-web-applications/">Jesse James Garrett wrote an article</a> defining apps that used <code>XMLHttpRequest</code> as "AJAX applications."
 
 The article outlined how to build a web page that could load content without using page refreshes. In order to build AJAX apps, it said, you needed <code>XMLHttpRequest</code>, CSS, JavaScript and, of course, the DOM.
 
-The creativity inspired by the DOM API was far outshone by the creativity inspired by AJAX. AJAX let developers build games, calendar apps, word processing apps, whatever you can think of.
+The creativity inspired by AJAX was far out-shined the creativity inspired by the DOM API. AJAX let developers build games, calendar apps, word processing apps, any robust app you can think of.
 
-With the sudden burst of AJAX-inspired creativity, the web got its second wind in the business world. Everyone started paying attention to it again.
+With the sudden burst of AJAX-inspired creativity, the web got its second wind in the business world. Everyone started paying attention to it again: the web was clearly not a fad.
 
 <h3>...JSON takes it from here</h3>
-Next came <a href="http://www.json.org/">JSON</a>, which was a uniform data format for the browser. It didn't fully eliminate the need to for backend database systems, but it certainly lessened the browsers dependencies on them.
+Next came <a href="http://www.json.org/">JSON</a>, which was a uniform data format for the browser. It didn't fully eliminate the need for backend database systems, but it certainly lessened the browsers dependency on them.
 
-The data was in the form of a standard object/POJO/whatever that could easily be extracted with JavaScript. Whether you were using PHP, .NET, Java, etc., or a specific SQL set up, JSON just worked.
+The data was in the form of a standard object that could easily be extracted with JavaScript. No matter what your database looked like or what language it used, JSON just worked.
 
-It's key to note that DOM manipulation was still in wide use among developers at this point. It still had issues, but the developer community defined best practices, using <a href="http://jquery.com/">jQuery</a>, to manage those issues the best that it could.
+It's key to note that DOM manipulation was still in wide use among developers at this point. It still had issues, but the developer community defined best practices, like using <a href="http://jquery.com/">jQuery</a>, to manage those issues the best that it could.
+
+<h3>...Now, The Frameworks</h3>
+With AJAX, JSON and DOM best practices in place, it made sense to encapsulate them in complete software bundles. One-stop pieces of software that gave developers all the tools they needed to build an app.
+
+That's where frameworks came in. <a href="http://www.javascriptmvc.com/">JavaScript MVC</a>, <a href="https://dojotoolkit.org/">Dojo</a> and <a href="http://backbonejs.org/">Backbone</a> were the first popular ones, then came Angular, Ember, Dart, Knockout...and on and on.
+
+<h3>...And Here comes React</h3>
