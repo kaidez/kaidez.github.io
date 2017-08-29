@@ -11,7 +11,7 @@ thumb-image: state-of-javascript-thumb.jpg
 ---
 React and Redux have demonstrated the value of well-implemented application state management within JavaScript. Despite this, developers complain about React and Redux quite often.
 
-I'd like to think the breakdown of developers that do and don't complain about React/Redux is 50/50, and that some of the complaints are valid. Nevertheless, good JavaScript state management was bound to happen, especially when reviewing the key moments in JavaScript's evolution.
+I'd like to think the breakdown of developers that do and don't complain about React/Redux is 50/50, and that some of the complaints are valid. Nevertheless, JS state management was bound to happen, especially when reviewing the key moments of JavaScript's evolution.
 
 <h3>In The Beginning...</h3>
 This is the first JavaScript book I ever brought:
