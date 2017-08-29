@@ -9,7 +9,7 @@
     "start": "bundle exec jekyll serve",
     "draft": "jekyll build --drafts",
     "build": "./node_modules/.bin/webpack",
-    "watch": "webpack --watch",
+    "watch": "webpack --progress -p --watch",
     "image-minify": "imagemin image-minify/* --out-dir=img/"
   },
   "devDependencies": {
@@ -21,6 +21,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "imagemin": "^5.3.1",
     "imagemin-cli": "^3.0.0",
+    "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^3.5.5"
   },
   "dependencies": {
