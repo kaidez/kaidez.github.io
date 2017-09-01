@@ -1,0 +1,44 @@
+@media (max-width: 767px) {
+  .header {
+    &__nav {
+      &-wrapper {
+        display: none;
+      }
+      &--page-link {
+        margin: 0;
+
+            display: block;
+    clear: both;
+      }
+    }
+
+    &__menu {
+      display: inline-block;
+      bottom: 99px;
+      position: relative;
+
+      cursor: pointer;
+
+      &:focus~.header__nav-wrapper {
+        width: 200px;
+        display: inline-block;
+        position: absolute;
+        top: 33px;
+        bottom: 69px;
+
+        text-align: left;
+      }
+
+    }
+
+    &--menu-line {
+      display: block;
+      width: 31px;
+      height: 4px;
+      margin: 0 auto 6px;
+
+      background-color: #fff;
+      border-radius: 2px;
+    }
+  }
+}

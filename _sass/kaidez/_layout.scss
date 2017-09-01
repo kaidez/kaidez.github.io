@@ -49,6 +49,15 @@
     }
   }
 
+  &__nav-wrapper {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__menu {
+    display: none;
+  }
+
   &--hidden-text {
     position: absolute;
     clip: rect(1px 1px 1px 1px);
@@ -75,7 +84,6 @@ a.post-link {
     }
   }
 }
-
 
 /**
  * Site content
@@ -150,6 +158,7 @@ a.post-link {
   }
 
   @include media-query($on-palm) {
+
     position: absolute;
     top: 9px;
     right: $spacing-unit / 2;
@@ -179,21 +188,6 @@ a.post-link {
       > svg path {
         fill: $grey-color-dark;
       }
-    }
-
-    .trigger {
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    input ~ .trigger {
-      clear: both;
-      display: none;
-    }
-
-    input:checked ~ .trigger {
-      display: block;
-      padding-bottom: 5px;
     }
 
     .page-link {
