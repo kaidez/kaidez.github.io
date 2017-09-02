@@ -3,7 +3,12 @@
 
     &__nav {
 
-      &-wrapper {}
+      &-wrapper {
+        position: absolute;
+        top: 36px;
+        left: 12px;
+        text-align: left;
+      }
 
       &--page-link {
         margin: 0;
@@ -22,17 +27,6 @@
       position: relative;
 
       cursor: pointer;
-
-      &:focus~.header__nav-wrapper {
-        width: 200px;
-        display: inline-block;
-        position: absolute;
-        top: 36px;
-        right: 110px;
-        bottom: 69px;
-
-        text-align: left;
-      }
 
     }
 
