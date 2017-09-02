@@ -9,7 +9,7 @@
     "start": "bundle exec jekyll serve",
     "draft": "jekyll build --drafts",
     "build": "./node_modules/.bin/webpack",
-    "watch": "webpack --progress -p --watch",
+    "watch": "./node_modules/.bin/webpack --progress -p --watch",
     "image-minify": "imagemin image-minify/* --out-dir=img/"
   },
   "devDependencies": {
