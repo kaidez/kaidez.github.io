@@ -4,17 +4,22 @@
     &__nav {
 
       &-wrapper {
+        width: 100%;
         position: absolute;
         top: 36px;
-        left: 12px;
+        left: 0;
+        padding: 5px 0 10px 10px;;
 
-        background-color: #336699;
+        background-color: #b382d2;
         text-align: left;
       }
 
-      &--page-link {
+      &--page-link,
+      &--page-link:visited {
         margin: 0;
         display: block;
+
+        color: #fff;
 
         &:hover {
           margin: 0;
