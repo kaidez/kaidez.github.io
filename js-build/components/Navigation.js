@@ -13,8 +13,6 @@ export class Navigation extends Component {
   }
 
   toggleMobileMenu(e) {
-    e.preventDefault()
-    e.stopPropagation()
     e || e.window.event
     const clickTarget = document.querySelector("#menuButton")
 
@@ -32,7 +30,18 @@ export class Navigation extends Component {
     return(
       <div>
         <h2 className="header--hidden-text">Main Navigation</h2>
-        <div id="menuButton" className="header__menu" onClick={this.toggleMobileMenu}>
+        <div
+          id="menuButton"
+          onClick={this.toggleMobileMenu}
+          className=
+          {
+            this.state.isMenuVisible
+            ?
+            "header__menu header__menu--isVisible"
+            :
+            "header__menu"
+          }
+        >
           <span className="header--menu-line"></span>
           <span className="header--menu-line"></span>
         </div>
