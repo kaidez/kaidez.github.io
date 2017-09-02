@@ -1,12 +1,15 @@
 @media (max-width: 767px) {
   .header {
+    &__wrapper {
+      height: 79px;
+    }
 
     &__nav {
 
       &-wrapper {
         width: 100%;
         position: absolute;
-        top: 36px;
+        top: 52px;
         left: 0;
         padding: 5px 0 10px 10px;
 
@@ -30,11 +33,16 @@
 
     &__menu {
       display: inline-block;
-      right: 16px;
-      bottom: 99px;
+      padding: 10px 8px 6px 8px;
+      right: 29px;
+      bottom: 96px;
       position: relative;
 
       cursor: pointer;
+
+      &--isVisible {
+        background-color: #b382d2;
+      }
 
     }
 
