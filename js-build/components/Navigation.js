@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Menu from './NavigationChildComponents/Menu'
 
 export class Navigation extends Component {
 
@@ -38,16 +39,10 @@ export class Navigation extends Component {
         {
           this.state.isMenuVisible
           ?
-          <span>menu is visible</span>
+          <Menu />
           :
           null
         }
-        <div className="header__nav-wrapper">
-          <a className="header__nav--page-link" href="/blog">blog</a>
-          <a className="header__nav--page-link" href="/articles">articles</a>
-          <a className="header__nav--page-link" href="/lynda-kaidez">kaidez on lynda.com</a>
-          <a className="header__nav--page-link" href="/ajax-tutorial">ajax tutorial</a>
-        </div>
       </div>
     )
   }
