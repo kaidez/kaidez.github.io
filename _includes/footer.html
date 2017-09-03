@@ -1,51 +1,48 @@
 <footer class="footer">
+
   <div class="footer__wrapper">
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>
-          Kai
-          </li>
-            {% if site.email %}
-            <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description | escape }}</p>
-      </div>
+    <div class="footer__column footer-col-1">
+      <h2>Categories</h2>
+      <ul class="contact-list">
+        <li>
+          <a href="/tutorials/">Tutorials</a>
+        </li>
+        <li>
+          <a href="/coding-best-practices/">Coding Tips</a>
+        </li>
+        <li>
+          <a href="/personal/">Personal</a>
+        </li>
+        <li>
+          <a href="/reviews/">Reviews</a>
+        </li>
+      </ul>
     </div>
 
-    {% for category in site.categories %}
-    <a href="/{{ category[0] }}/" style="text-decoration: none;">
-      {% if category[0] == 'aws' %}
-        {{ category[0] | upcase }}
-      {% else %}
-        {{ category[0] | capitalize }}
-      {% endif %}
-    </a><br/>
-    {% endfor %}
+    <div class="footer__column footer-col-2">
+      <ul class="social-media-list">
+        {% if site.github_username %}
+        <li>
+          {% include icon-github.html username=site.github_username %}
+        </li>
+        {% endif %}
+
+        {% if site.twitter_username %}
+        <li>
+          {% include icon-twitter.html username=site.twitter_username %}
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+
+    <div class="footer__column footer-col-3">
+      <p>{{ site.description | escape }}</p>
+    </div>
 
   </div>
 
 </footer>
-  <script type="text/javascript" src="/js/prism.js"></script>
-  <script type="text/javascript" src="/js/bundle.js"></script>
+
+<script type="text/javascript" src="/js/prism.js"></script>
+<script type="text/javascript" src="/js/bundle.js"></script>

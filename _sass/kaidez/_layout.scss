@@ -1,6 +1,13 @@
+
+.header,
+.footer {
+  font-family: 'Josefin Sans', cursive;
+}
+
 /**
  * Site header
  */
+
 .header {
   min-height: $spacing-unit * 1.865;
   padding-bottom: 20px;
@@ -12,9 +19,11 @@
   background: #000;
 
   &__logo {
-    width: 202px;
+    width: 221px;
     margin: 0 auto;
     display: block;
+
+    text-align: center;
 
     &--h1 {
       margin-bottom: 0;
@@ -31,19 +40,18 @@
     margin: 0 14px;
     color: #b149dc;
 
-    font-family: 'Josefin Sans', cursive;
     font-weight: 900;
     &--page-link,
     &--page-link:visited {
       margin: 0 14px;
 
-      font-family: 'Josefin Sans', cursive;
+      // font-family: 'Josefin Sans', cursive;
       font-weight: 900;
       text-decoration: none;
     }
 
     &--page-link:hover {
-       margin: 0 14px;
+      margin: 0 14px;
       color: #b149dc;
       text-decoration: underline;
     }
@@ -136,7 +144,7 @@ a.post-link {
 .nav {
   line-height: $base-line-height * $base-font-size * 2.25;
 
-  font-family: 'Josefin Sans', cursive;
+  // font-family: 'Josefin Sans', cursive;
   font-weight: 900;
 
   .nav-trigger {
@@ -231,14 +239,8 @@ a.post-link {
   margin-left: 0;
 }
 
-.footer-col-wrapper {
-  @include relative-font-size(0.9375);
-  color: $grey-color;
-  margin-left: -$spacing-unit / 2;
-  @extend %clearfix;
-}
 
-.footer-col {
+.footer__column {
   float: left;
   margin-bottom: $spacing-unit / 2;
   padding-left: $spacing-unit / 2;
@@ -273,7 +275,7 @@ a.post-link {
 }
 
 @include media-query($on-palm) {
-  .footer-col {
+  .footer__column {
     float: none;
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
     width:         calc(100% - (#{$spacing-unit} / 2));
