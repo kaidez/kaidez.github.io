@@ -71,4 +71,10 @@
   a.header__nav--page-link:hover {
     color: #fff;
   }
+
+  .footer {
+    &__column {
+      margin-bottom: 46px;
+    }
+  }
 }
