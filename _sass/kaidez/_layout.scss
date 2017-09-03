@@ -212,6 +212,10 @@ a.post-link {
  * Site footer
  */
 .footer {
+  height: 200px;
+
+  color: #fff;
+  background-color: #251334;
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
 }
@@ -353,6 +357,19 @@ a.post-link {
   }
 }
 
+.post {
+
+  &__image-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &--image-styles {
+    border-radius: 6px;
+    width: 100%;
+  }
+
+}
 .category__description {
   margin-bottom: $bottom-margin;
 }

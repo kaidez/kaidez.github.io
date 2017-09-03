@@ -16,6 +16,12 @@ type: BlogPosting
   </header>
 
   <div class="post__content" itemprop="articleBody">
+    {% if page.og-image %}
+    <div class="post__image-container">
+      <img src="/img/{{ page.og-image }}" class="post--image-styles" />
+    </div>
+    {% endif %}
+
     {{ content }}
   </div>
 
