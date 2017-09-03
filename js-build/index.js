@@ -11,7 +11,7 @@ render(
   document.getElementById('navReactEntryPoint')
 )
 
-// Load <Navigation /> into <nav id='footerReactEntryPoint' />
+// Load <Footer /> into <nav id='footerReactEntryPoint' />
 render(
   <Footer />,
   document.getElementById('footerReactEntryPoint')
