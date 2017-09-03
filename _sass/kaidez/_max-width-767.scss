@@ -30,8 +30,6 @@
         margin: 0;
         display: block;
 
-        color: #fff;
-
         &:hover {
           margin: 0;
           text-decoration: none;
@@ -63,5 +61,11 @@
       background-color: #fff;
       border-radius: 2px;
     }
+  }
+
+  a.header__nav--page-link,
+  a.header__nav--page-link:visited,
+  a.header__nav--page-link:hover {
+    color: #fff;
   }
 }
