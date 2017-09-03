@@ -236,6 +236,11 @@ a.post-link {
     padding-left: 15px;
 
     @extend %clearfix;
+
+    &--item {
+      display: inline-block;
+      padding-right: 12px;
+    }
   }
 
   &--list-item {
@@ -247,17 +252,16 @@ a.post-link {
 
     list-style: none;
 
-    &--page-link,
-    &--page-link:visited {
-      text-decoration: none;
-    }
-
-    &--page-link:hover {
-      text-decoration: underline;
-    }
-
   }
 
+  &--page-link,
+  &--page-link:visited {
+    text-decoration: none;
+  }
+
+  &--page-link:hover {
+    color: #c3abce;
+  }
 }
 
 .footer-col-1 {
