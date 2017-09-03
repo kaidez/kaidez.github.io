@@ -10,8 +10,6 @@ cat-name: "Reviews"
 og-image: default-image.jpg
 tags: [javascript, review]
 ---
-
-<img src="/img/ejs.png" class="post-pic" alt="Eloquent JavaScript book cover" width="250" height="330">
 *Disclaimer: the author of this book has graciously [given it away for free online][2] but please feel free to support his efforts by buying it on Amazon either in [print format][3] or [Kindle format][4]. And know that, due to my affiliate relationships, you will be putting a few bucks in my pocket also if you buy it via one of these two links.*
 
 
@@ -23,7 +21,7 @@ If you’ve ever played any level of organized basketball, you know that you don
 
 Simply put, you must master the fundamentals before you become a star. JavaScript is no different and Marijn Haverbeke’s *Eloquent JavaScript* is one of the best fundamental JS books I’ve ever read.
 
-*Eloquent* takes all the basic JavaScript building blocks, variables, functions, arrays, etc., and goes into great detail on their role in JS. By doing things like pointing out that objects and arrays are how JS manages data and clarifying the role of variables (“They do not *contain* values, they *grasp* them”), the book does great job highlighting that the basics are more than just, well, basic
+<img src="/img/ejs.png" class="post-pic" alt="Eloquent JavaScript book cover" width="250" height="330">*Eloquent* takes all the basic JavaScript building blocks, variables, functions, arrays, etc., and goes into great detail on their role in JS. By doing things like pointing out that objects and arrays are how JS manages data and clarifying the role of variables (“They do not *contain* values, they *grasp* them”), the book does great job highlighting that the basics are more than just, well, basic
 
 The book also discusses other common JavaScript concepts such as regular expressions and event handling. But it’s key to mention that it covers things that have increased in popularity over the years, dependency management, prototypal inheritance and proper namespacing in particular. The fact that it covers these three latter things highlight an important point:
 
