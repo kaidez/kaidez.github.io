@@ -19,7 +19,6 @@ export class Navigation extends Component {
     clickTarget
     ?
     this.setState(prevState => ({
-      isToggleOn: !prevState.isToggleOn,
       isMenuVisible: !prevState.isMenuVisible
     }))
     :
@@ -45,13 +44,7 @@ export class Navigation extends Component {
           <span className="header--menu-line"></span>
           <span className="header--menu-line"></span>
         </div>
-        {
-          this.state.isMenuVisible
-          ?
-          <Menu />
-          :
-          null
-        }
+        <Menu isMenuVisible={this.state.isMenuVisible} />
       </div>
     )
   }
