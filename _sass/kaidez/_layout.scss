@@ -213,7 +213,7 @@ a.post-link {
  * Site footer
  */
 .footer {
-  padding: $spacing-unit 0;
+  padding: 30px 0 100px;
 
   font-size: 16px;
   color: #fff;
@@ -232,7 +232,7 @@ a.post-link {
 
   &__colophon {
     display: inline-block;
-    margin-top: 42px;
+    margin-top: 60px;
     padding-left: 15px;
 
     @extend %clearfix;

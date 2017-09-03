@@ -73,6 +73,7 @@
   }
 
   .footer {
+    padding: 30px 0;
     &__column {
       margin-bottom: 46px;
       &--2 {
@@ -80,6 +81,9 @@
       }
     }
 
+    &__colophon {
+      margin-top: 42px;
+    }
 
   }
 }
