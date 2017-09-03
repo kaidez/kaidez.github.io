@@ -6,7 +6,7 @@ permalink: /reasons-design-websites-internet-explorer-6/
 layout: post
 excerpt: HTML5 Gallery, mostly maintained by the HTML5 expert over at HTML5 Doctor, is added to kaidez.com's Coolsite list
 categories: coding-best-practices
-cat-name: "Code Tips"
+category-name: Coding Tips
 tags: [Internet Explorer]
 og-image: default-image.jpg
 ---

@@ -6,7 +6,7 @@ excerpt: kaidez developed Almay's Facebook What's New page following some best p
 layout: post
 permalink: /almay-facebook-page/
 categories: personal
-cat-name: "Personal"
+category-name: "Personal"
 tags: [mobile, almay, html5, facebook, kai]
 og-image: default-image.jpg
 ---

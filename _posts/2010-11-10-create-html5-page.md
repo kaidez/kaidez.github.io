@@ -6,7 +6,7 @@ layout: post
 permalink: /create-html5-page/
 excerpt: Understanding the HTML5 DTD and Character Set Needed For Your First HTML5 Page.
 categories: tutorials
-cat-name: "Tutorials"
+category-name: "Tutorials"
 tags: [tutorial, html5]
 og-image: default-image.jpg
 ---

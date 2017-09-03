@@ -6,7 +6,7 @@ layout: post
 excerpt: kaidez recalls the best about Steve Jobs
 permalink: /remembering-steve-jobs/
 categories: personal
-cat-name: "Personal"
+category-name: "Personal"
 og-image: default-image.jpg
 tags: [rant, kai]
 ---

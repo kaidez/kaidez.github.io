@@ -6,7 +6,7 @@ layout: post
 excerpt: A tutorial on creating a rounded corner, transparent CSS3 link in Internet Explorer 6 through 8 with CSS3 PIE
 permalink: /css3-pie-link-tutorial/
 categories: tutorials
-cat-name: "Tutorials"
+category-name: "Tutorials"
 tags: [css, tute]
 og-image: default-image.jpg
 ---

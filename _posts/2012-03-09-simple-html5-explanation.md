@@ -6,7 +6,7 @@ layout: post
 excerpt: A lengthy but simple explanation of what HTML5 is with suggestions on how business can use it. Very little technical language is used.
 permalink: /simple-html5-explanation/
 categories: coding-best-practices
-cat-name: "Code Tips"
+category-name: Coding Tips
 og-image: default-image.jpg
 tags: [html5, best practice]
 ---

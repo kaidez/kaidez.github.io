@@ -6,7 +6,7 @@ layout: post
 excerpt: A demo of how to optimize CSS with Gulp, Grunt and tasks like uncss and critical path css. Has a link to fully-commented code on GitHub.
 permalink: /css-build-demo/
 categories: coding-best-practices
-cat-name: "Code Tips"
+category-name: Coding Tips
 og-image: css-build-demo.jpg
 tags: [javascript, gulp, css, screencast]
 ---

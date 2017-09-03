@@ -6,7 +6,7 @@ layout: post
 excerpt: An extensive article with tips, resources and ideas for high school students wanting to work in the web design or development field someday
 permalink: /10-tips-high-school-students-web-designers-web-developers/
 categories: personal
-cat-name: "Personal"
+category-name: "Personal"
 og-image: default-image.jpg
 tags: [javascript, conference, kai]
 ---

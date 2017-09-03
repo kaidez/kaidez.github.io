@@ -6,7 +6,7 @@ layout: post
 permalink: /tutorial-simple-effective-jquery-image-rollover/
 excerpt: A very popular, cross-browser complaint jQuery image rollover
 categories: tutorials
-cat-name: "Tutorials"
+category-name: "Tutorials"
 og-image: default-image.jpg
 tags: [ajax, jquery, html5]
 ---

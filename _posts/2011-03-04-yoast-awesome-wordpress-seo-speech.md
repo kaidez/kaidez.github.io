@@ -6,7 +6,7 @@ layout: post
 excerpt: A quick review of a great WordPress SEO speech from Joost de Valk, AKA Yoast, with the video embedded on the page for instant viewing
 permalink: /yoast-awesome-wordpress-seo-speech/
 categories: coding-best-practices
-cat-name: "Code Tips"
+category-name: Coding Tips
 og-image: default-image.jpg
 tags: [wordpress, seo]
 ---

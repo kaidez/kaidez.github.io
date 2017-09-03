@@ -6,7 +6,7 @@ layout: post
 permalink: /web-components-demo/
 excerpt: A Web Components demo using just templates and Shadow DOM, mostly templates. Post includes many links to Web Component learning resources.
 categories: coding-best-practices
-cat-name: "Code Tips"
+category-name: Coding Tips
 tags: [web components, shadow DOM, templates]
 og-image: web-components-demo.jpg
 redirect_from:

@@ -6,7 +6,7 @@ layout: post
 permalink: /cnn-calls-track-option-google-killer/
 excerpt: Quick recap of CNN's article on the FTC's proposal of adding a do not track feature that consumers can use for internet browsing, short opinion included
 categories: personal
-cat-name: "Personal"
+category-name: "Personal"
 tags: [rant]
 og-image: default-image.jpg
 ---

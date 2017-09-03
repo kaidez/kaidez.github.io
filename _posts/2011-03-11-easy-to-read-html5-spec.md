@@ -6,7 +6,7 @@ layout: post
 excerpt: Ben Schwarz gives us HTML5-A technical specification for Web developers, translating WHATWG's HTML5 arduous spec into layman's terms
 permalink: /easy-to-read-html5-spec/
 categories: coding-best-practices
-cat-name: "Code Tips"
+category-name: Coding Tips
 og-image: default-image.jpg
 tags: [html5]
 ---

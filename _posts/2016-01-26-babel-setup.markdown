@@ -3,7 +3,8 @@ layout: post
 comments: true
 title:  "Babel Setup For Beginners"
 date:   2016-05-12 22:07:59 -0400
-categories: coding-tips
+categories: coding-best-practices
+category-name: Coding Tips
 permalink: /babel-setup/
 excerpt: How I set up Babel, Browserify, Babelify & Babel ES2015 presets for web development. Great for Babel beginners. Contains lots of resource links.
 og-image: babel-logo.jpg

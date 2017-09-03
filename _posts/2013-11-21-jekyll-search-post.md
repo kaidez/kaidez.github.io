@@ -6,7 +6,7 @@ layout: post
 excerpt: jQuery-powered search functionality for a Jekyll site with fallback code if JS or CSS is disabled. Look at the demo before using the code.
 permalink: /custom-jekyll-search/
 categories: tutorials
-cat-name: "Tutorials"
+category-name: "Tutorials"
 og-image: jekyllSearchPostImage.jpg
 tags: [jekyll, jquery, accessibility, javascript, tutorial]
 ---

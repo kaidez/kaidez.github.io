@@ -6,7 +6,7 @@ layout: post
 excerpt: kaidez reviews his progress with learning web development and how his blog is doing in terms of content, SEO and social network promotion
 permalink: /50th-article-blog-review/
 categories: personal
-cat-name: "Personal"
+category-name: "Personal"
 tags: [css, html5, seo, kai]
 og-image: default-image.jpg
 ---

@@ -6,7 +6,7 @@ layout: post
 permalink: /update-html5seomicrodata-post/
 excerpt: Oli Studholme from HTML5 Doctor corrects my previous post on HTML5, SEO and microdata
 categories: coding-best-practices
-cat-name: "Code Tips"
+category-name: Coding Tips
 og-image: default-image.jpg
 tags: [html5, review]
 ---

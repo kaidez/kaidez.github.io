@@ -6,7 +6,7 @@ layout: post
 permalink: /site-redesign-2013/
 excerpt: kaidez.com uses Jekyll as a blog engine, Grunt as a task runner, RequireJS for modular JavaScript management, & Bower for package management
 categories: personal
-cat-name: "Personal"
+category-name: "Personal"
 tags: [jekyll, bower, requirejs, grunt, amd]
 og-image: site-relaunch.jpg
 ---

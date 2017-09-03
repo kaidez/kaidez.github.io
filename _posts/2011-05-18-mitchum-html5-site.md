@@ -6,7 +6,7 @@ layout: post
 excerpt: The new Mitchum site was developed with HTML5 using HTML5 Boilerplate, Visual Studio 2010 with NuGet, CSS and some light jQuery
 permalink: /mitchum-html5-site/
 categories: personal
-cat-name: "Personal"
+category-name: "Personal"
 tags: [css, jquery, mitchum, html5, microsoft, kai]
 og-image: default-image.jpg
 ---

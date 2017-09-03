@@ -6,7 +6,7 @@ layout: post
 permalink: /html5-project-series-2-work-subcategory-playlist-wireframes/
 excerpt: Part Two of my explanation on how I created wireframed my HTML5 site before I developed and designed it
 categories: personal
-cat-name: "Personal"
+category-name: "Personal"
 og-image: default-image.jpg
 tags: [html5]
 ---

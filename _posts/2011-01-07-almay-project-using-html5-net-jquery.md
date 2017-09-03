@@ -6,7 +6,7 @@ layout: post
 permalink: /almay-project-using-html5-net-jquery/
 excerpt: Kaidez developed four micro-sites for Almay using HTML5 video, jQuery, .NET and CSS
 categories: personal
-cat-name: "Personal"
+category-name: "Personal"
 tags: [almay, css, .NET]
 og-image: default-image.jpg
 ---

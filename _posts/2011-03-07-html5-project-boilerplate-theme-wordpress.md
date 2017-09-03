@@ -6,7 +6,7 @@ layout: post
 permalink: /html5-project-boilerplate-theme-wordpress/
 excerpt: Walk-through of Aaron T. Grogg's excellent HTML5 Boilerplate-based WordPress theme. Includes a great admin screen for custom configuration.
 categories: coding-best-practices
-cat-name: "Code Tips"
+category-name: Coding Tips
 og-image: default-image.jpg
 tags: [html5, wordpress]
 ---

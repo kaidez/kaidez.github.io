@@ -6,7 +6,7 @@ layout: post
 excerpt: JavaScript closures tutorial using the New York City subway to explain how they work. With demo, code samples and short reading list.
 permalink: /javascript-closures-tutorial/
 categories: tutorials
-cat-name: "Tutorials"
+category-name: "Tutorials"
 og-image: default-image.jpg
 tags: [javascript, beginner, tute]
 ---

@@ -6,7 +6,7 @@ layout: post
 permalink: /html5-seo-microdata/
 excerpt: HTML5's Microdata feature is a good tactic if properly formatted
 categories: coding-best-practices
-cat-name: "Code Tips"
+category-name: Coding Tips
 og-image: default-image.jpg
 tags: [html5]
 ---

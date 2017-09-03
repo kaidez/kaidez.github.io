@@ -6,7 +6,7 @@ layout: post
 permalink: /load-data-attributes-mouseclicks/
 excerpt: "Use mouse clicks to load information stored in data attributes onto a web page in a cross-browser compatible way. Contains lots of demos."
 categories: tutorials
-cat-name: "Tutorials"
+category-name: "Tutorials"
 tags: [html5, javascript]
 og-image: data-attribute.jpg
 ---

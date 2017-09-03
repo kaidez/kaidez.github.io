@@ -6,7 +6,7 @@ layout: post
 excerpt: Use jQuery.filter() & Attribute Selectors with HTML5 data attributes to filter out specific content on a click. Includes a code demo.
 permalink: /filter-content-jquery/
 categories: tutorials
-cat-name: "Tutorials"
+category-name: "Tutorials"
 og-image: jquery-filter.jpg
 tags: [jquery, javascript, data attributes]
 ---

@@ -6,7 +6,7 @@ layout: post
 excerpt: An article on responsive web design, CSS3 media queries and using it in kaidez's HTML5 Project, resource list of links at the end
 permalink: /html5-project-update-responsive-web-design/
 categories: coding-best-practices
-cat-name: "Code Tips"
+category-name: Coding Tips
 og-image: default-image.jpg
 tags: [rwd, html5, media queries]
 ---

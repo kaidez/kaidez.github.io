@@ -6,7 +6,7 @@ permalink: /mobile-web-development-best-practice-resources/
 layout: post
 excerpt: Great mobile web development best practice resource list-includes site speed gurus, blogs & a podcast featuring jQuery creator, John Resig.
 categories: coding-best-practices
-cat-name: "Code Tips"
+category-name: Coding Tips
 og-image: default-image.jpg
 tags: [mobile, html5, jquery, steve souders, practice]
 ---

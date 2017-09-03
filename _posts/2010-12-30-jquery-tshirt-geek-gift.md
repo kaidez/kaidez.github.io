@@ -6,7 +6,7 @@ layout: post
 permalink: /jquery-tshirt-geek-gift/
 excerpt: My cool jQuery t-shirt
 categories: personal
-cat-name: "Personal"
+category-name: "Personal"
 tags: [kai, jquery]
 og-image: default-image.jpg
 ---

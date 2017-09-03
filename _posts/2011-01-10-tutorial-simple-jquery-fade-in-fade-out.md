@@ -6,7 +6,7 @@ layout: post
 permalink: /tutorial-simple-jquery-fade-in-fade-out/
 excerpt: An easy jQuery tutorial to fade in and fade out two images with a delay
 categories: tutorials
-cat-name: "Tutorials"
+category-name: "Tutorials"
 og-image: default-image.jpg
 tags: [ajax, jquery, html5]
 redirect_from:

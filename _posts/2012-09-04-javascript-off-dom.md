@@ -6,7 +6,7 @@ layout: post
 excerpt: How to create/change page elements off-DOM with JavaScript. Discusses createDocumentFragment, cloneNode, appendChild, jQuery .attr() & more.
 permalink: /javascript-off-dom/
 categories: tutorials
-cat-name: "Tutorials"
+category-name: "Tutorials"
 og-image: default-image.jpg
 tags: [javascript,  screencast, tute]
 ---

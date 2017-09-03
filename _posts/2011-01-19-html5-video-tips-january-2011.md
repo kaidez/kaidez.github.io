@@ -6,7 +6,7 @@ layout: post
 permalink: /html5-video-tips-january-2011/
 excerpt: HTML5 Video Tips from kaidez
 categories: coding-best-practices
-cat-name: "Code Tips"
+category-name: Coding Tips
 og-image: default-image.jpg
 tags: [html5, mobile]
 ---

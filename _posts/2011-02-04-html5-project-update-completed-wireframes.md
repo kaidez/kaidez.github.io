@@ -6,7 +6,7 @@ layout: post
 permalink: /html5-project-update-completed-wireframes/
 excerpt: HTML5 wireframe preview of kaidez.com portfolio site
 categories: personal
-cat-name: "Personal"
+category-name: "Personal"
 og-image: default-image.jpg
 tags: [html5]
 ---

@@ -6,7 +6,7 @@ layout: post
 permalink: /two-javascript-tasks-jquery-does-not-replace/
 excerpt: Short article about how jQuery does not have a replacement for JavaScript's document.write and has a not-so-great replacement for its navigator.UserAgent
 categories: coding-best-practices
-cat-name: "Code Tips"
+category-name: Coding Tips
 og-image: default-image.jpg
 tags: [jquery, javascript]
 ---

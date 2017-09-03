@@ -6,7 +6,7 @@ layout: post
 excerpt: After almost ten years, I'm leaving Revlon to pursue a exciting new opportunity.
 permalink: /revlon/
 categories: personal
-cat-name: "Personal"
+category-name: "Personal"
 og-image: revlon-badge.jpg
 ---
 Today, May 7th, 2015, marks my final day as a Revlon Cosmetics employee. I started on August 25th, 2005, meaning that I'm leaving a little less than four months from my ten-year anniversary.

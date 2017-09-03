@@ -6,7 +6,7 @@ layout: post
 permalink: /kai-gittens-article-inspired-magazine/
 excerpt: Kaidez guest post at Inspired Magazine responded to Cameron Chapman's web designer article at Smashing Magazine
 categories: personal
-cat-name: "Personal"
+category-name: "Personal"
 og-image: default-image.jpg
 tags: [kai]
 ---

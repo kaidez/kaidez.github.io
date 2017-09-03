@@ -6,7 +6,7 @@ layout: post
 permalink: /site-update/
 excerpt: A quick update about the status of kaidez.com, including the announcing of a new, upcoming site design.
 categories: personal
-cat-name: "Personal"
+category-name: "Personal"
 tags: [html5, kai]
 og-image: default-image.jpg
 ---

@@ -6,7 +6,7 @@ layout: post
 permalink: /revlon-pro-brands/
 excerpt: kaidez developed the RevlonProBrands.com site using GitHub Atom, Jade, OOCSS, Modernizr’s yepnope functionality, Gulp & Grunt.
 categories: personal
-cat-name: "Personal"
+category-name: "Personal"
 tags: [revlon, atom, jade, oocss, gulp, grunt, Modernizr, yepnope, GitHub]
 og-image: revlon-pro-brands.jpg
 ---

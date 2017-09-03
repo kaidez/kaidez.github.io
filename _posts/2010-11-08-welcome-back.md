@@ -6,7 +6,7 @@ layout: post
 permalink: /welcome-back/
 excerpt: kaidez.com is no longer a blog that focuses on soccer/footie...it now focuses on web development.
 categories: personal
-cat-name: "Personal"
+category-name: "Personal"
 tags: []
 og-image: default-image.jpg
 ---

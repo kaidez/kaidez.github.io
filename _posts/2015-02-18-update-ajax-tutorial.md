@@ -6,7 +6,7 @@ layout: post
 excerpt: kaidez's old AJAX tutorial was updated. jQuery AJAX is discussed in depth and there's a short discussion on JavaScript Promises.
 permalink: /update-ajax-tutorial/
 categories: personal
-cat-name: "Personal"
+category-name: "Personal"
 og-image: ajax-image.jpg
 tags: [ajax, javascript, kaidez]
 ---

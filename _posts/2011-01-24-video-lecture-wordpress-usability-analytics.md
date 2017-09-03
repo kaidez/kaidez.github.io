@@ -6,7 +6,7 @@ layout: post
 excerpt: Stefanos Kofopoulos from pestaola.gr shares some excellent usability & analytics tips that he applied to his Wordpress-based blog.
 permalink: /video-lecture-wordpress-usability-analytics/
 categories: coding-best-practices
-cat-name: "Code Tips"
+category-name: Coding Tips
 og-image: default-image.jpg
 tags: [wordpress]
 ---

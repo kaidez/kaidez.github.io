@@ -6,7 +6,7 @@ permalink: /learn-javascript-before-jquery/
 layout: post
 excerpt: A list of good reasons why it's better to learn JavaScript before jQuery. A short learning resource list at the end to help you get started.
 categories: coding-best-practices
-cat-name: "Code Tips"
+category-name: Coding Tips
 og-image: default-image.jpg
 tags: [javascript, beginner, jquery, best practice]
 ---

@@ -6,7 +6,7 @@ layout: post
 permalink: /coolsite-html5-readiness/
 excerpt: HTML5 Readiness neatly displays browser support for HTML5 and CSS3
 categories: coding-best-practices
-cat-name: "Code Tips"
+category-name: Coding Tips
 og-image: default-image.jpg
 tags: [html5, css3]
 ---

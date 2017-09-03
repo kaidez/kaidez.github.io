@@ -6,7 +6,7 @@ layout: post
 excerpt: Learn how to use RequireJS in WordPress. Includes a walk-through of how RequireJS works and how WordPress manages JavaScript internally.
 permalink: /requirejs-wordpress/
 categories: coding-best-practices
-cat-name: "Code Tips"
+category-name: Coding Tips
 og-image: require-wordpress.jpg
 tags: [RequireJS, Wordpress, jQuery, AMD, javascript]
 ---

@@ -6,7 +6,7 @@ layout: post
 excerpt: kaidez's view of Flash's evolution, rise and (somewhat) fall.
 permalink: /history-of-flash/
 categories: personal
-cat-name: "Personal"
+category-name: "Personal"
 tags: [flash, me]
 og-image: default-image.jpg
 ---

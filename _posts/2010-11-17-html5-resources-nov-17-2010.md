@@ -6,7 +6,7 @@ layout: post
 excerpt: Great HTML5 learning resources
 permalink: /html5-resources-nov-17-2010/
 categories: coding-best-practices
-cat-name: "Code Tips"
+category-name: Coding Tips
 tags: [html5, html5 video]
 og-image: default-image.jpg
 ---

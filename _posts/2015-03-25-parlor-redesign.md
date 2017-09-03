@@ -6,7 +6,7 @@ layout: post
 excerpt: kaidez created a WordPress site for a Montclair, NJ hair salon, with a strong focus on optimizing the site for local SEO.
 permalink: /parlor-redesign/
 categories: personal
-cat-name: "Personal"
+category-name: "Personal"
 og-image: parlor-redesign.jpg
 tags: [personal, wordpress]
 ---

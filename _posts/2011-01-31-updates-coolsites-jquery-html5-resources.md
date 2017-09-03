@@ -6,7 +6,7 @@ layout: post
 permalink: /updates-coolsites-jquery-html5-resources/
 excerpt: Additions to my list of resources to help you learn web design and development and my Coolsites list, including a Sitecore and .NET development blog
 categories: personal
-cat-name: "Personal"
+category-name: "Personal"
 og-image: default-image.jpg
 tags: [html5, sitecore, css3]
 ---

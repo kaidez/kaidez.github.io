@@ -6,7 +6,7 @@ layout: post
 excerpt: kaidez lays out a plan on how he'll learn .NET/C#.
 permalink: /learning-microsoft-dot-net-c-sharp/
 categories: personal
-cat-name: "Personal"
+category-name: "Personal"
 tags: [kai, C#, .NET]
 og-image: default-image.jpg
 ---

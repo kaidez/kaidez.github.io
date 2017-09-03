@@ -6,7 +6,7 @@ layout: post
 permalink: /html5-boilerplate-video/
 excerpt: Paul Irish's HTML5 Boilerplate video is extremely informative as it demonstrates many great CSS and JavaScript hacks and best practices
 categories: coding-best-practices
-cat-name: "Code Tips"
+category-name: Coding Tips
 og-image: default-image.jpg
 tags: [html5]
 ---

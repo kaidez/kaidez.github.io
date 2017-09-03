@@ -6,7 +6,7 @@ excerpt: Get quick answers first, then learn how Git works with GitHub. This pos
 layout: post
 permalink: /remove-files-from-github/
 categories: tutorials
-cat-name: "Tutorials"
+category-name: "Tutorials"
 og-image: gitTutorial.jpg
 tags: [git, github]
 ---

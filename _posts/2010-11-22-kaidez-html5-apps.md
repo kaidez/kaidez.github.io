@@ -6,7 +6,7 @@ layout: post
 excerpt: I'm starting to narrow down what my favorite HTML5 tools are.
 permalink: /kaidez-html5-apps/
 categories: coding-best-practices
-cat-name: "Code Tips"
+category-name: Coding Tips
 tags: [html5]
 og-image: default-image.jpg
 ---
