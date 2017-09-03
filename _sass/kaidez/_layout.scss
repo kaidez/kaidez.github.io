@@ -262,6 +262,14 @@ a.post-link {
   &--page-link:hover {
     color: #c3abce;
   }
+
+  &--profile-image {
+    position: relative;
+    right: 26px;
+
+    border: 1px solid #491f5a;
+    border-radius: 50%;
+  }
 }
 
 .footer-col-1 {
