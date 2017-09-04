@@ -6,7 +6,6 @@ export class Navigation extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      isToggleOn: true,
       isMenuVisible: false
     }
     this.toggleMobileMenu = this.toggleMobileMenu.bind(this)
