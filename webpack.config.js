@@ -7,11 +7,6 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'js')
   },
-  devServer: {
-    inline: true,
-    contentBase: './_site',
-    port: 4000
-  },
   module : {
     rules: [
       {
