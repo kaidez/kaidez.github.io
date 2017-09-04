@@ -7,7 +7,15 @@ class FooterContent extends Component {
     const {isFooterVisible} = this.props
 
     return(
-      <div className="footer__inner-wrapper">
+      <div className=
+        {
+          isFooterVisible
+          ?
+          "footer__inner-wrapper--isHidden"
+          :
+          "footer__inner-wrapper"
+        }
+      >
         <div className="footer__column footer__column--1">
           <h2 className="footer__heading">Categories</h2>
           <ul className="footer__category-nav">
@@ -31,7 +39,7 @@ class FooterContent extends Component {
         </div>
 
         <div className="footer__column footer__column--3">
-          Kai "kaidez" Gittens is a front-end web developer for JPMorgan Chase. He has contributed to web experiences for Revlon, jetBlue, Everyday Health and the United Nations. He is also a former JavaScript instructor for lynda.com and is a loyal supporter of Chelsea F.C.
+          Kai "kaidez" Gittens is a front-end web developer for JPMorgan Chase. He has contributed to web experiences for Revlon, jetBlue, Everyday Health and the United Nations. He is a former JavaScript instructor for lynda.com and is a loyal supporter of Chelsea F.C.
         </div>
 
         <div className="footer__colophon">

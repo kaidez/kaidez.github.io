@@ -74,6 +74,14 @@
 
   .footer {
     padding: 30px 0;
+    &__inner-wrapper {
+      &--isVisible {
+        display: block;
+      }
+      &--isHidden {
+        display: none;
+      }
+    }
     &__column {
       margin-bottom: 46px;
       &--2 {
@@ -83,6 +91,24 @@
 
     &__colophon {
       margin-top: 42px;
+    }
+
+    &__button {
+      display: block;
+
+      text-align: center;
+
+      &--isHidden {
+        display: none;
+      }
+    }
+
+    &--isVisible {
+      display: block;
+    }
+
+    &--isHidden {
+        display: none;
     }
 
   }

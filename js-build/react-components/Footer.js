@@ -6,14 +6,14 @@ export class Footer extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      isFooterVisible: false
+      isFooterVisible: true
     }
     this.toggleFooter = this.toggleFooter.bind(this)
   }
 
   toggleFooter(e) {
     e || e.window.event
-    const clickTarget = document.querySelector("#footer__button")
+    const clickTarget = document.querySelector("#footerButton")
 
     clickTarget
     ?
@@ -28,18 +28,19 @@ export class Footer extends Component {
     return(
       <div className="footer__wrapper">
         <p
-          id="footer__button"
+          id="footerButton"
           onClick={this.toggleFooter}
+          className={
+            !this.state.isFooterVisible
+            ?
+            "footer__button--isHidden"
+            :
+            "footer__button"
+          }
         >
           Click here to see the footer
         </p>
-        {
-            this.state.isFooterVisible
-            ?
-            null
-            :
-            <FooterContent />
-        }
+        <FooterContent isFooterVisible={this.state.isFooterVisible} />
       </div>
     )
   }
