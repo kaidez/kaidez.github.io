@@ -9,7 +9,7 @@ excerpt: A rant about how React, Redux and similar tools are part of JavaScript'
 og-image: state-of-javascript.jpg
 thumb-image: state-of-javascript-thumb.jpg
 ---
-React and Redux have demonstrated the value of well-implemented application state management within JavaScript. Despite this, developers complain about React and Redux quite often.
+The React/Redux combination has demonstrated the value of well-implemented application state management within JavaScript. Despite this, lots of developers complain about it.
 
 I'd like to think the breakdown of developers that do and don't complain about React/Redux is 50/50, and that some of the complaints are valid. Nevertheless, JS state management was bound to happen, especially when reviewing the key moments of JavaScript's evolution.
 
@@ -22,7 +22,7 @@ It was published by Dori Smith and the late, (very) great Tom Negrino. I don't u
 
 It was written in 1999, about four years after the initial JavaScript release. But it covers things that made JavaScript popular at that time: image manipulation, scrolling status bars, Java integration, etc.
 
-The book covers functions really well: it's where I first learned JS functions. It even cover cookies: <em>the first real instance of JavaScript state management.</em>
+The book covers functions really, <em>really</em> well: it's actually where I first learned about them. It even cover cookies: <em>the first real instance of JavaScript state management.</em>
 
 And there's also 33 pages on Dynamic HTML (DHTML), demonstrating DOM manipulation methods that now seem dated. All the manipulation in the book is done with <code>document.all</code> and <code>document.getElementById()</code> isn't mentioned at all.
 
@@ -31,7 +31,7 @@ While <code>document.getElementById()</code> would become the primary way to ini
 
 Using <code>document.getElementById()</code> as main entry point for DOM manipulation exposed developers to the DOM API as a whole. And once they saw how they could use this API to manipulate the page, it inspired a burst of creativity.
 
-This creativity was mostly noticed in things like drop-down menus and animations, but there were some cool DHTML "hacks" for state management. Many still in use to this day.
+This creativity was mostly noticed in things like drop-down menus and animations, but there were some cool DHTML "hacks" for state management. Many that are still in use to this day.
 
 The most popular hack was to add a class with a Boolean-type name to an element once JavaScript did something. For example: JS could toggle a class on the <code>body</code> tag, telling the browser it was visible:
 
@@ -49,7 +49,7 @@ Front-end developers primarily loved manipulating the DOM while back-end develop
 
 Also, it didn't help that DOM implementation differed across web browsers. The browser wars were still going on at this time, so writing code for two or three browsers seemed inefficient.
 
-Above all, the DOM was slow...REALLY slow. Using JavaScript to adjust the DOM didn't take hours, but the time it DID take was long by software standards.
+Above all, the DOM was slow...REALLY slow. JavaScript DOM manipulation didn't take hours, but the time it DID take was too long by software standards.
 
 However, clients liked the visual results provided by DOM manipulation. So it remained a best practice, evolved to be more efficient over time, and that was that.
 
@@ -89,6 +89,8 @@ That's where frameworks came in. <a href="http://www.javascriptmvc.com/">JavaScr
 Then JavaScript got a major update called ES6, or ES2015. Its syntax and features closely matched those of the more traditional languages, Java, C#, etc.
 
 <h3>...At (Roughly) The Same Time That React Arrives</h3>
-And then came React.
+And then came React JS.
+
+React expanded on the web component model that was rising in popularity at the time. It allowed you to load
 
 It's key to note that DOM manipulation was still in wide use among developers at this point. It still had issues, but the developer community defined best practices, like using <a href="http://jquery.com/">jQuery</a>, to manage those issues the best that it could.
