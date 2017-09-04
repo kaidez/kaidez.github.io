@@ -42,6 +42,7 @@ export class Navigation extends Component {
         >
           <span className="header--menu-line"></span>
           <span className="header--menu-line"></span>
+          <span className="header--menu-line"></span>
         </div>
         <Menu isMenuVisible={this.state.isMenuVisible} />
       </div>
