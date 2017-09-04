@@ -93,6 +93,8 @@ And then came React JS.
 
 React expanded on the web component model that was rising in popularity at the time. A web component was a custom HTML tag that contained other tags, styles and functionality.
 
-React
+Along with "component-izing" things, React also contained something called the "virtual DOM." It was part of React's API that updated page content in much more efficient way than old school DHTML-based DOM manipulation did.
+
+But the BIIIIIIIG thing that React bought to JavaScript was a state management system.
 
 It's key to note that DOM manipulation was still in wide use among developers at this point. It still had issues, but the developer community defined best practices, like using <a href="http://jquery.com/">jQuery</a>, to manage those issues the best that it could.
