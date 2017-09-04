@@ -91,6 +91,8 @@ Then JavaScript got a major update called ES6, or ES2015. Its syntax and feature
 <h3>...At (Roughly) The Same Time That React Arrives</h3>
 And then came React JS.
 
-React expanded on the web component model that was rising in popularity at the time. It allowed you to load
+React expanded on the web component model that was rising in popularity at the time. A web component was a custom HTML tag that contained other tags, styles and functionality.
+
+React
 
 It's key to note that DOM manipulation was still in wide use among developers at this point. It still had issues, but the developer community defined best practices, like using <a href="http://jquery.com/">jQuery</a>, to manage those issues the best that it could.
