@@ -373,14 +373,6 @@ a.post-link {
       margin-bottom: 20px;
     }
 
-    h2 {
-      @include relative-font-size(2);
-
-      @include media-query($on-laptop) {
-        @include relative-font-size(1.75);
-      }
-    }
-
     p {
       margin-bottom: 16px;
     }

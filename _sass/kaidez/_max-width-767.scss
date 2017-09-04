@@ -1,4 +1,15 @@
 @media (max-width: 767px) {
+  .article-list-item__header,
+  .blog-list-item__header,
+  .page-list-item__header,
+  .category-list-item__header,
+  .category__header {
+    margin-bottom: 0;
+
+    line-height: 28px;
+    font-size: 22px;
+  }
+
   .header {
     &__wrapper {
       height: 79px;
@@ -96,6 +107,7 @@
     &__button {
       display: block;
 
+      font-size: 22px;
       text-align: center;
 
       &--isHidden {
