@@ -1,6 +1,5 @@
 // Non-React JavaScript goes here
 
-
 const doEventOnElement = (element, getEvent, fn) => {
   for (let i = 0; i < element.length; i++) {
     element[i].addEventListener(getEvent, event => {
@@ -15,4 +14,3 @@ function goToPage(el) {
 
 const getPostDiv =  document.querySelectorAll(".post-link-hook");
 export const divClick = doEventOnElement(getPostDiv, 'click', goToPage)
-
