@@ -4,12 +4,12 @@ class FooterContent extends Component {
 
   render() {
 
-    const {isFooterVisible} = this.props
+    const {isFooterHiddenOnMobile} = this.props
 
     return(
       <div className=
         {
-          isFooterVisible
+          isFooterHiddenOnMobile
           ?
           "footer__inner-wrapper--isHidden"
           :

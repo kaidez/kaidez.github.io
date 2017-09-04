@@ -6,7 +6,7 @@ export class Footer extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      isFooterVisible: true
+      isFooterHiddenOnMobile: true
     }
     this.toggleFooter = this.toggleFooter.bind(this)
   }
@@ -18,7 +18,7 @@ export class Footer extends Component {
     clickTarget
     ?
     this.setState(prevState => ({
-      isFooterVisible: !prevState.isFooterVisible
+      isFooterHiddenOnMobile: !prevState.isFooterHiddenOnMobile
     }))
     :
     null
@@ -31,7 +31,7 @@ export class Footer extends Component {
           id="footerButton"
           onClick={this.toggleFooter}
           className={
-            !this.state.isFooterVisible
+            !this.state.isFooterHiddenOnMobile
             ?
             "footer__button--isHidden"
             :
@@ -40,7 +40,7 @@ export class Footer extends Component {
         >
           Click here to see the footer
         </p>
-        <FooterContent isFooterVisible={this.state.isFooterVisible} />
+        <FooterContent isFooterHiddenOnMobile={this.state.isFooterHiddenOnMobile} />
       </div>
     )
   }
