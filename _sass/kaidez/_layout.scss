@@ -407,6 +407,30 @@ a.post-link {
     margin-bottom: 20px;
   }
 
+  &__tweet-button {
+    width: 255px;
+    margin: 50px auto 30px;
+    display: block;
+    height: auto;
+    padding: 10px;
+
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #251334;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  a.post__tweet-button:link,
+  a.post__tweet-button:visited {
+    color: #fff;
+  }
+
+  a.post__tweet-button:hover {
+    color: #fff;
+    text-decoration: underline
+  }
+
   &--image-styles {
     border-radius: 6px;
     width: 100%;
