@@ -136,6 +136,26 @@ a.post-link {
       font-weight: 700;
     }
   }
+  &__see-all-posts {
+    width: 255px;
+    height: auto;
+    margin: 50px auto 30px;
+    display: block;
+    padding: 10px;
+
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #251334;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &--see-all-posts-link:link,
+  &--see-all-posts-link:visited,
+  &--see-all-posts-link:hover {
+    text-decoration: none;
+  }
+
 }
 
 .logo {
