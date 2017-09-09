@@ -22,7 +22,7 @@ It was published by Dori Smith and the late, (very) great Tom Negrino. I don't u
 
 It was written in 1999, about four years after the initial JavaScript release. But it covers things that made JavaScript popular at that time: image manipulation, scrolling status bars, Java integration, etc.
 
-The book covers functions really, <em>really</em> well: it's actually where I first learned about them. It even cover cookies: <em>the first real instance of JavaScript state management.</em>
+The book covers functions really, <em>really</em> well: it's actually where I first learned about them. It even covers cookies: <em>the first real instance of JavaScript state management.</em>
 
 And there's also 33 pages on Dynamic HTML (DHTML), demonstrating DOM manipulation methods that now seem dated. All the manipulation in the book is done with <code>document.all</code> and <code>document.getElementById()</code> isn't mentioned at all.
 
@@ -89,12 +89,17 @@ That's where frameworks came in. <a href="http://www.javascriptmvc.com/">JavaScr
 Then JavaScript got a major update called ES6, or ES2015. Its syntax and features closely matched those of the more traditional languages, Java, C#, etc.
 
 <h3>...At (Roughly) The Same Time That React Arrives</h3>
-And then came React JS.
+And then came React JS. It's a library for building the view portion of your.
 
-React expanded on the web component model that was rising in popularity at the time. A web component was a custom HTML tag that contained other tags, styles and functionality.
+React expands <a href="https://css-tricks.com/modular-future-web-components/"> on the web components model</a> that's been around for a while but is currently rising in popularity. Where a web component is a custom HTML tag encapsulates other tags and encapsulated any related CSS styles and JS functionality...it's essential a widget.
 
+<h3>Why React Is A Big deal...</h3>
+
+The BIG thing that React brings to JavaScript is a state management system, a system that tracks what your app is doing at any given time. Maybe a mobile menu was visible, maybe a particular piece of JSON data just loaded, etc.
+
+React state is in the form of a JavaScript object that developers manipulate to change. So if you want to change a React view, <em>you do it with state and not the DOM.</em>
+
+<h3>About the DOM...</h3>
 Along with "component-izing" things, React also contained something called the "virtual DOM." It was part of React's API that updated page content in much more efficient way than old school DHTML-based DOM manipulation did.
-
-But the BIIIIIIIG thing that React bought to JavaScript was a state management system.
 
 It's key to note that DOM manipulation was still in wide use among developers at this point. It still had issues, but the developer community defined best practices, like using <a href="http://jquery.com/">jQuery</a>, to manage those issues the best that it could.
