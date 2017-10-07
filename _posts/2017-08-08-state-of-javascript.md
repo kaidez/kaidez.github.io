@@ -107,3 +107,5 @@ It's key to note that DOM manipulation was still in wide use among developers at
 The BIG thing that React brings to JavaScript is a state management system, a system that tracks what your app is doing at any given time. Maybe a mobile menu was visible, maybe a particular piece of JSON data just loaded, etc.
 
 React state is in the form of a JavaScript object that developers manipulate to change. So if you want to change a React view, <em>you do it with state and not the DOM.</em>
+
+My two cents: JS developers need to re-learn a LOT of stuff!! Managing page content
