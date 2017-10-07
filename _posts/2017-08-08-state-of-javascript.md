@@ -20,11 +20,11 @@ This is the first JavaScript book I ever brought:
 
 It was published by Dori Smith and the late, (very) great Tom Negrino. I don't use it as a reference anymore, but keep it for sentimental reasons.
 
-It was written in 1999, about four years after the initial JavaScript release. But it covers things that made JavaScript popular at that time: image manipulation, scrolling status bars, Java integration, etc.
+It was written in 1999, about four years after JavaScript's initial release. But it covers the things that made JavaScript popular at that time: image manipulation, scrolling status bars, Java integration, etc.
 
 The book covers functions really, <em>really</em> well: it's actually where I first learned about them. It even covers cookies: <em>the first real instance of JavaScript state management.</em>
 
-And there's also 33 pages on Dynamic HTML (DHTML), demonstrating DOM manipulation methods that now seem dated. All the manipulation in the book is done with <code>document.all</code> and <code>document.getElementById()</code> isn't mentioned at all.
+And there's also 33 pages on Dynamic HTML (DHTML), demonstrating DOM manipulation methods that now seem dated. All the manipulation in the book is done with <code>document.all</code>...<code>document.getElementById()</code> isn't mentioned at all.
 
 <h3>...Then Came Love For The DOM</h3>
 While <code>document.getElementById()</code> would become the primary way to initiate DOM manipulation, the spec it was part of (DOM Level 2) wouldn't reach Candidate Recommendation until 2000. So a 1999 book <em>not</em> covering it makes sense but once that spec achieved Candidate Reco status, things changed.
@@ -45,7 +45,7 @@ The most popular hack was to add a class with a Boolean-type name to an element 
   </code>
 </pre>
 
-Front-end developers primarily loved manipulating the DOM while back-end developers primarily hated it. Updating data using something like the DOM API was simply something the latter wasn't used to.
+Front-end developers primarily loved manipulating the DOM: back-end developers primarily hated it. Updating data using something like the DOM API was simply something the latter wasn't used to.
 
 Also, it didn't help that DOM implementation differed across web browsers. The browser wars were still going on at this time, so writing code for two or three browsers seemed inefficient.
 
@@ -62,7 +62,7 @@ Mozilla rose to prominence during this time. Apple would release the Mac OS X op
 
 And companies like Google would play around with a little-known piece of web browser technology called <code>XMLHttpRequest</code>. It allowed data to load onto the page without the page needing to be fully refreshed.
 
-Google used <code>XMLHttpRequest</code> to build Gmail and Google Maps, two apps that load new data on the page without refreshing it. <code>XMLHttpRequest</code> was awesome and were other companies created apps with the same functionality.
+Google used <code>XMLHttpRequest</code> to build Gmail and Google Maps, two apps that load new data on the page without having to refresh it. <code>XMLHttpRequest</code> was awesome and other companies also created apps with the same functionality.
 
 But as awesome as it was, <code>XMLHttpRequest</code> didn't change (most of) the world's opinion that the web was a fad.
 
@@ -76,9 +76,9 @@ The creativity inspired by AJAX was far out-shined the creativity inspired by th
 With the sudden burst of AJAX-inspired creativity, the web got its second wind in the business world. Everyone started paying attention to it again: the web was clearly not a fad.
 
 <h3>...JSON takes it from here</h3>
-Next came <a href="http://www.json.org/">JSON</a>, which was a uniform data format for the browser. It didn't fully eliminate the need for backend database systems, but it certainly lessened the browsers dependency on them.
+Next came <a href="http://www.json.org/">JSON</a>, which was a uniform data format for the browser. It didn't eliminate the need for backend database systems, it just made it easier for browsers to interact with them.
 
-The data was in the form of a standard object that could easily be extracted with JavaScript. No matter what your database looked like or what language it used, JSON just worked.
+The data was in the form of a standard object that be easily manipulated with JavaScript. No matter what your database looked like or what language it used, JSON just worked.
 
 <h3>...Now, The Frameworks</h3>
 With AJAX, JSON and DOM best practices in place, it made sense to encapsulate them in complete software bundles. One-stop pieces of software that gave developers all the tools they needed to build an app.
@@ -93,13 +93,17 @@ And then came React JS. It's a library for building the view portion of your.
 
 React expands <a href="https://css-tricks.com/modular-future-web-components/"> on the web components model</a> that's been around for a while but is currently rising in popularity. Where a web component is a custom HTML tag encapsulates other tags and encapsulated any related CSS styles and JS functionality...it's essential a widget.
 
-<h3>Why React Is A Big deal...</h3>
+<h3>About the Virtual DOM...</h3>
+Along with "component-izing" things, React also contained something called the "virtual DOM." It was part of React's API that updated page content in much more efficient way than old school DHTML-based DOM manipulation did.
+
+The virtual DOM is not a literal copy of the DOM, but is actual snapshot copy of it stored in memory. When changes are made to a React element (which lives on the actual DOM), changes are made to its virtual DOM copy first, then those changes are pushed to the actual DOM.
+
+As convoluted as this may seem, updating the DOM this way is faster than updating it with the traditional DOM manipulation methods.
+
+It's key to note that DOM manipulation was still in wide use among developers at this point. It still had issues, but the developer community defined best practices, like using John Resig's <a href="http://jquery.com/">jQuery</a>, to manage those issues the best that it could.
+
+<h3>Why React Is A Big Deal...</h3>
 
 The BIG thing that React brings to JavaScript is a state management system, a system that tracks what your app is doing at any given time. Maybe a mobile menu was visible, maybe a particular piece of JSON data just loaded, etc.
 
 React state is in the form of a JavaScript object that developers manipulate to change. So if you want to change a React view, <em>you do it with state and not the DOM.</em>
-
-<h3>About the DOM...</h3>
-Along with "component-izing" things, React also contained something called the "virtual DOM." It was part of React's API that updated page content in much more efficient way than old school DHTML-based DOM manipulation did.
-
-It's key to note that DOM manipulation was still in wide use among developers at this point. It still had issues, but the developer community defined best practices, like using <a href="http://jquery.com/">jQuery</a>, to manage those issues the best that it could.
