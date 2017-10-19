@@ -108,4 +108,6 @@ The BIG thing that React brings to JavaScript is a state management system, a sy
 
 React state is in the form of a JavaScript object that developers manipulate to change. So if you want to change a React view, <em>you do it with state and not the DOM.</em>
 
-My two cents: JS developers need to re-learn a LOT of stuff!! Managing page content
+Combine React with Redux (which primarily exists to manage state and )
+
+My two cents: JS developers need to re-learn a LOT of stuff!! Managing page content using an object and
