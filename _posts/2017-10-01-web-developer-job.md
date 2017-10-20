@@ -4,10 +4,10 @@ comments: true
 title:  "What I Learned About Finding A Front End Web Developer Job In 2017-UPDATED"
 date:   2017-10-01 04:00:59 -0400
 categories: personal
-permalink: /front-end-web-developer-job/
+permalink: /front-end-web-developer-job-search/
 excerpt: Random thoughts about finding a front end web developer job in 2017. Thoughts on required skillsets, interviewing & coding bootcamps.
 og-image: web-dev-job.jpg
-thumb-image: functional-programming-react-thumb.jpg
+thumb-image: web-dev-job-minify.jpg
 ---
 <em>Author's note: as previously mentioned, I lost my blog data due to not knowing what I was doing with databases. With the help of the Internet Wayback Machine, I was able to recover all but two blog posts.</em>
 
