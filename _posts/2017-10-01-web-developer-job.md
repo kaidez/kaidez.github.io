@@ -13,7 +13,7 @@ thumb-image: web-dev-job-minify.jpg
 
 <em>This was one of them and while it didn't receive tons of traffic, it was well-received post that I'm really proud of from a journalistic standpoint. Thankfully, I spent so much time re-reading it that I recall enough of it from memory that I can redo it.</em>
 
-<em>Since its publish date, I've talked to more recruiters, hiring managers and developer friends. I'm updating it with this info and as a heads-up: it's not the best time for coding bootcampers.</em>
+<em>Since its publish date, I've talked to more recruiters, hiring managers and developer friends. I'm updating it with this info and as a heads-up: it's not the best time for coding bootcampers at the time of this post.</em>
 
 After a brief bout of unemployment, I'll be starting a new front end web developer job this week.  I'll be using my current skillset while ramping up on new ones...really exciting stuff!
 
@@ -29,11 +29,11 @@ Zach Holman's awesome <em>"Startup Interviewing Is F**cked"</em> article also pr
 I kept all this in mind for interview I went on...not just startup ones. Here's the list of what I learned and I'll start of positive...
 
 <h2>You WILL find a front end web developer job...</h2>
-If you have web dev experience, you will find a web dev job. You may encounter some rejections in the process, from jobs you really want and from jobs you thought you were going to get.
+If you have web dev experience, you will find a web dev job. You may encounter rejections in the process, from jobs you really want and from jobs you thought you were going to get.
 
 But as long as you have quantifiable experience, you will get a web dev job. End of story.
 
-<h2>...But how fast you get one will depend on your experience.</h2>
+<h2>...but how fast you get one will depend on your library/framework experience</h2>
 I tweeted this once in 2016:
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">For a JavaScript developer, Angular is like cleaning out your garage. Procrastinate all you want but you’ll have to deal with it eventually.</p>&mdash; kai gittens (@kaidez) <a href="https://twitter.com/kaidez/status/684336335050641408?ref_src=twsrc%5Etfw">January 5, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -43,8 +43,27 @@ In 2016, you can swap "Angular" out for for "React". And in a few months, you mi
 
 Knowing the various JavaScript frameworks and libraries are what hiring managers. Again, I was only unemployed for a month, but that would have been two weeks had I more React/Angular/whatever experience.
 
-There's a lot of strife-laden debate in the front end web developer community about JS frameworks and libraries.  About how too many are coming out too fast, and if we really REALLY need them.
+There's a lot of strife-laden debate in the front end web developer community about JavaScript frameworks and libraries.  About how too many are coming out too fast, and if we really REALLY need them.
 
 But it's absolutely fair for potential employees to insist you know specific frameworks/libraries if you want to work for them.  So sorry, but you need to learn some specific frameworks/libraries.
 
-A developer with at least a year of experience with a given framework is <em>the</em> most employable candidate in 2017. And companies are willing spend lots of money to hire them, as well as retain them for a long time.
+A developer with at least a year of experience with a given framework is <em>the</em> most employable candidate in 2017. And companies are willing spend lots of money to hire them, and keep them.
+
+<h2>Use your time off learn those frameworks and libraries</h2>
+If you need to ramp up on those framework, do just with the current block of free time you have.  On my first day of unemployment, I went to a Starbucks and went through a ton of online React tutorials.
+
+Next, I went through those kick-a** free Redux tutorials on Egghead. After this ramp up, I was comfortable putting React/Redux on my resume and started getting more interviews.
+
+--wes Bos redux
+
+-css frameworks
+
+-tech questions
+
+-answer question more
+
+-bootcamp
+
+-indeed
+
+-dice
