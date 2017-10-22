@@ -76,27 +76,27 @@ Generally speaking, CSS is easier and more manageable than JavaScript. But hirin
 
 The integrity of a CSS codebase can deteriorate over time. Developers come and go from a project, adding lots of sloppy CSS quick-fixes before they go...this cycle repeats itself over and over.
 
-An employable web developer is expected to know how to deal (and fix) this sloppy code. Lots of interviewers I met either expected me to understand advanced CSS concepts like <a href="https://getbootstrap.com/docs/3.3/css/#grid-responsive-resets">using Bootstrap pulls in a responsive layout</a> and design patterns like <a href="http://getbem.com/">BEM</a>.
+An employable web developer is expected to know how to deal with (and fix) this sloppy code. Lots of interviewers I met with expected me to understand concepts like CSS linting and design patterns like <a href="http://getbem.com/">BEM</a>.
 
-But <em>almost</em> every interviewer I spoke to wanted a firm understanding of CSS preprocessor like <a href="http://sass-lang.com/">Sass</a> and <a href="http://lesscss.org/">Less</a>. Almost all companies have at least one of these tools implemented in their codebase expect new hires to use them immediately with no issues...
+But <em>almost</em> every interviewer I spoke to wanted a firm understanding of CSS preprocessors like <a href="http://sass-lang.com/">Sass</a> and <a href="http://lesscss.org/">Less</a>. Practically all companies use these tools and expect new hires to start using them their first day on the job.
 
-<em><strong>UPDATE</strong>: In this post's previous version, I said that some developers told me they can do without preprocessors but think this attitude weakens their employability.  Both new AND old developers continue to tell me this and, frankly, it really ticks me off. I'm going to implement some tough-love here: all developers need CSS preprocessor skills...those without them are significantly less employable.</em>
+<em><strong>UPDATE</strong>: In this post's previous version, I said some developers told me they can do without preprocessors, and I think this attitude weakens their employability.  Both new AND old developers continue to tell me this and, frankly, it really ticks me off. I'm going to implement some tough-love here: all developers need CSS preprocessor skills...those without them are significantly less employable.</em>
 
 <h2>About those tech questions...</h2>
-The Zach Holman article discusses how interviewers at startups want interviewees to provide the specific answers to "trick" questions. But the answers either way don't mean that an experienced developer can't figure things out once they start working.
+The Zach Holman article discusses how interviewers at startups want interviewees to provide specific answers to "trick" questions. But the answers either way don't mean that an experienced developer can't figure things out once they start working.
 
-Holman's right: I once worked with two experienced developers that had to learn <a href="https://emberjs.com/">Ember</a> from the ground up. They did this, got good with Ember over the course of a year and were STILL on Stack Overflow, looking for answers on how to solve specific problems.
+Holman's right: I once worked with two experienced developers that had to learn <a href="https://emberjs.com/">Ember</a> from the ground up. They did this, got good with Ember over the course of a year and were STILL on Stack Overflow, looking for answers to Ember problems.
 
 They solved those problems. This is because web developers are "engineers" at their core, and solving problems is key job characteristic of an engineer.
 
 Both startups and traditional companies must put interview subjects through <em>some</em> sort of test to gauge their tech knowledge. But they're kidding themselves if the pass on a candidate that they gave a wrong answer to a trick question.
 
 <h2>Go above and beyond your answers to those questions</h2>
-Still, if you're interviewing you're going to have to deal with those questions...just like I had to. A Google search tell which tech questions are the most commonly-asked.
+But if you're looking for work, you're going to have to deal with those questions...just like I had to. A Google search will give you answers to most commonly-asked tech interview questions.
 
 Most of the questions I got were based on JavaScript lexical scope, parsing JSON and Promises. But before you Google for the perfect answer to a Promise question, ask yourself this:
 
-<blockquote>I can define a Promise but can I also talk about a time when I used one?</blockquote>
+<blockquote><p>I can define a Promise but can I also talk about a time when I used one?</p></blockquote>
 
 If yes, do that in the interview.
 
