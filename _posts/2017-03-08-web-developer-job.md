@@ -79,12 +79,14 @@ But <em>almost</em> every interviewer I spoke to wanted a firm understanding of 
 
 <em><strong>UPDATE</strong>: In this post's previous version, I said that some developers told me they can do without preprocessors but I think that weakens their employability.  I've heard from both new AND old developers that continue to say this and, frankly, it really ticks me off. I'm going to implement some tough-love here: all developers need CSS preprocessor skills...those that don't are significantly less employable.</em>
 
--tech questions
+<h2>About those tech questions...</h2>
 
--answer question more
+<h2>Go above and beyond your answers to those questions</h2>
 
--bootcamp
+<h2>Coding bootcamps have affected the hiring process</h2>
 
--indeed
+<h2>Indeed is the best online job search tool</h2>
 
--dice
+<h2>Using dice.com leads to spam</h2>
+
+<h2>Conclusion</h2>
