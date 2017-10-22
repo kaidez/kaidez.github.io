@@ -9,13 +9,15 @@ excerpt: Random thoughts about finding a front end web developer job in 2017. Th
 og-image: web-dev-job.jpg
 thumb-image: web-dev-job-minify.jpg
 ---
-<em>Author's note: as previously mentioned, I lost my blog data due to not knowing what I was doing with databases. With the help of the <a href="https://web.archive.org/">Internet Wayback Machine</a>, I was able to recover all but two blog posts.</em>
+<em>Author's note: as previously mentioned, I lost my entire blog because I didn't know what the f**k I was doing with databases. With the help of the <a href="https://web.archive.org/">Internet Wayback Machine</a>, I was able to recover all but two blog posts.</em>
 
-<em>This was one of the two and while it didn't receive tons of traffic, it was well-received post that I'm really proud of from a journalistic standpoint. Thankfully, I spent so much time re-reading it while proofreading it that I recall enough of it from memory to rewrite it.</em>
+<em>This was one of the two and while it didn't receive lots of traffic, it was a well-received post that I'm really proud of from a journalistic standpoint. Thankfully, I spent so much time re-reading it while proofreading that I could recall enough of it from memory to rewrite it.</em>
 
-<em>Since its publish date, I've talked to more recruiters, hiring managers and developer friends. I'm updating it with this new info and indicated the updates.
+<em>Since its publish date, I've talked to more recruiters, hiring managers and developer friends. I'm updating it with this new info and hsve indicated the updates.
 
-And as a heads-up: it's not the best time for code bootcamp grads looking for high-paying jobs.  At least, the time of this re-post.</em>
+<em>And as a heads-up: it's not the best time for code bootcamp grads looking for high-paying jobs.  At least, the time of this re-post. #justsaying</em>
+
+<hr />
 
 After a brief bout of unemployment, I'll be starting a new front end web developer job this week.  I'll be using my current skillset while ramping up on new ones...really exciting stuff!
 
@@ -73,7 +75,10 @@ The integrity of CSS codebase can deteriorate over time. Developers can come and
 
 An employable web developer is expected to know how to deal (and fix) this sloppy code. Lots of interviewers I met either expected me to understand advanced CSS concepts like <a href="https://getbootstrap.com/docs/3.3/css/#grid-responsive-resets">using Bootstrap pulls in a responsive layout</a> and design patterns like <a href="http://getbem.com/">BEM</a>.
 
-But <em>almost</em> every interviewer I spoke to wanted a firm understanding of CSS preprocessers like <a href="http://sass-lang.com/">Sass</a> and <a href="http://lesscss.org/">Less</a>.
+But <em>almost</em> every interviewer I spoke to wanted a firm understanding of CSS preprocessor like <a href="http://sass-lang.com/">Sass</a> and <a href="http://lesscss.org/">Less</a>. Almost all companies have at least one of these tools implemented in their codebase expect new hires to use them immediately with no issues...
+
+<em><strong>UPDATE</strong>: In this post's previous version, I said that some developers told me they can do without preprocessors but I think that weakens their employability.  I've heard from both new AND old developers that continue to say this and, frankly, it really ticks me off. I'm going to implement some tough-love here: all developers need CSS preprocessor skills...those that don't are significantly less employable.</em>
+
 -tech questions
 
 -answer question more
