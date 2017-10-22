@@ -61,8 +61,8 @@ Next, I went through <a href="https://egghead.io/courses/getting-started-with-re
 
 <em><strong>UPDATE</strong>: The Egghead course is taught by Redux creator Dan Abramov and is worth watching. But if you're a Redux beginner, I would suggest watching <a href="https://learnredux.com/">Wes Bos' free Redux course</a> first. It holds your hand a bit more and also discusses how to use Redux inside React, not just Redux.</em>
 
-<h2>Your plain JavaScript knowledge matters </h2>
-Every job I applied for listed JavaScript as a required skillset. Not React or Angular or Vue...JavaScript.
+<h2>Your plain JavaScript knowledge matters</h2>
+Every job I applied for listed JavaScript as a required skillset. Not React or Angular or Ember...JavaScript.
 
 Frameworks are important but understanding how to use them in the JavaScript context is much, much more important.
 
@@ -71,9 +71,9 @@ Generally speaking, CSS is easier and more manageable than JavaScript. But hirin
 
 The integrity of CSS codebase can deteriorate over time. Developers can come and go from a project, adding lots of sloppy CSS quick-fixes before they go...this cycle repeats itself over and over.
 
-An employable web developer is expected to know how to deal (and fix) this sloppy code. Lots of interviewers I met expected me to understand advanced CSS concepts like <a href="https://getbootstrap.com/docs/3.3/css/#grid-responsive-resets">using Bootstrap pulls in a responsive layout</a> and design patterns like <a href="http://getbem.com/">BEM</a>.
+An employable web developer is expected to know how to deal (and fix) this sloppy code. Lots of interviewers I met either expected me to understand advanced CSS concepts like <a href="https://getbootstrap.com/docs/3.3/css/#grid-responsive-resets">using Bootstrap pulls in a responsive layout</a> and design patterns like <a href="http://getbem.com/">BEM</a>.
 
-But <em>almost every</em>
+But <em>almost</em> every interviewer I spoke to wanted a firm understanding of CSS preprocessers like <a href="http://sass-lang.com/">Sass</a> and <a href="http://lesscss.org/">Less</a>.
 -tech questions
 
 -answer question more
