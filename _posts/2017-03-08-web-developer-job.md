@@ -57,7 +57,7 @@ There's a lot of strife-laden debate in the front end web developer community ab
 
 But it's absolutely fair for potential employees to insist you know specific frameworks/libraries if you want to work for them.  So sorry, but you need to learn some specific frameworks/libraries in 2017.
 
-A front end web developer with at least a year of experience with a given framework is <em>the</em> most employable candidate in 2017. And companies are willing spend money to hire them, and keep them there for as long as possible.
+A front end web developer with a year or more of experience with a given JavaScript framework is <em>the</em> most employable candidate in 2017. And companies are willing spend money to hire them, and keep them there for as long as possible.
 
 <h2>Use your unemployed time to learn those frameworks and libraries</h2>
 If you need to ramp up on those frameworks, do just with the current block of free time you have.  On my first day of unemployment, I went to a Starbucks and went through a ton of online React tutorials.
@@ -76,7 +76,7 @@ Generally speaking, CSS is easier and more manageable than JavaScript. But hirin
 
 The integrity of a CSS codebase can deteriorate over time. Developers come and go from a project, adding lots of sloppy CSS quick-fixes before they go...this cycle repeats itself over and over.
 
-An employable web developer is expected to know how to deal with (and fix) this sloppy code. Lots of interviewers I met with expected me to understand concepts like CSS linting and design patterns like <a href="http://getbem.com/">BEM</a>.
+An employable web developer is expected to know how to understand (and fix) this sloppy code. Many interviewers expected me to understand CSS linting, how to build responsive layouts without Bootstrap, and design patterns like <a href="http://getbem.com/">BEM</a>.
 
 But <em>almost</em> every interviewer I spoke to wanted a firm understanding of CSS preprocessors like <a href="http://sass-lang.com/">Sass</a> and <a href="http://lesscss.org/">Less</a>. Practically all companies use these tools and expect new hires to start using them their first day on the job.
 
@@ -107,14 +107,25 @@ That answer went above and beyond what I was asked. It quantified with the inter
 I got the contract.
 
 <h2>Coding bootcamps have affected the hiring process</h2>
-Three days before a startup interview, I reviewed the skillset requied for the position. It listed some things that I didn't have that much experience with.
+Three days before a startup interview, I reviewed the skillset required for the position. It listed some things that I didn't have that much experience with.
 
-I emailed the startup to see if they still wanted to meet me despite this and the said yes. When we met, they admitted to heavily padding the skillset list with things not needed for the job.
+I emailed the startup to see if they still wanted to meet me despite this and they said yes. When we met, they admitted to heavily padding the skillset list with things not needed for the job.
 
 Why? Because it limited the amount of resum&eacute;s coming in from recent coding bootcamp graduates.
 
 <p style="font-size: 175px;">😮</p>
+I had similar conversations with hiring manager and another recruiter.  Based on these conversations, bootcamp graduates <em>must</em> know the following:
 
+Currently, many people are graduating from places like General Assembly, then applying for jobs with a $75,000 USD starting salary. As a result, hiring managers are getting inundated with resum&eacute;s from people that may be good coders but lack job experience.
+
+This has led to a more robust hiring process which looks somewhat like this:
+<ul>
+  <li class="post-list-item">as mentioned, developers with at least a year's experience in a JS framework are <em>the</em> most employable candidate right now.</li>
+  <li class="post-list-item">hiring managers like candidates with active GitHub profiles.</li>
+  <li class="post-list-item">most JavaScript coding tests I went through required creative uses of loops and regular expressions.</li>
+  <li class="post-list-item">most CSS coding tests I went through required creating raw responsive layouts with things like Bootstrap and Foundation.</li>
+  <li class="post-list-item">those tech questions may suck, but they help hiring managers weed out experienced developers with the non-experienced ones.</li>
+</ul>
 <h2>Indeed is the best online job search tool</h2>
 
 <h2>Using dice.com leads to spam</h2>
