@@ -12,10 +12,10 @@ thumb-image: web-dev-job-minify.jpg
 <blockquote>
 <p>Author's note: as previously mentioned, I lost my entire blog because I didn't know what the f**k I was doing with databases. With the help of the <a href="https://web.archive.org/">Internet Wayback Machine</a>, I was able to recover all but two blog posts.</p>
 <p>
-This was one of the two and while it didn't receive lots of traffic, it was a well-received post that I'm really proud of from a journalistic standpoint. Thankfully, I spent so much time re-reading it while proofreading that I can recall enough of it from memory to rewrite it.
+This was one of them and while it didn't receive lots of traffic, those that read it really liked it and I'm very proud of it from a journalistic standpoint. Thankfully, I spent lots of time re-reading it while proofreading so I can recall enough of it from memory to rewrite it.
 </p>
 <p>
-Since its publish date, I've talked to more recruiters, hiring managers and developer friends. I'm updating it with this new info and hsve indicated the updates.
+Since its publish date, I've talked to more recruiters, hiring managers and developer friends. I'm updating it with this new info and have indicated the updates.
 </p>
 <p>
 And as a heads-up: it's not the best time for code bootcamp grads looking for high-paying jobs.  At least, the time of this re-post. #justsaying
@@ -38,7 +38,7 @@ I kept all this in mind for each interview I went on...not just startup ones. I 
 Here's what I learned and I'll start of positive...
 
 <h2>You WILL find a front end web developer job...</h2>
-If you have web dev experience, you will find a front end web dev job. You may encounter rejections in the process, from jobs you really want and from jobs you thought you were going to get.
+If you have front end web developer experience, you will find a front end web developer job. You may encounter rejections in the process, from jobs you really want and from jobs you thought you were going to get.
 
 But as long as you have quantifiable web dev experience, you will get a web dev job. End of story.
 
@@ -74,17 +74,25 @@ Frameworks are important but understanding how to use them in the JavaScript con
 <h2>You need to know CSS better than you may think</h2>
 Generally speaking, CSS is easier and more manageable than JavaScript. But hiring managers expect front web developers to have above-average CSS knowledge.
 
-The integrity of CSS codebase can deteriorate over time. Developers can come and go from a project, adding lots of sloppy CSS quick-fixes before they go...this cycle repeats itself over and over.
+The integrity of CSS codebase can deteriorate over time. Developers come and go from a project, adding lots of sloppy CSS quick-fixes before they go...this cycle repeats itself over and over.
 
 An employable web developer is expected to know how to deal (and fix) this sloppy code. Lots of interviewers I met either expected me to understand advanced CSS concepts like <a href="https://getbootstrap.com/docs/3.3/css/#grid-responsive-resets">using Bootstrap pulls in a responsive layout</a> and design patterns like <a href="http://getbem.com/">BEM</a>.
 
 But <em>almost</em> every interviewer I spoke to wanted a firm understanding of CSS preprocessor like <a href="http://sass-lang.com/">Sass</a> and <a href="http://lesscss.org/">Less</a>. Almost all companies have at least one of these tools implemented in their codebase expect new hires to use them immediately with no issues...
 
-<em><strong>UPDATE</strong>: In this post's previous version, I said that some developers told me they can do without preprocessors but think this attitude weakens their employability.  Both new AND old developers that continue to tell me this and, frankly, it really ticks me off. I'm going to implement some tough-love here: all developers need CSS preprocessor skills...those without them are significantly less employable.</em>
+<em><strong>UPDATE</strong>: In this post's previous version, I said that some developers told me they can do without preprocessors but think this attitude weakens their employability.  Both new AND old developers continue to tell me this and, frankly, it really ticks me off. I'm going to implement some tough-love here: all developers need CSS preprocessor skills...those without them are significantly less employable.</em>
 
 <h2>About those tech questions...</h2>
+The Zach Holman article discusses how interviewers at startups want interviewees to provide the specific answers to "trick" questions. But the answers either way don't mean that an experienced developer can't figure things out once they start working.
+
+Holman's right: I once worked with two experienced developers that had to learn <a href="https://emberjs.com/">Ember</a> from the ground up. They did this, got good with Ember over the course of a year and were STILL on Stack Overflow, looking for answers on how to solve specific problems.
+
+They solved those problems. This is because web developers are "engineers" at their core, and solving problems is key job characteristic of an engineer.
+
+Both startups and traditional companies must put interview subjects through <em>some</em> sort of test to gauge their tech knowledge. But they're kidding themselves if the pass on a candidate that they gave a wrong answer to a trick question.
 
 <h2>Go above and beyond your answers to those questions</h2>
+Still, you're
 
 <h2>Coding bootcamps have affected the hiring process</h2>
 
