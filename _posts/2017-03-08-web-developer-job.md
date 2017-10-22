@@ -102,7 +102,7 @@ If yes, do that in the interview.
 
 I interviewed for a contract position once and got a question about Promises. I answered it and also recalled a time when I used it on the job, making sure to use phrases like "race condition" and "jQuery when/done pattern."
 
-That answer went above and beyond what I was asked. It quantified with the interviewer that I had Promise experience and didn't just Google the answer.
+That answer went above and beyond what I was asked. It quantified with the interviewer that I had Promise experience and didn't just Google the answer before we met.
 
 I got the contract.
 
