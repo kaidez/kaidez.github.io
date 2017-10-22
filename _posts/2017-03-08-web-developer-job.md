@@ -57,7 +57,7 @@ There's a lot of strife-laden debate in the front end web developer community ab
 
 But it's absolutely fair for potential employees to insist you know specific frameworks/libraries if you want to work for them.  So sorry, but you need to learn some specific frameworks/libraries in 2017.
 
-A developer with at least a year of experience with a given framework is <em>the</em> most employable candidate in 2017. And companies are willing spend money to hire them, and keep them there for as long as possible.
+A front end web developer with at least a year of experience with a given framework is <em>the</em> most employable candidate in 2017. And companies are willing spend money to hire them, and keep them there for as long as possible.
 
 <h2>Use your unemployed time to learn those frameworks and libraries</h2>
 If you need to ramp up on those frameworks, do just with the current block of free time you have.  On my first day of unemployment, I went to a Starbucks and went through a ton of online React tutorials.
@@ -74,7 +74,7 @@ Frameworks are important but understanding how to use them in the JavaScript con
 <h2>You need to know CSS better than you may think</h2>
 Generally speaking, CSS is easier and more manageable than JavaScript. But hiring managers expect front web developers to have above-average CSS knowledge.
 
-The integrity of CSS codebase can deteriorate over time. Developers come and go from a project, adding lots of sloppy CSS quick-fixes before they go...this cycle repeats itself over and over.
+The integrity of a CSS codebase can deteriorate over time. Developers come and go from a project, adding lots of sloppy CSS quick-fixes before they go...this cycle repeats itself over and over.
 
 An employable web developer is expected to know how to deal (and fix) this sloppy code. Lots of interviewers I met either expected me to understand advanced CSS concepts like <a href="https://getbootstrap.com/docs/3.3/css/#grid-responsive-resets">using Bootstrap pulls in a responsive layout</a> and design patterns like <a href="http://getbem.com/">BEM</a>.
 
