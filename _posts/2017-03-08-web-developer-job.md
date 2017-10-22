@@ -9,15 +9,18 @@ excerpt: Random thoughts about finding a front end web developer job in 2017. Th
 og-image: web-dev-job.jpg
 thumb-image: web-dev-job-minify.jpg
 ---
-<em>Author's note: as previously mentioned, I lost my entire blog because I didn't know what the f**k I was doing with databases. With the help of the <a href="https://web.archive.org/">Internet Wayback Machine</a>, I was able to recover all but two blog posts.</em>
-
-<em>This was one of the two and while it didn't receive lots of traffic, it was a well-received post that I'm really proud of from a journalistic standpoint. Thankfully, I spent so much time re-reading it while proofreading that I could recall enough of it from memory to rewrite it.</em>
-
-<em>Since its publish date, I've talked to more recruiters, hiring managers and developer friends. I'm updating it with this new info and hsve indicated the updates.
-
-<em>And as a heads-up: it's not the best time for code bootcamp grads looking for high-paying jobs.  At least, the time of this re-post. #justsaying</em>
-
-<hr />
+<blockquote>
+<p>Author's note: as previously mentioned, I lost my entire blog because I didn't know what the f**k I was doing with databases. With the help of the <a href="https://web.archive.org/">Internet Wayback Machine</a>, I was able to recover all but two blog posts.</p>
+<p>
+This was one of the two and while it didn't receive lots of traffic, it was a well-received post that I'm really proud of from a journalistic standpoint. Thankfully, I spent so much time re-reading it while proofreading that I could recall enough of it from memory to rewrite it.
+</p>
+<p>
+Since its publish date, I've talked to more recruiters, hiring managers and developer friends. I'm updating it with this new info and hsve indicated the updates.
+</p>
+<p>
+And as a heads-up: it's not the best time for code bootcamp grads looking for high-paying jobs.  At least, the time of this re-post. #justsaying
+</p>
+</blockquote>
 
 After a brief bout of unemployment, I'll be starting a new front end web developer job this week.  I'll be using my current skillset while ramping up on new ones...really exciting stuff!
 
