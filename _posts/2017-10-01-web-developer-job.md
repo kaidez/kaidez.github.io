@@ -9,11 +9,13 @@ excerpt: Random thoughts about finding a front end web developer job in 2017. Th
 og-image: web-dev-job.jpg
 thumb-image: web-dev-job-minify.jpg
 ---
-<em>Author's note: as previously mentioned, I lost my blog data due to not knowing what I was doing with databases. With the help of the Internet Wayback Machine, I was able to recover all but two blog posts.</em>
+<em>Author's note: as previously mentioned, I lost my blog data due to not knowing what I was doing with databases. With the help of the <a href="https://web.archive.org/">Internet Wayback Machine</a>, I was able to recover all but two blog posts.</em>
 
-<em>This was one of them and while it didn't receive tons of traffic, it was well-received post that I'm really proud of from a journalistic standpoint. Thankfully, I spent so much time re-reading it that I recall enough of it from memory that I can redo it.</em>
+<em>This was one of the two and while it didn't receive tons of traffic, it was well-received post that I'm really proud of from a journalistic standpoint. Thankfully, I spent so much time re-reading it while proofreading it that I recall enough of it from memory to rewrite it.</em>
 
-<em>Since its publish date, I've talked to more recruiters, hiring managers and developer friends. I'm updating it with this info and as a heads-up: it's not the best time for coding bootcampers at the time of this post.</em>
+<em>Since its publish date, I've talked to more recruiters, hiring managers and developer friends. I'm updating it with this new info and indicated the updates.
+
+And as a heads-up: it's not the best time for code bootcamp grads looking for high-paying jobs.  At least, the time of this re-post.</em>
 
 After a brief bout of unemployment, I'll be starting a new front end web developer job this week.  I'll be using my current skillset while ramping up on new ones...really exciting stuff!
 
@@ -53,14 +55,20 @@ A developer with at least a year of experience with a given framework is <em>the
 <h2>Use your time off learn those frameworks and libraries</h2>
 If you need to ramp up on those framework, do just with the current block of free time you have.  On my first day of unemployment, I went to a Starbucks and went through a ton of online React tutorials.
 
-Next, I went through <a href="https://egghead.io/courses/getting-started-with-redux">those kick-a** free Redux tutorials on Egghead</a>. After that, I had enough confidence to list React/Redux as a skillset and started getting more interviews.
+Next, I went through <a href="https://egghead.io/courses/getting-started-with-redux">those kick-a** free Redux tutorials on Egghead</a>. After that, I had enough confidence to list React/Redux as a skill set and started getting more interviews.
 
 <em><strong>UPDATE</strong>: The Egghead course is taught by Redux creator Dan Abramov and is worth watching. But if you're a Redux beginner, I would suggest watching <a href="https://learnredux.com/">Wes Bos' free Redux course</a> first. It holds your hand a bit more and also discusses how to use Redux inside React, not just Redux.</em>
 
-<h2>Pure JavaScript </h2>
+<h2>Your plain JavaScript knowledge matters </h2>
+Every job I applied for listed JavaScript as a required skillset. Not React or Angular or Vue...JavaScript.
+
+Frameworks are important but understanding how to use them in the JavaScript context is much, much more important.
 
 <h2>You need to know CSS better than you may think</h2>
-Generally speaking, CSS is easier and more manageable than JavaScript. But
+Generally speaking, CSS is easier and more manageable than JavaScript. But hiring managers expect front web developers to have above-average CSS knowledge.
+
+The integrity of CSS codebase can deteriorate over time. People come and go from a project,
+
 
 -tech questions
 
