@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title:  "What I Learned About Finding A Front End Web Developer Job In 2017-UPDATED"
-date:   2017-10-01 04:00:59 -0400
+date:   2017-03-08 04:00:59 -0400
 categories: personal
 permalink: /front-end-web-developer-job-search/
 excerpt: Random thoughts about finding a front end web developer job in 2017. Thoughts on required skillsets, interviewing & coding bootcamps.
