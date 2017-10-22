@@ -12,7 +12,7 @@ thumb-image: web-dev-job-minify.jpg
 <blockquote>
 <p>Author's note: as previously mentioned, I lost my entire blog because I didn't know what the f**k I was doing with databases. With the help of the <a href="https://web.archive.org/">Internet Wayback Machine</a>, I was able to recover all but two blog posts.</p>
 <p>
-This was one of the two and while it didn't receive lots of traffic, it was a well-received post that I'm really proud of from a journalistic standpoint. Thankfully, I spent so much time re-reading it while proofreading that I could recall enough of it from memory to rewrite it.
+This was one of the two and while it didn't receive lots of traffic, it was a well-received post that I'm really proud of from a journalistic standpoint. Thankfully, I spent so much time re-reading it while proofreading that I can recall enough of it from memory to rewrite it.
 </p>
 <p>
 Since its publish date, I've talked to more recruiters, hiring managers and developer friends. I'm updating it with this new info and hsve indicated the updates.
@@ -59,8 +59,8 @@ But it's absolutely fair for potential employees to insist you know specific fra
 
 A developer with at least a year of experience with a given framework is <em>the</em> most employable candidate in 2017. And companies are willing spend money to hire them, and keep them there for as long as possible.
 
-<h2>Use your time off learn those frameworks and libraries</h2>
-If you need to ramp up on those framework, do just with the current block of free time you have.  On my first day of unemployment, I went to a Starbucks and went through a ton of online React tutorials.
+<h2>Use your unemployed time to learn those frameworks and libraries</h2>
+If you need to ramp up on those frameworks, do just with the current block of free time you have.  On my first day of unemployment, I went to a Starbucks and went through a ton of online React tutorials.
 
 Next, I went through <a href="https://egghead.io/courses/getting-started-with-redux">those kick-a** free Redux tutorials on Egghead</a>. After that, I had enough confidence to list React/Redux as a skill set and started getting more interviews.
 
@@ -80,7 +80,7 @@ An employable web developer is expected to know how to deal (and fix) this slopp
 
 But <em>almost</em> every interviewer I spoke to wanted a firm understanding of CSS preprocessor like <a href="http://sass-lang.com/">Sass</a> and <a href="http://lesscss.org/">Less</a>. Almost all companies have at least one of these tools implemented in their codebase expect new hires to use them immediately with no issues...
 
-<em><strong>UPDATE</strong>: In this post's previous version, I said that some developers told me they can do without preprocessors but I think that weakens their employability.  I've heard from both new AND old developers that continue to say this and, frankly, it really ticks me off. I'm going to implement some tough-love here: all developers need CSS preprocessor skills...those that don't are significantly less employable.</em>
+<em><strong>UPDATE</strong>: In this post's previous version, I said that some developers told me they can do without preprocessors but think this attitude weakens their employability.  Both new AND old developers that continue to tell me this and, frankly, it really ticks me off. I'm going to implement some tough-love here: all developers need CSS preprocessor skills...those without them are significantly less employable.</em>
 
 <h2>About those tech questions...</h2>
 
