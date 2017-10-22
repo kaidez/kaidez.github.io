@@ -114,18 +114,20 @@ I emailed the startup to see if they still wanted to meet me despite this and th
 Why? Because it limited the amount of resum&eacute;s coming in from recent coding bootcamp graduates.
 
 <p style="font-size: 175px;">😮</p>
-I had similar conversations with hiring manager and another recruiter.  Based on these conversations, bootcamp graduates <em>must</em> know the following:
+I had similar conversations with recruiter and another hiring manager.  Based on these conversations, bootcamp graduates <em>must</em> know the following:
 
 Currently, many people are graduating from places like General Assembly, then applying for jobs with a $75,000 USD starting salary. As a result, hiring managers are getting inundated with resum&eacute;s from people that may be good coders but lack job experience.
 
 This has led to a more robust hiring process which looks somewhat like this:
 <ul>
-  <li class="post-list-item">as mentioned, developers with at least a year's experience in a JS framework are <em>the</em> most employable candidate right now.</li>
+  <li class="post-list-item">as mentioned, developers with at least a year's experience in a JS framework are <em>the</em> most employable candidates right now.</li>
   <li class="post-list-item">hiring managers like candidates with active GitHub profiles.</li>
   <li class="post-list-item">most JavaScript coding tests I went through required creative uses of loops and regular expressions.</li>
-  <li class="post-list-item">most CSS coding tests I went through required creating raw responsive layouts with things like Bootstrap and Foundation.</li>
+  <li class="post-list-item">lots of the CSS coding tests I went through required creating responsive layouts <strong>without</strong> things like Bootstrap and Foundation.</li>
   <li class="post-list-item">those tech questions may suck, but they help hiring managers weed out experienced developers with the non-experienced ones.</li>
 </ul>
+
+Coding bootcamp grads work hard an deserve a shot at some jobs. But they should know that they're competing with (and are not as desired as) experienced developers for the same jobs.
 <h2>Indeed is the best online job search tool</h2>
 
 <h2>Using dice.com leads to spam</h2>
