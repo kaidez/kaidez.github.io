@@ -28,7 +28,9 @@ But I also knew my limited experience with the currently in-demand frameworks (R
 
 <a href="https://zachholman.com/posts/startup-interviewing-is-fucked/">Zach Holman's awesome <em>"Startup Interviewing Is F**cked"</em></a> article also prepared me for what I was about to go through. It discusses how some interviewers questions want interviewees to give perfect answers to specific tech questions, and how that's a poor indicator of whether or not someone can do the job.
 
-I kept all this in mind for each interview I went on...not just startup ones. Here's the list of what I learned and I'll start of positive...
+I kept all this in mind for each interview I went on...not just startup ones. I also recalled memories from previous interviews I went on and some other jobs I had.
+
+Here's what I learned and I'll start of positive...
 
 <h2>You WILL find a front end web developer job...</h2>
 If you have web dev experience, you will find a front end web dev job. You may encounter rejections in the process, from jobs you really want and from jobs you thought you were going to get.
@@ -67,9 +69,11 @@ Frameworks are important but understanding how to use them in the JavaScript con
 <h2>You need to know CSS better than you may think</h2>
 Generally speaking, CSS is easier and more manageable than JavaScript. But hiring managers expect front web developers to have above-average CSS knowledge.
 
-The integrity of CSS codebase can deteriorate over time. People come and go from a project,
+The integrity of CSS codebase can deteriorate over time. Developers can come and go from a project, adding lots of sloppy CSS quick-fixes before they go...this cycle repeats itself over and over.
 
+An employable web developer is expected to know how to deal (and fix) this sloppy code. Lots of interviewers I met expected me to understand advanced CSS concepts like <a href="https://getbootstrap.com/docs/3.3/css/#grid-responsive-resets">using Bootstrap pulls in a responsive layout</a> and design patterns like <a href="http://getbem.com/">BEM</a>.
 
+But <em>almost every</em>
 -tech questions
 
 -answer question more
