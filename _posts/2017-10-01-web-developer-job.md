@@ -20,43 +20,47 @@ After a brief bout of unemployment, I'll be starting a new front end web develop
 I went through an intense job search process to get to this point, more so than ever before.  I learned a lot (a WHOLE lot) about the current web dev hiring process so I'll share my random thoughts on the process.
 
 <h2>A preamble...like I start all my blog posts</h2>
-For all the anxiety that comes with unemployment, I knew I'd get a job sooner than later. I may not know everything about the EVERYTHING about front end web development but know enough that I wouldn't be out of work for TOO long...only a month in the end.
+For all the nervousness and anxiety that comes with unemployment, I knew I'd get a job sooner than later. I may not know everything about about front end web development but know enough so that I wouldn't be out of work for TOO long...only a month in the end.
 
-But I also knew my limited experience with the currently in-demand frameworks (React, Angular, etc) meant I would have to work harder than most at finding a job. I'd them in personal projects but had little on-the-job experience experience to show on my resum&eacute;
+But I also knew my limited experience with the currently in-demand frameworks (React, Angular, etc) meant I would have to work harder than most at finding a job. I'd used them in personal projects but had little on-the-job experience with them on my resum&eacute;
 
-Zach Holman's awesome <em>"Startup Interviewing Is F**cked"</em> article also prepared me for what I was about to go through. It describes how some interviewers ask trick questions to determine if a potential hire is good enough for the job, and how that can be a bad idea.
+<a href="https://zachholman.com/posts/startup-interviewing-is-fucked/">Zach Holman's awesome <em>"Startup Interviewing Is F**cked"</em></a> article also prepared me for what I was about to go through. It discusses how some interviewers questions want interviewees to give perfect answers to specific tech questions, and how that's a poor indicator of whether or not someone can do the job.
 
-I kept all this in mind for interview I went on...not just startup ones. Here's the list of what I learned and I'll start of positive...
+I kept all this in mind for each interview I went on...not just startup ones. Here's the list of what I learned and I'll start of positive...
 
 <h2>You WILL find a front end web developer job...</h2>
-If you have web dev experience, you will find a web dev job. You may encounter rejections in the process, from jobs you really want and from jobs you thought you were going to get.
+If you have web dev experience, you will find a front end web dev job. You may encounter rejections in the process, from jobs you really want and from jobs you thought you were going to get.
 
-But as long as you have quantifiable experience, you will get a web dev job. End of story.
+But as long as you have quantifiable web dev experience, you will get a web dev job. End of story.
 
-<h2>...but how fast you get one will depend on your library/framework experience</h2>
+<h2>...But how fast you get one will depend on your library/framework experience</h2>
 I tweeted this once in 2016:
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">For a JavaScript developer, Angular is like cleaning out your garage. Procrastinate all you want but you’ll have to deal with it eventually.</p>&mdash; kai gittens (@kaidez) <a href="https://twitter.com/kaidez/status/684336335050641408?ref_src=twsrc%5Etfw">January 5, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 In 2016, you can swap "Angular" out for for "React". And in a few months, you might be able to swap it out for "Vue".
-<em>UPDATE: React and Angular 2/4-5 are neck-in-neck for the most desirable skillsets among hiring managers...Vue is catching up, but not as fast as I thought it would.</em>
 
-Knowing the various JavaScript frameworks and libraries are what hiring managers. Again, I was only unemployed for a month, but that would have been two weeks had I more React/Angular/whatever experience.
+<em><strong>UPDATE</strong>: React and Angular 2/4/5 are neck-in-neck for the most desirable skillsets among hiring managers...Vue is catching up, but not as fast as I thought it would.</em>
+
+Experience with various the JavaScript frameworks and libraries are what hiring managers are looking for in 2017. Again, I was only unemployed for a month, but that would have been two weeks had I more React/Angular/whatever experience.
 
 There's a lot of strife-laden debate in the front end web developer community about JavaScript frameworks and libraries.  About how too many are coming out too fast, and if we really REALLY need them.
 
-But it's absolutely fair for potential employees to insist you know specific frameworks/libraries if you want to work for them.  So sorry, but you need to learn some specific frameworks/libraries.
+But it's absolutely fair for potential employees to insist you know specific frameworks/libraries if you want to work for them.  So sorry, but you need to learn some specific frameworks/libraries in 2017.
 
-A developer with at least a year of experience with a given framework is <em>the</em> most employable candidate in 2017. And companies are willing spend lots of money to hire them, and keep them.
+A developer with at least a year of experience with a given framework is <em>the</em> most employable candidate in 2017. And companies are willing spend money to hire them, and keep them there for as long as possible.
 
 <h2>Use your time off learn those frameworks and libraries</h2>
 If you need to ramp up on those framework, do just with the current block of free time you have.  On my first day of unemployment, I went to a Starbucks and went through a ton of online React tutorials.
 
-Next, I went through those kick-a** free Redux tutorials on Egghead. After this ramp up, I was comfortable putting React/Redux on my resume and started getting more interviews.
+Next, I went through <a href="https://egghead.io/courses/getting-started-with-redux">those kick-a** free Redux tutorials on Egghead</a>. After that, I had enough confidence to list React/Redux as a skillset and started getting more interviews.
 
---wes Bos redux
+<em><strong>UPDATE</strong>: The Egghead course is taught by Redux creator Dan Abramov and is worth watching. But if you're a Redux beginner, I would suggest watching <a href="https://learnredux.com/">Wes Bos' free Redux course</a> first. It holds your hand a bit more and also discusses how to use Redux inside React, not just Redux.</em>
 
--css frameworks
+<h2>Pure JavaScript </h2>
+
+<h2>You need to know CSS better than you may think</h2>
+Generally speaking, CSS is easier and more manageable than JavaScript. But
 
 -tech questions
 
