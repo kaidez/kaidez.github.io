@@ -92,7 +92,19 @@ They solved those problems. This is because web developers are "engineers" at th
 Both startups and traditional companies must put interview subjects through <em>some</em> sort of test to gauge their tech knowledge. But they're kidding themselves if the pass on a candidate that they gave a wrong answer to a trick question.
 
 <h2>Go above and beyond your answers to those questions</h2>
-Still, you're
+Still, if you're interviewing you're going to have to deal with those questions...just like I had to. A Google search tell which tech questions are the most commonly-asked.
+
+Most of the questions I got were based on JavaScript lexical scope, parsing JSON and Promises. But before you Google for the perfect answer to a Promise question, ask yourself this:
+
+<blockquote>I can define a Promise but can I also talk about a time when I used one?</blockquote>
+
+If yes, do that in the interview.
+
+I interviewed for a contract position once and got a question about Promises. I answered it and also recalled a time when I used it on the job, making sure to use phrases like "race condition" and "jQuery when/done pattern."
+
+That answer went above and beyond what I was asked. It quantified with the interviewer that I had Promise experience and didn't just Google the answer.
+
+I got the contract.
 
 <h2>Coding bootcamps have affected the hiring process</h2>
 
