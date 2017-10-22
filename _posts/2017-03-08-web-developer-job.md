@@ -24,18 +24,16 @@ And as a heads-up: it's not the best time for code bootcamp grads looking for hi
 
 After a brief bout of unemployment, I'll be starting a new front end web developer job this week.  I'll be using my current skillset while ramping up on new ones...really exciting stuff!
 
-I went through an intense job search process to get to this point, more so than ever before.  I learned a lot (a WHOLE lot) about the current web dev hiring process so I'll share my random thoughts on the process.
+I went through an intense job search to get to this point, more so than ever before.  I learned a lot (a WHOLE lot) about the 2017 web dev hiring process so I'll share my random thoughts on the subject.
 
-<h2>A preamble...like I start all my blog posts</h2>
-For all the nervousness and anxiety that comes with unemployment, I knew I'd get a job sooner than later. I may not know everything about about front end web development but know enough so that I wouldn't be out of work for TOO long...only a month in the end.
+<h2>A preamble...like I start all my posts</h2>
+For all the nervousness and anxiety that comes with unemployment, I knew I'd get a job sooner than later. I may not know <em>everything</em> about front end web development but knew enough so that I wouldn't be out of work for TOO long...only a month in the end.
 
 But I also knew my limited experience with the currently in-demand frameworks (React, Angular, etc) meant I would have to work harder than most at finding a job. I'd used them in personal projects but had little on-the-job experience with them on my resum&eacute;
 
-<a href="https://zachholman.com/posts/startup-interviewing-is-fucked/">Zach Holman's awesome <em>"Startup Interviewing Is F**cked"</em></a> article also prepared me for what I was about to go through. It discusses how some interviewers questions want interviewees to give perfect answers to specific tech questions, and how that's a poor indicator of whether or not someone can do the job.
+<a href="https://zachholman.com/posts/startup-interviewing-is-fucked/">Zach Holman's awesome <em>"Startup Interviewing Is F**cked"</em></a> article also prepared me for what I was about to face. It discusses how some interviewers want interviewees to give perfect answers to specific tech questions, and how that's a poor indicator of whether or not they can do the job.
 
-I kept all this in mind for each interview I went on...not just startup ones. I also recalled memories from previous interviews I went on and some other jobs I had.
-
-Here's what I learned and I'll start off positive...
+I kept all this in mind for each interview I went on...not just startup ones. And here's what I learned and I'll start off positive...
 
 <h2>You WILL find a front end web developer job...</h2>
 If you have front end web developer experience, you will find a front end web developer job. You may encounter rejections in the process, from jobs you really want and from jobs you thought you were going to get.
@@ -49,20 +47,20 @@ I tweeted this once in 2016:
 
 In 2016, you can swap "Angular" out for for "React". And in a few months, you might be able to swap it out for "Vue".
 
-<em><strong>UPDATE</strong>: React and Angular 2/4/5 are neck-in-neck for the most desirable skillsets among hiring managers...Vue is catching up, but not as fast as I thought it would.</em>
+<em><strong>UPDATE</strong>: At the time of this rewrite, React and Angular 2/4/5 are neck-in-neck for the most desirable skillsets.  Vue is catching up, but not as fast as I thought it would.</em>
 
-Experience with various the JavaScript frameworks and libraries are what hiring managers are looking for in 2017. Again, I was only unemployed for a month, but that would have been two weeks had I more React/Angular/whatever experience.
+Again, my limited experience with various the JavaScript frameworks and libraries did worked against me. I was only unemployed for a month, but that would have been two weeks had I more React/Angular/whatever experience.
 
 There's a lot of strife-laden debate in the front end web developer community about JavaScript frameworks and libraries.  About how too many are coming out too fast, and if we really REALLY need them.
 
-But it's absolutely fair for potential employees to insist you know specific frameworks/libraries if you want to work for them.  So sorry, but you need to learn some specific frameworks/libraries in 2017.
+But it's absolutely fair for potential employees to insist you know specific frameworks/libraries if you want to work for them.  So sorry, but you need to learn some specific frameworks/libraries.
 
 A front end web developer with a year or more of experience with a given JavaScript framework is <em>the</em> most employable candidate in 2017. And companies are willing spend money to hire them, and keep them there for as long as possible.
 
 <h2>Use your unemployed time to learn those frameworks and libraries</h2>
-If you need to ramp up on those frameworks, do just with the current block of free time you have.  On my first day of unemployment, I went to a Starbucks and went through a ton of online React tutorials.
+If you're not working and need to ramp up on those frameworks/libs, do <em>just</em> that with your current free time.  On my first day of unemployment, I went to a Starbucks and went through a ton of online React tutorials.
 
-Next, I went through <a href="https://egghead.io/courses/getting-started-with-redux">those kick-a** free Redux tutorials on Egghead</a>. After that, I had enough confidence to list React/Redux as a skill set and started getting more interviews.
+Next, I went through <a href="https://egghead.io/courses/getting-started-with-redux">those kick-a** free Redux tutorials on Egghead</a>. After that, I had enough confidence to put React/Redux on my resum&eacute; started getting more interviews.
 
 <em><strong>UPDATE</strong>: The Egghead course is taught by Redux creator Dan Abramov and is worth watching. But if you're a Redux beginner, I would suggest watching <a href="https://learnredux.com/">Wes Bos' free Redux course</a> first. It holds your hand a bit more and also discusses how to use Redux inside React, not just Redux.</em>
 
@@ -71,25 +69,25 @@ Every job I applied for listed JavaScript as a required skillset. Not React or A
 
 Frameworks are important but understanding how to use them in the JavaScript context is much, much more important.
 
-<h2>You need to know CSS better than you may think</h2>
+<h2>You need to know CSS better than you think</h2>
 Generally speaking, CSS is easier and more manageable than JavaScript. But hiring managers expect front web developers to have above-average CSS knowledge.
 
 The integrity of a CSS codebase can deteriorate over time. Developers come and go from a project, adding lots of sloppy CSS quick-fixes before they go...this cycle repeats itself over and over.
 
-An employable web developer is expected to know how to understand (and fix) this sloppy code. Many interviewers expected me to understand CSS linting, how to build responsive layouts without Bootstrap, and design patterns like <a href="http://getbem.com/">BEM</a>.
+An employable web developer is expected to know how to understand (and fix) this sloppy code. Many interviewers expected me to understand things CSS linting and design patterns like <a href="http://getbem.com/">BEM</a>.
 
-But <em>almost</em> every interviewer I spoke to wanted a firm understanding of CSS preprocessors like <a href="http://sass-lang.com/">Sass</a> and <a href="http://lesscss.org/">Less</a>. Practically all companies use these tools and expect new hires to start using them their first day on the job.
+But <em>almost</em> every interviewer expected candidates to have experience with CSS preprocessors like <a href="http://sass-lang.com/">Sass</a> and <a href="http://lesscss.org/">Less</a>. Practically all companies use preprocessors and expect new hires to know how to use them starting on Day One.
 
-<em><strong>UPDATE</strong>: In this post's previous version, I said some developers told me they can do without preprocessors, and I think this attitude weakens their employability.  Both new AND old developers continue to tell me this and, frankly, it really ticks me off. I'm going to implement some tough-love here: all developers need CSS preprocessor skills...those without them are significantly less employable.</em>
+<em><strong>UPDATE</strong>: In this post's previous version, I said that some developers told me they can do without preprocessors, and that I think this attitude weakens their employability.  Both new AND old developers continue to tell me this and, frankly, it really ticks me off. I'm going to implement some tough-love here: all developers need CSS preprocessor skills...those without them are significantly less employable.</em>
 
 <h2>About those tech questions...</h2>
-The Zach Holman article discusses how interviewers at startups want interviewees to provide specific answers to "trick" questions. But the answers either way don't mean that an experienced developer can't figure things out once they start working.
+The Zach Holman article discusses how interviewers at startups want interviewees to provide specific answers to "trick" questions. But a wrong answers doesn't mean that an experienced developer can't figure things out once they start working.
 
-Holman's right: I once worked with two experienced developers that had to learn <a href="https://emberjs.com/">Ember</a> from the ground up. They did this, got good with Ember over the course of a year and were STILL on Stack Overflow, looking for answers to Ember problems.
+Holman's right: I once worked with two experienced developers that had to learn Ember from the ground up. They did this, got good with Ember over the course of a year and were STILL on Stack Overflow, looking for answers to Ember problems.
 
-They solved those problems. This is because web developers are "engineers" at their core, and solving problems is key job characteristic of an engineer.
+They solved those problems. This is because web developers are "engineers" at their core, and solving problems is a key job characteristic of an engineer.
 
-Both startups and traditional companies must put interview subjects through <em>some</em> sort of test to gauge their tech knowledge. But they're kidding themselves if the pass on a candidate that they gave a wrong answer to a trick question.
+Both startups and traditional companies must put interview subjects through <em>some</em> sort of test to gauge their experience. But they may be kidding themselves when they pass on a candidate that gave a wrong answer to a trick question, and that happens frequently.
 
 <h2>Go above and beyond your answers to those questions</h2>
 But if you're looking for work, you're going to have to deal with those questions...just like I had to. A Google search will give you answers to most commonly-asked tech interview questions.
@@ -113,8 +111,8 @@ I emailed the startup to see if they still wanted to meet me despite this and th
 
 Why? Because it limited the amount of resum&eacute;s coming in from recent coding bootcamp graduates.
 
-<p style="font-size: 175px;">😮</p>
-I had similar conversations with recruiter and another hiring manager.  Based on these conversations, bootcamp graduates <em>must</em> know the following:
+<p style="font-size: 175px; margin-bottom: 0;">😮</p>
+I had similar conversations with a recruiter and another interviewer.  Based on these conversations, bootcamp graduates <em>must</em> know the following:
 
 Currently, many people are graduating from places like General Assembly, then applying for jobs with a $75,000 USD starting salary. As a result, hiring managers are getting inundated with resum&eacute;s from people that may be good coders but lack job experience.
 
@@ -127,7 +125,10 @@ This has led to a more robust hiring process which looks somewhat like this:
   <li class="post-list-item">those tech questions may suck, but they help hiring managers weed out experienced developers with the non-experienced ones.</li>
 </ul>
 
-Coding bootcamp grads work hard an deserve a shot at some jobs. But they should know that they're competing with (and are not as desired as) experienced developers for the same jobs.
+Coding bootcamp grads work hard and deserve a shot at some jobs. But they should know that they're competing with experienced developers for the same jobs and the latter is more desired.
+
+<em><strong>UPDATE</strong>: I speak hiring managers and recruiter friends regularly and from what they tell me, It's not getting easier for Bootcamp grads.</em>
+
 <h2>Indeed is the best online job search tool</h2>
 
 <h2>Using dice.com leads to spam</h2>
