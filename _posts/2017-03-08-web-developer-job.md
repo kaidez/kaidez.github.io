@@ -35,7 +35,7 @@ But I also knew my limited experience with the currently in-demand frameworks (R
 
 I kept all this in mind for each interview I went on...not just startup ones. I also recalled memories from previous interviews I went on and some other jobs I had.
 
-Here's what I learned and I'll start of positive...
+Here's what I learned and I'll start off positive...
 
 <h2>You WILL find a front end web developer job...</h2>
 If you have front end web developer experience, you will find a front end web developer job. You may encounter rejections in the process, from jobs you really want and from jobs you thought you were going to get.
