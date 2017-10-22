@@ -12,10 +12,10 @@ thumb-image: web-dev-job-minify.jpg
 <blockquote>
 <p>Author's note: as previously mentioned, I lost my entire blog because I didn't know what the f**k I was doing with databases. With the help of the <a href="https://web.archive.org/">Internet Wayback Machine</a>, I was able to recover all but two blog posts.</p>
 <p>
-This was one of them and while it didn't receive lots of traffic, those that read it really liked it and I'm very proud of it from a journalistic standpoint. Thankfully, I spent lots of time re-reading it while proofreading so I can recall enough of it from memory to rewrite it.
+This was one of them and while it didn't receive lots of traffic, those that read it really liked it and I'm very proud of it from a journalistic standpoint. Thankfully, I spent lots of time proofreading it, so I remember enough of it to rewrite it.
 </p>
 <p>
-Since its publish date, I've talked to more recruiters, hiring managers and developer friends. I'm updating it with this new info and have indicated the updates.
+Since its publish date, I've talked to more developers, hiring managers and recruiter friends. I'm updating it with this new info and have indicated the updates.
 </p>
 <p>
 And as a heads-up: it's not the best time for code bootcamp grads looking for high-paying jobs.  At least, the time of this re-post. #justsaying
@@ -107,6 +107,13 @@ That answer went above and beyond what I was asked. It quantified with the inter
 I got the contract.
 
 <h2>Coding bootcamps have affected the hiring process</h2>
+Three days before a startup interview, I reviewed the skillset requied for the position. It listed some things that I didn't have that much experience with.
+
+I emailed the startup to see if they still wanted to meet me despite this and the said yes. When we met, they admitted to heavily padding the skillset list with things not needed for the job.
+
+Why? Because it limited the amount of resum&eacute;s coming in from recent coding bootcamp graduates.
+
+<p style="font-size: 175px;">😮</p>
 
 <h2>Indeed is the best online job search tool</h2>
 
