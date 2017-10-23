@@ -129,7 +129,14 @@ Coding bootcamp grads work hard and deserve a shot at some jobs. But they should
 <em><strong>UPDATE:</strong> I speak to hiring manager & recruiter friends regularly and from what I'm hearing, it's not getting easier for Bootcamp grads. There are tons of unfilled front end web developer jobs out there at the time of this update: the hiring managers in charge of filling them are ignoring the bootcamp resum&eacute;s more that they're reading them. In fact, companies are looking at computer science graduates to fill front end web dev jobs more and more, not because they're the only ones with JavaScript, but because the further weeds out the bootcampers.</em>
 
 <h2>Indeed is the best online job search tool</h2>
+Linkedin is a feature-rich social network based around searching for a job. Indeed does one thing and one thing well: it lets you search for jobs.
 
-<h2>Using dice.com leads to spam</h2>
+Indeed has a barebones search interface and lets you easily apply for jobs on your handheld. I got more phone and fce-to-face interviews than with any other resource.
+
+<h2>Using Dice.com leads to spam</h2>
+I applied for one job through Dice...ONE job!! I was flooded with phone and email spam 15 minutes later.
+
+If you're desperate for a job and need to use every resource available, I <em>suppose</em> you could use dice.com. But I found it more annoying than helpful.
 
 <h2>Conclusion</h2>
+There's a saying that "you need to treat finding a job as a job" and I did just that. I
