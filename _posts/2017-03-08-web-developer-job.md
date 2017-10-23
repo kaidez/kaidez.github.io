@@ -27,7 +27,7 @@ After a brief bout of unemployment, I'll be starting a new front end web develop
 I went through an intense job search to get to this point, more so than ever before.  I learned a lot (a WHOLE lot) about the 2017 web dev hiring process so I'll share my random thoughts on the subject.
 
 <h2>A preamble...like I start all my posts</h2>
-For all the nervousness and anxiety that comes with unemployment, I knew I'd get a job sooner than later. I may not know <em>everything</em> about front end web development but knew enough so that I wouldn't be out of work for TOO long...only a month in the end.
+For all the nervousness and anxiety that comes with unemployment, I knew I'd get a job sooner than later. I don't know <em>everything</em> about front end web development but knew enough so that I wasn't be out of work for TOO long...only a month in the end.
 
 But I also knew my limited experience with the currently in-demand frameworks (React, Angular, etc) meant I would have to work harder than most at finding a job. I'd used them in personal projects but had little on-the-job experience with them on my resum&eacute;
 
@@ -49,7 +49,7 @@ In 2016, you can swap "Angular" out for for "React". And in a few months, you mi
 
 <em><strong>UPDATE:</strong> At the time of this rewrite, React and Angular 2/4/5 are neck-in-neck for the most desirable skillsets.  Vue is catching up, but not as fast as I thought it would.</em>
 
-Again, my limited experience with various the JavaScript frameworks and libraries did worked against me. I was only unemployed for a month, but that would have been two weeks had I more React/Angular/whatever experience.
+Again, my limited experience with various the JavaScript frameworks and libraries worked against me. I was only unemployed for a month, but that would have been two weeks had I more React/Angular/whatever experience.
 
 There's a lot of strife-laden debate in the front end web developer community about JavaScript frameworks and libraries.  About how too many are coming out too fast, and if we really REALLY need them.
 
@@ -62,7 +62,7 @@ If you're not working and need to ramp up on those frameworks/libs, do <em>just<
 
 Next, I went through <a href="https://egghead.io/courses/getting-started-with-redux">those kick-a** free Redux tutorials on Egghead</a>. After that, I had enough confidence to put React/Redux on my resum&eacute; started getting more interviews.
 
-<em><strong>UPDATE:</strong> The Egghead course is taught by Redux creator Dan Abramov and is worth watching. But if you're a Redux beginner, I would suggest watching <a href="https://learnredux.com/">Wes Bos' free Redux course</a> first. It holds your hand a bit more and also discusses how to use Redux inside React, not just Redux.</em>
+<em><strong>UPDATE:</strong> The Egghead course is taught by Redux creator Dan Abramov and is worth watching. But if you're a Redux beginner, I would suggest watching <a href="https://learnredux.com/">Wes Bos' free Redux course</a> first. It holds your hand a bit more and also discusses how to use Redux inside React and not just Redux.</em>
 
 <h2>Your plain JavaScript knowledge matters</h2>
 Every job I applied for listed JavaScript as a required skillset. Not React or Angular or Ember...JavaScript.
@@ -81,11 +81,11 @@ But <em>almost</em> every interviewer expected candidates to have experience wit
 <em><strong>UPDATE:</strong> In this post's previous version, I said that some developers told me they can do without preprocessors, and that I think this attitude weakens their employability.  Both new AND old developers continue to tell me this and, frankly, it really ticks me off. I'm going to implement some tough-love here: all developers need CSS preprocessor skills...those without them are significantly less employable.</em>
 
 <h2>About those tech questions...</h2>
-The Zach Holman article discusses how interviewers at startups want interviewees to provide specific answers to "trick" questions. But a wrong answers doesn't mean that an experienced developer can't figure things out once they start working.
+The Zach Holman article discusses how interviewers at startups want interviewees to provide specific answers to "trick" questions. But giving a wrong answer doesn't mean that an experienced developer can't figure things out once they start working.
 
 Holman's right: I once worked with two experienced developers that had to learn Ember from the ground up. They did this, got good with Ember over the course of a year and were STILL on Stack Overflow, looking for answers to Ember problems.
 
-They solved those problems. This is because web developers are "engineers" at their core, and solving problems is a key job characteristic of an engineer.
+They solved those problems. This is because web developers are "engineers" at their core, and solving problems is a key job characteristic of any type of engineer.
 
 Both startups and traditional companies must put interview subjects through <em>some</em> sort of test to gauge their experience. But they may be kidding themselves when they pass on a candidate that gave a wrong answer to a trick question, and that happens frequently.
 
@@ -126,12 +126,13 @@ This has led to a more robust hiring process which looks somewhat like this:
 </ul>
 
 Coding bootcamp grads work hard and deserve a shot at some jobs. But they should know that they're competing with the more desirable experienced developers for the same jobs.
-<em><strong>UPDATE:</strong> I speak to hiring manager & recruiter friends regularly and from what I'm hearing, it's not getting easier for Bootcamp grads. There are tons of unfilled front end web developer jobs out there at the time of this update: the hiring managers in charge of filling them are ignoring the bootcamp resum&eacute;s more that they're reading them. In fact, companies are looking at computer science graduates to fill front end web dev jobs more and more, not because they're the only ones with JavaScript, but because the further weeds out the bootcampers.</em>
+
+<em><strong>UPDATE:</strong> I still speak to hiring manager & recruiter friends regularly and from what I'm hearing, it's not getting easier for Bootcamp grads. There are tons of unfilled front end web developer jobs out there at the time of this update: the hiring managers in charge of filling them are ignoring the bootcamp resum&eacute;s more that they're reading them. In fact, companies are looking at computer science graduates to fill front end web dev jobs more and more, not because they're the only ones with JavaScript, but because it further weeds out the bootcampers.</em>
 
 <h2>Indeed is the best online job search tool</h2>
 Linkedin is a feature-rich social network based around searching for a job. Indeed does one thing and one thing well: it lets you search for jobs.
 
-Indeed has a barebones search interface and lets you easily apply for jobs on your handheld. I got more phone and face-to-face interviews than with any other resource.
+Indeed has a barebones search interface and lets you easily apply for jobs on your handheld. I got more phone and face-to-face interviews with it than with any other resource.
 
 <h2>Using Dice.com leads to spam</h2>
 I applied for one job through Dice...ONE job!! I was flooded with phone and email spam 15 minutes later.
