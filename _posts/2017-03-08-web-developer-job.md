@@ -141,4 +141,4 @@ If you're desperate for a job and need to use every resource available, I <em>su
 <h2>Conclusion</h2>
 There's a saying that "You need to treat finding a job <em>as</em> a job" and I did just that. I went on a ton of interviews, including <strong>going on four interviews in one day!</strong>
 
-I learned about interview techniques, required skillsets, recruiting companies and whatever else it takes to find a front end web developer job. It's all shared here and hope it helps you too.
+I learned about interview techniques, required skillsets, recruiting companies and whatever else it takes to find a front end web developer job. Feel free to ask me more about this...just don't ask me about my starting salary!!!
