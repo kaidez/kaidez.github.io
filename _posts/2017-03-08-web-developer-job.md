@@ -27,7 +27,7 @@ After a brief bout of unemployment, I'll be starting a new front end web develop
 I went through an intense job search to get to this point, more so than ever before.  I learned a lot (a WHOLE lot) about the 2017 web dev hiring process so I'll share my random thoughts on the subject.
 
 <h2>A preamble...like I start all my posts</h2>
-For all the nervousness and anxiety that comes with unemployment, I knew I'd get a job sooner than later. I don't know <em>everything</em> about front end web development but knew enough so that I wasn't be out of work for TOO long...only a month in the end.
+For all the nervousness and anxiety that comes with unemployment, I knew I'd get a job sooner than later. I don't know <em>everything</em> about front end web development but knew enough so that I wasn't going to be out of work for TOO long...only a month in the end.
 
 But I also knew my limited experience with the currently in-demand frameworks (React, Angular, etc) meant I would have to work harder than most at finding a job. I'd used them in personal projects but had little on-the-job experience with them on my resum&eacute;
 
@@ -36,7 +36,7 @@ But I also knew my limited experience with the currently in-demand frameworks (R
 I kept all this in mind for each interview I went on...not just startup ones. And here's what I learned and I'll start off positive...
 
 <h2>You WILL find a front end web developer job...</h2>
-If you have front end web developer experience, you will find a front end web developer job. You may encounter rejections in the process, from jobs you really want and from jobs you thought you were going to get.
+If you have front end web developer experience, you will find a front end web developer job. You may encounter rejections along the way, from jobs you really want and from jobs you thought you were going to get.
 
 But as long as you have quantifiable web dev experience, you will get a web dev job. End of story.
 
