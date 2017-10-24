@@ -89,7 +89,7 @@ They solved those problems. This is because web developers are "engineers" at th
 
 Both startups and traditional companies must put interview subjects through <em>some</em> sort of test to gauge their experience. But they may be kidding themselves when they pass on a candidate that gave a wrong answer to a trick question, and that happens frequently.
 
-<h2>Go above and beyond your answers to those questions</h2>
+<h2>Go above and beyond with your answers to those questions</h2>
 But if you're looking for work, you're going to have to deal with those questions...just like I had to. A Google search will give you answers to most commonly-asked tech interview questions.
 
 Most of the questions I got were based on JavaScript lexical scope, parsing JSON and Promises. But before you Google for the perfect answer to a Promise question, ask yourself this:
