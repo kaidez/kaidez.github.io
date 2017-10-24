@@ -127,7 +127,7 @@ This has led to a more robust hiring process which looks somewhat like this:
 
 Coding bootcamp grads work hard and deserve a shot at some jobs. But they should know that they're competing with the more desirable experienced developers for the same jobs.
 
-<em><strong>UPDATE:</strong> I still speak to hiring manager & recruiter friends regularly and from what I'm hearing, it's not getting any easier for Bootcamp grads. There are tons of unfilled front end web developer jobs out there at the time of this update: the hiring managers in charge of filling them are ignoring the bootcamp resum&eacute;s more then they're reading them. In fact, companies are looking at computer science graduates more and more to fill these jobs, not because they're the only ones that know JavaScript & CSS, but because it further weeds out the bootcampers.</em>
+<em><strong>UPDATE:</strong> I still speak to hiring manager & recruiter friends regularly and from what I'm hearing, it's not getting any easier for Bootcamp grads. There are tons of unfilled front end web developer jobs out there at the time of this update: the hiring managers in charge of filling them are ignoring the bootcamp resum&eacute;s more than they're reading them. In fact, companies are looking at computer science graduates more and more to fill these jobs, not because they're the only ones that know JavaScript & CSS, but because it further weeds out the bootcampers.</em>
 
 <h2>Indeed is the best online job search tool</h2>
 Linkedin is a feature-rich social network based around searching for a job. Indeed does one thing and one thing well: it lets you search for jobs.
