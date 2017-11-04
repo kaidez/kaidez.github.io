@@ -510,3 +510,8 @@ a.post-link {
     padding: 0 8px;
   }
 }
+
+// Override to center Twitter snippets
+.twitter-tweet {
+  margin: 0 auto 16px!important;
+}
