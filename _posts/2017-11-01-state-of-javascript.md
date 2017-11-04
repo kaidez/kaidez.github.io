@@ -93,7 +93,12 @@ Then JavaScript got a major update called ES6, or ES2015. Its syntax and feature
 <h3>...At (Roughly) The Same Time That React Arrives</h3>
 And then came React JS. It's a library for building the view portion of your application.
 
-React expands <a href="https://css-tricks.com/modular-future-web-components/"> on the web components model</a> that's been around for a while but is currently rising in popularity. Where a web component is a custom HTML tag encapsulates other tags and encapsulated any related CSS styles and JS functionality...it's essential a widget.
+React expands <a href="https://css-tricks.com/modular-future-web-components/"> on the web components model</a> that's been around for a while but is currently rising in popularity. Where a web component is a custom HTML tag encapsulates other tags, CSS styles and JS functionality...it's essential a widget.
+
+<h3>React state (starts) to change everything...</h3>
+React provided an easy-to-understand component model, and that's great. But it's BIG innovation was that it
+
+<em>Side note: depending on your web developer background, React state can be tough concept to grasp. <a href="https://twitter.com/dceddia">Dave Ceddia</a> wrote <a href="https://daveceddia.com/visual-guide-to-state-in-react/">an excellent post that explains React state as if it needed to be explained to a six-year old.</a></em>
 
 <h3>About the Virtual DOM...</h3>
 Along with "component-izing" things, React also contained something called the "virtual DOM." It was part of React's API that updated page content in much more efficient way than old school DHTML-based DOM manipulation did.
