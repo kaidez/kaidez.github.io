@@ -107,9 +107,7 @@ Along with "component-izing" things, React also contained something called the "
 
 The virtual DOM is not a literal copy of the DOM, but is actual snapshot copy of it stored in memory. When changes are made to a React element (which lives on the actual DOM), changes are made to its virtual DOM copy first, then those changes are pushed to the actual DOM.
 
-As convoluted as this may seem, updating the DOM this way is faster than updating it with the traditional DOM manipulation methods.
-
-It's key to note that DOM manipulation was still in wide use among developers at this point. It still had issues, but the developer community defined best practices, like using John Resig's <a href="http://jquery.com/">jQuery</a>, to manage those issues the best that it could.
+As convoluted as this may seem, updating the DOM this way is faster than updating it with the traditional DOM manipulation methods. React bought a new level of efficiency to web dev, and the right people are noticing.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Iterable NodeLists are so fundamentally important to the quality of the DOM. Unsurprisingly I now use React for most of my coding instead.</p>&mdash; John Resig (@jeresig) <a href="https://twitter.com/jeresig/status/726058698989277185?ref_src=twsrc%5Etfw">April 29, 2016</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
