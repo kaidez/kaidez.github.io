@@ -9,12 +9,12 @@ excerpt: A rant about how React, Redux and similar tools are part of JavaScript'
 og-image: state-of-javascript.jpg
 thumb-image: state-of-javascript-thumb.jpg
 ---
-The React/Redux combination has demonstrated the value of well-implemented application state management within JavaScript. Despite this, lots of developers complain about it.
+The React/Redux combination has demonstrated the value of well-implemented application state management within JavaScript application development. Despite this, many developers complain about it.
 
-I'd like to think the breakdown of developers that do and don't complain about React/Redux is 50/50, and that some of the complaints are valid. Nevertheless, JS state management was bound to happen, especially when reviewing the key moments of JavaScript's evolution.
+I'd like to think the breakdown of developers that do and don't complain about React/Redux is 50/50, and that some of the complaints are valid. Nevertheless, a paradigm for JS state management was bound to show up, especially when reviewing key moments of JavaScript's evolution.
 
 <h3>In The Beginning...</h3>
-This is the first JavaScript book I ever brought:
+This is the first JavaScript book I ever bought:
 
 <img src="/img/js-book.jpg" class="post__image" />
 
@@ -31,32 +31,32 @@ While <code>document.getElementById()</code> would become the primary way to ini
 
 Using <code>document.getElementById()</code> as main entry point for DOM manipulation exposed developers to the DOM API as a whole. And once they saw how they could use this API to manipulate the page, it inspired a burst of creativity.
 
-This creativity was mostly noticed in things like drop-down menus and animations, but there were some cool DHTML "hacks" for state management. Many that are still in use to this day.
+This creativity was seen in things like drop-down menus and animations, but there were some cool DHTML "hacks" for state management. Many that are still in use to this day.
 
-The most popular hack was to add a class with a Boolean-type name to an element once JavaScript did something. For example: JS could toggle a class on the <code>body</code> tag, telling the browser that a menu was in a visible state:
+The most popular hack was to add a class with a Boolean-type name to an element once JavaScript did something. For example: JS could toggle a class on the <code>&lt;body&gt;</code> tag, telling the browser whether or not a menu was visible:
 
 <pre class=" language-markup">
-  <code class=" language-markup">
-  &lt;!-- If JavaScript hides the menu... --&gt;
-  &lt;body class="isHidden"&gt;
+ <code class=" language-markup">
+ &lt;!-- If JavaScript hides the menu... --&gt;
+ &lt;body class="isHidden"&gt;
 
-  &lt;!-- If JavaScript shows the menu... --&gt;
-  &lt;body class="isVisible"&gt;
-  </code>
+ &lt;!-- If JavaScript shows the menu... --&gt;
+ &lt;body class="isVisible"&gt;
+ </code>
 </pre>
 
 Front-end developers mostly loved manipulating the DOM: back-end developers mostly hated it. Updating data using something like the DOM API was simply something the latter wasn't used to.
 
-Also, it didn't help that DOM implementation differed across web browsers. The browser wars were still going on at this time, so writing code for two or three browsers seemed inefficient.
+Also, it didn't help that DOM implementation differed across web browsers. <a href="https://en.wikipedia.org/wiki/Browser_wars">The browser wars</a> were still going on at this time, so writing code for two or three browsers seemed inefficient.
 
 Above all, the DOM was slow...REALLY slow. JavaScript DOM manipulation didn't take hours, but the time it DID take was too long by software standards.
 
-However, clients liked the visual results provided by DOM manipulation. So it remained a best practice, evolved to be more efficient over time, and that was that.
+However, clients liked the visual results provided by DOM manipulation. So it remained a best practice and evolved to be more efficient over time, and that was that.
 
 <h3>...Next Came The Quiet Time</h3>
-Internet stocks that rose high starting in the mid nineties came crashing down in the early 2000s. Few "web-only" companies were profitable and as a result, other companies, including Microsoft, said the web was a "passing fad."
+Internet stocks that rose high in the mid nineties came crashing down in the early 2000s. Few "web-only" companies were profitable and as a result, other companies, including Microsoft, said the web was a "passing fad."
 
-As a whole, web-only companies, didn't die out during this quiet time. They just experimented with cool web technologies while no one was watching, removed from the constant pressure of meeting deadlines.
+As a whole, web-only companies, didn't die out during this quiet time. They just experimented with their products while no one was watching, removed from the constant pressure of meeting deadlines.
 
 Mozilla rose to prominence during this time. Apple would release the Mac OS X operating system, setting them up for the world dominance they currently enjoy.
 
@@ -71,7 +71,7 @@ That all changed when web developer <a href="http://adaptivepath.org/ideas/ajax-
 
 The article outlined how to build a web page that could load content without using page refreshes. In order to build AJAX apps, it said, you needed <code>XMLHttpRequest</code>, CSS, JavaScript and, of course, the DOM.
 
-The creativity inspired by AJAX was far out-shined the creativity inspired by the DOM API. AJAX let developers build games, calendar apps, word processing apps, any robust app you can think of.
+The creativity inspired by AJAX was far out-shined the creativity inspired by the DOM API. AJAX let developers build games, calendar apps, word processing apps, any robust app they could think of.
 
 With the sudden burst of AJAX-inspired creativity, the web got its second wind in the business world. Everyone started paying attention to it again: the web was clearly not a fad.
 
@@ -91,26 +91,16 @@ Then JavaScript got a major update called ES6, or ES2015. Its syntax and feature
 <h3>...At (Roughly) The Same Time That React Arrives</h3>
 And then came React JS. It's a library for building the view portion of your application.
 
-React expanded <a href="https://css-tricks.com/modular-future-web-components/"> on the web components model</a> that was around for a while but is now rising in popularity. Where a web component is a custom HTML tag encapsulates other tags, CSS styles and JS functionality...it's essential a widget.
+React expanded <a href="https://css-tricks.com/modular-future-web-components/"> on the web components model</a> that was around for a while but is now rising in popularity. Where a web component is a custom HTML tag encapsulates other tags, CSS styles and JS functionality...it's essentially a widget.
 
 <h3>React state (starts) to change everything...</h3>
-React provided an easy-to-understand component model, and that's great. But its BIG innovation was how it improved application state management in JavaScript.
+React provided an easy-to-understand component model, and that's great. But its BIG innovation was how it improved application state management in JavaScript apps.
 
 React state is in the form of a JavaScript object that developers can manipulate to change how the app looks on the screen. So maybe a mobile menu needs to be made visible, maybe a some JSON data needs to load up.
 
 Doing this requires changing React state...<em>not</em> the DOM.
 
 <em>Side note: React state is an abstract thing so depending on your developer background, it can a be tough concept to grasp. <a href="https://twitter.com/dceddia">Dave Ceddia</a> wrote <a href="https://daveceddia.com/visual-guide-to-state-in-react/">an excellent post that explains React state as if it needed to be explained to a six-year old.</a></em>
-
-<h3>About the Virtual DOM...</h3>
-Along with "component-izing" things, React also contained something called the "virtual DOM." It was part of React's API that updated page content in much more efficient way than old school DHTML-based DOM manipulation did.
-
-The virtual DOM is not a literal copy of the DOM, but is actual snapshot copy of it stored in memory. When changes are made to a React element (which lives on the actual DOM), changes are made to its virtual DOM copy first, then those changes are pushed to the actual DOM.
-
-As convoluted as this may seem, updating the DOM this way is faster than updating it with the traditional DOM manipulation methods. React bought a new level of efficiency to web dev, and the right people are noticing.
-
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Iterable NodeLists are so fundamentally important to the quality of the DOM. Unsurprisingly I now use React for most of my coding instead.</p>&mdash; John Resig (@jeresig) <a href="https://twitter.com/jeresig/status/726058698989277185?ref_src=twsrc%5Etfw">April 29, 2016</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <h3>And now...Redux...</h3>
 Redux came out as set of tools for managing and manipulating application state. It's based on <a href="https://facebook.github.io/flux/">Facebook's Flux design pattern</a> and written to work with React, but it can work with any JavaScript library or framework.
@@ -120,3 +110,6 @@ It's possible for your app to have 20 React components, where each component man
 Whenever you hear a phrase like "Redux gives your app a <em>single source of truth</em>," the source in question is this single state object.
 
 <h3>This is where things REALLY changed...</h3>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Iterable NodeLists are so fundamentally important to the quality of the DOM. Unsurprisingly I now use React for most of my coding instead.</p>&mdash; John Resig (@jeresig) <a href="https://twitter.com/jeresig/status/726058698989277185?ref_src=twsrc%5Etfw">April 29, 2016</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
