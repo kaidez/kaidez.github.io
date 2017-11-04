@@ -96,7 +96,9 @@ React expanded <a href="https://css-tricks.com/modular-future-web-components/"> 
 <h3>React state (starts) to change everything...</h3>
 React provided an easy-to-understand component model, and that's great. But its BIG innovation was how it improved application state management in JavaScript.
 
-In React, state is an object...there those objects again. And the object contained (or it <em>should</em> contain)
+React state is in the form of a JavaScript object that developers can manipulate to change how the app looks on the screen. So maybe a mobile menu needs to be made visible, maybe a some JSON data needs to load up.
+
+Doing this requires changing React state...<em>not</em> the DOM.
 
 <em>Side note: React state is an abstract thing so depending on your developer background, it can a be tough concept to grasp. <a href="https://twitter.com/dceddia">Dave Ceddia</a> wrote <a href="https://daveceddia.com/visual-guide-to-state-in-react/">an excellent post that explains React state as if it needed to be explained to a six-year old.</a></em>
 
@@ -111,10 +113,7 @@ It's key to note that DOM manipulation was still in wide use among developers at
 
 <h3>Why React Is A Big Deal...</h3>
 
-The BIG thing that React brings to JavaScript is a state management system, a system that tracks what your app is doing at any given time. Maybe a mobile menu was visible, maybe a particular piece of JSON data just loaded, etc.
+The BIG thing that React brings to JavaScript is a state management system, a system that tracks what your app is doing at any given time
 
-React state is in the form of a JavaScript object that developers manipulate to change. So if you want to change a React view, <em>you do it with state and not the DOM.</em>
-
-Combine React with Redux (which primarily exists to manage state and )
 
 My two cents: JS developers need to re-learn a LOT of stuff!! Managing page content using an object and
