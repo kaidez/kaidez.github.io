@@ -8,10 +8,11 @@ export class Navigation extends Component {
     this.state = {
       isMenuVisible: false
     }
-    this.toggleMobileMenu = this.toggleMobileMenu.bind(this)
   }
 
-  toggleMobileMenu(e) {
+  static displayName = 'Navigation'
+
+  toggleMobileMenu = (e) => {
     e || e.window.event
     const clickTarget = document.querySelector("#menuButton")
 

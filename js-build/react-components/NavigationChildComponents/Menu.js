@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 class Menu extends Component {
 
+  static displayName = 'Menu'
+
   render() {
 
     const {isMenuVisible} = this.props

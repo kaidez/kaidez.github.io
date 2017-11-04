@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 class FooterContent extends Component {
 
+  static displayName = 'FooterContent'
+
   render() {
 
     const {isFooterHiddenOnMobile} = this.props

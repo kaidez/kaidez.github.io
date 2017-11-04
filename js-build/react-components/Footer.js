@@ -8,10 +8,11 @@ export class Footer extends Component {
     this.state = {
       isFooterHiddenOnMobile: true
     }
-    this.toggleFooter = this.toggleFooter.bind(this)
   }
 
-  toggleFooter(e) {
+  static displayName = 'Footer'
+
+  toggleFooter = (e) => {
     e || e.window.event
     const clickTarget = document.querySelector("#footerButton")
 
