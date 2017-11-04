@@ -76,11 +76,9 @@ The creativity inspired by AJAX was far out-shined the creativity inspired by th
 With the sudden burst of AJAX-inspired creativity, the web got its second wind in the business world. Everyone started paying attention to it again: the web was clearly not a fad.
 
 <h3>...JSON takes it from here</h3>
-Object literals came to JavaScript: you could do <code>var obj = {}</code> instead of <code>var obj = new Object()</code>. This ushered in the creation of <a href="http://www.json.org/">JSON</a>.
+Then object literals came to JavaScript: you could do <code>var obj = {}</code> instead of <code>var obj = new Object()</code>. This ushered in the creation of <a href="http://www.json.org/">JSON</a>.
 
-JSON was a uniform data format for the browser in the form of a generic object. Instead of backend database systems, it just made it easier for browsers to interact with them.
-
-Since the data was in the form of a standard object, it could be easily manipulated with JavaScript. So instead of a website No matter what your database looked like or what language it used, it JSON just worked.
+JSON was essentially data stored in back-end database systems that was sent to the browser in the form of a standard key/value object. In this form, the data could be easily manipulated with JavaScript.
 
 <h3>...Now, The Frameworks</h3>
 With AJAX, JSON and DOM best practices in place, it made sense to encapsulate them in complete software bundles. One-stop pieces of software that gave developers all the tools they needed to build an app.
@@ -93,12 +91,14 @@ Then JavaScript got a major update called ES6, or ES2015. Its syntax and feature
 <h3>...At (Roughly) The Same Time That React Arrives</h3>
 And then came React JS. It's a library for building the view portion of your application.
 
-React expands <a href="https://css-tricks.com/modular-future-web-components/"> on the web components model</a> that's been around for a while but is currently rising in popularity. Where a web component is a custom HTML tag encapsulates other tags, CSS styles and JS functionality...it's essential a widget.
+React expanded <a href="https://css-tricks.com/modular-future-web-components/"> on the web components model</a> that was around for a while but is now rising in popularity. Where a web component is a custom HTML tag encapsulates other tags, CSS styles and JS functionality...it's essential a widget.
 
 <h3>React state (starts) to change everything...</h3>
 React provided an easy-to-understand component model, and that's great. But its BIG innovation was how it improved application state management in JavaScript.
 
-<em>Side note: depending on your web developer background, React state can be tough concept to grasp. <a href="https://twitter.com/dceddia">Dave Ceddia</a> wrote <a href="https://daveceddia.com/visual-guide-to-state-in-react/">an excellent post that explains React state as if it needed to be explained to a six-year old.</a></em>
+In React, state is an object...there those objects again. And the object contained (or it <em>should</em> contain)
+
+<em>Side note: React state is an abstract thing so depending on your developer background, it can a be tough concept to grasp. <a href="https://twitter.com/dceddia">Dave Ceddia</a> wrote <a href="https://daveceddia.com/visual-guide-to-state-in-react/">an excellent post that explains React state as if it needed to be explained to a six-year old.</a></em>
 
 <h3>About the Virtual DOM...</h3>
 Along with "component-izing" things, React also contained something called the "virtual DOM." It was part of React's API that updated page content in much more efficient way than old school DHTML-based DOM manipulation did.
