@@ -37,15 +37,15 @@ The most popular hack was to add a class with a Boolean-type name to an element 
 
 <pre class=" language-markup">
   <code class=" language-markup">
-  &lt;!-- If the menu is in a hidden state --&gt;
+  &lt;!-- If JavaScript hides the menu... --&gt;
   &lt;body class="isHidden"&gt;
 
-  &lt;!-- If the menu is in a visible state --&gt;
+  &lt;!-- If JavaScript shows the menu... --&gt;
   &lt;body class="isVisible"&gt;
   </code>
 </pre>
 
-Front-end developers primarily loved manipulating the DOM: back-end developers primarily hated it. Updating data using something like the DOM API was simply something the latter wasn't used to.
+Front-end developers mostly loved manipulating the DOM: back-end developers mostly hated it. Updating data using something like the DOM API was simply something the latter wasn't used to.
 
 Also, it didn't help that DOM implementation differed across web browsers. The browser wars were still going on at this time, so writing code for two or three browsers seemed inefficient.
 
@@ -60,7 +60,7 @@ As a whole, web-only companies, didn't die out during this quiet time. They just
 
 Mozilla rose to prominence during this time. Apple would release the Mac OS X operating system, setting them up for the world dominance they currently enjoy.
 
-And companies like Google would play around with a little-known piece of web browser technology called <code>XMLHttpRequest</code>. It allowed data to load onto the page without the page needing to be fully refreshed.
+And companies like Google would play around with a little-known piece of web browser technology called <code>XMLHttpRequest</code>. It allowed data to load onto the web page without the page needing to be fully refreshed.
 
 Google used <code>XMLHttpRequest</code> to build Gmail and Google Maps, two apps that load new data on the page without having to refresh it. <code>XMLHttpRequest</code> was awesome and other companies also created apps with the same functionality.
 
