@@ -96,7 +96,7 @@ And then came React JS. It's a library for building the view portion of your app
 React expands <a href="https://css-tricks.com/modular-future-web-components/"> on the web components model</a> that's been around for a while but is currently rising in popularity. Where a web component is a custom HTML tag encapsulates other tags, CSS styles and JS functionality...it's essential a widget.
 
 <h3>React state (starts) to change everything...</h3>
-React provided an easy-to-understand component model, and that's great. But it's BIG innovation was that it
+React provided an easy-to-understand component model, and that's great. But its BIG innovation was how it improved application state management in JavaScript.
 
 <em>Side note: depending on your web developer background, React state can be tough concept to grasp. <a href="https://twitter.com/dceddia">Dave Ceddia</a> wrote <a href="https://daveceddia.com/visual-guide-to-state-in-react/">an excellent post that explains React state as if it needed to be explained to a six-year old.</a></em>
 
