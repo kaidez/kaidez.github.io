@@ -33,7 +33,7 @@ Using <code>document.getElementById()</code> as main entry point for DOM manipul
 
 This creativity was mostly noticed in things like drop-down menus and animations, but there were some cool DHTML "hacks" for state management. Many that are still in use to this day.
 
-The most popular hack was to add a class with a Boolean-type name to an element once JavaScript did something. For example: JS could toggle a class on the <code>body</code> tag, telling the browser it was visible:
+The most popular hack was to add a class with a Boolean-type name to an element once JavaScript did something. For example: JS could toggle a class on the <code>body</code> tag, telling the browser that a menu was in a visible state:
 
 <pre class=" language-markup">
   <code class=" language-markup">
@@ -76,9 +76,9 @@ The creativity inspired by AJAX was far out-shined the creativity inspired by th
 With the sudden burst of AJAX-inspired creativity, the web got its second wind in the business world. Everyone started paying attention to it again: the web was clearly not a fad.
 
 <h3>...JSON takes it from here</h3>
-Object literals came to Java Script, meaning you could do <code>var obj = {}</code> instead of <code>var obj = new Object()</code>. This ushered in the creation of <a href="http://www.json.org/">JSON</a>.
+Object literals came to JavaScript: you could do <code>var obj = {}</code> instead of <code>var obj = new Object()</code>. This ushered in the creation of <a href="http://www.json.org/">JSON</a>.
 
-JSON was a uniform data format for the browser. It didn't eliminate the need for backend database systems, it just made it easier for browsers to interact with them.
+JSON was a uniform data format for the browser in the form of a generic object. Instead of backend database systems, it just made it easier for browsers to interact with them.
 
 Since the data was in the form of a standard object, it could be easily manipulated with JavaScript. So instead of a website No matter what your database looked like or what language it used, it JSON just worked.
 
