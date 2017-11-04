@@ -111,6 +111,9 @@ As convoluted as this may seem, updating the DOM this way is faster than updatin
 
 It's key to note that DOM manipulation was still in wide use among developers at this point. It still had issues, but the developer community defined best practices, like using John Resig's <a href="http://jquery.com/">jQuery</a>, to manage those issues the best that it could.
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Iterable NodeLists are so fundamentally important to the quality of the DOM. Unsurprisingly I now use React for most of my coding instead.</p>&mdash; John Resig (@jeresig) <a href="https://twitter.com/jeresig/status/726058698989277185?ref_src=twsrc%5Etfw">April 29, 2016</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 <h3>Why React Is A Big Deal...</h3>
 
 The BIG thing that React brings to JavaScript is a state management system, a system that tracks what your app is doing at any given time
