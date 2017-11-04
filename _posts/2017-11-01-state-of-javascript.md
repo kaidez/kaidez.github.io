@@ -112,9 +112,11 @@ As convoluted as this may seem, updating the DOM this way is faster than updatin
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Iterable NodeLists are so fundamentally important to the quality of the DOM. Unsurprisingly I now use React for most of my coding instead.</p>&mdash; John Resig (@jeresig) <a href="https://twitter.com/jeresig/status/726058698989277185?ref_src=twsrc%5Etfw">April 29, 2016</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<h3>Why React Is A Big Deal...</h3>
+<h3>And now...Redux...</h3>
+Redux came out as set of tools for managing and manipulating application state. It's based on <a href="https://facebook.github.io/flux/">Facebook's Flux design pattern</a> and written to work with React, but it can work with any JavaScript library or framework.
 
-The BIG thing that React brings to JavaScript is a state management system, a system that tracks what your app is doing at any given time
+It's possible for your app to have 20 React components, where each component manages it own state object. Redux takes the position that app state shouldn't be spread out like this and instead, it should all be managed in one object.
 
+Whenever you hear a phrase like "Redux gives your app a <em>single source of truth</em>," the source in question is this single state object.
 
-My two cents: JS developers need to re-learn a LOT of stuff!! Managing page content using an object and
+<h3>This is where things REALLY changed...</h3>
