@@ -9,9 +9,9 @@ excerpt: A rant about how React, Redux and similar tools are part of JavaScript'
 og-image: state-of-javascript.jpg
 thumb-image: state-of-javascript-thumb.jpg
 ---
-The React/Redux combination has demonstrated the value of well-implemented state management within JavaScript application development. Despite this, many developers complain about it.
+The React/Redux combination has demonstrated the value of well-implemented state management in JavaScript application development. Despite this, many developers complain about it.
 
-I'd like to think the breakdown of developers that do and don't complain about React/Redux is 50/50, and that some of the complaints are valid. Nevertheless, a paradigm for JS state management was bound to show up, especially when reviewing key moments of JavaScript's evolution.
+I'd like to think the breakdown of developers that do and don't complain about React/Redux is 50/50, and that some of the complaints are valid. Nevertheless, state management was bound to show up somewhere in JavaScript, especially when reviewing key moments of JavaScript's evolution.
 
 <h3>In The Beginning...</h3>
 This is the first JavaScript book I ever bought:
@@ -27,7 +27,7 @@ The book covers functions really, <em>really</em> well: it's actually where I fi
 And there's also 33 pages on Dynamic HTML (DHTML), demonstrating DOM manipulation methods that now seem dated. All the manipulation in the book is done with <code>document.all</code>...<code>document.getElementById()</code> isn't mentioned at all.
 
 <h3>...Then Came Love For The DOM</h3>
-<code>document.getElementById()</code> was part of the DOM Level 2 specification that didn't reach Candidate Recommendation until 2000. So a 1999 book <em>not</em> covering it makes sense but once that spec achieved Candidate Reco status, things changed.
+<code>document.getElementById()</code> was part of the DOM Level 2 specification that didn't reach Candidate Recommendation until 2000. So a 1999 book <em>not</em> covering it made sense but once that spec achieved Candidate Reco status, things changed.
 
 Using <code>document.getElementById()</code> as the main entry point for DOM manipulation exposed developers to the DOM API as a whole. And once they saw how they could use this API to manipulate the page, it inspired a burst of creativity.
 
@@ -124,6 +124,9 @@ As a result, a front end web developer has to understanding the logical thought 
  <li class="post-content--list-item">
    I've seen how focusing on the state management has sharpened my own logical, computer science-like skills.
  </li>
+ <li class="post-content--list-item">
+   I haven't used jQuery in a year...not even for small helper code.
+ </li>
 </ul>
 
-Most profoundly, I've seen how logic...progression...
+The above-described progression as a full-on application language...
