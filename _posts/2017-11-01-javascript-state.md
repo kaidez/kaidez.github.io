@@ -9,7 +9,7 @@ excerpt: A rant about how React, Redux and similar tools are part of JavaScript'
 og-image: state-of-javascript.jpg
 thumb-image: state-of-javascript-thumb.jpg
 ---
-The React/Redux combination has demonstrated the value of well-implemented application state management within JavaScript application development. Despite this, many developers complain about it.
+The React/Redux combination has demonstrated the value of well-implemented state management within JavaScript application development. Despite this, many developers complain about it.
 
 I'd like to think the breakdown of developers that do and don't complain about React/Redux is 50/50, and that some of the complaints are valid. Nevertheless, a paradigm for JS state management was bound to show up, especially when reviewing key moments of JavaScript's evolution.
 
@@ -126,4 +126,4 @@ As a result, a front end web developer has to understanding the logical thought 
  </li>
 </ul>
 
-Most profoundly, I've seen how logic
+Most profoundly, I've seen how logic...progression...
