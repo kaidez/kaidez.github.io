@@ -109,8 +109,10 @@ It's possible for your app to have 20 React components, where each component man
 
 Whenever you hear a phrase like "Redux gives your app a <em>single source of truth</em>," the source in question is this single state object.
 
-<h3>This is where things REALLY changed...</h3>
-The React/Redux combo
+<h3>This is where things REALLY changed...A rant...</h3>
+With state management, the React/Redux combo has drastically reduced the use of DOM manipulation. This is a really opinionated statement, but I'm sticking by it.
+
+Manipulating UI and views based on the state values follows
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Iterable NodeLists are so fundamentally important to the quality of the DOM. Unsurprisingly I now use React for most of my coding instead.</p>&mdash; John Resig (@jeresig) <a href="https://twitter.com/jeresig/status/726058698989277185?ref_src=twsrc%5Etfw">April 29, 2016</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
