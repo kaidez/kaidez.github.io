@@ -105,12 +105,16 @@ In React, <strong>changes like this require updating the state...<em>not</em> th
 <h3>And now...Redux...</h3>
 Redux came out as a set of tools for managing and manipulating application state. It's based on <a href="https://facebook.github.io/flux/">Facebook's Flux design pattern</a> and was initially written to work with React, but it can work with any JavaScript library or framework.
 
-It's possible for your app to have 20 React components, where each component manages it own state object. Redux takes the position that app state shouldn't be spread out like this and, instead, should all be managed in one object.
+It's possible for your app to have 20 React components, where each component manages it own state object. Redux takes the position that app state shouldn't be spread out like this and, instead, should be managed in one object.
 
 Whenever you hear a phrase like "Redux gives your app a <em>single source of truth</em>," the source in question is this single state object.
 
 <h3>This is where things REALLY changed...A rant...</h3>
-Using state to change an application view follows best practices taught in basic computer science and implemented in Java, C++, etc. As a result, DOM manipulation still matters, but less and less.
+Using state to change an app's view is a major shift away from the DOM manipulation techniques we've been using for so long.  DOM manipulation still matters in JS development, but less and less.
+
+Before, we would look to the DOM to add/subtract/update page content.
+
+Understanding the logical thought process taught in a basic computer science class is pretty important when working with Redux.
 
 This is a <em>really</em> opinionated statement, but I'm standing by it. I've been in "React/Redux immersion" for the nine months leading up to publishing this post and see how this toolset
 
