@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title:  'The "State" of JavaScript'
-date:   2017-11-06 00:01:59 -0400
+date:   2017-11-05 00:01:59 -0400
 categories: personal
 permalink: /javascript-state/
 excerpt: A rant about how React, Redux and similar tools are part of JavaScript's natural progression to a complete application language.
@@ -11,7 +11,7 @@ thumb-image: state-of-javascript-thumb.jpg
 ---
 The React/Redux combination has demonstrated the value of well-implemented state management in JavaScript applications. Despite this, many developers complain about it.
 
-I'd like to think the breakdown of developers that do and don't complain about React/Redux is 50/50, and that some of the complaints are valid. Nevertheless, state management was bound to show up in JavaScript, especially when reviewing key moments of JavaScript's evolution.
+I'd like to think the breakdown of developers that do and don't complain about React/Redux is 50/50, and that <em>some</em> of the complaints are valid. Nevertheless, state management was bound to show up in JavaScript, especially when reviewing key moments of JavaScript's evolution.
 
 <h3>In The Beginning...</h3>
 This is the first JavaScript book I ever bought:
@@ -33,7 +33,7 @@ Using <code>document.getElementById()</code> as the main entry point for DOM man
 
 This creativity was seen in things like drop-down menus and animations, but there were some cool DHTML "hacks" for state management. Many that are still in use to this day.
 
-The most popular hack was to add a class with a Boolean-type name to an element once JavaScript did something. For example: JS could toggle a class on the <code>&lt;body&gt;</code> tag, telling the browser whether or not a menu was visible:
+The most popular state hack was to add a Boolean-like class name to an element once JavaScript did something. For example: JS could toggle a class on the <code>&lt;body&gt;</code> tag, telling the browser whether or not a menu was visible:
 
 <pre class=" language-markup">
 <code class=" language-markup">
@@ -81,7 +81,7 @@ Then object literals landed in JavaScript, meaning you could do <code>var obj = 
 JSON was essentially data stored in back-end database systems that was sent to the browser in the form of a standard key/value object. In this form, the data could be easily manipulated with JavaScript.
 
 <h3>...Now, the frameworks & libraries</h3>
-With AJAX, JSON and DOM best practices in place, it made sense to encapsulate them in complete software bundles. One-stop pieces of software that gave developers all the tools they needed to build an app.
+With AJAX, JSON and DOM best practices in place, it made sense to encapsulate the practices in complete software bundles. One-stop pieces of software that gave developers all the tools they needed to build an app.
 
 That's where JavaScript frameworks and libraries came in. <a href="http://www.javascriptmvc.com/">JavaScript MVC</a>, <a href="https://dojotoolkit.org/">Dojo</a> and <a href="http://backbonejs.org/">Backbone</a> were the first popular ones, then came Angular, Ember, Dart, Knockout...and on and on.
 
@@ -119,13 +119,13 @@ As a result, a front end web developer has to understanding the logical thought 
    I've seen how managing app state instead of constantly polling the DOM is the the right way to manage content in large-scale applications.
  </li>
  <li class="post-content--list-item">
-   I've seen "classically-trained" developers with no front-end web developer experience learn React/Redux in, like, two minutes. All because the stuff they've been classically-trained prepared them for handling state.
+   I've seen "classically-trained" developers with no front-end web experience learn React/Redux in, like, two minutes. All because the stuff they've been classically-trained in prepared them for handling state.
  </li>
  <li class="post-content--list-item">
    I've seen how focusing on the state management has sharpened my own logical, computer science-like skills.
  </li>
  <li class="post-content--list-item">
-   I haven't used jQuery in a year...not even for small helper code.
+   I haven't used jQuery in a year...not even for small helper code. <a href="/javascript-state/">Not that I think people <em>shouldn't</em> use it</a>.
  </li>
 </ul>
 
