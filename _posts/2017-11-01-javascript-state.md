@@ -116,10 +116,10 @@ As a result, a front end web developer has to understanding the logical thought 
 
 <ul class="post-content__list">
   <li class="post-content--list-item">
-    I've seen how managing app state in Redux is a pain to ramp up on, but the right way to do things in large-scale applications.
+    I've seen how managing app state in React/Redux is a pain to ramp up on, but the right way to do things in large-scale applications.
   </li>
   <li class="post-content--list-item">
-    The <code>scripts</code> property which contains two tasks: <code>build</code> which builds out the production-ready <code>build/bundle.js</code> file via webpack, and <code>watch</code>, which watches for changes to the your <code>.js</code> source files and runs that build.  These source files are in the <code>js-build</code> directory listed above and the tasks can be run using either <a href="https://yarnpkg.com/">Yarn</a> or <a href="https://www.npmjs.com/">npm</a>...I used Yarn to run <code>watch</code>.
+    I've seen "classically-trained" developers with no front-end web developer experience learn React/Redux in, like, two minutes.
   </li>
   <li class="post-content--list-item">
     The <code>devDependencies</code> property which provides the packages needed to let webpack build ES6 out to the more cross-browser friendly ES5 syntax.
