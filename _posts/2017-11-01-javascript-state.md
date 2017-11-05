@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title:  'The "State" of JavaScript'
-date:   2017-11-01 04:00:59 -0400
+date:   2017-11-06 00:01:59 -0400
 categories: personal
 permalink: /javascript-state/
 excerpt: A rant about how React, Redux and similar tools are part of JavaScript's natural progression to a complete application language.
