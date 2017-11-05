@@ -4,7 +4,7 @@ comments: true
 title:  'The "State" Of JavaScript'
 date:   2017-11-01 04:00:59 -0400
 categories: personal
-permalink: /state-of-javascript/
+permalink: /javascript-state/
 excerpt: A rant about how React, Redux and similar tools are part of JavaScript's natural progression to a complete application language.
 og-image: state-of-javascript.jpg
 thumb-image: state-of-javascript-thumb.jpg
@@ -112,7 +112,7 @@ Whenever you hear a phrase like "Redux gives your app a <em>single source of tru
 <h3>This is where things REALLY changed...A rant...</h3>
 With state management, the React/Redux combo has drastically reduced the use of DOM manipulation. This is a really opinionated statement, but I'm sticking by it.
 
-Manipulating UI and views based on the state values follows
+Using state to change an application follows best practices taught in basic computer science and implemented in Java, C++, etc. As a result, treating the DOM as main API a JavaScript dev works in is l
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Iterable NodeLists are so fundamentally important to the quality of the DOM. Unsurprisingly I now use React for most of my coding instead.</p>&mdash; John Resig (@jeresig) <a href="https://twitter.com/jeresig/status/726058698989277185?ref_src=twsrc%5Etfw">April 29, 2016</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
