@@ -116,12 +116,14 @@ As a result, a front end web developer has to understanding the logical thought 
 
 <ul class="post-content__list">
   <li class="post-content--list-item">
-    I've seen how managing app state in React/Redux is a pain to ramp up on, but the right way to do things in large-scale applications.
+    I've seen "classically-trained" developers with no front-end web developer experience learn React/Redux in, like, two minutes. All because the stuff they've been classically-trained prepared them for handling state.
   </li>
   <li class="post-content--list-item">
-    I've seen "classically-trained" developers with no front-end web developer experience learn React/Redux in, like, two minutes.
+    I've seen how managing app state instead of constantly pooling the DOM is the the right way to do things in large-scale applications.
   </li>
   <li class="post-content--list-item">
-    The <code>devDependencies</code> property which provides the packages needed to let webpack build ES6 out to the more cross-browser friendly ES5 syntax.
+    I've seen how focusing on the state
   </li>
 </ul>
+
+Most profoundly, logic...
