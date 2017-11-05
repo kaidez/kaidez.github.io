@@ -129,4 +129,24 @@ As a result, a front end web developer has to understanding the logical thought 
  </li>
 </ul>
 
-The above-described progression as a full-on application language...
+When you see read about things like <a href="https://www.theregister.co.uk/2017/04/24/stanford_tests_javascript_in_place_of_java/">Stanford University using JavaScript to teach intro computer science instead of Java</a>, it's clear things are changing. Self-taught developers (like myself) need to learn and embrace CS basics...the above-described progression proves this.
+
+
+<blockquote>
+  <p>
+  I think, these days, having a computer science background has a very direct effect. I wouldn’t say five years ago computer science would help in web development but nowadays, especially on the client side, there’s so much logic there. You’re writing jQuery, things are going good. You’re translating. You’re writing larger applications.
+  </p>
+  <p>
+  ...
+  </p>
+   <p>
+  It’s getting real complicated. A background in computer science lays a lot of the groundwork so that you’re not making stupid mistakes and taking four months to learn how you should have done things. Yeah, computer science has a big influence on where the trajectory of front-end development is going, for sure.
+  </p>
+  <div>
+    <img src="/img/paul-irish-photo.jpg" alt="Paul Irish" style="border-radius: 16px;">
+    <p  style="margin-bottom: 0">-Paul Irish</p>
+    <p style="position: relative; top: -11px;">
+      <a href="http://blog.teamtreehouse.com/treehouse-friends-paul-irish" style="font-size: 14px;">Source</a>
+    </p>
+  </div>
+</blockquote>
