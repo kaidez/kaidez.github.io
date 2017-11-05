@@ -110,13 +110,22 @@ It's possible for your app to have 20 React components, where each component man
 Whenever you hear a phrase like "Redux gives your app a <em>single source of truth</em>," the source in question is this single state object.
 
 <h3>This is where things REALLY changed...A rant...</h3>
-Using state to change an app's view is a major shift away from the DOM manipulation techniques we've been using for so long.  DOM manipulation still matters in JS development, but less and less.
+Using state to change application views is a major shift away from using DOM manipulation to change them. DOM manipulation still matters in JS development, but less and less.
 
-Before, we would look to the DOM to add/subtract/update page content.
+As a result, a front end web developer has to understanding the logical thought process taught in a basic computer science class. This is an opinionated statement but after being in "React/Redux immersion" for the nine months prior to this post...
 
-Understanding the logical thought process taught in a basic computer science class is pretty important when working with Redux.
+<ul class="post-content__list">
+  <li class="post-content--list-item">
+    I've seen how managing app state in Redux is a pain to ramp up on, but the right way to do things in large-scale applications.
+  </li>
+  <li class="post-content--list-item">
+    The <code>scripts</code> property which contains two tasks: <code>build</code> which builds out the production-ready <code>build/bundle.js</code> file via webpack, and <code>watch</code>, which watches for changes to the your <code>.js</code> source files and runs that build.  These source files are in the <code>js-build</code> directory listed above and the tasks can be run using either <a href="https://yarnpkg.com/">Yarn</a> or <a href="https://www.npmjs.com/">npm</a>...I used Yarn to run <code>watch</code>.
+  </li>
+  <li class="post-content--list-item">
+    The <code>devDependencies</code> property which provides the packages needed to let webpack build ES6 out to the more cross-browser friendly ES5 syntax.
+  </li>
+</ul>
 
-This is a <em>really</em> opinionated statement, but I'm standing by it. I've been in "React/Redux immersion" for the nine months leading up to publishing this post and see how this toolset
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Iterable NodeLists are so fundamentally important to the quality of the DOM. Unsurprisingly I now use React for most of my coding instead.</p>&mdash; John Resig (@jeresig) <a href="https://twitter.com/jeresig/status/726058698989277185?ref_src=twsrc%5Etfw">April 29, 2016</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en" data-conversation="none"><p lang="en" dir="ltr">Iterable NodeLists are so fundamentally important to the quality of the DOM. Unsurprisingly I now use React for most of my coding instead.</p>&mdash; John Resig (@jeresig) <a href="https://twitter.com/jeresig/status/726058698989277185?ref_src=twsrc%5Etfw">April 29, 2016</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
