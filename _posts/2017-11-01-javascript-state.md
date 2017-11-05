@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  'The "State" Of JavaScript'
+title:  'The "State" of JavaScript'
 date:   2017-11-01 04:00:59 -0400
 categories: personal
 permalink: /javascript-state/
@@ -9,9 +9,9 @@ excerpt: A rant about how React, Redux and similar tools are part of JavaScript'
 og-image: state-of-javascript.jpg
 thumb-image: state-of-javascript-thumb.jpg
 ---
-The React/Redux combination has demonstrated the value of well-implemented state management in JavaScript application development. Despite this, many developers complain about it.
+The React/Redux combination has demonstrated the value of well-implemented state management in JavaScript applications. Despite this, many developers complain about it.
 
-I'd like to think the breakdown of developers that do and don't complain about React/Redux is 50/50, and that some of the complaints are valid. Nevertheless, state management was bound to show up somewhere in JavaScript, especially when reviewing key moments of JavaScript's evolution.
+I'd like to think the breakdown of developers that do and don't complain about React/Redux is 50/50, and that some of the complaints are valid. Nevertheless, state management was bound to show up in JavaScript, especially when reviewing key moments of JavaScript's evolution.
 
 <h3>In The Beginning...</h3>
 This is the first JavaScript book I ever bought:
@@ -130,7 +130,6 @@ As a result, a front end web developer has to understanding the logical thought 
 </ul>
 
 When you see read about things like <a href="https://www.theregister.co.uk/2017/04/24/stanford_tests_javascript_in_place_of_java/">Stanford University using JavaScript to teach intro computer science instead of Java</a>, it's clear things are changing. Self-taught developers (like myself) need to learn and embrace CS basics...the above-described progression proves this.
-
 
 <blockquote>
   <p>
