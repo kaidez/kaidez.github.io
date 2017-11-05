@@ -36,13 +36,13 @@ This creativity was seen in things like drop-down menus and animations, but ther
 The most popular hack was to add a class with a Boolean-type name to an element once JavaScript did something. For example: JS could toggle a class on the <code>&lt;body&gt;</code> tag, telling the browser whether or not a menu was visible:
 
 <pre class=" language-markup">
- <code class=" language-markup">
- &lt;!-- If JavaScript hides the menu... --&gt;
- &lt;body class="isHidden"&gt;
+<code class=" language-markup">
+&lt;!-- If JavaScript hides the menu... --&gt;
+&lt;body class="isHidden"&gt;
 
- &lt;!-- If JavaScript shows the menu... --&gt;
- &lt;body class="isVisible"&gt;
- </code>
+&lt;!-- If JavaScript shows the menu... --&gt;
+&lt;body class="isVisible"&gt;
+</code>
 </pre>
 
 Front-end developers mostly loved manipulating the DOM: back-end developers mostly hated it. Updating data using something like the DOM API was simply something the latter wasn't used to.
@@ -115,15 +115,15 @@ Using state to change application views is a major shift away from using DOM man
 As a result, a front end web developer has to understanding the logical thought process taught in a basic computer science class. This is an opinionated statement but after being in "React/Redux immersion" for the nine months prior to this post...
 
 <ul class="post-content__list">
-  <li class="post-content--list-item">
-    I've seen "classically-trained" developers with no front-end web developer experience learn React/Redux in, like, two minutes. All because the stuff they've been classically-trained prepared them for handling state.
-  </li>
-  <li class="post-content--list-item">
-    I've seen how managing app state instead of constantly pooling the DOM is the the right way to do things in large-scale applications.
-  </li>
-  <li class="post-content--list-item">
-    I've seen how focusing on the state
-  </li>
+ <li class="post-content--list-item">
+   I've seen how managing app state instead of constantly polling the DOM is the the right way to manage content in large-scale applications.
+ </li>
+ <li class="post-content--list-item">
+   I've seen "classically-trained" developers with no front-end web developer experience learn React/Redux in, like, two minutes. All because the stuff they've been classically-trained prepared them for handling state.
+ </li>
+ <li class="post-content--list-item">
+   I've seen how focusing on the state management has sharpened my own logical, computer science-like skills.
+ </li>
 </ul>
 
-Most profoundly, logic...
+Most profoundly, I've seen how logic
