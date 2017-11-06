@@ -153,6 +153,6 @@ When you see read about things like <a href="https://www.theregister.co.uk/2017/
 <h3>Where do we go from here?</h3>
 <a href="https://devchat.tv/js-jabber/124-jsj-the-origin-of-javascript-with-brendan-eich">Brendan Eich has said he created JavaScript with the beginner developer in mind</a>, but the language has progressed pass that. And will continue to do so.
 
-So the next step for us self-taught developers to embrace traditional computer science concepts. I went through <a href="https://www.youtube.com/playlist?list=PLB2BE3D6CA77BB8F7">this MIT Intro to computer science course</a> using Python and liked it, but you should take some time and search for other courses.
+So the next step for us self-taught developers to embrace traditional computer science concepts. I went through <a href="https://www.youtube.com/playlist?list=PLB2BE3D6CA77BB8F7">this MIT intro to computer science course</a> using Python and liked it, but you should take some time and search for other courses.
 
 <h3>Conclusion</h3>
