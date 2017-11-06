@@ -29,7 +29,7 @@ And there's also 33 pages on Dynamic HTML (DHTML), demonstrating DOM manipulatio
 <h3>...Then Came Love For The DOM</h3>
 <code>document.getElementById()</code> was part of the DOM Level 2 specification that didn't reach Candidate Recommendation until 2000. So a 1999 book <em>not</em> covering it made sense but once that spec achieved Candidate Reco status, things changed.
 
-Using <code>document.getElementById()</code> as the main entry point for DOM manipulation exposed developers to the DOM API as a whole. And once they saw how they could use this API to manipulate the page, it inspired a burst of creativity.
+Using <code>document.getElementById()</code> better-exposed developers to the DOM API as a whole. Once they saw how they could use the API to manipulate web page content, it inspired a burst of creativity.
 
 This creativity was seen in things like drop-down menus and animations, but there were some cool DHTML "hacks" for state management. Many that are still in use to this day.
 
@@ -60,7 +60,7 @@ As a whole, web-only companies didn't die out during this quiet time. They just 
 
 Mozilla rose to prominence during this time. Apple would release the Mac OS X operating system, setting them up for the world dominance they currently enjoy.
 
-And companies like Google would play around with a little-known piece of web browser technology called <code>XMLHttpRequest</code>. It allowed data to load onto the web page without the page needing to be fully refreshed.
+And companies like Google would play around with a little-known piece of web browser technology called <code>XMLHttpRequest</code>. It allowed data to load onto the web page without a page needing to be fully refreshed.
 
 Google used <code>XMLHttpRequest</code> to build Gmail and Google Maps, two apps that load data onto a page without refreshing it. <code>XMLHttpRequest</code> was awesome and other companies created apps using the same functionality.
 
@@ -71,7 +71,7 @@ That changed when web developer Jesse James Garrett <a href="http://adaptivepath
 
 The article outlined how to build a web page that could load content without using page refreshes. In order to build AJAX apps, it said, you needed <code>XMLHttpRequest</code>, CSS, JavaScript and, of course, the DOM.
 
-The creativity inspired by AJAX far out-shined the creativity inspired by the DOM API. Developers used AJAX to build games, calendars, word processing tools, any robust app they could think of.
+The creativity inspired by AJAX far out-shined the creativity inspired by the DOM. Developers used AJAX to build games, calendars, word processing tools, any robust app they could think of.
 
 With this sudden burst of AJAX-inspired creativity, the web got its second wind in the business world. Everyone started paying attention to it again: the web was clearly not a fad.
 
@@ -86,12 +86,12 @@ With AJAX, JSON and DOM best practices in place, it made sense to encapsulate th
 That's where JavaScript frameworks and libraries came in. <a href="http://www.javascriptmvc.com/">JavaScript MVC</a>, <a href="https://dojotoolkit.org/">Dojo</a> and <a href="http://backbonejs.org/">Backbone</a> were the first popular ones, then came Angular, Ember, Dart, Knockout...and on and on.
 
 <h3>...The ES6 Makeover Arrives...</h3>
-Next, JavaScript got a major update called <a href="http://exploringjs.com/es6/">ES6</a>, or ES2015. Its syntax and features closely matched those of the more traditional programming languages: Java, C#, etc.
+Next, JavaScript got a major update called <a href="http://exploringjs.com/es6/">ES6</a>, or ES2015. Its syntax and features closely matched those of the more "traditional" programming languages: Java, C#, etc.
 
 <h3>...At (Roughly) The Same Time That React Arrives</h3>
 And then came React. It's a library for building the view portion of your application.
 
-React views are built using <a href="https://css-tricks.com/modular-future-web-components/">web components</a>, which have been around for a while but are now rising in popularity. A web component is a custom HTML tag encapsulates other tags, CSS styles and JS functionality...it's essentially a widget.
+React views are built using <a href="https://css-tricks.com/modular-future-web-components/">web components</a>, which have been around for a while but are now rising in popularity. A web component is a custom HTML tag encapsulates that other tags, CSS and JS functionality...it's essentially a widget.
 
 <h3>React state (starts to) change everything...</h3>
 React provided an easy-to-understand web component model, and that's great. But its BIG innovation was how it improved application state management in JavaScript apps.
@@ -105,7 +105,7 @@ In React, <strong>changes like this happen by updating the state...<em>not</em> 
 <h3>And now...Redux...</h3>
 Redux came out as a set of tools for managing and manipulating application state. It's based on <a href="https://facebook.github.io/flux/">Facebook's Flux design pattern</a> and was initially written to work with React, but it can work with any JavaScript library or framework.
 
-It's possible for your app to have 20 React components, where each component manages it own state object. Redux takes the position that app state shouldn't be spread out like this and, instead, should be managed in one object.
+It's possible for your app to have 20 React components, where each component manages it own state object. Redux takes the position that application state shouldn't be spread out like this and, instead, should be managed in one object.
 
 Whenever you hear a phrase like "Redux gives your app a <em>single source of truth</em>," the source in question is this single state object.
 
@@ -164,7 +164,7 @@ There's some books to read as well: books that don't teach you how to code but t
   <li class="post-content--list-item"><a href="https://www.amazon.com/Head-First-Design-Patterns-Brain-Friendly/dp/0596007124/ref=sr_1_1?s=books&ie=UTF8&qid=1509930997&sr=1-1&keywords=head+first+design+patterns"><em>Head First Design Patterns</em></a> - similar to the Gang of Four book but an easier read.</li>
 </ul>
 
-As an honorable mention, I also suggest <a href="https://www.amazon.com/Art-Readable-Code-Practical-Techniques/dp/0596802293">The Art of Readable Code</a>. It's a relatively easy read that teaches best practices that you can apply to your code right away.
+As an honorable mention, I also suggest <a href="https://www.amazon.com/Art-Readable-Code-Practical-Techniques/dp/0596802293"><em>The Art of Readable Code</em></a>. It's a relatively easy read that teaches best practices that you can apply to your code right away.
 
 You'll want to read these books once a year or two.
 
