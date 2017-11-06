@@ -86,21 +86,21 @@ With AJAX, JSON and DOM best practices in place, it made sense to encapsulate th
 That's where JavaScript frameworks and libraries came in. <a href="http://www.javascriptmvc.com/">JavaScript MVC</a>, <a href="https://dojotoolkit.org/">Dojo</a> and <a href="http://backbonejs.org/">Backbone</a> were the first popular ones, then came Angular, Ember, Dart, Knockout...and on and on.
 
 <h3>...The ES6 Makeover Arrives...</h3>
-Next, JavaScript got a major update called <a href="http://exploringjs.com/es6/">ES6</a>, or ES2015. Its syntax and features closely matched those of the more traditional languages, Java, C#, etc.
+Next, JavaScript got a major update called <a href="http://exploringjs.com/es6/">ES6</a>, or ES2015. Its syntax and features closely matched those of the more traditional programming languages: Java, C#, etc.
 
 <h3>...At (Roughly) The Same Time That React Arrives</h3>
 And then came React. It's a library for building the view portion of your application.
 
-A React view is built with <a href="https://css-tricks.com/modular-future-web-components/">web components</a>, which have been around for a while but is now rising in popularity. A web component is a custom HTML tag encapsulates other tags, CSS styles and JS functionality...it's essentially a widget.
+React views are built using <a href="https://css-tricks.com/modular-future-web-components/">web components</a>, which have been around for a while but are now rising in popularity. A web component is a custom HTML tag encapsulates other tags, CSS styles and JS functionality...it's essentially a widget.
 
 <h3>React state (starts to) change everything...</h3>
 React provided an easy-to-understand web component model, and that's great. But its BIG innovation was how it improved application state management in JavaScript apps.
 
 React state is in the form of a JavaScript object that developers can manipulate to change how the app looks on the screen. So maybe a mobile menu needs to be made visible, maybe a new component needs to load onto the page.
 
-In React, <strong>changes like this require updating the state...<em>not</em> the DOM</strong>.
+In React, <strong>changes like this happen by updating the state...<em>not</em> the DOM</strong>.
 
-<em>Side note: React state is an abstract thing so depending on your developer background, it can a be tough concept to grasp. <a href="https://twitter.com/dceddia">Dave Ceddia</a> wrote <a href="https://daveceddia.com/visual-guide-to-state-in-react/">an excellent post that explains React state as if it needed to be explained to a six-year old.</a></em>
+<em>Side note: React state is an abstract thing that can be a tough understand, depending on your developer background. <a href="https://twitter.com/dceddia">Dave Ceddia</a> wrote <a href="https://daveceddia.com/visual-guide-to-state-in-react/">an excellent post that explains React state as if it needed to be explained to a six-year old.</a></em>
 
 <h3>And now...Redux...</h3>
 Redux came out as a set of tools for managing and manipulating application state. It's based on <a href="https://facebook.github.io/flux/">Facebook's Flux design pattern</a> and was initially written to work with React, but it can work with any JavaScript library or framework.
@@ -112,7 +112,7 @@ Whenever you hear a phrase like "Redux gives your app a <em>single source of tru
 <h3>This is where things REALLY changed...A rant...</h3>
 Using state to change application views is a major shift away from using DOM manipulation to change them. DOM manipulation still matters in JS development, but less and less.
 
-As a result, a front end web developer has to understanding the logical thought process taught in a basic computer science class. This is an opinionated statement but after being in "React/Redux immersion" for the nine months prior to this post...
+As a result, a front end web developer has to understanding the logical thought process taught in a basic computer science classes. This is an opinionated statement but after being in "React/Redux immersion" for the nine months prior to this post...
 
 <ul class="post-content__list">
  <li class="post-content--list-item">
@@ -125,11 +125,13 @@ As a result, a front end web developer has to understanding the logical thought 
    I've seen how focusing on the state management has sharpened my own logical, computer science-like skills.
  </li>
  <li class="post-content--list-item">
-   I haven't used jQuery in a year...not even for small helper code. <a href="/use-jquery/">Not that I think people <em>shouldn't</em> use it</a>.
+   I haven't used jQuery in a year...not even for small helper code (<a href="/use-jquery/">not that I think people <em>shouldn't</em> use it</a>).
  </li>
 </ul>
 
-When you read about how <a href="https://www.theregister.co.uk/2017/04/24/stanford_tests_javascript_in_place_of_java/">Stanford University using JavaScript to teach intro computer science instead of Java</a>, it's clear that is progression is creating change. Self-taught developers (like myself) need to learn and embrace CS basics...the above-described progression proves this.
+So I'm sticking by my opinion.
+
+And when you see that <a href="https://www.theregister.co.uk/2017/04/24/stanford_tests_javascript_in_place_of_java/">Stanford University now uses JavaScript to teach intro computer science instead of Java</a>, it's clear that this progression is creating change. Self-taught developers (like myself) need to learn and embrace CS basics...the above-described progression proves this.
 
 <blockquote>
   <p>
@@ -155,18 +157,20 @@ When you read about how <a href="https://www.theregister.co.uk/2017/04/24/stanfo
 
 So the next step for us self-taught developers to embrace traditional computer science concepts. I went through <a href="https://www.youtube.com/playlist?list=PLB2BE3D6CA77BB8F7">this MIT intro to computer science course</a> and liked it, but you should take some time and search for other courses.
 
-There's some books to read as well: books that don't teach you how to code but teach how to <em>think</em> like a developer. The Big Three here are:
+There's some books to read as well: books that don't teach you how to code but teach how to <em>think</em> like a coder. The Big Three here are:
 <ul>
   <li class="post-content--list-item"><em><a href="https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X">The Pragmatic Programmer</a></em> - read this first!!!</li>
   <li class="post-content--list-item"><a href="https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612/ref=sr_1_1?s=books&ie=UTF8&qid=1509930859&sr=1-1&keywords=design+patterns+elements+of+reusable+object-oriented+software"><em>Design Patterns</em></a> - AKA, the "Gang of Four" book</li>
   <li class="post-content--list-item"><a href="https://www.amazon.com/Head-First-Design-Patterns-Brain-Friendly/dp/0596007124/ref=sr_1_1?s=books&ie=UTF8&qid=1509930997&sr=1-1&keywords=head+first+design+patterns"><em>Head First Design Patterns</em></a> - similar to the Gang of Four book but an easier read.</li>
 </ul>
 
+As an honorable mention, I also suggest <a href="https://www.amazon.com/Art-Readable-Code-Practical-Techniques/dp/0596802293">The Art of Readable Code</a>. It's a relatively easy read that teaches best practices that you can apply to your code right away.
+
 You'll want to read these books once a year or two.
 
 <h3>Conclusion</h3>
-A study of JavaScript's progression tells us that it will NOT stop with React, Redux and app state management. It <em>will</em> evolve well beyond this where those things seem "old school."
+A study of JavaScript's historical progression tells us that it will NOT stop with React, Redux and app state management. It <em>will</em> evolve well beyond this, where those things seem "old school."
 
-Developers need to look at this historical progression as a wake-up call to learn computer science fundamentals. It will be needed to do our jobs...and keep them.
+Developers should treat this progression as a wake-up call to learn computer science fundamentals if they haven't done so already. We'll need it to do our jobs...and keep them.
 
 <em>"Those who cannot remember the past are condemned to repeat it." -George Santayana</em>
