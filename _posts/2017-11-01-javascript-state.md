@@ -153,6 +153,16 @@ When you see read about things like <a href="https://www.theregister.co.uk/2017/
 <h3>Where do we go from here?</h3>
 <a href="https://devchat.tv/js-jabber/124-jsj-the-origin-of-javascript-with-brendan-eich">Brendan Eich has said he created JavaScript with the beginner developer in mind</a>, but the language has progressed pass that. And will continue to do so.
 
-So the next step for us self-taught developers to embrace traditional computer science concepts. I went through <a href="https://www.youtube.com/playlist?list=PLB2BE3D6CA77BB8F7">this MIT intro to computer science course</a> using Python and liked it, but you should take some time and search for other courses.
+So the next step for us self-taught developers to embrace traditional computer science concepts. I went through <a href="https://www.youtube.com/playlist?list=PLB2BE3D6CA77BB8F7">this MIT intro to computer science course</a> and liked it, but you should take some time and search for other courses.
+
+There's some books to read as well: books that don't teach you how to code but teach how to <em>think</em> like a developer. The Big Three here are:
+<ul>
+  <li class="post-content--list-item"><em><a href="https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X">The Pragmatic Programmer</a></em> - read this first!!!</li>
+  <li class="post-content--list-item"><a href="https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612/ref=sr_1_1?s=books&ie=UTF8&qid=1509930859&sr=1-1&keywords=design+patterns+elements+of+reusable+object-oriented+software"><em>Design Patterns</em></a> - AKA, the "Gang of Four" book</li>
+  <li class="post-content--list-item"><a href="https://www.amazon.com/Head-First-Design-Patterns-Brain-Friendly/dp/0596007124/ref=sr_1_1?s=books&ie=UTF8&qid=1509930997&sr=1-1&keywords=head+first+design+patterns"><em>Head First Design Patterns</em></a> - similar to the Gang of Four book but an easier read.</li>
+</ul>
+
+You'll want to read these books once a year or two.
 
 <h3>Conclusion</h3>
+JavaScript's progression will NOT stop with React and Redux. It <em>will</em> evolve to the point that
