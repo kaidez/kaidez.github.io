@@ -5,7 +5,7 @@ title:  'The "State" of JavaScript'
 date:   2017-11-05 00:01:59 -0400
 categories: personal
 permalink: /javascript-state/
-excerpt: A rant about how React, Redux and similar tools are part of JavaScript's natural progression to a complete application language.
+excerpt: React/Redux are part of JavaScript's progression to a full application language. Study this progression to prepare yourself for the future.
 og-image: state-of-javascript.jpg
 thumb-image: state-of-javascript-thumb.jpg
 ---
@@ -167,7 +167,7 @@ You'll want to read these books once a year or two.
 <h3>Conclusion</h3>
 A study of JavaScript's progression tells us that it will NOT stop with React, Redux and app state management. It <em>will</em> evolve well beyond this where those things seem "old school."
 
-Developers need to look at this progression has a treasure map, where we don't
+Developers need to look at this historical progression as a wake-up call to learn computer science fundamentals. It will be needed to do our jobs...and keep them.
 
 "Those who cannot remember the past are condemned to repeat it."
 <em>-George Santayana</em>
