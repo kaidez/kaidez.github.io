@@ -9,9 +9,9 @@ excerpt: React/Redux are part of JavaScript's progression to a full application 
 og-image: state-of-javascript.jpg
 thumb-image: state-of-javascript-thumb.jpg
 ---
-The React/Redux combination has demonstrated the value of well-implemented state management in JavaScript applications. Despite this, lots of front-end web developers complain about it.
+React and Redux combined have demonstrated the value of well-implemented state management in JavaScript applications. Despite this, lots of front-end web developers complain about it.
 
-Complain or not, JS has progressed to the point that developers need to understand traditional computer science concepts if they want to keep using it. Studying the key points of JavaScript's progression proves this...at least I think it does:
+Complain or not, JS has progressed to the point that developers need to understand traditional computer science concepts if they want to keep using it. Studying the key points of this progression proves this...at least I think it does:
 
 <h3>In The Beginning...</h3>
 This is the first JavaScript book I ever bought:
@@ -22,9 +22,9 @@ It was published by Dori Smith and the late, (very) great Tom Negrino. I don't u
 
 It was written four years after JavaScript's initial release and covers the things that made JavaScript popular at that time. Image manipulation, scrolling status bars, Java integration, etc.
 
-The book covers functions really, <em>really</em> well: it's actually where I first learned about them. It even covers cookies: <em>the first real instance of JavaScript state management.</em>
+The book covers functions really, <em>really</em> well: it's actually where I first learned about them. It also covers cookies: <em>the first instance of JavaScript state management.</em>
 
-And there's also 33 pages on Dynamic HTML (DHTML), demonstrating DOM manipulation methods that now seem dated. All the manipulation in the book is done with <code>document.all</code>...<code>document.getElementById()</code> isn't mentioned at all.
+And there's also 33 pages on Dynamic HTML (DHTML), demonstrating DOM manipulation methods that now seem dated. All the manipulation in the book is done with <code>document.all</code>...<code>document.getElementById()</code> isn't even mentioned.
 
 <h3>...Then Came Love For The DOM</h3>
 <code>document.getElementById()</code> was part of the DOM Level 2 specification that didn't reach Candidate Recommendation until 2000. So a 1999 book <em>not</em> covering it made sense but once that spec achieved Candidate Reco status, things changed.
@@ -33,7 +33,7 @@ Using <code>document.getElementById()</code> as the main entry point for DOM man
 
 This creativity was seen in things like drop-down menus and animations, but there were some cool DHTML "hacks" for state management. Many that are still in use to this day.
 
-The most popular state hack was to add a Boolean-like class name to an element once JavaScript did something. For example: JS could toggle a class on the <code>&lt;body&gt;</code> tag, telling the browser whether or not a menu was visible:
+The most popular "state hack" was to add a Boolean-like class name to an element once JavaScript did something. For example: JS would toggle a class on the <code>&lt;body&gt;</code> tag, telling the browser whether or not a menu was visible:
 
 <pre class=" language-markup">
 <code class=" language-markup">
@@ -51,29 +51,29 @@ Also, it didn't help that DOM implementation differed across web browsers. <a hr
 
 Above all, the DOM was slow...REALLY slow. JavaScript DOM manipulation didn't take hours, but the time it DID take was too long by software standards.
 
-However, clients liked the visual results provided by DOM manipulation. So it remained a best practice and evolved to be more efficient over time, and that was that.
+Nevertheless, clients liked the visual results provided by DOM manipulation. So it remained a best practice and evolved to be more efficient over time, and that was that.
 
 <h3>...Next Came The Quiet Time</h3>
 Internet stocks that rose high in the mid nineties came crashing down in the early 2000s. Few "web-only" companies were profitable and as a result, other companies, including Microsoft, said the web was a "passing fad."
 
-As a whole, web-only companies, didn't die out during this quiet time. They just experimented with their products while no one was watching, removed from the constant pressure of meeting deadlines.
+As a whole, web-only companies didn't die out during this quiet time. They just experimented with their products while no one was watching, removed from the constant pressure of meeting deadlines.
 
 Mozilla rose to prominence during this time. Apple would release the Mac OS X operating system, setting them up for the world dominance they currently enjoy.
 
 And companies like Google would play around with a little-known piece of web browser technology called <code>XMLHttpRequest</code>. It allowed data to load onto the web page without the page needing to be fully refreshed.
 
-Google used <code>XMLHttpRequest</code> to build Gmail and Google Maps, two apps that load new data on the page without having to refresh it. <code>XMLHttpRequest</code> was awesome and other companies also created apps with the same functionality.
+Google used <code>XMLHttpRequest</code> to build Gmail and Google Maps, two apps that load data onto a page without refreshing it. <code>XMLHttpRequest</code> was awesome and other companies created apps using the same functionality.
 
 But as awesome as it was, <code>XMLHttpRequest</code> didn't change (most of) the world's opinion that the web was a fad.
 
 <h3>...A Guy Writes A Blog Post</h3>
-That all changed when web developer <a href="http://adaptivepath.org/ideas/ajax-new-approach-web-applications/">Jesse James Garrett wrote an article</a> defining apps that used <code>XMLHttpRequest</code> as "AJAX applications."
+That changed when web developer Jesse James Garrett <a href="http://adaptivepath.org/ideas/ajax-new-approach-web-applications/">wrote a blog post defining apps that used <code>XMLHttpRequest</code> as "AJAX applications"</a>.
 
 The article outlined how to build a web page that could load content without using page refreshes. In order to build AJAX apps, it said, you needed <code>XMLHttpRequest</code>, CSS, JavaScript and, of course, the DOM.
 
-The creativity inspired by AJAX was far out-shined the creativity inspired by the DOM API. AJAX let developers build games, calendar apps, word processing apps, any robust app they could think of.
+The creativity inspired by AJAX far out-shined the creativity inspired by the DOM API. Developers used AJAX to build games, calendars, word processing tools, any robust app they could think of.
 
-With the sudden burst of AJAX-inspired creativity, the web got its second wind in the business world. Everyone started paying attention to it again: the web was clearly not a fad.
+With this sudden burst of AJAX-inspired creativity, the web got its second wind in the business world. Everyone started paying attention to it again: the web was clearly not a fad.
 
 <h3>...JSON takes it from here</h3>
 Then object literals landed in JavaScript, meaning you could do <code>var obj = {}</code> instead of <code>var obj = new Object()</code>. This led to the creation of <a href="http://www.json.org/">JSON</a>.
@@ -86,10 +86,10 @@ With AJAX, JSON and DOM best practices in place, it made sense to encapsulate th
 That's where JavaScript frameworks and libraries came in. <a href="http://www.javascriptmvc.com/">JavaScript MVC</a>, <a href="https://dojotoolkit.org/">Dojo</a> and <a href="http://backbonejs.org/">Backbone</a> were the first popular ones, then came Angular, Ember, Dart, Knockout...and on and on.
 
 <h3>...The ES6 Makeover Arrives...</h3>
-Then JavaScript got a major update called ES6, or ES2015. Its syntax and features closely matched those of the more traditional languages, Java, C#, etc.
+Next, JavaScript got a major update called <a href="http://exploringjs.com/es6/">ES6</a>, or ES2015. Its syntax and features closely matched those of the more traditional languages, Java, C#, etc.
 
 <h3>...At (Roughly) The Same Time That React Arrives</h3>
-And then came React JS. It's a library for building the view portion of your application.
+And then came React. It's a library for building the view portion of your application.
 
 A React view is built with <a href="https://css-tricks.com/modular-future-web-components/">web components</a>, which have been around for a while but is now rising in popularity. A web component is a custom HTML tag encapsulates other tags, CSS styles and JS functionality...it's essentially a widget.
 
