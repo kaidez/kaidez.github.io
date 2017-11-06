@@ -125,7 +125,7 @@ As a result, a front end web developer has to understanding the logical thought 
    I've seen how focusing on the state management has sharpened my own logical, computer science-like skills.
  </li>
  <li class="post-content--list-item">
-   I haven't used jQuery in a year...not even for small helper code. <a href="/javascript-state/">Not that I think people <em>shouldn't</em> use it</a>.
+   I haven't used jQuery in a year...not even for small helper code. <a href="/use-jquery/">Not that I think people <em>shouldn't</em> use it</a>.
  </li>
 </ul>
 
@@ -143,9 +143,16 @@ When you see read about things like <a href="https://www.theregister.co.uk/2017/
   </p>
   <div>
     <img src="/img/paul-irish-photo.jpg" alt="Paul Irish" style="border-radius: 16px;">
-    <p  style="margin-bottom: 0">-Paul Irish</p>
-    <p style="position: relative; top: -11px;">
+    <p style="margin-bottom: 0">-Paul Irish</p>
+    <p>
       <a href="http://blog.teamtreehouse.com/treehouse-friends-paul-irish" style="font-size: 14px;">Source</a>
     </p>
   </div>
 </blockquote>
+
+<h3>Where do we go from here?</h3>
+<a href="https://devchat.tv/js-jabber/124-jsj-the-origin-of-javascript-with-brendan-eich">Brendan Eich has said he created JavaScript with the beginner developer in mind</a>, but the language has progressed pass that. And will continue to do so.
+
+So the next step for us self-taught JS developers to embrace traditional computer science concepts.
+
+<h3>Conclusion</h3>
