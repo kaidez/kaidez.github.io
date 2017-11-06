@@ -16,7 +16,7 @@ Complain or not, JS has progressed to the point that developers need to understa
 <h3>In The Beginning...</h3>
 This is the first JavaScript book I ever bought:
 
-<img src="/img/js-book.jpg" class="post__image" />
+<img src="/img/js-book.jpg" class="post__image">
 
 It was published by Dori Smith and the late, (very) great Tom Negrino. I don't use it as a reference anymore, but keep it for sentimental reasons.
 
