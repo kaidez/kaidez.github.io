@@ -165,4 +165,9 @@ There's some books to read as well: books that don't teach you how to code but t
 You'll want to read these books once a year or two.
 
 <h3>Conclusion</h3>
-JavaScript's progression will NOT stop with React and Redux. It <em>will</em> evolve to the point that
+A study of JavaScript's progression tells us that it will NOT stop with React, Redux and app state management. It <em>will</em> evolve well beyond this where those things seem "old school."
+
+Developers need to look at this progression has a treasure map, where we don't
+
+"Those who cannot remember the past are condemned to repeat it."
+<em>-George Santayana</em>
