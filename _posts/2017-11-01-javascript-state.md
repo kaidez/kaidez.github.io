@@ -9,9 +9,9 @@ excerpt: React/Redux are part of JavaScript's progression to a full application 
 og-image: state-of-javascript.jpg
 thumb-image: state-of-javascript-thumb.jpg
 ---
-The React/Redux combination has demonstrated the value of well-implemented state management in JavaScript applications. Despite this, many developers complain about it.
+The React/Redux combination has demonstrated the value of well-implemented state management in JavaScript applications. Despite this, lots of front-end web developers complain about it.
 
-I'd like to think the breakdown of developers that do and don't complain about React/Redux is 50/50, and that <em>some</em> of the complaints are valid. Nevertheless, state management was bound to show up in JavaScript, especially when reviewing key moments of JavaScript's evolution.
+Complain or not, JS has progressed to the point that developers need to understand traditional computer science concepts if they want to keep using it. Studying the key points of JavaScript's progression proves this...at least I think it does:
 
 <h3>In The Beginning...</h3>
 This is the first JavaScript book I ever bought:
@@ -129,7 +129,7 @@ As a result, a front end web developer has to understanding the logical thought 
  </li>
 </ul>
 
-When you see read about things like <a href="https://www.theregister.co.uk/2017/04/24/stanford_tests_javascript_in_place_of_java/">Stanford University using JavaScript to teach intro computer science instead of Java</a>, it's clear things are changing. Self-taught developers (like myself) need to learn and embrace CS basics...the above-described progression proves this.
+When you read about how <a href="https://www.theregister.co.uk/2017/04/24/stanford_tests_javascript_in_place_of_java/">Stanford University using JavaScript to teach intro computer science instead of Java</a>, it's clear that is progression is creating change. Self-taught developers (like myself) need to learn and embrace CS basics...the above-described progression proves this.
 
 <blockquote>
   <p>
@@ -169,5 +169,4 @@ A study of JavaScript's progression tells us that it will NOT stop with React, R
 
 Developers need to look at this historical progression as a wake-up call to learn computer science fundamentals. It will be needed to do our jobs...and keep them.
 
-"Those who cannot remember the past are condemned to repeat it."
-<em>-George Santayana</em>
+<em>"Those who cannot remember the past are condemned to repeat it." -George Santayana</em>
