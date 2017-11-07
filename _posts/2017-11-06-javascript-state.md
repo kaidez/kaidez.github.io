@@ -157,14 +157,14 @@ And when you see that <a href="https://www.theregister.co.uk/2017/04/24/stanford
 
 So the next step for us self-taught developers to embrace traditional computer science concepts. I went through <a href="https://www.youtube.com/playlist?list=PLB2BE3D6CA77BB8F7">this MIT intro to computer science course</a> and liked it, but you should take some time and search for other courses.
 
-There's some books to read as well: books that don't teach you how to code but teach how to <em>think</em> like a coder. The Big Three here are:
+There's some books to read as well: books that don't teach you how to code but teach you how to <em>think</em> like a coder. The Big Three here are:
 <ul>
   <li class="post-content--list-item"><em><a href="https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X">The Pragmatic Programmer</a></em> - read this first!!!</li>
   <li class="post-content--list-item"><a href="https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612/ref=sr_1_1?s=books&ie=UTF8&qid=1509930859&sr=1-1&keywords=design+patterns+elements+of+reusable+object-oriented+software"><em>Design Patterns</em></a> - AKA, the "Gang of Four" book</li>
   <li class="post-content--list-item"><a href="https://www.amazon.com/Head-First-Design-Patterns-Brain-Friendly/dp/0596007124/ref=sr_1_1?s=books&ie=UTF8&qid=1509930997&sr=1-1&keywords=head+first+design+patterns"><em>Head First Design Patterns</em></a> - similar to the Gang of Four book but an easier read.</li>
 </ul>
 
-As an honorable mention, I also suggest <a href="https://www.amazon.com/Art-Readable-Code-Practical-Techniques/dp/0596802293"><em>The Art of Readable Code</em></a>. It's a relatively easy read that teaches best practices that you can apply to your code right away.
+As an honorable mention, I also suggest <a href="https://www.amazon.com/Art-Readable-Code-Practical-Techniques/dp/0596802293"><em>The Art of Readable Code</em></a>. It's a relatively easy read that teaches you best practices that you can apply to your code right away.
 
 You'll want to read these books once a year or two.
 
