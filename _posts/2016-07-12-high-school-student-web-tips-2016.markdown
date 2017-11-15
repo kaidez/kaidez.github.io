@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "10 tips for high school students wanting to be web designers/developers-2016 edition"
+title:  "10 Tips for High School Students Wanting to be Web designers/Developers-2016 edition"
 date:   2016-07-12 22:07:59 -0400
 categories: personal
 permalink: /high-school-student-web-tips-2016/
