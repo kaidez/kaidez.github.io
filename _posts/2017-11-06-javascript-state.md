@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  'The "State" of JavaScript'
+title:  'The State of JavaScript'
 date:   2017-11-06 00:01:59 -0400
 categories: personal
 permalink: /javascript-state/
