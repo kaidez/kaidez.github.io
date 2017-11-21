@@ -21,7 +21,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "imagemin": "^5.3.1",
     "imagemin-cli": "^3.0.0",
-    "uglifyjs-webpack-plugin": "^1.0.1",
+    "uglifyjs-webpack-plugin": "^1.1.0",
     "webpack": "^3.8.1"
   },
   "dependencies": {
