@@ -44,30 +44,38 @@ class FooterContent extends Component {
         <div className="footer__column footer__column--3">
           Kai "kaidez" Gittens is a front-end web developer for JPMorgan Chase. He has contributed to web experiences for Revlon, jetBlue, Everyday Health and the United Nations. He is a former JavaScript instructor for lynda.com and is a loyal supporter of Chelsea F.C.
         </div>
-        <ul>
-          <li>
-            <FontAwesome
-              name='twitter'
-              size='lg'
-            />
+        <ul className="footer__column footer--social-network footer--social-network-list">
+          <li className="footer--social-network-list-item">
+            <a href="https://twitter.com/kaidez" className="footer--social-network-link">
+              <FontAwesome
+                name='twitter'
+                size='lg'
+              />
+            </a>
           </li>
-          <li>
-            <FontAwesome
-              name='facebook'
-              size='lg'
-            />
+          <li className="footer--social-network-list-item">
+            <a href="https://www.facebook.com/kaidezblog/" className="footer--social-network-link">
+              <FontAwesome
+                name='facebook'
+                size='lg'
+              />
+            </a>
           </li>
-          <li>
-            <FontAwesome
-              name='github-alt'
-              size='lg'
-            />
+          <li className="footer--social-network-list-item">
+            <a href="https://github.com/kaidez" className="footer--social-network-link">
+              <FontAwesome
+                name='github-alt'
+                size='lg'
+              />
+            </a>
           </li>
-          <li>
-            <FontAwesome
-              name='youtube'
-              size='lg'
-            />
+          <li className="footer--social-network-list-item">
+            <a href="https://www.youtube.com/kaidezblog" className="footer--social-network-link">
+              <FontAwesome
+                name='youtube'
+                size='lg'
+              />
+            </a>
           </li>
       </ul>
 

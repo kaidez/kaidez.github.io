@@ -285,6 +285,24 @@ a.post-link {
     margin-bottom: 6px;
   }
 
+  &--social-network-list {
+    margin: 0;
+    &-item {
+      width: 30px;
+      height: 30px;
+      padding: 4px;
+      display: inline-block;
+
+      background-color: #FFFFFF;
+      border-radius: 50%;
+      text-align: center;
+      list-style: none;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
   &__category-nav {
     margin: 0;
 
@@ -292,12 +310,19 @@ a.post-link {
 
   }
 
+  &--social-network-link {
+    line-height: 34px;
+  }
+
   &--page-link,
-  &--page-link:visited {
+  &--page-link:visited,
+  &--social-network-link,
+  &--social-network-link:visited {
     text-decoration: none;
   }
 
-  &--page-link:hover {
+  &--page-link:hover,
+  &--social-network-link:hover  {
     color: #c3abce;
   }
 
