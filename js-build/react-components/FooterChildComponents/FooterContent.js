@@ -48,25 +48,25 @@ class FooterContent extends Component {
           <li>
             <FontAwesome
               name='twitter'
-              size='2x'
+              size='lg'
             />
           </li>
           <li>
             <FontAwesome
               name='facebook'
-              size='2x'
+              size='lg'
             />
           </li>
           <li>
             <FontAwesome
-              name='github'
-              size='2x'
+              name='github-alt'
+              size='lg'
             />
           </li>
           <li>
             <FontAwesome
               name='youtube'
-              size='2x'
+              size='lg'
             />
           </li>
       </ul>
