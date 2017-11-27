@@ -77,8 +77,7 @@ class FooterContent extends Component {
               />
             </a>
           </li>
-      </ul>
-
+        </ul>
 
         <div className="footer__colophon">
           <span className="footer__colophon--item">&copy;2008-17</span>
