@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import FontAwesome from 'react-fontawesome';
+import FontAwesome from 'react-fontawesome'
 
 class FooterContent extends Component {
 
@@ -44,32 +44,7 @@ class FooterContent extends Component {
         <div className="footer__column footer__column--3">
           Kai "kaidez" Gittens is a front-end web developer for JPMorgan Chase. He has contributed to web experiences for Revlon, jetBlue, Everyday Health and the United Nations. He is a former JavaScript instructor for lynda.com and is a loyal supporter of Chelsea F.C.
 
-          <div className="footer--social-network">
-            <a href="https://twitter.com/kaidez" className="footer--social-network-link">
-              <FontAwesome
-                name='twitter'
-                size='lg'
-              />
-            </a>
-            <a href="https://www.facebook.com/kaidezblog/" className="footer--social-network-link">
-              <FontAwesome
-                name='facebook'
-                size='lg'
-              />
-            </a>
-            <a href="https://github.com/kaidez" className="footer--social-network-link">
-              <FontAwesome
-                name='github-alt'
-                size='lg'
-              />
-            </a>
-            <a href="https://www.youtube.com/kaidezblog" className="footer--social-network-link">
-              <FontAwesome
-                name='youtube'
-                size='lg'
-              />
-            </a>
-          </div>
+
           <div className="footer__colophon">
             <span className="footer__colophon--item">&copy;2008-17</span>
             <span className="footer__colophon--item">
