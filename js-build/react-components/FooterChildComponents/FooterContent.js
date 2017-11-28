@@ -43,52 +43,44 @@ class FooterContent extends Component {
 
         <div className="footer__column footer__column--3">
           Kai "kaidez" Gittens is a front-end web developer for JPMorgan Chase. He has contributed to web experiences for Revlon, jetBlue, Everyday Health and the United Nations. He is a former JavaScript instructor for lynda.com and is a loyal supporter of Chelsea F.C.
-        </div>
-        <ul className="footer__column footer--social-network footer--social-network-list">
-          <li className="footer--social-network-list-item">
+
+          <div className="footer--social-network">
             <a href="https://twitter.com/kaidez" className="footer--social-network-link">
               <FontAwesome
                 name='twitter'
                 size='lg'
               />
             </a>
-          </li>
-          <li className="footer--social-network-list-item">
             <a href="https://www.facebook.com/kaidezblog/" className="footer--social-network-link">
               <FontAwesome
                 name='facebook'
                 size='lg'
               />
             </a>
-          </li>
-          <li className="footer--social-network-list-item">
             <a href="https://github.com/kaidez" className="footer--social-network-link">
               <FontAwesome
                 name='github-alt'
                 size='lg'
               />
             </a>
-          </li>
-          <li className="footer--social-network-list-item">
             <a href="https://www.youtube.com/kaidezblog" className="footer--social-network-link">
               <FontAwesome
                 name='youtube'
                 size='lg'
               />
             </a>
-          </li>
-        </ul>
-
-        <div className="footer__colophon">
-          <span className="footer__colophon--item">&copy;2008-17</span>
-          <span className="footer__colophon--item">
-            <a href="/sitemap/" className="footer--page-link">Sitemap</a>
-          </span>
-          <span className="footer__colophon--item">
-            <a href="/affiliate-disclaimer/" className="footer--page-link">Affiliate Disclaimer</a>
-          </span>
+          </div>
+          <div className="footer__colophon">
+            <span className="footer__colophon--item">&copy;2008-17</span>
+            <span className="footer__colophon--item">
+              <a href="/sitemap/" className="footer--page-link">Sitemap</a>
+            </span>
+            <span className="footer__colophon--item">
+              <a href="/affiliate-disclaimer/" className="footer--page-link">Affiliate Disclaimer</a>
+            </span>
+          </div>
         </div>
-        </div>
+      </div>
     )
   }
 }

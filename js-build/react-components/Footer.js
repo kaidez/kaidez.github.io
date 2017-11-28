@@ -27,7 +27,15 @@ export class Footer extends Component {
 
   render() {
     return(
-      <div className="footer__wrapper">
+      <div
+        className={
+          !this.state.isFooterHiddenOnMobile
+          ?
+          "footer__wrapper"
+          :
+          "footer__wrapper footer--has-cursor"
+        }
+      >
         <p
           id="footerButton"
           onClick={this.toggleFooter}

@@ -84,7 +84,7 @@
   }
 
   .footer {
-    padding: 30px 0;
+    padding: 0;
     &__inner-wrapper {
       &--isVisible {
         display: block;
@@ -115,12 +115,28 @@
       }
     }
 
+    &--profile-image {
+      right: 0;
+      float: right;
+    }
+
+    &--list-item {
+      display: inline-block;
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
     &--isVisible {
       display: block;
     }
 
     &--isHidden {
         display: none;
+    }
+
+    &--has-cursor {
+      cursor: pointer;
     }
 
   }
