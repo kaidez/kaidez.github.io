@@ -456,7 +456,7 @@ a.post-link {
     margin-bottom: 20px;
   }
 
-  &-content {
+  &-content, {
     &--list-item {
       margin-bottom: 16px;
     }
@@ -489,6 +489,10 @@ a.post-link {
   &--image-styles {
     border-radius: 6px;
     width: 100%;
+  }
+
+  &__list-item {
+    margin-bottom: 10px;
   }
 
   strong {
