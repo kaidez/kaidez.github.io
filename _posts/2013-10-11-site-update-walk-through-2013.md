@@ -1,5 +1,5 @@
 ---
-title: 'kaidez.com 2013 Site Redesign'
+title: 'kaidez 2013 Site Redesign'
 comments: true
 author: Kai Gittens
 layout: post
