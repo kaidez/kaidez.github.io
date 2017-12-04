@@ -49,7 +49,7 @@ exclude:
   - image-minify/
   - js-build/
   - package.json
-  - README.mg
+  - README.md
   - webpack.config.js
   - yarn.lock
   - .DS_Store
