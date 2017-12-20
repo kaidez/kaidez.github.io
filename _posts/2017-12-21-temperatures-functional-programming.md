@@ -45,23 +45,23 @@ const tempen = [
 
 I had to calculate the average temperature for each city, then run code that displayed the array data like this:
 <img src="/img/temperature-display.jpg" class="post__image">
-There are quite a few challenges here:
+There were a few challenges here:
 <ul>
   <li class="post-list-item">How do I look at just the numbers in the array to get the average?</li>
   <li class="post-list-item">How do I do that while ignoring the city that's in the array?</li>
-  <li class="post-list-item">How do I display all these arrays with one reusable function, while understanding that the one array is header content and the rest is temperature/city content?</li>
+  <li class="post-list-item">How do I display all these arrays with reusable functions, while understanding that the one array is header content and the rest is temperature/city content?</li>
 </ul>
 
 <a name="solution"></a>
 <h2>The Solution</h2>
-The solution was, well, to use functional programming. In other words, I had to create separate functions that implemented specific pieces of the above-described tasks.
+The solution was, well, to use functional programming. In other words, I had to <strong>create separate functions that implemented specific parts of the above-described tasks</strong>.
 
 I did this by:
 <ul>
   <li class="post-list-item">creating a function that determines whether or not the inner array has temperatures.</li>
-  <li class="post-list-item">creating a function that calculates the average.</li>
+  <li class="post-list-item">creating a function that calculates the temperature average.</li>
   <li class="post-list-item">creating a function that displays the content on the page.</li>
-  <li class="post-list-item">getting all these functions to work together.</li>
+  <li class="post-list-item">getting all these functions to work together as a team.</li>
 </ul>
 
 <a name="basic-code"></a>
@@ -98,9 +98,9 @@ The <a href="http://getbem.com/introduction/">BEM-like CSS</a> will look like th
 </code></pre>
 <a name="determine-arrays"></a>
 <h2>Determine the inner arrays</h2>
-First, I created a function that checked whether or not an inner array had temperature values. If it did, it started a process that created a new array containing the average temperature and the city.
+First, I created a function that checked whether or not an inner array had numeric temperature values. If it did, it started a process that created a new array containing the average temperature and the city.
 
-If the array didn't have temperature values, I assumed that it was the array that contained strings but no numbers. This is the array that starts with <code>"City"</code>, so I just loaded it onto the page.
+If the array didn't have temperature values, I assumed that it was the array that contained strings but no numbers. This is the array that starts with <code>"City"</code>, so I just loaded it onto the page as column headers.
 
 This first function is called <code>buildNewArrays()</code>: it's important to note that running this function against our data is the catalyst for loading content onto the page. In other words, when we run <code>buildNewArrays(tempen)</code>, it runs other functions that help display the content.
 
@@ -130,9 +130,7 @@ function buildNewArrays(outerArray) {
 }
 </code></pre>
 
-<code>buildNewArrays</code> takes one parameter: <code>outerArray</code>. This param will come to represent the <code>tempen</code> constant.
-
-
+<code>buildNewArrays</code> takes one parameter: <code>outerArray</code>. <code>tempen</code> will be the passed param eventually.
 
 <pre><code class="language-javascript">
 outerArray.map(innerArray => {
@@ -140,7 +138,7 @@ outerArray.map(innerArray => {
 })
 </code></pre>
 
-Do a <code>.map()</code> loop through each array inside the outer array which, again, is <code>tempen</code>. And the <code>innerArray</code> param represents each array item inside <code>tempen</code>.
+Loop through the array of arrays Do a <code>.map()</code> loop  The <code>innerArray</code> param wll represent each single array inside <code>tempen</code>.
 
 <pre><code class="language-javascript">
 let numbersOnlyArray = []
@@ -156,9 +154,9 @@ innerArray.map(index => {
 })
 </code></pre>
 
-Do another <code>.map()</code> loop inside that loop, which loops over each item in the inner array. If the item is a number, place it inside the <code>numbersOnlyArray</code> array.
+Do another <code>.map()</code> loop inside the first loop, which loops over each item in the inner array. If the item is a number, place it inside the <code>numbersOnlyArray</code> array.
 
-In other words, looking at the <code>tempen</code> constant means that the <code>index</code> param will look like this at some point:
+In other words, looking at the <code>tempen</code> constant means that the <code>index</code> param will look at this array at some point:
 <pre><code class="language-javascript">["Malmö", 12, 16, 9]</code></pre>
 
 And when it does, it will make <code>numbersOnlyArray</code> look like this:
@@ -167,12 +165,14 @@ And when it does, it will make <code>numbersOnlyArray</code> look like this:
 It's REAAAAAAALY important to note that the <code>index</code> param will also look like this at some point:
 <pre><code class="language-javascript">["City", "00-08", "08-16", "16-24", "Average"]</code></pre>
 
-But it has no numbers so this look shouldn't add anything to <code>numbersOnlyArray</code>, so it will have an array length if "0" and look like this:
-<pre><code class="language-javascript">[]</code></pre>
+But it has no numbers so this will produce an empty <code>numbersOnlyArray</code>, with a length of "0".
 
 <pre><code class="language-javascript">
-numbersOnlyArray.length ? displayTemperatureAverage(numbersOnlyArray, innerArray[0]) : displayContent(innerArray, "#temperatureHeader")
-})
+numbersOnlyArray.length
+?
+displayTemperatureAverage(numbersOnlyArray, innerArray[0])
+:
+displayContent(innerArray, "#temperatureHeader")
 </code></pre>
 As seen, <code>numbersOnlyArray</code> can have a length, where each of its array items represents a temperature. If it does have a length, pass it as a parameter to the <code>displayTemperatureAverage()</code> function that we haven't built yet.
 
@@ -180,9 +180,9 @@ As seen, <code>numbersOnlyArray</code> can have a length, where each of its arra
 
 <em>(If you're unclear about this, look at the part above that starts discussing running a <code>map()</code> loop inside another loop.)</em>
 
-If <code>numbersOnlyArray</code> does NOT have a length, we'll assume that we're looking at array with no length...the one that starts with <code>"City"</code>. In that case, run the array using the <code>displayContent()</code> function that we also haven't built yet.
+If <code>numbersOnlyArray</code> does NOT have a length, we'll assume that we're looking at an empty array...the one that starts with <code>"City"</code>. In that case, run tha array using the <code>displayContent()</code> function that we also haven't built yet.
 
-<code>displayContent()</code> takes two params: the current <code>innerArray</code> and a reference to page element reference where this array content will load. In this instance, that's the <code><div id="temperatureHeader" /></code> element.
+<code>displayContent()</code> displays the array content on the page and takes two params: the current <code>innerArray</code> and a reference to page element reference where this array content will load. In this instance, that's the <code><div id="temperatureHeader" /></code> element.
 
 
 
