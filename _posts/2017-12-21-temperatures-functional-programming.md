@@ -7,19 +7,20 @@ categories: tutorials
 category-name: Tutorials
 permalink: /temperatures-functional-programming/
 excerpt: Use JavaScript functional programming to display average temperatures in certain cities. Uses the .map() & .reduce() methods. Includes demo.
-og-image: functional-programming-react.jpg
-thumb-image: functional-programming-react-thumb.jpg
+og-image: temperature-functional-programming.jpg
+thumb-image: temperature-functional-programming-thumb.jpg
 ---
 <a href="https://codepen.io/kaidez/pen/qpZrzw">See Demo &raquo;</a>
 
-As mentioned both <a href="/format-dates-functional-programming/">here</a> and <a href="/functional-programming-link/">here</a>, I try to write as much <a href="http://eloquentjavascript.net/1st_edition/chapter6.html">JavaScript functional programming</a> as I can. Even if it's just for practice.
+As mentioned both <a href="/format-dates-functional-programming/">here</a> and <a href="/functional-programming-link/">here</a>, I try to write as much <a href="http://eloquentjavascript.net/1st_edition/chapter6.html">JavaScript Functional Programming</a> as I can. Even if it's just for practice.
 
-I can across a pretty neat challenge on a Facebook beginning developers group I help to administer. This challenge provided some good practice.
+I can across a pretty neat challenge on a Facebook beginning developers group I help to administer. The challenge provided some good FP practice.
 
 <h2>Table of Contents</h2>
 <ol>
   <li class="post__list-item"><a href="#challenge">The Challenge</a></li>
   <li class="post__list-item"><a href="#solution">The Solution</a></li>
+  <li class="post__list-item"><a href="#basic-code">The Basic Code</a></li>
   <li class="post__list-item"><a href="#determine-arrays">Determine the inner arrays</a></li>
   <li class="post__list-item"><a href="#site-speed">Site Speed is "Fine", But Not "Perfect"</a></li>
   <li class="post__list-item"><a href="#the-rest">Practicing With the Rest</a></li>
@@ -28,7 +29,7 @@ I can across a pretty neat challenge on a Facebook beginning developers group I 
 
 <a name="challenge"></a>
 <h2>The Challenge</h2>
-There was an array of arrays. Each inner array representing either column header info or a list of temperatures for a given city.
+There was an array of arrays. Each inner array represented either column header info or a list of temperatures for a given city, with the city name included.
 
 The array of arrays looked like this:
 <pre><code class="language-javascript">
@@ -48,7 +49,7 @@ There are quite a few challenges here:
 <ul>
   <li class="post-list-item">How do I look at just the numbers in the array to get the average?</li>
   <li class="post-list-item">How do I do that while ignoring the city that's in the array?</li>
-  <li class="post-list-item">How do I display all these arrays with one reusable function, while understanding that the one array is header content and the other is temperature/city content?</li>
+  <li class="post-list-item">How do I display all these arrays with one reusable function, while understanding that the one array is header content and the rest is temperature/city content?</li>
 </ul>
 
 <a name="solution"></a>
@@ -63,6 +64,38 @@ I did this by:
   <li class="post-list-item">getting all these functions to work together.</li>
 </ul>
 
+<a name="basic-code"></a>
+<h2>The Basic Code</h2>
+The HTML will look like this:
+<pre><code class="language-markup">
+&lt;div class="temperature-info__container">
+  &lt;div id="temperatureHeader" class="temperature-info__header">&lt;/div>
+  &lt;div id="temperatureInfo">&lt;/div>
+&lt;/div>
+</code></pre>
+
+The <a href="http://getbem.com/introduction/">BEM-like CSS</a> will look like this:
+<pre><code class="language-css">
+.temperature-info__container {
+  width: 650px;
+}
+
+.temperature-info__header {
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.temperature-info__single-temp-row {
+  margin-bottom: 10px;
+}
+
+.temperature-info__single-temp {
+  width: 100px;
+  display: inline-block;
+  margin-right: 30px;
+}
+</code></pre>
 <a name="determine-arrays"></a>
 <h2>Determine the inner arrays</h2>
 First, I created a function that checked whether or not an inner array had temperature values. If it did, it started a process that created a new array containing the average temperature and the city.
@@ -75,10 +108,6 @@ This first function is called <code>buildNewArrays()</code>: it's important to n
 <pre><code class="language-javascript">
 function buildNewArrays(outerArray) {
 
-  /**
-   * Loop through the array. "innerArray" will be the single arrays
-   * in "tempen"
-   */
   outerArray.map(innerArray => {
 
     let numbersOnlyArray = []
@@ -120,7 +149,6 @@ let numbersOnlyArray = []
 Inside this loop, create an empty array that will eventually contains number types only.
 
 <pre><code class="language-javascript">
-
 innerArray.map(index => {
   if(typeof index === "number") {
     numbersOnlyArray.push(index)
@@ -129,20 +157,45 @@ innerArray.map(index => {
 </code></pre>
 
 Do another <code>.map()</code> loop inside that loop, which loops over each item in the inner array. If the item is a number, place it inside the <code>numbersOnlyArray</code> array.
-<a name="conclusion"></a>
 
 In other words, looking at the <code>tempen</code> constant means that the <code>index</code> param will look like this at some point:
-<pre><code>["Malmö", 12, 16, 9]</code></pre>
+<pre><code class="language-javascript">["Malmö", 12, 16, 9]</code></pre>
 
 And when it does, it will make <code>numbersOnlyArray</code> look like this:
-<pre><code>[12, 16, 9]</code></pre>
+<pre><code class="language-javascript">[12, 16, 9]</code></pre>
 
-It's REAAAAAAALY important to not that the <code>index</code> param will also look like this at some point:
-<pre><code>["City", "00-08", "08-16", "16-24", "Average"]</code></pre>
+It's REAAAAAAALY important to note that the <code>index</code> param will also look like this at some point:
+<pre><code class="language-javascript">["City", "00-08", "08-16", "16-24", "Average"]</code></pre>
 
-But it has no numbers so this look shouldn't add anything to <code>numbersOnlyArray</code>, making it look like this:
-<pre><code>[]</code></pre>
+But it has no numbers so this look shouldn't add anything to <code>numbersOnlyArray</code>, so it will have an array length if "0" and look like this:
+<pre><code class="language-javascript">[]</code></pre>
 
+<pre><code class="language-javascript">
+numbersOnlyArray.length ? displayTemperatureAverage(numbersOnlyArray, innerArray[0]) : displayContent(innerArray, "#temperatureHeader")
+})
+</code></pre>
+As seen, <code>numbersOnlyArray</code> can have a length, where each of its array items represents a temperature. If it does have a length, pass it as a parameter to the <code>displayTemperatureAverage()</code> function that we haven't built yet.
+
+<code>displayTemperatureAverage()</code> takes a second param: <code>innerArray[0]</code>. This will represent the city in one of <code>tempen</code> the inner arrays.
+
+<em>(If you're unclear about this, look at the part above that starts discussing running a <code>map()</code> loop inside another loop.)</em>
+
+If <code>numbersOnlyArray</code> does NOT have a length, we'll assume that we're looking at array with no length...the one that starts with <code>"City"</code>. In that case, run the array using the <code>displayContent()</code> function that we also haven't built yet.
+
+<code>displayContent()</code> takes two params: the current <code>innerArray</code> and a reference to page element reference where this array content will load. In this instance, that's the <code><div id="temperatureHeader" /></code> element.
+
+
+
+
+
+
+
+
+
+
+
+
+<a name="conclusion"></a>
 <h2>Conclusion</h2>
 
 Feel free to suggest changes.
