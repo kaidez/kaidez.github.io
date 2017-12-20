@@ -34,10 +34,10 @@ There was an array of arrays. Each inner array represented either column header 
 The array of arrays looked like this:
 <pre><code class="language-javascript">
 const tempen = [
+  ["City", "00-08", "08-16", "16-24", "Average"],
   ["Malmö", 12, 16, 9],
   ["Mariestad", 13, 15, 10],
   ["Stockholm", 13, 15, 13],
-  ["City", "00-08", "08-16", "16-24", "Average"],
   ["Upphärad", 14, 16, 15],
   ["Göteborg", 13, 14, 11]
 ];
@@ -48,7 +48,7 @@ I had to calculate the average temperature for each city, then run code that dis
 There were a few challenges here:
 <ul>
   <li class="post-list-item">How do I look at just the numbers in the array to get the average?</li>
-  <li class="post-list-item">How do I do that while ignoring the city that's in the array?</li>
+  <li class="post-list-item">How do I do that while ignoring the city that's in this array?</li>
   <li class="post-list-item">How do I display all these arrays with reusable functions, while understanding that the one array is header content and the rest is temperature/city content?</li>
 </ul>
 
@@ -61,7 +61,7 @@ I did this by:
   <li class="post-list-item">creating a function that determines whether or not the inner array has temperatures.</li>
   <li class="post-list-item">creating a function that calculates the temperature average.</li>
   <li class="post-list-item">creating a function that displays the content on the page.</li>
-  <li class="post-list-item">getting all these functions to work together as a team.</li>
+  <li class="post-list-item">getting all these functions to work together as a team to display the array content on the page.</li>
 </ul>
 
 <a name="basic-code"></a>
@@ -98,9 +98,9 @@ The <a href="http://getbem.com/introduction/">BEM-like CSS</a> will look like th
 </code></pre>
 <a name="determine-arrays"></a>
 <h2>Determine the inner arrays</h2>
-First, I created a function that checked whether or not an inner array had numeric temperature values. If it did, it started a process that created a new array containing the average temperature and the city.
+First, I created a function that checked whether or not all the temperatures, their average and the city.
 
-If the array didn't have temperature values, I assumed that it was the array that contained strings but no numbers. This is the array that starts with <code>"City"</code>, so I just loaded it onto the page as column headers.
+If the array didn't have temperature values, I assumed it was the array that contained strings but no numbers. This is the array that starts with <code>"City"</code> so I just loaded it onto the page as column headers.
 
 This first function is called <code>buildNewArrays()</code>: it's important to note that running this function against our data is the catalyst for loading content onto the page. In other words, when we run <code>buildNewArrays(tempen)</code>, it runs other functions that help display the content.
 
@@ -142,7 +142,7 @@ outerArray.map(innerArray => {
 })
 </code></pre>
 
-Loop through the array of arrays Do a <code>.map()</code> loop  The <code>innerArray</code> param wll represent each single array inside <code>tempen</code>.
+Loop through the array of arrays with a <code>.map()</code> loop.  The <code>innerArray</code> param wll represent each single array inside <code>tempen</code>.
 
 <pre><code class="language-javascript">
 let numbersOnlyArray = []
