@@ -118,7 +118,11 @@ function buildNewArrays(outerArray) {
       }
     })
 
-    numbersOnlyArray.length > 0 ? displayTemperatureAverage(numbersOnlyArray, innerArray[0]) : displayContent(innerArray, "#temperatureHeader")
+    numbersOnlyArray.length > 0
+    ?
+    displayTemperatureAverage(numbersOnlyArray, innerArray[0])
+    :
+    displayContent(innerArray, "#temperatureHeader")
   })
 }
 </code></pre>
