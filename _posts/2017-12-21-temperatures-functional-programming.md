@@ -23,7 +23,7 @@ I can across a pretty neat challenge on a Facebook beginning developers group I 
   <li class="post__list-item"><a href="#basic-code">The Basic Code</a></li>
   <li class="post__list-item"><a href="#determine-arrays">Determine the Inner Arrays</a></li>
   <li class="post__list-item"><a href="#reducer-helper">Build the Reducer Helper</a></li>
-  <li class="post__list-item"><a href="#temperature-average">Get the Temperature Average</a></li>
+  <li class="post__list-item"><a href="#display-temperature-info">Display the Temperature Information</a></li>
   <li class="post__list-item"><a href="#conclusion">Conclusion</a></li>
 </ol>
 
@@ -40,7 +40,7 @@ const tempen = [
   ["Stockholm", 13, 15, 13],
   ["Upphärad", 14, 16, 15],
   ["Göteborg", 13, 14, 11]
-];
+]
 </code></pre>
 
 I had to calculate the average temperature for each city, then run code that displayed the array data like this:
@@ -126,7 +126,7 @@ function buildNewArrays(outerArray) {
 
     numbersOnlyArray.length
     ?
-    displayTemperatureAverage(numbersOnlyArray, innerArray[0])
+    displayTemperatureInfo(numbersOnlyArray, innerArray[0])
     :
     displayContent(innerArray, "#temperatureHeader")
   })
@@ -180,18 +180,24 @@ But it has no numbers so this will produce an empty <code>numbersOnlyArray</code
 <pre><code class="language-javascript">
 numbersOnlyArray.length
 ?
-displayTemperatureAverage(numbersOnlyArray, innerArray[0])
+displayTemperatureInfo(numbersOnlyArray, innerArray[0])
 :
 displayContent(innerArray, "#temperatureHeader")
 </code></pre>
-As seen, <code>numbersOnlyArray</code> can have a length, where each of its array items represents a list of temperatures. If it does have a length, pass it as a parameter to the <code>displayTemperatureAverage()</code> function that we haven't built yet.
+As seen, <code>numbersOnlyArray</code> can have a length, where each of its array items represents a list of temperatures. If it does have a length, pass it as a parameter to the <code>displayTemperatureInfo()</code> function that we haven't built yet.
 
-<code>displayTemperatureAverage()</code> calculates the average temperature and also creates that new array with all the temperatures, average temperature and city name. It takes a second param: <code>innerArray[0]</code>.
+<code>displayTemperatureInfo()</code> takes a second param: <code>innerArray[0]</code>. Again, <code>innerArray</code> will look like <code>["Malmö", 12, 16, 9]</code> at some point.
 
-Again, <code>innerArray</code> will look like <code>["Malmö", 12, 16, 9]</code> at some point. We know that the city name is at the beginning of the array and <code>innerArray[0]</code> points directly to that.
+We know that the city name is at the beginning of the array: <code>innerArray[0]</code> points directly to that.
 
+As a whole, <code>displayTemperatureInfo()</code>:
+<ul>
+  <li class="post-list-item">calculates the average temperature.</li>
+  <li class="post-list-item">creates that new array with all the temperatures, average temperature and city name.</li>
+  <li class="post-list-item">loads this new array's content onto the page.</li>
+</ul>
 
-But if <code>numbersOnlyArray</code> does NOT have a length, we'll assume that we're looking at an empty array...created by the inner array starting with <code>"City"</code>. In that case, run that array using the <code>displayContent()</code> function that we also haven't built yet.
+But If <code>numbersOnlyArray</code> does NOT have a length, we'll assume that we're looking at an empty array...created by the inner array starting with <code>"City"</code>. In that case, run that array using the <code>displayContent()</code> function that we also haven't built yet.
 
 <code>displayContent()</code> loads the array content on the page and takes two params: the current <code>innerArray</code> and a reference to page element where this array content will load. In this instance, that's the <code><div id="temperatureHeader" /></code> element.
 
@@ -207,11 +213,24 @@ function reducerHelper(accumulator, currentValue) {
 }
 </code></pre>
 
-<a name="temperature-average"></a>
-<h2>Get the Temperature Average</h2>
+<a name="display-temperature-info"></a>
+<h2>Display the Temperature Information</h2>
 
+<pre><code class="language-javascript">
+function displayTemperatureInfo(temperatureArray, getCity) {
 
+  const arrayLength = temperatureArray.length
+  const getTemperatureSum = temperatureArray.reduce(reducerHelper)
+  const average = getTemperatureSum/arrayLength
 
+  temperatureArray.push(Math.round(average))
+
+  temperatureArray.unshift(getCity)
+
+  return displayContent(temperatureArray, "#temperatureInfo")
+
+}
+</code></pre>
 
 <a name="conclusion"></a>
 <h2>Conclusion</h2>
