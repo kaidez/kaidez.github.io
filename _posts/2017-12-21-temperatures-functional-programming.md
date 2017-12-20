@@ -21,9 +21,9 @@ I can across a pretty neat challenge on a Facebook beginning developers group I 
   <li class="post__list-item"><a href="#challenge">The Challenge</a></li>
   <li class="post__list-item"><a href="#solution">The Solution</a></li>
   <li class="post__list-item"><a href="#basic-code">The Basic Code</a></li>
-  <li class="post__list-item"><a href="#determine-arrays">Determine the inner arrays</a></li>
-  <li class="post__list-item"><a href="#site-speed">Site Speed is "Fine", But Not "Perfect"</a></li>
-  <li class="post__list-item"><a href="#the-rest">Practicing With the Rest</a></li>
+  <li class="post__list-item"><a href="#determine-arrays">Determine the Inner Arrays</a></li>
+  <li class="post__list-item"><a href="#reducer-helper">Build the Reducer Helper</a></li>
+  <li class="post__list-item"><a href="#temperature-average">Get the Temperature Average</a></li>
   <li class="post__list-item"><a href="#conclusion">Conclusion</a></li>
 </ol>
 
@@ -97,10 +97,16 @@ The <a href="http://getbem.com/introduction/">BEM-like CSS</a> will look like th
 }
 </code></pre>
 <a name="determine-arrays"></a>
-<h2>Determine the inner arrays</h2>
-First, I created a function that checked whether or not all the temperatures, their average and the city.
+<h2>Determine the Inner Arrays</h2>
+First, I created a function that checked if the inner array had numeric temp values. If it did, the function created a new array containing:
 
-If the array didn't have temperature values, I assumed it was the array that contained strings but no numbers. This is the array that starts with <code>"City"</code> so I just loaded it onto the page as column headers.
+<ul>
+  <li class="post-list-item">this inner array's temperatures.</li>
+  <li class="post-list-item">their average temperature.</li>
+  <li class="post-list-item">their respective city.</li>
+</ul>
+
+If that array didn't have temperature values, I assumed it was the array that contained strings but no numbers. This would be the array that starts with <code>"City"</code> so I just loaded it onto the page as column headers.
 
 This first function is called <code>buildNewArrays()</code>: it's important to note that running this function against our data is the catalyst for loading content onto the page. In other words, when we run <code>buildNewArrays(tempen)</code>, it runs other functions that help display the content.
 
@@ -158,12 +164,12 @@ innerArray.map(index => {
 })
 </code></pre>
 
-Do another <code>.map()</code> loop inside the first loop, which loops over each item in the inner array. If the item is a number, place it inside the <code>numbersOnlyArray</code> array.
+Do another <code>.map()</code> loop inside the first loop, which loops over each item in an inner array. If the item is a number, place it inside the <code>numbersOnlyArray</code> array, otherwise do nothing.
 
-In other words, looking at the <code>tempen</code> constant means that the <code>index</code> param will look at this array at some point:
+In other words, when looking at the inner arrays, the <code>index</code> param will look like this at some point:
 <pre><code class="language-javascript">["Malmö", 12, 16, 9]</code></pre>
 
-And when it does, it will make <code>numbersOnlyArray</code> look like this:
+And when it does, the <code>innerArray.map()</code> loop will make <code>numbersOnlyArray</code> look like this:
 <pre><code class="language-javascript">[12, 16, 9]</code></pre>
 
 It's REAAAAAAALY important to note that the <code>index</code> param will also look like this at some point:
@@ -180,21 +186,29 @@ displayContent(innerArray, "#temperatureHeader")
 </code></pre>
 As seen, <code>numbersOnlyArray</code> can have a length, where each of its array items represents a list of temperatures. If it does have a length, pass it as a parameter to the <code>displayTemperatureAverage()</code> function that we haven't built yet.
 
-<code>displayTemperatureAverage()</code> calculates the average temperature and creates a new array that contains all the temperatures, the average temperture and the city name. It takes a second param: <code>innerArray[0]</code>: this will represent the city in one of the <code>tempen</code> inner arrays.
+<code>displayTemperatureAverage()</code> calculates the average temperature and also creates that new array with all the temperatures, average temperature and city name. It takes a second param: <code>innerArray[0]</code>.
 
-<em>(If you're unclear about this, look at the part above that starts discussing running a <code>map()</code> loop inside another loop.)</em>
-
-If <code>numbersOnlyArray</code> does NOT have a length, we'll assume that we're looking at an empty array...the one that starts with <code>"City"</code>. In that case, run tha array using the <code>displayContent()</code> function that we also haven't built yet.
-
-<code>displayContent()</code> displays the array content on the page and takes two params: the current <code>innerArray</code> and a reference to page element reference where this array content will load. In this instance, that's the <code><div id="temperatureHeader" /></code> element.
+Again, <code>innerArray</code> will look like <code>["Malmö", 12, 16, 9]</code> at some point. We know that the city name is at the beginning of the array and <code>innerArray[0]</code> points directly to that.
 
 
+But if <code>numbersOnlyArray</code> does NOT have a length, we'll assume that we're looking at an empty array...created by the inner array starting with <code>"City"</code>. In that case, run that array using the <code>displayContent()</code> function that we also haven't built yet.
 
+<code>displayContent()</code> loads the array content on the page and takes two params: the current <code>innerArray</code> and a reference to page element where this array content will load. In this instance, that's the <code><div id="temperatureHeader" /></code> element.
 
+<a name="reducer-helper"></a>
+<h2>The Build the Reducer Helper</h2>
+The <code>.reduce()</code> method calculates the total sum of an array.  We'll need to do this to get the average temperatures but can't do it without something called an "accumulator function."
 
+This function does the actual calculating and we'll create a basic one like this:
 
+<pre><code class="language-javascript">
+function reducerHelper(accumulator, currentValue) {
+  return accumulator + currentValue
+}
+</code></pre>
 
-
+<a name="temperature-average"></a>
+<h2>Get the Temperature Average</h2>
 
 
 
