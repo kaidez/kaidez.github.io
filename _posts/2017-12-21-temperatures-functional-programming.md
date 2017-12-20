@@ -118,7 +118,7 @@ function buildNewArrays(outerArray) {
       }
     })
 
-    numbersOnlyArray.length > 0
+    numbersOnlyArray.length
     ?
     displayTemperatureAverage(numbersOnlyArray, innerArray[0])
     :
@@ -178,9 +178,9 @@ displayTemperatureAverage(numbersOnlyArray, innerArray[0])
 :
 displayContent(innerArray, "#temperatureHeader")
 </code></pre>
-As seen, <code>numbersOnlyArray</code> can have a length, where each of its array items represents a temperature. If it does have a length, pass it as a parameter to the <code>displayTemperatureAverage()</code> function that we haven't built yet.
+As seen, <code>numbersOnlyArray</code> can have a length, where each of its array items represents a list of temperatures. If it does have a length, pass it as a parameter to the <code>displayTemperatureAverage()</code> function that we haven't built yet.
 
-<code>displayTemperatureAverage()</code> takes a second param: <code>innerArray[0]</code>. This will represent the city in one of <code>tempen</code> the inner arrays.
+<code>displayTemperatureAverage()</code> calculates the average temperature and creates a new array that contains all the temperatures, the average temperture and the city name. It takes a second param: <code>innerArray[0]</code>: this will represent the city in one of the <code>tempen</code> inner arrays.
 
 <em>(If you're unclear about this, look at the part above that starts discussing running a <code>map()</code> loop inside another loop.)</em>
 
