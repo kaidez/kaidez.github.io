@@ -132,11 +132,11 @@ function buildNewArrays(outerArray) {
 
     innerArray.map(index => {
       if(typeof index === "number") {
-        numbersOnlyList.push(index)
+        return numbersOnlyList.push(index)
       }
     })
 
-    numbersOnlyList.length
+    return numbersOnlyList.length
     ?
     displayTemperatureInfo(numbersOnlyList, innerArray[0])
     :
@@ -171,7 +171,7 @@ Inside this loop, create an empty array that will eventually contains number typ
 <pre><code class="language-javascript">
 innerArray.map(index => {
   if(typeof index === "number") {
-    numbersOnlyList.push(index)
+    return numbersOnlyList.push(index)
   }
 })
 </code></pre>
@@ -190,7 +190,7 @@ It's REAAAAAAALY important to note that the <code>index</code> param will also l
 But this param has no numbers. Consequently, this will produce an empty <code>numbersOnlyList</code> array, giving it a length of "0".
 
 <pre><code class="language-javascript">
-numbersOnlyList.length
+return numbersOnlyList.length
 ?
 displayTemperatureInfo(numbersOnlyList, innerArray[0])
 :
@@ -231,9 +231,9 @@ function displayTemperatureInfo(temperatureArray, getCity) {
 
   const arrayLength = temperatureArray.length
   const getTemperatureSum = temperatureArray.reduce(reducerHelper)
-  const average = getTemperatureSum/arrayLength
+  const temperatureAverage = getTemperatureSum/arrayLength
 
-  temperatureArray.push(Math.round(average))
+  temperatureArray.push(Math.round(temperatureAverage))
 
   temperatureArray.unshift(getCity)
 
@@ -248,6 +248,39 @@ function displayTemperatureInfo(temperatureArray, getCity) {
  ...
 }
 </code></pre>
+It takes two parameters: <code>temperatureArray</code> and <code>getCity</code>. As discussed, the first param is whatever the current value is of <code>numbersOnlyList</code> while the second param is the city name.
+<pre><code class="language-javascript">
+const arrayLength = temperatureArray.length
+const getTemperatureSum = temperatureArray.reduce(reducerHelper)
+const temperatureAverage = getTemperatureSum/arrayLength
+</code></pre>
+
+The <code>arrayLength</code> const represents the amount of temperatures in the <code>numbersOnlyList</code>. In the case of this code, that value will always be 3.
+
+The <code>getTemperatureSum</code> const represents the sum of those values in the array. We tell the <code>.reduce()</code> method to look at that array, then get this sum by applying the accumulator function to it.
+
+So if that array looks like <code>[12, 16, 9]</code>, then <code>getTemperatureSum</code> will equal 31.
+
+The <code>temperatureAverage</code> const represents the array's average. Basic algebra here: you always determine an average by dividing the combined value of set of numbers by the amount of numbers in the set.
+
+So if that array looks like <code>[12, 16, 9]</code>, then <code>temperatureAverage</code> will divide 31 by 3.
+<pre><code class="language-javascript">
+temperatureArray.push(Math.round(temperatureAverage))
+</code></pre>
+As mentioned, <code>displayTemperatureInfo()</code> adds this average to array we're working with. We add it to the <em>end</em> of the array using <code>.push()</code>.
+
+<code>temperatureAverage</code> returns the average value as a decimal, so we'll use <code>Math.round()</code> to convert it to the nearest whole number.
+
+<pre><code class="language-javascript">
+temperatureArray.unshift(getCity)
+</code></pre>
+Also as mentioned, <code>displayTemperatureInfo()</code> adds the city name to array we're working with. That's available via the <code>getCity</code> parameter we passed so we'll add it to the <em>beginning</em> of the array using <code>.unshift()</code>.
+
+<pre><code class="language-javascript">
+return displayContent(temperatureArray, "#temperatureInfo")
+</code></pre>
+
+Using the previously-discussed-but-not-yet-created <code>displayContent()</code> function, we'll load this new array to the <code><div id="temperatureInfo" /></code> element on our page.
 <a name="conclusion"></a>
 <h2>Conclusion</h2>
 
