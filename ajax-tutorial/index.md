@@ -1165,7 +1165,7 @@ The `.always` method sets a callback for what to do if the code either resolves 
  A div tag with an id of "textTarget02" was added below the div tag with an id of "textTarget."
 <pre><code class="language-javascript">
 // sample21/scripts.js
-// Try & load "article.html" into "<div id="textTarget">"
+// Try & load "article.html" into "&lt;div id="textTarget"&gt;"
 $.get("article.html")
   .done(function(data) {
     $("#textTarget").html(data);
@@ -1177,7 +1177,7 @@ $.get("article.html")
     console.log("The 'article.html' file either did or didn't load!");
   });
 
-// Try & load "article02.html" into "<div id="textTarget02">"
+// Try & load "article02.html" into "&lt;div id="textTarget02"&gt;"
 $.get("article02.html")
   .done(function(data) {
     $("#textTarget02").html(data);
@@ -1200,8 +1200,8 @@ The first one loads in the existing "article.html" file, so its chained `.done` 
 <h5 class="h5-guide">The .then method</h5>
 The `.then` method sets a callback for what to do if the code either resolves, is rejected or is still in progress (<a href="/samples/ajax-tutorial-samples/sample22/" target="blank">view the example</a>):
 <pre><code class="language-markup">
-<!-- sample22/index.html -->
-<!-- Remove <div id="textTarget02"> that was in the previous example -->
+&lt;!-- sample22/index.html --&gt;
+&lt;!-- Remove &lt;div id="textTarget02"&gt; that was in the previous example --&gt;
 ...
 &lt;div id="textTarget"&gt;&lt;/div&gt;
 ...
