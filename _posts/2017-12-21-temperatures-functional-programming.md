@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Display Average Temperatures with Functional Programming"
+title:  "Display Temperature Averages with JavaScript Functional Programming"
 date:   2017-12-18 22:01:59 -0400
 categories: tutorials
 category-name: Tutorials
@@ -12,9 +12,9 @@ thumb-image: temperature-functional-programming-thumb.jpg
 ---
 <a href="https://codepen.io/kaidez/pen/qpZrzw">See Demo &raquo;</a>
 
-As mentioned both <a href="/format-dates-functional-programming/">here</a> and <a href="/functional-programming-link/">here</a>, I try to write as much <a href="http://eloquentjavascript.net/1st_edition/chapter6.html">JavaScript Functional Programming</a> as I can. Even if it's just for practice.
+As mentioned both <a href="/format-dates-functional-programming/">here</a> and <a href="/functional-programming-link/">here</a>, I try to write as much <a href="http://eloquentjavascript.net/1st_edition/chapter6.html">JavaScript Functional Programming</a> when possible. Even when it's just for practice.
 
-I can across a pretty neat challenge on a Facebook beginning developers group I help to administer. The challenge provided some good FP practice.
+I came across a pretty neat challenge on a Facebook beginning developers group I help to administer. The challenge provided some good FP practice.
 
 <h2>Table of Contents</h2>
 <ol>
@@ -29,11 +29,11 @@ I can across a pretty neat challenge on a Facebook beginning developers group I 
 
 <a name="challenge"></a>
 <h2>The Challenge</h2>
-There was an array of arrays. Each inner array represented either column header info or a list of temperatures for a given city, with the city name included.
+There was an array of arrays. Each inner array represented either column header info or a list containing both temperatures for a city and the city name itself.
 
 The array of arrays looked like this:
 <pre><code class="language-javascript">
-const tempen = [
+[
   ["City", "00-08", "08-16", "16-24", "Average"],
   ["Malmö", 12, 16, 9],
   ["Mariestad", 13, 15, 10],
@@ -47,7 +47,7 @@ I had to calculate the average temperature for each city, then run code that dis
 <img src="/img/temperature-display.jpg" class="post__image">
 There were a few challenges here:
 <ul>
-  <li class="post-list-item">How do I look at just the numbers in the array to get the average?</li>
+  <li class="post-list-item">How do I look at <em>just</em> the numbers in the array to get the average?</li>
   <li class="post-list-item">How do I do that while ignoring the city that's in this array?</li>
   <li class="post-list-item">How do I display all these arrays with reusable functions, while understanding that the one array is header content and the rest is temperature/city content?</li>
 </ul>
@@ -108,7 +108,19 @@ First, I created a function that checked if the inner array had numeric temp val
 
 If that array didn't have temperature values, I assumed it was the array that contained strings but no numbers. This would be the array that starts with <code>"City"</code> so I just loaded it onto the page as column headers.
 
-This first function is called <code>buildNewArrays()</code>: it's important to note that running this function against our data is the catalyst for loading content onto the page. In other words, when we run <code>buildNewArrays(tempen)</code>, it runs other functions that help display the content.
+The array of arrays were store in a const called <code>temperatureInfo</code>:
+<pre><code class="language-javascript">
+const temperatureInfo = [
+  ["City", "00-08", "08-16", "16-24", "Average"],
+  ["Malmö", 12, 16, 9],
+  ["Mariestad", 13, 15, 10],
+  ["Stockholm", 13, 15, 13],
+  ["Upphärad", 14, 16, 15],
+  ["Göteborg", 13, 14, 11]
+]
+</code></pre>
+
+This first function is called <code>buildNewArrays()</code>: it's important to note that running this function against our data is the catalyst for loading content onto the page. In other words, when we run <code>buildNewArrays(temperatureInfo)</code>, it runs other functions that help display the content.
 
 <code>buildNewArrays()</code> looks like this:
 <pre><code class="language-javascript">
@@ -116,17 +128,17 @@ function buildNewArrays(outerArray) {
 
   outerArray.map(innerArray => {
 
-    let numbersOnlyArray = []
+    let numbersOnlyList = []
 
     innerArray.map(index => {
       if(typeof index === "number") {
-        numbersOnlyArray.push(index)
+        numbersOnlyList.push(index)
       }
     })
 
-    numbersOnlyArray.length
+    numbersOnlyList.length
     ?
-    displayTemperatureInfo(numbersOnlyArray, innerArray[0])
+    displayTemperatureInfo(numbersOnlyList, innerArray[0])
     :
     displayContent(innerArray, "#temperatureHeader")
   })
@@ -140,7 +152,7 @@ function buildNewArrays(outerArray) {
 }
 </code></pre>
 
-<code>buildNewArrays</code> takes one parameter: <code>outerArray</code>. <code>tempen</code> will be the passed param eventually.
+<code>buildNewArrays</code> takes one parameter: <code>outerArray</code>. <code>temperatureInfo</code> will be the passed param eventually.
 
 <pre><code class="language-javascript">
 outerArray.map(innerArray => {
@@ -148,10 +160,10 @@ outerArray.map(innerArray => {
 })
 </code></pre>
 
-Loop through the array of arrays with a <code>.map()</code> loop.  The <code>innerArray</code> param wll represent each single array inside <code>tempen</code>.
+Loop through the array of arrays with a <code>.map()</code> loop.  The <code>innerArray</code> param wll represent each single array inside <code>temperatureInfo</code>.
 
 <pre><code class="language-javascript">
-let numbersOnlyArray = []
+let numbersOnlyList = []
 </code></pre>
 
 Inside this loop, create an empty array that will eventually contains number types only.
@@ -159,53 +171,51 @@ Inside this loop, create an empty array that will eventually contains number typ
 <pre><code class="language-javascript">
 innerArray.map(index => {
   if(typeof index === "number") {
-    numbersOnlyArray.push(index)
+    numbersOnlyList.push(index)
   }
 })
 </code></pre>
 
-Do another <code>.map()</code> loop inside the first loop, which loops over each item in an inner array. If the item is a number, place it inside the <code>numbersOnlyArray</code> array, otherwise do nothing.
+Do another <code>.map()</code> loop inside the first loop, which loops over each item in an inner array. If the item is a number, place it inside the <code>numbersOnlyList</code> array, otherwise do nothing.
 
 In other words, when looking at the inner arrays, the <code>index</code> param will look like this at some point:
 <pre><code class="language-javascript">["Malmö", 12, 16, 9]</code></pre>
 
-And when it does, the <code>innerArray.map()</code> loop will make <code>numbersOnlyArray</code> look like this:
+And when it does, the <code>innerArray.map()</code> loop will make <code>numbersOnlyList</code> look like this:
 <pre><code class="language-javascript">[12, 16, 9]</code></pre>
 
 It's REAAAAAAALY important to note that the <code>index</code> param will also look like this at some point:
 <pre><code class="language-javascript">["City", "00-08", "08-16", "16-24", "Average"]</code></pre>
 
-But it has no numbers so this will produce an empty <code>numbersOnlyArray</code>, with a length of "0".
+But this param has no numbers. Consequently, this will produce an empty <code>numbersOnlyList</code> array, giving it a length of "0".
 
 <pre><code class="language-javascript">
-numbersOnlyArray.length
+numbersOnlyList.length
 ?
-displayTemperatureInfo(numbersOnlyArray, innerArray[0])
+displayTemperatureInfo(numbersOnlyList, innerArray[0])
 :
 displayContent(innerArray, "#temperatureHeader")
 </code></pre>
-As seen, <code>numbersOnlyArray</code> can have a length, where each of its array items represents a list of temperatures. If it does have a length, pass it as a parameter to the <code>displayTemperatureInfo()</code> function that we haven't built yet.
+As seen, <code>numbersOnlyList</code> can have a length, where each of its array items represents a list of temperatures. If it does have a length, pass it as a parameter to the <code>displayTemperatureInfo()</code> function that we haven't built yet.
 
-<code>displayTemperatureInfo()</code> takes a second param: <code>innerArray[0]</code>. Again, <code>innerArray</code> will look like <code>["Malmö", 12, 16, 9]</code> at some point.
-
-We know that the city name is at the beginning of the array: <code>innerArray[0]</code> points directly to that.
-
-As a whole, <code>displayTemperatureInfo()</code>:
+We'll discuss <code>displayTemperatureInfo()</code> in depth later but for now, know that this function will:
 <ul>
-  <li class="post-list-item">calculates the average temperature.</li>
-  <li class="post-list-item">creates that new array with all the temperatures, average temperature and city name.</li>
-  <li class="post-list-item">loads this new array's content onto the page.</li>
+  <li class="post-list-item">calculate the average temperature.</li>
+  <li class="post-list-item">create a new array containing that average temperature, the already-existing temperature list and city name.</li>
+  <li class="post-list-item">load this new array's content onto the page.</li>
 </ul>
 
-But If <code>numbersOnlyArray</code> does NOT have a length, we'll assume that we're looking at an empty array...created by the inner array starting with <code>"City"</code>. In that case, run that array using the <code>displayContent()</code> function that we also haven't built yet.
+<code>displayTemperatureInfo()</code> takes a second param called <code>innerArray[0]</code>: again, <code>innerArray</code> will look like <code>["Malmö", 12, 16, 9]</code> at some point. We know that the city name is at the beginning of the array, so <code>innerArray[0]</code> points directly to that.
 
-<code>displayContent()</code> loads the array content on the page and takes two params: the current <code>innerArray</code> and a reference to page element where this array content will load. In this instance, that's the <code><div id="temperatureHeader" /></code> element.
+If <code>numbersOnlyList</code> does NOT have a length, we'll assume that we're looking at an empty array...created by that inner array starting with <code>"City"</code>. In that case, run that array using the <code>displayContent()</code> function that we also haven't built yet.
+
+<code>displayContent()</code> loads the array content on the page and takes two params: the current <code>innerArray</code> index and a reference to page element where this array content will load. In this instance, that's the <code><div id="temperatureHeader" /></code> element.
 
 <a name="reducer-helper"></a>
 <h2>The Build the Reducer Helper</h2>
 The <code>.reduce()</code> method calculates the total sum of an array.  We'll need to do this to get the average temperatures but can't do it without something called an "accumulator function."
 
-This function does the actual calculating and we'll create a basic one like this:
+This accumulator function returns the sum and we'll create a basic one like this:
 
 <pre><code class="language-javascript">
 function reducerHelper(accumulator, currentValue) {
@@ -215,7 +225,7 @@ function reducerHelper(accumulator, currentValue) {
 
 <a name="display-temperature-info"></a>
 <h2>Display the Temperature Information</h2>
-
+Again, <code>displayTemperatureInfo()</code> calculates the average temperature, creates a new array with all the temperatures, average temperature and city name, then loads the array content onto the page. It looks like this:
 <pre><code class="language-javascript">
 function displayTemperatureInfo(temperatureArray, getCity) {
 
@@ -231,7 +241,13 @@ function displayTemperatureInfo(temperatureArray, getCity) {
 
 }
 </code></pre>
+Breaking this one down now...
 
+<pre><code class="language-javascript">
+function displayTemperatureInfo(temperatureArray, getCity) {
+ ...
+}
+</code></pre>
 <a name="conclusion"></a>
 <h2>Conclusion</h2>
 
