@@ -25,6 +25,7 @@ I came across a pretty neat challenge on a Facebook beginning developers group I
   <li class="post__list-item"><a href="#reducer-helper">The Reducer Helper</a></li>
   <li class="post__list-item"><a href="#display-temperature-info">Display the Temperature Information</a></li>
   <li class="post__list-item"><a href="#load-content">Load All the Content Onto the Page</a></li>
+  <li class="post__list-item"><a href="#run-the-code">Run All This Code</a></li>
   <li class="post__list-item"><a href="#conclusion">Conclusion</a></li>
 </ol>
 
@@ -141,7 +142,7 @@ function buildNewArrays(outerArray) {
     ?
     displayTemperatureInfo(numbersOnlyList, innerArray[0])
     :
-    displayContent(innerArray, "#temperatureHeader")
+    displayArrayContent(innerArray, "#temperatureHeader")
   })
 }
 </code></pre>
@@ -195,7 +196,7 @@ return numbersOnlyList.length
 ?
 displayTemperatureInfo(numbersOnlyList, innerArray[0])
 :
-displayContent(innerArray, "#temperatureHeader")
+displayArrayContent(innerArray, "#temperatureHeader")
 </code></pre>
 As seen, <code>numbersOnlyList</code> can have a length, where each of its array items represents a list of temperatures. If it does have a length, pass it as a parameter to the <code>displayTemperatureInfo()</code> function that we haven't built yet.
 
@@ -208,9 +209,9 @@ We'll discuss <code>displayTemperatureInfo()</code> in depth later but for now, 
 
 <code>displayTemperatureInfo()</code> takes a second param called <code>innerArray[0]</code>: again, <code>innerArray</code> will look like <code>["Malmö", 12, 16, 9]</code> at some point. We know that the city name is at the beginning of the array, so <code>innerArray[0]</code> points directly to that.
 
-If <code>numbersOnlyList</code> does NOT have a length, we'll assume that we're looking at an empty array...created by that inner array starting with <code>"City"</code>. In that case, run that array using the <code>displayContent()</code> function that we also haven't built yet.
+If <code>numbersOnlyList</code> does NOT have a length, we'll assume that we're looking at an empty array...created by that inner array starting with <code>"City"</code>. In that case, run that array using the <code>displayArrayContent()</code> function that we also haven't built yet.
 
-<code>displayContent()</code> loads the array content on the page and takes two params: the current <code>innerArray</code> index and a reference to page element where this array content will load. In this instance, that's the <code><div id="temperatureHeader" /></code> element.
+<code>displayArrayContent()</code> loads the array content on the page and takes two params: the current <code>innerArray</code> index and a reference to page element where this array content will load. In this instance, that's the <code><div id="temperatureHeader" /></code> element.
 
 <a name="reducer-helper"></a>
 <h2>The Reducer Helper</h2>
@@ -238,7 +239,7 @@ function displayTemperatureInfo(temperatureArray, getCity) {
 
   temperatureArray.unshift(getCity)
 
-  return displayContent(temperatureArray, "#temperatureInfo")
+  return displayArrayContent(temperatureArray, "#temperatureInfo")
 
 }
 </code></pre>
@@ -278,18 +279,18 @@ temperatureArray.unshift(getCity)
 Also as mentioned, <code>displayTemperatureInfo()</code> adds the city name to array we're working with. That's available via the <code>getCity</code> parameter we passed so we'll add it to the <em>beginning</em> of the array using <code>.unshift()</code>.
 
 <pre><code class="language-javascript">
-return displayContent(temperatureArray, "#temperatureInfo")
+return displayArrayContent(temperatureArray, "#temperatureInfo")
 </code></pre>
 
-Using the previously-discussed-but-not-yet-created <code>displayContent()</code> function, we'll load this new array to the <code><div id="temperatureInfo" /></code> element on our page.
+Using the previously-discussed-but-not-yet-created <code>displayArrayContent()</code> function, we'll load this new array to the <code><div id="temperatureInfo" /></code> element on our page.
 
 <a name="load-content"></a>
 <h2>Load All the Content Onto the Page</h2>
-We're using a <code>displayContent()</code> function to load all of our array data onto the page.  I guess we should build it now.
+We're using a <code>displayArrayContent()</code> function to load data onto the page.  I guess we should build it now.
 
-This will all be basic DOM manipulation and look like this:
+This is all basic DOM manipulation and look like this:
 <pre><code class="language-javascript">
-function displayContent(arrayContent, target) {
+function displayArrayContent(arrayContent, target) {
 
   const getTargetElement = document.querySelector(target)
   const parentElement = document.createElement('div')
@@ -308,7 +309,7 @@ function displayContent(arrayContent, target) {
 </code></pre>
 And...breaking this one down...
 <pre><code class="language-javascript">
-function displayContent(arrayContent, target) {
+function displayArrayContent(arrayContent, target) {
   ...
 }
 </code></pre>
@@ -332,7 +333,29 @@ arrayContent.map(index => {
   parentElement.appendChild(childElement)
 })
 </code></pre>
+ Another <code>.map()</code> function loops over the array and does the following with each array item:
+<ul>
+  <li class="post-list-item">creates a <code>span</code> tag,</li>
+  <li class="post-list-item">gives the <code>span</code> a class name of <code>temperature-info__single-temp</code>.</li>
+  <li class="post-list-item">loads each array item into the <code>span</code> with the help of <code>innerHTML</code>.</li>
+  <li class="post-list-item">places the <code>span</code> at the bottom of <code>div</code> we created earlier with the help of the <code>appendChild()</code> method.</li>
+</ul>
+
+<pre><code class="language-javascript">
+return getTargetElement.appendChild(parentElement)
+</code></pre>
+Take our <code>div</code> with all the array content and place it at the bottom of  <code>target</code> element which, again, is an element already on our web page.
+
+<a name="run-the-code"></a>
+<h2>Run All This Code</h2>
+To get all the content in <code>temperatureInfo</code> to show up on the page, all we need to do is this:
+<pre><code class="language-javascript">
+buildNewArrays(temperatureInfo)
+</code></pre>
+Neat, huh?
+
 <a name="conclusion"></a>
 <h2>Conclusion</h2>
+
 
 Feel free to suggest changes.
