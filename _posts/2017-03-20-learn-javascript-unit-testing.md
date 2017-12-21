@@ -10,7 +10,7 @@ excerpt: Learn JavaScript unit testing by creating smaller functions with functi
 og-image: learn-javascript-unit-testing.jpg
 thumb-image: learn-javascript-unit-testing-thumb.jpg
 ---
-If you’re a self-taught JavaScript developer like me, you may not be doing JavaScript unit testing. Self-taught JS developers tend to jump right into coding and skip learning software development fundamentals…like unit testing.
+If you’re a self-taught JavaScript developer like me, you may not be doing JavaScript unit testing. Self-taught JS developers tend to jump right into coding and skip learning software development fundamentals...like unit testing.
 
 The best way to learn JavaScript unit testing is to realize you should write code in a functional programming style. Functional programming (or, FP) encourages writing small, easy-to-read functions, which are <strong>easy to test</strong>.
 <h2>Table of Contents</h2>
@@ -90,18 +90,129 @@ James Sinclair wrote <a href="http://jrsinclair.com/articles/2016/gentle-introdu
 
 <a name="web-page"></a>
 <h2>The web page for all this</h2>
+Here’s what the web page for this, <code>index.html</code>, looks like:
+<pre><code class="language-markup">
+&lt;!-- index.html --&gt;
 
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Learn JS Unit Testing with Functional Programming&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;div id="carousel-one"&gt;&lt;/div&gt;
+  &lt;div id="carousel-two"&gt;&lt;/div&gt;
+  &lt;div id="main-carousel"&gt;&lt;/div&gt;
+
+  &lt;div id="unicorn"&gt;&lt;/div&gt;
+  &lt;div id="fairy"&gt;&lt;/div&gt;
+  &lt;div id="kitten"&gt;&lt;/div&gt;
+
+  &lt;a href="test/tests.html" target="_blank"&gt;View tests&lt;/a&gt;
+
+  &lt;script src="jquery.js"&gt;&lt;/script&gt;
+  &lt;script src="app.js"&gt;&lt;/script&gt;
+  &lt;script src="scripts.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+We have a few page elements that we’ll target in our JS later. We also have a link to our group of tests (or, our test suite) and links to some JavaScript files.
+
+The core jQuery file is here. Other files include <code>app.js</code> and <code>scripts.js</code>: the code we’re testing is in <code>app.js</code>, but that code gets implemented in <code>scripts.js</code>.
 <a name="test-suite"></a>
 <h2>The test suite</h2>
+Our test suite lives in <code>test/tests.html</code> and looks like this:
+<pre><code class="language-markup">
+&lt;!-- test/tests.html -->
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Functional programming test suite&lt;/title&gt;
+
+  &lt;link rel="stylesheet" href="qunit.css"&gt;
+  &lt;script src="qunit.js"&gt;&lt;/script&gt;
+
+  &lt;script src="../jquery.js"&gt;&lt;/script&gt;
+
+  &lt;script src="../app.js" data-cover&gt;&lt;/script&gt;
+
+  &lt;script&gt;&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;div id="qunit"&gt;&lt;/div&gt;
+
+  &lt;div id="qunit-fixture"&gt;&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+We’ll test James’ code with the <a href="https://qunitjs.com/">QUnit</a> framework. <code>qunit.css</code> will style the test suite page while <code>qunit.js</code> will actually perform the tests.
+
+The core jQuery library is here as well: we’re pointing to the one in the root of the <code>build</code> folder. We’ll use it to help us with some DOM-related tests.
+
+Next is the previously-mentioned <code>app.js</code> which contains the code getting tested. QUnit knows to only test <code>app.js</code> because of its <code>data-cover attribute</code>.
+
+The empty &lt;script&gt; tag is where we’ll write our tests.
+
+Finally, we have two <code><div></code> tags: <code><div id="qunit" /></code> and <code><div id="qunit-fixture" /></code>. QUnit’s test results load into <code><div id="qunit" /></code> and we’ll use <code><div id="qunit-fixture" /></code> to test DOM manipulation.
 
 <a name="about-qunit"></a>
 <h2>A quick note about QUnit</h2>
+QUnit isn’t the only JavaScript unit testing framework and you should <a href="https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#JavaScript">review other JS unit testing frameworks</a> at some point. But if you want to learn JavaScript unit testing from the beginning, I think QUnit is best for that.
 
+QUnit has a small API with easy-to-read documentation. This is because it’s maintained by the jQuery team, which is well-known for writing easy-to-read API documentation.
+
+Also, QUnit works great without command line tools like Grunt and Gulp when compared to other testing frameworks. It can run with those tools and you should run unit testing from the CLI eventually.
+
+But to learn JavaScript unit testing from the beginning, running tests in a browser and outside of CLI tooling is fine. Onto the tests...
 <a name="test-driven development"></a>
 <h2>Test-Driven Development (TDD)</h2>
+We’ll test this code using <a href="https://en.wikipedia.org/wiki/Test-driven_development">Test-Driven Development (TDD)</a>, meaning we’ll write our code in four steps:
+<ol>
+  <li class="post__list-item">write a test.</li>
+  <li class="post__list-item">make sure that test fails.</li>
+  <li class="post__list-item">write code to make the test pass.</li>
+  <li class="post__list-item">refactor code if needed.</li>
+</ol>
 
+We’re not doing full-on TDD: we’re using James’ pre-written functions instead of writing tests first and code next. But we’ll add new functions as well as refactor some existing ones...we’ll do enough to understand TDD.
 <a name="review-james-code"></a>
 <h3>Review James’ code</h3>
+James’ first FP example used composition and created a small function that returned another small function. He did this by passing one function as a parameter to another:
+<pre><code class="language-javascript">
+// A function that gets returned
+var log = function(someVariable) {
+  console.log(someVariable);
+  return someVariable;
+}
+
+// A function that takes another function as a parameter
+var doSomething = function(thing) {
+  thing();
+}
+
+// Another function that gets returned and executes 'log()'
+var sayBigDeal = function() {
+  var message = "I'm kind of a big deal";
+  log(message);
+}
+
+// All this in action
+doSomething(sayBigDeal); // logs 'I’m kind of a big deal
+</code></pre>
+We’ll use TDD to make <code>log()</code> work but will also update it as follows:
+
+<ul>
+  <li class="post__list-item">log() should only accept a string type as a parameter.</li>
+  <li class="post__list-item">the string should have at least one character.</li>
+  <li class="post__list-item">make sure console errors get displayed if these two things don’t happen.</li>
+</ul>
 
 <a name="first-failing-test"></a>
 <h3>The first failing test</h3>
