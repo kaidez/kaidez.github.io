@@ -422,12 +422,103 @@ And if we look at the test suite coverage info, we see we’re testing more code
 <img src="/img/unit-testing-image-06.jpg" alt="Second code coverage image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
 
 We’re not testing if our type-checking works like we did for the <code>log()</code> function. We can fix this by adding type checks again at the bottom of the test suite’s <code>script</code> tag:
+<pre><code class="language-markup">
+&lt;!-- test/tests.html--&gt;
+&lt;script&gt;
+  ...
+  QUnit.test("'doSomething()' should throw an error if no parameter is passed or if the parameter is not a function", function(assert) {
+
+  assert.throws(function () {
+    doSomething();
+  }, 'an error was thrown because no parameters are passed to "doSomething()"');
+
+  assert.throws(function () {
+    doSomething("");
+  }, 'an error was thrown because an empty string is the parameter');
+
+  assert.throws(function () {
+    doSomething('function');
+  }, 'an error was thrown because a string is the parameter"');
+
+  assert.throws(function () {
+    doSomething(null);
+  }, 'an error was thrown because "null" is the parameter');
+
+  assert.throws(function () {
+    doSomething(undefined);
+  }, 'an error was thrown because "undefined" is the parameter');
+
+  assert.throws(function () {
+    doSomething(new Symbol("a symbol"));
+  }, 'an error was thrown because an ES2015 symbol is the parameter"');
+
+  assert.throws(function () {
+    doSomething(345345);
+  }, 'an error was thrown because an number is the parameter');
+  ...
+  // shortened so it's more readable
+&lt;/script&gt;
+</code></pre>
+
+<em>(Side note: Running <code>assert.throws()</code> in two different tests isn’t <a href="https://en.wikipedia.org/wiki/Don't_repeat_yourself">DRY</a>. I couldn’t find a way to DRY everything like I wanted, so this is something I’ll research in the future. Feel free to let me know if you have a cool way to do it.)</em>
+
+The tests pass with 100% code coverage:
+
+<img src="/img/unit-testing-image-07.jpg" alt="Third code coverage image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+
+We can now implement James’ final code for this at the bottom of <code>scripts.js</code>:
+<pre><code class="language-javascript">
+// scripts.js
+...
+var sayBigDeal = function() {
+  var message = "I'm kind of a big deal";
+  log(message);
+}
+
+doSomething(sayBigDeal); // logs the second "I'm kind of a big deal"
+</code></pre>
 <a name="#testing-more-functional-programming-composition"></a>
 <h2>Testing more functional programming composition</h2>
+James Sinclair’s FP post demonstrated composition with another function that built a carousel:
+<pre><code class="language-javascript">
+function initialiseCarousel(id, frequency) {
+  var el = document.getElementById(id);
+  var slider = new Carousel(el, frequency);
+  slider.init();
+  return slider;
+}
 
+initialiseCarousel('main-carousel', 3000);
+</code></pre>
+A lot going on here:
+<ul>
+  <li class="post__list-item"><code>initialiseCarousel()</code> takes an <code>id</code> and <code>frequency</code> parameter.</li>
+  <li class="post__list-item"><code>id</code> is in the <code>el</code> variable, which finds an element on the page.</li>
+  <li class="post__list-item">the <code>el</code> variable and <code>frequency</code> parameter get passed to a <code>slider</code> variable, which is an instance of a constructor function called <code>Carousel()</code>.</li>
+  <li class="post__list-item"><code>slider</code>‘s two parameters, <code>el</code> and <code>frequency</code>, respectively define which element is a carousel and how many times it spins.</li>
+  <li class="post__list-item">instances of <code>Carousel()</code>, like <code>slider</code>, have access to an <code>init()</code> method.</li>
+  <li class="post__list-item"><code>slider</code> is explicitly returned.</li>
+  <li class="post__list-item">when <code>initialiseCarousel()</code> runs, it places a new carousel in a main-carousel page element and gives it a duration of 3000, which I assume represents milliseconds.</li>
+</ul>
+In our quest to learn JavaScript unit testing, we’ll test <code>Carousel()</code> and <code>initialiseCarousel()</code> separately. And since James’ tutorial didn’t create <code>Carousel()</code>, it’s an excellent chance to create it with TDD!
 <a name="test-constructor-function"></a>
 <h3>Unit test a constructor function</h3>
+Since <code>Carousel()</code> is a constructor function, we can attach its parameters to <code>this</code>, then return <code>this</code> itself. So we’ll place a failing unit test for this at the bottom of the <code>script</code> tag in our test suite:
 
+<pre><code class="language-markup">
+&lt;!-- test/tests.html--&gt;
+&lt;script&gt;
+  ...
+  QUnit.test('"Carousel()" should return a string and a number', function(assert) {
+
+    var someString = 'some-element';
+    var someNumber =  4545935234
+
+
+    assert.ok(new Carousel(someString, someNumber), 'a string and a number were returned!');
+  });
+&lt;/script&gt;
+</code></pre>
 <a name="init-method"></a>
 <h3>The init() method</h3>
 
