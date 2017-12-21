@@ -25,7 +25,7 @@ I came across a pretty neat challenge on a Facebook beginning developers group I
   <li class="post__list-item"><a href="#reducer-helper">The Reducer Helper</a></li>
   <li class="post__list-item"><a href="#display-temperature-info">Display the Temperature Information</a></li>
   <li class="post__list-item"><a href="#load-content">Load All the Content Onto the Page</a></li>
-  <li class="post__list-item"><a href="#run-the-code">Run All This Code</a></li>
+  <li class="post__list-item"><a href="#final-code">The Final Code</a></li>
   <li class="post__list-item"><a href="#conclusion">Conclusion</a></li>
 </ol>
 
@@ -122,11 +122,11 @@ const temperatureInfo = [
 ]
 </code></pre>
 
-This first function is called <code>buildNewArrays()</code>: it's important to note that running this function against our data is the catalyst for loading content onto the page. In other words, when we run <code>buildNewArrays(temperatureInfo)</code>, it runs other functions that help display and format the content.
+This first function is called <code>formatData()</code>: it's important to note that this function against our data is the catalyst for loading content onto the page. In other words, when we run <code>formatData(temperatureInfo)</code>, it runs other functions that help display and format the content.
 
-<code>buildNewArrays()</code> looks like this:
+<code>formatData()</code> looks like this:
 <pre><code class="language-javascript">
-function buildNewArrays(outerArray) {
+function formatData(outerArray) {
 
   outerArray.map(innerArray => {
 
@@ -149,12 +149,12 @@ function buildNewArrays(outerArray) {
 Breaking all this down...
 
 <pre><code class="language-javascript">
-function buildNewArrays(outerArray) {
+function formatData(outerArray) {
  ...
 }
 </code></pre>
 
-<code>buildNewArrays</code> takes one parameter: <code>outerArray</code>. Eventually, the <code>temperatureInfo</code> const will be the passed parameter.
+<code>formatData</code> takes one parameter: <code>outerArray</code>. Eventually, the <code>temperatureInfo</code> const will be the passed parameter.
 
 <pre><code class="language-javascript">
 outerArray.map(innerArray => {
@@ -313,7 +313,7 @@ function displayArrayContent(arrayContent, target) {
   ...
 }
 </code></pre>
-The function takes two parameters: <code>arrayContent</code> and <code>target</code>. Because of how we've coded stuff, <code>arrayContent</code> always represents one of the arrays we dynamically built using <code>displayTemperatureInfo()</code> while <code>target</code> represents where on the page we want to place it.
+The function takes two parameters: <code>arrayContent</code> and <code>target</code>. Because of how we've coded stuff, <code>arrayContent</code> always represents one of the arrays we dynamically built using <code>displayTemperatureInfo()</code> while <code>target</code> represents <em>where</em> on the page we want to place it.
 
 <pre><code class="language-javascript">
 const getTargetElement = document.querySelector(target)
@@ -321,7 +321,7 @@ const parentElement = document.createElement('div')
 parentElement.setAttribute('class', 'temperature-info__single-temp-row')
 </code></pre>
 
-We create two constants: <code>getTargetElement</code> and <code>parentElement</code>. <code>getTargetElement</code> is DOM reference of the element we want to load content into (represented by <code>target</code>) while <code>parentElement</code> creates a <code>div</code> tag in memory that we'll use later.
+We create two constants: <code>getTargetElement</code> and <code>parentElement</code>. <code>getTargetElement</code> is a DOM reference to the element we want to load content into (represented by <code>target</code>) while <code>parentElement</code> creates a <code>div</code> tag in memory that we'll use later.
 
 From there, we give this <code>div</code> tag a class name of <code>temperature-info__single-temp-row</code> to apply some basic styling to it.
 
@@ -335,7 +335,7 @@ arrayContent.map(index => {
 </code></pre>
  Another <code>.map()</code> function loops over the array and does the following with each array item:
 <ul>
-  <li class="post-list-item">creates a <code>span</code> tag,</li>
+  <li class="post-list-item">creates a <code>span</code> tag.</li>
   <li class="post-list-item">gives the <code>span</code> a class name of <code>temperature-info__single-temp</code>.</li>
   <li class="post-list-item">loads each array item into the <code>span</code> with the help of <code>innerHTML</code>.</li>
   <li class="post-list-item">places the <code>span</code> at the bottom of <code>div</code> we created earlier with the help of the <code>appendChild()</code> method.</li>
@@ -348,14 +348,91 @@ Take our <code>div</code> with all the array content and place it at the bottom 
 
 <a name="run-the-code"></a>
 <h2>Run All This Code</h2>
-To get all the content in <code>temperatureInfo</code> to show up on the page, all we need to do is this:
+As mentioned earlier, <code>formatData()</code> is a catalyst: running this function runs all the code needed to load the <code>temperatureInfo</code> array on the page. So all we need to do is this:
 <pre><code class="language-javascript">
-buildNewArrays(temperatureInfo)
+formatData(temperatureInfo)
 </code></pre>
 Neat, huh?
 
+<a name="final-code"></a>
+<h2>The Final Code</h2>
+Our final, complete code looks like this:
+<pre><code class="language-javascript">
+const temperatureInfo = [
+  ["City", "00-08", "08-16", "16-24", "Average"],
+  ["Malmö", 12, 16, 9],
+  ["Mariestad", 13, 15, 10],
+  ["Stockholm", 13, 15, 13],
+  ["Upphärad", 14, 16, 15],
+  ["Göteborg", 13, 14, 11]
+]
+
+function formatData(outerArray) {
+
+  outerArray.map(innerArray => {
+
+    let numbersOnlyList = []
+
+    innerArray.map(index => {
+      if(typeof index === "number") {
+        return numbersOnlyList.push(index)
+      }
+
+    })
+
+    return numbersOnlyList.length
+    ?
+    displayTemperatureInfo(numbersOnlyList, innerArray[0])
+    :
+    displayArrayContent(innerArray, "#temperatureHeader")
+  })
+}
+
+function reducerHelper(accumulator, currentValue) {
+  return accumulator + currentValue
+}
+
+function displayTemperatureInfo(temperatureArray, getCity) {
+
+  const arrayLength = temperatureArray.length
+  const getTemperatureSum = temperatureArray.reduce(reducerHelper)
+  const temperatureAverage = getTemperatureSum/arrayLength
+
+  temperatureArray.push(Math.round(temperatureAverage))
+
+  temperatureArray.unshift(getCity)
+
+  return displayArrayContent(temperatureArray, "#temperatureInfo")
+
+}
+
+
+function displayArrayContent(arrayContent, target) {
+
+  const getTargetElement = document.querySelector(target)
+  const parentElement = document.createElement('div')
+  parentElement.setAttribute('class', 'temperature-info__single-temp-row')
+
+  arrayContent.map(index => {
+    const childElement = document.createElement('span');
+    childElement.setAttribute('class', 'temperature-info__single-temp')
+    childElement.innerHTML = index
+    parentElement.appendChild(childElement)
+  })
+
+  return getTargetElement.appendChild(parentElement)
+
+}
+
+formatData(temperatureInfo)
+</code></pre>
+
 <a name="conclusion"></a>
 <h2>Conclusion</h2>
-
+This code has brittle spots:
+<ul>
+  <li class="post-list-item">Pointing to the city name using <code>innerArray[0]</code> assumes that the city name will always be the first item in the array...and it may not be. I <em> should</em> do something like use a regular expression to pick out the strings and numbers, or do some error handling indicating that the array needs to be properly formatted.</li>
+  <li class="post-list-item"></li>
+</ul>
 
 Feel free to suggest changes.
