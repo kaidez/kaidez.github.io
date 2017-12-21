@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title:  "Display Temperature Averages with JavaScript Functional Programming"
-date:   2017-12-18 22:01:59 -0400
+date:   2017-12-21 22:01:59 -0400
 categories: tutorials
 category-name: Tutorials
 permalink: /temperatures-functional-programming/
@@ -110,7 +110,7 @@ First, I created a function that checked if the inner array had numeric temp val
 
 If that array didn't have temperature values, I assumed it was the array that contained strings but no numbers. This would be the array above starting with <code>"City"</code> so it should load onto the page as column headers.
 
-The array of arrays were stored in a const called <code>temperatureInfo</code>:
+The array of arrays was stored in a constant called <code>temperatureInfo</code>:
 <pre><code class="language-javascript">
 const temperatureInfo = [
   ["City", "00-08", "08-16", "16-24", "Average"],
@@ -122,7 +122,7 @@ const temperatureInfo = [
 ]
 </code></pre>
 
-This first function is called <code>formatData()</code>: it's important to note that this function against our data is the catalyst for loading content onto the page. In other words, when we run <code>formatData(temperatureInfo)</code>, it runs other functions that help display and format the content.
+The first function is called <code>formatData()</code>: it's important to note that running this function against our data is the catalyst for loading all the content onto the page. In other words, when we run <code>formatData(temperatureInfo)</code>, it runs other functions that help display and format the content.
 
 <code>formatData()</code> looks like this:
 <pre><code class="language-javascript">
@@ -162,7 +162,7 @@ outerArray.map(innerArray => {
 })
 </code></pre>
 
-Loop through the array of arrays with a <code>.map()</code> loop.  The <code>innerArray</code> param will represent one of the single arrays inside <code>temperatureInfo</code> at various times.
+Loop through the array of arrays with the <code>.map()</code> method.  The <code>innerArray</code> param will represent one of the single arrays inside <code>temperatureInfo</code> at various times.
 
 <pre><code class="language-javascript">
 let numbersOnlyList = []
@@ -178,7 +178,7 @@ innerArray.map(index => {
 })
 </code></pre>
 
-Do another <code>.map()</code> loop inside the first loop, which loops over each item in an inner array. If the item is a number, place it inside the <code>numbersOnlyList</code> array, otherwise do nothing.
+Run another <code>.map()</code> function inside the first loop, which loops over each item in an inner array. If the item is a number, place it inside the <code>numbersOnlyList</code> array, otherwise do nothing.
 
 In other words, when looking at the inner arrays, the <code>index</code> param will look like this at some point:
 <pre><code class="language-javascript">["Malmö", 12, 16, 9]</code></pre>
@@ -200,11 +200,11 @@ displayArrayContent(innerArray, "#temperatureHeader")
 </code></pre>
 As seen, <code>numbersOnlyList</code> can have a length, where each of its array items represents a list of temperatures. If it does have a length, pass it as a parameter to the <code>displayTemperatureInfo()</code> function that we haven't built yet.
 
-We'll discuss <code>displayTemperatureInfo()</code> in depth later but for now, know that this function will:
+We'll create <code>displayTemperatureInfo()</code> later and discuss in depth. But for now, know that it does the following:
 <ul>
-  <li class="post__list-item">calculate the average temperature.</li>
-  <li class="post__list-item">create a new array containing that average temperature, the already-existing temperature list and city name.</li>
-  <li class="post__list-item">load this new array's content onto the page.</li>
+  <li class="post__list-item">calculates the average temperature.</li>
+  <li class="post__list-item">creates a new array containing that average temperature, the already-existing temperature list and city name.</li>
+  <li class="post__list-item">loads this new array's content onto the page.</li>
 </ul>
 
 <code>displayTemperatureInfo()</code> takes a second param called <code>innerArray[0]</code>: again, <code>innerArray</code> will look like <code>["Malmö", 12, 16, 9]</code> at some point. We know that the city name is at the beginning of the array, so <code>innerArray[0]</code> points directly to that.
