@@ -292,10 +292,86 @@ And if we run <code>log()</code> in <code>scripts.js</code>, a console message w
 log("I'm kind of a big deal"); // logs the first "I'm kind of a big deal"
 </code></pre>
 <a name="test-assert-throws"></a>
-<h3>Test for error messages with assert.throws()</h3>
+<h3>Test for error messages with <code>assert.throws()</code></h3>
+<code>log()</code> should also throw an error message to the console if its parameter isn’t a string with at least one character. We’ll throw those messages using JavaScript’s <code>Error</code> object, creating this functionality with TDD.
 
+QUnit’s assert functionality has a <code>throws()</code> method that tests if your custom error messages get thrown correctly. We’ll use it to create the failing tests for this “throw an error message” functionality.
+
+The failing tests go at the bottom of the <code>script</code> tag on our test suite page:
+<pre><code class="language-markup">
+&lt;!-- test/tests.html--&gt;
+&lt;script&gt;
+...
+QUnit.test('"log()" should throw an error if no parameter is passed or if the parameter is not a string', function(assert) {
+
+  assert.throws(function () {
+    log();
+  }, 'an error was thrown because no parameters are passed to "log()"');
+
+  assert.throws(function () {
+    log('');
+  }, 'an error was thrown because an empty string is the parameter');
+
+  assert.throws(function () {
+    log(null);
+  }, 'an error was thrown because "null" is the parameter');
+
+  assert.throws(function () {
+    log(undefined);
+  }, 'an error was thrown because "undefined" is the parameter');
+
+  assert.throws(function () {
+    log(function(){});
+  }, 'an error was thrown because a function is the parameter');
+
+  assert.throws(function () {
+    log(new Symbol('a symbol'));
+  }, 'an error was thrown because an ES2015 symbol is the parameter"');
+  ...
+  // shortened so it's more readable
+});
+&lt;/script&gt;
+</code></pre>
+Like before, we create a failing QUnit test with a description and a callback that runs the test. We create tests that assume that the parameter doesn’t exist for whatever reason: an empty parameter, an empty string, <code>null</code> and <code>undefined</code>.
+
+Next, we test if either a function or an ES6 Symbol is being passed. <a href="https://github.com/kaidez/functional-programming-unit-testing">This post’s source code</a> also tests for numbers, arrays, objects, Booleans and regular expressions….I left them out here to keep things more readable.
+
+This produces failing tests:
+<img src="/img/unit-testing-image-03.jpg" alt="Second failing test image for the learn JavaScript unit testing post post" class="post__image" style="float: none; margin-top: 10px;">
+The tests pass when in true TDD form, we refactor <code>log()</code>:
+<pre><code class="language-javascript">
+// app.js
+...
+var log = function(someVariable) {
+  if((typeof someVariable !== 'string') || (someVariable.length <= 0)) {
+    throw new Error('expecting a string with at least one character');
+  } else {
+    console.log(someVariable);
+    return someVariable;
+  }
+};
+</code></pre>
+And we go back and check our tests...
+<img src="/img/unit-testing-image-04.jpg" alt="Second passing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+The test suite confirms that <code>log()</code> throws errors when its parameter is not a string with at least one character. So if we update the <code>log()</code> call in <code>scripts.js</code> to look like this...
+<pre><code class="language-javascript">
+/ scripts.js
+...
+log(""); // logs 'Uncaught Error: expecting a string with at least one character'
+</code></pre>
+
+...an error message will appear in the console when go to <code>index.html</code>.
+
+Make sure to reset <code>log("");</code> to <code>log("I’m kind of a big deal");</code> in <code>scripts.js</code> before proceeding.
 <a name="#code-coverage"></a>
 <h2>About code coverage</h2>
+<em>Code coverage</em> is the analysis of how much of your code is getting tested. It’s almost always measured as a percentage.
+
+Should you <em>always</em> go for 100% code coverage when unit testing? Maybe: search the web and you’ll find a million different answers to the question.
+
+I say do your research and make you’re own decision, but we’re going for 100% coverage in this small example. And in JS unit testing, the most popular code coverage tool is <a href="http://blanketjs.org/">Blanket.js</a>.
+
+We’ll add Blanket.js between <code>jquery.js</code> and <code>app.js<code> in <code>test/tests.html</code>:
 
 <a name="coverage-in-test-suite"></a>
 <h3>What code coverage looks like in the test suite</h3>
