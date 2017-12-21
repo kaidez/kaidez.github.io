@@ -355,7 +355,7 @@ And we go back and check our tests...
 <img src="/img/unit-testing-image-04.jpg" alt="Second passing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
 The test suite confirms that <code>log()</code> throws errors when its parameter is not a string with at least one character. So if we update the <code>log()</code> call in <code>scripts.js</code> to look like this...
 <pre><code class="language-javascript">
-/ scripts.js
+// scripts.js
 ...
 log(""); // logs 'Uncaught Error: expecting a string with at least one character'
 </code></pre>
@@ -372,10 +372,56 @@ Should you <em>always</em> go for 100% code coverage when unit testing? Maybe: s
 I say do your research and make you’re own decision, but we’re going for 100% coverage in this small example. And in JS unit testing, the most popular code coverage tool is <a href="http://blanketjs.org/">Blanket.js</a>.
 
 We’ll add Blanket.js between <code>jquery.js</code> and <code>app.js<code> in <code>test/tests.html</code>:
+<pre><code class="language-markup">
+&lt;!-- test/tests.html--&gt;
+...
+&lt;script src="../jquery.js"&gt;&lt;/script&gt;
 
+&lt;script src="blanket.min.js"&gt;&lt;/script&gt;
+
+&lt;script src="../app.js" data-cover&gt;&lt;/script&gt;
+...
+</code></pre>
 <a name="coverage-in-test-suite"></a>
 <h3>What code coverage looks like in the test suite</h3>
+Like we did with <code>log()</code>, we want <code>doSomething()</code> to do type-checking. So we’ll refactor James’ original FP code and add it to the bottom of <code>app.js</code>:
+<pre><code class="language-javascript">
+// app.js
+...
+var doSomething = function(someFunction) {
+  if(!$.isFunction(someFunction)) {
+    throw new Error("doSomething's parameter must be a function");
+  } else {
+    return someFunction();
+  }
+};
+</code></pre>
+We’re using jQuery <code>$.isFunction()</code> to check if the passed parameter is a function. Next, we’ll refresh our test suite and check the “Enable coverage” checkbox that now appears at the top.
 
+The Blanket.js interface will appear: click on the link to <code>app.js</code> to see how much code is getting coverage:
+
+<img src="/img/unit-testing-image-05.jpg" alt="Code coverage image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+
+Whatever’s highlighted in green is being tested whatever’s highlighted in red is not. And as we see, <code>doSomething()</code> isn’t being test at all.
+
+We can add the following to the bottom of the <code>script</code> tag in our test suite page...
+<pre><code class="language-markup">
+&lt;!-- test/tests.html--&gt;
+&lt;script&gt;
+  ...
+  QUnit.test('"doSomething()" should return a function', function(assert) {
+
+    var myFunc = function(returnFunc){};
+    assert.equal(doSomething(myFunc), myFunc(), 'the function was returned successfully!');
+
+  });
+&lt;/script&gt;
+</code></pre>
+And if we look at the test suite coverage info, we see we’re testing more code that passes unit tests.
+
+<img src="/img/unit-testing-image-06.jpg" alt="Second code coverage image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+
+We’re not testing if our type-checking works like we did for the <code>log()</code> function. We can fix this by adding type checks again at the bottom of the test suite’s <code>script</code> tag:
 <a name="#testing-more-functional-programming-composition"></a>
 <h2>Testing more functional programming composition</h2>
 
