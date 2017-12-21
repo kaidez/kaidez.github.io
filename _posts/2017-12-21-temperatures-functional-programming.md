@@ -432,7 +432,11 @@ formatData(temperatureInfo)
 This code has brittle spots:
 <ul>
   <li class="post-list-item">Pointing to the city name using <code>innerArray[0]</code> assumes that the city name will always be the first item in the array...and it may not be. I <em> should</em> do something like use a regular expression to pick out the strings and numbers, or do some error handling indicating that the array needs to be properly formatted.</li>
-  <li class="post-list-item"></li>
+  <li class="post-list-item">Using <code>appendChild()</code> to load in the array data loads data at the bottom of the page element. The way I wrote the code displayed the column header data first: it may have loaded second or third if I wrote it a different way. I should've written code that detects that specific array, then <em>prepends</em> its data instead of <em>appends</em></li>
 </ul>
 
-Feel free to suggest changes.
+It also should be said that, based on modern web dev techniques, <code>temperatureInfo</code> would be built with more stricter rules. It would be built using back-end web services and be returned in a strict JSON format.
+
+But none of that's the point. The point is that I did some JavaScript functional programming and did a job I'm proud of. The practice is what counts
+
+Feel free to suggest changes, ask questions, etc.
