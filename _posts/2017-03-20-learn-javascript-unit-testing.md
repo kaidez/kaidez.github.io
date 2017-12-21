@@ -51,15 +51,42 @@ The best way to learn JavaScript unit testing is to realize you should write cod
 
 <a name="before-we-begin"></a>
 <h2>Before we begin...</h2>
+While this post talks about functional programming, it’s written more as a beginner’s guide to JavaScript unit testing. The post demonstrates how FP makes unit testing easier, but doesn’t discuss FP beyond that.
+
+Even with that, this post isn’t an in-depth JavaScript unit testing tutorial. It covers just enough to get you up and running: <strong>assertions, test suites, test coverage and test-driven development</strong>.
+
+The resources at the end of this post cover JavaScript unit testing and functional programming in depth.
+
+If you want to follow along with the examples, <a href="https://github.com/kaidez/functional-programming-unit-testing">please read the instructions in the code repo</a>.
 
 <a name="not-doing-js-unit-testing"></a>
 <h2>Haven’t done JavaScript unit testing yet? That’s fine.</h2>
+First of all, it’s OK if you haven’t regularly unit tested your JavaScript up to this point. This is because unit testing isn’t encouraged in the JS community like it is in other programming communities like Java.
+
+JavaScript was built to be a low barrier of entry for beginner programmers: JS creator <a href="https://devchat.tv/js-jabber/124-jsj-the-origin-of-javascript-with-brendan-eich">Brendan Eich has said that</a>. JS was used for simple things like dropdown menus, rollover effects and cookies when it first came out; therefore, ignoring JS unit testing was acceptable.
+
+But starting with <a href="http://adaptivepath.org/ideas/ajax-new-approach-web-applications/">the Great AJAX Revolution of 2005</a>, JavaScript evolved into a full-on application platform. JS lives well on the server via Node, JS stack solutions like <a href="http://meanjs.org/">MEAN</a> and <a href="https://jamstack.org/">JAMstack</a> are getting popular and so on.
+
+With JavaScript now at this level, it makes sense to apply traditional software development practices. Like unit testing.
 
 <a name="functional-programming"></a>
 <h2>About functional programming</h2>
+You should test small pieces of code, not big pieces. Functional programming encourages writing functions in small pieces.
 
+The rules of functional programming are:
+<ul>
+  <li class="post-list-item">A function should depend on its own scope to work, not its outer scope.</li>
+  <li class="post-list-item">Functions <em>definitely</em> shouldn’t change the outer scope.</li>
+  <li class="post-list-item">Functions should explicitly <code>return</code> something.</li>
+  <li class="post-list-item">If a function gives the same input, it should always produce the same output.</li>
+  <li class="post-list-item">Most of all, functions must be small and reusable.</li>
+</ul>
+This is just an FP summary: you can read more about it by clicking on this article’s various links. But the last point is the most relevant to JavaScript unit testing:
+<blockquote><p><em>Functions must be small and reusable.</em></p></blockquote>
+In addition, functional programming encourages composition: the combining of multiple functions to make another function. This is usually done by passing a function as a parameter to another function, where the passed function gets invoked inside the other one.
 <a name="what-we-will-do"></a>
 <h2>What we’re going to do</h2>
+James Sinclair wrote <a href="http://jrsinclair.com/articles/2016/gentle-introduction-to-functional-javascript-intro/">an excellent four-part tutorial on functional programming</a>. We’ll create unit tests for his function solutions in the tutorial’s first part.
 
 <a name="web-page"></a>
 <h2>The web page for all this</h2>
