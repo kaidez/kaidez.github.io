@@ -285,7 +285,53 @@ Using the previously-discussed-but-not-yet-created <code>displayContent()</code>
 
 <a name="load-content"></a>
 <h2>Load All the Content Onto the Page</h2>
+We're using a <code>displayContent()</code> function to load all of our array data onto the page.  I guess we should build it now.
 
+This will all be basic DOM manipulation and look like this:
+<pre><code class="language-javascript">
+function displayContent(arrayContent, target) {
+
+  const getTargetElement = document.querySelector(target)
+  const parentElement = document.createElement('div')
+  parentElement.setAttribute('class', 'temperature-info__single-temp-row')
+
+  arrayContent.map(index => {
+    const childElement = document.createElement('span');
+    childElement.setAttribute('class', 'temperature-info__single-temp')
+    childElement.innerHTML = index
+    parentElement.appendChild(childElement)
+  })
+
+  return getTargetElement.appendChild(parentElement)
+
+}
+</code></pre>
+And...breaking this one down...
+<pre><code class="language-javascript">
+function displayContent(arrayContent, target) {
+  ...
+}
+</code></pre>
+The function takes two parameters: <code>arrayContent</code> and <code>target</code>. Because of how we've coded stuff, <code>arrayContent</code> always represents one of the arrays we dynamically built using <code>displayTemperatureInfo()</code> while <code>target</code> represents where on the page we want to place it.
+
+<pre><code class="language-javascript">
+const getTargetElement = document.querySelector(target)
+const parentElement = document.createElement('div')
+parentElement.setAttribute('class', 'temperature-info__single-temp-row')
+</code></pre>
+
+We create two constants: <code>getTargetElement</code> and <code>parentElement</code>. <code>getTargetElement</code> is DOM reference of the element we want to load content into (represented by <code>target</code>) while <code>parentElement</code> creates a <code>div</code> tag in memory that we'll use later.
+
+From there, we give this <code>div</code> tag a class name of <code>temperature-info__single-temp-row</code> to apply some basic styling to it.
+
+<pre><code class="language-javascript">
+arrayContent.map(index => {
+  const childElement = document.createElement('span');
+  childElement.setAttribute('class', 'temperature-info__single-temp')
+  childElement.innerHTML = index
+  parentElement.appendChild(childElement)
+})
+</code></pre>
 <a name="conclusion"></a>
 <h2>Conclusion</h2>
 
