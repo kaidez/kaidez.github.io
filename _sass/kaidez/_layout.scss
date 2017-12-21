@@ -427,7 +427,7 @@ a.post-link {
     }
 
     h3 {
-      @include relative-font-size(1.625);
+      font-size: 23.25px;
 
       @include media-query($on-laptop) {
         @include relative-font-size(1.375);
