@@ -216,13 +216,81 @@ We’ll use TDD to make <code>log()</code> work but will also update it as follo
 
 <a name="first-failing-test"></a>
 <h3>The first failing test</h3>
+We’ll create a failing test that checks to see if log() returns a string with at least one character:
+<pre><code class="language-javascript">
+&lt;!-- test/tests.html --&gt;
+<script>
 
+QUnit.test('"log()" should return a string with at least 1 character', function(assert) {
+
+  var myString = 'a string';
+
+  assert.equal(log(myString), 'a string', 'the string was returned successfully!');
+
+  assert.equal(myString.length >= 1, true, 'the string has at least 1 character!');
+
+});
+
+</script>
+</code></pre>
+We create a test with QUnit’s <code> test</code>  method. <code>test</code> takes two parameters: the test description and a callback function that runs the test.
+
+The test description is <code>"'log()' should return a string with at least 1 character"</code> and the callback takes a parameter called assert. And <code>assert</code> is THE most important term in unit testing.
+
+<code>assert</code> refers to “assertion” and in unit testing, <strong>an assertion is something that our tests always expect to be true</strong>. <code>assert</code> points to a QUnit object with methods we can use in our tests.
+
+Our callback contains a variable called <code>myString</code>. This is a “mock,” which is dummy data for our test.
+
+Finally, the callback uses one of the <code>assert</code> methods we have access to: <code>assert.equal()</code>. And it uses it twice.
+</code></pre>
 <a name="first-assertions"></a>
 <h3>The first assertions</h3>
+<code>assert.equal()</code> takes three parameters:
+
+<ol>
+  <li class="post__list-item">the <strong>actual</strong> behavior: the code is being tested.</li>
+  <li class="post__list-item">the <strong>expected</strong>  behavior: what we expect the test result to be (or, what we’re “asserting”).</li>
+  <li class="post__list-item">what message should display if the test passes.</li>
+</ol>
+For the first assertion, we are:
+
+<ol>
+  <li class="post__list-item">executing the <code>log()</code> function by running <code>log(myString)</code>.</li>
+  <li class="post__list-item">expecting that the function’s returned result will be <code>"a string"</code>.</li>
+  <li class="post__list-item">if the test passes, we’ll get a message saying <code>"the string was returned successfully!"</code></li>
+</ol>
+For the next assertion, we are:
+
+<ol>
+  <li class="post__list-item">claiming that the string’s length is greater than or equal to 1, and it “actually” is.</li>
+  <li class="post__list-item">expecting the first point to be true with the help of a standard <code>Boolean</code> true check.</li>
+  <li class="post__list-item">if the test passes, we’ll get a message saying <code>"the string has at least 1 character!"</code></li>
+</ol>
 
 <a name="see-if-tests-failed"></a>
 <h3>See if the tests failed</h3>
+Our QUnit test suite shows failing tests when we load <code>test/tests.html</code> in a browser...
+<img src="/img/unit-testing-image-01.jpg" alt="First failing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+First failing test image for the learn JavaScript unit testing post
+We can make the test pass by adding James’ original log() code to app.js. And note the ES5 "use strict" statement: it will be important later on..
 
+We can make the test pass by adding James’ original <code>log()</code> code to <code>app.js</code>. And note the ES5 <code>"use strict"</code> statement: it will be important later on...
+<pre><code class="language-javascript">
+// app.js
+'use strict';
+
+var log = function(someVariable) {
+  console.log(someVariable);
+  return someVariable;
+}
+</code></pre>
+...and we’ll see that both tests pass when we go back to our test suite and click on the description.
+<img src="/img/unit-testing-image-02.jpg" alt="First passing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+And if we run <code>log()</code> in <code>scripts.js</code>, a console message will appear when we go to our web page:
+<pre><code class="language-javascript">
+// scripts.js
+log("I'm kind of a big deal"); // logs the first "I'm kind of a big deal"
+</code></pre>
 <a name="test-assert-throws"></a>
 <h3>Test for error messages with assert.throws()</h3>
 
