@@ -49,9 +49,9 @@ I had to calculate the average temperature for each city, then run code that dis
 <img src="/img/temperature-display.jpg" class="post__image">
 There were a few challenges here:
 <ul>
-  <li class="post-list-item">How do I look at <em>just</em> the numbers in the array to get the average?</li>
-  <li class="post-list-item">How do I do that while ignoring the city in this array?</li>
-  <li class="post-list-item">How do I display all these arrays with reusable functions, while understanding that the one array is header content and the rest is temperature/city content?</li>
+  <li class="post__list-item">How do I look at <em>just</em> the numbers in the array to get the average?</li>
+  <li class="post__list-item">How do I do that while ignoring the city in this array?</li>
+  <li class="post__list-item">How do I display all these arrays with reusable functions, while understanding that the one array is header content and the rest is temperature/city content?</li>
 </ul>
 
 <a name="solution"></a>
@@ -60,10 +60,10 @@ The solution was, well, to use functional programming. In other words, I had to 
 
 I did this by:
 <ul>
-  <li class="post-list-item">creating a function that determines whether or not the inner array has temperatures.</li>
-  <li class="post-list-item">creating a function that calculates the temperature average.</li>
-  <li class="post-list-item">creating a function that displays the content on the page.</li>
-  <li class="post-list-item">getting all these functions to work together as a team to display the array content on the page.</li>
+  <li class="post__list-item">creating a function that determines whether or not the inner array has temperatures.</li>
+  <li class="post__list-item">creating a function that calculates the temperature average.</li>
+  <li class="post__list-item">creating a function that displays the content on the page.</li>
+  <li class="post__list-item">getting all these functions to work together as a team to display the array content on the page.</li>
 </ul>
 
 <a name="basic-code"></a>
@@ -103,9 +103,9 @@ The <a href="http://getbem.com/introduction/">BEM-like CSS</a> will look like th
 First, I created a function that checked if the inner array had numeric temp values. If it did, the function created a new array containing:
 
 <ul>
-  <li class="post-list-item">this inner array's temperatures.</li>
-  <li class="post-list-item">their average temperature.</li>
-  <li class="post-list-item">their respective city.</li>
+  <li class="post__list-item">this inner array's temperatures.</li>
+  <li class="post__list-item">their average temperature.</li>
+  <li class="post__list-item">their respective city.</li>
 </ul>
 
 If that array didn't have temperature values, I assumed it was the array that contained strings but no numbers. This would be the array above starting with <code>"City"</code> so it should load onto the page as column headers.
@@ -202,9 +202,9 @@ As seen, <code>numbersOnlyList</code> can have a length, where each of its array
 
 We'll discuss <code>displayTemperatureInfo()</code> in depth later but for now, know that this function will:
 <ul>
-  <li class="post-list-item">calculate the average temperature.</li>
-  <li class="post-list-item">create a new array containing that average temperature, the already-existing temperature list and city name.</li>
-  <li class="post-list-item">load this new array's content onto the page.</li>
+  <li class="post__list-item">calculate the average temperature.</li>
+  <li class="post__list-item">create a new array containing that average temperature, the already-existing temperature list and city name.</li>
+  <li class="post__list-item">load this new array's content onto the page.</li>
 </ul>
 
 <code>displayTemperatureInfo()</code> takes a second param called <code>innerArray[0]</code>: again, <code>innerArray</code> will look like <code>["Malmö", 12, 16, 9]</code> at some point. We know that the city name is at the beginning of the array, so <code>innerArray[0]</code> points directly to that.
@@ -335,10 +335,10 @@ arrayContent.map(index => {
 </code></pre>
  Another <code>.map()</code> function loops over the array and does the following with each array item:
 <ul>
-  <li class="post-list-item">creates a <code>span</code> tag.</li>
-  <li class="post-list-item">gives the <code>span</code> a class name of <code>temperature-info__single-temp</code>.</li>
-  <li class="post-list-item">loads each array item into the <code>span</code> with the help of <code>innerHTML</code>.</li>
-  <li class="post-list-item">places the <code>span</code> at the bottom of <code>div</code> we created earlier with the help of the <code>appendChild()</code> method.</li>
+  <li class="post__list-item">creates a <code>span</code> tag.</li>
+  <li class="post__list-item">gives the <code>span</code> a class name of <code>temperature-info__single-temp</code>.</li>
+  <li class="post__list-item">loads each array item into the <code>span</code> with the help of <code>innerHTML</code>.</li>
+  <li class="post__list-item">places the <code>span</code> at the bottom of <code>div</code> we created earlier with the help of the <code>appendChild()</code> method.</li>
 </ul>
 
 <pre><code class="language-javascript">
@@ -431,12 +431,12 @@ formatData(temperatureInfo)
 <h2>Conclusion</h2>
 This code has brittle spots:
 <ul>
-  <li class="post-list-item">Pointing to the city name using <code>innerArray[0]</code> assumes that the city name will always be the first item in the array...and it may not be. I <em> should</em> do something like use a regular expression to pick out the strings and numbers, or do some error handling indicating that the array needs to be properly formatted.</li>
-  <li class="post-list-item">Using <code>appendChild()</code> to load in the array data loads data at the bottom of the page element. The way I wrote the code displayed the column header data first: it may have loaded second or third if I wrote it a different way. I should've written code that detects that specific array, then <em>prepends</em> its data instead of <em>appends</em></li>
+  <li class="post__list-item">Pointing to the city name using <code>innerArray[0]</code> assumes that the city name will always be the first item in the array...and it may not be. I <em> should</em> do something like use a regular expression to pick out the strings and numbers and then load stuff, or send an error message to the console indicating that the array needs to be properly formatted.</li>
+  <li class="post__list-item">Using <code>appendChild()</code> to load in the array data places it at the bottom of the page element. The way I wrote the code displayed the column header data first: it may have loaded second or third if I wrote it a different way. I should've written code that detects that specific array, then <em>prepends</em> its data instead of <em>appends</em></li>
 </ul>
 
-It also should be said that, based on modern web dev techniques, <code>temperatureInfo</code> would be built with more stricter rules. It would be built using back-end web services and be returned in a strict JSON format.
+It also should be said that, based on modern web dev techniques, <code>temperatureInfo</code> would be built with more stricter rules. It would be built using back-end web services and be returned in a JSON format.
 
-But none of that's the point. The point is that I did some JavaScript functional programming and did a job I'm proud of. The practice is what counts
+But none of that's the point. The point is that I did some JavaScript functional programming and did a job I'm proud of. The practice is what counts.
 
 Feel free to suggest changes, ask questions, etc.
