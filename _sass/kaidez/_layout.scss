@@ -517,8 +517,6 @@ a.post-link {
     font-size: 32px;
   }
 
-  &__content {}
-
 }
 .page-heading {
   @include relative-font-size(1.25);
@@ -530,6 +528,7 @@ a.post-link {
 
   > li {
     margin-bottom: $spacing-unit;
+    padding: 6px;
   }
 }
 
