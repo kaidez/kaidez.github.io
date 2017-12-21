@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title:  "Display Temperature Averages with JavaScript Functional Programming"
-date:   2017-12-21 22:01:59 -0400
+date:   2017-12-21 01:01:59 -0400
 categories: tutorials
 category-name: Tutorials
 permalink: /temperatures-functional-programming/
