@@ -828,8 +828,8 @@ And we see that the tests pass, but not with 100% code coverage.
 This is due to our not testing <code>addMagic</code>‘s error throwing functionality. Adding a couple of <code>assert.throws()</code> tests will fix this...
 
 <pre><code class="language-javascript">
-&lt;!-- test/tests.html--&gt
-&lt;script&gt
+&lt;!-- test/tests.html--&gt;
+&lt;script&gt;
   ...
   QUnit.test('"addMagic()" should throw an error if less than 2 parameters are passed', function(assert) {
 
@@ -842,7 +842,7 @@ This is due to our not testing <code>addMagic</code>‘s error throwing function
     }, 'an error was thrown because only one parameter was passed to "addMagic()"');
 
   });
-&lt;/script&gt
+&lt;/script&gt;
 </code></pre>
 
 And looking at our test suite and code coverage confirms this. Note that the grouped “addMagic() effect tests” are moved below these new tests even though the grouped tests are above them in the suite code.
