@@ -369,7 +369,7 @@ Should you <em>always</em> go for 100% code coverage when unit testing? Maybe: s
 
 I say do your research and make you’re own decision, but we’re going for 100% coverage in this small example. And in JS unit testing, the most popular code coverage tool is <a href="http://blanketjs.org/">Blanket.js</a>.
 
-We’ll add Blanket.js between <code>jquery.js</code> and <code>app.js<code> in <code>test/tests.html</code>:
+We’ll add Blanket.js between <code>jquery.js</code> and <code>app.js</code> in <code>test/tests.html</code>:
 <pre><code class="language-markup">
 &lt;!-- test/tests.html--&gt;
 ...
