@@ -462,6 +462,13 @@ a.post-link {
     }
   }
 
+  &__image {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 10px 10px 0;
+    display: block;
+  }
+
   &__tweet-button {
     width: 280px;
     margin: 80px auto;
