@@ -334,7 +334,7 @@ QUnit.test('"log()" should throw an error if no parameter is passed or if the pa
 </code></pre>
 Like before, we create a failing QUnit test with a description and a callback that runs the test. We create tests that assume that the parameter doesn’t exist for whatever reason: an empty parameter, an empty string, <code>null</code> and <code>undefined</code>.
 
-Next, we test if either a function or an ES6 Symbol is being passed. <a href="https://github.com/kaidez/functional-programming-unit-testing">This post’s source code</a> also tests for numbers, arrays, objects, Booleans and regular expressions….I left them out here to keep things more readable.
+Next, we test if either a function or an ES6 Symbol is being passed. <a href="https://github.com/kaidez/functional-programming-unit-testing">This post’s source code</a> also tests for numbers, arrays, objects, Booleans and regular expressions....I left them out here to keep things more readable.
 
 This produces failing tests:
 <img src="/img/unit-testing-image-03.jpg" alt="Second failing test image for the learn JavaScript unit testing post post" class="post__image" style="float: none; margin-top: 10px;">
@@ -519,17 +519,214 @@ Since <code>Carousel()</code> is a constructor function, we can attach its param
   });
 &lt;/script&gt;
 </code></pre>
-<a name="init-method"></a>
-<h3>The init() method</h3>
+<code>Carousel</code>‘s two parameters should be a string and a number. So we’ll create two variables called <code>someString</code> and <code>someNumber</code> and pass them to <code>new Carousel()</code> in our test.
 
+We’re using QUnit’s <code>assert.ok()</code> method, which really just checks if our actual value, <code>new Carousel(str, num)</code>, exists. I don’t know if this is the strongest unit test in the world: I just want you to be aware that <code>assert.ok()</code> is an option.
+
+Also, take note that we’re using the <code>new</code> keyword in our assertion. This goes back to our using <code>'use strict'</code> and how function’s define their scope in that scenario.
+
+Doing strict mode and <em>not</em> using <code>new</code> like this in your tests leads to bugs, so be sure to always use new in these cases. Read <a href="https://stackoverflow.com/questions/42459449/qunit-returns-error-in-strict-mode/42460436">the answer to the Stack Overflow question I asked about this</a> to learn more.
+
+We’ll confirm that the test fails...
+<img src="/img/unit-testing-image-08.jpg" alt="Carousel failing image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+
+And add the following code to <code>app.js</code>:
+
+<pre><code class="language-javascript">
+function Carousel(getElement, spinDuration) {
+  this.getElement = getElement;
+  this.spinDuration = spinDuration || 3000;
+  if(this.getElement === undefined) {
+    throw new Error('Carousel needs to know what element to load into');
+  } else {
+    return this;
+  }
+}
+</code></pre>
+<code>Carousel()</code> receives a getElement and spinDuration parameter. Their values will eventually get passed around to <code>initialiseCarousel()</code> when new <code>Carousel()</code> runs inside it.
+
+We’re letting <code>spinDuration</code> be an optional parameter by giving it a default value. If it’s left blank in a <code>Carousel()</code> instance, it will automatically be set to 3000.
+
+But we’re still expecting the <code>getElement</code> parameter: otherwise, our code won’t know where to place the carousel. So we’ll throw a console error if that’s left blank.
+
+<em>(Side note: We’re not going to throw errors if the wrong types get passed. We’ve already done it twice and understand how it works but as a challenge, try adding them to this test on your own.)</em>
+
+The test passes now. But our code coverage indicates that we didn’t test our thrown error functionality:
+
+<img src="/img/unit-testing-image-09.jpg" alt="First carousel code coverage image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+
+So we add this test:
+<pre><code class="language-markup">
+&lt;!-- test/tests.html--&gt;
+&lt;script&gt;
+  ...
+  QUnit.test('"Carousel" should throw an error if an element was not passed as a parameter', function(assert) {
+
+    assert.throws(function () {
+      new Carousel();
+    }, 'an error was because an element was not passed as a parameter');
+
+  });
+&lt;/script&gt;
+</code></pre>
+And we get 100% coverage on our tests:
+<img src="/img/unit-testing-image-10.jpg" alt="Second carousel code coverage image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+Adding a carousel without parameters to the bottom of <code>scripts.js</code> consequently produces a console error when <code>index.html</code> runs in the browser:
+<pre><code class="language-javascript">
+// scripts.js
+...
+var someCarousel = new Carousel(); // logs "Carousel needs to know what element to load into"
+</code></pre>
+
+But no errors appear when we pass both parameters...
+
+
+// scripts.js
+var someCarousel = new Carousel('carousel-one', 5435);
+someCarousel.init(); // show “The carousel-one carousel has started” on index.html
+
+var someOtherCarousel = new Carousel('carousel-two');
+someOtherCarousel.init(); // show “The carousel-two carousel has started” on index.html
+</code></pre>
+<pre><code class="language-javascript">
+// scripts.js
+...
+var someCarousel = new Carousel('carousel-one', 5345); // no console errors
+</code></pre>
+
+Or even just one element parameter since we have a default value for <code>spinDuration</code>:
+<pre><code class="language-javascript">
+// scripts.js
+...
+var someOtherCarousel = new Carousel('carousel-two'); // no console errors
+</code></pre>
+
+<a name="init-method"></a>
+<h3>The <code>init()</code> method</h3>
+We’ll just make the carousel’s <code>init()</code> method load text into the carousel page element. We’ll add the following test for this at the bottom of the <code>script</code> tag in the test suite:
+<pre><code class="language-javascript">
+&lt;!-- test/tests.html--&gt;
+&lt;script&gt;
+  ...
+  QUnit.test('"Carousel()" should run its init() method and load the proper text', function(assert) {
+
+    var testCarousel = new Carousel('qunit-fixture');
+    testCarousel.init();
+
+    assert.equal($('#qunit-fixture').html(), 'The qunit-fixture carousel has started.', 'init() ran and loaded the proper text!');
+  });
+&lt;/script&gt;
+</code></pre>
+
+We create a new instance of <strong>Carousel()</strong> called testCarousel and pass <code>qunit-fixture</code> as its single parameter. <code>qunit-fixture</code> points to the standard page element where QUnit loads other elements that need testing.
+
+(<em>Side note: elements that load into <code>qunit-fixture</code> for testing are removed when the tests are done.)</em>
+
+We don’t need to pass a number for the <code>spinDuration</code> parameter. We already gave it a default value in the <strong>Carousel()</strong> function in <code>app.js</code>, so this test should pass without it.
+
+<code>init()</code> should place a custom message in <code><div id="qunit-fixture" /></code> that says <code>"The qunit-fixture carousel has started."</code>. Then we’ll use jQuery’s <code>html()</code> function to look in the qunit-fixture and see if its copy matches our message.
+
+If the copy matches, our QUnit test will say <code>"a slider was returned!"</code> But for now, we have a failing test:
+<img src="/img/unit-testing-image-11.jpg" alt="Init failing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+
+Adding this code to the bottom of app.js will get things to work:
+<pre><code class="language-javascript">
+// app.js
+...
+Carousel.prototype.init = function() {
+  var getCarousel = document.getElementById(this.getElement);
+  getCarousel.innerHTML = 'The ' + this.getElement + ' carousel has started.';
+};
+</code></pre>
+We’ve followed JavaScript best practices and placed init() on Carousel‘s prototype instead of in the Carousel constructor function. It finds the element defined in Carousel using document.getElementById(), which is this.element, and stores it in a getCarousel variable.
+
+Next, init() takes the value of this.element and uses it to build a custom message. The message gets loaded into whatever element getCarousel points to.
+
+As a result, our unit test passes with 100% code coverage:
+<img src="/img/unit-testing-image-12.jpg" alt="Init passing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+And if we run <code>init()</code> two times at the bottom of <code>scripts.js</code>...
+
+<pre><code class="language-javascript">
+// scripts.js
+var someCarousel = new Carousel('carousel-one', 5435);
+someCarousel.init(); // show “The carousel-one carousel has started” on index.html
+
+var someOtherCarousel = new Carousel('carousel-two');
+someOtherCarousel.init(); // show “The carousel-two carousel has started” on index.html
+</code></pre>
+And two text blocks will show up in the <code>carousel-one</code> and <code>carousel-two</code> page elements when <code>index.html</code> runs in the browser.
 <a name="test-returned-function"></a>
 <h3>Unit test the returned function</h3>
+In James’ example, the returning function, <code>initialiseCarousel()</code> was expected to return a new instance of <code>Carousel()</code>. A failing test for that looks like this:
 
+<pre><code class="language-markup">
+&lt;!-- test/tests.html--&gt;
+&lt;script&gt;
+  ...
+  QUnit.test('"initialiseCarousel()" should return a new instance of Carousel()', function(assert) {
+
+    var testCarouselInstance = initialiseCarousel('qunit-fixture', 3000);
+    var isCarouselInstance = testCarouselInstance instanceof Carousel;
+    assert.ok(isCarouselInstance, 'a new instance of Carousel() was returned!');
+
+  });
+&lt;/script&gt;
+</code></pre>
+We’re testing with <code>assert.ok()</code> again. The test has a description and a callback as usual and the callback has two variables:
+
+<ul>
+  <li class="post__list-item"><code>testCarouselInstance</code> stores an invocation of <code>initialiseCarousel()</code> that creates a carousel in <code>&lt;div id="qunit-fixture" /&gt;</code> with a 3000 millisecond duration.</li>
+  <li class="post__list-item"><code>isCarouselInstance</code> stores a test for if <code>testCarouselInstance</code> is actually an instance of <code>Carousel</code> using <code>instanceof</code>.</li>
+</ul>
+
+So we have a failing test right now...
+<img src="/img/unit-testing-image-13.jpg" alt="initialiseCarousel failing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+
+Then we get to pass by adding James’ original to <code>app.js</code>...
+
+<pre><code class="language-javascript">
+//app.js
+...
+function initialiseCarousel(id, frequency) {
+  var el = document.getElementById(id);
+  var slider = new Carousel(el, frequency);
+  slider.init();
+  return slider;
+}
+</code></pre>
+And the test passes…
+<img src="/img/unit-testing-image-14.jpg" alt="initialiseCarousel passing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
 <a name="bring-it-altogether"></a>
+And since our tests confirm that a new <code>Carousel()</code> instance exists and we’re explicitly returning that instance (<code>slider</code>), we can agree that our test is accurate.
+
+We can now invoke <code>initialiseCarousel()</code> in <code>scripts.js</code> to get it working in live code:
+
+<pre><code class="language-javascript">
+// scripts.js
+...
+var testCarousel = initialiseCarousel('main-carousel', 3000); // "The main-carousel carousel has started" displays on the page
+</code></pre>
+<code>index.html</code> displays “The main-carousel carousel has started” when it runs in the browser. And since we’re already getting the DOM element in <code>Carousel()</code>, we can refactor <code>initialiseCarousel()</code> and removing that functionality from it:
+<pre><code class="language-javascript">
+//app.js
+...
+function initialiseCarousel(id, frequency) {
+  var slider = new Carousel(id, frequency);
+  slider.init();
+  return slider;
+}
+</code></pre>
+
+Note that <code>id</code> replaces <code>el</code> in slider‘s parameter.
+
 <h2>Bringing it altogether</h2>
+James’ last example performs roughly the same functionality as the others:
 
 <a name="further-reading"></a>
 <h2>Further reading</h2>
 
 <a name="conclusion"></a>
 <h2>Conclusion</h2>
+Any developer can learn JavaScript unit testing. But not until they understand that they can never again place 50 lines of code in a single <code>$(document).ready()</code> block.
+
+They must realize that using functional programming to create small, testable functions will make them an awesome JS unit tester. And a better developer as well!!!
