@@ -363,7 +363,7 @@ log(""); // logs 'Uncaught Error: expecting a string with at least one character
 ...an error message will appear in the console when go to <code>index.html</code>.
 
 Make sure to reset <code>log("");</code> to <code>log("I’m kind of a big deal");</code> in <code>scripts.js</code> before proceeding.
-<a name="#code-coverage"></a>
+<a name="code-coverage"></a>
 <h2>About code coverage</h2>
 <em>Code coverage</em> is the analysis of how much of your code is getting tested. It’s almost always measured as a percentage.
 
@@ -477,7 +477,7 @@ var sayBigDeal = function() {
 
 doSomething(sayBigDeal); // logs the second "I'm kind of a big deal"
 </code></pre>
-<a name="#testing-more-functional-programming-composition"></a>
+<a name="testing-more-functional-programming-composition"></a>
 <h2>Testing more functional programming composition</h2>
 James Sinclair’s FP post demonstrated composition with another function that built a carousel:
 <pre><code class="language-javascript">
@@ -694,9 +694,9 @@ function initialiseCarousel(id, frequency) {
   return slider;
 }
 </code></pre>
-And the test passes…
+And the test passes...
 <img src="/img/unit-testing-image-14.jpg" alt="initialiseCarousel passing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
-<a name="bring-it-altogether"></a>
+
 And since our tests confirm that a new <code>Carousel()</code> instance exists and we’re explicitly returning that instance (<code>slider</code>), we can agree that our test is accurate.
 
 We can now invoke <code>initialiseCarousel()</code> in <code>scripts.js</code> to get it working in live code:
@@ -718,12 +718,170 @@ function initialiseCarousel(id, frequency) {
 </code></pre>
 
 Note that <code>id</code> replaces <code>el</code> in slider‘s parameter.
-
+<a name="bring-it-altogether"></a>
 <h2>Bringing it altogether</h2>
 James’ last example performs roughly the same functionality as the others:
 
+<pre><code class="language-javascript">
+function addMagic(id, effect) {
+  var element = document.getElementById(id);
+  element.className += ' magic';
+  effect(element);
+}
+
+addMagic('unicorn', spin);
+addMagic('fairy', sparkle);
+addMagic('kitten', rainbow);
+</code></pre>
+<code>addMagic()</code> takes <code>id</code> and <code>effect</code> as parameters. <code>id</code> is passed to the <code>element</code> variable inside <code>addMagic()</code>, where <code>element</code> references a page element.
+
+<code>element</code> gets a class named <code>magic</code> added to it. It also has an effect function invoked inside it, hence, the <code>effect</code> parameter.
+
+<code>effect</code> can be either <code>spin</code>, <code>sparkle</code> or <code>rainbow</code>. Like before, we’ll update these functions to load text inside of a page element.
+
+We can unit test all this using everything we’ve learned up to this point. Our first failing test looks like this:
+
+<pre><code class="language-javascript">
+&lt;!-- test/tests.html--&gt;
+&lt;script&gt;
+  ...
+  QUnit.test('addMagic() should return a function and add a "magic" class to the target element', function(assert) {
+
+    function returnFunc(){}
+    addMagic('qunit-fixture', returnFunc);
+
+    assert.equal(typeof returnFunc, 'function', 'the function was returned successfully!');
+    assert.equal($('#qunit-fixture').hasClass('magic'), true, 'The targeted element has a class named "magic" !');
+
+  });;
+&lt;/script&gt;
+</code></pre>
+The test invokes <code> addMagic()</code> to find the <code>qunit-fixture</code> page element and return a function named <code>returnFunc</code>. We’ve tested for returned functions before only this time, we’re testing for this using <code>typeof</code> in our first <code>assert</code>.
+
+The second assert tests if the <code>magic</code> class was dynamically added. It uses jQuery’s <code>hasClass</code> functionality to do so.
+
+The test structure for the three effects is a little different:
+<pre><code class="language-javascript">
+&lt;!-- test/tests.html--&gt;
+&lt;script&gt;
+  ...
+  QUnit.module('addMagic() effect tests', function() {
+    QUnit.test('spin() should load "spinning..." into its targeted element', function(assert) {
+      addMagic('qunit-fixture', spin);
+      assert.equal($('#qunit-fixture').html(), 'spinning...', 'The targeted element contains text that says "spinning..."');
+    });
+
+    QUnit.test('sparkle() should load "sparkling..." into its targeted element', function(assert) {
+      addMagic('qunit-fixture', sparkle);
+      assert.equal($('#qunit-fixture').html(), 'sparkling...', 'The targeted element contains text that says "sparkling..."');
+    });
+
+    QUnit.test('rainbow() should load "rainbowing..." into its targeted element', function(assert) {
+      addMagic('qunit-fixture', rainbow);
+      assert.equal($('#qunit-fixture').html(), 'rainbowing...', 'The targeted element contains text that says "rainbowing..."');
+    });
+
+  });
+&lt;/script&gt;
+</code></pre>
+Each test passes an effect to <code>addMagic</code> as a parameter. Since each effect places text inside a page element, we’re using jQuery’s <code>html()</code> function again to look for the existence of that text.
+
+This time though, we’re wrapping all these tests inside <code>QUnit.module()</code>. This groups these three tests and makes them stand out a little in our test suite, which is a bit more readable.
+
+So, we have our failing tests now...
+<img src="/img/unit-testing-image-15.jpg" alt="addMagic failing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+
+Adding this code to <code>app.js</code> makes the tests pass...
+<pre><code class="language-javascript">
+// app.js
+...
+function addMagic(id, effect) {
+  if(!id || !effect) {
+    throw new Error('addMagic() needs an id and effect parameter');
+  } else {
+    var element = document.getElementById(id);
+    element.className += ' magic';
+    return effect(element);
+  }
+}
+
+function spin(getElement){
+  getElement.innerHTML = 'spinning...';
+}
+
+function sparkle(getElement){
+  getElement.innerHTML = 'sparkling...';
+}
+
+function rainbow(getElement){
+  getElement.innerHTML = 'rainbowing...';
+}
+</code></pre>
+We’ve slightly adjusted <code>addMagic()</code> where it throws an error if either of its parameters aren’t passed. We’ve also explicitly returned the <code>effect</code> invocation.
+
+Next, we create our three very simple effect functions. Again, they just load some text in whatever page element is defined by their <code>getElement</code> parameters.
+
+We look at our test suite, including the code coverage..
+<img src="/img/unit-testing-image-16.jpg" alt="First addMagic code coverage test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+First addMagic code coverage test image for the learn JavaScript unit testing post
+
+And we see that the tests pass, but not with 100% code coverage.
+<img src="/img/unit-testing-image-17.jpg" alt="Second addMagic code coverage test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+This is due to our not testing <code>addMagic</code>‘s error throwing functionality. Adding a couple of <code>assert.throws()</code> tests will fix this...
+
+<pre><code class="language-javascript">
+&lt;!-- test/tests.html--&gt
+&lt;script&gt
+  ...
+  QUnit.test('"addMagic()" should throw an error if less than 2 parameters are passed', function(assert) {
+
+    assert.throws(function () {
+      addMagic();
+    }, 'an error was thrown because no parameters were passed to "addMagic()"');
+
+    assert.throws(function() {
+      addMagic(spin);
+    }, 'an error was thrown because only one parameter was passed to "addMagic()"');
+
+  });
+&lt;/script&gt
+</code></pre>
+
+And looking at our test suite and code coverage confirms this. Note that the grouped “addMagic() effect tests” are moved below these new tests even though the grouped tests are above them in the suite code.
+
+<img src="/img/unit-testing-image-18.jpg" alt="Second addMagic throw error test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+
+So we can add this code to <code>scripts.js</code>...
+
+<pre><code class="language-javascript">
+// scripts.js
+...
+addMagic('unicorn', spin);
+addMagic('fairy', sparkle);
+addMagic('kitten', rainbow);
+</code></pre>
+
+And copy loads into elements already on the page.
+
 <a name="further-reading"></a>
 <h2>Further reading</h2>
+I’ll start with the JS unit test stuff first...
+
+<ul>
+  <li class="post__list-item"><a href="https://www.amazon.com/gp/product/0321683919/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=kaidez-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0321683919&linkId=dc8b88c6ddc8995efab28bd0dc4ca8e2"><strong>Test-Driven JavaScript Development</strong></a> & <a href="https://www.amazon.com/gp/product/1449323391/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=kaidez-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=1449323391&linkId=1e8169ef34f55c9c2e02a46d63bdf0d3">Testable JavaScript</a>: These two books stand from the others in the JavaScript unit testing worls. The second one is easier to read, but the first one is the most thorough book on the subject. You may want to read Testable first but make sure to read Test-Driven at some point.</li>
+  <li class="post__list-item"><a href="https://code.tutsplus.com/articles/tdd-terminology-simplified--net-30626"><strong>TDD Terminology Simplified</strong></a>: Truthfully? This is list of terms can be applied to unit testing overall and not just TDD. And if you’re concerned that I didn’t cover JavaScript unit testing top to bottom, this list is the next step. For example: we saw earlier that elements which load into <code>qunit-fixture</code> for testing are removed when the tests are done. Keep that in mind, then go to this link and read about “setups” and “teardowns.”</li>
+  <li class="post__list-item"><a href="https://medium.com/javascript-scene/what-every-unit-test-needs-f6cd34d9836d#.oxz430giw"><strong>5 Questions Every Unit Test Must Answer</strong></a>: A general primer from <a href="https://twitter.com/_ericelliott">Eric Elliot</a> on JavaScript unit testing with some smart best practices. Check out how he suggests using <code>equal</code> tests only for a week and his pattern for creating actual/expected tests in constants.</li>
+  <li class="post__list-item"><a href="https://alistapart.com/article/writing-testable-javascript"><strong>Writing Testable Javascript</strong></a>: A nice high-level view by <a href="https://twitter.com/rmurphey">Rebecca Murphey</a> of how to write FP-like code that’s easy to test...also watch <a href="https://www.youtube.com/watch?v=OzjogCFO4Zo">her conference talk of the same name</a>.</li>
+  <li class="post__list-item"><a href="https://github.com/rmurphey/js-assessment"><strong>JS Assessment</strong></a> & <a href="https://www.codewars.com/"><strong>Codewars</strong></a>: The first one is a CLI-powered test (also by Rebecca Murphey) and the second one’s an app. Each one requires you to write code that passes tests before moving forward. Codewars has a badge-like point system that’s pretty cool.</li>
+</ul>
+
+Here’s some functional programming stuff...
+
+<ul>
+  <li class="post__list-item"><a href="http://jrsinclair.com/articles/2016/gentle-introduction-to-functional-javascript-intro/"><strong>James Sinclair’s four-part functional programming tutorial</strong></a>: this post only covers the first part...read the whole thing!</li>
+  <li class="post__list-item"><a href="https://medium.com/javascript-scene/tagged/functional-programming"><strong>All of Eric Elliot’s functional programming writings</strong></a>: back to Eric Elliot again, he’s written extensively on the subject, and with great insight.</li>
+  <li class="post__list-item"><a href="http://eloquentjavascript.net/1st_edition/chapter6.html"><strong>Eloquent JavaScript – First Edition</strong></a>, Chapter 6 & <a href="http://eloquentjavascript.net/05_higher_order.html"><strong>Eloquent JavaScript – Second Edition</strong></a>, Chapter 5: both are good, both are slightly different from one another. Read both.</li>
+</ul>
 
 <a name="conclusion"></a>
 <h2>Conclusion</h2>
