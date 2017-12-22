@@ -55,9 +55,7 @@ While this post talks about functional programming, it’s written more as a beg
 
 Even with that, this post isn’t an in-depth JavaScript unit testing tutorial. It covers just enough to get you up and running: <strong>assertions, test suites, test coverage and test-driven development</strong>.
 
-The resources at the end of this post cover JavaScript unit testing and functional programming in depth.
-
-If you want to follow along with the examples, <a href="https://github.com/kaidez/functional-programming-unit-testing">please read the instructions in the code repo</a>.
+The resources at the end of this post cover JavaScript unit testing and functional programming in depth.  If you want to follow along with the examples, <a href="https://github.com/kaidez/functional-programming-unit-testing">please read the instructions in the code repo</a>.
 
 <a name="not-doing-js-unit-testing"></a>
 <h2>Haven’t done JavaScript unit testing yet? That’s fine.</h2>
