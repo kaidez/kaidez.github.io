@@ -215,9 +215,9 @@ We’ll use TDD to make <code>log()</code> work but will also update it as follo
 <a name="first-failing-test"></a>
 <h3>The first failing test</h3>
 We’ll create a failing test that checks to see if log() returns a string with at least one character:
-<pre><code class="language-javascript">
+<pre><code class="language-markup">
 &lt;!-- test/tests.html --&gt;
-<script>
+&lt;script>
 
 QUnit.test('"log()" should return a string with at least 1 character', function(assert) {
 
@@ -229,7 +229,7 @@ QUnit.test('"log()" should return a string with at least 1 character', function(
 
 });
 
-</script>
+&lt;/script>
 </code></pre>
 We create a test with QUnit’s <code> test</code>  method. <code>test</code> takes two parameters: the test description and a callback function that runs the test.
 
@@ -297,7 +297,7 @@ QUnit’s assert functionality has a <code>throws()</code> method that tests if 
 
 The failing tests go at the bottom of the <code>script</code> tag on our test suite page:
 <pre><code class="language-markup">
-&lt;!-- test/tests.html--&gt;
+&lt;!-- test/tests.html --&gt;
 &lt;script&gt;
 ...
 QUnit.test('"log()" should throw an error if no parameter is passed or if the parameter is not a string', function(assert) {
@@ -371,7 +371,7 @@ I say do your research and make you’re own decision, but we’re going for 100
 
 We’ll add Blanket.js between <code>jquery.js</code> and <code>app.js</code> in <code>test/tests.html</code>:
 <pre><code class="language-markup">
-&lt;!-- test/tests.html--&gt;
+&lt;!-- test/tests.html --&gt;
 ...
 &lt;script src="../jquery.js"&gt;&lt;/script&gt;
 
@@ -404,7 +404,7 @@ Whatever’s highlighted in green is being tested whatever’s highlighted in re
 
 We can add the following to the bottom of the <code>script</code> tag in our test suite page...
 <pre><code class="language-markup">
-&lt;!-- test/tests.html--&gt;
+&lt;!-- test/tests.html --&gt;
 &lt;script&gt;
   ...
   QUnit.test('"doSomething()" should return a function', function(assert) {
@@ -421,7 +421,7 @@ And if we look at the test suite coverage info, we see we’re testing more code
 
 We’re not testing if our type-checking works like we did for the <code>log()</code> function. We can fix this by adding type checks again at the bottom of the test suite’s <code>script</code> tag:
 <pre><code class="language-markup">
-&lt;!-- test/tests.html--&gt;
+&lt;!-- test/tests.html --&gt;
 &lt;script&gt;
   ...
   QUnit.test("'doSomething()' should throw an error if no parameter is passed or if the parameter is not a function", function(assert) {
@@ -504,7 +504,7 @@ In our quest to learn JavaScript unit testing, we’ll test <code>Carousel()</co
 Since <code>Carousel()</code> is a constructor function, we can attach its parameters to <code>this</code>, then return <code>this</code> itself. So we’ll place a failing unit test for this at the bottom of the <code>script</code> tag in our test suite:
 
 <pre><code class="language-markup">
-&lt;!-- test/tests.html--&gt;
+&lt;!-- test/tests.html --&gt;
 &lt;script&gt;
   ...
   QUnit.test('"Carousel()" should return a string and a number', function(assert) {
@@ -555,7 +555,7 @@ The test passes now. But our code coverage indicates that we didn’t test our t
 
 So we add this test:
 <pre><code class="language-markup">
-&lt;!-- test/tests.html--&gt;
+&lt;!-- test/tests.html --&gt;
 &lt;script&gt;
   ...
   QUnit.test('"Carousel" should throw an error if an element was not passed as a parameter', function(assert) {
@@ -602,8 +602,8 @@ var someOtherCarousel = new Carousel('carousel-two'); // no console errors
 <a name="init-method"></a>
 <h3>The <code>init()</code> method</h3>
 We’ll just make the carousel’s <code>init()</code> method load text into the carousel page element. We’ll add the following test for this at the bottom of the <code>script</code> tag in the test suite:
-<pre><code class="language-javascript">
-&lt;!-- test/tests.html--&gt;
+<pre><code class="language-markup">
+&lt;!-- test/tests.html --&gt;
 &lt;script&gt;
   ...
   QUnit.test('"Carousel()" should run its init() method and load the proper text', function(assert) {
@@ -658,7 +658,7 @@ And two text blocks will show up in the <code>carousel-one</code> and <code>caro
 In James’ example, the returning function, <code>initialiseCarousel()</code> was expected to return a new instance of <code>Carousel()</code>. A failing test for that looks like this:
 
 <pre><code class="language-markup">
-&lt;!-- test/tests.html--&gt;
+&lt;!-- test/tests.html --&gt;
 &lt;script&gt;
   ...
   QUnit.test('"initialiseCarousel()" should return a new instance of Carousel()', function(assert) {
@@ -739,8 +739,8 @@ addMagic('kitten', rainbow);
 
 We can unit test all this using everything we’ve learned up to this point. Our first failing test looks like this:
 
-<pre><code class="language-javascript">
-&lt;!-- test/tests.html--&gt;
+<pre><code class="language-markup">
+&lt;!-- test/tests.html --&gt;
 &lt;script&gt;
   ...
   QUnit.test('addMagic() should return a function and add a "magic" class to the target element', function(assert) {
@@ -759,8 +759,8 @@ The test invokes <code> addMagic()</code> to find the <code>qunit-fixture</code>
 The second assert tests if the <code>magic</code> class was dynamically added. It uses jQuery’s <code>hasClass</code> functionality to do so.
 
 The test structure for the three effects is a little different:
-<pre><code class="language-javascript">
-&lt;!-- test/tests.html--&gt;
+<pre><code class="language-markup">
+&lt;!-- test/tests.html --&gt;
 &lt;script&gt;
   ...
   QUnit.module('addMagic() effect tests', function() {
@@ -827,8 +827,8 @@ And we see that the tests pass, but not with 100% code coverage.
 <img src="/img/unit-testing-image-17.jpg" alt="Second addMagic code coverage test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
 This is due to our not testing <code>addMagic</code>‘s error throwing functionality. Adding a couple of <code>assert.throws()</code> tests will fix this...
 
-<pre><code class="language-javascript">
-&lt;!-- test/tests.html--&gt;
+<pre><code class="language-markup">
+&lt;!-- test/tests.html --&gt;
 &lt;script&gt;
   ...
   QUnit.test('"addMagic()" should throw an error if less than 2 parameters are passed', function(assert) {
