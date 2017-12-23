@@ -85,9 +85,11 @@ a.post-link {
 .post-link-hook {
   transition: all 0.1s ease-in;
   background: transparent;
+  border: 1px solid transparent;
 
   &:hover {
     background: #e5d7f4;
+    border-color: #c2c2c2;
 
     & a.post-link {
       text-decoration: underline;
@@ -534,8 +536,9 @@ a.post-link {
   list-style: none;
 
   > li {
+    border-radius: 6px;
     margin-bottom: $spacing-unit;
-    padding: 6px;
+    padding: 8px;
   }
 }
 
