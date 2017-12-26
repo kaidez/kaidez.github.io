@@ -24,14 +24,25 @@ type: BlogPosting
 
     <div class="post__google-ad">
       <style>
-        .kaidezblogad { width: 320px; height: 100px; }
-        @media(min-width: 500px) { .kaidezblogad { width: 468px; height: 60px; } }
-        @media(min-width: 800px) { .kaidezblogad { width: 728px; height: 90px; } }
+      /* Default ad size setting: used for desktops */
+      .kaidezpostad {
+        width: 300px; height: 250px;
+      }
+
+      /* for tablets */
+      @media(max-width: 728px) {
+        .kaidezpostad { width: 200px; height: 200px; }
+      }
+
+      /* for hand-helds */
+      @media(max-width: 568px) {
+        .kaidezpostad { width: 125px; height: 125px; }
+      }
       </style>
 
       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       <!-- kaidezblogad -->
-      <ins class="adsbygoogle example_responsive_1"
+      <ins class="adsbygoogle kaidezblogad"
           style="display:inline-block;width:336px;height:280px"
           data-ad-client="ca-pub-7363372172009273"
           data-ad-slot="2761638798"></ins>
