@@ -485,6 +485,10 @@ a.post-link {
     cursor: pointer;
   }
 
+  &__google-ad {
+    float:left;
+  }
+
   a.post__tweet-button:link,
   a.post__tweet-button:visited {
     color: #fff;
