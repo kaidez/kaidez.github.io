@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title:  "Use .filter() Instead of an Inner Loop in My JS Average Temperature Code"
-date:   2017-12-31 00:00:59 -0400
+date:   2017-01-05 00:00:59 -0400
 categories: coding-best-practices
 category-name: Coding Tips
 permalink: /temperature-average-filter-array/
@@ -120,7 +120,7 @@ formatData(temperatureInfo)
 
 Feel free to <a href="/temperatures-functional-programming/">look at the previous post to get a full walk-through of this code</a> but tight now, I'm only going to look at one specific part...
 
-The inner loop is towards the top of the <code>formatData()</code> function that starts with <code>innerArray.map()</code>. It's needed to look at any array that has both a city name and numbers, then place the numbers only in an array called <code>numbersOnlyList</code>.
+The inner loop is towards the top of the <code>formatData()</code> function and starts with <code>innerArray.map()</code>. It's needed to look at any array that has both a city name and numbers, then place the numbers only in an array called <code>numbersOnlyList</code>.
 
 This is what I wanted to refactor with <code>.filter()</code>. Sticking to the <a href="http://eloquentjavascript.net/1st_edition/chapter6.html">JavaScript functional programming paradigm</a> to do that, I first created a separate function defining what I wanted filtered...numbers in this case:
 
@@ -133,7 +133,7 @@ function getNumbers(number) {
 
 This <code>getNumbers()</code> function gets applied to each inner array and returns a new array made up numbers only. With it, we can refactor things and get rid of the inner loop.
 
-So all of this...
+So this code we're currently using...
 
 <pre><code class="language-javascript">
 ...
@@ -147,13 +147,13 @@ innerArray.map(index => {
 ...
 </code></pre>
 
-...gets refactored by replacing it with this...
+...gets replaced it with this...
 <pre><code class="language-javascript">
 ...
 let numbersOnlyList = innerArray.filter(getNumbers)
 ...
 </code></pre>
-...meaning the updated complete code looks like this.
+...meaning the updated complete JavaScript code looks like this.
 <pre><code class="language-javascript">
 const temperatureInfo = [
   ["City", "00-08", "08-16", "16-24", "Average"],
