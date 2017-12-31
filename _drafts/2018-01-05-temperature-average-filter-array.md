@@ -98,7 +98,6 @@ function displayTemperatureInfo(temperatureArray, getCity) {
 
 }
 
-
 function displayArrayContent(arrayContent, target) {
 
  const getTargetElement = document.querySelector(target)
@@ -119,7 +118,11 @@ function displayArrayContent(arrayContent, target) {
 formatData(temperatureInfo)
 </code></pre>
 
-I wanted to avoid the inner loop and <em>not</em> use that <code>innerArray.map()</code> towards the top of the <code>formatData()</code> function. Sticking to my <a href="http://eloquentjavascript.net/1st_edition/chapter6.html">JavaScript functional programming paradigm</a>, I first had to create a separate function that defined what I wanted filtered...which were numbers in this case:
+Feel free to <a href="/temperatures-functional-programming/">look at the previous post to get a full walk-through of this code</a>, but I'm only ging to look at one specific part...
+
+The inner loop is towards the top of the <code>formatData()</code> function that starts with <code>innerArray.map()</code> It's needed to look at any array that has both a city name and a number, and then place the numbers in a new array called <code>numbersOnlyList</code>.
+
+ Sticking to my <a href="http://eloquentjavascript.net/1st_edition/chapter6.html">JavaScript functional programming paradigm</a>, I first had to create a separate function that defined what I wanted filtered...which were numbers in this case:
 
 <pre><code class="language-javascript">
 // place this code below "const temperatureInfo"
