@@ -118,11 +118,11 @@ function displayArrayContent(arrayContent, target) {
 formatData(temperatureInfo)
 </code></pre>
 
-Feel free to <a href="/temperatures-functional-programming/">look at the previous post to get a full walk-through of this code</a>, but I'm only ging to look at one specific part...
+Feel free to <a href="/temperatures-functional-programming/">look at the previous post to get a full walk-through of this code</a> but tight now, I'm only going to look at one specific part...
 
-The inner loop is towards the top of the <code>formatData()</code> function that starts with <code>innerArray.map()</code> It's needed to look at any array that has both a city name and a number, and then place the numbers in a new array called <code>numbersOnlyList</code>.
+The inner loop is towards the top of the <code>formatData()</code> function that starts with <code>innerArray.map()</code>. It's needed to look at any array that has both a city name and numbers, then place the numbers only in an array called <code>numbersOnlyList</code>.
 
- Sticking to my <a href="http://eloquentjavascript.net/1st_edition/chapter6.html">JavaScript functional programming paradigm</a>, I first had to create a separate function that defined what I wanted filtered...which were numbers in this case:
+This is what I wanted to refactor with <code>.filter()</code>. Sticking to the <a href="http://eloquentjavascript.net/1st_edition/chapter6.html">JavaScript functional programming paradigm</a> to do that, I first created a separate function defining what I wanted filtered...numbers in this case:
 
 <pre><code class="language-javascript">
 // place this code below "const temperatureInfo"
@@ -131,7 +131,7 @@ function getNumbers(number) {
 }
 </code></pre>
 
-The inner array has a numbers and a single string, the city name. This <code>getNumbers()</code> function will be applied to each single inner array and return a new array that contains number types only.
+This <code>getNumbers()</code> function will be applied to each single inner array and return a new array that contains number types only.
 
 Things are applied by going into <code>formatData()</code> and refactoring its first <code>.map()</code> method. So all of this...
 
