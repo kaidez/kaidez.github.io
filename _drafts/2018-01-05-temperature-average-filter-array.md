@@ -119,7 +119,7 @@ function displayArrayContent(arrayContent, target) {
 formatData(temperatureInfo)
 </code></pre>
 
-I wanted to avoid the inner loop and <em>not</em> use that <code>innerArray.map()</code> towards the top of the <code>formatData()</code> function. Sticking to our <a href="http://eloquentjavascript.net/1st_edition/chapter6.html">JavaScript functional programming paradigm</a>, I first had to create a separate function that defined what I wanted filtered...which were numbers in this case:
+I wanted to avoid the inner loop and <em>not</em> use that <code>innerArray.map()</code> towards the top of the <code>formatData()</code> function. Sticking to my <a href="http://eloquentjavascript.net/1st_edition/chapter6.html">JavaScript functional programming paradigm</a>, I first had to create a separate function that defined what I wanted filtered...which were numbers in this case:
 
 <pre><code class="language-javascript">
 // place this code below "const temperatureInfo"
@@ -128,7 +128,7 @@ function getNumbers(number) {
 }
 </code></pre>
 
-The inner array has a numbers and a single string, the city name. This function will be applied to each single inner array and return a new array that contains number types only.
+The inner array has a numbers and a single string, the city name. This <code>getNumbers()</code> function will be applied to each single inner array and return a new array that contains number types only.
 
 Things are applied by going into <code>formatData()</code> and refactoring its first <code>.map()</code> method. So all of this...
 
