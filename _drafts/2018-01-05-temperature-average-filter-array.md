@@ -131,9 +131,9 @@ function getNumbers(number) {
 }
 </code></pre>
 
-This <code>getNumbers()</code> function will be applied to each single inner array and return a new array that contains number types only.
+This <code>getNumbers()</code> function gets applied to each inner array and returns a new array made up numbers only. With it, we can refactor things and get rid of the inner loop.
 
-Things are applied by going into <code>formatData()</code> and refactoring its first <code>.map()</code> method. So all of this...
+So all of this...
 
 <pre><code class="language-javascript">
 ...
@@ -155,6 +155,11 @@ let numbersOnlyList = innerArray.filter(getNumbers)
 </code></pre>
 ...meaning the updated <code>formatData()</code> function looks like this.
 <pre><code class="language-javascript">
+// place this code below "const temperatureInfo"
+function getNumbers(number) {
+ return typeof number === "number"
+}
+
 function formatData(outerArray) {
 
  outerArray.map(innerArray => {
@@ -171,4 +176,4 @@ function formatData(outerArray) {
 }
 </code></pre>
 
-Using loops inside of loops isn't the performance headache it was years go as browser technology has gotten better. But refactoring the inner loop out, like I did here, is pretty cool.
+Using inner loops isn't the performance headache it was years ago as browser technology has gotten better. But refactoring the inner loop out, like I did here, is pretty cool.
