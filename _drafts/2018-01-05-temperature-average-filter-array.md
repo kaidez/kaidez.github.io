@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Use .filter() Instead of an Inner Loop in My Average Temperature Code"
+title:  "Use .filter() Instead of an Inner Loop in My JS Average Temperature Code"
 date:   2017-12-31 00:00:59 -0400
 categories: coding-best-practices
 category-name: Coding Tips
