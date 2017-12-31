@@ -14,7 +14,7 @@ thumb-image: temperature-functional-programming-filter-thumb.jpg
 
 My <a href="/temperatures-functional-programming/">JavaScript functional programming tutorial</a> looked at an array of arrays to calculate and display average temperatures.  In order to pull data from those inner arrays, I had to use an inner loop using <code>.map()</code>.
 
-Using an inner loop wasn't horrible, but I thought the code looked messy and did spend some time trying to avoid it. After I published the post, I realized I <em>could</em> avoid it using <code>.filter()</code> on the inner arrays instead of <code>.map()</code>.
+I wasn't <em>really</em> worried about using an inner loop, but thought the code would look cleaner if I avoided it. After publishing that post, I realized I <em>could</em> avoid it by using <code>.filter()</code> on the inner arrays instead of <code>.map()</code>.
 
 The original complete code looked like this:
 
