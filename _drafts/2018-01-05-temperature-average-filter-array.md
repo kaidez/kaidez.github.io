@@ -119,7 +119,7 @@ function displayArrayContent(arrayContent, target) {
 formatData(temperatureInfo)
 </code></pre>
 
-I wanted to avoid the inner loop and <em>not</em> use that <code>innerArray.map()</code> towards the top of the <code>formatData()</code> function. It was pretty easy: I first had to create a function that defined what I wanted filtered...which were numbers in this case:
+I wanted to avoid the inner loop and <em>not</em> use that <code>innerArray.map()</code> towards the top of the <code>formatData()</code> function. Sticking to our <a href="http://eloquentjavascript.net/1st_edition/chapter6.html">JavaScript functional programming paradigm</a>, I first had to create a separate function that defined what I wanted filtered...which were numbers in this case:
 
 <pre><code class="language-javascript">
 // place this code below "const temperatureInfo"
