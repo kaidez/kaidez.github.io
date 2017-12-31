@@ -1,12 +1,12 @@
 ---
 layout: post
 comments: true
-title:  "My 101st Post – A Retrospective!"
-date:   2018-01-05 00:00:59 -0400
+title:  "Use .filter() Instead of an Inner Loop in My Average Temperature Code"
+date:   2017-12-31 00:00:59 -0400
 categories: coding-best-practices
 category-name: Coding Tips
 permalink: /temperature-average-filter-array/
-excerpt: kaidez updates his JavaScript functional programming average temperature post to use filter instead fo an inner loop. Includes demo.
+excerpt: kaidez updates his JavaScript functional programming/average temperature post to use .filter() instead fo an inner loop. Includes demo.
 og-image: temperature-functional-programming-filter.jpg
 thumb-image: temperature-functional-programming-filter-thumb.jpg
 ---
