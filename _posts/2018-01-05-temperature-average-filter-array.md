@@ -14,7 +14,7 @@ thumb-image: temperature-functional-programming-filter-thumb.jpg
 
 My <a href="/temperatures-functional-programming/">JavaScript functional programming/average temperature tutorial</a> looked at an array of arrays to calculate and display content.  In order to pull data from those inner arrays, I used an inner loop using <code>.map()</code>.
 
-I wasn't <em>really</em> worried about using an inner loop, but thought the code would look cleaner if I avoided it. After publishing that post, I realized I <em>could</em> avoid it by using <code>.filter()</code> on the inner arrays instead of <code>.map()</code>.
+I wasn't <em>really</em> worried about using an inner loop, but knew the code would look cleaner without it. After publishing that post, I realized I could avoid it by using <code>.filter()</code> on the inner arrays instead of <code>.map()</code>.
 
 The original complete code looked like this:
 
@@ -33,85 +33,85 @@ The CSS...
 }
 
 .temperature-info__header {
- font-weight: bold;
- font-style: italic;
- text-transform: uppercase;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
 }
 
 .temperature-info__single-temp-row {
- margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .temperature-info__single-temp {
- width: 100px;
- display: inline-block;
- margin-right: 30px;
+  width: 100px;
+  display: inline-block;
+  margin-right: 30px;
 }
 </code></pre>
 
 And, of course, the JavaScript...
 <pre><code class="language-javascript">
 const temperatureInfo = [
- ["City", "00-08", "08-16", "16-24", "Average"],
- ["Malmö", 12, 16, 9],
- ["Mariestad", 13, 15, 10],
- ["Stockholm", 13, 15, 13],
- ["Upphärad", 14, 16, 15],
- ["Göteborg", 13, 14, 11]
+  ["City", "00-08", "08-16", "16-24", "Average"],
+  ["Malmö", 12, 16, 9],
+  ["Mariestad", 13, 15, 10],
+  ["Stockholm", 13, 15, 13],
+  ["Upphärad", 14, 16, 15],
+  ["Göteborg", 13, 14, 11]
 ]
 
 function formatData(outerArray) {
 
- outerArray.map(innerArray => {
+  outerArray.map(innerArray => {
 
-   let numbersOnlyList = []
+    let numbersOnlyList = []
 
-   innerArray.map(index => {
-     if(typeof index === "number") {
-       return numbersOnlyList.push(index)
-     }
-   })
+    innerArray.map(index => {
+      if(typeof index === "number") {
+        return numbersOnlyList.push(index)
+      }
+    })
 
-   return numbersOnlyList.length
-   ?
-   displayTemperatureInfo(numbersOnlyList, innerArray[0])
-   :
-   displayArrayContent(innerArray, "#temperatureHeader")
- })
+    return numbersOnlyList.length
+    ?
+    displayTemperatureInfo(numbersOnlyList, innerArray[0])
+    :
+    displayArrayContent(innerArray, "#temperatureHeader")
+  })
 }
 
 function reducerHelper(accumulator, currentValue) {
- return accumulator + currentValue
+  return accumulator + currentValue
 }
 
 function displayTemperatureInfo(temperatureArray, getCity) {
 
- const arrayLength = temperatureArray.length
- const getTemperatureSum = temperatureArray.reduce(reducerHelper)
- const temperatureAverage = getTemperatureSum/arrayLength
+  const arrayLength = temperatureArray.length
+  const getTemperatureSum = temperatureArray.reduce(reducerHelper)
+  const temperatureAverage = getTemperatureSum/arrayLength
 
- temperatureArray.push(Math.round(temperatureAverage))
+  temperatureArray.push(Math.round(temperatureAverage))
 
- temperatureArray.unshift(getCity)
+  temperatureArray.unshift(getCity)
 
- return displayArrayContent(temperatureArray, "#temperatureInfo")
+  return displayArrayContent(temperatureArray, "#temperatureInfo")
 
 }
 
 function displayArrayContent(arrayContent, target) {
 
- const getTargetElement = document.querySelector(target)
- const parentElement = document.createElement('div')
- parentElement.setAttribute('class', 'temperature-info__single-temp-row')
+  const getTargetElement = document.querySelector(target)
+  const parentElement = document.createElement('div')
+  parentElement.setAttribute('class', 'temperature-info__single-temp-row')
 
- arrayContent.map(index => {
-   const childElement = document.createElement('span');
-   childElement.setAttribute('class', 'temperature-info__single-temp')
-   childElement.innerHTML = index
-   parentElement.appendChild(childElement)
- })
+  arrayContent.map(index => {
+    const childElement = document.createElement('span');
+    childElement.setAttribute('class', 'temperature-info__single-temp')
+    childElement.innerHTML = index
+    parentElement.appendChild(childElement)
+  })
 
- return getTargetElement.appendChild(parentElement)
+  return getTargetElement.appendChild(parentElement)
 
 }
 
@@ -126,8 +126,8 @@ This is what I wanted to refactor with <code>.filter()</code>. Sticking to the <
 
 <pre><code class="language-javascript">
 // Place this code below "const temperatureInfo"
-function getNumbers(number) {
- return typeof number === "number"
+function getNumbers(arrayItem) {
+ return typeof arrayItem === "number"
 }
 </code></pre>
 
@@ -140,9 +140,9 @@ So this code we're currently using...
 let numbersOnlyList = []
 
 innerArray.map(index => {
- if(typeof index === "number") {
-   return numbersOnlyList.push(index)
- }
+  if(typeof index === "number") {
+    return numbersOnlyList.push(index)
+  }
 })
 ...
 </code></pre>
@@ -164,8 +164,8 @@ const temperatureInfo = [
   ["Göteborg", 13, 14, 11]
 ]
 
-function getNumbers(number) {
-  return typeof number === "number"
+function getNumbers(arrayItem) {
+  return typeof arrayItem === "number"
 }
 
 function formatData(outerArray) {
@@ -221,4 +221,4 @@ function displayArrayContent(arrayContent, target) {
 formatData(temperatureInfo)
 </code></pre>
 
-Using inner loops isn't the performance headache it was years ago as browser technology has gotten better. But refactoring the inner loop out, like I did here, is pretty cool.
+Using inner loops isn't the performance headache it was years ago as browser technology has gotten better. But refactoring the it out, like I did here, is pretty cool.
