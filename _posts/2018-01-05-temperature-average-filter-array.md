@@ -118,7 +118,7 @@ function displayArrayContent(arrayContent, target) {
 formatData(temperatureInfo)
 </code></pre>
 
-Feel free to <a href="/temperatures-functional-programming/">look at the previous post to get a full walk-through of this code</a> but tight now, I'm only going to look at one specific part...
+Feel free to <a href="/temperatures-functional-programming/">look at the previous post to get a full walk-through of this code</a> but right now, I'm only going to look at one specific part...
 
 The inner loop is towards the top of the <code>formatData()</code> function and starts with <code>innerArray.map()</code>. It's needed to look at any array that has both a city name and numbers, then place the numbers only in an array called <code>numbersOnlyList</code>.
 
