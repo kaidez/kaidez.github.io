@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title:  "Use .filter() Instead of an Inner Loop in My JS Average Temperature Code"
-date:   2017-01-05 00:00:59 -0400
+date:   2018-01-05 00:00:59 -0400
 categories: coding-best-practices
 category-name: Coding Tips
 permalink: /temperature-average-filter-array/
