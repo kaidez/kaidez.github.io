@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title:  "Use .filter() Instead of an Inner Loop in My JS Average Temperature Code"
-date:   2018-01-01 00:00:50 -0400
+date:   2018-01-01 00:03:50 -0400
 categories: coding-best-practices
 category-name: Coding Tips
 permalink: /temperature-average-filter-array/
@@ -153,7 +153,7 @@ innerArray.map(index => {
 let numbersOnlyList = innerArray.filter(getNumbers)
 ...
 </code></pre>
-...meaning the updated complete JavaScript code looks like this.
+...which does the exact same operation. So the complete, updated complete JavaScript code looks like this.
 <pre><code class="language-javascript">
 const temperatureInfo = [
   ["City", "00-08", "08-16", "16-24", "Average"],
