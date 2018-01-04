@@ -161,7 +161,7 @@ I applied for one job through Dice...ONE JOB!!! Fifteen minutes later, I started
 If you <em>really</em> need a job and want to use every resource available, you can use Dice. But using it brings on too much aggravation, at least, it did for me.
 
 <h2>Conclusion</h2>
-There’s a saying that “You need to treat finding a job as a job” and I did just that. I went on a job applying spree where at one point, I went on eight interviews in one week: with four on the same day.
+There’s a saying that “You need to treat finding a job as a job” and I did just that. I went on a job applying spree where at one point, I went on eight interviews in one week: with <strong>four on the same day</strong>.
 
 I learned a lot about in-demand skillsets, interviewing techniques, job sites and recruiters along the way. It was an informative journey...one that ended in my getting a new front end web developer job.
 
