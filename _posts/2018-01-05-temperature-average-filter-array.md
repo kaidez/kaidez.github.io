@@ -12,9 +12,9 @@ thumb-image: temperature-functional-programming-filter-thumb.jpg
 ---
 <a href="https://codepen.io/kaidez/pen/VybqmY">See Demo &raquo;</a>
 
-My <a href="/temperatures-functional-programming/">JavaScript functional programming/average temperature tutorial</a> looked at an array of arrays to calculate and display content.  In order to pull data from those inner arrays, I used an inner loop using <code>.map()</code>.
+My <a href="/temperatures-functional-programming/">JavaScript functional programming/average temperature tutorial</a> looped through an array of arrays to calculate data and display content.  In order to do all this, I used an inner loop with <code>.map()</code> on those inner arrays.
 
-I wasn't <em>really</em> worried about using an inner loop, but knew the code would look cleaner without it. After publishing that post, I realized I could avoid it by using <code>.filter()</code> on the inner arrays instead of <code>.map()</code>.
+I wasn't <em>really</em> worried about using an inner loop, but knew the code would look cleaner without it. After publishing that post, I realized I could use <code>.filter()</code> on the inner arrays instead of <code>.map()</code>, which was neater.
 
 The original complete code looked like this:
 
@@ -122,7 +122,7 @@ Feel free to <a href="/temperatures-functional-programming/">look at the previou
 
 The inner loop is towards the top of the <code>formatData()</code> function and starts with <code>innerArray.map()</code>. It's needed to look at any array that has both a city name and numbers, then place the numbers only in an array called <code>numbersOnlyList</code>.
 
-This is what I wanted to refactor with <code>.filter()</code>. Sticking to the <a href="http://eloquentjavascript.net/1st_edition/chapter6.html">JavaScript functional programming paradigm</a> to do that, I first created a separate function defining what I wanted filtered...numbers in this case:
+This is what I wanted to refactor with <code>.filter()</code>. To do that while sticking to the <a href="http://eloquentjavascript.net/1st_edition/chapter6.html">JavaScript functional programming paradigm</a>, I first created a separate function defining what I wanted filtered...numbers in this case:
 
 <pre><code class="language-javascript">
 // Place this code below "const temperatureInfo"
@@ -131,9 +131,9 @@ function getNumbers(arrayItem) {
 }
 </code></pre>
 
-This <code>getNumbers()</code> function gets applied to each inner array and returns a new array made up numbers only. With it, we can refactor things and get rid of the inner loop.
+<code>getNumbers()</code>   will be passed as a parameter to <code>.filter()</code>. This can be applied to each inner array to return a "numbers only" array.
 
-So this code we're currently using...
+We can get rid of that inner loop now. So this code we're currently using...
 
 <pre><code class="language-javascript">
 ...
@@ -147,13 +147,14 @@ innerArray.map(index => {
 ...
 </code></pre>
 
-...gets replaced it with this...
+...is completely replaced it with this one line that performs the exact same operation.
 <pre><code class="language-javascript">
 ...
 let numbersOnlyList = innerArray.filter(getNumbers)
 ...
 </code></pre>
-...which does the exact same operation. So the complete, updated complete JavaScript code looks like this.
+
+The complete, updated complete JavaScript code looks like this.
 <pre><code class="language-javascript">
 const temperatureInfo = [
   ["City", "00-08", "08-16", "16-24", "Average"],
