@@ -28,7 +28,7 @@ Update December 21th, 2018: the Wayback Machine displayed this post in its origi
 
 After a short bout of unemployment, I got a new front end web developer job this week. I’ll be using my current skills while having the opportunity to learn new ones...REALLY exciting stuff.
 
-I performed a pretty intensive job search to get to this point...more so than ever before. I learned a lot (a whole lot) about finding a web dev gig in 2017 so here are my random notes on the subject with hopes it helps other job seekers.
+I performed a pretty intensive job search to get to this point...more so than ever before. I learned a lot (a <em>whole</em> lot) about finding a web dev gig in 2017 so here are my random notes on the subject with hopes it helps other job seekers.
 
 <h2>A preamble...like I start all my posts</h2>
 For all the nervousness and anxiety that comes with unemployment, I knew I would get a job sooner than later. Regardless of what I do and don’t know as a web dev, I know enough that I wasn’t going to be out of work for <strong>too</strong> long...only a month in the end.
@@ -133,7 +133,7 @@ Many people are graduating from bootcamps like General Assembly in 2017. Then ap
 
 As a result, hiring managers are getting flooded with resumés from people that may be good coders but lack job experience. Which, in turn, has led to a more strenuous web developer hiring process that, on the average, looks like this:
 <ul>
-  <li class="post__list-item">As mentioned, applicants with experience in a given JavaScript framework (at least a year) are<em>the</em> most employable developers in 2017.</li>
+  <li class="post__list-item">As mentioned, applicants with experience in a given JavaScript framework (at least a year) are <em>the</em> most employable developers in 2017.</li>
   <li class="post__list-item">Employers like applicants with active GitHub profiles.</li>
   <li class="post__list-item">Employers regularly want applicants to perform code challenges where the latter must code up a small app within a short time. I once had a challenge that I had to finish within 30 minutes.</li>
   <li class="post__list-item">Most JavaScript coding challenges I went through required creative uses of regular expressions.</li>
