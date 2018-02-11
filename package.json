@@ -22,7 +22,8 @@
     "imagemin": "^5.3.1",
     "imagemin-cli": "^3.0.0",
     "uglifyjs-webpack-plugin": "^1.1.5",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-jarvis": "^0.1.1"
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
