@@ -44,7 +44,6 @@ styleDiv()
 The code expects that <code>&lt;div id="text" /></code> would contain "SOME WORDS" instead of "some words" but it wouldn't. And and a console error message wouldn't send explanation as to way.
 
 Updating <code>createClass</code> to explicitly <code>return</code> something would fix things.
-
 <pre><code class="language-javascript">function setClass(nameOfClass) {
   this.nameOfClass = nameOfClass
   return nameOfClass
@@ -52,14 +51,16 @@ Updating <code>createClass</code> to explicitly <code>return</code> something wo
 ...
 </code></pre>
 
-This works too:
+This works too...a little more succinct:
 <pre><code class="language-javascript">function setClass(nameOfClass) {
   return this.nameOfClass = nameOfClass
 }
 ...
 </code></pre>
-
 Either one would display "SOME WORDS" inside <code>&lt;div id="text" /></code>. And also, <code>return</code> stops the function from running...any code that may come after it wouldn't run.
 
 <em>As a side note: this is what I really liked when I first started playing with <a href="http://coffeescript.org/">the CoffeScript compiler</a>. That it tried to add <code>return</code> to the last line of your code...even console statements. This is where I started to learn all this.</em>
 <h2>A complex functional programming example</h2>
+Looking at some ridiculously complex code I recently wrote expands on how <code>return</code> works. I recently had to write code where two objects needed to be compared and, depending on if their properties were equal in length and value, displayed a certain message in the HTML.
+
+The business requirements made this a little rough: I had to
