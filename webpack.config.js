@@ -1,5 +1,6 @@
-const path = require('path');
+const path = require('path')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const Jarvis = require('webpack-jarvis')
 
 module.exports = {
   entry: './js-build/index.js',
@@ -19,6 +20,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new UglifyJSPlugin()
+    new UglifyJSPlugin(),
+    new Jarvis()
   ]
 };
