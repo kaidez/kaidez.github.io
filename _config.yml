@@ -49,6 +49,7 @@ exclude:
   - image-minify/
   - js-build/
   - package.json
+  - package-lock.json
   - README.md
   - webpack.config.js
   - yarn.lock
