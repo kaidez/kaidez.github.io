@@ -42,7 +42,8 @@ I had real-world web developer stuff to to deal with so I moved on.
 <h2>What Kevin said</h2>
 Then, maybe on a subconscious impulse, I re-read <a href="https://web.archive.org/web/20130324030838/http://randyluecke.tumblr.com:80/post/45915323813/im-done-with-the-web">Kevin Luecke's "I'm done with the web" article</a>. An article that bummed me out when I first read it four-and-a-half years ago.
 
-Kevin expressed his frustration while working on <a href="http://www.cappuccino-project.org/">Cappuccino</a>, an excellent UI framework for desktop web apps.
+Kevin expressed his frustration with why web developers were rejecting the use of JavaScript UI frameworks like Cappuccino and Ember. Despite the problems they solved, developers passed on them because of their ~seemingly~ large file sizes and steep learning curves.
+
 (freelancers worked at a company first)
 
 (i read stuff to make me better)
