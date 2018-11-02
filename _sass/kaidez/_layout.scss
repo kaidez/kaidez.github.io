@@ -139,6 +139,10 @@ a.post-link {
     }
   }
 
+  &--blockquote-margin {
+    margin-bottom: 14px;
+  }
+
   &__see-all-posts {
     width: 255px;
     height: auto;
@@ -157,6 +161,11 @@ a.post-link {
   &--see-all-posts-link:visited,
   &--see-all-posts-link:hover {
     text-decoration: none;
+  }
+
+  & ul,
+  & ol {
+    margin-bottom: 20px;
   }
 
 }
