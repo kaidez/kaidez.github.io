@@ -39,7 +39,6 @@ Soon after its initial release, React was characterized as <strong>"JAJFLWYWCI" 
 Some comments I engaged with (mostly online) and some I didn't. But they didn't really bother me to the point I felt compelled to write this post.
 
 I had real-world web developer stuff to deal with so I moved on.
-
 <h2>What Kevin said</h2>
 Then, maybe on a subconscious impulse, I re-read <a href="https://web.archive.org/web/20130324030838/http://randyluecke.tumblr.com:80/post/45915323813/im-done-with-the-web">Kevin Luecke's "I'm done with the web" article</a>. An article that bummed me out when I first read it four-and-a-half years ago.
 
@@ -52,13 +51,27 @@ Kevin viewed this as the web developer community spending too much time worrying
 He had enough of this so he himself moved on...from the web dev community that is.
 
 What bummed me out about this article was how I'm a part of this community that's prematurely rejecting stuff. There were also side implications about whether web developers knew how to program (add Paul Irish link).
-
 <h2>What Kevin's article was really about</h2>
-First of all, I don't know the context of Kevin Luecke's comments regarding developers knowing how to program. So I can't spend time worrying about it, letting those comments bum me out.
+First, I don't know the context of Kevin Luecke's comments regarding developers knowing how to program. So I can't spend time worrying about it, letting those comments bum me out.
 
 I'm a self-taught web developer: I learned web stuff during 90's dotcom rush when those that knew even a <em>little</em> about building websites were incredibly employable. Since I'm not a classically-trained-in-computer-science developer, I'll always have to deal with those feelings of insignificance...I'll be fine.
 
 Second, worrying about my feelings blinded me from realizing the main point of the article. That <strong>when web developers evaluate if some software solves their problems, they consistently reject it for the wrong reasons</strong>.
-
 <h2>The complaints about performance</h2>
-The performance gripes have increased ever since the rise of mobile use. 
+The performance gripes (like the ones I hear about React) have always existed in web dev and have increased since the rise of the mobile web. And yes, it makes sense to make your web app as fast as possible.
+
+And in dealing with these issues, Kevin addressed it in the same way that many others have already addressed it. <strong>When looking to speed up your site, focus on the images first.</strong>.
+
+It's well documented that images are biggest offender when dealing with a slow site. So if your app has even a few images, how are you optimizing them?
+
+Are you optimizing images in PhotoShop before deploying them to your site? Are you using a tool like <a href="https://github.com/imagemin/imagemin-cli">imagemin-cli</a> to minify them in your build process?
+
+Are you hosting the images on a CDN? Can you use techniques like <a href="https://www.nikonusa.com/en/learn-and-explore/a/tips-and-techniques/bokeh-for-beginners.html">Bokeh</a> to further optimize your images?
+
+Next, how about your webhost? If your site or app is hosted on a low-end, shared-hosting USD $5/month, things will be slow.
+
+From here, lots of web performance best practices have evolved over the years. File minification, configuring critical path CSS, agressive browser caching, all this and many other things are well-documented.
+
+After implementing the performance stuff that you should be implementing anyway, <em>then</em> focus on JavaScript performance. Google's Addy Osmani has written <a href="https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4">a pretty definitive article on JS performace</a>...give it a read.
+
+Heads-up: this article effectively argues that images
