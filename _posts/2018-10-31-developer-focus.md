@@ -10,7 +10,7 @@ excerpt: Focusing on core JavaScript fundamentals is key to your growth as a dev
 og-image: js-focus.jpg
 thumb-image: js-focus-thumb.jpg
 ---
-My last 20 months as a JavaScript developer have included a period of self-assessment. Mostly, I've been focusing on <em>how</em> I write application code instead of the tools I use to write it.
+My last 20 months as a JavaScript developer have been a period of self-assessment. Mostly, I've been focusing on <em>how</em> I write application code instead of the tools I use to write it.
 
 I've also researched how other developers from all experience levels write code and have collectively learned great things from them. That being said, my research led me to too many instances of their focusing on (what I think is) too much of the wrong stuff.
 <h2>How this all began</h2>
@@ -41,3 +41,5 @@ I had real-world web developer stuff to to deal with so I moved on.
 
 <h2>What Kevin said</h2>
 Then, maybe on a subconscious impulse, I sought out to re-read <a href="https://web.archive.org/web/20130324030838/http://randyluecke.tumblr.com:80/post/45915323813/im-done-with-the-web">Kevin Luecke's "I’m done with the web" article</a>.
+
+(i read stuff to make me better)
