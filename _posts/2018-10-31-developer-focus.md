@@ -12,8 +12,8 @@ thumb-image: js-focus-thumb.jpg
 ---
 My last 20 months as a JavaScript developer have been a period of self-assessment. Mostly, I've been focusing on <em>how</em> I write application code instead of the tools I use to write it.
 
+I've also researched how other developers from all experience levels write code and have collectively learned great things from them. But in the process, I've discovered too many instances of these developers (I think) spending too much time worrying about the wrong things.
 
-I've also researched how other developers from all experience levels write code and have collectively learned great things from them. That being said, I've found too many instances of these developers focusing on (what I think is) too much of the wrong stuff in my research.
 <h2>How this all began</h2>
 It all started when I began working with React on a daily basis. As a result of this, I see three positive aspects that React brings to the JS developer conversation:
 
@@ -36,7 +36,7 @@ Soon after its initial release, React was characterized as <strong>"JAJFLWYWCI" 
 "React and things like it lead to code bloat."
 </blockquote>
 
-Some comments I engaged with (mostly online) and some I didn't. But they didn't really bothered me...at least, not to the point I felt compelled to write this post.
+Some comments I engaged with (mostly online) and some I didn't. But they didn't really bother me to the point I felt compelled to write this post.
 
 I had real-world web developer stuff to to deal with so I moved on.
 
@@ -45,8 +45,13 @@ Then, maybe on a subconscious impulse, I re-read <a href="https://web.archive.or
 
 Kevin wasn't "done with the web" literally, but he was "done" with being an active member of the web developer community. This was a result of his frustration with excuses these developers gave for rejecting certain JavaScript UI frameworks.
 
-Despite the problems solved by things like Cappuccino and Ember, web devs passed on them because of their seemingly large file sizes and steep learning curves. Kevin viewed this as spending too much time worrying about the wrong things...he had enough it so he himself moved on.
+Despite the problems solved by things like Cappuccino and Ember, web devs shunned them because of their seemingly large file sizes and steep learning curves. No time was spent on analyzing the problems they solved: everything was focused on the negatives.
 
-(freelancers worked at a company first)
+Kevin viewed this as the web developer community spending too much time worrying about the wrong things. He also made the point that this doesn't happen in the traditional software development community...the Java world, the Ruby world, etc.
 
-(i read stuff to make me better)
+He had enough of this so he himself moved on...from the web dev community that is.
+
+What bummed me out about this article was how I'm a part of this community that's prematurely rejecting stuff. There were also side implications about whether web developers new how to program (add Paul Irish link).
+
+<h2>What Kevin's article was about</h2>
+
