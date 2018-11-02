@@ -76,4 +76,7 @@ After implementing the performance stuff that you should be implementing anyway,
 
 Heads-up: this article effectively argues that images
 
+
+(freelancers worked at a company first)
+(i read stuff to make me better)
 (https://reactjs.org/docs/reconciliation.html#the-diffing-algorithm)
