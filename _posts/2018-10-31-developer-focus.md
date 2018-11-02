@@ -12,6 +12,7 @@ thumb-image: js-focus-thumb.jpg
 ---
 My last 20 months as a JavaScript developer have been a period of self-assessment. Mostly, I've been focusing on <em>how</em> I write application code instead of the tools I use to write it.
 
+
 I've also researched how other developers from all experience levels write code and have collectively learned great things from them. That being said, I've found too many instances of these developers focusing on (what I think is) too much of the wrong stuff in my research.
 <h2>How this all began</h2>
 It all started when I began working with React on a daily basis. As a result of this, I see three positive aspects that React brings to the JS developer conversation:
