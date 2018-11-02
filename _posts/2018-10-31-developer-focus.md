@@ -60,7 +60,7 @@ Second, worrying about my feelings blinded me from realizing the main point of t
 <h2>The complaints about performance</h2>
 The performance gripes (like the ones I hear about React) have always existed in web dev and have increased since the rise of the mobile web. And yes, it makes sense to make your web app as fast as possible.
 
-And in dealing with these issues, Kevin addressed it in the same way that many others have already addressed it. <strong>When looking to speed up your site, focus on the images first.</strong>.
+And in dealing with these issues, Kevin addressed it in the same way that many others have already addressed it. <strong>When looking to speed up your site, focus on the images first</strong>.
 
 It's well documented that images are biggest offender when dealing with a slow site. So if your app has even a few images, how are you optimizing them?
 
@@ -75,3 +75,5 @@ From here, lots of web performance best practices have evolved over the years. F
 After implementing the performance stuff that you should be implementing anyway, <em>then</em> focus on JavaScript performance. Google's Addy Osmani has written <a href="https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4">a pretty definitive article on JS performace</a>...give it a read.
 
 Heads-up: this article effectively argues that images
+
+(https://reactjs.org/docs/reconciliation.html#the-diffing-algorithm)
