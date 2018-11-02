@@ -43,5 +43,5 @@ I had real-world web developer stuff to to deal with so I moved on.
 Then, maybe on a subconscious impulse, I re-read <a href="https://web.archive.org/web/20130324030838/http://randyluecke.tumblr.com:80/post/45915323813/im-done-with-the-web">Kevin Luecke's "I’m done with the web" article</a>. An article that bummed me out a bit.
 
 
-
+(freelancers worked at a company first)
 (i read stuff to make me better)
