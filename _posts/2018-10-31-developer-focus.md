@@ -10,19 +10,33 @@ excerpt: Focusing on core JavaScript fundamentals is key to your growth as a dev
 og-image: js-focus.jpg
 thumb-image: js-focus-thumb.jpg
 ---
-My last 20 months as a JavaScript developer have included a period of self-assessment. Mostly, I've been focusing on <em>how</em> I write JS instead of the tools I use to write it.
+My last 20 months as a JavaScript developer have included a period of self-assessment. Mostly, I've been focusing on <em>how</em> I write application code instead of the tools I use to write it.
 
-I've also been looking at how other developers of all skill/experience levels write code, trying to learn from them. And while other developers are free to write code however they want, I've seen too many instances of their focusing on (what I think is) too much of the wrong stuff at the wrong time.
+I've also researched how other developers from all experience levels write code and have collectively learned great things from them. That being said, my research led me to too many instances of their focusing on (what I think is) too much of the wrong stuff.
 <h2>How this all began</h2>
-It all started when I began working with React on my day job. Because of this, I see three positive things that React brings to the JS developer conversation:
+It all started when I began working with React on current my day job. As a result of this, I see three positive aspects that React brings to the JS developer conversation:
 
 1. <strong>manipulating app views with a state object</strong>: changing your app's view/state by changing a standard "key:value" object (and not the DOM) is cool.
 2. <strong>enforcing functional programming</strong>: the idea that functions should be "small things" that do one thing well and are easy to test is put into effect with React.
 3. <strong>thoughtful component model</strong>: I'm stealing that phrase from <a href="https://medium.com/bumpers/isnt-our-code-just-the-best-f028a78f33a9">Jacob Thornton's great React article</a> but he's right. When it comes to encapsulating chunks of UI in a single, reusable component, React does this pretty well.
 
-These things are positive because they bring some computer science best practices to JavaScript development. And as JS has matured into a full-on application language and beyond making neat rollovers, bringing these practices in is great.
+These things are positive because <strong>they bring some computer science best practices to JavaScript development</strong>. And as JS has matured into a full-on application language and beyond making neat rollovers, bringing these practices in is great.
 <h2>There will be naysayers</h2>
-Like many things before and after it, React was immediately characterized as "JAJFLWYWCI" (Just-Another-JavaScript-Framework-Library-Whatever-You-Wanna-Call-It).
+Soon after its initial release, React was characterized as <strong>"JAJFLWYWCI" (Just-Another-JavaScript-Framework-Library-Whatever-You-Wanna-Call-It)</strong>.  Most comments aligned with these opinions:
+<blockquote class="content--blockquote-margin">
+"You're not doing professional programming when you use frameworks."
+</blockquote>
 
-<h2>It took me a while to decide if I was going to write this.</h2>
-This point of view is just that: a point view. And there are enough web developer POVs out there already on this subject.
+<blockquote class="content--blockquote-margin">
+"It's too steep of a learning curve."
+</blockquote>
+
+<blockquote class="content--blockquote-margin">
+"React and things like it lead to code bloat."
+</blockquote>
+
+Some comments I engaged with (mostly online) and some I didn't. But none of them really bothered me...at least, not enough to the point I felt compelled to right this post.
+
+I had real-world web developer stuff to to deal with so I moved on.
+
+<h2>What Kevin Once Said</h2>
