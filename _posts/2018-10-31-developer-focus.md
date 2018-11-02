@@ -22,9 +22,9 @@ It all started when I began working with React on current my day job. As a resul
 
 These things are positive because <strong>they bring some computer science best practices to JavaScript development</strong>. And as JS has matured into a full-on application language and beyond making neat rollovers, bringing these practices in is great.
 <h2>There will be naysayers</h2>
-Soon after its initial release, React was characterized as <strong>"JAJFLWYWCI" (Just-Another-JavaScript-Framework-Library-Whatever-You-Wanna-Call-It)</strong>.  Most comments aligned with these opinions:
+Soon after its initial release, React was characterized as <strong>"JAJFLWYWCI" (Just-Another-JavaScript-Framework-Library-Whatever-You-Wanna-Call-It)</strong>.  Most comments aligned with one or more of these opinions:
 <blockquote class="content--blockquote-margin">
-"You're not doing professional programming when you use frameworks."
+"You're not doing professional programming when you use frameworks or libraries."
 </blockquote>
 
 <blockquote class="content--blockquote-margin">
@@ -35,11 +35,13 @@ Soon after its initial release, React was characterized as <strong>"JAJFLWYWCI" 
 "React and things like it lead to code bloat."
 </blockquote>
 
-Some comments I engaged with (mostly online) and some I didn't. But none of them really bothered me...at least, not enough to the point I felt compelled to right this post.
+Some comments I engaged with (mostly online) and some I didn't. But they didn't really bothered me...at least, not to the point I felt compelled to write this post.
 
 I had real-world web developer stuff to to deal with so I moved on.
 
 <h2>What Kevin said</h2>
-Then, maybe on a subconscious impulse, I sought out to re-read <a href="https://web.archive.org/web/20130324030838/http://randyluecke.tumblr.com:80/post/45915323813/im-done-with-the-web">Kevin Luecke's "I’m done with the web" article</a>.
+Then, maybe on a subconscious impulse, I re-read <a href="https://web.archive.org/web/20130324030838/http://randyluecke.tumblr.com:80/post/45915323813/im-done-with-the-web">Kevin Luecke's "I’m done with the web" article</a>. An article that bummed me out a bit.
+
+
 
 (i read stuff to make me better)
