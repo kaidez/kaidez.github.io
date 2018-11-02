@@ -39,4 +39,5 @@ Some comments I engaged with (mostly online) and some I didn't. But none of them
 
 I had real-world web developer stuff to to deal with so I moved on.
 
-<h2>What Kevin Once Said</h2>
+<h2>What Kevin said</h2>
+Then, maybe on a subconscious impulse, I sought out to re-read <a href="https://web.archive.org/web/20130324030838/http://randyluecke.tumblr.com:80/post/45915323813/im-done-with-the-web">Kevin Luecke's "I’m done with the web" article</a>.
