@@ -12,18 +12,18 @@ thumb-image: js-focus-thumb.jpg
 ---
 My last 20 months as a JavaScript developer have been a period of self-assessment. Primarily, I've focused on <em>how</em> I write application code and not the libraries and frameworks I use to write it.
 
-I've also researched how other developers from all experience levels write code and have,collectively learned great things from them. But when it comes to libs and frameworks, I've discovered too many instances of developers spending (I think) too much time worrying about the wrong things.
+I've also researched how other developers from all experience levels write code and have collectively learned great things from them. But when it comes to libs and frameworks, I've discovered too many instances of developers spending (I think) too much time worrying about the wrong things.
 
 <h2>How this all began</h2>
-It all started when I began working with <a href="https://reactjs.org/">React</a> on a daily basis. Consequently, I see three positive things that React brings to the JS developer conversation:
+It all started when I began working with <a href="https://reactjs.org/">React</a> on a daily basis. Consequently, I see three positive things that React brings to the JavaScript developer conversation:
 
 1. <strong>manipulating app views with a state object</strong>: changing your app's view/state with a standard "key:value" object (not the DOM) is cool.
-2. <strong>enforcing functional programming</strong>: the ideas that functions should be in there own little world, not screw up the outside world around it, do one thing well and be easy to test are put into effect with React.
-3. <strong>thoughtful component model</strong>: I'm stealing that phrase from <a href="https://medium.com/bumpers/isnt-our-code-just-the-best-f028a78f33a9">Jacob Thornton's great React article</a> but he's right. When it comes to encapsulating chunks of UI inside a single, reusable component, React does this well.
+2. <strong>enforcing functional programming</strong>: the ideas that functions should be in their own little world, not screw up the outside world around them, do one thing well and be easy to test are put into effect with React.
+3. <strong>thoughtful component model</strong>: I'm stealing that phrase from <a href="https://medium.com/bumpers/isnt-our-code-just-the-best-f028a78f33a9">Jacob Thornton's great React article</a> but he's right. When it comes to encapsulating chunks of UI inside a single reusable component, React does this well.
 
-These things are positive because <strong>they bring some computer science best practices to JavaScript development</strong>. As JS matures from making neat rollovers to a full-on application language, it's right to bring in these practices.
+These things are positive because <strong>they encourage computer science best practices in JavaScript development</strong>. As JS progresses from making neat rollovers to a full-on application language, it's right to bring in these practices.
 <h2>There will be naysayers</h2>
-Soon after its initial release, React was labeled as <strong>"JAJFLWYWCI" (Just-Another-JavaScript-Framework-Library-Whatever-You-Wanna-Call-It)</strong>. For whatever the reason, some developers said that we shouldn't be use it...pretty common occurrence in the JS World.
+Soon after its initial release, React was labeled as <strong>"JAJFLWYWCI" (Just-Another-JavaScript-Framework-Library-Whatever-You-Wanna-Call-It)</strong>. For whatever the reason, some developers said we shouldn't use it...a frequent reaction to frameworks and libraries in the JS World.
 
 The comments for <em>not</em> using it aligned with at least one of these three opinions:
 <blockquote class="content--blockquote-margin">
@@ -38,15 +38,15 @@ The comments for <em>not</em> using it aligned with at least one of these three 
 "You're not doing professional programming when you use frameworks or libraries."
 </blockquote>
 
-Some comments I engaged with (mostly online) and some I didn't. But they didn't really bother me to the point I felt compelled to write this post.
+Some comments I engaged with (mostly online) and some I didn't. But they didn't really bother me to the point I felt compelled to blog about it.
 
 I had real-world web developer stuff to deal with so I moved on.
 <h2>What Kevin said</h2>
 Then, maybe on a subconscious impulse, I re-read <a href="https://web.archive.org/web/20130324030838/http://randyluecke.tumblr.com:80/post/45915323813/im-done-with-the-web">Kevin Luecke's "I'm done with the web" article</a>. An article that bummed me out when I first read it four-and-a-half years ago.
 
-Kevin wasn't "done with the web" literally, but he was "done" with embracing the web developer community to the level that he did. This was a result of his frustration with excuses these developers gave for rejecting certain JavaScript UI frameworks.
+Kevin wasn't "done with the web" literally, but he was "done" with embracing the web developer community to the level that he did. The catalyst for this was his frustration with excuses these developers gave for rejecting certain JavaScript UI frameworks.
 
-Despite the problems solved by things like Cappuccino and Ember, web devs shunned them because of their seemingly large, low-performant file sizes and steep learning curves. No time was spent on analyzing the problems they solved: everything was focused on the negatives.
+Despite the problems solved by things like Cappuccino and Ember, web devs shunned them because of their seemingly large, low-performant file sizes and steep learning curves. Little-to-no time was spent on analyzing the problems they solved: everything was focused on the negatives.
 
 Kevin viewed this as the web developer community spending too much time worrying about the wrong things. He also pointed out that this doesn't happen in the traditional software development community: I'm assuming he was referring to the Java community, the Ruby community, etc.
 
@@ -56,7 +56,9 @@ What bummed me out about this article was how I'm a part of this community that'
 <h2>What Kevin's article was really about</h2>
 First, I don't know the context of Kevin Luecke's comments regarding developers knowing how to program. So I'm not going to take them <em>out</em> of context and spend time worrying about them and be bummed out.
 
-I'm a self-taught, web developer: I learned web stuff during late 90's when those that knew even a <em>little</em> about building websites were incredibly employable. Since I'm not a classically-trained computer science developer, I'll always have to manage those feelings of insignificance...I'll live.
+I'm a self-taught, web developer: I learned web stuff during late 90's when those that knew even a <em>little</em> about building websites were incredibly employable.  This length of time has given me experience that makes me <em>still</em> incredibly employable.
+
+Since I'm not a classically-trained computer science developer, I'll always have to deal those feelings of insignificance.  I'll deal with them.
 
 Second, worrying about my feelings blinded me from realizing the main point of the article. That <strong>when web developers evaluate if some software solves their problems, they consistently reject it for the wrong reasons</strong>.
 
