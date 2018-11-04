@@ -10,15 +10,15 @@ excerpt: Focusing on core JavaScript fundamentals is key to your growth as a dev
 og-image: js-focus.jpg
 thumb-image: js-focus-thumb.jpg
 ---
-My last 20 months as a JavaScript developer have been a period of self-assessment. Mostly, I've been focusing on <em>how</em> I write application code instead of the tools I use to write it.
+My last 20 months as a JavaScript developer have been a period of self-assessment. Primarily, I've focused on <em>how</em> I write application code and not the libraries and frameworks I use to write it.
 
-I've also researched how other developers from all experience levels write code and have, collectively, learned great things from them. But in the process, I've discovered too many instances of these developers spending (I think) too much time worrying about the wrong things.
+I've also researched how other developers from all experience levels write code and have,collectively learned great things from them. But when it comes to libs and frameworks, I've discovered too many instances of developers spending (I think) too much time worrying about the wrong things.
 
 <h2>How this all began</h2>
-It all started when I began working with React on a daily basis. Consequently, I see three positive things that React brings to the JS developer conversation:
+It all started when I began working with <a href="https://reactjs.org/">React</a> on a daily basis. Consequently, I see three positive things that React brings to the JS developer conversation:
 
-1. <strong>manipulating app views with a state object</strong>: changing your app's view/state by changing a standard "key:value" object (and not the DOM) is cool.
-2. <strong>enforcing functional programming</strong>: the idea that functions should be small "things" that do one thing well and are easy to test is put into effect with React.
+1. <strong>manipulating app views with a state object</strong>: changing your app's view/state with a standard "key:value" object (not the DOM) is cool.
+2. <strong>enforcing functional programming</strong>: the ideas that functions should be in there own little world, not screw up the outside world around it, do one thing well and be easy to test are put into effect with React.
 3. <strong>thoughtful component model</strong>: I'm stealing that phrase from <a href="https://medium.com/bumpers/isnt-our-code-just-the-best-f028a78f33a9">Jacob Thornton's great React article</a> but he's right. When it comes to encapsulating chunks of UI inside a single, reusable component, React does this well.
 
 These things are positive because <strong>they bring some computer science best practices to JavaScript development</strong>. As JS matures from making neat rollovers to a full-on application language, it's right to bring in these practices.
@@ -61,6 +61,8 @@ I'm a self-taught, web developer: I learned web stuff during late 90's when thos
 Second, worrying about my feelings blinded me from realizing the main point of the article. That <strong>when web developers evaluate if some software solves their problems, they consistently reject it for the wrong reasons</strong>.
 
 <h2>Look at the big picture</h2>
+You should understand what your app should do before rejecting (or accepting) any framework or library in your code.
+
 <h2>The complaints about performance</h2>
 The performance gripes (like the ones I hear about React) have always existed in web dev and have increased since the rise of the mobile web. And yes, it makes sense to make your web app as fast as possible.
 
