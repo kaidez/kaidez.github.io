@@ -10,7 +10,7 @@ excerpt: Focusing on core JavaScript fundamentals is key to your growth as a dev
 og-image: js-focus.jpg
 thumb-image: js-focus-thumb.jpg
 ---
-My last 20 months as a JavaScript developer have been a period of self-assessment. Primarily, I've focused on <em>how</em> I write application code and not the libraries and frameworks I use to write it.
+My last 10 months as a JavaScript developer have been a period of self-assessment. Primarily, I've focused on <em>how</em> I write application code and not the libraries and frameworks I use to write it.
 
 I've also researched how other developers from all experience levels write code and have collectively learned great things from them. But when it comes to libs and frameworks, I've discovered too many instances of developers spending (I think) too much time worrying about the wrong things.
 
@@ -46,7 +46,7 @@ Then, maybe on a subconscious impulse, I re-read <a href="https://web.archive.or
 
 Kevin wasn't "done with the web" literally, but he was "done" with embracing the web developer community to the level that he did. The catalyst for this was his frustration with excuses these developers gave for rejecting certain JavaScript UI frameworks.
 
-Despite the problems solved by things like Cappuccino and Ember, web devs shunned them because of their seemingly large, low-performant file sizes and steep learning curves. Little-to-no time was spent on analyzing the problems they solved: everything was focused on the negatives.
+Despite the problems solved by things like <a href="http://www.cappuccino-project.org/">Cappuccino</a> and <a href="https://www.emberjs.com/">Ember</a>, web devs shunned them because of their seemingly large, low-performant file sizes and steep learning curves. Little-to-no time was spent on analyzing the problems they solved: everything was focused on the negatives.
 
 Kevin viewed this as the web developer community spending too much time worrying about the wrong things. He also pointed out that this doesn't happen in the traditional software development community: I'm assuming he was referring to the Java community, the Ruby community, etc.
 
@@ -63,7 +63,13 @@ Since I'm not a classically-trained computer science developer, I'll always have
 Second, worrying about my feelings blinded me from realizing the main point of the article. That <strong>when web developers evaluate if some software solves their problems, they consistently reject it for the wrong reasons</strong>.
 
 <h2>Look at the big picture</h2>
-You should understand what your app should do before rejecting (or accepting) any framework or library in your code.
+You should understand what your app should do before rejecting (or accepting) any framework or library in your code. Because a framework or lib may help your app "do" it better.
+
+Ember, which <a href="https://www.lynda.com/Emberjs-tutorials/Up-Running-Emberjs/178116-2.html">I've obviously used</a>, has a big file size and gets updated too frequently. But if you're building an app that users need to keep open for long periods of time to do work, like MS Word, then Ember will help you.
+
+Also, what if you're dealing with a team of developers? Using a well-tested library/framework helps because it provides your team a shared language, making communication simple and pleasant.
+
+With React
 
 <h2>The complaints about performance</h2>
 The performance gripes (like the ones I hear about React) have always existed in web dev and have increased since the rise of the mobile web. And yes, it makes sense to make your web app as fast as possible.
