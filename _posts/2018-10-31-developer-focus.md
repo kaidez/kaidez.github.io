@@ -89,12 +89,13 @@ Whatever your opinion, you shouldn't leave optimization techniques for JS only. 
 * serving images (as well as JS, CSS and font files) from a CDN if it's in your budget.
 * ~maybe~ looking at <a href="https://www.nikonusa.com/en/learn-and-explore/a/tips-and-techniques/bokeh-for-beginners.html">Bokeh</a> to further optimize your images.
 
-And performance depends on more than this: browser caching, for example, gives more performance wins. Plus, HTML minification is still a good idea and your app will be slow if it's hosted on a low-end USD $5/month shared plan.
+And performance depends on more than this:aggressive browser caching, for example, gives more performance wins. Plus, HTML minification is still a good idea and your app will be slow if it's hosted on a low-end USD $5/month shared plan.
 
 Many things are needed to create a high-performance app.  Don't put this responsibility <em>just</em> on JavaScript.
 <h2>The complaints about learning curves</h2>
-When talking about React, I know where this feeling comes from. React 
+I understand this feeling: it's something that's affected me negatively and <a href="/101th-post/">I've written about it before</a>.
 
+The Luecke post is pretty blunt about how ramping up on new things 
 (freelancers worked at a company first)
 (i read stuff to make me better)
 (https://reactjs.org/docs/reconciliation.html#the-diffing-algorithm)
