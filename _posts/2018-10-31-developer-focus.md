@@ -67,7 +67,7 @@ You should understand what your app should do before rejecting (or accepting) an
 
 Ember, which <a href="https://www.lynda.com/Emberjs-tutorials/Up-Running-Emberjs/178116-2.html">I've obviously used</a>, has a big file size and gets updated too frequently for my comfort level. But if you're building an app that users will keep open and work inside for a long time, like MS Word, then Ember is helpful.
 
-And what if you're part of a team of developers? Using a well-tested library/framework helps because it provides your team a shared language, making collaboration simple and pleasant.
+And what if you're part of a team of developers? Using a well-tested library/framework helps because <strong>it provides your team a shared language, making collaboration simple and pleasant</strong>.
 
 For example, with React I can tell someone, "solve your problem by using this pre-built component that so-and-so built." Much easier than "cut-and-paste this code block that so-and-so wrote but you'll have to ask so-and-so what to do next."
 
@@ -75,7 +75,7 @@ And the end of the day, you need to ship product. Depending on what it takes to 
 <h2>The complaints about performance</h2>
 There are valid JavaScript performance issues that matter more and more as our dependency on mobile rises. But the JS community has been attacking this issue for many years prior and will continue to do so.
 
-Lots of non-hacky best practices have been created to deal with performance, with <a href="https://survivejs.com/webpack/building/code-splitting/">code-splitting</a> being the most popular. Code-splitting is the practice of allowing a page in an app to download only the JS it needs instead of the JS for the entire app.
+Lots of non-hacky best practices have been created to deal with performance, with <a href="https://survivejs.com/webpack/building/code-splitting/">code-splitting</a> being the most popular. Code-splitting is the practice of allowing a page in an app to download <em>only</em> the JS it needs instead of the JS for the entire app.
 
 Also, and it's ironic when looking at the perf complaints, component-based libraries and frameworks like React allow for easy code-splitting. Encapsulating UI and its related functionality inside an independent component is a performance win.
 
@@ -83,20 +83,15 @@ Addy Osmani has written <a href="https://medium.com/@addyosmani/the-cost-of-java
 <h2>Other performance stuff</h2>
 Images have traditionally been blamed for causing the most performance issues, including Kevin Luecke's article. But Osmani's article points out that images only need to download while JavaScript files have to download code and then parse and execute it.
 
-Still, you should leave optimization techniques for JS only. So make sure to optimize your images using things like:
-* Photoshop export/Save for Web.
-* image minification in your build process using something like <a href="https://github.com/imagemin/imagemin-cli">imagemin-cli</a>.
-* serving images (as well as JS, CSS and font files) from CDN if it's in your budget.
-* ~maybe~ look at <a href="https://www.nikonusa.com/en/learn-and-explore/a/tips-and-techniques/bokeh-for-beginners.html">Bokeh</a> to further optimize your images.
+Still, you shouldn't leave optimization techniques for JS only. So make sure to optimize your images doing things like:
+* Photoshop export/Save for Web on your images.
+* adding an image minification step to your build process using something like <a href="https://github.com/imagemin/imagemin-cli">imagemin-cli</a>.
+* serving images (as well as JS, CSS and font files) from a CDN if it's in your budget.
+* ~maybe~ looking at <a href="https://www.nikonusa.com/en/learn-and-explore/a/tips-and-techniques/bokeh-for-beginners.html">Bokeh</a> to further optimize your images.
 
-And performance depends on more than this. Your app will be slow if it's hosted on a low-end USD $5/month shared plan, and aggressive browser caching gives more performance wins.
+And performance depends on more than this: browser caching, for example, gives more performance wins. Plus, HTML minification is still a good idea and your app will be slow if it's hosted on a low-end USD $5/month shared plan.
 
 Many thing are needed to create a high-performance app.  Don't put this responsibility <em>just</em> on JavaScript.
-
-(freelancers worked at a company first)
-(i read stuff to make me better)
-(https://reactjs.org/docs/reconciliation.html#the-diffing-algorithm)
-
 
 (freelancers worked at a company first)
 (i read stuff to make me better)
