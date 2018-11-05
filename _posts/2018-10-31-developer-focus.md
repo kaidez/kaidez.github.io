@@ -18,7 +18,7 @@ I've also researched how other developers write code and have collectively learn
 It all started when I began working with <a href="https://reactjs.org/">React</a> on a daily basis. Consequently, I see three positive things that React brings to the JavaScript developer conversation:
 
 1. <strong>manipulating app views with a state object</strong>: changing your app's view/state with a standard "key:value" object (not the DOM) is cool.
-2. <strong>enforcing functional programming</strong>: the ideas that functions should be in their own little world, shouldn't affect the outside world around them, should do one thing well and should be easy to test are put into effect with React.
+2. <strong>enforcing functional programming</strong>: ideas that functions should be in their own little world, shouldn't affect the outside world around them, should do one thing well and should be easy to test are put into effect with React.
 3. <strong>thoughtful component model</strong>: I'm stealing that phrase from <a href="https://medium.com/bumpers/isnt-our-code-just-the-best-f028a78f33a9">Jacob Thornton's great React article</a> but he's right. When it comes to encapsulating chunks of UI inside a single reusable component, React does it well.
 
 These things are positive because <strong>they encourage computer science best practices in JavaScript development</strong>. As JS progresses from making neat rollovers to a full-on application language, it's right to bring in these practices.
@@ -83,13 +83,13 @@ Addy Osmani wrote <a href="https://medium.com/@addyosmani/the-cost-of-javascript
 <h2>Other performance stuff</h2>
 Images are usually blamed for causing the most performance issues: Kevin Luecke mentions them in his article. But Osmani's article argues that JS may be the bigger performance headache: that images only need to download while JavaScript files have to download code and then parse and execute it.
 
-Whatever your opinion, you shouldn't leave optimization techniques for JS only. So make sure to optimize your images as well, doing things like:
-* Photoshop export/Save for Web on your images.
-* adding an image minification step to your build process with something like <a href="https://github.com/imagemin/imagemin-cli">imagemin-cli</a>.
-* serving images (as well as JS, CSS and font files) from a CDN if it's in your budget.
+Whatever your opinion, you shouldn't optimization your JS <em>only</em>. So make sure to optimize your images as well by doing things like:
+* using Photoshop  "export/Save for Web" your images.
+* adding an image minification step to your build process using something like <a href="https://github.com/imagemin/imagemin-cli">imagemin-cli</a>.
+* serving images (as well as JS, CSS and font files) from a CDN if you can.
 * ~maybe~ looking at <a href="https://www.nikonusa.com/en/learn-and-explore/a/tips-and-techniques/bokeh-for-beginners.html">Bokeh</a> to further optimize your images.
 
-And performance depends on more than this: aggressive browser caching, for example, gives more performance wins. Plus, HTML minification is still a good idea and your app will be slow if it's hosted on a low-end USD $5/month shared plan.
+And performance depends on more than this: aggressive browser caching, for example, gives other performance wins. Plus, HTML minification is still a good idea, plus your app will be slow if it's hosted on a low-end shared USD $5/month plan.
 
 Many things are needed to create a high-performance app.  Don't put this responsibility <em>just</em> on JavaScript.
 <h2>The complaints about learning curves</h2>
@@ -99,11 +99,11 @@ In his post, Kevin Luecke is blunt about the defeatist attitude web devs take to
 "This reaction to Ember just baffles me. Your day job is to build a piece of web software and you can't take a few days to learn the ins and outs? Presumably you're in a large team because this project is important and will take some time to complete. Nevertheless, I've seen this reaction many times in the web culture. This mentality is pretty rare in the world of native development though. Almost every decent developer I know has no problem spending a weekend learning some new and cool tool, but sadly, this spirit seems to be absent from the web culture."
 </blockquote>
 
-I can relate to this feeling. Always having to ramp up on some new JavaScript technology has affected me negatively and <a href="http://www.kaidez.com/101th-post/">I've written about it</a>.
+I can relate to this feeling. Always having to ramp up on new JavaScript technology has affected me negatively and <a href="http://www.kaidez.com/101th-post/">I've written about it</a>.
 
 But being a JavaScript developer is the path I've chosen and this is how it is. JavaScript is the language of the web, it changes frequently and the changes show no signs of slowing down.
 
-Since we've chosen to be JS developers, we <em>have</em> to move with its changes.
+Since we've ALL chosen to be JS developers, we <em>have</em> to move with its changes.
 <h2>The complaints about professional programming (whatever that means)</h2>
 
 (freelancers worked at a company first)
