@@ -83,7 +83,7 @@ Addy Osmani has written <a href="https://medium.com/@addyosmani/the-cost-of-java
 <h2>Other performance stuff</h2>
 Images are usually blamed for causing the most performance issues: Kevin Luecke mentions them in his article. But Osmani's article argues that JS may be a bigger performance headache: that images only need to download while JavaScript files have to download code and then parse and execute it.
 
-Whatever your opinnion, you shouldn't leave optimization techniques for JS only. So make sure to optimize your images as well, doing things like:
+Whatever your opinion, you shouldn't leave optimization techniques for JS only. So make sure to optimize your images as well, doing things like:
 * Photoshop export/Save for Web on your images.
 * adding an image minification step to your build process with something like <a href="https://github.com/imagemin/imagemin-cli">imagemin-cli</a>.
 * serving images (as well as JS, CSS and font files) from a CDN if it's in your budget.
@@ -91,8 +91,9 @@ Whatever your opinnion, you shouldn't leave optimization techniques for JS only.
 
 And performance depends on more than this: browser caching, for example, gives more performance wins. Plus, HTML minification is still a good idea and your app will be slow if it's hosted on a low-end USD $5/month shared plan.
 
-Many thing are needed to create a high-performance app.  Don't put this responsibility <em>just</em> on JavaScript.
+Many things are needed to create a high-performance app.  Don't put this responsibility <em>just</em> on JavaScript.
 <h2>The complaints about learning curves</h2>
+When talking about React, I know where this feeling comes from. React 
 
 (freelancers worked at a company first)
 (i read stuff to make me better)
