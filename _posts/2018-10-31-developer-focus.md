@@ -92,6 +92,7 @@ Still, you shouldn't leave optimization techniques for JS only. So make sure to 
 And performance depends on more than this: browser caching, for example, gives more performance wins. Plus, HTML minification is still a good idea and your app will be slow if it's hosted on a low-end USD $5/month shared plan.
 
 Many thing are needed to create a high-performance app.  Don't put this responsibility <em>just</em> on JavaScript.
+<h2>The complaints about learning curves</h2>
 
 (freelancers worked at a company first)
 (i read stuff to make me better)
