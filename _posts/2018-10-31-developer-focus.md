@@ -71,11 +71,11 @@ And what if you're part of a team of developers? Using a well-tested library/fra
 
 For example, with React I can tell someone, "solve your problem by using this pre-built component that so-and-so built." Much easier than "cut-and-paste this code block that so-and-so wrote but you'll have to ask so-and-so what to do next."
 
-And the end of the day, you need to ship product.
+And the end of the day, you need to ship product. Depending on what it takes to do that, a library or framework may be a means to that end.
 <h2>The complaints about performance</h2>
-The performance gripes (like the ones I hear about React) have always existed in web dev and have increased since the rise of the mobile web. And yes, it makes sense to make your web app as fast as possible.
+The performance concerns surrounding libs and frameworks are valid and matter as we become more dependant on mobile. And yes, it makes sense to make your web app as fast as possible.
 
-And yes, JavaScript affects performance, but lots of non-hacky best practices have been created to deal with this. Google's Addy Osmani has written <a href="https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4">a pretty definitive article on JS performance</a>...give it a read.
+But lots of non-hacky best practices have been created to deal with this. Google's Addy Osmani has written <a href="https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4">a pretty definitive article on JS performance</a>...give it a read.
 
 And in dealing with these issues, Kevin addressed it in the same way that many others have already addressed it. <strong>When looking to speed up your site, focus on the images first</strong>.
 
