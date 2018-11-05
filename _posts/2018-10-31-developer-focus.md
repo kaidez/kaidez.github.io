@@ -67,10 +67,11 @@ You should understand what your app should do before rejecting (or accepting) an
 
 Ember, which <a href="https://www.lynda.com/Emberjs-tutorials/Up-Running-Emberjs/178116-2.html">I've obviously used</a>, has a big file size and gets updated too frequently. But if you're building an app that users need to keep open for long periods of time to do work, like MS Word, then Ember will help you.
 
-Also, what if you're dealing with a team of developers? Using a well-tested library/framework helps because it provides your team a shared language, making communication simple and pleasant.
+And what if you're part of a team of developers? Using a well-tested library/framework helps because it provides your team a shared language, making collaboration simple and pleasant.
 
-With React
+For example, with React I can tell someone, "solve your problem by using this pre-built component that so-and-so built." Much easier than "cut-and-paste this code block that so-and-so wrote but you'll have to ask so-and-so what to do next."
 
+And the end of the day, you need to ship a product.
 <h2>The complaints about performance</h2>
 The performance gripes (like the ones I hear about React) have always existed in web dev and have increased since the rise of the mobile web. And yes, it makes sense to make your web app as fast as possible.
 
