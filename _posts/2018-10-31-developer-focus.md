@@ -12,13 +12,13 @@ thumb-image: js-focus-thumb.jpg
 ---
 My last 10 months as a JavaScript developer have been a period of self-assessment. Primarily, I've focused on <em>how</em> I write application code and not the libraries and frameworks I use to write it.
 
-I've also researched how other developers from all experience levels write code and have collectively learned great things from them. But when it comes to libs and frameworks, I've discovered too many instances of developers spending (I think) too much time worrying about the wrong things.
+I've also researched how other developers write code and have collectively learned great things from them. But when it comes to libs and frameworks, I've discovered too many instances of developers spending (I think) too much time worrying about the wrong things.
 
 <h2>How this all began</h2>
 It all started when I began working with <a href="https://reactjs.org/">React</a> on a daily basis. Consequently, I see three positive things that React brings to the JavaScript developer conversation:
 
 1. <strong>manipulating app views with a state object</strong>: changing your app's view/state with a standard "key:value" object (not the DOM) is cool.
-2. <strong>enforcing functional programming</strong>: the ideas that functions should be in their own little world, not screw up the outside world around them, do one thing well and be easy to test are put into effect with React.
+2. <strong>enforcing functional programming</strong>: the ideas that functions should be in their own little world, shouldn't affect the outside world around them, do one thing well and be easy to test are put into effect with React.
 3. <strong>thoughtful component model</strong>: I'm stealing that phrase from <a href="https://medium.com/bumpers/isnt-our-code-just-the-best-f028a78f33a9">Jacob Thornton's great React article</a> but he's right. When it comes to encapsulating chunks of UI inside a single reusable component, React does this well.
 
 These things are positive because <strong>they encourage computer science best practices in JavaScript development</strong>. As JS progresses from making neat rollovers to a full-on application language, it's right to bring in these practices.
@@ -27,7 +27,7 @@ Soon after its initial release, React was labeled as <strong>"JAJFLWYWCI" (Just-
 
 The comments for <em>not</em> using it aligned with at least one of these three opinions:
 <blockquote class="content--blockquote-margin">
-"React and things like it lead to slow performance web apps."
+"React and things like it lead to slow performing web apps."
 </blockquote>
 
 <blockquote class="content--blockquote-margin">
@@ -65,7 +65,7 @@ Second, worrying about my feelings blinded me from realizing the main point of t
 <h2>Look at the big picture</h2>
 You should understand what your app should do before rejecting (or accepting) any framework or library in your code. Because a framework or lib may help your app "do" it better.
 
-Ember, which <a href="https://www.lynda.com/Emberjs-tutorials/Up-Running-Emberjs/178116-2.html">I've obviously used</a>, has a big file size and gets updated too frequently. But if you're building an app that users need to keep open for long periods of time to do work, like MS Word, then Ember will help you.
+Ember, which <a href="https://www.lynda.com/Emberjs-tutorials/Up-Running-Emberjs/178116-2.html">I've obviously used</a>, has a big file size and gets updated too frequently for my comfort level. But if you're building an app that users will keep open and work inside for a long time, like MS Word, then Ember is helpful.
 
 And what if you're part of a team of developers? Using a well-tested library/framework helps because it provides your team a shared language, making collaboration simple and pleasant.
 
@@ -73,9 +73,13 @@ For example, with React I can tell someone, "solve your problem by using this pr
 
 And the end of the day, you need to ship product. Depending on what it takes to do that, a library or framework may be a means to that end.
 <h2>The complaints about performance</h2>
-The performance concerns surrounding libs and frameworks are valid and matter as we become more dependant on mobile. And yes, it makes sense to make your web app as fast as possible.
+There are valid JavaScript performance issues that matter more and more as our dependency on mobile rises. But the JS community has been attacking this issue for many years prior and will continue to do so.
 
-But lots of non-hacky best practices have been created to deal with this. Google's Addy Osmani has written <a href="https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4">a pretty definitive article on JS performance</a>...give it a read.
+Lots of non-hacky best practices have been created to deal with performance, with code-splitting being the most popular. Code-splitting is the practice of allowing a given page in app to download on the JS it needs instead of the JS for the entire app.
+
+Ironically, component-based libraries and frameworks
+
+Google's Addy Osmani has written <a href="https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4">a pretty definitive article on JS performance</a>...give it a read.
 
 And in dealing with these issues, Kevin addressed it in the same way that many others have already addressed it. <strong>When looking to speed up your site, focus on the images first</strong>.
 
