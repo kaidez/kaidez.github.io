@@ -71,7 +71,7 @@ And what if you're part of a team of developers? Using a well-tested library/fra
 
 For example, with React I can tell someone, "solve your problem by using this pre-built component that so-and-so built." Much easier than "cut-and-paste this code block that so-and-so wrote but you'll have to ask so-and-so what to do next."
 
-And the end of the day, you need to ship a product.
+And the end of the day, you need to ship product.
 <h2>The complaints about performance</h2>
 The performance gripes (like the ones I hear about React) have always existed in web dev and have increased since the rise of the mobile web. And yes, it makes sense to make your web app as fast as possible.
 
