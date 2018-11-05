@@ -93,15 +93,18 @@ And performance depends on more than this: aggressive browser caching, for examp
 
 Many things are needed to create a high-performance app.  Don't put this responsibility <em>just</em> on JavaScript.
 <h2>The complaints about learning curves</h2>
-In his post, Kevin Luecke is blunt about the defeatist attitude web devs take towards ramping up on new things. After quoting a developer compput the length of time needed for their team to learn Ember, Kevin responded:
+In his post, Kevin Luecke is blunt about the defeatist attitude web devs take towards ramping up on new things. After quoting a developer complaining about the length of time needed for their team to learn Ember, Kevin responded:
 
 <blockquote class="content--blockquote-margin">
 "This reaction to Ember just baffles me. Your day job is to build a piece of web software and you can't take a few days to learn the ins and outs? Presumably you're in a large team because this project is important and will take some time to complete. Nevertheless, I've seen this reaction many times in the web culture. This mentality is pretty rare in the world of native development though. Almost every decent developer I know has no problem spending a weekend learning some new and cool tool, but sadly, this spirit seems to be absent from the web culture."
 </blockquote>
 
-I can relate to this feeling. Always having to ramp up on some new JavaScript technology has affected me negatively and <a href="/101th-post/">I've written about it</a>.
+I can relate to this feeling. Always having to ramp up on some new JavaScript technology has affected me negatively and <a href="http://www.kaidez.com/101th-post/">I've written about it</a>.
 
-But this is how it is: JavaScript is the language of the web and it changes frequently. If you're web developer, you need to move with its changes.
+But being a JavaScript developer is the path I've chosen and this is how it is. JavaScript is the language of the web, it changes frequently and the changes show no signs of slowing down.
+
+Since we've chosen to be JS developers, we <em>have</em> to move with its changes.
+<h2>The complaints about professional programming (whatever that means)</h2>
 
 (freelancers worked at a company first)
 
