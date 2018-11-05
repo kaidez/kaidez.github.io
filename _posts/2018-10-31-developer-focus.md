@@ -18,24 +18,24 @@ I've also researched how other developers write code and have collectively learn
 It all started when I began working with <a href="https://reactjs.org/">React</a> on a daily basis. Consequently, I see three positive things that React brings to the JavaScript developer conversation:
 
 1. <strong>manipulating app views with a state object</strong>: changing your app's view/state with a standard "key:value" object (not the DOM) is cool.
-2. <strong>enforcing functional programming</strong>: the ideas that functions should be in their own little world, shouldn't affect the outside world around them, do one thing well and be easy to test are put into effect with React.
-3. <strong>thoughtful component model</strong>: I'm stealing that phrase from <a href="https://medium.com/bumpers/isnt-our-code-just-the-best-f028a78f33a9">Jacob Thornton's great React article</a> but he's right. When it comes to encapsulating chunks of UI inside a single reusable component, React does this well.
+2. <strong>enforcing functional programming</strong>: the ideas that functions should be in their own little world, shouldn't affect the outside world around them, should do one thing well and should be easy to test are put into effect with React.
+3. <strong>thoughtful component model</strong>: I'm stealing that phrase from <a href="https://medium.com/bumpers/isnt-our-code-just-the-best-f028a78f33a9">Jacob Thornton's great React article</a> but he's right. When it comes to encapsulating chunks of UI inside a single reusable component, React does it well.
 
 These things are positive because <strong>they encourage computer science best practices in JavaScript development</strong>. As JS progresses from making neat rollovers to a full-on application language, it's right to bring in these practices.
 <h2>There will be naysayers</h2>
-Soon after its initial release, React was labeled as <strong>"JAJFLWYWCI" (Just-Another-JavaScript-Framework-Library-Whatever-You-Wanna-Call-It)</strong>. For whatever the reason, some developers said we shouldn't use it...a frequent reaction to frameworks and libraries in the JS World.
+After its release, React was labeled as <strong>"JAJFLWYWCI" (Just-Another-JavaScript-Framework-Library-Whatever-You-Wanna-Call-It)</strong>. For whatever the reason, many developers hastily said we shouldn't use it...a frequent reaction to frameworks and libraries in the JS World.
 
 The comments for <em>not</em> using it aligned with at least one of these three opinions:
 <blockquote class="content--blockquote-margin">
-"React and things like it lead to slow performing web apps."
+"Frameworks and libraries lead to slow performing web apps."
 </blockquote>
 
 <blockquote class="content--blockquote-margin">
-"It's too steep of a learning curve."
+"It has a steep learning curve."
 </blockquote>
 
 <blockquote class="content--blockquote-margin">
-"You're not doing professional programming when you use frameworks or libraries."
+"You're not doing professional programming if you use frameworks or libraries."
 </blockquote>
 
 Some comments I engaged with (mostly online) and some I didn't. But they didn't really bother me to the point I felt compelled to blog about it.
@@ -46,19 +46,19 @@ Then, maybe on a subconscious impulse, I re-read <a href="https://web.archive.or
 
 Kevin wasn't "done with the web" literally, but he was "done" with embracing the web developer community to the level that he did. The catalyst for this was his frustration with excuses these developers gave for rejecting certain JavaScript UI frameworks.
 
-Despite the problems solved by things like <a href="http://www.cappuccino-project.org/">Cappuccino</a> and <a href="https://www.emberjs.com/">Ember</a>, web devs shunned them because of their seemingly large, low-performant file sizes and steep learning curves. Little-to-no time was spent on analyzing the problems they solved: everything was focused on the negatives.
+Despite the fact that things like <a href="http://www.cappuccino-project.org/">Cappuccino</a> and <a href="https://www.emberjs.com/">Ember</a> solved problems, web devs shunned them because of their seemingly large, low-performant file sizes and steep learning curves. Little time, if any, was spent analyzing the problems they solved: the kneejerk reaction to reject them based on those few things.
 
-Kevin viewed this as the web developer community spending too much time worrying about the wrong things. He also pointed out that this doesn't happen in the traditional software development community: I'm assuming he was referring to the Java community, the Ruby community, etc.
+Kevin viewed this as the web developer community spending too much time worrying about the wrong stuff. He also pointed out that this doesn't happen in the traditional software development community: I'm assuming he was referring to the Java community, the PHP community, the Ruby community etc.
 
-He had enough of this so he himself moved on...from the web dev community that is.
+He had enough of this "stagnation" as he phrased it so he himself moved on. From the web dev community, that is.
 
 What bummed me out about this article was how I'm a part of this community that rashly rejects stuff. Also, he made some <a href="https://www.youtube.com/watch?v=19g4n0ZxiYM&feature=youtu.be&t=2836">comments about "people that don't know how to program"</a> and I wondered if it was part of that community as well.
 <h2>What Kevin's article was really about</h2>
 First, I don't know the context of Kevin Luecke's comments regarding developers knowing how to program. So I'm not going to take them <em>out</em> of context and spend time worrying about them and be bummed out.
 
-I'm a self-taught, web developer: I learned web stuff during late 90's when those that knew even a <em>little</em> about building websites were incredibly employable.  That length of time has given me experience that makes me <em>still</em> incredibly employable.
+I'm a self-taught, web developer: I learned web stuff at a time when those that knew even a <em>little</em> about building websites were incredibly employable.  That length of time has given me experience that makes me <em>still</em> incredibly employable.
 
-Since I'm not a classically-trained computer science developer, I'll always have to deal those feelings of insignificance.  OK...I'll deal with them.
+Since I'm not a classically-trained computer science developer, I'll always have to deal any feelings of insignificance that appear.  OK...I'll deal with them.
 
 Second, worrying about my feelings blinded me from realizing the main point of the article. That <strong>when web developers evaluate if some software solves their problems, they consistently reject it for the wrong reasons</strong>.
 
@@ -71,7 +71,7 @@ And what if you're part of a team of developers? Using a well-tested library/fra
 
 For example, with React I can tell someone, "solve your problem by using this pre-built component that so-and-so built." Much easier than "cut-and-paste this code block that so-and-so wrote but you'll have to ask so-and-so what to do next."
 
-And the end of the day, you need to ship product. Depending on what it takes to do that, a library or framework may be a means to that end.
+At the end of the day, you need to ship product. Depending on what it takes to do that, a library or framework may be a means to that end.
 <h2>The complaints about performance</h2>
 JavaScript performance issues will always need to be taken seriously as our dependency on mobile rises. But the JS community has been attacking these issues for a long time, and will continue to do so.
 
