@@ -81,11 +81,11 @@ Also, and it's ironic when looking at the perf complaints, component-based libra
 
 Addy Osmani has written <a href="https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4">a pretty definitive article on JS performance</a>...give it a read. It covers code-splitting and other things, like performance budgets, critical paths and testing/auditing tools.
 <h2>Other performance stuff</h2>
-Images have traditionally been blamed for causing the most performance issues, including Kevin Luecke's article. But Osmani's article points out that images only need to download while JavaScript files have to download code and then parse and execute it.
+Images are usually blamed for causing the most performance issues: Kevin Luecke mentions them in his article. But Osmani's article argues that JS may be a bigger performance headache: that images only need to download while JavaScript files have to download code and then parse and execute it.
 
-Still, you shouldn't leave optimization techniques for JS only. So make sure to optimize your images doing things like:
+Whatever your opinnion, you shouldn't leave optimization techniques for JS only. So make sure to optimize your images as well, doing things like:
 * Photoshop export/Save for Web on your images.
-* adding an image minification step to your build process using something like <a href="https://github.com/imagemin/imagemin-cli">imagemin-cli</a>.
+* adding an image minification step to your build process with something like <a href="https://github.com/imagemin/imagemin-cli">imagemin-cli</a>.
 * serving images (as well as JS, CSS and font files) from a CDN if it's in your budget.
 * ~maybe~ looking at <a href="https://www.nikonusa.com/en/learn-and-explore/a/tips-and-techniques/bokeh-for-beginners.html">Bokeh</a> to further optimize your images.
 
