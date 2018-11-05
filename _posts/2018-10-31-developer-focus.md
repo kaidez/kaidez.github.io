@@ -77,7 +77,9 @@ There are valid JavaScript performance issues that matter more and more as our d
 
 Lots of non-hacky best practices have been created to deal with performance, with code-splitting being the most popular. Code-splitting is the practice of allowing a given page in app to download on the JS it needs instead of the JS for the entire app.
 
-Ironically, component-based libraries and frameworks
+<a href="https://webpack.js.org/">webpack</a> is the current go-to tool for JavaScript code-splitting. And ironically, component-based libraries and frameworks, like React, provide this out of the box.
+
+Think about it:
 
 Google's Addy Osmani has written <a href="https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4">a pretty definitive article on JS performance</a>...give it a read.
 
@@ -92,10 +94,6 @@ Are you hosting the images on a CDN? Can you use techniques like <a href="https:
 Next, how about your web-host? If your site or app is hosted on a low-end, shared-hosting USD $5/month, things will be slow.
 
 From here, lots of web performance best practices have evolved over the years. File minification, configuring critical path CSS, agressive browser caching, all this and many other things are well-documented.
-
-After implementing the performance stuff that you should be implementing anyway, <em>then</em> focus on JavaScript performance. Google's Addy Osmani has written <a href="https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4">a pretty definitive article on JS performance</a>...give it a read.
-
-Heads-up: this article effectively argues that images
 
 
 (freelancers worked at a company first)
