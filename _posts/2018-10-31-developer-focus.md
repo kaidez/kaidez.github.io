@@ -46,7 +46,7 @@ Then, maybe on a subconscious impulse, I re-read <a href="https://web.archive.or
 
 Kevin wasn't "done with the web" literally, but he was "done" with embracing the web developer community to the extent that he did. The catalyst for this was his frustration with excuses these developers gave for rejecting certain JavaScript UI frameworks.
 
-Even though things like <a href="http://www.cappuccino-project.org/">Cappuccino</a> and <a href="https://www.emberjs.com/">Ember</a> solved problems, web devs shunned them because of their seemingly large, low-performant file sizes and steep learning curves. Little time, if any, was spent analyzing the problems they solved: the kneejerk reaction to reject them based on those few things.
+Even though things like <a href="http://www.cappuccino-project.org/">Cappuccino</a> and <a href="https://www.emberjs.com/">Ember</a> solved problems, web devs shunned them because of their seemingly large, low-performant file sizes and steep learning curves. Little time, if any, was spent seeing if they solved any problems: the knee-jerk reaction to reject them based on those few things.
 
 Kevin said that the web developer community was essentially spending too much time worrying about the wrong stuff. He also pointed out that this doesn't happen in the native software development community: I'm assuming he was referring to the Java community, the PHP community, the Ruby community etc.
 
@@ -54,11 +54,11 @@ He had enough of this "stagnation" as he phrased it so he, himself, moved on. Fr
 
 What bummed me out about this article was how I'm a part of this community that rashly rejects stuff. Also, he made some <a href="https://www.youtube.com/watch?v=19g4n0ZxiYM&feature=youtu.be&t=2836">comments about "people that don't know how to program"</a> and I wondered if it was part of that community as well.
 <h2>What Kevin's article was really about</h2>
-First, I don't know the context of Kevin Luecke's comments regarding developers knowing how to program. So I'm not going to take them <em>out</em> of context and spend time worrying about them and be bummed out.
+First, I don't know the context of Kevin Luecke's comments regarding developers knowing how to program. So I'm not going to take them <em>out</em> of context and let them bum me out.
 
-I'm a self-taught, web developer: I learned web stuff at a time when those that knew even a <em>little</em> about building websites were incredibly employable.  That length of time has given me experience that makes me <em>still</em> incredibly employable.
+I'm a self-taught, web developer: I learned web stuff at a time when those that knew even a <em>little</em> about building websites were incredibly employable.  Doing web stuff for that long has given me experience that <em>keeps</em> me incredibly employable.
 
-Since I'm not a classically-trained computer science developer, I'll always have to deal any feelings of insignificance that appear.  OK...I'll deal with them.
+Since I'm not a classically-trained computer science developer, I'll have to deal any feelings of insignificance that come up because of that.  OK...I can deal with that.
 
 Second, worrying about my feelings blinded me from realizing the main point of the article. That <strong>when web developers evaluate if some software solves their problems, they consistently reject it for the wrong reasons</strong>.
 
