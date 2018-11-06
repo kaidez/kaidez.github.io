@@ -58,14 +58,14 @@ First, I don't know the context of Kevin Luecke's comments regarding developers 
 
 I'm a self-taught, web developer: I learned web stuff at a time when those that knew even a <em>little</em> about building websites were incredibly employable.  Doing web stuff for that long has given me experience that <em>keeps</em> me incredibly employable.
 
-Since I'm not a classically-trained computer science developer, I'll have to deal any feelings of insignificance that come up because of that.  OK...I can deal with that.
+Since I'm not a classically-trained computer science developer, I'll have to deal any feelings of insignificance that come up as a result of this.  OK...I can deal with that.
 
 Second, worrying about my feelings blinded me from realizing the main point of the article. That <strong>when web developers evaluate if some software solves their problems, they consistently reject it for the wrong reasons</strong>.
 
 <h2>Look at the big picture</h2>
 Understand what your app must do before rejecting (or accepting) any framework or library in your code. Because a framework or lib may help your app "do" it better.
 
-Ember, which <a href="https://www.lynda.com/Emberjs-tutorials/Up-Running-Emberjs/178116-2.html">I've obviously used</a>, has a big file size and gets updated too frequently for my comfort level. But if you're building an app that users will open up and then work inside for a long time (like MS Word), then Ember is helpful.
+Ember, which <a href="https://www.lynda.com/Emberjs-tutorials/Up-Running-Emberjs/178116-2.html">I've obviously used</a>, has a big file size and gets updated too frequently for my comfort level. But if you're building an app that users will open up and then use for a long time (like MS Word), then Ember is helpful.
 
 And what if you're part of a team of developers? Using a well-tested library/framework helps here because <strong>it provides your team a shared language, making collaboration simple and pleasant</strong>.
 
@@ -73,23 +73,23 @@ For example, with React I can tell someone, "solve your problem by using this pr
 
 At the end of the day, you need to ship product. Depending on what it takes to do that, a library or framework may be a means to that end.
 <h2>The complaints about performance</h2>
-JavaScript performance issues will always need to be taken seriously as our dependency on mobile rises. But the JS community has been attacking these issues for a long time, and will continue to do so.
+JavaScript performance issues must be taken seriously as our dependency on mobile rises. But the JS community has been attacking these issues for a long time, and will continue to do so.
 
-Lots of non-hacky best practices have been created to deal with performance, with <a href="https://survivejs.com/webpack/building/code-splitting/">code-splitting</a> being the most popular. Code-splitting is the practice of allowing a page in an app to <em>only</em>  download the JS it needs instead of the JS for the entire app.
+Lots of non-hacky best practices have been created to deal with performance, with <a href="https://survivejs.com/webpack/building/code-splitting/">code-splitting</a> being the most popular. Code-splitting is the practice making sure a page in an app <em>only</em>  downloads the JS it needs instead of the JS for the entire app.
 
 Also, and it's ironic when looking at the perf complaints, component-based libraries and frameworks like React allow for easy code-splitting. Encapsulating UI and its related functionality inside an independent component is a performance win.
 
-Addy Osmani wrote <a href="https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4">a pretty definitive article on JS performance</a>...give it a read. It covers code-splitting and other things, like performance budgets, critical paths and testing/auditing tools.
+Addy Osmani wrote <a href="https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4">a pretty definitive article on JS performance</a>...give it a read. It covers code-splitting and other things, like performance budgets, critical paths and testing/auditing tools like <a href="https://webpack.js.org/">webpack</a>.
 <h2>Other performance stuff</h2>
-Images are usually blamed for causing the most performance issues: Kevin Luecke mentions them in his article. But Osmani's article argues that JS may be the bigger performance headache: that images only need to download while JavaScript files have to download code and then parse and execute it.
+Images are usually blamed for causing the most performance issues and Kevin Luecke mentions them in his article. But Osmani's article argues that JS may be the bigger performance headache because images only need to download while JS files have to download code, then parse and execute it.
 
-Whatever your opinion, you shouldn't optimization your JS <em>only</em>. So make sure to optimize your images as well by doing things like:
+Whatever your opinion here, optimize your images as well as your JavaScript. This means doing things like:
 * using Photoshop  "export/Save for Web" your images.
 * adding an image minification step to your build process using something like <a href="https://github.com/imagemin/imagemin-cli">imagemin-cli</a>.
 * serving images (as well as JS, CSS and font files) from a CDN if you can.
 * ~maybe~ looking at <a href="https://www.nikonusa.com/en/learn-and-explore/a/tips-and-techniques/bokeh-for-beginners.html">Bokeh</a> to further optimize your images.
 
-And performance depends on more than this: aggressive browser caching, for example, gives other performance wins. Plus, HTML minification is still a good idea, plus your app will be slow if it's hosted on a low-end shared USD $5/month plan.
+And performance depends on more than this: aggressive browser caching, for example, gives other performance wins. Plus, HTML minification is still a good idea, and your app will be slow if it's hosted with a low-end shared USD $5/month plan.
 
 Many things are needed to create a high-performance app.  Don't put this responsibility <em>just</em> on JavaScript.
 <h2>The complaints about learning curves</h2>
@@ -99,11 +99,11 @@ In his post, Kevin Luecke is blunt about the defeatist attitude web devs take to
 "This reaction to Ember just baffles me. Your day job is to build a piece of web software and you can't take a few days to learn the ins and outs? Presumably you're in a large team because this project is important and will take some time to complete. Nevertheless, I've seen this reaction many times in the web culture. This mentality is pretty rare in the world of native development though. Almost every decent developer I know has no problem spending a weekend learning some new and cool tool, but sadly, this spirit seems to be absent from the web culture."
 </blockquote>
 
-I can relate to this feeling. Always having to ramp up on new JavaScript technology has affected me negatively and <a href="http://www.kaidez.com/101th-post/">I've written about it</a>.
+I can relate to this defeatist attitude. Always having to ramp up on new JavaScript technology has affected me negatively and <a href="http://www.kaidez.com/101th-post/">I've written about it</a>.
 
-But being a JavaScript developer is the path I've chosen and this is how it is. JavaScript is the language of the web, it changes frequently and the changes show no signs of slowing down.
+But this is how JavaScript is right now...it changes frequently and this shows no signs of slowing down. So we all have to keep up with the changes.
 
-Since we've ALL chosen to be JS developers, we <em>have</em> to move with its changes.
+I probably should embellish here but I don't know what else to say. You make learning new JS stuff a regular thing: end of story.
 <h2>The complaints about professional programming (whatever that means)</h2>
 
 (freelancers worked at a company first)
