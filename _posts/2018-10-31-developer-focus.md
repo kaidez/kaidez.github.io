@@ -103,7 +103,7 @@ I can relate to this defeatist attitude. Always having to ramp up on new JavaScr
 
 But this is how JavaScript is right now...it changes frequently and this shows no signs of slowing down. So we all have to keep up with the changes.
 
-I probably should embellish here but I don't know what else to say. You make learning new JS stuff a regular thing: end of story.
+I probably should embellish here but I don't know what else to say. You have to make learning new JS stuff a regular thing: end of story.
 <h2>The complaints about professional programming (whatever that means)</h2>
 
 (freelancers worked at a company first)
