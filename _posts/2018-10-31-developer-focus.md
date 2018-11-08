@@ -65,9 +65,9 @@ Second, worrying about my feelings blinded me from realizing the main point of t
 <h2>The complaints about performance</h2>
 To be fair, I can't 100% say that this is a "wrong" reason. Making apps as fast as possible is important as our dependency on mobile rises, and less JS makes them faster.
 
-But if that app has lots of interactive features, as many do, then a lib or framework may be needed to quickly build out these features. Thankfully, the JS community has developing lots of non-hacky best practices to increase performance for such use cases.
+But if that app has lots of interactive features, as many do, then a lib or framework may be needed to quickly build out these features. Thankfully, the JS community has developed lots of non-hacky best practices to increase performance for such use cases.
 
-Most of these practices are built around the <a href="https://webpack.js.org/">webpack</a> build tool. With the ability to build out slim JS files for production and <a href="https://survivejs.com/webpack/building/code-splitting/">code-splitting</a>, webpack has become necessary tool for JavaScript app development.
+Most of these practices are built around the <a href="https://webpack.js.org/">webpack</a> build tool. With its ability to build out slim JS files for production and <a href="https://survivejs.com/webpack/building/code-splitting/">code-splitting</a>, webpack has become necessary tool for JavaScript app development.
 
 Andrew Welch wrote <a href="https://nystudio107.com/blog/an-annotated-webpack-4-config-for-frontend-web-development">a ridiculously thorough article on setting up webpack.</a> Just like JS libraries and frameworks, webpack comes with a bit of a learning curve so it's worth a read.
 
@@ -83,7 +83,7 @@ Whatever your opinion here, optimize your images as well as your JavaScript. Thi
 
 And performance depends on more than this: aggressive browser caching, for example, gives other performance wins. Plus, HTML minification is still a good idea, and your app will be slow if it's hosted with a low-end shared USD $5/month plan.
 
-Many things are needed to create a high-performance app.  Don't put this responsibility <em>just</em> on JavaScript.
+Many things can slow an app down: don't put the blame for this all on JavaScript.
 <h2>The complaints about learning curves</h2>
 In his post, Kevin Luecke is blunt about the defeatist attitude web devs take towards ramping up on new things. After quoting a developer complaining about the length of time needed for their team to learn Ember, Kevin responded:
 
@@ -91,10 +91,11 @@ In his post, Kevin Luecke is blunt about the defeatist attitude web devs take to
 "This reaction to Ember just baffles me. Your day job is to build a piece of web software and you can't take a few days to learn the ins and outs? Presumably you're in a large team because this project is important and will take some time to complete. Nevertheless, I've seen this reaction many times in the web culture. This mentality is pretty rare in the world of native development though. Almost every decent developer I know has no problem spending a weekend learning some new and cool tool, but sadly, this spirit seems to be absent from the web culture."
 </blockquote>
 
-I can relate to this defeatist attitude. Always having to ramp up on new JavaScript technology has affected me negatively and <a href="http://www.kaidez.com/101th-post/">I've written about it</a>.
+I can relate to having this defeatist attitude. Always having to ramp up on a new JavaScript technology has affected me negatively and <a href="http://www.kaidez.com/101th-post/">I've written about it</a>.
 
 But this is how JavaScript is right now...it changes frequently and this shows no signs of slowing down. So we all have to keep up with the changes.
 
+Newly-released JS libs and frameworks are part of this change. Despite the performance issues, the best libs/frameworks solve a problem on some level
 I probably should embellish here but I don't know what else to say. You need to make learning new JS stuff on your time a regular thing: end of story.
 <h2>The complaints about professional programming (whatever that means)</h2>
 
