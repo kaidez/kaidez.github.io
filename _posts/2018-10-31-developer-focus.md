@@ -18,12 +18,12 @@ I've also researched how other developers write code and have collectively learn
 It all started when I began working with <a href="https://reactjs.org/">React</a> on a daily basis. Consequently, I see three positive things that React brings to the JavaScript developer conversation:
 
 1. <strong>manipulating app views with a state object</strong>: changing your app's view/state with a standard "key:value" object (not the DOM) is cool.
-2. <strong>enforcing functional programming</strong>: the idea that a function should be in its own little world, should not affect the outside world around it, should do one thing well and should be easy to test is put into effect with React.
+2. <strong>enforcing functional programming</strong>: the idea that a function should do one thing well and do it in its own world without affecting the world around it is put into effect with React.
 3. <strong>thoughtful component model</strong>: I'm stealing that phrase from <a href="https://medium.com/bumpers/isnt-our-code-just-the-best-f028a78f33a9">Jacob Thornton's great React article</a> but he's right. When it comes to encapsulating chunks of UI inside a single reusable component, React does it well.
 
 All these things are great because <strong>they encourage computer science best practices in JavaScript development</strong>. As JS progresses from making neat rollovers to a full-on application language, it's right to bring in these practices.
 <h2>There will be naysayers</h2>
-After its release, React was labeled as <strong>"JAJFLWYWCI" (Just-Another-JavaScript-Framework-Library-Whatever-You-Wanna-Call-It)</strong>. For whatever the reason, many developers hastily said we shouldn't use it...a frequent reaction to frameworks and libraries among JS developers.
+After its release, some developers labeled React as <strong>"JAJFLWYWCI" (Just-Another-JavaScript-Framework-Library-Whatever-You-Wanna-Call-It)</strong>. For whatever the reason, they said we shouldn't use it...a frequent reaction to frameworks and libraries among JS developers.
 
 The comments for <em>not</em> using it aligned with at least one of these three opinions:
 <blockquote class="content--blockquote-margin">
@@ -44,9 +44,9 @@ I had real-world web developer stuff to deal with so I moved on.
 <h2>What Kevin said</h2>
 Then, maybe on a subconscious impulse, I re-read <a href="https://web.archive.org/web/20130324030838/http://randyluecke.tumblr.com:80/post/45915323813/im-done-with-the-web">Kevin Luecke's "I'm done with the web" article</a>. An article that bummed me out when I first read it four-and-a-half years ago.
 
-Kevin wasn't "done with the web" literally, but he was "done" with embracing the web developer community to the extent that he did. The catalyst for this was his frustration with excuses these developers gave for rejecting certain JavaScript UI frameworks.
+Kevin wasn't "done with the web" literally, but he was "done" with embracing the web developer community to the extent that he did. The catalyst for this was his frustration with why developers hastily rejected certain JavaScript UI frameworks.
 
-Even though things like <a href="http://www.cappuccino-project.org/">Cappuccino</a> and <a href="https://www.emberjs.com/">Ember</a> solved problems, web devs shunned them because of their seemingly large, low-performant file sizes and steep learning curves. Little time, if any, was spent seeing if they solved any problems: the knee-jerk reaction to reject them based on those few things.
+Even though things like <a href="http://www.cappuccino-project.org/">Cappuccino</a> and <a href="https://www.emberjs.com/">Ember</a> solved problems, web devs shunned them because of their seemingly large, low-performant file sizes and steep learning curves. Little time, if any, was spent seeing if they solved any problems: the knee-jerk reaction to reject them based on those things.
 
 Kevin said that the web developer community was essentially spending too much time worrying about the wrong stuff. He also pointed out that this doesn't happen in the native software development community: I'm assuming he was referring to the Java community, the PHP community, the Ruby community etc.
 
@@ -56,22 +56,12 @@ What bummed me out about this article was how I'm a part of this community that 
 <h2>What Kevin's article was really about</h2>
 First, I don't know the context of Kevin Luecke's comments regarding developers knowing how to program. So I'm not going to take them <em>out</em> of context and let them bum me out.
 
-I'm a self-taught, web developer: I learned web stuff at a time when those that knew even a <em>little</em> about building websites were incredibly employable.  Doing web stuff for that long has given me experience that <em>keeps</em> me incredibly employable.
+I'm a self-taught, web developer: I learned web stuff at a time when those that knew even a <em>little</em> HTML were incredibly employable.  I've continued to do web stuff for a long time since, giving me experience that <em>keeps</em> me incredibly employable.
 
 Since I'm not a classically-trained computer science developer, I'll have to deal any feelings of insignificance that come up as a result of this.  OK...I can deal with that.
 
 Second, worrying about my feelings blinded me from realizing the main point of the article. That <strong>when web developers evaluate if some software solves their problems, they consistently reject it for the wrong reasons</strong>.
 
-<h2>Look at the big picture</h2>
-Understand what your app must do before rejecting (or accepting) any framework or library in your code. Because a framework or lib may help your app "do" it better.
-
-Ember, which <a href="https://www.lynda.com/Emberjs-tutorials/Up-Running-Emberjs/178116-2.html">I've obviously used</a>, has a big file size and gets updated too frequently for my comfort level. But if you're building an app that users will open up and then use for a long time (like MS Word), then Ember is helpful.
-
-And what if you're part of a team of developers? Using a well-tested library/framework helps here because <strong>it provides your team a shared language, making collaboration simple and pleasant</strong>.
-
-For example, with React I can tell someone, "solve your problem by using this pre-built component that so-and-so built." Much easier than "cut-and-paste this code block that so-and-so wrote but you'll have to ask so-and-so what to do next."
-
-At the end of the day, you need to ship product. Depending on what it takes to do that, a library or framework may be a means to that end.
 <h2>The complaints about performance</h2>
 JavaScript performance issues must be taken seriously as our dependency on mobile rises. But the JS community has been attacking these issues for a long time, and will continue to do so.
 
@@ -105,6 +95,17 @@ But this is how JavaScript is right now...it changes frequently and this shows n
 
 I probably should embellish here but I don't know what else to say. You have to make learning new JS stuff a regular thing: end of story.
 <h2>The complaints about professional programming (whatever that means)</h2>
+
+<h2>Look at the big picture</h2>
+Understand what your app must do before rejecting (or accepting) any framework or library in your code. Because a framework or lib may help your app "do" it better.
+
+Ember, which <a href="https://www.lynda.com/Emberjs-tutorials/Up-Running-Emberjs/178116-2.html">I've obviously used</a>, has a big file size and gets updated too frequently for my comfort level. But if you're building an app that users will open up and then use for a long time (like MS Word), then Ember is helpful.
+
+And what if you're part of a team of developers? Using a well-tested library/framework helps here because <strong>it provides your team a shared language, making collaboration simple and pleasant</strong>.
+
+For example, with React I can tell someone, "solve your problem by using this pre-built component that so-and-so built." Much easier than "cut-and-paste this code block that so-and-so wrote but you'll have to ask so-and-so what to do next."
+
+At the end of the day, you need to ship product. Depending on what it takes to do that, a library or framework may be a means to that end.
 
 (freelancers worked at a company first)
 
