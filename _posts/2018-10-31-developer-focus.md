@@ -63,13 +63,15 @@ Since I'm not a classically-trained computer science developer, I'll have to dea
 Second, worrying about my feelings blinded me from realizing the main point of the article. That <strong>when web developers evaluate if some software solves their problems, they consistently reject it for the wrong reasons</strong>.
 
 <h2>The complaints about performance</h2>
-JavaScript performance issues must be taken seriously as our dependency on mobile rises. But the JS community has been attacking these issues for a long time, and will continue to do so.
+To be fair, I can't 100% say that this is a "wrong" reason. Making apps as fast as possible is important as our dependency on mobile rises, and less JS makes them faster.
 
-Lots of non-hacky best practices have been created to deal with performance, with <a href="https://survivejs.com/webpack/building/code-splitting/">code-splitting</a> being the most popular. Code-splitting is the practice making sure a page in an app <em>only</em>  downloads the JS it needs instead of the JS for the entire app.
+But if that app has lots of interactive features, as many do, then a lib or framework may be needed to quickly build out these features. Thankfully, the JS community has developing lots of non-hacky best practices to increase performance for such use cases.
 
-Also, and it's ironic when looking at the perf complaints, component-based libraries and frameworks like React allow for easy code-splitting. Encapsulating UI and its related functionality inside an independent component is a performance win.
+Most of these practices are built around the <a href="https://webpack.js.org/">webpack</a> build tool. With the ability to build out slim JS files for production and <a href="https://survivejs.com/webpack/building/code-splitting/">code-splitting</a>, webpack has become necessary tool for JavaScript app development.
 
-Addy Osmani wrote <a href="https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4">a pretty definitive article on JS performance</a>...give it a read. It covers code-splitting and other things, like performance budgets, critical paths and testing/auditing tools like <a href="https://webpack.js.org/">webpack</a>.
+Andrew Welch wrote <a href="https://nystudio107.com/blog/an-annotated-webpack-4-config-for-frontend-web-development">a ridiculously thorough article on setting up webpack.</a> Just like JS libraries and frameworks, webpack comes with a bit of a learning curve so it's worth a read.
+
+Addy Osmani wrote <a href="https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4">a pretty definitive article on JS performance</a>...give it a read as well.  It discusses webpack stuff and code-splitting, along with other things like performance budgets, critical paths and testing/auditing tools.
 <h2>Other performance stuff</h2>
 Images are usually blamed for causing the most performance issues and Kevin Luecke mentions them in his article. But Osmani's article argues that JS may be the bigger performance headache because images only need to download while JS files have to download code, then parse and execute it.
 
@@ -93,7 +95,7 @@ I can relate to this defeatist attitude. Always having to ramp up on new JavaScr
 
 But this is how JavaScript is right now...it changes frequently and this shows no signs of slowing down. So we all have to keep up with the changes.
 
-I probably should embellish here but I don't know what else to say. You have to make learning new JS stuff a regular thing: end of story.
+I probably should embellish here but I don't know what else to say. You need to make learning new JS stuff on your time a regular thing: end of story.
 <h2>The complaints about professional programming (whatever that means)</h2>
 
 <h2>Look at the big picture</h2>
