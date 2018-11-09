@@ -85,20 +85,26 @@ And performance depends on more than this: aggressive browser caching, for examp
 
 Many things can slow an app down: don't put the blame for this all on JavaScript.
 <h2>The complaints about learning curves</h2>
-In his post, Kevin Luecke is blunt about the defeatist attitude web devs take towards ramping up on new things. After quoting a developer complaining about the length of time needed for their team to learn Ember, Kevin responded:
+In his post, Kevin Luecke is blunt about the defeatist attitude web devs take towards ramping up on new things. After quoting a developer who implied that it would take too long to learn Ember, Luecke responded:
 
 <blockquote class="content--blockquote-margin">
-"This reaction to Ember just baffles me. Your day job is to build a piece of web software and you can't take a few days to learn the ins and outs? Presumably you're in a large team because this project is important and will take some time to complete. Nevertheless, I've seen this reaction many times in the web culture. This mentality is pretty rare in the world of native development though. Almost every decent developer I know has no problem spending a weekend learning some new and cool tool, but sadly, this spirit seems to be absent from the web culture."
+"This reaction to Ember just baffles me. Your day job is to build a piece of web software and you can't take a few days to learn the ins and outs? Presumably you're in a large team because this project is important and will take some time to complete. Nevertheless, I've seen this reaction many times in the web culture.
 </blockquote>
 
 I can relate to having this defeatist attitude. Always having to ramp up on a new JavaScript technology has affected me negatively and <a href="http://www.kaidez.com/101th-post/">I've written about it</a>.
 
-But this is how JavaScript is right now...it changes frequently and this shows no signs of slowing down. So we all have to keep up with the changes.
+But this is how JavaScript is currently...it changes frequently and this change shows no signs of slowing down. We all have to keep up with the changes.
 
-Newly-released JS libs and frameworks are part of this change. Despite the performance issues, the best libs/frameworks solve a problem on some level
-I probably should embellish here but I don't know what else to say. You need to make learning new JS stuff on your time a regular thing: end of story.
+Newly-released JS libs and frameworks are part of this change. Despite performance concerns, libraries and frameworks solve someone's problem somewhere in the world, so familiarity with them (at least the popular one) represents value.
+
+A developer familiar with a variety of libs/frameworks brings this value to their office. Because they can properith a lot of framework at the corporate
+
+I should probably embellish here but I don't know what else to say. You need to make learning new JS stuff on your time a regular thing: end of story.
 <h2>The complaints about professional programming (whatever that means)</h2>
 
+<blockquote class="content--blockquote-margin">
+This mentality is pretty rare in the world of native development though. Almost every decent developer I know has no problem spending a weekend learning some new and cool tool, but sadly, this spirit seems to be absent from the web culture."
+</blockquote>
 <h2>Look at the big picture</h2>
 Understand what your app must do before rejecting (or accepting) any framework or library in your code. Because a framework or lib may help your app "do" it better.
 
