@@ -99,9 +99,9 @@ Newly-released JS libs and frameworks are part of this change. Despite performan
 
 A developer familiar with a variety of libs/frameworks has problem solving-power that can be passed on to either their day job boss or freelance clients. As a result, the value (or, "paycheck") of the individual developer rises.
 
-You need to make learning new JS stuff on your time a regular thing, frameworks and libraries included. There may be nothing to lose if you don't learn new stuff, but there's certainly nothing to gain by <em>not</em> learning.
+You need to make learning new JS stuff on your time a regular thing, frameworks and libraries included. You may believe that there's nothing to lose if you don't learn them, but there's certainly nothing to gain by <em>not</em> learning them.
 <h2>The complaints about professional programming (whatever that means)</h2>
-
+learn but learn fundamentals first
 <blockquote class="content--blockquote-margin">
 This mentality is pretty rare in the world of native development though. Almost every decent developer I know has no problem spending a weekend learning some new and cool tool, but sadly, this spirit seems to be absent from the web culture."
 </blockquote>
