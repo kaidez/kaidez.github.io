@@ -15,7 +15,7 @@ My last 10 months as a JavaScript developer have been a period of self-assessmen
 I've also researched how other developers write code and have collectively learned great things from them. But when it comes to libs and frameworks, I've discovered too many instances of developers spending (I think) too much time worrying about the wrong things.
 
 <h2>How this all began</h2>
-It all started when I began working with <a href="https://reactjs.org/">React</a> on a daily basis. Consequently, I see three positive things that React brings to the JavaScript developer conversation:
+It all started when I began working with <a href="https://reactjs.org/">React</a> on a daily basis. Because of this, I see three positive things that React brings to the JavaScript developer conversation:
 
 1. <strong>manipulating app views with a state object</strong>: changing your app's view/state with a standard "key:value" object (not the DOM) is cool.
 2. <strong>enforcing functional programming</strong>: the idea that a function should do one thing well and do it in its own world without affecting the world around it is put into effect with React.
@@ -110,23 +110,23 @@ So yes, focusing my energy towards learning pure, unadulterated vanilla JS helpe
 The idea that JavaScript frameworks and libraries is unprofessional is total bullshit.
 </blockquote>
 
-By writing lots of library-and-framework-free JavaScript, I see how using them makes my job easier:
+Firstly, my writing lots of vanilla JavaScript has trained me to find ways to write less of it when possible. I'm able to produce lots of high-quality code much quicker when there <em>is</em> a way.
 
-Continuing his feelings on developer opinions on lib/framework rejection, Luecke said this:
-<blockquote class="content--blockquote-margin">
-This mentality is pretty rare in the world of native development though. Almost every decent developer I know has no problem spending a weekend learning some new and cool tool, but sadly, this spirit seems to be absent from the web culture."
-</blockquote>
-While I believe that there's value in learning frameworks, I firmly believe
-<h2>Look at the big picture</h2>
-Understand what your app must do before rejecting (or accepting) any framework or library in your code. Because a framework or lib may help your app "do" it better.
-
-Ember, which <a href="https://www.lynda.com/Emberjs-tutorials/Up-Running-Emberjs/178116-2.html">I've obviously used</a>, has a big file size and gets updated too frequently for my comfort level. But if you're building an app that users will open up and then use for a long time (like MS Word), then Ember is helpful.
+The aforementioned Ember, which <a href="https://www.lynda.com/Emberjs-tutorials/Up-Running-Emberjs/178116-2.html">I've obviously used</a>, has a big file size and gets updated too frequently for some developers. But if I need to build an app that users will open up and then use for a long time (like MS Word), Ember has a feature-rich API that will help me finish the project...fast.
 
 And what if you're part of a team of developers? Using a well-tested library/framework helps here because <strong>it provides your team a shared language, making collaboration simple and pleasant</strong>.
 
 For example, with React I can tell someone, "solve your problem by using this pre-built component that so-and-so built." Much easier than "cut-and-paste this code block that so-and-so wrote but you'll have to ask so-and-so what to do next."
 
+Continuing his feelings on developer opinions on lib/framework rejection, Luecke said this:
+<blockquote class="content--blockquote-margin">
+This mentality is pretty rare in the world of native development though. Almost every decent developer I know has no problem spending a weekend learning some new and cool tool, but sadly, this spirit seems to be absent from the web culture."
+</blockquote>
+
 At the end of the day, you need to ship product. Depending on what it takes to do that, a library or framework may be a means to that end.
+
+<h2>Look at the big picture</h2>
+Understand what your app must do before rejecting (or accepting) any framework or library in your code. Because a framework or lib may help your app "do" it better.
 
 (freelancers worked at a company first)
 
