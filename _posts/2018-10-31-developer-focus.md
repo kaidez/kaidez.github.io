@@ -101,11 +101,17 @@ A developer familiar with a variety of libs/frameworks has problem solving-power
 
 You need to make learning new JS stuff on your time a regular thing, frameworks and libraries included. You may believe that there's nothing to lose if you don't learn them, but there's certainly nothing to gain by <em>not</em> learning them.
 <h2>The complaints about professional programming (whatever that means)</h2>
-However, there are many developers who believe that JavaScript frameworks and libraries should be completely avoided and we should just use vanilla JavaScript. And they're pretty passionate about this belief.
+There are, however, many developers who believe that JavaScript frameworks and libraries should be completely avoided and we should just use vanilla JavaScript. And they're pretty passionate in their belief.
 
-I held this belief once and just as passionately. Ask any of my previous co-workers and they'll tell you how obnoxious I was about preferring pure JS over tooling.
+I carried this belief once and must say that I became a WAAAAAAY better JavaScript developer as a result. My knowledge of the language's fundamental increased: writing powerful & concise functions, properly <code>return</code> values, prototypal inheritance, etc.
 
-And without doubt, I know I became a better JS developer as a result of this.
+So yes, focusing my energy towards learning pure, unadulterated vanilla JS helped me. But even with that, here's what I think:
+<blockquote class="content--blockquote-margin">
+The idea that JavaScript frameworks and libraries is unprofessional is total bullshit.
+</blockquote>
+
+By writing lots of library-and-framework-free JavaScript, I see how using them makes my job easier:
+
 Continuing his feelings on developer opinions on lib/framework rejection, Luecke said this:
 <blockquote class="content--blockquote-margin">
 This mentality is pretty rare in the world of native development though. Almost every decent developer I know has no problem spending a weekend learning some new and cool tool, but sadly, this spirit seems to be absent from the web culture."
