@@ -93,13 +93,13 @@ In his post, Kevin Luecke is blunt about the defeatist attitude web devs take to
 
 I can relate to having this defeatist attitude. Always having to ramp up on a new JavaScript technology has affected me negatively and <a href="http://www.kaidez.com/101th-post/">I've written about it</a>.
 
-But this is how JavaScript is currently...it changes frequently and this change shows no signs of slowing down. We all have to keep up with the changes.
+But this is how JavaScript is right now...it changes frequently and this change shows no signs of slowing down. We all have to keep up.
 
 Newly-released JS libs and frameworks are part of this change. Despite performance concerns, libraries and frameworks solve someone's problem somewhere in the world, so familiarity with them (at least the popular one) represents value.
 
-A developer familiar with a variety of libs/frameworks brings this value to their office. Because they can properith a lot of framework at the corporate
+A developer familiar with a variety of libs/frameworks has problem solving-power that can be passed on to either their day job boss or freelance clients. As a result, the value (or, "paycheck") of the individual developer rises.
 
-I should probably embellish here but I don't know what else to say. You need to make learning new JS stuff on your time a regular thing: end of story.
+You need to make learning new JS stuff on your time a regular thing, frameworks and libraries included. There may be nothing to lose if you don't learn new stuff, but there's certainly nothing to gain by <em>not</em> learning.
 <h2>The complaints about professional programming (whatever that means)</h2>
 
 <blockquote class="content--blockquote-margin">
