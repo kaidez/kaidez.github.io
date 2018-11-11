@@ -128,13 +128,13 @@ I'm using React to deliver production-quality code on time. I don't see why this
 <h2>Understand the business process behind the app</h2>
 Before you decide whether or not to use a library or framework, have a clear understanding of your project's goals. Understand the your app must do before rejecting the tools that can help you build it.
 
-Ember, which <a href="https://www.lynda.com/Emberjs-tutorials/Up-Running-Emberjs/178116-2.html">I've obviously used</a>, has a big file size and gets updated too frequently for my comfort. But if I'm building an app that users will open up and then use for a long time (like they would with MS Word), Ember has a feature-rich API that will help me finish the project fast.
+Ember, which <a href="https://www.lynda.com/Emberjs-tutorials/Up-Running-Emberjs/178116-2.html">I've obviously used</a>, has a big file size and gets updated too frequently for my comfort. But if I'm building an app that users will open up and then use for a long time (like they would with MS Word), Ember's a great option here.
 
-Speaking for myself, this is an area where I've made mistakes in the past.
+Speaking for myself, this is an area where I've made mistakes in the past. Had I focused more on what the app needed to accomplish and less on the "cool" way to do stuff, I'd be a VP somewhere.
 
 You need to ship a product out the door: a library or framework may be a means to that end. So again, understand what your app must do because a framework or lib may help your app "do" it better.
 
-
+<h2>Web developers can learn from native developers</h2>
 
 Luecke pointed out that dismissing JS tooling based on learning curves and filesizes was common in the web dev world but not the native development world. I would say the same thing happens
 
