@@ -48,11 +48,11 @@ Kevin wasn't "done with the web" literally, but he was "done" with embracing the
 
 Even though things like <a href="http://www.cappuccino-project.org/">Cappuccino</a> and <a href="https://www.emberjs.com/">Ember</a> solved problems, web devs shunned them because of their seemingly large, low-performant file sizes and steep learning curves. Little time, if any, was spent seeing if they solved problems: the knee-jerk reaction to reject them based on those things.
 
-Kevin used other examples of web developers focusing on small-ish problems and he felt this slowed web app progression. He felt the community was spending too much time worrying about the wrong stuff.
+Kevin used other examples of web developers focusing on small-ish problems and he felt this slowed web app progression. He felt that community was spending too much time worrying about the wrong stuff.
 
 He had enough of this "stagnation" as he phrased it so he, himself, moved on. From the web dev community, that is, and towards native app development.
 
-What bummed me out about this article was how I'm a part of this community that rashly rejects stuff. Also, he made some <a href="https://www.youtube.com/watch?v=19g4n0ZxiYM&feature=youtu.be&t=2836">comments about "people that don't know how to program"</a> and I wondered if it was part of that community as well.
+What bummed me out about this article was how I'm a part of this community that rashly rejects stuff. Also, he made some <a href="https://www.youtube.com/watch?v=19g4n0ZxiYM&feature=youtu.be&t=2836">comments about "people that don't know how to program"</a> and I wondered if it was part of that group as well.
 <h2>What Kevin's article was really about</h2>
 First, I don't know the context of Kevin Luecke's comments regarding developers that don't know how to program. So I'm not going to take them <em>out</em> of context and let them bum me out.
 
@@ -60,25 +60,25 @@ I'm a self-taught, web developer: I learned web stuff at a time when those that 
 
 Since I'm not a classically-trained computer science developer, I'll have to deal any feelings of insignificance that come up as a result of this.  OK...I can deal with that.
 
-Second, worrying about my feelings blinded me from realizing the main point of the article. That <strong>when web developers evaluate if some software solves their problems, they consistently reject it for the wrong reasons</strong>.
+Second, worrying about my feelings kept me from realizing the main point of the article. That <strong>when web developers evaluate if some software solves their problems, they consistently reject it for the wrong reasons</strong>.
 
 <h2>The complaints about performance</h2>
-To be fair, I can't 100% say that this is a "wrong" reason. Making apps as fast as possible is important as our dependency on mobile rises, and less JS makes them faster.
+To be fair, I can't really say that JS complaints performance are "wrong". Making apps as fast as possible is important as our dependency on mobile rises, and less JavaScript makes them faster.
 
-But if that app has lots of interactive features, as many do, then a lib or framework may be needed to quickly build out these features. Thankfully, the JS community has developed lots of non-hacky best practices to increase performance for such use cases.
+But if an app requires lots of interactive features, as many do, then a lib or framework may be needed to quickly build out those features. Thankfully, the JS community has developed lots of non-hacky best practices to increase performance for this use case.
 
 Most of these practices are built around the <a href="https://webpack.js.org/">webpack</a> build tool. With its ability to build out slim JS files for production and <a href="https://survivejs.com/webpack/building/code-splitting/">code-splitting</a>, webpack has become necessary tool for JavaScript app development.
 
 Andrew Welch wrote <a href="https://nystudio107.com/blog/an-annotated-webpack-4-config-for-frontend-web-development">a ridiculously thorough article on setting up webpack.</a> Just like JS libraries and frameworks, webpack comes with a bit of a learning curve so it's worth a read.
 
-Addy Osmani wrote <a href="https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4">a pretty definitive article on JS performance</a>...give it a read as well.  It discusses webpack and code-splitting stuff, along with other things like performance budgets, critical paths and testing/auditing tools.
+Also, Addy Osmani wrote <a href="https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4">a pretty definitive article on JS performance</a>...give it a read as well.  It discusses webpack and code-splitting stuff, along with other things like performance budgets, critical paths and testing/auditing tools.
 <h2>Other performance stuff</h2>
 Images are usually blamed for causing the most performance issues and Luecke mentions them in his article. But Osmani's article argues that JS may be the bigger performance headache because images only need to download while JS files have to download, then parse and execute code.
 
 Whatever your opinion here, optimize your images as well as your JavaScript. This means doing things like:
-* using Photoshop  "export/Save for Web" your images.
+* using Photoshop  "export/Save for Web" on your images.
 * adding an image minification step to your build process using something like <a href="https://github.com/imagemin/imagemin-cli">imagemin-cli</a>.
-* serving images (as well as JS, CSS and font files) from a CDN if you can.
+* if you can, using a CDN to serve out images...as well as JS, CSS and font files.
 * ~maybe~ looking at <a href="https://www.nikonusa.com/en/learn-and-explore/a/tips-and-techniques/bokeh-for-beginners.html">Bokeh</a> to further optimize your images.
 
 And performance depends on more than this: aggressive browser caching, for example, gives other performance wins. Plus, file minification is still a good idea, and your app will be slow if it's hosted with a low-end shared USD $5/month plan.
@@ -93,13 +93,13 @@ In his post, Kevin Luecke is blunt about the defeatist attitude web devs take to
 
 I can relate to having this defeatist attitude. Always having to ramp up on a new JavaScript technology has affected me negatively and <a href="http://www.kaidez.com/101th-post/">I've written about it</a>.
 
-But this is how JavaScript is right now...it changes frequently and this change shows no signs of slowing down. We all have to keep up.
+But this is how JavaScript is right now and this rapid change shows no signs of slowing down. Newly-released JS libs and frameworks are part of this constant change...we all have to keep up.
 
-Newly-released JS libs and frameworks are part of this change. Despite performance concerns, libraries and frameworks solve someone's problem somewhere in the world, so familiarity with them (at least the popular one) represents value.
+Despite performance concerns, libraries and frameworks solve someone's problem somewhere in the world. So a developer familiar with them (at least the popular ones) has value.
 
-A developer familiar with a variety of libs/frameworks has problem solving-power that can be passed on to either their day job boss or freelance clients. As a result, the value (or, "paycheck") of the individual developer rises.
+This familiarity gives the developer "problem solving-power": the ability to potentially look at a problem and say "this framework is our solution."  Day job bosses and freelance clients love this.
 
-You need to make learning new JavaScript stuff on your time a regular thing, frameworks and libraries included. You may think there's nothing to lose if you don't learn them, but there's certainly nothing to gain by <em>not</em> learning them.
+You need to make time to learn new JavaScript stuff, frameworks and libraries included. You may think there's nothing to lose by not learning them, but there's nothing to gain by <em>not</em> learning them.
 <h2>The complaints about "unprofessional programming" (whatever that means)</h2>
 However, there are many developers who believe that those who use frameworks and libraries are non-professional "newbies". That libs/frameworks should be completely avoided and we should just use vanilla JavaScript, and they're passionate in their belief.
 
