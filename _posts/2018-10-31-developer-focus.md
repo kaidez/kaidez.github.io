@@ -26,6 +26,7 @@ All these things are great because <strong>they encourage computer science best 
 After its release, some developers labeled React as <strong>"JAJFLWYWCI" (Just-Another-JavaScript-Framework-Library-Whatever-You-Wanna-Call-It)</strong>. For whatever the reason, they said we shouldn't use it...a frequent reaction to frameworks and libraries among JS developers.
 
 The comments for <em>not</em> using it aligned with at least one of these three opinions:
+
 <blockquote class="content--blockquote-margin">
 "Frameworks and libraries lead to slow performing web apps."
 </blockquote>
@@ -114,6 +115,7 @@ And what if you're part of a team of developers? Using a library or framework he
 With React I can tell someone, "solve your problem by using this pre-built component that so-and-so built." Much easier than "cut-and-paste this code block that so-and-so wrote but you'll have to ask so-and-so what to do next."
 
 I've said this many MANY times before and I'll say it again:
+
 <blockquote class="content--blockquote-margin">
 Using JavaScript libraries and frameworks isn't unprofessional; however, using them without understanding the core language fundamentals behind them is.
 </blockquote >
@@ -127,19 +129,22 @@ React doesn't help me with any of this.  It gives me a nice container to place t
 I'm using React to deliver production-quality code on time. I don't see why this is unprofessional.
 
 <h2>Web developers can learn from native developers</h2>
-While commenting about the complaints about learning curves, Kevin Luecke ll discussing
-I would apply these comments to java, php, ruby
+While commenting about the complaints about learning curves, Kevin Luecke compared web developers to native developers:
+
+<blockquote class="content--blockquote-margin">
+This mentality is pretty rare in the world of native development though. Almost every decent developer I know has no problem spending a weekend learning some new and cool tool, but sadly, this spirit seems to be absent from the web culture.
+</blockquote>
+I would apply that thinking to the web dev complaints about performance and "unprofessional programming. I never hear Java developers make such complaints about Spring...same thing with PHP developers and Laravel.
+
+And right now, imagine what would have happened if Ruby developers decided to reject Rails for all the reasons discussed.
 
 <h2>Understand the business process behind the app</h2>
 Before you decide whether or not to use a library or framework, have a clear understanding of your project's goals. Understand what the app must do before rejecting the tools that can help you build it.
 
-Ember, which <a href="https://www.lynda.com/Emberjs-tutorials/Up-Running-Emberjs/178116-2.html">I've obviously used</a>, has a big file size and gets updated too frequently for my comfort. But if I'm building an app that users will open up and then use for a long time (like they would with MS Word), Ember's a great option here.
+Ember, which <a href="https://www.lynda.com/Emberjs-tutorials/Up-Running-Emberjs/178116-2.html">I've obviously used</a>, has a big file size and gets updated too frequently for my comfort. But if I'm building an app that users will open up and then use for a long time (like they would with Excel), Ember's a great option here.
 
 Speaking for myself, this is an area where I've made mistakes in the past. Had I focused more on what the app needed to accomplish and less on the "cool" way to do stuff, I'd be a VP somewhere.
 
-You need to build and ship a product: a library or framework may be a means to that end. So again, understand what your app must do because a framework or library may help your app "do" it better.
-<h2>Read & listen to stuff to learn more about this</h2>
+You need to build a product and then ship it out the door: a library or framework may be a means to that end. So again, understand what your app must do because a framework or library may help your app "do" it better.
 
 <h2>Conclusion</h2>
-
-(freelancers worked at a company first)
