@@ -103,7 +103,7 @@ You need to make learning new JS stuff on your time a regular thing, frameworks 
 <h2>The complaints about professional programming (whatever that means)</h2>
 There are, however, many developers who believe that JavaScript frameworks and libraries should be completely avoided and we should just use vanilla JavaScript. And they're pretty passionate in their belief.
 
-I carried this belief once and must say that I became a WAAAAAAY better JavaScript developer as a result. My knowledge of the language's fundamentals increased: writing powerful & concise functions, properly <code>return</code> values, prototypal inheritance, etc.
+I carried this belief once and in all fairness, I became a better JavaScript developer as a result. My knowledge of the JS fundamentals increased: writing powerful & concise functions, using<code>return</code> correctly, prototypal inheritance, etc.
 
 So yes, focusing my energy towards learning pure, unadulterated vanilla JS helped me. But even with that, here's what I think:
 <blockquote class="content--blockquote-margin">
@@ -118,7 +118,7 @@ And what if you're part of a team of developers? Using a well-tested library/fra
 
 For example, with React I can tell someone, "solve your problem by using this pre-built component that so-and-so built." Much easier than "cut-and-paste this code block that so-and-so wrote but you'll have to ask so-and-so what to do next."
 
-Regarding is comments about developers dismissing JS tooling based on learning curves and filesizes, Luecke went on to say this:
+Regarding his comments about developers dismissing JS tooling based on learning curves and filesizes, Luecke went on to say this:
 <blockquote class="content--blockquote-margin">
 This mentality is pretty rare in the world of native development though. Almost every decent developer I know has no problem spending a weekend learning some new and cool tool, but sadly, this spirit seems to be absent from the web culture."
 </blockquote>
