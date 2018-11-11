@@ -5,12 +5,12 @@ title:  "JavaScript Developers: Start Focusing On The Right Stuff"
 date:   2018-10-31 00:00:50 -0400
 categories: personal
 category-name: Personal
-permalink: /javacript-developer-focus/
+permalink: /javascript-developer-focus/
 excerpt: Focusing on core JavaScript fundamentals is key to your growth as a developer. But you need to focus on JS libraries & frameworks as well.
 og-image: js-focus.jpg
 thumb-image: js-focus-thumb.jpg
 ---
-My last 10 months as a JavaScript developer have been a period of self-assessment. Primarily, I've reviewed <em>how</em> I write application code and not the libraries and frameworks I use to write it.
+My last six months as a JavaScript developer have included a period of self-assessment. Primarily, I've reviewed <em>how</em> I build JavaScript apps: not the libraries and frameworks I use to help me build them.
 
 I've also researched how other developers write code and have collectively learned great things from them. But when it comes to libs and frameworks, I've discovered too many instances of developers spending (I think) too much time worrying about the wrong things.
 
