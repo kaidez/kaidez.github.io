@@ -140,7 +140,9 @@ It'd be great if solving problems was always easy. But it isn't and we have to u
 
 Chris Ferdinandi wrote this <a href="https://gomakethings.com/getting-direct-descendant-elements-by-selector-with-vanilla-js/">this great article about iterating over array-like objects.</a> You can't do stuff like <code>.forEach()</code> and <code>.map()</code> on things that are "array-ish"...NodeLists, strings, anything that has a <code>length</code> property but isn't connected to <code>Array.prototype</code>.
 
-Converting these things into iterable arrays is a common use case: the fix for it was a hacky way of using <code>.call()</code>. Then ES6 gave us <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from">Array.from()</a> to do the same thing, hack-free.
+Converting these things into iterable arrays is a common use case: the fix for it was a hacky way of using <code>.call()</code>. Then ES6 gave us <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from"><code>Array.from()</code></a> to do the same thing, hack-free.
+
+Chris suggested that <code>Array.from()</code> as possi
 <h2>Look at the big picture</h2>
 the idea that...is ridiculous, was is professional is
 Understand what your app must do before rejecting (or accepting) any framework or library in your code. Because a framework or lib may help your app "do" it better.
