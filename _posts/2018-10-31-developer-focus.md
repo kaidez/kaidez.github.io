@@ -126,9 +126,21 @@ That's all it does for me: from there, writing pure, vanilla JavaScript is my re
 
 React doesn't help me with any of this.  It gives me a nice container to place that code inside of, but that's it.
 
-I'm using React to deliver production-quality code on time. I don't see how this is unprofessional.
+I'm using React to deliver production-quality code on time. I don't see why this is unprofessional.
 <h2>Attitudes like this exist everywhere in web development</h2>
+And it doesn't stop with these instances. This attitude is all over the JS dev world.
 
+For that Andrew Welch webpack article, the <em>very</em> first comment was:
+<blockquote class="content--blockquote-margin">
+Why do we keep making the build and deploy setups more complex than the apps we're deploying?
+</blockquote >
+Granted, that was the only negative-type comment, but it's pretty obvious that the article's code example wasn't a universal solution. And webpack has proved how well it can solve JS performance problems.
+
+It'd be great if solving problems was always easy. But it isn't and we have to use the best tools available.
+
+Chris Ferdinandi wrote this <a href="https://gomakethings.com/getting-direct-descendant-elements-by-selector-with-vanilla-js/">this great article about iterating over array-like objects.</a> You can't do stuff like <code>.forEach()</code> and <code>.map()</code> on things that are "array-ish"...NodeLists, strings, anything that has a <code>length</code> property but isn't connected to <code>Array.prototype</code>.
+
+Converting these things into iterable arrays is a common use case: the fix for it was a hacky way of using <code>.call()</code>. Then ES6 gave us <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from">Array.from()</a> to do the same thing, hack-free.
 <h2>Look at the big picture</h2>
 the idea that...is ridiculous, was is professional is
 Understand what your app must do before rejecting (or accepting) any framework or library in your code. Because a framework or lib may help your app "do" it better.
