@@ -138,13 +138,16 @@ Granted, that was the only negative-type comment, but it's pretty obvious that t
 
 It'd be great if solving problems was always easy. But it isn't and we have to use the best tools available.
 
-Chris Ferdinandi wrote <a href="https://gomakethings.com/getting-direct-descendant-elements-by-selector-with-vanilla-js/">a great article about iterating over things that are "array-ish</a>.  NodeLists, strings, anything that has a <code>length</code> property but isn't connected to <code>Array.prototype</code>.
+Chris Ferdinandi wrote <a href="https://gomakethings.com/getting-direct-descendant-elements-by-selector-with-vanilla-js/">a great article about iterating over things that are "array-ish</a>.  NodeLists, strings, any object that has a <code>length</code> property but doesn't have the array prototype.
 
-You can't use array methods like <code>.forEach()</code> and <code>.map()</code> on objects like that. To do that, you had to attach <code>Array.prototype</code> to the object using <code>.call()</code>...a little hacky but it worked.
+Previously, you couldn't use certain array methods like <code>.filter()</code> on such objects unless you used the <code>Array.prototype.call()</code> method. It was a hacky solution, but it worked and became the unspoken, agreed-upon solution.
 
-Then ES6 gave us <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from"><code>Array.from()</code></a> to do the same thing, hack-free.
+Then ES6 gave us <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from"><code>Array.from()</code></a> to do the <em>exact</em> same thing in cleaner, hack-free way. But Chris suggests using <code>Array.prototype.call()</code> anyway:
+<blockquote class="content--blockquote-margin">
+You could use <code>Array.from()</code>...but browser support isn’t great and it requires a polyfill.
+</blockquote >
 
-Chris suggested that <code>Array.from()</code> as possi
+That's true and it should be pointed out that Ferdinandi focuses on
 <h2>Look at the big picture</h2>
 the idea that...is ridiculous, was is professional is
 Understand what your app must do before rejecting (or accepting) any framework or library in your code. Because a framework or lib may help your app "do" it better.
