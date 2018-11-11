@@ -5,7 +5,7 @@ title:  "JavaScript Developers: Start Focusing On The Right Stuff"
 date:   2018-10-31 00:00:50 -0400
 categories: personal
 category-name: Personal
-permalink: /developer-focus/
+permalink: /javacript-developer-focus/
 excerpt: Focusing on core JavaScript fundamentals is key to your growth as a developer. But you need to focus on JS libraries & frameworks as well.
 og-image: js-focus.jpg
 thumb-image: js-focus-thumb.jpg
@@ -81,7 +81,7 @@ Whatever your opinion here, optimize your images as well as your JavaScript. Thi
 * serving images (as well as JS, CSS and font files) from a CDN if you can.
 * ~maybe~ looking at <a href="https://www.nikonusa.com/en/learn-and-explore/a/tips-and-techniques/bokeh-for-beginners.html">Bokeh</a> to further optimize your images.
 
-And performance depends on more than this: aggressive browser caching, for example, gives other performance wins. Plus, HTML minification is still a good idea, and your app will be slow if it's hosted with a low-end shared USD $5/month plan.
+And performance depends on more than this: aggressive browser caching, for example, gives other performance wins. Plus, file minification is still a good idea, and your app will be slow if it's hosted with a low-end shared USD $5/month plan.
 
 Many things can slow an app down: don't put the blame for this all on JavaScript.
 <h2>The complaints about learning curves</h2>
@@ -100,36 +100,45 @@ Newly-released JS libs and frameworks are part of this change. Despite performan
 A developer familiar with a variety of libs/frameworks has problem solving-power that can be passed on to either their day job boss or freelance clients. As a result, the value (or, "paycheck") of the individual developer rises.
 
 You need to make learning new JavaScript stuff on your time a regular thing, frameworks and libraries included. You may think there's nothing to lose if you don't learn them, but there's certainly nothing to gain by <em>not</em> learning them.
-<h2>The complaints about professional programming (whatever that means)</h2>
-There are, however, many developers who believe that JavaScript frameworks and libraries should be completely avoided and we should just use vanilla JavaScript. And they're pretty passionate in their belief.
+<h2>The complaints about "unprofessional programming" (whatever that means)</h2>
+However, there are many developers who believe that those who use frameworks and libraries are non-professional "newbies". That libs/frameworks should be completely avoided and we should just use vanilla JavaScript, and they're passionate in their belief.
 
-I carried this belief once and in all fairness, I became a better JavaScript developer as a result. My knowledge of the JS fundamentals increased: writing powerful & concise functions, using<code>return</code> correctly, prototypal inheritance, etc.
+I carried this belief once and in all fairness, I became a better JavaScript developer as a result. My knowledge of JS fundamentals increased: writing powerful & concise functions, using <code>return</code> correctly, understanding prototypal inheritance, etc.
 
-So yes, focusing my energy towards learning pure, unadulterated vanilla JS helped me. But even with that, here's what I think:
-<blockquote class="content--blockquote-margin">
-The idea that JavaScript frameworks and libraries is unprofessional is total bullshit.
-</blockquote>
+So yes, focusing my energy towards learning pure, unadulterated vanilla JS helped me. Still, I believe that <strong>the idea that using JavaScript frameworks and libraries is unprofessional is total bullshit.</strong>
 
-Firstly, my writing lots of vanilla JavaScript has trained me to find ways to write less of it when possible. I'm able to produce lots of high-quality code much quicker when there <em>is</em> a way.
+Firstly, my writing lots of vanilla JavaScript has trained me to find ways to write less of it when possible. I'm able to produce lots of high-quality code much quicker when a lib or framework gives me a way.
 
-The aforementioned Ember, which <a href="https://www.lynda.com/Emberjs-tutorials/Up-Running-Emberjs/178116-2.html">I've obviously used</a>, has a big file size and gets updated too frequently for some developers. But if I need to build an app that users will open up and then use for a long time (like MS Word), Ember has a feature-rich API that will help me finish the project...fast.
+The aforementioned Ember, which <a href="https://www.lynda.com/Emberjs-tutorials/Up-Running-Emberjs/178116-2.html">I've obviously used</a>, has a big file size and gets updated too frequently for my comfort. But if I'm building an app that users will open up and then use for a long time (like they would with MS Word), Ember has a feature-rich API that will help me finish the project fast.
 
-And what if you're part of a team of developers? Using a well-tested library/framework helps here because <strong>it provides your team a shared language, making collaboration simple and pleasant</strong>.
+And what if you're part of a team of developers? Using a library or framework helps here because <strong>it provides your team a shared language, making collaboration and communication easier</strong>.
 
 For example, with React I can tell someone, "solve your problem by using this pre-built component that so-and-so built." Much easier than "cut-and-paste this code block that so-and-so wrote but you'll have to ask so-and-so what to do next."
 
-Regarding his comments about developers dismissing JS tooling based on learning curves and filesizes, Luecke went on to say this:
+I've said this many MANY times before and I'll say it again:
 <blockquote class="content--blockquote-margin">
-This mentality is pretty rare in the world of native development though. Almost every decent developer I know has no problem spending a weekend learning some new and cool tool, but sadly, this spirit seems to be absent from the web culture."
-</blockquote>
+Using JavaScript libraries and frameworks isn't unprofessional; however, using them without understanding the core language fundamentals behind them is.
+</blockquote >
 
-I would apply these comments to java, php, ruby
+Yeah, I use React everyday now, but it's because of its above-mentioned thoughtful component model. It lets me create huge chunks of UI that are easily reusable and easily editable.
 
+That's all it does for me: from there, writing pure, vanilla JavaScript is my responsibility. I have to understand the use cases for using <code>let</code> or <code>const</code>, returning Promises and looping over JSON Objects.
+
+React doesn't help me with any of this.  It gives me a nice container to place that code inside of, but that's it.
+
+I'm using React to deliver production-quality code on time. I don't see how this is unprofessional.
+<h2>Attitudes like this exist everywhere in web development</h2>
 
 <h2>Look at the big picture</h2>
+the idea that...is ridiculous, was is professional is
 Understand what your app must do before rejecting (or accepting) any framework or library in your code. Because a framework or lib may help your app "do" it better.
 
 At the end of the day, you need to ship a product out the door. Depending on what it takes to do that, a library or framework may be a means to that end.
+
+Luecke pointed out that dismissing JS tooling based on learning curves and filesizes was common in the web dev world but not the native development world. I would say the same thing happens
+
+I would apply these comments to java, php, ruby
+
 (freelancers worked at a company first)
 
 (i read stuff to make me better)
