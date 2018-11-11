@@ -10,15 +10,15 @@ excerpt: Focusing on core JavaScript fundamentals is key to your growth as a dev
 og-image: js-focus.jpg
 thumb-image: js-focus-thumb.jpg
 ---
-My last 10 months as a JavaScript developer have been a period of self-assessment. Primarily, I've focused on <em>how</em> I write application code and not the libraries and frameworks I use to write it.
+My last 10 months as a JavaScript developer have been a period of self-assessment. Primarily, I've reviewed <em>how</em> I write application code and not the libraries and frameworks I use to write it.
 
 I've also researched how other developers write code and have collectively learned great things from them. But when it comes to libs and frameworks, I've discovered too many instances of developers spending (I think) too much time worrying about the wrong things.
 
 <h2>How this all began</h2>
-It all started when I began working with <a href="https://reactjs.org/">React</a> on a daily basis. Because of this, I see three positive things that React brings to the JavaScript developer conversation:
+It all started after a lengthy period of working with <a href="https://reactjs.org/">React</a> on a daily basis. Because of this, I see three positive things that React brings to the JavaScript developer conversation:
 
 1. <strong>manipulating app views with a state object</strong>: changing your app's view/state with a standard "key:value" object (not the DOM) is cool.
-2. <strong>enforcing functional programming</strong>: the idea that a function should do one thing well and do it in its own world without affecting the world around it is put into effect with React.
+2. <strong>focus on functional programming</strong>: React highlights the idea that a function should do one thing well, and do it in its own world without affecting the world around it.
 3. <strong>thoughtful component model</strong>: I'm stealing that phrase from <a href="https://medium.com/bumpers/isnt-our-code-just-the-best-f028a78f33a9">Jacob Thornton's great React article</a> but he's right. When it comes to encapsulating chunks of UI inside a single reusable component, React does it well.
 
 All these things are great because <strong>they encourage computer science best practices in JavaScript development</strong>. As JS progresses from making neat rollovers to a full-on application language, it's right to bring in these practices.
@@ -44,19 +44,19 @@ I had real-world web developer stuff to deal with so I moved on.
 <h2>What Kevin said</h2>
 Then, maybe on a subconscious impulse, I re-read <a href="https://web.archive.org/web/20130324030838/http://randyluecke.tumblr.com:80/post/45915323813/im-done-with-the-web">Kevin Luecke's "I'm done with the web" article</a>. An article that bummed me out when I first read it four-and-a-half years ago.
 
-Kevin wasn't "done with the web" literally, but he was "done" with embracing the web developer community to the extent that he did. The catalyst for this was his frustration with why developers hastily rejected certain JavaScript UI frameworks.
+Kevin wasn't "done with the web" literally, but he was "done" with embracing the web developer community to the extent that he did. One reason for this was his frustration with why these developers hastily rejected certain JavaScript UI frameworks.
 
-Even though things like <a href="http://www.cappuccino-project.org/">Cappuccino</a> and <a href="https://www.emberjs.com/">Ember</a> solved problems, web devs shunned them because of their seemingly large, low-performant file sizes and steep learning curves. Little time, if any, was spent seeing if they solved any problems: the knee-jerk reaction to reject them based on those things.
+Even though things like <a href="http://www.cappuccino-project.org/">Cappuccino</a> and <a href="https://www.emberjs.com/">Ember</a> solved problems, web devs shunned them because of their seemingly large, low-performant file sizes and steep learning curves. Little time, if any, was spent seeing if they solved problems: the knee-jerk reaction to reject them based on those things.
 
-Kevin said that the web developer community was essentially spending too much time worrying about the wrong stuff. He also pointed out that this doesn't happen in the native software development community: I'm assuming he was referring to the Java community, the PHP community, the Ruby community etc.
+Kevin used other examples of web developers focusing on small, non-essential problems he felt were holding back web app progression. He felt the community was spending too much time solving the worrying about the wrong stuff.
 
-He had enough of this "stagnation" as he phrased it so he, himself, moved on. From the web dev community, that is.
+He had enough of this "stagnation" as he phrased it so he, himself, moved on. From the web dev community, that is, and towards native app development.
 
 What bummed me out about this article was how I'm a part of this community that rashly rejects stuff. Also, he made some <a href="https://www.youtube.com/watch?v=19g4n0ZxiYM&feature=youtu.be&t=2836">comments about "people that don't know how to program"</a> and I wondered if it was part of that community as well.
 <h2>What Kevin's article was really about</h2>
-First, I don't know the context of Kevin Luecke's comments regarding developers knowing how to program. So I'm not going to take them <em>out</em> of context and let them bum me out.
+First, I don't know the context of Kevin Luecke's comments regarding developers that don't know how to program. So I'm not going to take them <em>out</em> of context and let them bum me out.
 
-I'm a self-taught, web developer: I learned web stuff at a time when those that knew even a <em>little</em> HTML were incredibly employable.  I've continued to do web stuff for a long time since, giving me experience that <em>keeps</em> me incredibly employable.
+I'm a self-taught, web developer: I learned web stuff at a time when those that knew even a <em>little</em> HTML were incredibly employable.  I've continued to do web stuff for a long time since then, giving me experience that <em>keeps</em> me incredibly employable.
 
 Since I'm not a classically-trained computer science developer, I'll have to deal any feelings of insignificance that come up as a result of this.  OK...I can deal with that.
 
@@ -71,9 +71,9 @@ Most of these practices are built around the <a href="https://webpack.js.org/">w
 
 Andrew Welch wrote <a href="https://nystudio107.com/blog/an-annotated-webpack-4-config-for-frontend-web-development">a ridiculously thorough article on setting up webpack.</a> Just like JS libraries and frameworks, webpack comes with a bit of a learning curve so it's worth a read.
 
-Addy Osmani wrote <a href="https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4">a pretty definitive article on JS performance</a>...give it a read as well.  It discusses webpack stuff and code-splitting, along with other things like performance budgets, critical paths and testing/auditing tools.
+Addy Osmani wrote <a href="https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4">a pretty definitive article on JS performance</a>...give it a read as well.  It discusses webpack and code-splitting stuff, along with other things like performance budgets, critical paths and testing/auditing tools.
 <h2>Other performance stuff</h2>
-Images are usually blamed for causing the most performance issues and Kevin Luecke mentions them in his article. But Osmani's article argues that JS may be the bigger performance headache because images only need to download while JS files have to download code, then parse and execute it.
+Images are usually blamed for causing the most performance issues and Luecke mentions them in his article. But Osmani's article argues that JS may be the bigger performance headache because images only need to download while JS files have to download, then parse and execute code.
 
 Whatever your opinion here, optimize your images as well as your JavaScript. This means doing things like:
 * using Photoshop  "export/Save for Web" your images.
@@ -99,7 +99,7 @@ Newly-released JS libs and frameworks are part of this change. Despite performan
 
 A developer familiar with a variety of libs/frameworks has problem solving-power that can be passed on to either their day job boss or freelance clients. As a result, the value (or, "paycheck") of the individual developer rises.
 
-You need to make learning new JS stuff on your time a regular thing, frameworks and libraries included. You may believe that there's nothing to lose if you don't learn them, but there's certainly nothing to gain by <em>not</em> learning them.
+You need to make learning new JavaScript stuff on your time a regular thing, frameworks and libraries included. You may think there's nothing to lose if you don't learn them, but there's certainly nothing to gain by <em>not</em> learning them.
 <h2>The complaints about professional programming (whatever that means)</h2>
 There are, however, many developers who believe that JavaScript frameworks and libraries should be completely avoided and we should just use vanilla JavaScript. And they're pretty passionate in their belief.
 
@@ -123,12 +123,13 @@ Regarding his comments about developers dismissing JS tooling based on learning 
 This mentality is pretty rare in the world of native development though. Almost every decent developer I know has no problem spending a weekend learning some new and cool tool, but sadly, this spirit seems to be absent from the web culture."
 </blockquote>
 
-I would
-At the end of the day, you need to ship a product out the door. Depending on what it takes to do that, a library or framework may be a means to that end.
+I would apply these comments to java, php, ruby
+
 
 <h2>Look at the big picture</h2>
 Understand what your app must do before rejecting (or accepting) any framework or library in your code. Because a framework or lib may help your app "do" it better.
 
+At the end of the day, you need to ship a product out the door. Depending on what it takes to do that, a library or framework may be a means to that end.
 (freelancers worked at a company first)
 
 (i read stuff to make me better)
