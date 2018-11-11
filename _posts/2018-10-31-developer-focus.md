@@ -81,7 +81,7 @@ Whatever your opinion here, optimize your images as well as your JavaScript. Thi
 * if you can, using a CDN to serve out images...as well as JS, CSS and font files.
 * ~maybe~ looking at <a href="https://www.nikonusa.com/en/learn-and-explore/a/tips-and-techniques/bokeh-for-beginners.html">Bokeh</a> to further optimize your images.
 
-And performance depends on more than this: aggressive browser caching, for example, gives other performance wins. Plus, file minification is still a good idea, and your app will be slow if it's hosted with a low-end shared USD $5/month plan.
+And performance depends on more than this: aggressive browser caching gives other performance wins. Plus, file minification is still a good idea, and your app will be slow if it's hosted with a low-end shared USD $5/month plan.
 
 Many things can slow an app down: don't put the blame for this all on JavaScript.
 <h2>The complaints about learning curves</h2>
@@ -109,11 +109,9 @@ So yes, focusing my energy towards learning pure, unadulterated vanilla JS helpe
 
 Firstly, my writing lots of vanilla JavaScript has trained me to find ways to write less of it when possible. I'm able to produce lots of high-quality code much quicker when a lib or framework gives me a way.
 
-The aforementioned Ember, which <a href="https://www.lynda.com/Emberjs-tutorials/Up-Running-Emberjs/178116-2.html">I've obviously used</a>, has a big file size and gets updated too frequently for my comfort. But if I'm building an app that users will open up and then use for a long time (like they would with MS Word), Ember has a feature-rich API that will help me finish the project fast.
-
 And what if you're part of a team of developers? Using a library or framework helps here because <strong>it provides your team a shared language, making collaboration and communication easier</strong>.
 
-For example, with React I can tell someone, "solve your problem by using this pre-built component that so-and-so built." Much easier than "cut-and-paste this code block that so-and-so wrote but you'll have to ask so-and-so what to do next."
+With React I can tell someone, "solve your problem by using this pre-built component that so-and-so built." Much easier than "cut-and-paste this code block that so-and-so wrote but you'll have to ask so-and-so what to do next."
 
 I've said this many MANY times before and I'll say it again:
 <blockquote class="content--blockquote-margin">
@@ -127,32 +125,16 @@ That's all it does for me: from there, writing pure, vanilla JavaScript is my re
 React doesn't help me with any of this.  It gives me a nice container to place that code inside of, but that's it.
 
 I'm using React to deliver production-quality code on time. I don't see why this is unprofessional.
-<h2>Attitudes like this exist everywhere in web development</h2>
-And it doesn't stop with these instances. This attitude is all over the JS dev world.
+<h2>Understand the business process behind the app</h2>
+Before you decide whether or not to use a library or framework, have a clear understanding of your project's goals. Understand the your app must do before rejecting the tools that can help you build it.
 
-For that Andrew Welch webpack article, the <em>very</em> first comment was:
-<blockquote class="content--blockquote-margin">
-Why do we keep making the build and deploy setups more complex than the apps we're deploying?
-</blockquote >
-Granted, that was the only negative-type comment, but it's pretty obvious that the article's code example wasn't a universal solution. And webpack has proved how well it can solve JS performance problems.
+Ember, which <a href="https://www.lynda.com/Emberjs-tutorials/Up-Running-Emberjs/178116-2.html">I've obviously used</a>, has a big file size and gets updated too frequently for my comfort. But if I'm building an app that users will open up and then use for a long time (like they would with MS Word), Ember has a feature-rich API that will help me finish the project fast.
 
-It'd be great if solving problems was always easy. But it isn't and we have to use the best tools available.
+Speaking for myself, this is an area where I've made mistakes in the past.
 
-Chris Ferdinandi wrote <a href="https://gomakethings.com/getting-direct-descendant-elements-by-selector-with-vanilla-js/">a great article about iterating over things that are "array-ish</a>.  NodeLists, strings, any object that has a <code>length</code> property but doesn't have the array prototype.
+You need to ship a product out the door: a library or framework may be a means to that end. So again, understand what your app must do because a framework or lib may help your app "do" it better.
 
-Previously, you couldn't use certain array methods like <code>.filter()</code> on such objects unless you used the <code>Array.prototype.call()</code> method. It was a hacky solution, but it worked and became the unspoken, agreed-upon solution.
 
-Then ES6 gave us <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from"><code>Array.from()</code></a> to do the <em>exact</em> same thing in cleaner, hack-free way. But Chris suggests using <code>Array.prototype.call()</code> anyway:
-<blockquote class="content--blockquote-margin">
-You could use <code>Array.from()</code>...but browser support isn’t great and it requires a polyfill.
-</blockquote >
-
-That's true and it should be pointed out that Ferdinandi focuses on
-<h2>Look at the big picture</h2>
-the idea that...is ridiculous, was is professional is
-Understand what your app must do before rejecting (or accepting) any framework or library in your code. Because a framework or lib may help your app "do" it better.
-
-At the end of the day, you need to ship a product out the door. Depending on what it takes to do that, a library or framework may be a means to that end.
 
 Luecke pointed out that dismissing JS tooling based on learning curves and filesizes was common in the web dev world but not the native development world. I would say the same thing happens
 
