@@ -138,9 +138,11 @@ Granted, that was the only negative-type comment, but it's pretty obvious that t
 
 It'd be great if solving problems was always easy. But it isn't and we have to use the best tools available.
 
-Chris Ferdinandi wrote this <a href="https://gomakethings.com/getting-direct-descendant-elements-by-selector-with-vanilla-js/">this great article about iterating over array-like objects.</a> You can't do stuff like <code>.forEach()</code> and <code>.map()</code> on things that are "array-ish"...NodeLists, strings, anything that has a <code>length</code> property but isn't connected to <code>Array.prototype</code>.
+Chris Ferdinandi wrote <a href="https://gomakethings.com/getting-direct-descendant-elements-by-selector-with-vanilla-js/">a great article about iterating over things that are "array-ish</a>.  NodeLists, strings, anything that has a <code>length</code> property but isn't connected to <code>Array.prototype</code>.
 
-Converting these things into iterable arrays is a common use case: the fix for it was a hacky way of using <code>.call()</code>. Then ES6 gave us <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from"><code>Array.from()</code></a> to do the same thing, hack-free.
+You can't use array methods like <code>.forEach()</code> and <code>.map()</code> on objects like that. To do that, you had to attach <code>Array.prototype</code> to the object using <code>.call()</code>...a little hacky but it worked.
+
+Then ES6 gave us <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from"><code>Array.from()</code></a> to do the same thing, hack-free.
 
 Chris suggested that <code>Array.from()</code> as possi
 <h2>Look at the big picture</h2>
