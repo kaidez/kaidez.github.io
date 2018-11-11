@@ -18,7 +18,7 @@ I've also researched how other developers write code and have collectively learn
 It all started after a lengthy period of working with <a href="https://reactjs.org/">React</a> on a daily basis. Because of this, I see three positive things that React brings to the JavaScript developer conversation:
 
 1. <strong>manipulating app views with a state object</strong>: changing your app's view/state with a standard "key:value" object (not the DOM) is cool.
-2. <strong>focus on functional programming</strong>: React highlights the idea that a function should do one thing well, and do it in its own world without affecting the world around it.
+2. <strong>a focus on functional programming</strong>: React promotes the idea that a function should do one thing well, and do it in its own world without affecting the world around it.
 3. <strong>thoughtful component model</strong>: I'm stealing that phrase from <a href="https://medium.com/bumpers/isnt-our-code-just-the-best-f028a78f33a9">Jacob Thornton's great React article</a> but he's right. When it comes to encapsulating chunks of UI inside a single reusable component, React does it well.
 
 All these things are great because <strong>they encourage computer science best practices in JavaScript development</strong>. As JS progresses from making neat rollovers to a full-on application language, it's right to bring in these practices.
@@ -44,11 +44,11 @@ I had real-world web developer stuff to deal with so I moved on.
 <h2>What Kevin said</h2>
 Then, maybe on a subconscious impulse, I re-read <a href="https://web.archive.org/web/20130324030838/http://randyluecke.tumblr.com:80/post/45915323813/im-done-with-the-web">Kevin Luecke's "I'm done with the web" article</a>. An article that bummed me out when I first read it four-and-a-half years ago.
 
-Kevin wasn't "done with the web" literally, but he was "done" with embracing the web developer community to the extent that he did. One reason for this was his frustration with why these developers hastily rejected certain JavaScript UI frameworks.
+Kevin wasn't "done with the web" literally, but he was "done" with embracing the web developer community to the extent that he had. One reason for this was his frustration with why these developers hastily rejected certain JavaScript UI frameworks.
 
 Even though things like <a href="http://www.cappuccino-project.org/">Cappuccino</a> and <a href="https://www.emberjs.com/">Ember</a> solved problems, web devs shunned them because of their seemingly large, low-performant file sizes and steep learning curves. Little time, if any, was spent seeing if they solved problems: the knee-jerk reaction to reject them based on those things.
 
-Kevin used other examples of web developers focusing on small, non-essential problems he felt were holding back web app progression. He felt the community was spending too much time solving the worrying about the wrong stuff.
+Kevin used other examples of web developers focusing on small-ish problems and he felt this slowed web app progression. He felt the community was spending too much time worrying about the wrong stuff.
 
 He had enough of this "stagnation" as he phrased it so he, himself, moved on. From the web dev community, that is, and towards native app development.
 
