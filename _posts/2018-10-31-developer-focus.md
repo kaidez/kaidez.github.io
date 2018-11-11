@@ -10,15 +10,15 @@ excerpt: Focusing on core JavaScript fundamentals is key to your growth as a dev
 og-image: js-focus.jpg
 thumb-image: js-focus-thumb.jpg
 ---
-My last six months as a JavaScript developer have included a period of self-assessment. Primarily, I've reviewed <em>how</em> I build JavaScript apps: not the libraries and frameworks I use to help me build them.
+My last six months as a JavaScript developer have included a period of self-assessment. Primarily, I've reviewed <em>how</em> I build JavaScript applications: not the libraries and frameworks that help me build them.
 
-I've also researched how other developers write code and have collectively learned great things from them. But when it comes to libs and frameworks, I've discovered too many instances of developers spending (I think) too much time worrying about the wrong things.
+I've also researched how other developers build apps and, collectively, have learned great things from them. But when discussing libraries and frameworks, I've discovered too many instances of developers rejecting them for the wrong reasons.
 
 <h2>How this all began</h2>
 It all started after a lengthy period of working with <a href="https://reactjs.org/">React</a> on a daily basis. Because of this, I see three positive things that React brings to the JavaScript developer conversation:
 
 1. <strong>manipulating app views with a state object</strong>: changing your app's view/state with a standard "key:value" object (not the DOM) is cool.
-2. <strong>a focus on functional programming</strong>: React promotes the idea that a function should do one thing well, and do it in its own world without affecting the world around it.
+2. <strong>a focus on functional programming</strong>: React promotes the idea that a function should do one thing well, do that thing in its own world, and do it without affecting the world around it.
 3. <strong>thoughtful component model</strong>: I'm stealing that phrase from <a href="https://medium.com/bumpers/isnt-our-code-just-the-best-f028a78f33a9">Jacob Thornton's great React article</a> but he's right. When it comes to encapsulating chunks of UI inside a single reusable component, React does it well.
 
 All these things are great because <strong>they encourage computer science best practices in JavaScript development</strong>. As JS progresses from making neat rollovers to a full-on application language, it's right to bring in these practices.
@@ -43,7 +43,7 @@ Some comments I engaged with (mostly online) and some I didn't. But they didn't 
 
 I had real-world web developer stuff to deal with so I moved on.
 <h2>What Kevin said</h2>
-Then, maybe on a subconscious impulse, I re-read <a href="https://web.archive.org/web/20130324030838/http://randyluecke.tumblr.com:80/post/45915323813/im-done-with-the-web">Kevin Luecke's "I'm done with the web" article</a>. An article that bummed me out when I first read it four-and-a-half years ago.
+Then, maybe on a subconscious impulse, I re-read <a href="https://web.archive.org/web/20130324030838/http://randyluecke.tumblr.com:80/post/45915323813/im-done-with-the-web">Kevin Luecke's "I'm done with the web" article</a>. An article that bummed me out when I first read it in 2013.
 
 Kevin wasn't "done with the web" literally, but he was "done" with embracing the web developer community to the extent that he had. One reason for this was his frustration with why these developers hastily rejected certain JavaScript UI frameworks.
 
@@ -59,12 +59,12 @@ First, I don't know the context of Kevin Luecke's comments regarding developers 
 
 I'm a self-taught, web developer: I learned web stuff at a time when those that knew even a <em>little</em> HTML were incredibly employable.  I've continued to do web stuff for a long time since then, giving me experience that <em>keeps</em> me incredibly employable.
 
-Since I'm not a classically-trained computer science developer, I'll have to deal any feelings of insignificance that come up as a result of this.  OK...I can deal with that.
+Since I'm not a classically-trained computer science developer, I'll always have to deal any feelings of insignificance that come up around that.  OK...I'll live with that.
 
-Second, worrying about my feelings kept me from realizing the main point of the article. That <strong>when web developers evaluate if some software solves their problems, they consistently reject it for the wrong reasons</strong>.
+Second, worrying about my feelings kept me from realizing the main point of that article. That <strong>when web developers evaluate certain tooling, they too often reject it for the wrong reasons</strong>.
 
 <h2>The complaints about performance</h2>
-To be fair, I can't really say that JS complaints performance are "wrong". Making apps as fast as possible is important as our dependency on mobile rises, and less JavaScript makes them faster.
+To be fair, I can't really say that JS complaints about performance are "wrong". Making apps as fast as possible is important as our dependency on mobile rises, and less JavaScript makes them faster.
 
 But if an app requires lots of interactive features, as many do, then a lib or framework may be needed to quickly build out those features. Thankfully, the JS community has developed lots of non-hacky best practices to increase performance for this use case.
 
