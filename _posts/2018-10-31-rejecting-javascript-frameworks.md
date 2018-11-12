@@ -14,6 +14,9 @@ My last six months as a JavaScript developer have included a period of self-asse
 
 I've also researched how other developers write code and, collectively, have learned great things from them. But when discussing libraries and frameworks, I've discovered too many instances of developers rejecting them for the wrong reasons.
 
+<h2>A disclaimer</h2>
+I'm talking from a React POV because that's what I've been using lately. Don't take it to mean I think everyone should use React...it's just my POV for this post.
+
 <h2>How this all began</h2>
 It all started after a lengthy period of using <a href="https://reactjs.org/">React</a> on a daily basis. Consequently, I see three positive things that React brings to the JavaScript developer conversation:
 
@@ -90,9 +93,7 @@ But this is how JavaScript is right now and this rapid change shows no signs of 
 
 If you're used to changing your UI with DOM manipulation, React <em>might</em> have a bit of learning curve. React makes you change UI by updating a state object instead of using something like <code>document.querySelector</code>.
 
-But that also has some performance wins. Combine this with <a href="https://reactjs.org/docs/reconciliation.html">React's reconciliation and "diffing" features</a> and React may be more high-performant than you think.
-
-Despite performance concerns, libraries and frameworks solve someone's problem somewhere in the world. So a developer that's familiar with, at least the popular ones, is a valuable asset.
+But regardless of learn curves, libraries and frameworks solve someone's problem somewhere in the world. So a developer that's familiar with, at least the popular ones, is a valuable asset.
 
 Developers like this have "problem solving-power": the ability to look at a problem and say "this framework is our solution."  Day job bosses and freelance clients love this.
 
