@@ -156,4 +156,4 @@ Why do we keep making the build and deploy setups more complex than the apps we'
 </blockquote>
 I don't know if the build process is "more complex" but I think it's more complex than it was before. And Welch's response to the comment was proper: it terms of the complexity, "it depends on what you're building."
 
-Regardless, this is current state of JavaScript development.
+This is current state of JavaScript development. The language is used to create both web <em>and</em> native apps, both of which need complex functionality that can be efficiently created libs and frameworks.
