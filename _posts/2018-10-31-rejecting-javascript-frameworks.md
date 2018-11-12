@@ -100,7 +100,7 @@ Despite performance concerns, libraries and frameworks solve someone's problem s
 
 Developers like this have "problem solving-power": the ability to look at a problem and say "this framework is our solution."  Day job bosses and freelance clients love this.
 
-You need to make time to learn new JavaScript stuff, frameworks and libraries included. You may think there's nothing to lose by not learning them, but there's nothing to gain as well.
+You need to make time to learn new JavaScript stuff, frameworks and libraries included. You may think there's nothing to lose by not learning them but if you do that, there's nothing to gain.
 <h2>The complaints about "unprofessional programming" (whatever that means)</h2>
 However, lots of developers believe the ones using frameworks and libraries have no value and are unprofessional. That libs/frameworks should be completely avoided and we should just use vanilla JavaScript, and they're passionate in their belief.
 
