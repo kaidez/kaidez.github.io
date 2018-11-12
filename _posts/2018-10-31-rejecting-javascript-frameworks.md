@@ -66,7 +66,7 @@ Second, worrying about my feelings kept me from realizing the main point of that
 <h2>The complaints about performance</h2>
 To be fair, I can't really say that JS complaints about performance are "wrong". Making application code as light as possible is important as our dependency on mobile rises...less JavaScript makes them faster.
 
-But if an app requires lots of interactive features, as many do, then a lib or framework may be needed to quickly build out those features. Thankfully, the JS community has developed lots of non-hacky best practices to increase performance for this use case.
+But if an app requires lots of interactive features, as many do, then a library or framework may be needed to quickly build out those features. Thankfully, the JS community has developed lots of non-hacky best practices to increase performance for this use case.
 
 Most of these practices are built around <a href="https://webpack.js.org/">webpack</a>. With its ability to build out slim JS files for production and <a href="https://survivejs.com/webpack/building/code-splitting/">code-splitting functionality</a>, webpack has become a necessary tool for JavaScript app development.
 
@@ -108,7 +108,7 @@ I carried this belief once and to be honest, I became a better JavaScript develo
 
 So yes, focusing my energy towards learning pure, unadulterated vanilla JS helped me. Still, I believe that <strong>the idea that using JavaScript frameworks and libraries is unprofessional is total bullshit.</strong>
 
-After spending many hours writing raw JS, you'll want to find ways to write less of it with code abstraction. I can produce lots of high-quality code quickly when the right lib or framework lets me do this.
+After spending many hours writing raw JS, you'll want to find ways to write less of it with code abstraction. I can produce lots of high-quality code quickly when the right library or framework lets me do this.
 
 And what if you're part of a team of developers? Using a library or framework helps here because <strong>it provides your team a shared language, making collaboration and communication easier</strong>.
 
@@ -136,7 +136,7 @@ This mentality is pretty rare in the world of native development though. Almost 
 </blockquote>
 I would apply that mentality to the web dev complaints about performance and "unprofessional programming." I never hear Java developers make the same complaints about Spring...same thing with PHP developers and Laravel.
 
-And right now, imagine what would have happened if Ruby developers decided to reject Rails for all the reasons discussed.
+And right now, imagine what would have happened if Ruby developers collectively rejected Rails for all these reasons.
 
 <h2>Understand the business process leading the app</h2>
 Before accepting or rejecting a JavaScript library/framework, have a clear understanding of the project goals. Understand what the app must do before rejecting the tools that can help you build it.
@@ -154,6 +154,15 @@ While almost all the comments on Andrew Welch's webpack are positive, the <em>ve
 <blockquote class="content--blockquote-margin">
 Why do we keep making the build and deploy setups more complex than the apps we're deploying?
 </blockquote>
-I don't know if the build process is "more complex" but I think it's more complex than it was before. And Welch's response to the comment was proper: it terms of the complexity, "it depends on what you're building."
+I don't know if the build process is "more complex" but I know it's more complex than it was before. And Welch's response to the comment was proper: it terms of the complexity, "it depends on what you're building."
 
 This is the current state of JavaScript development. The language is used to create both web <em>and</em> native apps, both of which need complex functionality that can be efficiently created libs and frameworks.
+
+webpack requires more set up then its predecessors, <a href="https://gruntjs.com/">Grunt</a> and <a href="https://gulpjs.com/">Gulp</a> in particular. But it optimizes any framework or library code in your app, allowing you to use those things productively.
+
+I'm talking about performance again: the webpack, code-splitting and JavaScript cost article links above discuss things that have become <em>de facto</em> standards in web app development. I get that implementing all this takes more work and effort than before, but this is the world we live in.
+
+<h2>Conclusion</h2>
+When discussing JavaScript frameworks and libraries, I believe that only <em>real</em> reason to reject them is their potential performance problems. And we have ways to solve these problems.
+
+With these solves in place, we JS developers should embrace them if we can. We'll build better products faster...nothing wrong with that.
