@@ -15,14 +15,14 @@ My last six months as a JavaScript developer have included a period of self-asse
 I've also researched how other developers write code and, collectively, have learned great things from them. But when discussing libraries and frameworks, I've discovered too many instances of developers rejecting them for the wrong reasons.
 
 <h2>A disclaimer</h2>
-I'm talking from a React POV because that's what I've been using lately. Don't take it to mean I think everyone should use React...it's just my POV for this post.
+I'm talking from a React point-of-view here because that's what I've been using lately. Don't take it to mean that I think everyone should use React...it's just my POV for this post.
 
 <h2>How this all began</h2>
 It all started after a lengthy period of using <a href="https://reactjs.org/">React</a> on a daily basis. Consequently, I see three positive things that React brings to the JavaScript developer conversation:
 
 1. <strong>manipulating app views with a state object</strong>: changing your app's view/state with a standard "key:value" object (not the DOM) is cool...and more efficient.
 2. <strong>a focus on functional programming</strong>: React promotes the idea that a function should do one thing well, do that thing in its own world, and do it without screwing up the world around it.
-3. <strong>thoughtful component model</strong>: I'm stealing that phrase from <a href="https://medium.com/bumpers/isnt-our-code-just-the-best-f028a78f33a9">Jacob Thornton's great React article</a> but he's right. When it comes to encapsulating chunks of UI inside a single reusable component, React does it well.
+3. <strong>thoughtful component model</strong>: I'm stealing that phrase from <a href="https://medium.com/bumpers/isnt-our-code-just-the-best-f028a78f33a9">Jacob Thornton's great React article</a> but he's right. React does a great job of encapsulating chunks of UI inside a single reusable component it well.
 
 All these things are great because <strong>they encourage computer science best practices within JavaScript development</strong>. As JS progresses from making neat rollovers to a full-on application language, it's right to bring in these practices.
 <h2>There will be naysayers</h2>
@@ -151,11 +151,9 @@ While almost all the comments on Andrew Welch's webpack are positive, the <em>ve
 <blockquote class="content--blockquote-margin">
 Why do we keep making the build and deploy setups more complex than the apps we're deploying?
 </blockquote>
-I don't know if the build process is "more complex" but I know it's more complex than it was before. And Welch's response to the comment was proper: it terms of the complexity, "it depends on what you're building."
+I don't know if the build process is "more complex" then the apps, but know that the process itself is more complex than it was before. And Welch's response to the comment was proper: it terms of the complexity, "it depends on what you're building."
 
 This is the current state of JavaScript development. The language is used to create both web <em>and</em> native apps, both of which need complex functionality that can be efficiently created libs and frameworks.
-
-webpack requires more set up then its predecessors, <a href="https://gruntjs.com/">Grunt</a> and <a href="https://gulpjs.com/">Gulp</a> in particular. But it optimizes any framework or library code in your app, allowing you to use those things productively.
 
 I'm talking about performance again: the webpack, code-splitting and JavaScript cost article links above discuss things that have become <em>de facto</em> standards in web app development. I get that implementing all this takes more work and effort than before, but this is the world we live in.
 
