@@ -92,7 +92,7 @@ But this is how JavaScript is right now and this rapid change shows no signs of 
 
 If you're used to changing your UI with DOM manipulation, React <em>might</em> have a bit of learning curve. React makes you change UI by updating a state object instead of using something like <code>document.querySelector</code>.
 
-But regardless of learn curves, libraries and frameworks solve someone's problem somewhere in the world. So a developer that's familiar with, at least the popular ones, is a valuable asset.
+But regardless of learning curves, libraries and frameworks solve someone's problem somewhere in the world. So a developer that's familiar with, at least the popular ones, is a valuable asset.
 
 Developers like this have "problem solving-power": the ability to look at a problem and say "this framework is our solution."  Day job bosses and freelance clients love this.
 
