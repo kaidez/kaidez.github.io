@@ -1,12 +1,12 @@
 ---
 layout: post
 comments: true
-title:  "JavaScript Developers...RELAX!!! Stop Hating Frameworks!!!"
+title:  "JavaScript Developers...Stop HATING Frameworks!!!"
 date:   2018-10-31 00:00:50 -0400
 categories: coding-best-practices
 category-name: Coding Tips
-permalink: /javascript-frameworks/
-excerpt: JavaScript frameworks can help developers, but they tend to reject them for the wrong reasons.
+permalink: /rejecting-javascript-frameworks/
+excerpt: JavaScript developers can avoid using frameworks and libraries if the have to, but too many of them reject them for the wrong reasons.
 og-image: js-focus.jpg
 thumb-image: js-focus-thumb.jpg
 ---
@@ -139,14 +139,21 @@ I would apply that mentality to the web dev complaints about performance and "un
 And right now, imagine what would have happened if Ruby developers decided to reject Rails for all the reasons discussed.
 
 <h2>Understand the business process leading the app</h2>
-Before accepting or rejecting a JavaScript library/framework, have a clear understanding of your project's goals. Understand what the app must do before rejecting the tools that can help you build it.
+Before accepting or rejecting a JavaScript library/framework, have a clear understanding of the project goals. Understand what the app must do before rejecting the tools that can help you build it.
 
 Ember, which <a href="https://www.lynda.com/Emberjs-tutorials/Up-Running-Emberjs/178116-2.html">I've obviously used</a>, has a big file size and gets updated too frequently for my comfort. But if I'm building an app that users will open up and then use for a long time (like they would with Excel), Ember's a great option here.
 
-This is not a chicken or the egg riddle. <em>The business process leads the app: it NEVER follows it</em>.
+This is not a chicken or the egg riddle. <strong>The business process leads the app: it never EVER follows it</strong>.
 
 Speaking for myself, this is an area where I've made mistakes in the past. Had I focused more on what the app needed to accomplish and less on the "cool" way to do stuff, I'd be a VP somewhere.
 
 You need to build a product and then ship it out the door: a library or framework may be a means to that end. So again, understand what your app must do because a framework or library may help your app "do" it better.
 
-<h2>Conclusion</h2>
+<h2>The current JS build tooling is complex, but helpful</h2>
+While almost all the comments on Andrew Welch's webpack are positive, the <em>very</em> first one was this:
+<blockquote class="content--blockquote-margin">
+Why do we keep making the build and deploy setups more complex than the apps we're deploying?
+</blockquote>
+I don't know if the build process is "more complex" but I think it's more complex than it was before. And Welch's response to the comment was proper: it terms of the complexity, "it depends on what you're building."
+
+Regardless, this is current state of JavaScript development.
