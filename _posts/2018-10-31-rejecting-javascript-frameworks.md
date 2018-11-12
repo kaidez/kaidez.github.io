@@ -10,14 +10,14 @@ excerpt: JavaScript developers can avoid using frameworks and libraries if the h
 og-image: js-focus.jpg
 thumb-image: js-focus-thumb.jpg
 ---
-My last six months as a JavaScript developer have included a period of self-assessment. Primarily, I've reviewed <em>how</em> I write code: not the libraries and frameworks I use to help me write it.
+My last six months as a JavaScript developer have included a period of self-assessment. Primarily, I've reviewed <em>how</em> I write application code: not the libraries and frameworks I use to help me write it.
 
 I've also researched how other developers write code and, collectively, have learned great things from them. But when discussing libraries and frameworks, I've discovered too many instances of developers rejecting them for the wrong reasons.
 
 <h2>How this all began</h2>
 It all started after a lengthy period of using <a href="https://reactjs.org/">React</a> on a daily basis. Consequently, I see three positive things that React brings to the JavaScript developer conversation:
 
-1. <strong>manipulating app views with a state object</strong>: changing your app's view/state with a standard "key:value" object (not the DOM) is cool.
+1. <strong>manipulating app views with a state object</strong>: changing your app's view/state with a standard "key:value" object (not the DOM) is cool...and more efficient.
 2. <strong>a focus on functional programming</strong>: React promotes the idea that a function should do one thing well, do that thing in its own world, and do it without screwing up the world around it.
 3. <strong>thoughtful component model</strong>: I'm stealing that phrase from <a href="https://medium.com/bumpers/isnt-our-code-just-the-best-f028a78f33a9">Jacob Thornton's great React article</a> but he's right. When it comes to encapsulating chunks of UI inside a single reusable component, React does it well.
 
@@ -27,19 +27,11 @@ After its release, some developers labeled React as <strong>"JAJFLWYWCI" (Just-A
 
 The comments for <em>not</em> using it aligned with at least one of these three opinions:
 
-<blockquote class="content--blockquote-margin">
-"Frameworks and libraries lead to slow performing web apps."
-</blockquote>
+1. <em>"Frameworks and libraries lead to slow performing web apps."</em>
+2. <em>"It has a steep learning curve."</em>
+3. <em>"Using frameworks and libraries is unprofessional programming."</em>
 
-<blockquote class="content--blockquote-margin">
-"It has a steep learning curve."
-</blockquote>
-
-<blockquote class="content--blockquote-margin">
-"You're not doing professional programming if you use frameworks or libraries."
-</blockquote>
-
-Some comments I engaged with (mostly online) and some I didn't. But they didn't really bother me to the point I felt compelled to blog about it.
+Some comments I engaged with (mostly online) and some I didn't. But they didn't bother me to the point I felt compelled to blog about it.
 
 I had real-world web developer stuff to deal with so I moved on.
 <h2>What Kevin said</h2>
@@ -64,7 +56,7 @@ Since I'm not a classically-trained computer science developer, I'll always have
 Second, worrying about my feelings kept me from realizing the main point of that article. That <strong>web developers focus on the wrong things when rejecting certain JS tooling, and this is holding them back</strong>.
 
 <h2>The complaints about performance</h2>
-To be fair, I can't really say that JS complaints about performance are "wrong". Making application code as light as possible is important as our dependency on mobile rises...less JavaScript makes them faster.
+To be fair, I can't really say that the complaints about JS lib and framework performance are "wrong". Making apps as fast as possible is important as our dependency on mobile rises, and less JavaScript makes them faster.
 
 But if an app requires lots of interactive features, as many do, then a library or framework may be needed to quickly build out those features. Thankfully, the JS community has developed lots of non-hacky best practices to increase performance for this use case.
 
@@ -74,7 +66,7 @@ Andrew Welch wrote <a href="https://nystudio107.com/blog/an-annotated-webpack-4-
 
 Also, Addy Osmani wrote <a href="https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4">a pretty definitive article on JS performance</a>...give it a read as well.  It discusses webpack and code-splitting stuff, along with other things like performance budgets, critical paths and testing/auditing tools.
 <h2>Other performance stuff</h2>
-Images are usually blamed for causing the most performance issues and Luecke mentions them in his article. But Osmani effectively argues that JS may be the bigger performance headache because images only need to download while JS files have to download, then parse and execute code.
+Images are usually blamed for causing the most performance issues and Luecke mentions them in his article. But Osmani effectively argues that JS may be the bigger performance headache because images only have to download while JS files have to download, then parse and execute code.
 
 Whatever your opinion here, optimize your images as well as your JavaScript. This means doing things like:
 * using Photoshop  "export/Save for Web" on your images.
@@ -95,6 +87,10 @@ In his post, Kevin Luecke is blunt about the defeatist attitude web devs take to
 I can relate to having this defeatist attitude. Always having to ramp up on a new JavaScript technology has affected me negatively and <a href="http://www.kaidez.com/101th-post/">I've written about it</a>.
 
 But this is how JavaScript is right now and this rapid change shows no signs of slowing down. Newly-released JS libs and frameworks are part of this constant change...we all have to keep up.
+
+If you're used to changing your UI with DOM manipulation, React <em>might</em> have a bit of learning curve. React makes you change UI by updating a state object instead of using something like <code>document.querySelector</code>.
+
+But that also has some performance wins. Combine this with <a href="https://reactjs.org/docs/reconciliation.html">React's reconciliation and "diffing" features</a> and React may be more high-performant than you think.
 
 Despite performance concerns, libraries and frameworks solve someone's problem somewhere in the world. So a developer that's familiar with, at least the popular ones, is a valuable asset.
 
