@@ -1,12 +1,12 @@
 ---
 layout: post
 comments: true
-title:  "JavaScript Developers: Start Focusing On The Right Stuff"
+title:  "JavaScript Developers...RELAX!!! Stop Hating Frameworks!!!"
 date:   2018-10-31 00:00:50 -0400
-categories: personal
-category-name: Personal
-permalink: /javascript-developer-focus/
-excerpt: Focusing on core JavaScript fundamentals is key to your growth as a developer. But you need to focus on JS libraries & frameworks as well.
+categories: coding-best-practices
+category-name: Coding Tips
+permalink: /javascript-frameworks/
+excerpt: JavaScript frameworks can help developers, but they tend to reject them for the wrong reasons.
 og-image: js-focus.jpg
 thumb-image: js-focus-thumb.jpg
 ---
@@ -134,7 +134,7 @@ While commenting about the complaints about learning curves, Kevin Luecke compar
 <blockquote class="content--blockquote-margin">
 This mentality is pretty rare in the world of native development though. Almost every decent developer I know has no problem spending a weekend learning some new and cool tool, but sadly, this spirit seems to be absent from the web culture.
 </blockquote>
-I would apply that thinking to the web dev complaints about performance and "unprofessional programming. I never hear Java developers make such complaints about Spring...same thing with PHP developers and Laravel.
+I would apply that mentality to the web dev complaints about performance and "unprofessional programming." I never hear Java developers make the same complaints about Spring...same thing with PHP developers and Laravel.
 
 And right now, imagine what would have happened if Ruby developers decided to reject Rails for all the reasons discussed.
 
