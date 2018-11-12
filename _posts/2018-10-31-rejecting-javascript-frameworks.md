@@ -10,9 +10,9 @@ excerpt: JavaScript developers can avoid using frameworks and libraries if the h
 og-image: js-focus.jpg
 thumb-image: js-focus-thumb.jpg
 ---
-My last six months as a JavaScript developer have included a period of self-assessment. Primarily, I've reviewed <em>how</em> I write application code: not the libraries and frameworks I use to help me write it.
+My last six months as a JavaScript developer have included a period of self-assessment. Primarily, I've reviewed <em>how</em> I write application code: not the libraries and frameworks that help me write it.
 
-I've also researched how other developers write code and, collectively, have learned great things from them. But when discussing libraries and frameworks, I've discovered too many instances of developers rejecting them for the wrong reasons.
+I've also researched how other developers write code and, collectively, have learned great things from them. But when discussing libraries and frameworks, I've seen too many instances of developers rejecting them for the wrong reasons.
 
 <h2>A disclaimer</h2>
 I'm talking from a React point-of-view here because that's what I've been using lately. Don't take it to mean that I think everyone should use React...it's just my POV for this post.
@@ -26,7 +26,7 @@ It all started after a lengthy period of using <a href="https://reactjs.org/">Re
 
 All these things are great because <strong>they encourage computer science best practices within JavaScript development</strong>. As JS progresses from making neat rollovers to a full-on application language, it's right to bring in these practices.
 <h2>There will be naysayers</h2>
-After its release, some developers labeled React as <strong>"JAJFLWYWCI" (Just-Another-JavaScript-Framework-Library-Whatever-You-Wanna-Call-It)</strong>. For whatever the reason, they said we shouldn't use it...a frequent reaction to frameworks and libraries among JS developers.
+After its release, some developers labeled React as <strong>"JAJFLWYWCI" (Just-Another-JavaScript-Framework-Library-Whatever-You-Wanna-Call-It)</strong>. For whatever the reason, they said we shouldn't use it...a frequent reaction to frameworks and libamong JS developers.
 
 The comments for <em>not</em> using it aligned with at least one of these three opinions:
 
@@ -81,8 +81,7 @@ And performance depends on more than this: aggressive browser caching gives othe
 
 Many things can slow an app down: don't put the blame for this all on JavaScript.
 <h2>The complaints about learning curves</h2>
-In his post, Kevin Luecke is blunt about the defeatist attitude web devs take towards ramping up on new things. After quoting a developer who implied that it would take too long to learn Ember, Luecke responded:
-
+In his post, Kevin Luecke is blunt about the defeatist attitude web devs take towards ramping up on new things. After quoting a developer who implied that it would take too long for their team to learn Ember, Luecke responded:
 <blockquote class="content--blockquote-margin">
 "This reaction to Ember just baffles me. Your day job is to build a piece of web software and you can't take a few days to learn the ins and outs? Presumably you're in a large team because this project is important and will take some time to complete. Nevertheless, I've seen this reaction many times in the web culture.
 </blockquote>
@@ -97,7 +96,7 @@ But regardless of learn curves, libraries and frameworks solve someone's problem
 
 Developers like this have "problem solving-power": the ability to look at a problem and say "this framework is our solution."  Day job bosses and freelance clients love this.
 
-You need to make time to learn new JavaScript stuff, frameworks and libraries included. You may think there's nothing to lose by not learning them but if you do that, there's nothing to gain.
+You have to invest in yourself and make time to learn new JavaScript stuff, frameworks and libraries included. You may think there's nothing to lose by not learning them, but there's certainly nothing to gain either.
 <h2>The complaints about "unprofessional programming" (whatever that means)</h2>
 However, lots of developers believe the ones using frameworks and libraries have no value and are unprofessional. That libs/frameworks should be completely avoided and we should just use vanilla JavaScript, and they're passionate in their belief.
 
@@ -105,9 +104,9 @@ I carried this belief once and to be honest, I became a better JavaScript develo
 
 So yes, focusing my energy towards learning pure, unadulterated vanilla JS helped me. Still, I believe that <strong>the idea that using JavaScript frameworks and libraries is unprofessional is total bullshit.</strong>
 
-After spending many hours writing raw JS, you'll want to find ways to write less of it with code abstraction. I can produce lots of high-quality code quickly when the right library or framework lets me do this.
+Spend enough hours writing raw vanilla JS and you'll look for ways to write less of it with code abstraction. I can produce lots of high-quality code quickly when the right library or framework lets me do this.
 
-And what if you're part of a team of developers? Using a library or framework helps here because <strong>it provides your team a shared language, making collaboration and communication easier</strong>.
+And what if you're part of a team of developers? Using a lib or framework helps here because <strong>it provides your team a shared language, making collaboration and communication easier</strong>.
 
 With React I can tell someone, "solve your problem by using this pre-built component that so-and-so built." Much easier than "cut-and-paste this code block that so-and-so wrote but you'll have to ask so-and-so what to do next."
 <h2>Think about about "unprofessional programming" <em>does</em> mean</h2>
@@ -136,7 +135,7 @@ I would apply that mentality to the web dev complaints about performance and "un
 And right now, imagine what would have happened if Ruby developers collectively rejected Rails for all these reasons.
 
 <h2>Understand the business process leading the app</h2>
-Before accepting or rejecting a JavaScript library/framework, have a clear understanding of the project goals. Understand what the app must do before rejecting the tools that can help you build it.
+Before accepting or rejecting a JavaScript library/framework, have a clear understanding of the project's goals and business requirements. Understand what the app must do before rejecting the tools that can help you build it.
 
 Ember, which <a href="https://www.lynda.com/Emberjs-tutorials/Up-Running-Emberjs/178116-2.html">I've obviously used</a>, has a big file size and gets updated too frequently for my comfort. But if I'm building an app that users will open up and then use for a long time (like they would with Excel), Ember's a great option here.
 
@@ -144,7 +143,7 @@ This is not a chicken or the egg riddle. <strong>The business process leads the 
 
 Speaking for myself, this is an area where I've made mistakes in the past. Had I focused more on what the app needed to accomplish and less on the "cool" way to do stuff, I'd be a VP somewhere.
 
-You need to build a product and then ship it out the door: a library or framework may be a means to that end. So again, understand what your app must do because a framework or library may help your app "do" it better.
+You need to build a product and then ship it out the door: a library or framework may be a means to that end. So again, understand what your app must do because a framework or lib may help your app "do" it better.
 
 <h2>The current JS build tooling is complex, but helpful</h2>
 While almost all the comments on Andrew Welch's webpack are positive, the <em>very</em> first one was this:
@@ -153,9 +152,11 @@ Why do we keep making the build and deploy setups more complex than the apps we'
 </blockquote>
 I don't know if the build process is "more complex" then the apps, but know that the process itself is more complex than it was before. And Welch's response to the comment was proper: it terms of the complexity, "it depends on what you're building."
 
-This is the current state of JavaScript development. The language is used to create both web <em>and</em> native apps, both of which need complex functionality that can be efficiently created libs and frameworks.
+But this is the current state of JavaScript development. We're now using JS to build complex web <em>and</em> native apps, which can be created easier with libs and frameworks.
 
-I'm talking about performance again: the webpack, code-splitting and JavaScript cost article links above discuss things that have become <em>de facto</em> standards in web app development. I get that implementing all this takes more work and effort than before, but this is the world we live in.
+So yes, the build process is harder. The webpack, code-splitting and JavaScript cost article links above discuss things that should be part of any app you build.
+
+I get that implementing all this takes more work than before. But again, this is the world we live in.
 
 <h2>Conclusion</h2>
 When discussing JavaScript frameworks and libraries, I believe that only <em>real</em> reason to reject them is their potential performance problems. And we have a ton ways to solve these problems.
