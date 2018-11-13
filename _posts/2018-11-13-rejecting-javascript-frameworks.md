@@ -104,12 +104,12 @@ I carried this belief once and to be honest, I became a better JavaScript develo
 
 So yes, focusing my energy towards learning pure, unadulterated vanilla JS helped me. Still, I believe that <strong>the idea that using JavaScript frameworks and libraries is unprofessional is total bullshit.</strong>
 
-Spend enough hours writing raw vanilla JS and you'll look for ways to write less of it with code abstraction. I can produce lots of high-quality code quickly when the right library or framework lets me do this.
+Spend enough hours writing raw vanilla JS and you'll look for ways to write less of it with code abstraction. I can produce lots of high-quality code quickly when the right library or framework lets me.
 
 And what if you're part of a team of developers? Using a lib or framework helps here because <strong>it provides your team a shared language, making collaboration and communication easier</strong>.
 
 With React I can tell someone, "solve your problem by using this pre-built component that so-and-so built." Much easier than "cut-and-paste this code block that so-and-so wrote but you'll have to ask so-and-so what to do next."
-<h2>Think about about "unprofessional programming" <em>does</em> mean</h2>
+<h2>Think about about what "unprofessional programming" <em>does</em> mean</h2>
 I've said this many MANY times before and I'll say it again:
 
 <blockquote class="content--blockquote-margin">
