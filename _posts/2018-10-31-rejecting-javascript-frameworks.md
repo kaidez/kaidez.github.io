@@ -7,8 +7,8 @@ categories: coding-best-practices
 category-name: Coding Tips
 permalink: /rejecting-javascript-frameworks/
 excerpt: JavaScript developers can avoid using frameworks and libraries if the have to, but too many of them reject them for the wrong reasons.
-og-image: js-focus.jpg
-thumb-image: js-focus-thumb.jpg
+og-image: js-framework-library.jpg
+thumb-image: js-framework-library-thumb.jpg
 ---
 My last six months as a JavaScript developer have included a period of self-assessment. Primarily, I've reviewed <em>how</em> I write application code: not the libraries and frameworks that help me write it.
 
@@ -92,13 +92,13 @@ But this is how JavaScript is right now and this rapid change shows no signs of 
 
 If you're used to changing your UI with DOM manipulation, React <em>might</em> have a bit of learning curve. React makes you change UI by updating a state object instead of using something like <code>document.querySelector</code>.
 
-But regardless of learning curves, libraries and frameworks solve someone's problem somewhere in the world. So a developer that's familiar with, at least the popular ones, is a valuable asset.
+But regardless of learning curves, libraries and frameworks solve someone's problem somewhere in the world. So a developer that's familiar with at least the popular ones is a valuable asset.
 
 Developers like this have "problem solving-power": the ability to look at a problem and say "this framework is our solution."  Day job bosses and freelance clients love this.
 
 You have to invest in yourself and make time to learn new JavaScript stuff, frameworks and libraries included. You may think there's nothing to lose by not learning them, but there's certainly nothing to gain either.
 <h2>The complaints about "unprofessional programming" (whatever that means)</h2>
-However, lots of developers believe the ones using frameworks and libraries have no value and are unprofessional. That libs/frameworks should be completely avoided and we should just use vanilla JavaScript, and they're passionate in their belief.
+However, lots of developers believe the other ones using frameworks and libraries have no value and are unprofessional. That libs/frameworks should be completely avoided and we should just use vanilla JavaScript, and they're passionate in their belief.
 
 I carried this belief once and to be honest, I became a better JavaScript developer as a result. My knowledge of JS fundamentals increased: writing powerful & concise functions, using <code>return</code> correctly, understanding prototypal inheritance, etc.
 
