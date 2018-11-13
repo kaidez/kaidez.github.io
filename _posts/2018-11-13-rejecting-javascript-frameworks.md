@@ -14,7 +14,7 @@ My last six months as a JavaScript developer have included a period of self-asse
 
 I've also researched how other developers write code and, collectively, have learned great things from them. But when discussing libraries and frameworks, I've seen too many instances of developers rejecting them for the wrong reasons.
 
-<h2>A disclaimer</h2>
+<h2 style="clear:both">A disclaimer</h2>
 I'm talking from a React point-of-view here because that's what I've been using lately. Don't take it to mean that I think everyone should use React...it's just my POV for this post.
 
 <h2>How this all began</h2>
