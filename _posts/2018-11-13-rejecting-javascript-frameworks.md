@@ -141,7 +141,7 @@ Ember, which <a href="https://www.lynda.com/Emberjs-tutorials/Up-Running-Emberjs
 
 This is not a chicken or the egg riddle. <strong>The business process leads the app: it never EVER follows it</strong>.
 
-Speaking for myself, this is an area where I've made mistakes in the past. Had I focused more on what the app needed to accomplish and less on the "cool" way to do stuff, I'd be a VP somewhere.
+Speaking for myself, this is an area where I've made mistakes in the past. Had I focused more on what the business needed to accomplish and less on the "cool" way to write code, I'd be a VP somewhere.
 
 You need to build a product and then ship it out the door: a library or framework may be a means to that end. So again, understand what your app must do because a framework or lib may help your app "do" it better.
 
@@ -154,9 +154,7 @@ I don't know if the build process is "more complex" then the apps, but know that
 
 But this is the current state of JavaScript development. We're now using JS to build complex web <em>and</em> native apps, which can be created easier with libs and frameworks.
 
-So yes, the build process is harder. The webpack, code-splitting and JavaScript cost article links above discuss things that should be part of any app you build.
-
-I get that implementing all this takes more work than before. But again, this is the world we live in.
+So yes, the build process is harder and takes more work than before. But again, this is the world we live in.
 
 <h2>Conclusion</h2>
 When discussing JavaScript frameworks and libraries, I believe that only <em>real</em> reason to reject them is their potential performance problems. And we have a ton ways to solve these problems.
