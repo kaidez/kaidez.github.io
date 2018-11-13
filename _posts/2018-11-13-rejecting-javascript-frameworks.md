@@ -109,7 +109,7 @@ Spend enough hours writing raw vanilla JS and you'll look for ways to write less
 And what if you're part of a team of developers? Using a lib or framework helps here because <strong>it provides your team a shared language, making collaboration and communication easier</strong>.
 
 With React I can tell someone, "solve your problem by using this pre-built component that so-and-so built." Much easier than "cut-and-paste this code block that so-and-so wrote but you'll have to ask so-and-so what to do next."
-<h2>Think about about what "unprofessional programming" <em>does</em> mean</h2>
+<h2>Think about about what "unprofessional programming" means</h2>
 I've said this many MANY times before and I'll say it again:
 
 <blockquote class="content--blockquote-margin">
@@ -132,7 +132,7 @@ This mentality is pretty rare in the world of native development though. Almost 
 </blockquote>
 I would apply that mentality to the web dev complaints about performance and "unprofessional programming." I never hear Java developers make the same complaints about Spring...same thing with PHP developers and Laravel.
 
-And right now, imagine what would have happened if Ruby developers collectively rejected Rails for all these reasons.
+And right now, imagine what would have happened if Ruby developers collectively rejected Rails for any these reasons.
 
 <h2>Understand the business process leading the app</h2>
 Before accepting or rejecting a JavaScript library/framework, have a clear understanding of the project's goals and business requirements. Understand what the app must do before rejecting the tools that can help you build it.
