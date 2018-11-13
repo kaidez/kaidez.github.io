@@ -26,7 +26,7 @@ It all started after a lengthy period of using <a href="https://reactjs.org/">Re
 
 All these things are great because <strong>they encourage computer science best practices within JavaScript development</strong>. As JS progresses from making neat rollovers to a full-on application language, it's right to bring in these practices.
 <h2>There will be naysayers</h2>
-After its release, some developers labeled React as <strong>"JAJFLWYWCI" (Just-Another-JavaScript-Framework-Library-Whatever-You-Wanna-Call-It)</strong>. For whatever the reason, they said we shouldn't use it...a frequent reaction to frameworks and libamong JS developers.
+After its release, some developers labeled React as <strong>"JAJFLWYWCI" (Just-Another-JavaScript-Framework-Library-Whatever-You-Wanna-Call-It)</strong>. For whatever the reason, they said we shouldn't use it...a frequent reaction to frameworks and libraries among JS developers.
 
 The comments for <em>not</em> using it aligned with at least one of these three opinions:
 
@@ -146,7 +146,7 @@ Speaking for myself, this is an area where I've made mistakes in the past. Had I
 You need to build a product and then ship it out the door: a library or framework may be a means to that end. So again, understand what your app must do because a framework or lib may help your app "do" it better.
 
 <h2>The current JS build tooling is complex, but helpful</h2>
-While almost all the comments on Andrew Welch's webpack are positive, the <em>very</em> first one was this:
+While almost all the comments on Andrew Welch's webpack post are positive, the <em>very</em> first one was this:
 <blockquote class="content--blockquote-margin">
 Why do we keep making the build and deploy setups more complex than the apps we're deploying?
 </blockquote>
