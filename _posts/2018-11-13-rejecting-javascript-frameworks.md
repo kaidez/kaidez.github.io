@@ -90,7 +90,7 @@ I can relate to having this defeatist attitude. Always having to ramp up on a ne
 
 But this is how JavaScript is right now and this rapid change shows no signs of slowing down. Newly-released JS libs and frameworks are part of this constant change...we all have to keep up.
 
-If you're used to changing your UI with DOM manipulation, React <em>might</em> have a bit of learning curve. React makes you change UI by updating a state object instead of using something like <code>document.querySelector</code>.
+If you're used to changing your UI with DOM manipulation, React <em>might</em> have a bit of learning curve. React makes you change UI by updating a state object instead of using something like <code>document.querySelector()</code>.
 
 But regardless of learning curves, libraries and frameworks solve someone's problem somewhere in the world. So a developer that's familiar with at least the popular ones is a valuable asset.
 
