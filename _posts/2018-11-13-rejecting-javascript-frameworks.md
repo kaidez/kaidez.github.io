@@ -22,7 +22,7 @@ It all started after a lengthy period of using <a href="https://reactjs.org/">Re
 
 1. <strong>manipulating app views with a state object</strong>: changing your app's view/state with a standard "key:value" object (not the DOM) is cool...and more efficient.
 2. <strong>a focus on functional programming</strong>: React promotes the idea that a function should do one thing well, do that thing in its own world, and do it without screwing up the world around it.
-3. <strong>thoughtful component model</strong>: I'm stealing that phrase from <a href="https://medium.com/bumpers/isnt-our-code-just-the-best-f028a78f33a9">Jacob Thornton's great React article</a> but he's right. React does a great job of encapsulating chunks of UI inside a single reusable component it well.
+3. <strong>thoughtful component model</strong>: I'm stealing that phrase from <a href="https://medium.com/bumpers/isnt-our-code-just-the-best-f028a78f33a9">Jacob Thornton's great React article</a> but he's right. React does a great job of encapsulating chunks of UI inside a single reusable component.
 
 All these things are great because <strong>they encourage computer science best practices within JavaScript development</strong>. As JS progresses from making neat rollovers to a full-on application language, it's right to bring in these practices.
 <h2>There will be naysayers</h2>
