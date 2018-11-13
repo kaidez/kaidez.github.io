@@ -2,11 +2,11 @@
 layout: post
 comments: true
 title:  "JavaScript Developers...Stop HATING Frameworks!!!"
-date:   2018-10-31 00:00:50 -0400
+date:   2018-11-13 00:00:50 -0400
 categories: coding-best-practices
 category-name: Coding Tips
 permalink: /rejecting-javascript-frameworks/
-excerpt: JavaScript developers can avoid using frameworks and libraries if the have to, but too many of them reject them for the wrong reasons.
+excerpt: JavaScript developers can avoid using frameworks and libraries if the have to, but too many developers avoid them for the wrong reasons.
 og-image: js-framework-library.jpg
 thumb-image: js-framework-library-thumb.jpg
 ---
