@@ -8,7 +8,7 @@ category-name: Personal
 permalink: /front-end-web-developer-job-search-two/
 excerpt: Random notes on my experiences looking for a front end web developer job in 2022.
 og-image: web-dev-job-two.jpg
-thumb-image: web-dev-job-two-minify.jpg
+thumb-image: web-dev-job-two-thumb.jpg
 ---
 
 My last six months as a JavaScript developer have included a period of self-assessment. Primarily, I've reviewed <em>how</em> I write application code: not the libraries and frameworks that help me write it.
