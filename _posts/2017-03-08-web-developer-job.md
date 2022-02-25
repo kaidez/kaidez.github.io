@@ -1,14 +1,15 @@
 ---
 layout: post
 comments: true
-title:  "What I Learned About Finding A Front End Web Developer Job In 2017-UPDATED"
-date:   2017-03-08 04:00:59 -0400
+title: 'What I Learned About Finding A Front End Web Developer Job In 2017-UPDATED'
+date: 2017-03-08 04:00:59 -0400
 categories: personal
 permalink: /front-end-web-developer-job-search/
 excerpt: Random notes on my past & present experiences in looking for a front end web developer job in 2017. Has tips for code bootcamp graduates looking for work.
 og-image: web-dev-job.jpg
 thumb-image: web-dev-job-minify.jpg
 ---
+
 <blockquote>
 <p>Author's note: as previously mentioned, I lost my entire blog because I didn't know what the f**k I was doing with databases. With the help of the <a href="https://web.archive.org/">Internet Wayback Machine</a>, I was able to recover all but two blog posts.</p>
 <p>
@@ -35,7 +36,7 @@ For all the nervousness and anxiety that comes with unemployment, I knew I would
 
 But I also knew my limited experience with the currently in-demand frameworks and libraries (Angular, React, etc.) meant I would have to work harder than others in getting a job. I’d used them a bit in customer-facing sites and had played with them on my own, but my limited “on-the-job” experience with them was going to be an issue.
 
-Zach Holman’s awesome <a href="https://zachholman.com/posts/startup-interviewing-is-fucked/"><em>"Startup Interviewing Is F**cked"</em></a> article also prepared me for what I was about to face. It points out how startup interviewers sometimes want interviewees to solve programming riddles with specific right answers, and how it can be a poor indicator of if the interviewee can do the job.
+Zach Holman’s awesome <a href="https://zachholman.com/posts/startup-interviewing-is-fucked/"><em>"Startup Interviewing Is F\*\*cked"</em></a> article also prepared me for what I was about to face. It points out how startup interviewers sometimes want interviewees to solve programming riddles with specific right answers, and how it can be a poor indicator of if the interviewee can do the job.
 
 I kept all this in mind for each 2017 interview I went on: not just the startup ones. I also drew on past experiences from other jobs and from interviews during the previous year.
 
@@ -53,7 +54,7 @@ I tweeted this once in 2016:
 
 In 2017, you can start swapping “Angular” out for “React”. And in a few months, you might be able to swap it out for “Vue.”
 
-<em><strong>UPDATE:</strong> At the time of this rewrite, React and Angular 2/4/5 are neck-in-neck for the most desirable skillsets.  Vue is catching up, but not as fast as I thought it would.</em>
+<em><strong>UPDATE:</strong> At the time of this rewrite, React and Angular 2/4/5 are neck-in-neck for the most desirable skillsets. Vue is catching up, but not as fast as I thought it would.</em>
 
 Again, my limited experience with the framework/library stuff meant I had to work harder than other job seekers. I was only jobless for a month but that would have been two weeks if my resumé had more React/Angular/whatever experience.
 
@@ -62,10 +63,11 @@ There’s lots of strife-laden debate in the dev community about frameworks and 
 But it’s absolutely fair for employers to insist you have specific framework/library experience if you want to work for them. So sorry, but you’ll need to learn some frameworks and libraries if you don’t know them already.
 
 Frameworks solve problems for lots of companies who will spend money to hire (and keep) those that know them. At the time of this post, it’s good to have as much React/Redux and Angular knowledge as possible.
+
 <h2>Use your time off to ramp up on those frameworks and libraries</h2>
 If you have to ramp up on those frameworks and libs, do it while you’re unemployed. On my first jobless day, I spent a few hours at Starbucks going through a ton of React tutorials.
 
-Over the days, I moved onto some Redux tutorials, including <a href="https://egghead.io/courses/getting-started-with-redux">those kick-a** free Redux tutorials on Egghead</a>. With that, I felt confident enough to put React on my resumé, which led to more interviews.
+Over the days, I moved onto some Redux tutorials, including <a href="https://egghead.io/courses/getting-started-with-redux">those kick-a\*\* free Redux tutorials on Egghead</a>. With that, I felt confident enough to put React on my resumé, which led to more interviews.
 
 <em><strong>UPDATE:</strong> The Egghead course is taught by Redux creator Dan Abramov and is worth watching. But if you're a Redux beginner, I would suggest watching <a href="https://learnredux.com/">Wes Bos' free Redux course</a> first. It holds your hand a bit more and also discusses how to use Redux inside React and not just Redux.</em>
 
@@ -132,6 +134,7 @@ I had similar conversations with another interviewer and a recruiter. Based on t
 Many people are graduating from bootcamps like General Assembly in 2017. Then applying for front end web developer jobs with an average $70,000USD salary.
 
 As a result, hiring managers are getting flooded with resumés from people that may be good coders but lack job experience. Which, in turn, has led to a more strenuous web developer hiring process that, on the average, looks like this:
+
 <ul>
   <li class="post__list-item">As mentioned, applicants with experience in a given JavaScript framework (at least a year) are <em>the</em> most employable developers in 2017.</li>
   <li class="post__list-item">Employers like applicants with active GitHub profiles.</li>
