@@ -1,3 +1,4 @@
+//# sourceURL=Footer.js
 import React, { Component } from 'react'
 import FooterContent from './FooterChildComponents/FooterContent'
 

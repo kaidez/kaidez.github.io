@@ -1,12 +1,13 @@
+//# sourceURL=FooterContent.js
 import React, { Component } from 'react'
 import FontAwesome from 'react-fontawesome'
 
 class FooterContent extends Component {
 
-  static displayName = 'FooterContent'
+  static displayName = 'FooterContent';
 
   render() {
-
+    debugger
     const {isFooterHiddenOnMobile} = this.props
 
     return(

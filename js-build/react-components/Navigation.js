@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+//# sourceURL=Navigation.js
+import React, { Component, Fragment } from 'react'
 import Menu from './NavigationChildComponents/Menu'
 
 export class Navigation extends Component {
@@ -10,9 +11,7 @@ export class Navigation extends Component {
     }
   }
 
-  static displayName = 'Navigation'
-
-  toggleMobileMenu = (e) => {
+  toggleMobileMenu(e) {
     e || e.window.event
     const clickTarget = document.querySelector("#menuButton")
 
@@ -27,7 +26,7 @@ export class Navigation extends Component {
 
   render() {
     return(
-      <div>
+      <Fragment>
         <h2 className="header--hidden-text">Main Navigation</h2>
         <div
           id="menuButton"
@@ -46,7 +45,7 @@ export class Navigation extends Component {
           <span className="header--menu-line"></span>
         </div>
         <Menu isMenuVisible={this.state.isMenuVisible} />
-      </div>
+      </Fragment>
     )
   }
 }
