@@ -26,7 +26,7 @@ That paid off when the time came for me to find a new job. I still cast a wide n
 
 I estimate I applied for less than half the amount jobs this time. Plus, I found a job a bit faster...I got my new job at Blue Cross Blue Shield in just under three weeks, that's less than the four weeks it took me to get the Chase job.
 
-As a result, here are six key things I discovered while job hunting:
+And with that, here are six key things I discovered while job hunting:
 
 <ol>
 <li class="post__list-item">
