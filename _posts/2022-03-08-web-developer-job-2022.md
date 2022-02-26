@@ -18,13 +18,13 @@ This job search wasn't as intense as the previous one. But it was intense enough
 <h2>What happened the last time I looked for a web dev job?</h2>
 When I was job hunting five years ago, I "cast a wide net," meaning I applied for a WHOLE lot of jobs in a small time frame. So much so that I hit a point where I had four interviews in one day.
 
-I felt I had to do that due to my limited experience with the in-demand JavaScript frameworks of the day, especially <a href="https://reactjs.org/">React</a>. I had over a decade of web dev experience at that time, but was competing for jobs against people that had more of the required framework knowledge than I did.
+I felt I had to do since I had limited experience with the in-demand JavaScript frameworks of the day, especially <a href="https://reactjs.org/">React</a>. I had over a decade of web dev experience at that time, but was competing for jobs against people that had more of the required framework knowledge than I did.
 
-So I cast that wide net to give myself a better chance of getting a web development job. And once I got that job (at JPMorgan Chase), I began to build up five years of solid, quantifiable React experience.
+So I cast that wide net to give myself a better chance of getting hired. And once I got a job (at JPMorgan Chase), I began to build up five years of solid, quantifiable React experience.
 
-And that paid off when I started looking for a new job. I may have casted a wide net for this recent job search, but it didn't need to be as wide as it was for the last one.
+And that paid off when I started looking for a new job. I may have casted a wide net for this recent job search, but it didn't have to be as wide as before.
 
-For this job search, I estimate I applied for less than half the amount jobs than the previous one. Plus, I found a job a bit faster...I got my new job at Blue Cross Blue Shield in just under three weeks, which is less than the four weeks it took me to get the Chase job.
+I estimate I applied for less than half the amount jobs this time. Plus, I found a job a bit faster...I got my new job at Blue Cross Blue Shield in just under three weeks, that's less than the four weeks it took me to get the Chase job.
 
 As a result, here are six key things I discovered while job hunting:
 
@@ -43,7 +43,7 @@ There are many open web developer jobs, but understand that tragedy is the main 
 
 <p>Financially, this made sense for business...they no longer needed to hire 20 devs, pay them USD$100,000+ a year, lease them office space and then maintain it with electricity, custodians, etc. They just needed to hire 20 devs and pay them USD$100,000+ a year.</p>
 
-<p>Every job I applied to was either fully remote or hybrid. I would have applied for in-office jobs, it's just that none of the ones I applied to offered that.</p>
+<p>Every job I applied for was either fully remote or hybrid. I would have applied for in-office jobs, it's just that none of the ones I applied to offered that.</p>
 
 <p>So yes, developers have options when they job search...this may change some day but it's how it is now. However, the tragedy of Covid-19 is the reason for this.</p>
 
