@@ -166,6 +166,6 @@ If you <em>really</em> need a job and want to use every resource available, you 
 <h2>Conclusion</h2>
 There’s a saying that “You need to treat finding a job as a job” and I did just that. I went on a job applying spree where at one point, I went on eight interviews in one week: with <strong>four on the same day</strong>.
 
-I learned a lot about in-demand skillsets, interviewing techniques, job sites and recruiters along the way. It was an informative journey...one that ended in my getting a new front end web developer job.
+I learned a lot about in-demand skill sets, interviewing techniques, job sites and recruiters along the way. It was an informative journey...one that ended in my getting a new front end web developer job.
 
 I hope these notes on the journey let you do the same. Feel free to ask me any questions on this stuff...except for my starting salary. 😁
