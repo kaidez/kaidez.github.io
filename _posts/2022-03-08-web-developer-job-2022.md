@@ -31,7 +31,7 @@ And with that, here are six key things I discovered while job hunting:
 <ol>
 <li class="post__list-item">
 <h2>
-There are many open web developer jobs, but understand that tragedy is the main reason why.</h2>
+There are many open web developer jobs, but tragedy is the main reason why.</h2>
 
 <p>Covid-19 is horrible: it's responsible for hundreds of thousands of deaths, led to massive lockdowns that have crippled small businesses and led to the quarantining of most employees.</p>
 
@@ -71,11 +71,11 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 </li>
 
 <li class="post__list-item">
-<h2>React is the most in-demand library/framework...and will stay that way for awhile</h2>
-<p>React and its ecosystem of tools (Redux and React Router in particular) solved a lot of problems in the web dev world.</p>
-<p></p>
+<h2>React is the most in-demand library/framework...and it will stay that way for awhile</h2>
+<p>As of this writing, many feel that both <a href="https://vuejs.org/">Vue</a> and <a href="https://svelte.dev/">Svelte</a> are better alternatives to React. But the "which-framework-is-the-best" debate as been going for as long as I can remember.</p>
+<p>Both </p>
 
-<p></p>
+<p>Yes, </p>
 </li>
 
 <li class="post__list-item">
