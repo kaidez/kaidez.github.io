@@ -72,7 +72,7 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <li class="post__list-item">
 <h2>React is the most in-demand library/framework...and will stay that way for awhile</h2>
-<p>React and its ecosystem of tools (Redux and React Router in particular) solved a lot of problem in the web dev world. Its component model and approach managing an app's state.</p>
+<p>React and its ecosystem of tools (Redux and React Router in particular) solved a lot of problems in the web dev world.</p>
 <p></p>
 
 <p></p>
