@@ -20,9 +20,9 @@ In 2017, I "cast a wide net," meaning I applied for lots of jobs in a short time
 
 I had to do this because I had limited experience with the in-demand JavaScript frameworks of the day, particularly <a href="https://reactjs.org/">React</a>. At the time, I had over a decade of developer experience but was competing for jobs against people who had more of the required framework knowledge than I did.
 
-<h2>What happened this time?</h2>
 So I cast that wide net to give myself a better chance of getting hired. And once I got a job (at JPMorgan Chase), I began building up five years of solid, quantifiable React experience.
 
+<h2>What happened this time?</h2>
 Having that experience paid off when the time came for me to find a new job. I still casted a wide net while searching, but it didn't have to be as wide as before.
 
 I estimate I applied for less than half the amount jobs this time. Plus, I found a job a bit faster.
