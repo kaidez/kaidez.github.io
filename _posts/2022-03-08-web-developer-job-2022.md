@@ -139,10 +139,10 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <h2>What I learned</h2>
 My biggest takeaway from this recent job search is...
-<blockquote><p>"WOW..it's really REALLY good to have React experience nowadays!!!"</p></blockquote>
+<blockquote><p>"WOW...it's really REALLY good to have React experience nowadays!!!"</p></blockquote>
 I do have other skills but having React experience made this the easiest job search I ever went through!
 
-Web developers always have to keep their skills fresh...that's always been the case. But I was brutally reminded of it during this job hunt.
+Web developers have always needed to keep their skills fresh. But I was brutally reminded of this during this job hunt.
 
 There's a sticky on my desktop listing the skills I need to learn/ramp up on...cloud stuff, Node, etc. I'll have to find time to do just that: I have no other choice.
 
