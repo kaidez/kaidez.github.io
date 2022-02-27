@@ -63,11 +63,11 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <ul>
 <li class="post__list-item" style="list-style-type:disc;"><b>TypeScript:</b> It makes unit testing easier and lets those classically-trained Java/C++ developers ramp up on JS quicker. Speaking of testing...</li>
-<li class="post__list-item" style="list-style-type:disc;"><b>JavaScript unit testing:</b> JavaScript was initially created to be a beginner's programming language so it didn't require a culture of unit testing. JS has matured from DOM manipulation to mobile apps, so such simplicity has passed. Almost all prospective employers expect some unit test knowledge among candidates...not guru-level knowledge but SOME knowledge.</li>
-<li class="post__list-item" style="list-style-type:disc;"><b>React and its ecosystem:</b> We'll discuss this in depth in the next part of this list ;)</li>
+<li class="post__list-item" style="list-style-type:disc;"><b>JavaScript unit testing:</b> JavaScript was initially created to be a beginner's programming language so it didn't require a culture of unit testing. JS has matured past the beginner level, so such simplicity has passed. Almost all prospective employers expect <i>some</i> unit test knowledge among candidates...not guru-level knowledge but SOME knowledge.</li>
+<li class="post__list-item" style="list-style-type:disc;"><b>React and its ecosystem:</b> We'll discuss this in depth in the next list item ;)</li>
 <li class="post__list-item" style="list-style-type:disc;"><b>Angular version 2 and higher:</b> Many businesses added Angular to their codebases before React got big.  That legacy code is still out there and those businesses are hiring developers to maintain it as well as migrate it over to React.</li>
 <li class="post__list-item" style="list-style-type:disc;"><b>Intermediate level JavaScript:</b> If you know React and/or Angular, then employers expect your JS knowledge to be better than basic. Things like <code>fetch</code>, <code>try...catch</code> and ANYTHING related to JS data structures should be second nature to you.</li>
-<li class="post__list-item" style="list-style-type:disc;"><b>Code deployment via cloud-based apps and services:</b> We'll discuss this in depth in the last part of the list ;)</li>
+<li class="post__list-item" style="list-style-type:disc;"><b>Code deployment via cloud-based apps and services:</b> We'll discuss this in depth in the last list item ;)</li>
 </ul>
 </li>
 
