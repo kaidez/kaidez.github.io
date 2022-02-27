@@ -28,7 +28,7 @@ I estimate I applied for less than half the amount jobs this time. Plus, I found
 
 I got my new job at Blue Cross Blue Shield in just under three weeks, that's less than the four weeks it took me to get the Chase job. And I turned down two other job offers!!!
 
-And with that, here are six key things I discovered while job hunting:
+And with that, here are the six main things I discovered while job hunting:
 
 <ol>
 <li class="post__list-item">
@@ -65,10 +65,10 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 <ul>
 <li class="post__list-item"><em>TypeScript:</em> It makes unit testing easier and lets those classically-trained Java/C++ developers ramp up on JS quicker. Speaking of testing...</li>
 <li class="post__list-item"><em>JavaScript unit testing:</em> JavaScript was initially created to be a beginner's programming language so it didn't require a culture of unit testing. JS has matured from DOM manipulation to mobile apps, so such simplicity has passed. Almost all prospective employers expect some unit test knowledge among candidates...not guru-level knowledge but SOME knowledge.</li>
-<li class="post__list-item"><em>React and its ecosystem:</em> We'll discuss this in depth in the next section ;)</li>
+<li class="post__list-item"><em>React and its ecosystem:</em> We'll discuss this in depth in the next part of this list ;)</li>
 <li class="post__list-item"><em>Angular version 2 and higher:</em> Many businesses added Angular to their codebases before React got big.  That legacy code is still out there and those businesses are hiring developers to both maintain it as well as migrate it over to React.</li>
 <li class="post__list-item"><em>Intermediate level JavaScript:</em> If you know React and/or Angular, then employers expect your JS knowledge to be better than basic. Implementing things like <code>fetch</code> and <code>try...catch</code> and ANYTHING related to JS data structures?  All that should be second nature to you.</li>
-<li class="post__list-item"><em>Code deployment via cloud-based apps and services:</em> Knowing how to automate a build/deployment process using combinations of <a href="https://aws.amazon.com/">AWS</a>, <a href="https://azure.microsoft.com/en-us/">Azure</a>, <a href="https://www.docker.com/">Docker</a>, <a href="https://kubernetes.io/">Kubernetes</a>, etc. is rapidly becoming a required skill. Ignore this if you want but if you currently use npm and Git to respectively manage app dependencies and source code, the growing expectation is you either already know how build/deploy within the cloud, or can learn how to do it relatively fast.</li>
+<li class="post__list-item"><em>Code deployment via cloud-based apps and services:</em> We'll discuss this in depth in the last part of the list ;)</li>
 </ul>
 </li>
 
@@ -99,20 +99,23 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 </li>
 
 <li class="post__list-item">
-<h2>The line between a front end web dev job and a backend one is getting smaller</h2>
-<p></p>
-
-<p></p>
-
-<p></p>
+<h2>The line dividing front end web developer jobs and a back end ones is getting smaller</h2>
+<p>A few of FE job openings I saw listed JavaScript and CSS as requires skills, as well as Python, Java, and .NET.</p>
+<p>Technically, Python, Java and .NET aren't }back end languages", they've just traditionally  been closer to the back end than JavaScript. Maybe "front end" now means "anything that doesn't require building an SQL database."</p>
+<p>I dunno...maybe the listings of Python, Java and .NET in these skillsets were typos. But they were there so it's something to keep in mind as you build your skillset...especially when discussing Python.</p>
+<p>A quick aside: I predicted that server-level Node would be a required skillset in my 2017 article. I didn't see an abundance of Node server jobs in 2022, but did take a coding test where I had to load JSON into a Node back end and then fetch it in the front end using React.</p>
+<p>So learning some Node stuff maybe worth your time. Creating a consumable REST API using Node is  good practice.</p>
 </li>
 
 <li class="post__list-item">
-<h2>The line between a front end web dev job and a dev ops job is getting really REALLY small</h2>
-<p></p>
-
-<p></p>
-
-<p></p>
+<h2>The line dividing front end web developer jobs and DevOps jobs is getting really REALLY small</h2>
+<p>As mentioned above, knowing how to manage cloud-based services is marketable skillset. This is because DevOps, the process of deploying and updating apps at a rapid but safe pace, is becoming as commonplace in the web development world as Git commits are.</p>
+<p>Knowing how to automate a build/unit test/deployment process using combinations of <a href="https://aws.amazon.com/">AWS</a>, <a href="https://azure.microsoft.com/en-us/">Azure</a>, <a href="https://www.docker.com/">Docker</a>, <a href="https://kubernetes.io/">Kubernetes</a>, etc. is rapidly becoming a required skill. I have better-than-basic knowledge of this stuff at the time of this blog post but not much past that, and this probably prevented my moving forward with some interview processes.</p>
+<p>I may get some push-back on this opinion but I'm sticking with it. Ignore this if you like, but if you currently use npm and Git to respectively manage app dependencies and source code, the growing expectation is you either already know how to use cloud services like this, or can learn how to do it relatively fast.</p>
+</p>
 </li>
 </ol>
+
+<h2>What I learned</h2>
+
+<h2>Conclusion</h2>
