@@ -13,7 +13,7 @@ thumb-image: web-dev-job-two-thumb.jpg
 
 On May 8th, 2017, I recapped <a href="/front-end-web-developer-job-search/">my search for a front end web developer job</a>. Five years to the day later, I'm publishing a post about what that job search looks like in 2022.
 
-This new job search took work but not as much as the previous one. And like before, I learned a lot about what it takes to get a web dev position these days.
+This new job search took effort but not as much as the previous one. And like before, I learned a lot about what it takes to get a web dev position these days.
 
 <h2>What happened the last time I looked for a web dev job?</h2>
 In 2017, I "cast a wide net," meaning I applied for lots of jobs in a short time frame. I applied for so many jobs that I hit a point where I had four interviews in one day.
