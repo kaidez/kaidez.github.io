@@ -32,10 +32,9 @@ And with that, here are the six main things I discovered while job hunting:
 
 <ol>
 <li class="post__list-item">
-<h2>
-There are many open web developer jobs, but tragedy is the main reason why.</h2>
+<h2>There are many open web developer jobs, but tragedy is the main reason why.</h2>
 
-<p>Covid-19 is horrible: it's responsible for hundreds of thousands of deaths, led to massive lockdowns that have crippled small businesses and led to the quarantining of most employees.</p>
+<p>Covid-19 is horrible. It's responsible for hundreds of thousands of deaths, led to massive lockdowns that have crippled small businesses and led to the quarantining of most employees.</p>
 
 <p>Consequently, employees were forced to work remotely for safety reasons. Also, consequently, employers had to hire more remote employees.</p>
 
@@ -43,11 +42,11 @@ There are many open web developer jobs, but tragedy is the main reason why.</h2>
 
 <p>For employers, they gained access to a wider talent pool. A startup in Tennessee could now hire a Silicon Valley-bred web developer if they wanted to.</p>
 
-<p>Financially-speaking, this helped businesses...they no longer needed to hire 20 devs, pay them USD$100,000+ a year, lease them office space and then maintain it with electricity, custodians, etc. They just needed to hire 20 devs and pay them USD$100,000+ a year.</p>
+<p>This helped businesses financially. They no longer needed to hire 20 devs, pay them USD$100,000+ a year, lease them office space and then maintain it with electricity, custodians, etc. They just needed to hire 20 devs and pay them USD$100,000+ a year.</p>
 
 <p>Every job I applied for was either fully remote or hybrid. I would have applied for in-office jobs, it's just that none of the ones I applied to offered that.</p>
 
-<p>So yes, developers currently have options when they job-search...this may change some day but it's how it is now. However, the tragedy of Covid-19 is the reason for this.</p>
+<p>So yes, developers currently have options when they job-search. But the tragedy of Covid-19 is the reason for this.</p>
 
 <p>I'm thankful to have a lot of options but I wouldn't have them if Covid never happened. In this case, I'd be fine if I didn't have a lot of options</p>
 </li>
@@ -101,23 +100,22 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 <li class="post__list-item">
 <h2>The line dividing front end web developer jobs and a back end ones is getting smaller</h2>
 <p>A few of FE job openings I saw listed JavaScript and CSS as requires skills, as well as Python, Java, and .NET.</p>
-<p>Technically, Python, Java and .NET aren't }back end languages", they've just traditionally  been closer to the back end than JavaScript. Maybe "front end" now means "anything that doesn't require building an SQL database."</p>
-<p>I dunno...maybe the listings of Python, Java and .NET in these skillsets were typos. But they were there so it's something to keep in mind as you build your skillset...especially when discussing Python.</p>
-<p>A quick aside: I predicted that server-level Node would be a required skillset in my 2017 article. I didn't see an abundance of Node server jobs in 2022, but did take a coding test where I had to load JSON into a Node back end and then fetch it in the front end using React.</p>
+<p>Technically, Python, Java and .NET aren't "back end languages", they've just traditionally been closer to the back end than JavaScript. Maybe "front end" now means "anything that doesn't require building an SQL database."</p>
+<p>I dunno: maybe the listings of Python, Java and .NET in these skillsets were typos. But they were there so it's something to keep in mind as you build your skillset...especially when discussing Python.</p>
+<p>A quick aside: I predicted that server-level Node would be a required skillset in my 2017 article. I didn't see many Node server jobs in 2022, but did take a coding test where I had to load JSON into a Node back end and fetch it with React.</p>
 <p>So learning some Node stuff maybe worth your time. Creating a consumable REST API using Node is  good practice.</p>
 </li>
 
 <li class="post__list-item">
 <h2>The line dividing front end web developer jobs and DevOps jobs is getting really REALLY small</h2>
-<p>As mentioned above, knowing how to manage cloud-based services is marketable skillset. This is because DevOps, the process of deploying and updating apps at a rapid but safe pace, is becoming as commonplace in the web development world as Git commits are.</p>
-<p>Knowing how to automate a build/unit test/deployment process using combinations of <a href="https://aws.amazon.com/">AWS</a>, <a href="https://azure.microsoft.com/en-us/">Azure</a>, <a href="https://www.docker.com/">Docker</a>, <a href="https://kubernetes.io/">Kubernetes</a>, etc. is rapidly becoming a required skill. I have better-than-basic knowledge of this stuff at the time of this blog post but not much past that, and this probably prevented my moving forward with some interview processes.</p>
-<p>I may get some push-back on this opinion but I'm sticking with it. Ignore this if you like, but if you currently use npm and Git to respectively manage app dependencies and source code, the growing expectation is you either already know how to use cloud services like this, or can learn how to do it relatively fast.</p>
-</p>
+<p>As mentioned above, knowing how to manage cloud-based services is marketable skillset. This is because DevOps, the process of deploying and updating apps quickly and safely, is becoming as commonplace in the web development world as Git commits.</p>
+<p>Knowing how to automate a build/unit test/deployment process using combinations of <a href="https://aws.amazon.com/">AWS</a>, <a href="https://azure.microsoft.com/en-us/">Azure</a>, <a href="https://www.docker.com/">Docker</a>, <a href="https://kubernetes.io/">Kubernetes</a>, etc. is rapidly becoming a required skill. I only have better-than-basic knowledge of this stuff at the moment: this probably prevented my moving forward with some interviews.</p>
+<p>I may get some push-back on this opinion but I'm sticking with it. Ignore this if you like, but if you're using npm and Git to respectively manage app dependencies and source code, the growing expectation is you either already know how to use cloud services like this, or are willing to learn how to use them.</p>
 </li>
 </ol>
 
 <h2>What I learned</h2>
-The big thing I learned during this job search was...it's really REALLY good to have React experience.  As a result, This was the easiest job search I ever went through!
+The big thing I learned during this job search was...it's really REALLY good to have React experience.  As a result, this was the easiest job search I ever went through!
 
 But front web developers always have to keep their skills fresh. That's always been the case but I was brutally reminded of it during this job search.
 
@@ -127,4 +125,4 @@ I have a sticky on my desktop listing the skills I need to learn and the ones I 
 But that issue of find time to ramp up on front end web dev skills is really the only road block right now.
 There's never been a better time to look for FE web dev job...particularly if you know your React.
 
-Metaphorically speaking, looking for a front end job is like picking 100 dollar bills up off the street for the right developers in 2022. It may be just a bubble, but it's how things are right now.
+For skilled front developers, looking for a job in 2022 is like picking 100 dollar bills up off the street. This may just be just a bubble that will pop someday, but it's how things are right now.
