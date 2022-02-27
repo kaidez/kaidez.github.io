@@ -11,7 +11,7 @@ og-image: web-dev-job-two.jpg
 thumb-image: web-dev-job-two-thumb.jpg
 ---
 
-On May 8th, 2017, I recapped <a href="/front-end-web-developer-job-search/">my search for a front end web developer job</a>. Five years to the day later, I'm publishing a post about what that job search looks like in 2022.
+On May 8th, 2017, I wrote about <a href="/front-end-web-developer-job-search/">my search for a front end web developer job</a>. Five years to the day later, I'm publishing a post about what that job search looks like in 2022.
 
 This new job search took effort but not as much as the previous one. And like before, I learned a lot about what it takes to get a web dev position these days.
 
@@ -29,7 +29,7 @@ I estimate I applied for less than half the amount jobs this time. Plus, I found
 
 I got a job at Blue Cross Blue Shield in under three weeks, that's less than the four weeks it took me to get the Chase job. Plus, I turned down two other job offers!
 
-<h2>What I learned</h2>
+<h2>The six things I learned</h2>
 And with that, here are the six main things I discovered while job hunting:
 
 <ol>
@@ -42,33 +42,33 @@ And with that, here are the six main things I discovered while job hunting:
 
 <p>For web developers, who were technically set up to work remotely already, this was a job boom. They suddenly had job options available to them from around the world, not just in their hometown.</p>
 
-<p>On the whole, companies have always employed developers from other countries. But based on the many available remote jobs I saw, they seem to be willing to expand this.</p>
+<p>On the whole, companies have always employed developers from other countries. But based on the many open remote jobs I saw, companies seem more willing to hire stateside coders.</p>
 
 <p>Financially, this made sense for businesses. They no longer needed to hire devs, pay them USD$100,000+ a year, put them in an office and then maintain it with electricity, custodians, etc. They just needed to hire devs and pay them USD$100,000+ a year.</p>
 
 <p>Every job I applied for was either fully remote or hybrid. I would have applied for in-office jobs, it's just that none of the ones I applied to offered that.</p>
 
-<p>So yes, developers currently have options when they job search. But the tragedy of Covid-19 is the reason for this.</p>
+<p>So yes, developers have a lot of job options right now. But the tragedy of Covid-19 is the reason for this.</p>
 
 <p>I'm thankful to have a lot of options but I wouldn't have them if Covid never happened. In this case, I'd be fine if I didn't have a lot of options.</p>
 </li>
 
 <li class="post__list-item">
-<h3><b>The core skills required for web developer jobs <i>always</i> changes</b></h3>
+<h3><b>The core skills required for web developer jobs has changed dramatically</b></h3>
 <p>
 Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuery</a> skills was guaranteed a nice, high-paying front end web developer job. jQuery begat <a href="https://backbonejs.org/">Backbone</a>, which begat <a href="https://angular.io/">Angular</a>, which begat React, and so on and so forth.
 </p>
 
-<p>The required skills for FE web developer jobs changes rapidly...always has, always will. But based on the skills listed for the jobs I saw and the questions that interviewers asked me, the changes from my last job search to this one are those most radical ones I've ever seen.</p>
+<p>The required skills for FE web developer jobs changes rapidly...always has, always will. But based on the skills listed for the jobs I saw and my interview experiences, the changes from my last job search to this one are those most radical ones I've ever seen.</p>
 
 <p>Front end web developers with these skillsets are THE most employable at the time of this post:</p>
 
 <ul>
 <li class="post__list-item" style="list-style-type:disc;"><b>TypeScript:</b> It makes unit testing easier and lets those classically-trained Java/C++ developers ramp up on JS quicker. Speaking of testing...</li>
-<li class="post__list-item" style="list-style-type:disc;"><b>JavaScript unit testing:</b> JavaScript was initially created to be a beginner's programming language so it didn't require a culture of unit testing. JS has matured past the beginner level, so such simplicity has passed. Almost all prospective employers expect <i>some</i> unit test knowledge among candidates...not guru-level knowledge but SOME knowledge.</li>
+<li class="post__list-item" style="list-style-type:disc;"><b>JavaScript unit testing:</b> JavaScript was initially created to be a beginner's programming language so it didn't require a culture of unit testing. JS has matured past the beginner level, so this simplicity is gone. Almost all prospective employers expect <i>some</i> unit test knowledge among candidates...not guru-level knowledge but SOME knowledge.</li>
 <li class="post__list-item" style="list-style-type:disc;"><b>React and its ecosystem:</b> We'll discuss this in depth in the next list item ;)</li>
 <li class="post__list-item" style="list-style-type:disc;"><b>Angular version 2 and higher:</b> Many businesses added Angular to their codebases before React got big.  That legacy code is still out there and those businesses are hiring developers to maintain it as well as migrate it over to React.</li>
-<li class="post__list-item" style="list-style-type:disc;"><b>Intermediate level JavaScript:</b> If you know React and/or Angular, then employers expect your JS knowledge to be better than basic. Things like <code>fetch</code>, <code>try...catch</code> and ANYTHING related to JS data structures should be second nature to you.</li>
+<li class="post__list-item" style="list-style-type:disc;"><b>Intermediate level JavaScript:</b> If you know React and/or Angular, then employers expect your JS knowledge to be better than basic. You should know how to use <code>fetch</code>, <code>try/catch</code> and how to get info from JS data structures using loops. All this should be second nature to you.</li>
 <li class="post__list-item" style="list-style-type:disc;"><b>Code deployment via cloud-based apps and services:</b> We'll discuss this in depth in the last list item ;)</li>
 </ul>
 </li>
@@ -86,11 +86,11 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <p>The years-long debate over which JavaScript framework is the best is still going on. As a result, frameworks like <a href="https://vuejs.org/">Vue</a> and <a href="https://svelte.dev/">Svelte</a> are being hyped as better alternatives to React.</p>
 
-<p>To be fair: each one does certain tasks easier than React and their learning curves aren't as steep. But React came out first, so the business world adopted it first.</p>
+<p>To be fair: each one does certain tasks easier than React and their learning curves aren't as steep. But React came out before them, so the business world adopted it first.</p>
 
 <p>The React ecosystem is firmly embedded in the many companies and it's expensive to switch it out for something else. So any sort of Vue/Svelte dominance in the business world isn't happening anytime soon.</p>
 
-<p>Keep this in mind during a job search: finding Vue or Svelte jobs at some companies is doable, especially startups. But if you're job hunting on LinkedIn or Indeed, you have far more options available to you as a React developer.</p>
+<p>Keep this in mind during a job search: finding Vue or Svelte jobs at some companies is doable, especially startups. But if you're job hunting on LinkedIn or Indeed, you have more options available to you as a React developer.</p>
 </li>
 
 <li class="post__list-item">
