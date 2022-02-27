@@ -117,5 +117,14 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 </ol>
 
 <h2>What I learned</h2>
+The big thing I learned during this job search was...it's really REALLY good to have React experience.  As a result, This was the easiest job search I ever went through!
+
+But front web developers always have to keep their skills fresh. That's always been the case but I was brutally reminded of it during this job search.
+
+I have a sticky on my desktop listing the skills I need to learn and the ones I need to ramp up on. I'll have to find time to do just that...I have no other choice.
 
 <h2>Conclusion</h2>
+But that issue of find time to ramp up on front end web dev skills is really the only road block right now.
+There's never been a better time to look for FE web dev job...particularly if you know your React.
+
+Metaphorically speaking, looking for a front end job is like picking 100 dollar bills up off the street for the right developers in 2022. It may be just a bubble, but it's how things are right now.
