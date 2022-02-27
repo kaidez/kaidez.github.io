@@ -142,9 +142,9 @@ My biggest takeaway from this recent job search is...
 <blockquote><p>"WOW..it's really REALLY good to have React experience nowadays!!!"</p></blockquote>
 I do have other skills but having React experience made this the easiest job search I ever went through!
 
-But front web developers always have to keep their skills fresh. That's always been the case but I was brutally reminded of it during this job hunt.
+Web developers always have to keep their skills fresh...that's always been the case. But I was brutally reminded of it during this job hunt.
 
-There's a sticky on my desktop listing the skills I need to learn/ramp up on...cloud stuff, Node, etc. I'll have to find time to do just that...I have no other choice.
+There's a sticky on my desktop listing the skills I need to learn/ramp up on...cloud stuff, Node, etc. I'll have to find time to do just that: I have no other choice.
 
 <h2>Conclusion</h2>
 But finding time to ramp up on front end web dev skills is the only issue right now.  There's never been a better time to look for FE web dev job...particularly if you know React.
