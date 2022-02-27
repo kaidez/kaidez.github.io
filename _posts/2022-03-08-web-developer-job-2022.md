@@ -11,22 +11,22 @@ og-image: web-dev-job-two.jpg
 thumb-image: web-dev-job-two-thumb.jpg
 ---
 
-On May 8th 2017, I wrote about <a href="/front-end-web-developer-job-search/">what it was like looking for a front end web developer job</a> at that time. Five years to the day later, I'm publishing a post about what that job search looks like in 2022.
+On May 8th, 2017, I recapped <a href="/front-end-web-developer-job-search/">my search for a front end web developer job</a>. Five years to the day later, I'm publishing a post about what that job search looks like in 2022.
 
-This new job search took work but wasn't as intense as the previous one. And just like before, I learned a lot about what it takes to get a web dev position these days.
+This new job search took work but not as much as the previous one. And like before, I learned a lot about what it takes to get a web dev position these days.
 
 <h2>What happened the last time I looked for a web dev job?</h2>
-In 2017, I "cast a wide net," meaning I applied for lots of jobs in a short time frame. I applied for do many jobs that I hit a point where I had four interviews in one day.
+In 2017, I "cast a wide net," meaning I applied for lots of jobs in a short time frame. I applied for so many jobs that I hit a point where I had four interviews in one day.
 
-I had to do this because I had limited experience with the in-demand JavaScript frameworks of the day, especially <a href="https://reactjs.org/">React</a>. At the time, I had over a decade of web dev experience but was competing for jobs against people who had more of the required framework knowledge than I did.
+I had to do this because I had limited experience with the in-demand JavaScript frameworks of the day, particularly <a href="https://reactjs.org/">React</a>. At the time, I had over a decade of developer experience but was competing for jobs against people who had more of the required framework knowledge than I did.
 
 So I cast that wide net to give myself a better chance of getting hired. And once I got a job (at JPMorgan Chase), I began building up five years of solid, quantifiable React experience.
 
-Having that experience paid off when the time came for me to find a new job. I still cast a wide net while searching, but it didn't have to be as wide as before.
+Having that experience paid off when the time came for me to find a new job. I still casted a wide net while searching, but it didn't have to be as wide as before.
 
 I estimate I applied for less than half the amount jobs this time. Plus, I found a job a bit faster.
 
-I got my new job at Blue Cross Blue Shield in just under three weeks, that's less than the four weeks it took me to get the Chase job. And I turned down two other job offers!!!
+I got a job at Blue Cross Blue Shield in under three weeks, that's less than the four weeks it took me to get the Chase job. Plus, I turned down two other job offers!
 
 And with that, here are the six main things I discovered while job hunting:
 
@@ -48,7 +48,7 @@ And with that, here are the six main things I discovered while job hunting:
 
 <p>So yes, developers currently have options when they job search. But the tragedy of Covid-19 is the reason for this.</p>
 
-<p>I'm thankful to have a lot of options but I wouldn't have them if Covid never happened. In this case, I'd be fine if I didn't have a lot of options</p>
+<p>I'm thankful to have a lot of options but I wouldn't have them if Covid never happened. In this case, I'd be fine if I didn't have a lot of options.</p>
 </li>
 
 <li class="post__list-item">
@@ -74,15 +74,15 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 <li class="post__list-item">
 <h2>React is the most in-demand library/framework...and it will stay that way for awhile</h2>
 
-<p>After its release, React solved problems that developers never knew they had. It gave them a great way to "component-ize" the UI, it rendered that UI fast and it made application state easier to manage.</p>
+<p>After its release, React solved problems that developers never knew they had. It gave them a great way to "component-ize" the UI, rendered that UI fast and made application state easier to manage.</p>
 
-<p>This resulted in a growing React ecosystem that includes <a href="https://redux.js.org/">Redux</a>, <a href="https://reactrouter.com/">React Router</a> and <a href="https://jestjs.io/">Jest</a>. It's also led to a supportive React community of Slack channels, tutorial sites and web forums.</p>
+<p>This resulted in a growing React ecosystem that includes <a href="https://redux.js.org/">Redux</a>, <a href="https://reactrouter.com/">React Router</a> and <a href="https://jestjs.io/">Jest</a>. It also led to a vast, supportive React community of Slack channels, tutorial sites and web forums.</p>
 
 <p>It's for all these reasons (and many more) that businesses of all sizes have adopted React. And want to hire developers that know it.</p>
 
 <p>No exaggeration here: for almost every interview I had, "How long have I used React?" was the one of the first two questions I was asked. Along with questions about its above-mentioned ecosystem.</p>
 
-<p>The years-long debate over which JavaScript framework is the best still goes on. As a result, frameworks like <a href="https://vuejs.org/">Vue</a> and <a href="https://svelte.dev/">Svelte</a> are being hyped as better alternatives to React.</p>
+<p>The years-long debate over which JavaScript framework is the best is still going on. As a result, frameworks like <a href="https://vuejs.org/">Vue</a> and <a href="https://svelte.dev/">Svelte</a> are being hyped as better alternatives to React.</p>
 
 <p>To be fair: each one does certain tasks easier than React and their learning curves aren't as steep. But React came out first, so the business world adopted it first.</p>
 
@@ -103,9 +103,9 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <p>Now, it must be said that some EXCELLENT coders are coming out of bootcamps. I know of two bootcamp grads that landed web dev jobs at Spotify, one of the hardest companies to get a job at.</p>
 
-<p>And Noam Sauer-Utley is a bootcamp grad who's written some of the best JS algorithms explanations I've ever read. Read more of her stuff <a href="https://medium.com/@noamsauerutley">here</a>.</p>
+<p>And Noam Sauer-Utley is a bootcamp grad who's written some of the BEST JavaScript algorithms explanations I've ever read. Read more of her stuff <a href="https://medium.com/@noamsauerutley">here</a>.</p>
 
-<p>If you want to prep for these tests from a JavaScript standpoint, <a href="https://www.codewars.com/">Codewars</a> is probably the easiest free resource right now. <a href="https://www.geeksforgeeks.org/">Geeks for Geeks</a> is next and is also free...a bit more structured towards the tests.</p>
+<p>If you want to prep for these tests from a JS standpoint, <a href="https://www.codewars.com/">Codewars</a> is probably the easiest free resource right now. <a href="https://www.geeksforgeeks.org/">Geeks for Geeks</a> is next and is also free...a bit more structured towards the tests.</p>
 
 <p><a href="https://www.hackerrank.com/">HackerRank</a> is free and is probably the closet representation of what an algo test looks like. Lots of the tests I took were on HackerRank.</p>
 
@@ -129,7 +129,7 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <li class="post__list-item">
 <h2>The line dividing front end web developer jobs and DevOps jobs is getting really REALLY small</h2>
-<p>As mentioned above, knowing how to manage cloud-based services is marketable skillset. This is because DevOps, the process of deploying and updating apps quickly and safely, is becoming as commonplace in the web development world as Git commits.</p>
+<p>As mentioned above, knowing how to manage cloud-based services is marketable skillset. This is because DevOps, the process of deploying and updating code quickly and safely, is becoming as commonplace in the web development world as Git commits.</p>
 
 <p>Knowing how to automate a build/unit test/deployment process using combinations of <a href="https://aws.amazon.com/">AWS</a>, <a href="https://azure.microsoft.com/en-us/">Azure</a>, <a href="https://www.docker.com/">Docker</a>, <a href="https://kubernetes.io/">Kubernetes</a>, etc. is rapidly becoming a required skill. I only have better-than-basic knowledge of this stuff at the moment: this probably prevented my moving forward with some interviews.</p>
 
@@ -147,6 +147,6 @@ But front web developers always have to keep their skills fresh. That's always b
 There's a sticky on my desktop listing the skills I need to learn/ramp up on...cloud stuff, Node, etc. I'll have to find time to do just that...I have no other choice.
 
 <h2>Conclusion</h2>
-But finding time to ramp up on front end web dev skills is the only issue right now.  There's never been a better time to look for FE web dev job...particularly if you know your React.
+But finding time to ramp up on front end web dev skills is the only issue right now.  There's never been a better time to look for FE web dev job...particularly if you know React.
 
 For skilled front developers, looking for a job in 2022 is like picking 100 dollar bills up off the street. This may just be just a bubble that will pop someday, but it's how things are right now.
