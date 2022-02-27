@@ -72,10 +72,14 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <li class="post__list-item">
 <h2>React is the most in-demand library/framework...and it will stay that way for awhile</h2>
-<p>As of this writing, many feel that both <a href="https://vuejs.org/">Vue</a> and <a href="https://svelte.dev/">Svelte</a> are better alternatives to React. But the "which-framework-is-the-best" debate as been going for as long as I can remember.</p>
-<p>Both </p>
-
-<p>Yes, </p>
+<p>After its release, React solved problems that developers never knew they had. It gave them a great way to "component-ize" the UI, it rendered that UI fast and it made application state easier to manage.</p>
+<p>This resulted in a growing React ecosystem that includes <a href="https://redux.js.org/">Redux</a>, <a href="https://reactrouter.com/">React Router</a> and <a href="https://jestjs.io/">Jest</a>. It's also led to a supportive React community of Slack channels, tutorial sites and web forums.</p>
+<p>It's for all these reasons (and many more) that businesses of all sizes have adopted React. And want to hire developers that know it.</p>
+<p>No exaggeration here: for almost every interview I had, "How long have I used React?" was the one of the first two questions I was asked. Along with questions about its above-mentioned ecosystem.</p>
+<p>The years-long debate over which JavaScript framework is the best still goes on. As a result, frameworks like <a href="https://vuejs.org/">Vue</a> and <a href="https://svelte.dev/">Svelte</a> are being hyped as better alternatives to React.</p>
+<p>To be fair: each one does certain tasks easier than React and their learning curves aren't as steep. But React came out first and so the business world adopted it first.</p>
+<p>The React ecosystem is firmly embedded in the many companies and it's expensive to switch it out for something else. So any sort of Vue/Svelte dominance in the business world isn't happening anytime soon.</p>
+<p>Keep all that mind during a job search: finding Vue or Svelte jobs at some companies doable, especially startups. But if you're looking for a job on places like LinkedIn or Indeed, you will have far more options available to you as a React developer.</p>
 </li>
 
 <li class="post__list-item">
@@ -105,6 +109,3 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 <p></p>
 </li>
 </ol>
-
-<!--
-Knowing how to use <a href="https://jestjs.io/">Jest</a> alongside either <a href="https://enzymejs.github.io/enzyme/">Enzyme</a> or <a href="https://reactjs.org/docs/test-renderer.html">React Test Renderer</a> is expected.one of the best skills to have -->
