@@ -29,6 +29,7 @@ I estimate I applied for less than half the amount jobs this time. Plus, I found
 
 I got a job at Blue Cross Blue Shield in under three weeks, that's less than the four weeks it took me to get the Chase job. Plus, I turned down two other job offers!
 
+<h2>What I learned</h2>
 And with that, here are the six main things I discovered while job hunting:
 
 <ol>
