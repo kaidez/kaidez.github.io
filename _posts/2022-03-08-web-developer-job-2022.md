@@ -62,12 +62,12 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 <p>Front end web developers with these skillsets are THE most employable at the time of this post:</p>
 
 <ul>
-<li class="post__list-item"><b>TypeScript:</b> It makes unit testing easier and lets those classically-trained Java/C++ developers ramp up on JS quicker. Speaking of testing...</li>
-<li class="post__list-item"><b>JavaScript unit testing:</b> JavaScript was initially created to be a beginner's programming language so it didn't require a culture of unit testing. JS has matured from DOM manipulation to mobile apps, so such simplicity has passed. Almost all prospective employers expect some unit test knowledge among candidates...not guru-level knowledge but SOME knowledge.</li>
-<li class="post__list-item"><b>React and its ecosystem:</b> We'll discuss this in depth in the next part of this list ;)</li>
-<li class="post__list-item"><b>Angular version 2 and higher:</b> Many businesses added Angular to their codebases before React got big.  That legacy code is still out there and those businesses are hiring developers to maintain it as well as migrate it over to React.</li>
-<li class="post__list-item"><b>Intermediate level JavaScript:</b> If you know React and/or Angular, then employers expect your JS knowledge to be better than basic. Things like <code>fetch</code>, <code>try...catch</code> and ANYTHING related to JS data structures should be second nature to you.</li>
-<li class="post__list-item"><b>Code deployment via cloud-based apps and services:</b> We'll discuss this in depth in the last part of the list ;)</li>
+<li class="post__list-item" style="list-style-type:disc;"><b>TypeScript:</b> It makes unit testing easier and lets those classically-trained Java/C++ developers ramp up on JS quicker. Speaking of testing...</li>
+<li class="post__list-item" style="list-style-type:disc;"><b>JavaScript unit testing:</b> JavaScript was initially created to be a beginner's programming language so it didn't require a culture of unit testing. JS has matured from DOM manipulation to mobile apps, so such simplicity has passed. Almost all prospective employers expect some unit test knowledge among candidates...not guru-level knowledge but SOME knowledge.</li>
+<li class="post__list-item" style="list-style-type:disc;"><b>React and its ecosystem:</b> We'll discuss this in depth in the next part of this list ;)</li>
+<li class="post__list-item" style="list-style-type:disc;"><b>Angular version 2 and higher:</b> Many businesses added Angular to their codebases before React got big.  That legacy code is still out there and those businesses are hiring developers to maintain it as well as migrate it over to React.</li>
+<li class="post__list-item" style="list-style-type:disc;"><b>Intermediate level JavaScript:</b> If you know React and/or Angular, then employers expect your JS knowledge to be better than basic. Things like <code>fetch</code>, <code>try...catch</code> and ANYTHING related to JS data structures should be second nature to you.</li>
+<li class="post__list-item" style="list-style-type:disc;"><b>Code deployment via cloud-based apps and services:</b> We'll discuss this in depth in the last part of the list ;)</li>
 </ul>
 </li>
 
@@ -122,9 +122,9 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <p>I dunno: maybe the listings of Python, Java and .NET in these skillsets were typos. But they were there so it's something to keep in mind as you build your skillset...especially when discussing Python.</p>
 
-<p>A quick aside: I predicted that server-level Node would be a required skillset in my 2017 article. I didn't see many Node server jobs in 2022, but did take a coding test where I had to load JSON into a Node back end and fetch it with React.</p>
+<p>A quick aside: I predicted that back end-level Node would be a required skillset in my 2017 article. I didn't see many Node server jobs in 2022, but I did take a coding test where I had to load JSON into a Node back end and fetch it with React.</p>
 
-<p>So learning some Node stuff maybe worth your time. Creating a consumable REST API using Node is good practice.</p>
+<p>So learning some Node stuff maybe worth your time. Creating a consumable REST API using Node on your own is good practice.</p>
 </li>
 
 <li class="post__list-item">
