@@ -66,7 +66,7 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 <li class="post__list-item"><em>JavaScript unit testing:</em> JavaScript was initially created to be a beginner's programming language so it didn't require a culture of unit testing. JS has matured from DOM manipulation to mobile apps, so such simplicity has passed. Almost all prospective employers expect some unit test knowledge among candidates...not guru-level knowledge but SOME knowledge.</li>
 <li class="post__list-item"><em>React and its ecosystem:</em> We'll discuss this in depth in the next part of this list ;)</li>
 <li class="post__list-item"><em>Angular version 2 and higher:</em> Many businesses added Angular to their codebases before React got big.  That legacy code is still out there and those businesses are hiring developers to both maintain it as well as migrate it over to React.</li>
-<li class="post__list-item"><em>Intermediate level JavaScript:</em> If you know React and/or Angular, then employers expect your JS knowledge to be better than basic. Implementing things like <code>fetch</code> and <code>try...catch</code> and ANYTHING related to JS data structures?  All that should be second nature to you.</li>
+<li class="post__list-item"><em>Intermediate level JavaScript:</em> If you know React and/or Angular, then employers expect your JS knowledge to be better than basic. Things like <code>fetch</code>, <code>try...catch</code> and ANYTHING related to JS data structures should be second nature to you.</li>
 <li class="post__list-item"><em>Code deployment via cloud-based apps and services:</em> We'll discuss this in depth in the last part of the list ;)</li>
 </ul>
 </li>
@@ -78,9 +78,9 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 <p>It's for all these reasons (and many more) that businesses of all sizes have adopted React. And want to hire developers that know it.</p>
 <p>No exaggeration here: for almost every interview I had, "How long have I used React?" was the one of the first two questions I was asked. Along with questions about its above-mentioned ecosystem.</p>
 <p>The years-long debate over which JavaScript framework is the best still goes on. As a result, frameworks like <a href="https://vuejs.org/">Vue</a> and <a href="https://svelte.dev/">Svelte</a> are being hyped as better alternatives to React.</p>
-<p>To be fair: each one does certain tasks easier than React and their learning curves aren't as steep. But React came out first and so the business world adopted it first.</p>
+<p>To be fair: each one does certain tasks easier than React and their learning curves aren't as steep. But React came out first, so the business world adopted it first.</p>
 <p>The React ecosystem is firmly embedded in the many companies and it's expensive to switch it out for something else. So any sort of Vue/Svelte dominance in the business world isn't happening anytime soon.</p>
-<p>Keep all that mind during a job search: finding Vue or Svelte jobs at some companies doable, especially startups. But if you're looking for a job on places like LinkedIn or Indeed, you will have far more options available to you as a React developer.</p>
+<p>Keep this in mind during a job search: finding Vue or Svelte jobs at some companies is doable, especially startups. But if you're job hunting on LinkedIn or Indeed, you have far more options available to you as a React developer.</p>
 </li>
 
 <li class="post__list-item">
@@ -99,11 +99,11 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <li class="post__list-item">
 <h2>The line dividing front end web developer jobs and a back end ones is getting smaller</h2>
-<p>A few of FE job openings I saw listed JavaScript and CSS as requires skills, as well as Python, Java, and .NET.</p>
-<p>Technically, Python, Java and .NET aren't "back end languages", they've just traditionally been closer to the back end than JavaScript. Maybe "front end" now means "anything that doesn't require building an SQL database."</p>
+<p>Some FE job openings I saw listed JavaScript and CSS as requires skills, as well as Python, Java, and .NET.</p>
+<p>Technically, Python, Java and .NET aren't "back end languages", they've just always been closer to the back end than JavaScript. Maybe "front end" now means "anything that doesn't require building an SQL database."</p>
 <p>I dunno: maybe the listings of Python, Java and .NET in these skillsets were typos. But they were there so it's something to keep in mind as you build your skillset...especially when discussing Python.</p>
 <p>A quick aside: I predicted that server-level Node would be a required skillset in my 2017 article. I didn't see many Node server jobs in 2022, but did take a coding test where I had to load JSON into a Node back end and fetch it with React.</p>
-<p>So learning some Node stuff maybe worth your time. Creating a consumable REST API using Node is  good practice.</p>
+<p>So learning some Node stuff maybe worth your time. Creating a consumable REST API using Node is good practice.</p>
 </li>
 
 <li class="post__list-item">
@@ -115,11 +115,13 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 </ol>
 
 <h2>What I learned</h2>
-The big thing I learned during this job search was...it's really REALLY good to have React experience.  As a result, this was the easiest job search I ever went through!
+My biggest takeaway from this recent job search is...
+<blockquote><p>"WOW..it's really REALLY good to have React experience nowadays!!!"</p></blockquote>
+I do have other experience, but having React experience made this the easiest job search I ever went through!
 
-But front web developers always have to keep their skills fresh. That's always been the case but I was brutally reminded of it during this job search.
+But front web developers always have to keep their skills fresh. That's always been the case but I was brutally reminded of it during this job hunt.
 
-I have a sticky on my desktop listing the skills I need to learn and the ones I need to ramp up on. I'll have to find time to do just that...I have no other choice.
+There's a sticky on my desktop listing the skills I need to learn/ramp up on...cloud stuff, Node, etc. I'll have to find time to do just that...I have no other choice.
 
 <h2>Conclusion</h2>
 But that issue of find time to ramp up on front end web dev skills is really the only road block right now.
