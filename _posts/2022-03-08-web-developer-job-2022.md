@@ -73,43 +73,66 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <li class="post__list-item">
 <h2>React is the most in-demand library/framework...and it will stay that way for awhile</h2>
+
 <p>After its release, React solved problems that developers never knew they had. It gave them a great way to "component-ize" the UI, it rendered that UI fast and it made application state easier to manage.</p>
+
 <p>This resulted in a growing React ecosystem that includes <a href="https://redux.js.org/">Redux</a>, <a href="https://reactrouter.com/">React Router</a> and <a href="https://jestjs.io/">Jest</a>. It's also led to a supportive React community of Slack channels, tutorial sites and web forums.</p>
+
 <p>It's for all these reasons (and many more) that businesses of all sizes have adopted React. And want to hire developers that know it.</p>
+
 <p>No exaggeration here: for almost every interview I had, "How long have I used React?" was the one of the first two questions I was asked. Along with questions about its above-mentioned ecosystem.</p>
+
 <p>The years-long debate over which JavaScript framework is the best still goes on. As a result, frameworks like <a href="https://vuejs.org/">Vue</a> and <a href="https://svelte.dev/">Svelte</a> are being hyped as better alternatives to React.</p>
+
 <p>To be fair: each one does certain tasks easier than React and their learning curves aren't as steep. But React came out first, so the business world adopted it first.</p>
+
 <p>The React ecosystem is firmly embedded in the many companies and it's expensive to switch it out for something else. So any sort of Vue/Svelte dominance in the business world isn't happening anytime soon.</p>
+
 <p>Keep this in mind during a job search: finding Vue or Svelte jobs at some companies is doable, especially startups. But if you're job hunting on LinkedIn or Indeed, you have far more options available to you as a React developer.</p>
 </li>
 
 <li class="post__list-item">
 <h2>The algorithm tests are everywhere</h2>
 <p><a href="https://www.dictionary.com/e/acronyms/faang/">FAANG companies</a> are known for the algorithm-based tests interviewees must take before getting hired. I took the Google one and didn't make it (it's ok...I'm fine).</p>
+
 <p>It used to be the FAANGs were the only companies requiring this test...not anymore. While interviewing, a gaming company, a betting site and a beauty manufacturer asked me to take the test.</p>
+
 <p>I'm of the opinion that this is the result of the large number of bootcamp graduates applying for web dev jobs. I mentioned in my 2017 article that bootcampers are at a disadvantage when it comes to job searching...I also mentioned that <a href="https://zachholman.com/posts/startup-interviewing-is-fucked/">Zac Holman thought this interviewing approach was bullsh*t.</a></p>
+
 <p>But there are a lot of unfilled web developer jobs right now, and there are only so many qualified CompSci graduates available to fill them.  So the bootcampers are needed; therefore, these algo tests are needed.</p>
+
 <p>Now, it must be said that some EXCELLENT coders are coming out of bootcamps. I know of two bootcamp grads that landed web dev jobs at Spotify, one of the hardest companies to get a job at.</p>
+
 <p>And Noam Sauer-Utley is a bootcamp grad who's written some of the best JS algorithms explanations I've ever read. Read more of her stuff <a href="https://medium.com/@noamsauerutley">here</a>.</p>
+
 <p>If you want to prep for these tests from a JavaScript standpoint, <a href="https://www.codewars.com/">Codewars</a> is probably the easiest free resource right now. <a href="https://www.geeksforgeeks.org/">Geeks for Geeks</a> is next and is also free...a bit more structured towards the tests.</p>
+
 <p><a href="https://www.hackerrank.com/">HackerRank</a> is free and is probably the closet representation of what an algo test looks like. Lots of the tests I took were on HackerRank.</p>
+
 <p><a href="https://leetcode.com/">LeetCode</a> has free content but also has a premium subscription of USD$35 a month. I bought a premium subscription at the suggestion of a Google developer and suggest it as well: you'll see lots of sample questions close to what you'll see on the tests.</p>
+
 <p>Many suggest <a href="https://www.crackingthecodinginterview.com/">the "Cracking the Coding Interview" book</a> but it's a big read. However, its chapter on <a href="https://www.freecodecamp.org/news/big-o-notation-why-it-matters-and-why-it-doesnt-1674cfa8a23c/">Big O notation</a> is excellent.</p>
 </li>
 
 <li class="post__list-item">
 <h2>The line dividing front end web developer jobs and a back end ones is getting smaller</h2>
 <p>Some FE job openings I saw listed JavaScript and CSS as requires skills, as well as Python, Java, and .NET.</p>
+
 <p>Technically, Python, Java and .NET aren't "back end languages", they've just always been closer to the back end than JavaScript. Maybe "front end" now means "anything that doesn't require building an SQL database."</p>
+
 <p>I dunno: maybe the listings of Python, Java and .NET in these skillsets were typos. But they were there so it's something to keep in mind as you build your skillset...especially when discussing Python.</p>
+
 <p>A quick aside: I predicted that server-level Node would be a required skillset in my 2017 article. I didn't see many Node server jobs in 2022, but did take a coding test where I had to load JSON into a Node back end and fetch it with React.</p>
+
 <p>So learning some Node stuff maybe worth your time. Creating a consumable REST API using Node is good practice.</p>
 </li>
 
 <li class="post__list-item">
 <h2>The line dividing front end web developer jobs and DevOps jobs is getting really REALLY small</h2>
 <p>As mentioned above, knowing how to manage cloud-based services is marketable skillset. This is because DevOps, the process of deploying and updating apps quickly and safely, is becoming as commonplace in the web development world as Git commits.</p>
+
 <p>Knowing how to automate a build/unit test/deployment process using combinations of <a href="https://aws.amazon.com/">AWS</a>, <a href="https://azure.microsoft.com/en-us/">Azure</a>, <a href="https://www.docker.com/">Docker</a>, <a href="https://kubernetes.io/">Kubernetes</a>, etc. is rapidly becoming a required skill. I only have better-than-basic knowledge of this stuff at the moment: this probably prevented my moving forward with some interviews.</p>
+
 <p>I may get some push-back on this opinion but I'm sticking with it. Ignore this if you like, but if you're using npm and Git to respectively manage app dependencies and source code, the growing expectation is you either already know how to use cloud services like this, or are willing to learn how to use them.</p>
 </li>
 </ol>
@@ -124,7 +147,7 @@ But front web developers always have to keep their skills fresh. That's always b
 There's a sticky on my desktop listing the skills I need to learn/ramp up on...cloud stuff, Node, etc. I'll have to find time to do just that...I have no other choice.
 
 <h2>Conclusion</h2>
-But that issue of find time to ramp up on front end web dev skills is really the only road block right now.
+But that issue of finding time to ramp up on front end web dev skills is the only road block right now.
 There's never been a better time to look for FE web dev job...particularly if you know your React.
 
 For skilled front developers, looking for a job in 2022 is like picking 100 dollar bills up off the street. This may just be just a bubble that will pop someday, but it's how things are right now.
