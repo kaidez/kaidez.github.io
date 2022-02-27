@@ -1,8 +1,8 @@
 //# sourceURL=index.js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Navigation } from './react-components/Navigation';
-import { Footer } from './react-components/Footer';
+import Navigation from './react-components/Navigation';
+import Footer from './react-components/Footer';
 // Not being used right now
 // import { divClick } from './helpers';
 
