@@ -147,7 +147,6 @@ But front web developers always have to keep their skills fresh. That's always b
 There's a sticky on my desktop listing the skills I need to learn/ramp up on...cloud stuff, Node, etc. I'll have to find time to do just that...I have no other choice.
 
 <h2>Conclusion</h2>
-But that issue of finding time to ramp up on front end web dev skills is the only road block right now.
-There's never been a better time to look for FE web dev job...particularly if you know your React.
+But finding time to ramp up on front end web dev skills is the only issue right now.  There's never been a better time to look for FE web dev job...particularly if you know your React.
 
 For skilled front developers, looking for a job in 2022 is like picking 100 dollar bills up off the street. This may just be just a bubble that will pop someday, but it's how things are right now.
