@@ -24,7 +24,9 @@ So I cast that wide net to give myself a better chance of getting hired. And onc
 
 That paid off when the time came for me to find a new job. I still cast a wide net while searching, but it didn't have to be as wide as before.
 
-I estimate I applied for less than half the amount jobs this time. Plus, I found a job a bit faster...I got my new job at Blue Cross Blue Shield in just under three weeks, that's less than the four weeks it took me to get the Chase job.
+I estimate I applied for less than half the amount jobs this time. Plus, I found a job a bit faster.
+
+I got my new job at Blue Cross Blue Shield in just under three weeks, that's less than the four weeks it took me to get the Chase job. And I turned down two other job offers!!!
 
 And with that, here are six key things I discovered while job hunting:
 
@@ -83,12 +85,17 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 </li>
 
 <li class="post__list-item">
-<h2>The algo tests matter</h2>
-<p></p>
-
-<p></p>
-
-<p></p>
+<h2>The algorithm tests are everywhere</h2>
+<p><a href="https://www.dictionary.com/e/acronyms/faang/">FAANG companies</a> are known for the algorithm-based tests interviewees must take before getting hired. I took the Google one and didn't make it (it's ok...I'm fine).</p>
+<p>It used to be the FAANGs were the only companies requiring this test...not anymore. While interviewing, a gaming company, a betting site and a beauty manufacturer asked me to take the test.</p>
+<p>I'm of the opinion that this is the result of the large number of bootcamp graduates applying for web dev jobs. I mentioned in my 2017 article that bootcampers are at a disadvantage when it comes to job searching...I also mentioned that <a href="https://zachholman.com/posts/startup-interviewing-is-fucked/">Zac Holman thought this interviewing approach was bullsh*t.</a></p>
+<p>But there are a lot of unfilled web developer jobs right now, and there are only so many qualified CompSci graduates available to fill them.  So the bootcampers are needed; therefore, these algo tests are needed.</p>
+<p>Now, it must be said that some EXCELLENT coders are coming out of bootcamps. I know of two bootcamp grads that landed web dev jobs at Spotify, one of the hardest companies to get a job at.</p>
+<p>And Noam Sauer-Utley is a bootcamp grad who's written some of the best JS algorithms explanations I've ever read. Read more of her stuff <a href="https://medium.com/@noamsauerutley">here</a>.</p>
+<p>If you want to prep for these tests from a JavaScript standpoint, <a href="https://www.codewars.com/">Codewars</a> is probably the easiest free resource right now. <a href="https://www.geeksforgeeks.org/">Geeks for Geeks</a> is next and is also free...a bit more structured towards the tests.</p>
+<p><a href="https://www.hackerrank.com/">HackerRank</a> is free and is probably the closet representation of what an algo test looks like. Lots of the tests I took were on HackerRank.</p>
+<p><a href="https://leetcode.com/">LeetCode</a> has free content but also has a premium subscription of USD$35 a month. I bought a premium subscription at the suggestion of a Google developer and suggest it as well: you'll see lots of sample questions close to what you'll see on the tests.</p>
+<p>Many suggest <a href="https://www.crackingthecodinginterview.com/">the "Cracking the Coding Interview" book</a> but it's a big read. However, its chapter on <a href="https://www.freecodecamp.org/news/big-o-notation-why-it-matters-and-why-it-doesnt-1674cfa8a23c/">Big O notation</a> is excellent.</p>
 </li>
 
 <li class="post__list-item">
