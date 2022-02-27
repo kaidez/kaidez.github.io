@@ -78,7 +78,9 @@ const FooterContent = (props) => {
           </a>
         </div>
         <div className='footer__colophon'>
-          <span className='footer__colophon--item'>&copy;2008-22</span>
+          <span className='footer__colophon--item'>
+            &copy;2008-{new Date().getFullYear() % 100}
+          </span>
           <span className='footer__colophon--item'>
             <a href='/sitemap/' className='footer--page-link'>
               Sitemap
