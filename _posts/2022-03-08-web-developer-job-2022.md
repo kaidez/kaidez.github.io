@@ -136,11 +136,11 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <li class="post__list-item">
 <h3><b>The line dividing front end web developer jobs and DevOps jobs is getting really REALLY small</b></h3>
-<p>As mentioned above, knowing how to manage cloud-based services is marketable skillset. This is because DevOps, the process of deploying and updating code quickly and safely, is becoming as commonplace in the web development world as Git commits.</p>
+<p>As mentioned above, knowing how to manage cloud-based services is desirable skillset. This is because DevOps, the process of deploying and updating code quickly and safely, is becoming as commonplace in the web development world as Git commits.</p>
 
-<p>Knowing how to automate a build/unit test/deployment process using combinations of <a href="https://aws.amazon.com/">AWS</a>, <a href="https://azure.microsoft.com/en-us/">Azure</a>, <a href="https://www.docker.com/">Docker</a>, <a href="https://kubernetes.io/">Kubernetes</a>, etc. is rapidly becoming a required skill. I only have better-than-basic knowledge of this stuff at the moment: this probably prevented my moving forward with some interviews.</p>
+<p>Knowing how to automate a build/unit test/deployment process using combinations of <a href="https://aws.amazon.com/">AWS</a>, <a href="https://azure.microsoft.com/en-us/">Azure</a>, <a href="https://www.docker.com/">Docker</a>, <a href="https://kubernetes.io/">Kubernetes</a>, etc. is rapidly becoming a required skill. Currently, I only have better-than-basic knowledge of this stuff, which probably prevented my moving forward for a few interviews.</p>
 
-<p>If you're a front end developer, you're using npm to manage app dependencies and Git to manage source code. Cloud services follow the same process, so it's worth your time to learn them.</p>
+<p>If you're a front end developer, you're using npm to manage app dependencies and Git to manage source code. Cloud services have a somewhat parallel process so spend some time learning them.</p>
 </li>
 </ol>
 
