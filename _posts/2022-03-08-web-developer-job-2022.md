@@ -23,7 +23,7 @@ I had to do this because I had limited experience with the in-demand JavaScript 
 So I cast that wide net to give myself a better chance of getting hired. And once I got a job (at JPMorgan Chase), I began building up five years of solid, quantifiable React experience.
 
 <h2>What happened this time?</h2>
-Having that experience paid off when the time came for me to find a new job. I still casted a wide net while searching, but it didn't have to be as wide as before.
+Having that experience paid off when the time came for me to find a new job. I still casted a wide net, but it didn't have to be as wide as before.
 
 I estimate I applied for less than half the amount jobs this time. Plus, I found a job a bit faster.
 
@@ -42,9 +42,11 @@ And with that, here are the six main things I discovered while job hunting:
 
 <p>For web developers, who were technically set up to work remotely already, this was a job boom. They suddenly had job options available to them from around the world, not just in their hometown.</p>
 
-<p>On the whole, companies have always employed developers from other countries. But based on the many open remote jobs I saw, companies seem more willing to hire stateside coders.</p>
+<p>On the whole, companies have always employed developers from other countries. But based on all the open remote jobs I saw, companies seem more willing to hire stateside coders.</p>
 
-<p>Financially, this made sense for businesses. They no longer needed to hire devs, pay them USD$100,000+ a year, put them in an office and then maintain it with electricity, custodians, etc. They just needed to hire devs and pay them USD$100,000+ a year.</p>
+<p>Financially, this made sense for businesses. They no longer needed to hire devs, pay them USD$100,000+ a year, put them in an office and then maintain it with electricity, custodians, etc.</p>
+
+<p>They just needed to hire devs and pay them USD$100,000+ a year.</p>
 
 <p>Every job I applied for was either fully remote or hybrid. I would have applied for in-office jobs, it's just that none of the ones I applied to offered that.</p>
 
@@ -68,7 +70,7 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 <li class="post__list-item" style="list-style-type:disc;"><b>JavaScript unit testing:</b> JavaScript was initially created to be a beginner's programming language so it didn't require a culture of unit testing. JS has matured past the beginner level, so this simplicity is gone. Almost all prospective employers expect <i>some</i> unit test knowledge among candidates...not guru-level knowledge but SOME knowledge.</li>
 <li class="post__list-item" style="list-style-type:disc;"><b>React and its ecosystem:</b> We'll discuss this in depth in the next list item ;)</li>
 <li class="post__list-item" style="list-style-type:disc;"><b>Angular version 2 and higher:</b> Many businesses added Angular to their codebases before React got big.  That legacy code is still out there and those businesses are hiring developers to maintain it as well as migrate it over to React.</li>
-<li class="post__list-item" style="list-style-type:disc;"><b>Intermediate level JavaScript:</b> If you know React and/or Angular, then employers expect your JS knowledge to be better than basic. You should know how to use <code>fetch</code>, <code>try/catch</code> and how to get info from JS data structures using loops. All this should be second nature to you.</li>
+<li class="post__list-item" style="list-style-type:disc;"><b>Intermediate level JavaScript knowledge:</b> If you know React and/or Angular, then employers expect your JS knowledge to be better than basic. You should know how to use <code>fetch</code>, <code>try/catch</code> and how to get info from JS data structures using loops. All this should be second nature to you.</li>
 <li class="post__list-item" style="list-style-type:disc;"><b>Code deployment via cloud-based apps and services:</b> We'll discuss this in depth in the last list item ;)</li>
 </ul>
 </li>
@@ -82,9 +84,9 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <p>It's for all these reasons (and many more) that businesses of all sizes have adopted React. And want to hire developers that know it.</p>
 
-<p>No exaggeration here: for almost every interview I had, "How long have I used React?" was the one of the first two questions I was asked. Along with questions about its above-mentioned ecosystem.</p>
+<p>No exaggeration here: for almost every interview I had, "How long have I used React?" was the one of the first two questions I was asked. Followed by questions about my knowledge of the above-mentioned ecosystem.</p>
 
-<p>The years-long debate over which JavaScript framework is the best is still going on. As a result, frameworks like <a href="https://vuejs.org/">Vue</a> and <a href="https://svelte.dev/">Svelte</a> are being hyped as better alternatives to React.</p>
+<p>The years-long debate over what's the best JavaScript framework best continues. As a result, frameworks like <a href="https://vuejs.org/">Vue</a> and <a href="https://svelte.dev/">Svelte</a> are being hyped as better alternatives to React.</p>
 
 <p>To be fair: each one does certain tasks easier than React and their learning curves aren't as steep. But React came out before them, so the business world adopted it first.</p>
 
