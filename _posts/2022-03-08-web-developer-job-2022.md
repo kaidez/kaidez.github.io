@@ -22,7 +22,7 @@ I had to do this because I had limited experience with the in-demand JavaScript 
 
 So I cast that wide net to give myself a better chance of getting hired. And once I got a job (at JPMorgan Chase), I began building up five years of solid, quantifiable React experience.
 
-<h2>What happened this time?</h2>
+<h2>What happened this time when I looked for a web dev job?</h2>
 Having that experience paid off when the time came for me to find a new job. I still casted a wide net, but it didn't have to be as wide as before.
 
 I estimate I applied for less than half the amount jobs this time. Plus, I found a job a bit faster.
@@ -146,7 +146,8 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <h2>What I learned</h2>
 My biggest takeaway from this recent job search is...
-<blockquote><p>"WOW...it's really REALLY good to have React experience nowadays!!!"</p></blockquote>
+>"WOW...it's really REALLY good to have React experience nowadays!!!"
+
 I do have other skills but having React experience made this the easiest job search I ever went through!
 
 Web developers have always needed to keep their skills fresh. But I was brutally reminded of this during this job hunt.
