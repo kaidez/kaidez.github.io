@@ -67,11 +67,11 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <ul>
 <li class="post__list-item" style="list-style-type:disc;"><b>TypeScript:</b> It makes unit testing easier and lets those classically-trained Java/C++ developers ramp up on JS quicker. Speaking of testing...</li>
-<li class="post__list-item" style="list-style-type:disc;"><b>JavaScript unit testing:</b> JavaScript was initially created to be a beginner's programming language so it didn't require a culture of unit testing. JS has matured past the beginner level, so this simplicity is gone. Almost all prospective employers expect <i>some</i> unit test knowledge among candidates...not guru-level knowledge but SOME knowledge.</li>
-<li class="post__list-item" style="list-style-type:disc;"><b>React and its ecosystem:</b> We'll discuss this in depth in the next list item ;)</li>
+<li class="post__list-item" style="list-style-type:disc;"><b>JavaScript unit testing:</b> JavaScript was initially created to be a beginner's programming language so it didn't require a culture of unit testing. JS has matured past the beginner level, so this simplicity is gone. Almost all prospective employers expect some unit test knowledge among candidates...not guru-level knowledge but <i>some</i> knowledge.</li>
+<li class="post__list-item" style="list-style-type:disc;"><b>React and its ecosystem:</b> We'll discuss this in depth in #3 on this list ;)</li>
 <li class="post__list-item" style="list-style-type:disc;"><b>Angular version 2 and higher:</b> Many businesses added Angular to their codebases before React got big.  That legacy code is still out there and those businesses are hiring developers to maintain it as well as migrate it over to React.</li>
 <li class="post__list-item" style="list-style-type:disc;"><b>Intermediate level JavaScript knowledge:</b> If you know React and/or Angular, then employers expect your JS knowledge to be better than basic. You should know how to use <code>fetch</code>, <code>try/catch</code> and how to get info from JS data structures using loops. All this should be second nature to you.</li>
-<li class="post__list-item" style="list-style-type:disc;"><b>Code deployment via cloud-based apps and services:</b> We'll discuss this in depth in the last list item ;)</li>
+<li class="post__list-item" style="list-style-type:disc;"><b>Code deployment via cloud-based apps and services:</b> We'll discuss this in depth #6 on this list ;)</li>
 </ul>
 </li>
 
@@ -90,7 +90,7 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <p>To be fair: each one does certain tasks better than React and their learning curves aren't as steep. But React came out before them, so the business world adopted it first.</p>
 
-<p>The React ecosystem is firmly embedded in many company codebases and it's expensive to switch it out for something else. So any sort of Vue/Svelte dominance in the business world isn't happening anytime soon.</p>
+<p>React is firmly embedded in many company codebases and it's expensive to switch it out for something else. So any sort of Vue/Svelte dominance in the business world isn't happening anytime soon.</p>
 
 <p>Keep this in mind while job searching.  There are Vue and Svelte jobs available, especially at startups or if you're purely doing freelance work.</p>
 
@@ -100,7 +100,7 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <li class="post__list-item">
 <h3><b>The algorithm tests are everywhere</b></h3>
-<p><a href="https://www.dictionary.com/e/acronyms/faang/">FAANG companies</a> are known for the algorithm-based tests that interviewees must take before getting hired. I took the Google one a few years ago and didn't make it (it's ok...I'm fine).</p>
+<p><a href="https://www.dictionary.com/e/acronyms/faang/">FAANG companies</a> are known for the algorithm-based tests that interviewees must take before getting hired by them. I took the Google one a few years ago and didn't make it (it's ok...I'm fine).</p>
 
 <p>It used to be the FAANGs were the only companies requiring this test...not anymore. While interviewing, a gaming company, a betting site and a beauty manufacturer asked me to take the test.</p>
 
@@ -125,7 +125,7 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 <h3><b>The line dividing front end web developer jobs and a back end ones is getting smaller</b></h3>
 <p>Some FE job openings I saw listed JavaScript and CSS as requires skills, as well as Python, Java, and .NET.</p>
 
-<p>Technically, Python, Java and .NET aren't "back end languages", they've just always been closer to the back end than JavaScript. Maybe "front end" now means "anything that doesn't require building an SQL database."</p>
+<p>Technically, Python, Java and .NET aren't "back end languages", they've just always interacted with the back end more than JS has. Maybe the term "front end" now means "anything that doesn't require building an SQL database."</p>
 
 <p>I dunno: maybe the listings of Python, Java and .NET in these skillsets were typos. But they were there so it's something to keep in mind as you build your skillset...especially when discussing Python.</p>
 
