@@ -42,11 +42,11 @@ And with that, here are the six main things I discovered while job hunting:
 
 <p>For web developers, who were technically set up to work remotely already, this was a job boom. They suddenly had job options available to them from around the world, not just in their hometown.</p>
 
-<p>On the whole, companies have always employed developers from other countries. But based on all the open remote jobs I saw, companies seem more willing to hire stateside coders.</p>
+<p>On the whole, companies have always employed developers from other countries. But based on all the open remote jobs I saw, companies now seem more willing to hire stateside coders.</p>
 
-<p>Financially, this made sense for businesses. They no longer needed to hire devs, pay them USD$100,000+ a year, put them in an office and then maintain it with electricity, custodians, etc.</p>
+<p>Financially, this made sense for businesses. They no longer needed to hire devs at USD$100,000+ a year, rent them an office and then maintain it with electricity, custodians, etc.</p>
 
-<p>They just needed to hire devs and pay them USD$100,000+ a year.</p>
+<p>They just needed to hire devs at USD$100,000+ a year.</p>
 
 <p>Every job I applied for was either fully remote or hybrid. I would have applied for in-office jobs, it's just that none of the ones I applied to offered that.</p>
 
@@ -61,7 +61,7 @@ And with that, here are the six main things I discovered while job hunting:
 Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuery</a> skills was guaranteed a nice, high-paying front end web developer job. jQuery begat <a href="https://backbonejs.org/">Backbone</a>, which begat <a href="https://angular.io/">Angular</a>, which begat React, and so on and so forth.
 </p>
 
-<p>The required skills for FE web developer jobs changes rapidly...always has, always will. But based on the skills listed for the jobs I saw and my interview experiences, the changes from my last job search to this one are those most radical ones I've ever seen.</p>
+<p>In other words, the required skills for FE web developer jobs changes rapidly...always has, always will. But based on the skills listed for the jobs I saw and my interview experiences, the changes from my last job search to this one are those most radical ones I've ever seen.</p>
 
 <p>Front end web developers with these skillsets are THE most employable at the time of this post:</p>
 
