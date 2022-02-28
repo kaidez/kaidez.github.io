@@ -61,7 +61,7 @@ And with that, here are the six main things I discovered while job hunting:
 Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuery</a> skills was guaranteed a nice, high-paying front end web developer job. jQuery begat <a href="https://backbonejs.org/">Backbone</a>, which begat <a href="https://angular.io/">Angular</a>, which begat React, and so on and so forth.
 </p>
 
-<p>In other words, the required skills for FE web developer jobs changes rapidly...always has, always will. But based on the skills listed for the jobs I saw and my interview experiences, the changes from my last job search to this one are those most radical ones I've ever seen.</p>
+<p>In other words, the required skills for FE web developer jobs changes rapidly...always has, always will. But based on the required skills for the jobs I saw and my interview experiences, the changes from my last job search to this one are those most radical ones I've ever seen.</p>
 
 <p>Front end web developers with these skillsets are THE most employable at the time of this post:</p>
 
