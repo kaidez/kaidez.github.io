@@ -86,22 +86,25 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <p>No exaggeration here: for almost every interview I had, "How long have I used React?" was the one of the first two questions I was asked. Followed by questions about my knowledge of the above-mentioned ecosystem.</p>
 
-<p>The years-long debate over what's the best JavaScript framework best continues. As a result, frameworks like <a href="https://vuejs.org/">Vue</a> and <a href="https://svelte.dev/">Svelte</a> are being hyped as better alternatives to React.</p>
+<p>The years-long debate over what's the best JavaScript framework continues. As a result, frameworks like <a href="https://vuejs.org/">Vue</a> and <a href="https://svelte.dev/">Svelte</a> are being hyped as better alternatives to React.</p>
 
-<p>To be fair: each one does certain tasks easier than React and their learning curves aren't as steep. But React came out before them, so the business world adopted it first.</p>
+<p>To be fair: each one does certain tasks better than React and their learning curves aren't as steep. But React came out before them, so the business world adopted it first.</p>
 
-<p>The React ecosystem is firmly embedded in the many companies and it's expensive to switch it out for something else. So any sort of Vue/Svelte dominance in the business world isn't happening anytime soon.</p>
+<p>The React ecosystem is firmly embedded in many company codebases and it's expensive to switch it out for something else. So any sort of Vue/Svelte dominance in the business world isn't happening anytime soon.</p>
 
-<p>Keep this in mind during a job search: finding Vue or Svelte jobs at some companies is doable, especially startups. But if you're job hunting on LinkedIn or Indeed, you have more options available to you as a React developer.</p>
+<p>Keep this in mind while job searching.  There are Vue and Svelte jobs available, especially at startups or if you're purely doing freelance work.</p>
+
+<p>But if you're looking on LinkedIn or Indeed, you have more options available to you as a React developer. It will be a while before this changes.</p>
+
 </li>
 
 <li class="post__list-item">
 <h3><b>The algorithm tests are everywhere</b></h3>
-<p><a href="https://www.dictionary.com/e/acronyms/faang/">FAANG companies</a> are known for the algorithm-based tests interviewees must take before getting hired. I took the Google one and didn't make it (it's ok...I'm fine).</p>
+<p><a href="https://www.dictionary.com/e/acronyms/faang/">FAANG companies</a> are known for the algorithm-based tests that interviewees must take before getting hired. I took the Google one a few years ago and didn't make it (it's ok...I'm fine).</p>
 
 <p>It used to be the FAANGs were the only companies requiring this test...not anymore. While interviewing, a gaming company, a betting site and a beauty manufacturer asked me to take the test.</p>
 
-<p>I'm of the opinion that this is the result of the large number of bootcamp graduates applying for web dev jobs. I mentioned in my 2017 article that bootcampers are at a disadvantage when it comes to job searching...I also mentioned that <a href="https://zachholman.com/posts/startup-interviewing-is-fucked/">Zac Holman thought this interviewing approach was bullsh*t.</a></p>
+<p>My opinion is, this is the result of the large number of bootcamp graduates applying for web dev jobs. I mentioned in my 2017 article that bootcampers are at a disadvantage when it comes to job searching...I also mentioned that <a href="https://zachholman.com/posts/startup-interviewing-is-fucked/">Zac Holman thought this interviewing approach was bullsh*t.</a></p>
 
 <p>But there are a lot of unfilled web developer jobs right now, and there are only so many qualified CompSci graduates available to fill them.  So the bootcampers are needed; therefore, these algo tests are needed.</p>
 
@@ -113,7 +116,7 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <p><a href="https://www.hackerrank.com/">HackerRank</a> is free and is probably the closet representation of what an algo test looks like. Lots of the tests I took were on HackerRank.</p>
 
-<p><a href="https://leetcode.com/">LeetCode</a> has free content but also has a premium subscription of USD$35 a month. I bought a premium subscription at the suggestion of a Google developer and suggest it as well: you'll see lots of sample questions close to what you'll see on the tests.</p>
+<p><a href="https://leetcode.com/">LeetCode</a> has free content but also has a premium subscription of USD$35 a month. I bought the premium subscription at the suggestion of a Google developer and suggest it as well: you'll see lots of sample questions close to what you'll see on the tests.</p>
 
 <p>Many suggest <a href="https://www.crackingthecodinginterview.com/">the "Cracking the Coding Interview" book</a> but it's a big read. However, its chapter on <a href="https://www.freecodecamp.org/news/big-o-notation-why-it-matters-and-why-it-doesnt-1674cfa8a23c/">Big O notation</a> is excellent.</p>
 </li>
@@ -137,7 +140,7 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <p>Knowing how to automate a build/unit test/deployment process using combinations of <a href="https://aws.amazon.com/">AWS</a>, <a href="https://azure.microsoft.com/en-us/">Azure</a>, <a href="https://www.docker.com/">Docker</a>, <a href="https://kubernetes.io/">Kubernetes</a>, etc. is rapidly becoming a required skill. I only have better-than-basic knowledge of this stuff at the moment: this probably prevented my moving forward with some interviews.</p>
 
-<p>If you're a front end developer, you're using npm to manage app dependencies and Git to manage source code. Using cloud services follow the same processes as npm and Git, so it's worth your time to learn them.</p>
+<p>If you're a front end developer, you're using npm to manage app dependencies and Git to manage source code. Cloud services follow the same process, so it's worth your time to learn them.</p>
 </li>
 </ol>
 
