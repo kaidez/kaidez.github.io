@@ -58,7 +58,7 @@ Based on the required skills for the jobs I saw and my interview experiences, he
 <li class="post__list-item">
 <h3><b>The core skills required for web developer jobs has changed dramatically</b></h3>
 <p>
-Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuery</a> skills was guaranteed a nice, high-paying front end web developer job. jQuery begat <a href="https://backbonejs.org/">Backbone</a>, which begat <a href="https://angular.io/">Angular</a>, which begat React, and so on and so forth.
+Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuery</a> skills was guaranteed a high-paying front end web developer job. jQuery begat <a href="https://backbonejs.org/">Backbone</a>, which begat <a href="https://angular.io/">Angular</a>, which begat React, and so on and so forth.
 </p>
 
 <p>In other words, the required skills for FE web developer jobs changes rapidly...always has, always will. But the changes from my last job search to this one are those most radical ones I've ever seen.</p>
@@ -92,7 +92,7 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <p>React is firmly embedded in many company codebases and it's expensive to switch it out for something else. So any sort of Vue/Svelte dominance in the business world isn't happening anytime soon.</p>
 
-<p>Keep this in mind while job searching.  There are Vue and Svelte jobs available, especially at startups or if you're purely doing freelance work.</p>
+<p>Keep this in mind while job searching.  There are certainly Vue and Svelte jobs available, especially at startups or if you're purely doing freelance work.</p>
 
 <p>But if you're looking on LinkedIn or Indeed, you have more options available to you as a React developer. It will be a while before this changes.</p>
 
@@ -100,7 +100,7 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <li class="post__list-item">
 <h3><b>The algorithm tests are everywhere</b></h3>
-<p><a href="https://www.dictionary.com/e/acronyms/faang/">FAANG companies</a> are known for the algorithm-based tests that interviewees must take before getting hired by them. I took the Google one a few years ago and didn't make it (it's ok...I'm fine).</p>
+<p><a href="https://www.dictionary.com/e/acronyms/faang/">FAANG companies</a> are known for the algorithm-based tests that interviewees must pass before getting hired by them. I took the Google one a few years ago and didn't make it (it's ok...I'm fine).</p>
 
 <p>It used to be the FAANGs were the only companies requiring this test...not anymore. While interviewing, a gaming company, a betting site and a beauty manufacturer asked me to take the test.</p>
 
@@ -108,7 +108,7 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <p>But there are a lot of unfilled web developer jobs right now, and there are only so many qualified CompSci graduates available to fill them.  So the bootcampers are needed; therefore, these algo tests are needed.</p>
 
-<p>Now, it must be said that some EXCELLENT coders are coming out of bootcamps. I know of two bootcamp grads that landed web dev jobs at Spotify, one of the hardest companies to get a job at.</p>
+<p>Now, it must be said that some EXCELLENT coders are coming out of bootcamps. I know of two bootcamp grads that got hired by Spotify, a difficult place to get a job.</p>
 
 <p>And Noam Sauer-Utley is a bootcamp grad who's written some of the BEST JavaScript algorithms explanations I've ever read. Read more of her stuff <a href="https://medium.com/@noamsauerutley">here</a>.</p>
 
@@ -125,7 +125,7 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 <h3><b>The line dividing front end web developer jobs and a back end ones is getting smaller</b></h3>
 <p>Some FE job openings I saw listed JavaScript and CSS as requires skills, as well as Python, Java, and .NET.</p>
 
-<p>Technically, Python, Java and .NET aren't "back end languages", they just interacted with the back end more than JavaScript does. Maybe the term "front end" now means "anything that doesn't require building an SQL database."</p>
+<p>Technically, Python, Java and .NET aren't "back end languages", they just interact with the back end more than JavaScript does. Maybe the term "front end" now means "anything that doesn't require building an SQL database."</p>
 
 <p>I dunno: maybe the listings of Python, Java and .NET in these skillsets were typos. But they were there so it's something to keep in mind as you build your skillset...especially when discussing Python.</p>
 
@@ -138,7 +138,7 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 <h3><b>The line dividing front end web developer jobs and DevOps jobs is getting really REALLY small</b></h3>
 <p>As mentioned above, knowing how to manage cloud-based services is desirable skillset. This is because DevOps, the rapid but safe deployment of code, is as common as Git commits in the web dev world.</p>
 
-<p>Knowing how to automate a build/unit test/deployment process using combinations of <a href="https://aws.amazon.com/">AWS</a>, <a href="https://azure.microsoft.com/en-us/">Azure</a>, <a href="https://www.docker.com/">Docker</a>, <a href="https://kubernetes.io/">Kubernetes</a>, etc. is rapidly becoming a required skill. Currently, I only have better-than-basic knowledge of this stuff, which probably prevented my moving forward for a few interviews.</p>
+<p>Knowing how to configure an automated build/deployment process using things like <a href="https://aws.amazon.com/">AWS</a>, <a href="https://azure.microsoft.com/en-us/">Azure</a>, <a href="https://www.docker.com/">Docker</a>, <a href="https://kubernetes.io/">Kubernetes</a>, etc. is rapidly becoming a required skill for FE devs. Currently, I only have better-than-basic knowledge of this stuff, which probably prevented my moving forward for a few interviews.</p>
 
 <p>If you're a front end developer, you're using npm to manage app dependencies and Git to manage source code. Cloud services have a somewhat parallel process so spend some time learning them.</p>
 </li>
