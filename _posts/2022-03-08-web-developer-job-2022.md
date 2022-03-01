@@ -5,7 +5,7 @@ title: 'What I Learned About Finding A Front End Web Developer Job In 2022'
 date: 2018-11-13 00:00:50 -0400
 categories: personal
 category-name: Personal
-permalink: /find-front-end-web-developer-job-2022/
+permalink: /front-end-web-developer-job-2022/
 excerpt: Six things I learned when looking for a front end web developer job in 2022. Also lists the top FE web dev skills employers are looking for.
 og-image: web-dev-job-two.jpg
 thumb-image: web-dev-job-two-thumb.jpg
