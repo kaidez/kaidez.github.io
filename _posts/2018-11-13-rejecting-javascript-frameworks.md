@@ -132,7 +132,7 @@ This mentality is pretty rare in the world of native development though. Almost 
 </blockquote>
 I would apply that mentality to the web dev complaints about performance and "unprofessional programming." I never hear Java developers make the same complaints about Spring...same thing with PHP developers and Laravel.
 
-And right now, imagine what would have happened if Ruby developers collectively rejected Rails for any these reasons.
+And right now, imagine what would have happened if Ruby developers collectively rejected Rails for any of these reasons.
 
 <h2>Understand the business process leading the app</h2>
 Before accepting or rejecting a JavaScript library/framework, have a clear understanding of the project's goals and business requirements. Understand what the app must do before rejecting the tools that can help you build it.

@@ -1,3 +1,4 @@
+//# sourceURL=helpers.js
 // Non-React JavaScript goes here
 
 const doEventOnElement = (element, getEvent, fn) => {
