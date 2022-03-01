@@ -136,7 +136,7 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <li class="post__list-item">
 <h3><b>The line dividing front end web developer jobs and DevOps jobs is getting really REALLY small</b></h3>
-<p>As mentioned above, knowing how to manage cloud-based services is desirable skillset. This is because DevOps, the rapid but safe deployment of code, is as common as Git commits in the web development world .</p>
+<p>As mentioned above, knowing how to manage cloud-based services is desirable skillset. This is because DevOps, the rapid but safe deployment of code, is as common as Git commits in the web dev world.</p>
 
 <p>Knowing how to automate a build/unit test/deployment process using combinations of <a href="https://aws.amazon.com/">AWS</a>, <a href="https://azure.microsoft.com/en-us/">Azure</a>, <a href="https://www.docker.com/">Docker</a>, <a href="https://kubernetes.io/">Kubernetes</a>, etc. is rapidly becoming a required skill. Currently, I only have better-than-basic knowledge of this stuff, which probably prevented my moving forward for a few interviews.</p>
 
