@@ -125,7 +125,7 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 <h3><b>The line dividing front end web developer jobs and a back end ones is getting smaller</b></h3>
 <p>Some FE job openings I saw listed JavaScript and CSS as requires skills, as well as Python, Java, and .NET.</p>
 
-<p>Technically, Python, Java and .NET aren't "back end languages", they've just always interacted with the back end more than JS has. Maybe the term "front end" now means "anything that doesn't require building an SQL database."</p>
+<p>Technically, Python, Java and .NET aren't "back end languages", they just interacted with the back end more than JavaScript does. Maybe the term "front end" now means "anything that doesn't require building an SQL database."</p>
 
 <p>I dunno: maybe the listings of Python, Java and .NET in these skillsets were typos. But they were there so it's something to keep in mind as you build your skillset...especially when discussing Python.</p>
 
@@ -136,7 +136,7 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <li class="post__list-item">
 <h3><b>The line dividing front end web developer jobs and DevOps jobs is getting really REALLY small</b></h3>
-<p>As mentioned above, knowing how to manage cloud-based services is desirable skillset. This is because DevOps, the process of deploying and updating code quickly and safely, is becoming as commonplace in the web development world as Git commits.</p>
+<p>As mentioned above, knowing how to manage cloud-based services is desirable skillset. This is because DevOps, the rapid but safe deployment of code, is as common as Git commits in the web development world .</p>
 
 <p>Knowing how to automate a build/unit test/deployment process using combinations of <a href="https://aws.amazon.com/">AWS</a>, <a href="https://azure.microsoft.com/en-us/">Azure</a>, <a href="https://www.docker.com/">Docker</a>, <a href="https://kubernetes.io/">Kubernetes</a>, etc. is rapidly becoming a required skill. Currently, I only have better-than-basic knowledge of this stuff, which probably prevented my moving forward for a few interviews.</p>
 
