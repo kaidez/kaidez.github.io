@@ -47,10 +47,11 @@ const FooterContent = (props) => {
       </div>
 
       <div className='footer__column footer__column--3'>
-        Kai "kaidez" Gittens is a front-end web developer for JPMorgan Chase. He
-        has contributed to web experiences for Revlon, jetBlue, Everyday Health
-        and the United Nations. He is a former JavaScript instructor for
-        lynda.com and is a loyal supporter of Chelsea F.C.
+        Kai "kaidez" Gittens is a front-end web developer for Blue Cross Blue
+        Shield. He has contributed to web experiences for JPMorgan Chase,
+        Revlon, jetBlue, Everyday Health and the United Nations. He is a former
+        JavaScript instructor for lynda.com and is a loyal supporter of Chelsea
+        F.C.
         <div className='footer--social-network'>
           <a
             href='https://twitter.com/kaidez'
