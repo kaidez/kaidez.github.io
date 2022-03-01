@@ -146,7 +146,7 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <h2>What I learned</h2>
 My biggest takeaway from this recent job search is...
->"WOW...it's really REALLY good to have React experience nowadays!!!"
+>"WOW...it's REALLY good to have React experience nowadays!!!"
 
 I do have other skills but having React experience made this the easiest job search I ever went through!
 
