@@ -6,7 +6,7 @@
   "author": "Kai Gittens <kai.gittens@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "bundle exec jekyll serve",
+    "start": "bundle exec jekyll serve --incremental",
     "draft": "jekyll build --drafts",
     "build": "./node_modules/.bin/webpack --progress --watch",
     "watch": "./node_modules/.bin/webpack --progress --watch",
