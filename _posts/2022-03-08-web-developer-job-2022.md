@@ -50,9 +50,9 @@ As I went through all of this, I discovered six things:
 
 <p>Every job I applied for was either fully remote or hybrid. I certainly would have applied for in-office jobs as well, but none of the ones I applied to offered it.</p>
 
-<p>So yes, developers have a lot of job options right now and companies saved money. But the tragedy of Covid-19 is the reason for this.</p>
+<p>So yes, developers have a lot of job options right now and companies are saving money. But the tragedy of Covid-19 is the reason for this.</p>
 
-<p>I'm thankful to have a lot of options but I wouldn't have them if Covid never happened. In this case, I'd be fine if I didn't have a lot of options.</p>
+<p>Personally, I'm thankful to have these options but I wouldn't have them if Covid never happened. I'd be prefer not to have these options.</p>
 </li>
 
 <li class="post__list-item">
