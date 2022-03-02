@@ -42,17 +42,17 @@ As I went through all of this, I discovered six things:
 
 <p>For web developers, who were technically set up to work remotely already, this was a job boom. They suddenly had job options available to them from around the world, not just in their hometown.</p>
 
-<p>On the whole, US companies have always employed remote developers from other countries. But based what I saw, companies now seem more willing to hire stateside remote coders.</p>
+<p>On the whole, US companies have always employed remote developers from other countries. But based on what I saw, companies now seem more willing to hire stateside remote coders.</p>
 
-<p>Hiring remotely has always made sense for businesses but the pandemic made that obvious. They could either hire devs at USD$100,000+ a year, rent them an office and maintain it with electricity, custodians, etc.</p>
+<p>Hiring remotely has always made sense for businesses but the pandemic made that obvious. Businesses can either hire devs at USD$100,000+ a year, rent them an office, then maintain it with electricity, custodians, etc.</p>
 
-<p>Or, they could just hire devs at USD$100,000+ a year.</p>
+<p>Or, they can just hire devs at USD$100,000+ a year.</p>
 
 <p>Every job I applied for was either fully remote or hybrid. I certainly would have applied for in-office jobs as well, but none of the ones I applied to offered it.</p>
 
 <p>So yes, developers have a lot of job options right now and companies are saving money. But the tragedy of Covid-19 is the reason for this.</p>
 
-<p>Personally, I'm thankful to have these options but I wouldn't have them if Covid never happened. I'd be prefer not to have these options.</p>
+<p>Personally, I'm thankful to have these options but I wouldn't have them if Covid had never happened. I'd prefer to not have these options.</p>
 </li>
 
 <li class="post__list-item">
@@ -61,16 +61,16 @@ As I went through all of this, I discovered six things:
 Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuery</a> skills was guaranteed a high-paying front end web developer job. jQuery begat <a href="https://backbonejs.org/">Backbone</a>, which begat <a href="https://angular.io/">Angular</a>, which begat React, and so on and so forth.
 </p>
 
-<p>In other words, the required skills for FE web developer jobs changes rapidly...always has, always will. But the changes from my last job search to this one are those most radical ones I've ever seen.</p>
+<p>The required skills for FE web developer jobs always change rapidly. But the changes from my last job search to this one are those most extreme ones I've ever seen.</p>
 
 <p>Front end web developers with these skillsets are THE most employable at the time of this post:</p>
 
 <ul>
-<li class="post__list-item" style="list-style-type:disc;"><b>TypeScript:</b> It makes unit testing easier and lets those classically-trained Java/C++ developers ramp up on JS quicker. Speaking of testing...</li>
+<li class="post__list-item" style="list-style-type:disc;"><b>TypeScript:</b> It makes unit testing easier and lets those classically-trained Java/C developers ramp up on JS quicker. Speaking of testing...</li>
 <li class="post__list-item" style="list-style-type:disc;"><b>JavaScript unit testing:</b> JavaScript was initially created to be a beginner's programming language so it didn't require a culture of unit testing. JS has matured past the beginner level, so this simplicity is gone. Almost all prospective employers expect some unit test knowledge among candidates...not guru-level knowledge but <i>some</i> knowledge.</li>
 <li class="post__list-item" style="list-style-type:disc;"><b>React and its ecosystem:</b> We'll discuss this in depth in #3 on this list ;)</li>
 <li class="post__list-item" style="list-style-type:disc;"><b>Angular version 2 and higher:</b> Many businesses added Angular to their codebases before React got big.  That legacy code is still out there and those businesses are hiring developers to maintain it as well as migrate it over to React.</li>
-<li class="post__list-item" style="list-style-type:disc;"><b>Intermediate level JavaScript knowledge:</b> If you know React and/or Angular, then employers expect your JS knowledge to be better than basic. You should know how to use <code>fetch</code>, <code>try/catch</code> and how to get info from JS data structures using loops. All this should be second nature to you.</li>
+<li class="post__list-item" style="list-style-type:disc;"><b>Intermediate level JavaScript knowledge:</b> If you know React and/or Angular, then employers expect your JavaScript knowledge to be better than basic. You should know how to do things like use  <code>fetch</code> and <code>try/catch</code> and extract info from data structures with loops.</li>
 <li class="post__list-item" style="list-style-type:disc;"><b>Code deployment via cloud-based apps and services:</b> We'll discuss this in depth #6 on this list ;)</li>
 </ul>
 </li>
@@ -114,9 +114,9 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <p>If you want to prep for these tests from a JS standpoint, <a href="https://www.codewars.com/">Codewars</a> is probably the easiest free resource right now. <a href="https://www.geeksforgeeks.org/">Geeks for Geeks</a> is next and is also free...a bit more structured towards the tests.</p>
 
-<p><a href="https://www.hackerrank.com/">HackerRank</a> is free and is probably the closet representation of what an algo test looks like. Lots of the tests I took were on HackerRank.</p>
+<p><a href="https://www.hackerrank.com/">HackerRank</a> is free and is probably the closet representation of what an algo test looks like. Lots of the tests I took for interviews were on HackerRank.</p>
 
-<p><a href="https://leetcode.com/">LeetCode</a> has free content but also has a premium subscription of USD$35 a month. I bought the premium subscription at the suggestion of a Google developer and suggest it as well: you'll see lots of sample questions close to what you'll see on the tests.</p>
+<p><a href="https://leetcode.com/">LeetCode</a> has free content but a Google developer suggested I buy their premium subscription at USD$35 a month. I did and now I suggest it: you'll see many sample questions close to what you'll see on the tests.</p>
 
 <p>Many suggest <a href="https://www.crackingthecodinginterview.com/">the "Cracking the Coding Interview" book</a> but it's a big read. However, its chapter on <a href="https://www.freecodecamp.org/news/big-o-notation-why-it-matters-and-why-it-doesnt-1674cfa8a23c/">Big O notation</a> is excellent.</p>
 </li>
