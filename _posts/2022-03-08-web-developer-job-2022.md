@@ -12,9 +12,9 @@ thumb-image: web-dev-job-two-thumb.jpg
 ---
 
 On May 8th, 2017, I wrote about <a href="/front-end-web-developer-job-search/">my search for a front end web developer job</a>. Five years to the day later, I'm publishing a post about what that job search looks like in 2022.
- 
+
 This new job search took effort but not as much as the previous one. But like before, I learned a lot about what it takes to get a web dev position these days.
- 
+
 <h2>What happened the last time I looked for a web dev job?</h2>
 In 2017, I "cast a wide net," meaning I applied for lots of jobs inside a short time frame. I applied for so many jobs that I hit a point where I had four interviews in one day.
  
@@ -71,7 +71,7 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 <li class="post__list-item" style="list-style-type:disc;"><b>React and its ecosystem:</b> We'll discuss this in depth in #3 on this list ;)</li>
 <li class="post__list-item" style="list-style-type:disc;"><b>Angular version 2 and higher:</b> Many businesses added Angular to their codebases before React got big.  That legacy code is still out there and those businesses are hiring developers to maintain it as well as migrate it over to React.</li>
 <li class="post__list-item" style="list-style-type:disc;"><b>Intermediate level JavaScript knowledge:</b> If you know React and/or Angular, then employers expect your JavaScript knowledge to be better than basic. You should know how to do things like use  <code>fetch</code> and <code>try/catch</code> and extract info from data structures with loops.</li>
-<li class="post__list-item" style="list-style-type:disc;"><b>Code deployment via cloud-based apps and services:</b> We'll discuss this in depth #6 on this list ;)</li>
+<li class="post__list-item" style="list-style-type:disc;"><b>Code deployment via cloud-based apps and services:</b> We'll discuss this in depth in #6 on this list ;)</li>
 </ul>
 </li>
  
