@@ -16,7 +16,7 @@ On May 8th, 2017, I wrote about <a href="/front-end-web-developer-job-search/">m
 This new job search took effort but not as much as the previous one. And like before, I learned a lot about what it takes to get a web dev position these days.
 
 <h2>What happened the last time I looked for a web dev job?</h2>
-In 2017, I "cast a wide net," meaning I applied for lots of jobs in a short time frame. I applied for so many jobs that I hit a point where I had four interviews in one day.
+In 2017, I "cast a wide net," meaning I applied for lots of jobs inside a short time frame. I applied for so many jobs that I hit a point where I had four interviews in one day.
 
 I had to do this because I had limited experience with the in-demand JavaScript frameworks of the day, particularly <a href="https://reactjs.org/">React</a>. At the time, I had over a decade of developer experience but was competing for jobs against people who had more of the required framework knowledge than I did.
 
@@ -25,12 +25,12 @@ So I cast that wide net to give myself a better chance of getting hired. And onc
 <h2>What happened this time when I looked for a web dev job?</h2>
 Having that experience paid off when the time came for me to find a new job. I still casted a wide net, but it didn't have to be as wide as before.
 
-I estimate I applied for less than half the amount jobs this time. Plus, I found a job a bit faster.
+The result: I applied for less than half the amount jobs this time. Plus, I found a job a bit faster.
 
-I got a job at Blue Cross Blue Shield in under three weeks, that's less than the four weeks it took me to get the Chase job. Plus, I turned down two other job offers!
+I hired by Blue Cross Blue Shield in under three weeks...that's <i>less</i> than the four weeks it took me to get the Chase job. <i>And</i> I turned down two other job offers along the way!
 
 <h2>The six things I learned</h2>
-Based on the required skills for the jobs I saw and my interview experiences, here are the six main things I discovered:
+As I went through all of this, I discovered six things:
 
 <ol>
 <li class="post__list-item">
@@ -42,7 +42,7 @@ Based on the required skills for the jobs I saw and my interview experiences, he
 
 <p>For web developers, who were technically set up to work remotely already, this was a job boom. They suddenly had job options available to them from around the world, not just in their hometown.</p>
 
-<p>On the whole, companies have always employed developers from other countries. But based on all the open remote jobs I saw, companies now seem more willing to hire stateside coders.</p>
+<p>On the whole, US companies have always employed developers from other countries. But based on all the open remote jobs I saw, companies now seem more willing to hire stateside coders.</p>
 
 <p>Financially, this made sense for businesses. They no longer needed to hire devs at USD$100,000+ a year, rent them an office and then maintain it with electricity, custodians, etc.</p>
 
