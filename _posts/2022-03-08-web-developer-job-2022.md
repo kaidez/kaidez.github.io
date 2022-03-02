@@ -27,7 +27,7 @@ Having that experience paid off when the time came for me to find a new job. I s
 
 The result: I applied for less than half the amount jobs this time. Plus, I found a job a bit faster.
 
-I hired by Blue Cross Blue Shield in under three weeks...that's <i>less</i> than the month it took me to get the Chase job. <i>And</i> I turned down two other job offers along the way!
+I got hired by Blue Cross Blue Shield in under three weeks...that's <i>less</i> than the month it took me to get the Chase job. <i>And</i> I turned down two other job offers along the way!
 
 <h2>The six things I learned</h2>
 As I went through all of this, I discovered six things:
@@ -42,15 +42,15 @@ As I went through all of this, I discovered six things:
 
 <p>For web developers, who were technically set up to work remotely already, this was a job boom. They suddenly had job options available to them from around the world, not just in their hometown.</p>
 
-<p>On the whole, US companies have always employed developers from other countries. But based on all the open remote jobs I saw, companies now seem more willing to hire stateside coders.</p>
+<p>On the whole, US companies have always employed remote developers from other countries. But based what I saw, companies now seem more willing to hire stateside remote coders.</p>
 
-<p>Financially, this made sense for businesses. They no longer needed to hire devs at USD$100,000+ a year, rent them an office and then maintain it with electricity, custodians, etc.</p>
+<p>Hiring remotely has always made sense for businesses but the pandemic made that obvious. They could either hire devs at USD$100,000+ a year, rent them an office and maintain it with electricity, custodians, etc.</p>
 
-<p>They just needed to hire devs at USD$100,000+ a year.</p>
+<p>Or, they could just hire devs at USD$100,000+ a year.</p>
 
-<p>Every job I applied for was either fully remote or hybrid. I would have applied for in-office jobs, it's just that none of the ones I applied to offered that.</p>
+<p>Every job I applied for was either fully remote or hybrid. I certainly would have applied for in-office jobs as well, but none of the ones I applied to offered it.</p>
 
-<p>So yes, developers have a lot of job options right now. But the tragedy of Covid-19 is the reason for this.</p>
+<p>So yes, developers have a lot of job options right now and companies saved money. But the tragedy of Covid-19 is the reason for this.</p>
 
 <p>I'm thankful to have a lot of options but I wouldn't have them if Covid never happened. In this case, I'd be fine if I didn't have a lot of options.</p>
 </li>
