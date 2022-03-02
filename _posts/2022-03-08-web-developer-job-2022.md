@@ -123,7 +123,7 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 
 <li class="post__list-item">
 <h3><b>The line dividing front end web developer jobs and a back end ones is getting smaller</b></h3>
-<p>Some FE job openings I saw listed JavaScript and CSS as requires skills, as well as Python, Java, and .NET.</p>
+<p>Some FE job openings I saw listed JavaScript and CSS as requires skills. As well as Python, Java, and .NET.</p>
 
 <p>Technically, Python, Java and .NET aren't "back end languages", they just interact with the back end more than JavaScript does. Maybe the term "front end" now means "anything that doesn't require building an SQL database."</p>
 
