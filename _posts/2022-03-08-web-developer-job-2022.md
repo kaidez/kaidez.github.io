@@ -13,21 +13,21 @@ thumb-image: web-dev-job-two-thumb.jpg
 
 On May 8th, 2017, I wrote about <a href="/front-end-web-developer-job-search/">my search for a front end web developer job</a>. Five years to the day later, I'm publishing a post about what that job search looks like in 2022.
 
-This new job search took effort but not as much as the previous one. And like before, I learned a lot about what it takes to get a web dev position these days.
+This new job search took effort but not as much as the previous one. But like before, I learned a lot about what it takes to get a web dev position these days.
 
 <h2>What happened the last time I looked for a web dev job?</h2>
 In 2017, I "cast a wide net," meaning I applied for lots of jobs inside a short time frame. I applied for so many jobs that I hit a point where I had four interviews in one day.
 
 I had to do this because I had limited experience with the in-demand JavaScript frameworks of the day, particularly <a href="https://reactjs.org/">React</a>. At the time, I had over a decade of developer experience but was competing for jobs against people who had more of the required framework knowledge than I did.
 
-So I cast that wide net to give myself a better chance of getting hired. And once I got a job (at JPMorgan Chase), I began building up five years of solid, quantifiable React experience.
+So I cast that wide net to better my chances of getting hired. And once I got a job (at JPMorgan Chase), I began building up five years of solid, quantifiable React experience.
 
-<h2>What happened this time when I looked for a web dev job?</h2>
+<h2>What happened when I looked for a web dev job <i>this</i> time?</h2>
 Having that experience paid off when the time came for me to find a new job. I still casted a wide net, but it didn't have to be as wide as before.
 
 The result: I applied for less than half the amount jobs this time. Plus, I found a job a bit faster.
 
-I hired by Blue Cross Blue Shield in under three weeks...that's <i>less</i> than the four weeks it took me to get the Chase job. <i>And</i> I turned down two other job offers along the way!
+I hired by Blue Cross Blue Shield in under three weeks...that's <i>less</i> than the month it took me to get the Chase job. <i>And</i> I turned down two other job offers along the way!
 
 <h2>The six things I learned</h2>
 As I went through all of this, I discovered six things:
