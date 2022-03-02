@@ -33,6 +33,51 @@ I got hired by Blue Cross Blue Shield in under three weeks...that's <i>less</i> 
 As I went through all of this, I discovered six things:
  
 <ol>
+
+<li class="post__list-item">
+<h3><b>React is the most in-demand skill, and it will stay that way for awhile</b></h3>
+ 
+<p>After its release, React solved problems that developers never knew they had. It gave them a great way to "component-ize" the UI, rendered that UI fast and made application state easier to manage.</p>
+ 
+<p>This resulted in a growing React ecosystem that includes <a href="https://redux.js.org/">Redux</a>, <a href="https://reactrouter.com/">React Router</a> and <a href="https://jestjs.io/">Jest</a>. It also led to a vast, supportive React community of Slack channels, tutorial sites and web forums.</p>
+ 
+<p>It's for all these reasons (and many more) that businesses of all sizes have adopted React. And want to hire developers that know it.</p>
+ 
+<p>No exaggeration here: for almost every interview I had, "How long have I used React?" was the one of the first two questions I was asked. Followed by questions about my knowledge of the above-mentioned ecosystem.</p>
+ 
+<p>The years-long debate over what's the best JavaScript framework continues. As a result, frameworks like <a href="https://vuejs.org/">Vue</a> and <a href="https://svelte.dev/">Svelte</a> are being hyped as better alternatives to React.</p>
+ 
+<p>To be fair: each one does certain tasks better than React and their learning curves aren't as steep. But React came out before them, so the business world adopted it first.</p>
+ 
+<p>React is firmly embedded in many company codebases and it's expensive to switch it out for something else. So any sort of Vue/Svelte dominance in the business world isn't happening anytime soon.</p>
+ 
+<p>Keep this in mind while job searching.  There are certainly Vue and Svelte jobs available, especially at startups or if you're purely doing freelance work.</p>
+ 
+<p>But if you're looking on LinkedIn or Indeed, you have more options available to you as a React developer. It will be a while before this changes.</p>
+ 
+</li>
+
+<li class="post__list-item">
+<h3><b>The core skills required for web developer jobs has changed dramatically</b></h3>
+<p>
+Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuery</a> skills was guaranteed a high-paying front end web developer job. jQuery begat <a href="https://backbonejs.org/">Backbone</a>, which begat <a href="https://angular.io/">Angular</a>, which begat React, and so on and so forth.
+</p>
+ 
+<p>The required skills for FE web developer jobs always change rapidly. But the changes from my last job search to this one are those most extreme ones I've ever seen.</p>
+ 
+<p>Front end web developers with these skill sets are THE most employable at the time of this post:</p>
+ 
+<ul>
+<li class="post__list-item" style="list-style-type:disc;"><b>React and its ecosystem:</b> See the previous item on this list ;)</li>
+<li class="post__list-item" style="list-style-type:disc;"><b>TypeScript:</b> It makes unit testing easier and lets those classically-trained Java/C developers ramp up on JS quicker. Speaking of testing...</li>
+<li class="post__list-item" style="list-style-type:disc;"><b>JavaScript unit testing:</b> JS was initially created to be a beginner's programming language so it didn't require a culture of unit testing. But it's matured past that simplicity and almost all prospective employers expect some unit test knowledge among candidates.  Maybe not guru-level knowledge but <i>some</i> knowledge.</li>
+
+<li class="post__list-item" style="list-style-type:disc;"><b>Angular version 2 and higher:</b> Many businesses added Angular to their codebases before React got big.  That legacy code is still out there and those businesses are hiring developers to maintain it as well as migrate it over to React.</li>
+<li class="post__list-item" style="list-style-type:disc;"><b>Intermediate level JavaScript knowledge:</b> If you know React and/or Angular, then employers expect your JavaScript knowledge to be better than basic. You should know how to do things like use  <code>fetch</code> and <code>try/catch</code> and extract info from data structures with loops.</li>
+<li class="post__list-item" style="list-style-type:disc;"><b>Code deployment via cloud-based apps and services:</b> We'll discuss this in depth in #6 on this list ;)</li>
+</ul>
+</li>
+
 <li class="post__list-item">
 <h3><b>There are many open web developer jobs, but tragedy is the main reason why</b></h3>
  
@@ -54,50 +99,7 @@ As I went through all of this, I discovered six things:
  
 <p>Personally, I'm thankful to have these options but I wouldn't have them if Covid had never happened. I'd prefer to not have these options.</p>
 </li>
- 
-<li class="post__list-item">
-<h3><b>The core skills required for web developer jobs has changed dramatically</b></h3>
-<p>
-Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuery</a> skills was guaranteed a high-paying front end web developer job. jQuery begat <a href="https://backbonejs.org/">Backbone</a>, which begat <a href="https://angular.io/">Angular</a>, which begat React, and so on and so forth.
-</p>
- 
-<p>The required skills for FE web developer jobs always change rapidly. But the changes from my last job search to this one are those most extreme ones I've ever seen.</p>
- 
-<p>Front end web developers with these skill sets are THE most employable at the time of this post:</p>
- 
-<ul>
-<li class="post__list-item" style="list-style-type:disc;"><b>TypeScript:</b> It makes unit testing easier and lets those classically-trained Java/C developers ramp up on JS quicker. Speaking of testing...</li>
-<li class="post__list-item" style="list-style-type:disc;"><b>JavaScript unit testing:</b> JavaScript was initially created to be a beginner's programming language so it didn't require a culture of unit testing. JS has matured past the beginner level, so this simplicity is gone. Almost all prospective employers expect some unit test knowledge among candidates...not guru-level knowledge but <i>some</i> knowledge.</li>
-<li class="post__list-item" style="list-style-type:disc;"><b>React and its ecosystem:</b> We'll discuss this in depth in #3 on this list ;)</li>
-<li class="post__list-item" style="list-style-type:disc;"><b>Angular version 2 and higher:</b> Many businesses added Angular to their codebases before React got big.  That legacy code is still out there and those businesses are hiring developers to maintain it as well as migrate it over to React.</li>
-<li class="post__list-item" style="list-style-type:disc;"><b>Intermediate level JavaScript knowledge:</b> If you know React and/or Angular, then employers expect your JavaScript knowledge to be better than basic. You should know how to do things like use  <code>fetch</code> and <code>try/catch</code> and extract info from data structures with loops.</li>
-<li class="post__list-item" style="list-style-type:disc;"><b>Code deployment via cloud-based apps and services:</b> We'll discuss this in depth in #6 on this list ;)</li>
-</ul>
-</li>
- 
-<li class="post__list-item">
-<h3><b>React is the most in-demand library/framework...and it will stay that way for awhile</b></h3>
- 
-<p>After its release, React solved problems that developers never knew they had. It gave them a great way to "component-ize" the UI, rendered that UI fast and made application state easier to manage.</p>
- 
-<p>This resulted in a growing React ecosystem that includes <a href="https://redux.js.org/">Redux</a>, <a href="https://reactrouter.com/">React Router</a> and <a href="https://jestjs.io/">Jest</a>. It also led to a vast, supportive React community of Slack channels, tutorial sites and web forums.</p>
- 
-<p>It's for all these reasons (and many more) that businesses of all sizes have adopted React. And want to hire developers that know it.</p>
- 
-<p>No exaggeration here: for almost every interview I had, "How long have I used React?" was the one of the first two questions I was asked. Followed by questions about my knowledge of the above-mentioned ecosystem.</p>
- 
-<p>The years-long debate over what's the best JavaScript framework continues. As a result, frameworks like <a href="https://vuejs.org/">Vue</a> and <a href="https://svelte.dev/">Svelte</a> are being hyped as better alternatives to React.</p>
- 
-<p>To be fair: each one does certain tasks better than React and their learning curves aren't as steep. But React came out before them, so the business world adopted it first.</p>
- 
-<p>React is firmly embedded in many company codebases and it's expensive to switch it out for something else. So any sort of Vue/Svelte dominance in the business world isn't happening anytime soon.</p>
- 
-<p>Keep this in mind while job searching.  There are certainly Vue and Svelte jobs available, especially at startups or if you're purely doing freelance work.</p>
- 
-<p>But if you're looking on LinkedIn or Indeed, you have more options available to you as a React developer. It will be a while before this changes.</p>
- 
-</li>
- 
+
 <li class="post__list-item">
 <h3><b>The algorithm tests are everywhere</b></h3>
 <p><a href="https://www.dictionary.com/e/acronyms/faang/">FAANG companies</a> are known for the algorithm-based tests that interviewees must pass before getting hired by them. I took the Google one a few years ago and didn't make it (it's ok...I'm fine).</p>
