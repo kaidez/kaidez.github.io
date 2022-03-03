@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: 'What I Learned About Finding A Front End Web Developer Job In 2022'
-date: 2018-11-13 00:00:50 -0400
+date: 2022-03-01 00:00:50 -0400
 categories: personal
 category-name: Personal
 permalink: /front-end-web-developer-job-2022/
