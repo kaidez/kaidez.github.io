@@ -140,7 +140,7 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
 <h3><b>The line dividing front end web developer jobs and DevOps jobs is getting really REALLY small</b></h3>
 <p>As mentioned above, knowing how to manage cloud-based services is a desirable skill set. This is because DevOps, the process of rapidly deploying code and code changes, is now as common as Git commits.</p>
  
-<p>Knowing how to configure an automated build/deployment process using things like <a href="https://aws.amazon.com/">AWS</a>, <a href="https://azure.microsoft.com/en-us/">Azure</a>, <a href="https://www.docker.com/">Docker</a>, <a href="https://kubernetes.io/">Kubernetes</a>, etc. is rapidly becoming a required skill for FE devs. Currently, I only have better-than-basic knowledge of this stuff, which probably prevented my moving forward for a few interviews.</p>
+<p>Knowing how to configure an automated build/deployment process using things like <a href="https://www.jenkins.io/">Jenkins</a>, <a href="https://aws.amazon.com/">AWS</a>, <a href="https://azure.microsoft.com/en-us/">Azure</a> and unit tests is the biggest nice-to-have skill for FE devs. Currently, I only have better-than-basic knowledge of this stuff, which probably prevented my moving forward for a few interviews.</p>
  
 <p>If you're a front end developer, you're using npm to manage app dependencies and Git to manage source code. Cloud services have a somewhat parallel process so spend some time learning them.</p>
 </li>
