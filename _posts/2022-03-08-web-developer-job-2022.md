@@ -35,7 +35,7 @@ As I went through all of this, I discovered six things:
 <ol>
 
 <li class="post__list-item">
-<h3><b>React is the most in-demand skill, and it will stay that way for a while</b></h3>
+<h3><b>React is the most in-demand skill, and that's not changing any time soon</b></h3>
  
 <p>After its release, React solved problems that developers never knew they had. It gave them a great way to "component-ize" the UI, rendered that UI fast and made application state easier to manage.</p>
  
@@ -43,17 +43,17 @@ As I went through all of this, I discovered six things:
  
 <p>It's for all these reasons (and many more) that businesses of all sizes have adopted React. And want to hire developers that know it.</p>
  
-<p>No exaggeration: "How long have I used React?" was always one of the first two questions I was asked when interviewed. Followed by questions about my knowledge of the above-mentioned ecosystem.</p>
+<p>No exaggeration: "How long have I used React?" was <i>always</i> one of the first two questions I was asked when interviewed. Followed by questions about my knowledge of the above-mentioned ecosystem.</p>
  
 <p>The years-long debate over what's the best JavaScript framework continues. As a result, frameworks like <a href="https://vuejs.org/">Vue</a> and <a href="https://svelte.dev/">Svelte</a> are being hyped as better alternatives to React.</p>
  
 <p>To be fair: each one does certain tasks better than React and their learning curves aren't as steep. But React came out before them, so the business world adopted it first.</p>
  
-<p>React is firmly embedded in many company codebases and it's expensive to switch it out for something else. So any sort of Vue/Svelte dominance in the business world isn't happening anytime soon.</p>
+<p>React is firmly embedded in many company codebases and it's expensive for them to switch it out for something else. So any sort of Vue/Svelte dominance in the business world isn't happening anytime soon.</p>
  
 <p>Keep this in mind while job searching.  There are certainly Vue and Svelte jobs available, especially at startups or if you're purely doing freelance work.</p>
  
-<p>But if you're job-hunting on LinkedIn or Indeed, you have more options available to you as a React developer. This won't change any time soon.</p>
+<p>But if you're job-hunting on <a href="https://linkedin.com/">LinkedIn</a> or <a href="https://indeed.com/">Indeed</a>, more options are available to you as a React developer. And it will stay like this for a while.</p>
  
 </li>
 
@@ -110,7 +110,7 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
  
 <p>But there are lots of unfilled web developer jobs right now, and there are only so many qualified CompSci graduates available to fill them.  So the bootcampers are needed; therefore, these algo tests are needed.</p>
  
-<p>A quick side-note: it must be said that some EXCELLENT coders are coming out of bootcamps. I know of two bootcamp grads that got hired by Spotify, one of the hardest places to get a job.</p>
+<p>A quick side-note: it must be said that some EXCELLENT coders are coming out of bootcamps. I know of two bootcamp grads that got hired by <a href="https://spotify.com/">Spotify</a>, one of the hardest places to get a job.</p>
  
 <p>And Noam Sauer-Utley is a bootcamp grad who's written some of the BEST JavaScript algorithms explanations I've ever read. Read more of her stuff <a href="https://medium.com/@noamsauerutley">here</a>.</p>
  
@@ -146,11 +146,11 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
 </li>
 </ol>
  
-<h2>What I learned</h2>
-My biggest takeaway from this recent job search is...
->"WOW...it's REALLY good to have React experience nowadays!!!"
+<h2>What were my main takeaways from this job search?</h2>
+My biggest takeaway was:
+>"It's REALLY good to have React experience nowadays!!!"
 
-I do have other skills but having React experience made this the easiest job search I ever went through! However, this job hunt was also brutal reminder of how I always need to keep my skill set current.
+I do have other skills but having React experience made this the easiest job search I've ever went through. However, this job hunt was also brutal reminder of how I always need to keep my skill set current.
 
 There's a sticky on my desktop listing the skills I need to learn/ramp up on...cloud stuff, Node, etc. I'll have to find time to do just that: I have no other choice.
 
