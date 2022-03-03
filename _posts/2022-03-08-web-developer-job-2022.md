@@ -13,7 +13,7 @@ thumb-image: web-dev-job-two-thumb.jpg
 
 On May 8th, 2017, I wrote about <a href="/front-end-web-developer-job-search/">my search for a front end web developer job</a>. Five years to the day later, I'm publishing a post about what that job search looks like in 2022.
 
-This new job search took effort but not as much as the previous one. But like before, I learned a lot about what it takes to get a web dev position these days.
+This new job search took effort but not as much as the previous one. But like before, I learned a lot about what it takes to get a web dev position in current times.
 
 <h2>What happened the last time I looked for a web dev job?</h2>
 In 2017, I "cast a wide net," meaning I applied for lots of jobs inside a short time frame. I applied for so many jobs that I hit a point where I had four interviews in one day.
@@ -35,15 +35,15 @@ As I went through all of this, I discovered six things:
 <ol>
 
 <li class="post__list-item">
-<h3><b>React is the most in-demand skill, and it will stay that way for awhile</b></h3>
+<h3><b>React is the most in-demand skill, and it will stay that way for a while</b></h3>
  
 <p>After its release, React solved problems that developers never knew they had. It gave them a great way to "component-ize" the UI, rendered that UI fast and made application state easier to manage.</p>
  
-<p>This resulted in a growing React ecosystem that includes <a href="https://redux.js.org/">Redux</a>, <a href="https://reactrouter.com/">React Router</a> and <a href="https://jestjs.io/">Jest</a>. It also led to a vast, supportive React community of Slack channels, tutorial sites and web forums.</p>
+<p>From this came a still-growing React ecosystem that includes <a href="https://redux.js.org/">Redux</a>, <a href="https://reactrouter.com/">React Router</a> and <a href="https://jestjs.io/">Jest</a>. It also led to a vast, supportive React community of Slack channels, tutorial sites and web forums.</p>
  
 <p>It's for all these reasons (and many more) that businesses of all sizes have adopted React. And want to hire developers that know it.</p>
  
-<p>No exaggeration here: for almost every interview I had, "How long have I used React?" was the one of the first two questions I was asked. Followed by questions about my knowledge of the above-mentioned ecosystem.</p>
+<p>No exaggeration: "How long have I used React?" was one of the first two questions I was asked for almost every interview. Followed by questions about my knowledge of the above-mentioned ecosystem.</p>
  
 <p>The years-long debate over what's the best JavaScript framework continues. As a result, frameworks like <a href="https://vuejs.org/">Vue</a> and <a href="https://svelte.dev/">Svelte</a> are being hyped as better alternatives to React.</p>
  
@@ -53,17 +53,17 @@ As I went through all of this, I discovered six things:
  
 <p>Keep this in mind while job searching.  There are certainly Vue and Svelte jobs available, especially at startups or if you're purely doing freelance work.</p>
  
-<p>But if you're looking on LinkedIn or Indeed, you have more options available to you as a React developer. It will be a while before this changes.</p>
+<p>But if you're job-hunting on LinkedIn or Indeed, you have more options available to you as a React developer. This won't change any time soon.</p>
  
 </li>
 
 <li class="post__list-item">
 <h3><b>The core skills required for web developer jobs has changed dramatically</b></h3>
 <p>
-Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuery</a> skills was guaranteed a high-paying front end web developer job. jQuery begat <a href="https://backbonejs.org/">Backbone</a>, which begat <a href="https://angular.io/">Angular</a>, which begat React, and so on and so forth.
+Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuery</a> skills was guaranteed a high-paying front end web developer job. jQuery begat <a href="https://backbonejs.org/">Backbone</a>, which begat <a href="https://angular.io/">Angular</a>, which begat React, and so on and so forth.
 </p>
  
-<p>The required skills for FE web developer jobs always change rapidly. But the changes from my last job search to this one are those most extreme ones I've ever seen.</p>
+<p>Yes, the required skills for FE web developer jobs constantly change. But the changes from my last job search to this one are those most extreme ones I've ever seen.</p>
  
 <p>Front end web developers with these skill sets are THE most employable at the time of this post:</p>
  
@@ -104,13 +104,13 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
 <h3><b>The algorithm tests are everywhere</b></h3>
 <p><a href="https://www.dictionary.com/e/acronyms/faang/">FAANG companies</a> are known for the algorithm-based tests that interviewees must pass before getting hired by them. I took the Google one a few years ago and didn't make it (it's ok...I'm fine).</p>
  
-<p>It used to be that the FAANGs were the only companies requiring this test...not anymore. While interviewing, a gaming company, a betting site and a beauty manufacturer asked me to take the test.</p>
+<p>It used to be that the FAANGs were the only companies requiring this test...not anymore. Throughout this process, a gaming company, a betting site and a handful of startups asked me to take the test.</p>
  
 <p>My opinion is, this is the result of the large number of bootcamp graduates applying for web dev jobs. I mentioned in my 2017 article that bootcampers are at a disadvantage when it comes to job searching...I also mentioned that <a href="https://zachholman.com/posts/startup-interviewing-is-fucked/">Zac Holman thought this interviewing approach was bullsh*t.</a></p>
  
-<p>But there are a lot of unfilled web developer jobs right now, and there are only so many qualified CompSci graduates available to fill them.  So the bootcampers are needed; therefore, these algo tests are needed.</p>
+<p>But there are lots of unfilled web developer jobs right now, and there are only so many qualified CompSci graduates available to fill them.  So the bootcampers are needed; therefore, these algo tests are needed.</p>
  
-<p>Now, it must be said that some EXCELLENT coders are coming out of bootcamps. I know of two bootcamp grads that got hired by Spotify, a difficult place to get a job.</p>
+<p>Now, it must be said that some EXCELLENT coders are coming out of bootcamps. I know of two bootcamp grads that got hired by Spotify, one of the hardest places to get a job.</p>
  
 <p>And Noam Sauer-Utley is a bootcamp grad who's written some of the BEST JavaScript algorithms explanations I've ever read. Read more of her stuff <a href="https://medium.com/@noamsauerutley">here</a>.</p>
  
@@ -129,16 +129,16 @@ Back in the early 2000's someone with strong <a href="https://jquery.com/">jQuer
  
 <p>Technically, Python, Java and .NET aren't "back end languages", they just interact with the back end more than JavaScript does. Maybe the term "front end" now means "anything that doesn't require building an SQL database."</p>
  
-<p>I dunno: maybe the listings of Python, Java and .NET in these skill sets were typos. But they were there so it's something to keep in mind as you build your skillset...especially when discussing Python.</p>
+<p>I dunno: maybe the listings of Python, Java and .NET in these skill sets were typos. But they were there so it's something to keep in mind as you build your skillset...especially regarding Python.</p>
  
-<p>A quick aside: I predicted that back end-level Node would be a required skill set in my 2017 article. I didn't see many Node server jobs in 2022, but I did take a coding test where I had to load JSON into a Node back end and fetch it with React.</p>
+<p>A quick aside: I predicted that back end-level Node would be a required skill set in my 2017 article. I didn't see many Node server jobs in 2022, but a makeup manufacturer did take a coding test where I had to load JSON into a Node back end and fetch it with React.</p>
  
 <p>So learning some Node stuff may be worth your time. Creating a consumable REST API using Node on your own is good practice.</p>
 </li>
  
 <li class="post__list-item">
 <h3><b>The line dividing front end web developer jobs and DevOps jobs is getting really REALLY small</b></h3>
-<p>As mentioned above, knowing how to manage cloud-based services is a desirable skill set. This is because DevOps, the rapid but safe deployment of code, is as common as Git commits in the web dev world.</p>
+<p>As mentioned above, knowing how to manage cloud-based services is a desirable skill set. This is because DevOps, the process of rapidly deploying code and code changes, is now as common as Git commits.</p>
  
 <p>Knowing how to configure an automated build/deployment process using things like <a href="https://aws.amazon.com/">AWS</a>, <a href="https://azure.microsoft.com/en-us/">Azure</a>, <a href="https://www.docker.com/">Docker</a>, <a href="https://kubernetes.io/">Kubernetes</a>, etc. is rapidly becoming a required skill for FE devs. Currently, I only have better-than-basic knowledge of this stuff, which probably prevented my moving forward for a few interviews.</p>
  
