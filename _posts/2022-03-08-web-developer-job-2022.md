@@ -18,7 +18,7 @@ This new job search took effort but not as much as the previous one. But like be
 <h2>What happened the last time I looked for a web dev job?</h2>
 In 2017, I "cast a wide net," meaning I applied for lots of jobs inside a short time frame. I applied for so many jobs that I hit a point where I had four interviews in one day.
  
-I had to do this because I had limited experience with the in-demand JavaScript frameworks of the day, particularly <a href="https://reactjs.org/">React</a>. At the time, I had over a decade of developer experience but was competing for jobs against people who had more of the required framework knowledge than I did.
+I had to do this because I had limited experience with the in-demand JavaScript frameworks of the day, specifically <a href="https://reactjs.org/">React</a>. Back then, I had over a decade of developer experience but was competing for jobs against people who had more of the required framework knowledge than I did.
  
 So I cast that wide net to better my chances of getting hired. And once I got a job (at JPMorgan Chase), I began building up five years of solid, quantifiable React experience.
  
@@ -43,7 +43,7 @@ As I went through all of this, I discovered six things:
  
 <p>It's for all these reasons (and many more) that businesses of all sizes have adopted React. And want to hire developers that know it.</p>
  
-<p>No exaggeration: "How long have I used React?" was one of the first two questions I was asked for almost every interview. Followed by questions about my knowledge of the above-mentioned ecosystem.</p>
+<p>No exaggeration: "How long have I used React?" was always one of the first two questions I was asked when interviewed. Followed by questions about my knowledge of the above-mentioned ecosystem.</p>
  
 <p>The years-long debate over what's the best JavaScript framework continues. As a result, frameworks like <a href="https://vuejs.org/">Vue</a> and <a href="https://svelte.dev/">Svelte</a> are being hyped as better alternatives to React.</p>
  
@@ -89,11 +89,11 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
  
 <p>On the whole, US companies have always employed remote developers from other countries. But based on what I saw, companies now seem more willing to hire stateside remote coders.</p>
  
-<p>Hiring remotely has always made sense for businesses but the pandemic made that obvious. Businesses can either hire devs at USD$100,000+ a year, rent them an office, then maintain it with electricity, custodians, etc.</p>
+<p>Remote hiring makes financial sense for businesses. They can either hire devs at USD$100,000+ a year, rent them an office, then maintain it with electricity, custodians, etc.</p>
  
 <p>Or, they can just hire devs at USD$100,000+ a year.</p>
  
-<p>Every job I applied for was either fully remote or hybrid. I certainly would have applied for in-office jobs as well, but none of the ones I applied to offered it.</p>
+<p>Every job I applied for was either fully remote or hybrid. I certainly would have applied for in-office jobs, but none of the ones I applied to offered it.</p>
  
 <p>So yes, developers have a lot of job options right now and companies are saving money. But the tragedy of Covid-19 is the reason for this.</p>
  
@@ -110,11 +110,11 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
  
 <p>But there are lots of unfilled web developer jobs right now, and there are only so many qualified CompSci graduates available to fill them.  So the bootcampers are needed; therefore, these algo tests are needed.</p>
  
-<p>Now, it must be said that some EXCELLENT coders are coming out of bootcamps. I know of two bootcamp grads that got hired by Spotify, one of the hardest places to get a job.</p>
+<p>A quick side-note: it must be said that some EXCELLENT coders are coming out of bootcamps. I know of two bootcamp grads that got hired by Spotify, one of the hardest places to get a job.</p>
  
 <p>And Noam Sauer-Utley is a bootcamp grad who's written some of the BEST JavaScript algorithms explanations I've ever read. Read more of her stuff <a href="https://medium.com/@noamsauerutley">here</a>.</p>
  
-<p>If you want to prepare for these tests from a JS standpoint, <a href="https://www.codewars.com/">Codewars</a> is probably the easiest free resource right now. <a href="https://www.geeksforgeeks.org/">Geeks for Geeks</a> is next and is also free...a bit more structured towards the tests.</p>
+<p>Back to the algorithm tests: If you want to study for them, <a href="https://www.codewars.com/">Codewars</a> is the easiest free resource. <a href="https://www.geeksforgeeks.org/">Geeks for Geeks</a> is next and is also free...a bit more structured towards the tests.</p>
  
 <p><a href="https://www.hackerrank.com/">HackerRank</a> is free and is probably the closest representation of what an algo test looks like. Lots of the tests I took for interviews were on HackerRank.</p>
  
@@ -129,9 +129,9 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
  
 <p>Technically, Python, Java and .NET aren't "back end languages", they just interact with the back end more than JavaScript does. Maybe the term "front end" now means "anything that doesn't require building an SQL database."</p>
  
-<p>I dunno: maybe the listings of Python, Java and .NET in these skill sets were typos. But they were there so it's something to keep in mind as you build your skillset...especially regarding Python.</p>
+<p>I dunno: maybe the listings of Python, Java and .NET in these skill sets were typos. But they were there so it's something to keep in mind as you build your skill set...especially regarding Python.</p>
  
-<p>A quick aside: I predicted that back end-level Node would be a required skill set in my 2017 article. I didn't see many Node server jobs in 2022, but a makeup manufacturer did take a coding test where I had to load JSON into a Node back end and fetch it with React.</p>
+<p>Another quick side-note: I predicted that back end-level Node would be a required skill set in my 2017 article. I didn't see many Node server jobs in 2022, but a makeup manufacturer did take a coding test where I had to load JSON into a Node back end and fetch it with React.</p>
  
 <p>So learning some Node stuff may be worth your time. Creating a consumable REST API using Node on your own is good practice.</p>
 </li>
@@ -150,13 +150,11 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
 My biggest takeaway from this recent job search is...
 >"WOW...it's REALLY good to have React experience nowadays!!!"
  
-I do have other skills but having React experience made this the easiest job search I ever went through!
- 
-Web developers have always needed to keep their skills fresh. But I was brutally reminded of this during this job hunt.
+I do have other skills but having React experience made this the easiest job search I ever went through! However, this job hunt was also brutal reminder of how I always need to keep my skill set current.
  
 There's a sticky on my desktop listing the skills I need to learn/ramp up on...cloud stuff, Node, etc. I'll have to find time to do just that: I have no other choice.
  
 <h2>Conclusion</h2>
 But finding time to ramp up on front end web dev skills is the only issue right now.  There's never been a better time to look for an FE web dev job...particularly if you know React.
  
-For skilled front developers, looking for a job in 2022 is like picking up gold coins off the street. This may just be just a bubble that will pop someday, but it's how things are right now.
+For skilled front developers, looking for a job in 2022 is like picking up gold coins off the street. This may be just a bubble that will pop someday (it probably is), but it's how things are right now.
