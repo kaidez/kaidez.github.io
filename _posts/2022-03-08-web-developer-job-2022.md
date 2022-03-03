@@ -149,11 +149,11 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
 <h2>What I learned</h2>
 My biggest takeaway from this recent job search is...
 >"WOW...it's REALLY good to have React experience nowadays!!!"
- 
+
 I do have other skills but having React experience made this the easiest job search I ever went through! However, this job hunt was also brutal reminder of how I always need to keep my skill set current.
- 
+
 There's a sticky on my desktop listing the skills I need to learn/ramp up on...cloud stuff, Node, etc. I'll have to find time to do just that: I have no other choice.
- 
+
 <h2>Conclusion</h2>
 But finding time to ramp up on front end web dev skills is the only issue right now.  There's never been a better time to look for an FE web dev job...particularly if you know React.
  
