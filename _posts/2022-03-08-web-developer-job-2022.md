@@ -25,9 +25,12 @@ So I cast that wide net to better my chances of getting hired. And once I got a 
 <h2>What happened when I looked for a web dev job <i>this</i> time?</h2>
 Having that experience paid off when the time came for me to find a new job. I still casted a wide net, but it didn't have to be as wide as before.
  
-The result: I applied for less than half the amount of jobs this time. Plus, I found a job a bit faster.
- 
-I got hired by Blue Cross Blue Shield in under three weeks...that's <i>less</i> than the month it took me to get the Chase job. <i>And</i> I turned down two other job offers along the way!
+The results of having this extra React experience were:
+<ul>
+<li class="post__list-item">I applied for less than half the amount of jobs this time.</li>
+<li class="post__list-item">I found a job a bit faster. Under three weeks this time, which more than the month it took me the last time.</li>
+<li class="post__list-item">I turned down two other job offers along the way!</li>
+</ul>
  
 <h2>The six things I learned</h2>
 As I went through all of this, I discovered six things:
@@ -70,7 +73,7 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
 <ul>
 <li class="post__list-item" style="list-style-type:disc;"><b>React and its ecosystem:</b> See the previous item on this list ;)</li>
 <li class="post__list-item" style="list-style-type:disc;"><b>TypeScript:</b> It makes unit testing easier and lets those classically-trained Java/C developers ramp up on JS quicker. Speaking of testing...</li>
-<li class="post__list-item" style="list-style-type:disc;"><b>JavaScript unit testing:</b> JS was initially created to be a beginner's programming language so it didn't require a culture of unit testing. But it's matured past that simplicity and almost all prospective employers expect some unit test knowledge among candidates.  Maybe not guru-level knowledge but <i>some</i> knowledge.</li>
+<li class="post__list-item" style="list-style-type:disc;"><b>JavaScript unit testing:</b> JavaScript was initially created to be a beginner's programming language so it didn't need a unit testing like Java has. But JS has matured past that simplicity and almost all prospective employers expect some unit test knowledge among candidates.  Maybe not guru-level knowledge but <i>some</i> knowledge.</li>
 
 <li class="post__list-item" style="list-style-type:disc;"><b>Angular version 2 and higher:</b> Many businesses added Angular to their codebases before React got big.  That legacy code is still out there and those businesses are hiring developers to maintain it as well as migrate it over to React.</li>
 <li class="post__list-item" style="list-style-type:disc;"><b>Intermediate level JavaScript knowledge:</b> If you know React and/or Angular, then employers expect your JavaScript knowledge to be better than basic. You should know how to do things like use  <code>fetch</code> and <code>try/catch</code> and extract info from data structures with loops.</li>
