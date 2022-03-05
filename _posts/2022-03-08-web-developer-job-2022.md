@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: 'What I Learned About Finding A Front End Web Developer Job In 2022'
-date: 2022-03-03 00:00:59 -0400
+date: 2022-03-05 00:00:59 -0400
 categories: personal
 category-name: Personal
 permalink: /front-end-web-developer-job-2022/
@@ -13,12 +13,12 @@ thumb-image: web-dev-job-two-thumb.jpg
 
 On May 8th, 2017, I wrote about <a href="/front-end-web-developer-job-search/">my search for a front end web developer job</a>. Five years to the day later, I'm publishing a post about what that job search looks like in 2022.
 
-This new job search took effort but not as much as the previous one. But like before, I learned a lot about what it takes to get a web dev position in current times.
+This new job search took effort, but much less than the previous one. But like before, I learned a lot about what it takes to get a web dev position in current times.
 
 <h2>What happened the last time I looked for a web dev job?</h2>
 In 2017, I "cast a wide net," meaning I applied for lots of jobs inside a short time frame. I applied for so many jobs that I hit a point where I had four interviews in one day.
  
-I had to do this because I had limited experience with the in-demand JavaScript frameworks of the day, specifically <a href="https://reactjs.org/">React</a>. Back then, I had over a decade of developer experience but was competing for jobs against people who had more of the required framework knowledge than I did.
+I had to do this because I had limited experience with the in-demand JavaScript frameworks of the day, specifically <a href="https://reactjs.org/">React</a>. Back then, I had over a decade of developer experience but was competing for jobs against people who had more of the required framework knowledge than me.
  
 So I cast that wide net to better my chances of getting hired. And once I got a job (at JPMorgan Chase), I began building up five years of solid, quantifiable React experience.
  
@@ -48,11 +48,11 @@ As I went through all of this, I discovered six things:
  
 <p>No exaggeration: "How long have I used React?" was <i>always</i> one of the first two questions I was asked when interviewed. Followed by questions about my knowledge of the above-mentioned ecosystem.</p>
  
-<p>The years-long debate over what's the best JavaScript framework continues. As a result, frameworks like <a href="https://vuejs.org/">Vue</a> and <a href="https://svelte.dev/">Svelte</a> are being hyped as better alternatives to React.</p>
+<p>The years-long debate over what's the best JavaScript framework continues. As a result, both <a href="https://vuejs.org/">Vue</a> and <a href="https://svelte.dev/">Svelte</a> are currently being hyped as better alternatives to React.</p>
  
 <p>To be fair: each one does certain tasks better than React and their learning curves aren't as steep. But React came out before them, so the business world adopted it first.</p>
  
-<p>React is firmly embedded in many company codebases and it's expensive for them to switch it out for something else. So any sort of Vue/Svelte dominance in the business world isn't happening anytime soon.</p>
+<p>React is firmly embedded in many company codebases, and switching React out for for something else is expensive. So any sort of Vue/Svelte dominance in the business world isn't happening anytime soon.</p>
  
 <p>Keep this in mind while job searching.  There are certainly Vue and Svelte jobs available, especially at startups or if you're purely doing freelance work.</p>
  
@@ -66,17 +66,21 @@ As I went through all of this, I discovered six things:
 Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuery</a> skills was guaranteed a high-paying front end web developer job. jQuery begat <a href="https://backbonejs.org/">Backbone</a>, which begat <a href="https://angular.io/">Angular</a>, which begat React, and so on and so forth.
 </p>
  
-<p>Yes, the required skills for FE web developer jobs constantly change. But the changes from my last job search to this one are those most extreme ones I've ever seen.</p>
+<p>Yes, the required skills for FE web developer jobs constantly changes. But the changes from my last job search to this one are those most extreme ones I've ever seen.</p>
  
 <p>Front end web developers with these skill sets are THE most employable at the time of this post:</p>
  
 <ul>
 <li class="post__list-item" style="list-style-type:disc;"><b>React and its ecosystem:</b> See the previous item on this list ;)</li>
-<li class="post__list-item" style="list-style-type:disc;"><b>TypeScript:</b> It makes unit testing easier and lets those classically-trained Java/C developers ramp up on JS quicker. Speaking of testing...</li>
+
+<li class="post__list-item" style="list-style-type:disc;"><b>TypeScript:</b> It makes it easier for those classically-trained Java/C developers on your team to learn JavaScript. It also makes unit testing easier so <a href="https://www.typescriptlang.org/">read up on it</a>. Speaking of testing...</li>
+
 <li class="post__list-item" style="list-style-type:disc;"><b>JavaScript unit testing:</b> JavaScript was initially created to be a beginner's programming language so it didn't need a unit testing like Java has. But JS has matured past that simplicity and almost all prospective employers expect some unit test knowledge among candidates.  Maybe not guru-level knowledge but <i>some</i> knowledge.</li>
 
 <li class="post__list-item" style="list-style-type:disc;"><b>Angular version 2 and higher:</b> Many businesses added Angular to their codebases before React got big.  That legacy code is still out there and those businesses are hiring developers to maintain it as well as migrate it over to React.</li>
+
 <li class="post__list-item" style="list-style-type:disc;"><b>Intermediate level JavaScript knowledge:</b> If you know React and/or Angular, then employers expect your JavaScript knowledge to be better than basic. You should know how to do things like use  <code>fetch</code> and <code>try/catch</code> and extract info from data structures with loops.</li>
+
 <li class="post__list-item" style="list-style-type:disc;"><b>Code deployment via cloud-based apps and services:</b> We'll discuss this in depth in #6 on this list ;)</li>
 </ul>
 </li>
@@ -90,7 +94,7 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
  
 <p>For web developers, who were technically set up to work remotely already, this was a job boom. They suddenly had job options available to them from around the world, not just in their hometown.</p>
  
-<p>On the whole, US companies have always employed remote developers from other countries. But based on what I saw, companies now seem more willing to hire stateside remote coders.</p>
+<p>Generally speaking, US companies have always hired remote developers from other countries. But based on what I saw, those companies now seem more willing to hire stateside remote coders.</p>
  
 <p>Remote hiring makes financial sense for businesses. They can either hire devs at USD$100,000+ a year, rent them an office, then maintain it with electricity, custodians, etc.</p>
  
@@ -100,7 +104,7 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
  
 <p>So yes, developers have a lot of job options right now and companies are saving money. But the tragedy of Covid-19 is the reason for this.</p>
  
-<p>Personally, I'm thankful to have these options but I wouldn't have them if Covid had never happened. I'd prefer to not have these options.</p>
+<p>I'm thankful to have these options but I wouldn't have them if Covid had never happened. I'd prefer to not have these options.</p>
 </li>
 
 <li class="post__list-item">
@@ -109,7 +113,7 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
  
 <p>It used to be that the FAANGs were the only companies requiring this test...not anymore. Throughout this process, a gaming company, a betting site and a handful of startups asked me to take the test.</p>
  
-<p>My opinion is, this is the result of the large number of bootcamp graduates applying for web dev jobs. I mentioned in my 2017 article that bootcampers are at a disadvantage when it comes to job searching...I also mentioned that <a href="https://zachholman.com/posts/startup-interviewing-is-fucked/">Zac Holman thought this interviewing approach was bullsh*t.</a></p>
+<p>I think this is the result of the large number of bootcamp graduates applying for web dev jobs. I mentioned in my 2017 article that bootcampers are at a disadvantage when it comes to job searching...I also mentioned that <a href="https://zachholman.com/posts/startup-interviewing-is-fucked/">Zac Holman thought this interviewing approach was bullsh*t.</a></p>
  
 <p>But there are lots of unfilled web developer jobs right now, and there are only so many qualified CompSci graduates available to fill them.  So the bootcampers are needed; therefore, these algo tests are needed.</p>
  
@@ -134,7 +138,7 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
  
 <p>I dunno: maybe the listings of Python, Java and .NET in these skill sets were typos. But they were there so it's something to keep in mind as you build your skill set...especially regarding Python.</p>
  
-<p>Another quick side-note: I predicted that back end-level Node would be a required skill set in my 2017 article. I didn't see many Node server jobs in 2022, but a makeup manufacturer did take a coding test where I had to load JSON into a Node back end and fetch it with React.</p>
+<p>Another quick side-note: I predicted that back end-level Node would be a required skill set in my 2017 article. I didn't see many Node server jobs in 2022, but a makeup manufacturer did give me a coding test where I had to serve JSON from a Node back end and then fetch it with React.</p>
  
 <p>So learning some Node stuff may be worth your time. Creating a consumable REST API using Node on your own is good practice.</p>
 </li>
@@ -143,7 +147,7 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
 <h3><b>The line dividing front end web developer jobs and DevOps jobs is getting really REALLY small</b></h3>
 <p>As mentioned above, knowing how to manage cloud-based services is a desirable skill set. This is because DevOps, the process of rapidly deploying code and code changes, is now as common as Git commits.</p>
  
-<p>Knowing how to configure an automated build/deployment process using things like <a href="https://www.jenkins.io/">Jenkins</a>, <a href="https://aws.amazon.com/">AWS</a>, <a href="https://azure.microsoft.com/en-us/">Azure</a> and unit tests is the biggest nice-to-have skill for FE devs. Currently, I only have better-than-basic knowledge of this stuff, which probably prevented my moving forward for a few interviews.</p>
+<p>Knowing how to configure an automated build/deployment process using things like <a href="https://www.jenkins.io/">Jenkins</a>, <a href="https://aws.amazon.com/">AWS</a>, <a href="https://azure.microsoft.com/en-us/">Azure</a> and unit tests is the biggest nice-to-have skill for FE devs. Currently, I have only basic knowledge of this, which probably prevented my moving forward for a few interviews.</p>
  
 <p>If you're a front end developer, you're using npm to manage app dependencies and Git to manage source code. Cloud services have a somewhat parallel process so spend some time learning them.</p>
 </li>
@@ -157,7 +161,11 @@ I do have other skills but having React experience made this the easiest job sea
 
 There's a sticky on my desktop listing the skills I need to learn/ramp up on...cloud stuff, Node, etc. I'll have to find time to do just that: I have no other choice.
 
+I was sad to see that interest in CSS hadn't grown much since my last article. But both <a href="https://tailwindcss.com/">Tailwind CSS</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties">logical properties</a> are exciting developers, so maybe the interest will grow again.
+
 <h2>Conclusion</h2>
-But finding time to ramp up on front end web dev skills is the only issue right now.  There's never been a better time to look for an FE web dev job...particularly if you know React.
- 
+But finding time to ramp up on front end web dev skills is the only issue right now.  And the fact that very few love CSS like I do is personal position.
+
+The bottom line: it's absolutely, positively one of the BEST times to look for a front end web developer job. Particularly if the person looking knows React.
+
 For skilled front developers, looking for a job in 2022 is like picking up gold coins off the street. This may be just a bubble that will pop someday (it probably is), but it's how things are right now.
