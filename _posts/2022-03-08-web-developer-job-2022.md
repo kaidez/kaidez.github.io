@@ -52,7 +52,7 @@ As I went through all of this, I discovered six things:
  
 <p>To be fair: each one does certain tasks better than React and their learning curves aren't as steep. But React came out before them, so the business world adopted it first.</p>
  
-<p>React is firmly embedded in many company codebases, and switching React out for for something else is expensive. So any sort of Vue/Svelte dominance in the business world isn't happening anytime soon.</p>
+<p>React is firmly embedded in many company codebases, and switching it out for something else is expensive. So any sort of Vue/Svelte dominance in the business world isn't happening anytime soon.</p>
  
 <p>Keep this in mind while job searching.  There are certainly Vue and Svelte jobs available, especially at startups or if you're purely doing freelance work.</p>
  
@@ -121,11 +121,11 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
  
 <p>And Noam Sauer-Utley is a bootcamp grad who's written some of the BEST JavaScript algorithms explanations I've ever read. Read more of her stuff <a href="https://medium.com/@noamsauerutley">here</a>.</p>
  
-<p>Back to the algorithm tests: If you want to study for them, <a href="https://www.codewars.com/">Codewars</a> is the easiest free resource. <a href="https://www.geeksforgeeks.org/">Geeks for Geeks</a> is next and is also free...a bit more structured towards the tests.</p>
+<p>Back to the algorithm tests: If you want to prepare for them, <a href="https://www.codewars.com/">Codewars</a> is the easiest free resource. <a href="https://www.geeksforgeeks.org/">Geeks for Geeks</a> is next and is also free...a bit more structured towards the tests.</p>
  
 <p><a href="https://www.hackerrank.com/">HackerRank</a> is free and is probably the closest representation of what an algo test looks like. Lots of the tests I took for interviews were on HackerRank.</p>
  
-<p><a href="https://leetcode.com/">LeetCode</a> has free content but a Google developer suggested I buy their premium subscription at USD$35 a month. I did and now I suggest it: you'll see many sample questions close to what you'll see on the tests.</p>
+<p><a href="https://leetcode.com/">LeetCode</a> has free content but a Google developer suggested I buy their premium subscription at USD$35 a month. I did and now <i>I</i> suggest it: you'll see many sample questions close to what you'll see on the tests.</p>
  
 <p>Many suggest <a href="https://www.crackingthecodinginterview.com/">the "Cracking the Coding Interview" book</a> but it's a big read. However, its chapter on <a href="https://www.freecodecamp.org/news/big-o-notation-why-it-matters-and-why-it-doesnt-1674cfa8a23c/">Big O notation</a> is excellent.</p>
 </li>
@@ -138,9 +138,9 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
  
 <p>I dunno: maybe the listings of Python, Java and .NET in these skill sets were typos. But they were there so it's something to keep in mind as you build your skill set...especially regarding Python.</p>
  
-<p>Another quick side-note: I predicted that back end-level Node would be a required skill set in my 2017 article. I didn't see many Node server jobs in 2022, but a makeup manufacturer did give me a coding test where I had to serve JSON from a Node back end and then fetch it with React.</p>
+<p>Another quick side-note: I predicted that back end-level Node would be a required skill set in my 2017 article. I didn't see many Node server jobs in 2022, but a makeup manufacturer did give me a coding test where I had to serve JSON from a Node back end.</p>
  
-<p>So learning some Node stuff may be worth your time. Creating a consumable REST API using Node on your own is good practice.</p>
+<p>So learning some Node stuff is worth your time. Creating a consumable REST API using Node on your own is good practice.</p>
 </li>
  
 <li class="post__list-item">
