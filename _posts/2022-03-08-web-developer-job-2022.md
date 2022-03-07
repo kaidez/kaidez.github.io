@@ -28,7 +28,7 @@ Having that experience paid off when the time came for me to find a new job. I s
 The results of having this extra React experience were:
 <ul>
 <li class="post__list-item">I applied for less than half the amount of jobs this time.</li>
-<li class="post__list-item">I found a job a bit faster. Under three weeks this time, which more than the month it took me the last time.</li>
+<li class="post__list-item">I found a job a bit faster. Under three weeks this time...less than the month it took me last time.</li>
 <li class="post__list-item">I turned down two other job offers along the way!</li>
 </ul>
  
@@ -42,7 +42,7 @@ As I went through all of this, I discovered six things:
  
 <p>After its release, React solved problems that developers never knew they had. It gave them a great way to "component-ize" the UI, rendered that UI fast and made application state easier to manage.</p>
  
-<p>From this came a still-growing React ecosystem that includes <a href="https://redux.js.org/">Redux</a>, <a href="https://reactrouter.com/">React Router</a> and <a href="https://jestjs.io/">Jest</a>. It also led to a vast, supportive React community of Slack channels, tutorial sites and web forums.</p>
+<p>From this came a still-growing React ecosystem that includes <a href="https://redux.js.org/">Redux</a>, <a href="https://reactrouter.com/">React Router</a> and <a href="https://jestjs.io/">Jest</a>. It also led to a vast, supportive React community of Slack channels, web forums and tutorial sites.</p>
  
 <p>It's for all these reasons (and many more) that businesses of all sizes have adopted React. And want to hire developers that know it.</p>
  
@@ -75,11 +75,11 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
 
 <li class="post__list-item" style="list-style-type:disc;"><b>TypeScript:</b> It makes it easier for those classically-trained Java/C developers on your team to learn JavaScript. It also makes unit testing easier so <a href="https://www.typescriptlang.org/">read up on it</a>. Speaking of testing...</li>
 
-<li class="post__list-item" style="list-style-type:disc;"><b>JavaScript unit testing:</b> JavaScript was initially created to be a beginner's programming language so it didn't need a unit testing like Java has. But JS has matured past that simplicity and almost all prospective employers expect some unit test knowledge among candidates.  Maybe not guru-level knowledge but <i>some</i> knowledge.</li>
+<li class="post__list-item" style="list-style-type:disc;"><b>JavaScript unit testing:</b> JS was initially created to be a beginner's programming language so it didn't need a culture of unit testing like Java has. But JS has matured past that simplicity and almost all prospective employers expect some unit test knowledge among candidates.  Maybe not guru-level knowledge but <i>some</i> knowledge.</li>
 
 <li class="post__list-item" style="list-style-type:disc;"><b>Angular version 2 and higher:</b> Many businesses added Angular to their codebases before React got big.  That legacy code is still out there and those businesses are hiring developers to maintain it as well as migrate it over to React.</li>
 
-<li class="post__list-item" style="list-style-type:disc;"><b>Intermediate level JavaScript knowledge:</b> If you know React and/or Angular, then employers expect your JavaScript knowledge to be better than basic. You should know how to do things like use  <code>fetch</code> and <code>try/catch</code> and extract info from data structures with loops.</li>
+<li class="post__list-item" style="list-style-type:disc;"><b>Intermediate level JavaScript knowledge...at least:</b> If you know React and/or Angular, then employers expect your JavaScript knowledge to be better than basic. You should know how to use things like <code>fetch</code> and Promises and how to pull info from data structures with loops.</li>
 
 <li class="post__list-item" style="list-style-type:disc;"><b>Code deployment via cloud-based apps and services:</b> We'll discuss this in depth in #6 on this list ;)</li>
 </ul>
