@@ -115,7 +115,7 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
  
 <p>I think this is the result of the large number of bootcamp graduates applying for web dev jobs. I mentioned in my 2017 article that bootcampers are at a disadvantage when it comes to job searching...I also mentioned that <a href="https://zachholman.com/posts/startup-interviewing-is-fucked/">Zac Holman thought this interviewing approach was bullsh*t.</a></p>
  
-<p>But there are lots of unfilled web developer jobs right now, and there are only so many qualified CompSci graduates available to fill them.  So the bootcampers are needed; therefore, these algo tests are needed.</p>
+<p>But there are lots of unfilled web developer jobs right now, and there are only so many qualified CompSci graduates available to fill them.  So bootcampers are needed; therefore, the algo tests are needed to let the best bootcampers stand out.</p>
  
 <p>A quick side-note: it must be said that some EXCELLENT coders are coming out of bootcamps. I know of two bootcamp grads that got hired by <a href="https://spotify.com/">Spotify</a>, one of the hardest places to get a job.</p>
  
@@ -161,7 +161,7 @@ I do have other skills but having React experience made this the easiest job sea
 
 There's a sticky on my desktop listing the skills I need to learn/ramp up on...cloud stuff, Node, etc. I'll have to find time to do just that: I have no other choice.
 
-I was sad to see that interest in CSS hadn't grown much since my last article. But both <a href="https://tailwindcss.com/">Tailwind CSS</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties">logical properties</a> are exciting developers, so maybe the interest will grow again.
+I was sad to see that interest in CSS hadn't grown much since my last article. But both <a href="https://tailwindcss.com/">Tailwind CSS</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties">logical properties</a> are exciting developers, so interest may grow again.
 
 <h2>Conclusion</h2>
 But finding time to ramp up on front end web dev skills is the only issue right now.  And the fact that very few love CSS like I do is personal position.
