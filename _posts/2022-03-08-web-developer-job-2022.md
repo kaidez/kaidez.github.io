@@ -117,9 +117,9 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
  
 <p>But there are lots of unfilled web developer jobs right now, and there are only so many qualified CompSci graduates available to fill them.  So bootcampers are needed; therefore, the algo tests are needed to let the best bootcampers stand out.</p>
  
-<p>A quick side-note: it must be said that some EXCELLENT coders are coming out of bootcamps. I know of two bootcamp grads that got hired by <a href="https://spotify.com/">Spotify</a>, one of the hardest places to get a job.</p>
+<p>Now, it must be said that some EXCELLENT coders are coming out of bootcamps. I know of two bootcamp grads that got hired by <a href="https://spotify.com/">Spotify</a>, one of the hardest places to get a job.</p>
  
-<p>And Noam Sauer-Utley is a bootcamp grad who's written some of the BEST JavaScript algorithms explanations I've ever read. Read more of her stuff <a href="https://medium.com/@noamsauerutley">here</a>.</p>
+<p>And Noam Sauer-Utley is a bootcamp grad who's written some of the BEST JavaScript algorithm explanations I've ever read. Read more of her stuff <a href="https://medium.com/@noamsauerutley">here</a>.</p>
  
 <p>Back to the algorithm tests: If you want to prepare for them, <a href="https://www.codewars.com/">Codewars</a> is the easiest free resource. <a href="https://www.geeksforgeeks.org/">Geeks for Geeks</a> is next and is also free...a bit more structured towards the tests.</p>
  
@@ -138,8 +138,10 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
  
 <p>I dunno: maybe the listings of Python, Java and .NET in these skill sets were typos. But they were there so it's something to keep in mind as you build your skill set...especially regarding Python.</p>
  
-<p>Another quick side-note: I predicted that back end-level Node would be a required skill set in my 2017 article. I didn't see many Node server jobs in 2022, but a makeup manufacturer did give me a coding test where I had to serve JSON from a Node back end.</p>
- 
+<p>I predicted server-side Node would evolve into a big required skill set in my 2017 post.  But I didn't see as huge a demand for this in 2022 jobs I saw.
+
+<p>But a coding test I took for a beauty company job required I host JSON data from a Node server. And then fetch the data using, you guessed it, <i>React</i>.</p>
+
 <p>So learning some Node stuff is worth your time. Creating a consumable REST API using Node on your own is good practice.</p>
 </li>
  
