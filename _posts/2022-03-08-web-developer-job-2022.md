@@ -149,9 +149,9 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
  
 <li class="post__list-item">
 <h3><b>The line dividing front end web developer jobs and DevOps jobs is getting really REALLY small</b></h3>
-<p>As mentioned above, knowing how to manage cloud-based services is a desirable skill set. This is because companies want the best DevOps setup they can get.
+<p>As mentioned above, knowing how to manage cloud-based services is a desirable skill set. This is because companies want the best DevOps setup they can get.</p>
 
-Devops is the combination of best practices and tooling (like Cloud services) to be used for fast, efficient code deployments. And based on my interviews, it's getting so that developers should know DevOps as well as they know Git commits.</p>
+<p>DevOps is the combination of best practices and tooling (like Cloud services) to be used for fast, efficient code deployments. And based on my interviews, it's getting so that developers should know DevOps as well as they know Git commits.</p>
 
 <p>Knowing how to configure an automated build/deployment process using things like <a href="https://www.jenkins.io/">Jenkins</a>, <a href="https://aws.amazon.com/">AWS</a>, <a href="https://azure.microsoft.com/en-us/">Azure</a> and unit tests is the biggest nice-to-have skill for FE devs. Currently, I have only basic knowledge of this, which probably prevented my moving forward for a few interviews.</p>
  
