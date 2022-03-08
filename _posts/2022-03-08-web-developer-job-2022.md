@@ -66,9 +66,9 @@ Throughout this process, I discovered six things:
 Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuery</a> skills was guaranteed a high-paying front end web developer job. jQuery begat <a href="https://backbonejs.org/">Backbone</a>, which begat <a href="https://angular.io/">Angular</a>, which begat React, and so on and so forth.
 </p>
  
-<p>Yes, the required skills for FE web developer jobs constantly changes. But the changes from my last job search to this one are those most extreme ones I've ever seen.</p>
+<p>Yes, the required skills for FE web developer jobs change constantly. But the change from my last job search to this one is the most extreme one I've ever seen.</p>
  
-<p>Front end web developers with these skill sets are THE most employable at the time of this post:</p>
+<p>Companies want front end web devs with most or all of the following skills. Preferably all:</p>
  
 <ul>
 <li class="post__list-item" style="list-style-type:disc;"><b>React and its ecosystem:</b> See the previous item on this list ;)</li>
@@ -79,7 +79,7 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
 
 <li class="post__list-item" style="list-style-type:disc;"><b>Angular version 2 and higher:</b> Many businesses added Angular to their codebases before React got big.  That legacy code is still out there and those businesses are hiring developers to maintain it as well as migrate it over to React.</li>
 
-<li class="post__list-item" style="list-style-type:disc;"><b>Intermediate level JavaScript knowledge...at least:</b> If you know React and/or Angular, then employers expect your JavaScript knowledge to be better than basic. You should know how to use things like <code>fetch</code> and Promises and how to pull info from data structures with loops.</li>
+<li class="post__list-item" style="list-style-type:disc;"><b>Intermediate level JavaScript knowledge:</b> If you know React and/or Angular, then employers expect your JavaScript knowledge to be better than basic. You should know how to use things like <code>fetch</code> and Promises and how to pull info from data structures with loops.</li>
 
 <li class="post__list-item" style="list-style-type:disc;"><b>Code deployment via cloud-based apps and services:</b> We'll discuss this in depth in #6 on this list ;)</li>
 </ul>
@@ -106,7 +106,7 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
  
 <p>I'm thankful to have these options, but I wouldn't have these options if Covid had never happened: I'd prefer to not have these options.</p>
 
-<p><i>Side note: thankfully, Covid cases are rapidly shrinking at the time of this article. Just before I published it, <a href="https://www.reuters.com/technology/google-mandates-workers-back-silicon-valley-other-offices-april-4-2022-03-02/">Google announced they were ending their fully remote work policy in favor of a hybrid one</a>. So the amount of 100% remote developer jobs may shrink...at least the ones in America.</i></p>
+<p><i>(Side note: thankfully, Covid cases are rapidly shrinking at the time of this article. Just before I published it, <a href="https://www.reuters.com/technology/google-mandates-workers-back-silicon-valley-other-offices-april-4-2022-03-02/">Google announced they were ending their fully remote work policy in favor of a hybrid one</a>. So the amount of 100% remote developer jobs may shrink...at least in America.)</i></p>
 </li>
 
 <li class="post__list-item">
@@ -140,17 +140,19 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
  
 <p>I dunno: maybe the listings of Python, Java and .NET in these skill sets were typos. But they were there so it's something to keep in mind as you build your skill set...especially regarding Python.</p>
  
-<p>In my 2017 post, I predicted server-side Node would evolve into a big required skill set.  But I didn't see a huge demand for this in the 2022 jobs I saw.</p>
+<p>In my 2017 post, I predicted server-side Node would evolve into a big required skill set.  But I didn't see a huge demand for it in the 2022 jobs I saw.</p>
 
-<p>But a coding test for a beauty company job required that I host JSON data from a Node server. And then fetch the data using, you guessed it, <i>React</i>.</p>
+<p>But a coding test for a beauty company job required that I host JSON data from a Node server. And then fetch the data using, you guessed it, React.</p>
 
 <p>So learning some Node back end stuff is worth your time. Creating a consumable REST API using Node on your own is good practice.</p>
 </li>
  
 <li class="post__list-item">
 <h3><b>The line dividing front end web developer jobs and DevOps jobs is getting really REALLY small</b></h3>
-<p>As mentioned above, knowing how to manage cloud-based services is a desirable skill set. This is because DevOps, the intricate process of rapidly deploying code, is now as common as Git commits.</p>
- 
+<p>As mentioned above, knowing how to manage cloud-based services is a desirable skill set. This is because companies want the best DevOps setup they can get.
+
+Devops is the combination of best practices and tooling (like Cloud services) to be used for fast, efficient code deployments. And based on my interviews, it's getting so that developers should know DevOps as well as they know Git commits.</p>
+
 <p>Knowing how to configure an automated build/deployment process using things like <a href="https://www.jenkins.io/">Jenkins</a>, <a href="https://aws.amazon.com/">AWS</a>, <a href="https://azure.microsoft.com/en-us/">Azure</a> and unit tests is the biggest nice-to-have skill for FE devs. Currently, I have only basic knowledge of this, which probably prevented my moving forward for a few interviews.</p>
  
 <p>If you're a front end developer, you're using npm to manage app dependencies and Git to manage source code. Cloud services have a somewhat parallel process so spend some time learning them.</p>
@@ -170,6 +172,6 @@ Also, I was sad to see that interest in CSS hadn't grown much since my last arti
 <h2>Conclusion</h2>
 But finding time to ramp up my skills is the only issue right now.  And the fact that very few love CSS like I do is a personal position.
 
-The bottom line: it's absolutely, positively one of the BEST times to look for a front end web developer job. Especially if the person that's looking knows React.
+The bottom line: it's absolutely, positively one of the BEST times to look for a front end web developer job. Especially if you know React.
 
 For skilled FE developers, looking for a job in 2022 is like picking up gold coins off the street. This may be just a bubble that will pop someday (it probably is), but it's how things are right now.
