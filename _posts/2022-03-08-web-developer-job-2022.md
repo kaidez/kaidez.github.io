@@ -155,9 +155,9 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
 
 <p>Cloud services are a big part of DevOps tooling. A front end developer that can assist in combining <a href="https://aws.amazon.com/">AWS</a> or <a href="https://azure.microsoft.com/en-us/">Azure</a> with <a href="https://www.jenkins.io/">Jenkins</a> and unit tests is incredibly employable.</p>
  
-<p>If you're a front end developer, you're using npm to manage app dependencies and Git to manage source code. Cloud services have a somewhat parallel set of steps so spend some time learning them in combination with DevOps.</p>
+<p>I was asked about my cloud experience in a few interviews, almost as much as I was asked about React. My limited experience with it may have keep me from moving forward with some jobs.</p>
 
- <p>Currently, I have only basic knowledge of CLoud services and DevOps. I don't think it prevented my moving forward for a few interviews, but it may have.</p>
+<p>If you're a front end developer, you're using npm to manage app dependencies and Git to manage source code. Cloud services have a somewhat parallel set of steps so spend some time learning them in combination with DevOps.</p>
 </li>
 </ol>
  
