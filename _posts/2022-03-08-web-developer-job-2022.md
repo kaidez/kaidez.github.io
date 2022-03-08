@@ -104,9 +104,9 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
  
 <p>So yes, developers have a lot of job options right now and companies are saving money. But the tragedy of Covid-19 is the reason for this.</p>
  
-<p>I'm thankful to have these options and it seems that Covid cases are shrinking in general. But I wouldn't have these options if Covid had never happened: I'd prefer to not have these options.</p>
+<p>I'm thankful to have these options, but I wouldn't have these options if Covid had never happened: I'd prefer to not have these options.</p>
 
-<p><i>A few days before I published this post, <a href="https://www.reuters.com/technology/google-mandates-workers-back-silicon-valley-other-offices-april-4-2022-03-02/">Google announced they were scaling back their fully remote policy and moving to hybrid one</a>. So 100% remote work may trend doen for web developers.</i></p>
+<p><i>Side note: thankfully, Covid cases are rapidly shrinking at the time of this article. Just before I published it, <a href="https://www.reuters.com/technology/google-mandates-workers-back-silicon-valley-other-offices-april-4-2022-03-02/">Google announced they were ending their fully remote work policy in favor of a hybrid one</a>. So the amount of 100% remote developer jobs may shrink...at least the ones in America.</i></p>
 </li>
 
 <li class="post__list-item">
@@ -140,9 +140,9 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
  
 <p>I dunno: maybe the listings of Python, Java and .NET in these skill sets were typos. But they were there so it's something to keep in mind as you build your skill set...especially regarding Python.</p>
  
-<p>In my 2017 post, I predicted server-side Node would evolve into a big required skill set.  But I didn't see a huge a demand for this in 2022 jobs I saw.</p>
+<p>In my 2017 post, I predicted server-side Node would evolve into a big required skill set.  But I didn't see a huge demand for this in the 2022 jobs I saw.</p>
 
-<p>But a coding test I took for a beauty company job required I host JSON data from a Node server. And then fetch the data using, you guessed it, <i>React</i>.</p>
+<p>But a coding test for a beauty company job required that I host JSON data from a Node server. And then fetch the data using, you guessed it, <i>React</i>.</p>
 
 <p>So learning some Node back end stuff is worth your time. Creating a consumable REST API using Node on your own is good practice.</p>
 </li>
