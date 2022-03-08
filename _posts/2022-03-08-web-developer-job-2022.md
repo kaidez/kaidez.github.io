@@ -149,15 +149,15 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
  
 <li class="post__list-item">
 <h3><b>The line dividing front end web developer jobs and DevOps jobs is getting really REALLY small</b></h3>
-<p>As mentioned above, knowing how to manage cloud-based services is a desirable skill set. This is because companies want to build the best DevOps setup that they can.</p>
+<p>As mentioned above, knowing how to work with cloud-based services is a desirable skill set. This is because companies want to build the best DevOps system that they can.</p>
 
-<p>DevOps is the combining of best practices and tooling to build an automated, efficient code deployment process. A well-planned DevOps process pushes out application code fast and with minimal bugs...this will save a company money.</p>
+<p>DevOps is the combining of best practices and tooling to build an automated, efficient code deployment process. A well-planned DevOps process pushes out application code fast and with minimal bugs...this saves companies money.</p>
 
-<p>Cloud services are a big part of DevOps tooling. A front end developer that can assist in combining <a href="https://aws.amazon.com/">AWS</a> or <a href="https://azure.microsoft.com/en-us/">Azure</a> with <a href="https://www.jenkins.io/">Jenkins</a> and unit tests is incredibly employable.</p>
+<p>Cloud services are a big part of DevOps tooling. A front end developer that can help create an automated process that combines <a href="https://aws.amazon.com/">AWS</a> or <a href="https://azure.microsoft.com/en-us/">Azure</a> with <a href="https://www.jenkins.io/">Jenkins</a> and unit tests is valuable.</p>
+
+<p>The steps for managing DevOps aren't <i>that</i> different from the ones for managing app dependencies with npm and source code with Git. So my opinion is, a front end web developer can (and should) ramp up on this.</p>
  
 <p>I was asked about my cloud experience in a few interviews, almost as much as I was asked about React. My limited experience with it may have kept me from moving forward with some jobs.</p>
-
-<p>If you're a front end developer, you're using npm to manage app dependencies and Git to manage source code. Cloud services have a somewhat parallel set of steps so spend some time learning them in combination with DevOps.</p>
 </li>
 </ol>
  
