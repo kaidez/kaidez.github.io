@@ -149,11 +149,11 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
  
 <li class="post__list-item">
 <h3><b>The line dividing front end web developer jobs and DevOps jobs is getting really REALLY small</b></h3>
-<p>As mentioned above, knowing how to work with cloud-based services is a desirable skill set. This is because companies want to build the best DevOps system that they can.</p>
+<p>As mentioned above, knowing how to work with cloud-based services is a hireable skill. This is because companies want to build the best DevOps system that they can.</p>
 
 <p>DevOps is the combining of best practices and tooling to build an automated, efficient code deployment process. A well-planned DevOps process pushes out application code fast and with minimal bugs...this saves companies money.</p>
 
-<p>Cloud services are a big part of DevOps tooling. A front end developer that can help create an automated process that combines <a href="https://aws.amazon.com/">AWS</a> or <a href="https://azure.microsoft.com/en-us/">Azure</a> with <a href="https://www.jenkins.io/">Jenkins</a> and unit tests is valuable.</p>
+<p>Cloud services are a big part of DevOps so front developers that understand all this are valuable hires. Developers that can help build an automated process that combines <a href="https://aws.amazon.com/">AWS</a> or <a href="https://azure.microsoft.com/en-us/">Azure</a> with <a href="https://www.jenkins.io/">Jenkins</a> and unit tests are wanted by the business.</p>
 
 <p>The steps for managing DevOps aren't <i>that</i> different from the ones for managing app dependencies with npm and source code with Git. So my opinion is, a front end web developer can (and should) ramp up on this.</p>
  
