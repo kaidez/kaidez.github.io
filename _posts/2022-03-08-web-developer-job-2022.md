@@ -46,7 +46,7 @@ As I went through all of this, I discovered six things:
  
 <p>It's for all these reasons (and many more) that businesses of all sizes have adopted React. And want to hire developers that know it.</p>
  
-<p>No exaggeration: "How long have I used React?" was <i>always</i> one of the first two questions I was asked when interviewed. Followed by questions about my knowledge of the above-mentioned ecosystem.</p>
+<p>No exaggeration: "How much React experience do you have?" was <i>always</i> one of the first two questions I was asked when interviewed. Followed by questions about my knowledge of the above-mentioned ecosystem.</p>
  
 <p>The years-long debate over what's the best JavaScript framework continues. As a result, both <a href="https://vuejs.org/">Vue</a> and <a href="https://svelte.dev/">Svelte</a> are currently being hyped as better alternatives to React.</p>
  
@@ -56,7 +56,7 @@ As I went through all of this, I discovered six things:
  
 <p>Keep this in mind while job searching.  There are certainly Vue and Svelte jobs available, especially at startups or if you're purely doing freelance work.</p>
  
-<p>But if you're job-hunting on <a href="https://linkedin.com/">LinkedIn</a> or <a href="https://indeed.com/">Indeed</a>, more options are available to you as a React developer. And it will stay like this for a while.</p>
+<p>But if you're looking for an office-type job on <a href="https://linkedin.com/">LinkedIn</a> or <a href="https://indeed.com/">Indeed</a>, more options are available to you as a React developer. And it will stay like this for a while.</p>
  
 </li>
 
