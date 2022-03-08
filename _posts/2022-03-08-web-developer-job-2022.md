@@ -28,8 +28,8 @@ Having that experience paid off when the time came for me to find a new job. I s
 The results of having this extra React experience were:
 <ul>
 <li class="post__list-item">I applied for less than half the amount of jobs this time.</li>
-<li class="post__list-item">I found a job a bit faster. Under three weeks this time...less than the month it took me last time.</li>
-<li class="post__list-item">I turned down two other job offers along the way!</li>
+<li class="post__list-item">I found a job in less than three weeks. Which is less than the month it took me to find a job last time.</li>
+<li class="post__list-item">I turned down two other job offers along the way.</li>
 </ul>
  
 <h2>The six things I learned</h2>
@@ -161,7 +161,7 @@ I do have other skills but having React experience made this the easiest job sea
 
 There's a sticky note on my desktop listing the skills I need to ramp up on...cloud stuff, Node, etc. I'll have to find time to do that: I have no other choice.
 
-I was sad to see that interest in CSS hadn't grown much since my last article. But both <a href="https://tailwindcss.com/">Tailwind CSS</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties">logical properties</a> are exciting developers, so interest may grow again.
+Also. I was sad to see that interest in CSS hadn't grown much since my last article. But both <a href="https://tailwindcss.com/">Tailwind CSS</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties">logical properties</a> are exciting developers, so interest may grow again.
 
 <h2>Conclusion</h2>
 But finding time to ramp up my skills is the only issue right now.  And the fact that very few love CSS like I do is a personal position.
