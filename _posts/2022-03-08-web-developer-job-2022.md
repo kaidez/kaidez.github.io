@@ -159,13 +159,13 @@ My biggest takeaway was:
 
 I do have other skills but having React experience made this the easiest job search I've ever gone through. However, this job hunt was also a brutal reminder of how I always need to keep my skill set current.
 
-There's a sticky note on my desktop listing the skills I need to ramp up on...cloud stuff, Node, etc. I'll have to find time to do just that: I have no other choice.
+There's a sticky note on my desktop listing the skills I need to ramp up on...cloud stuff, Node, etc. I'll have to find time to do that: I have no other choice.
 
 I was sad to see that interest in CSS hadn't grown much since my last article. But both <a href="https://tailwindcss.com/">Tailwind CSS</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties">logical properties</a> are exciting developers, so interest may grow again.
 
 <h2>Conclusion</h2>
-But finding time to ramp up on front end web dev skills is the only issue right now.  And the fact that very few love CSS like I do is a personal position.
+But finding time to ramp up my skills is the only issue right now.  And the fact that very few love CSS like I do is a personal position.
 
-The bottom line: it's absolutely, positively one of the BEST times to look for a front end web developer job. Particularly if the person looking knows React.
+The bottom line: it's absolutely, positively one of the BEST times to look for a front end web developer job. Especially if the person that's looking knows React.
 
-For skilled front developers, looking for a job in 2022 is like picking up gold coins off the street. This may be just a bubble that will pop someday (it probably is), but it's how things are right now.
+For skilled FE developers, looking for a job in 2022 is like picking up gold coins off the street. This may be just a bubble that will pop someday (it probably is), but it's how things are right now.
