@@ -151,11 +151,13 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
 <h3><b>The line dividing front end web developer jobs and DevOps jobs is getting really REALLY small</b></h3>
 <p>As mentioned above, knowing how to manage cloud-based services is a desirable skill set. This is because companies want the best DevOps setup they can get.</p>
 
-<p>DevOps is the combination of best practices and tooling (like Cloud services) to be used for fast, efficient code deployments. And based on my interviews, it's getting so that developers should know DevOps as well as they know Git commits.</p>
+<p>DevOps is the combining of best practices and tooling to build an automated, efficient code deployment process. A well-planned DevOps process pushes out application code fast and with minimal bugs...this will save a company money.</p>
 
-<p>Knowing how to configure an automated build/deployment process using things like <a href="https://www.jenkins.io/">Jenkins</a>, <a href="https://aws.amazon.com/">AWS</a>, <a href="https://azure.microsoft.com/en-us/">Azure</a> and unit tests is the biggest nice-to-have skill for FE devs. Currently, I have only basic knowledge of this, which probably prevented my moving forward for a few interviews.</p>
+<p>Cloud services are a big part of DevOps tooling. A front end developer that can assist in combining <a href="https://aws.amazon.com/">AWS</a> or <a href="https://azure.microsoft.com/en-us/">Azure</a> with <a href="https://www.jenkins.io/">Jenkins</a> and unit tests is incredibly employable.</p>
  
-<p>If you're a front end developer, you're using npm to manage app dependencies and Git to manage source code. Cloud services have a somewhat parallel process so spend some time learning them.</p>
+<p>If you're a front end developer, you're using npm to manage app dependencies and Git to manage source code. Cloud services have a somewhat parallel set of steps so spend some time learning them in combination with DevOps.</p>
+
+ <p>Currently, I have only basic knowledge of CLoud services and DevOps. I don't think it prevented my moving forward for a few interviews, but it may have.</p>
 </li>
 </ol>
  
