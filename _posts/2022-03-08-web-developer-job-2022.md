@@ -11,7 +11,7 @@ og-image: web-dev-job-two.jpg
 thumb-image: web-dev-job-two-thumb.jpg
 ---
 
-On May 8th, 2017, I wrote about <a href="/front-end-web-developer-job-search/">my search for a front end web developer job</a>. Five years to the day later, I'm publishing a post about what that job search looks like in 2022.
+On March 8th, 2017, I wrote about <a href="/front-end-web-developer-job-search/">my search for a front end web developer job</a>. Five years to the day later, I'm publishing a post about what that job search looks like in 2022.
 
 This new job search took effort, but much less than the previous one. But like before, I learned a lot about what it takes to get a web dev position in current times.
 
