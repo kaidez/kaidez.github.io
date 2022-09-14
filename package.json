@@ -8,7 +8,6 @@
   "scripts": {
     "start": "bundle exec jekyll serve --incremental --future",
     "draft": "jekyll build --drafts",
-    "build": "./node_modules/.bin/webpack --progress --watch",
     "watch": "./node_modules/.bin/webpack --progress --watch",
     "image-minify": "imagemin image-minify/* --out-dir=img/"
   },
