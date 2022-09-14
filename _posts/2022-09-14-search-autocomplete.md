@@ -11,7 +11,7 @@ og-image: search-autocomplete.jpg
 thumb-image: search-autocomplete-thumb.jpg
 ---
 
-My employer has a lot of acronyms for a lot of terms used during the day. I created a proof-of-concept for an acronym search engine, with the goal of releasing it internally.
+My employer has a lot of acronyms for a lot of terms we use on the job during the day. I created a proof-of-concept for an acronym search engine, with the goal of releasing it internally.
 
 It had been a few months since I coded up something app-like, especially with JavaScript. So I created this using a few coding things I hadn't really played with yet.
 
