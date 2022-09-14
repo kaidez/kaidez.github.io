@@ -15,9 +15,9 @@ My employer has a lot of acronyms for a lot of terms we use on the job during th
 
 It had been a few months since I coded up something app-like, especially with JavaScript. So I created this using a few coding things I hadn't really played with yet.
 
-Turns out something like this already existed internally so I shelved the plan. But I learned a lot while doing so, I'm documenting all this in this blog post.
+Turns out something like this already existed internally so I shelved the plan. But I learned a lot while doing so, I'm documenting all of it in a blog post.
 
-No tutorial or code review...just documenting things so I don't forget them. <a href="https://github.com/kaidez/search-autocomplete">The code's on here on GitHub</a> and can find the acronyms for various athletic leagues...WNBA, EPL, NBA, etc.
+No tutorial or code review...just documenting things so I don't forget them. <a href="https://github.com/kaidez/search-autocomplete">The code's here on GitHub</a> and search is now powered to find the acronyms for various athletic leagues...WNBA, EPL, NBA, etc.
 
 Here's what I learned:
 
