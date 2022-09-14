@@ -17,11 +17,16 @@ It had been a few months since I coded up something app-like, especially with Ja
 
 Turns out something like this already existed internally so I shelved the plan. But I learned a lot while doing so, I'm documenting all this in this blog post.
 
-No tutorial or code review...just documenting things so I don't forget them. <a href="https://github.com/kaidez/search-autocomplete">The code's on here on GitHub</a>...here what I learned:
+No tutorial or code review...just documenting things so I don't forget them. <a href="https://github.com/kaidez/search-autocomplete">The code's on here on GitHub</a> and can find the acronyms for various athletic leagues...WNBA, EPL, NBA, etc.
+
+Here's what I learned:
 
 <ul>
 <li class="post__list-item">I used vanilla, non-framework-or-library JavaScript to do this. I'm happy about it.</li>
 <li class="post__list-item">The vanilla JavaScript was written in Typescript and I'm REALLY happy about that. My code had less bugs, spotting them was easier, writing tests was easier, etc.</li>
-<li class="post__list-item">Using <code>fetch()</code> and <code>async/await</code> are current best practices but if you're trying to share JSON data globally, they're a major pain.  I almost reverted to the legacy <code>XmlHttpRequest()</code> to get things done.</li>
+<li class="post__list-item">For compiling the newer ECMAScript versions down to legacy versions, I prefer TypeScript to Babel.  It seems to take less configuration and plug-in use.</li>
+<li class="post__list-item">Using <code>fetch()</code> and <code>async/await</code> are current best practices. But if you're trying to share JSON data globally in your app, they're a major pain.  I almost reverted to the legacy <code>XmlHttpRequest()</code> to get this done.</li>
 <li class="post__list-item">All this <code>fetch()</code> and <code>async/await</code> annoying stuff happens when using the Reacts and Vues of the world. But those tools do a great job of abstracting those annoyances out...I really respect that.</li>
 </ul>
+
+I don't see any tutorials coming directly out of this...again, I'm just documenting things. Feel free to ask me questions if you have any.
