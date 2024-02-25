@@ -12,17 +12,17 @@
     "image-minify": "imagemin image-minify/* --out-dir=img/"
   },
   "devDependencies": {
-    "@babel/cli": "^7.18.10",
-    "@babel/core": "^7.19.1",
-    "@babel/preset-env": "^7.19.1",
-    "@babel/preset-react": "^7.18.6",
-    "babel-loader": "^8.2.5",
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-react": "^7.23.3",
+    "babel-loader": "^8.3.0",
     "imagemin": "^8.0.1",
     "imagemin-cli": "^7.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "webpack": "^5.74.0",
+    "webpack": "^5.90.3",
     "webpack-cli": "^4.10.0",
-    "yarn-upgrade-all": "^0.7.1"
+    "yarn-upgrade-all": "^0.7.2"
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
