@@ -1,6 +1,7 @@
 // Updated .eleventy.js with Pagefind integration
-// 
+
 const moment = require("moment");
+const { execSync } = require('child_process');
 
 module.exports = function(eleventyConfig) {
   // Copy assets to output
@@ -47,11 +48,10 @@ module.exports = function(eleventyConfig) {
     return array.slice(0, n);
   });
 
-    // Pagefind build hook
+  // Pagefind build hook
   eleventyConfig.on('eleventy.after', async ({ dir, results, runMode, outputMode }) => {
     // Only run Pagefind in build mode, not serve mode
     if (runMode === 'build') {
-      const { execSync } = require('child_process');
       try {
         console.log('[11ty] Running Pagefind indexing...');
         execSync(`npx pagefind --site ${dir.output}`, { stdio: 'inherit' });
