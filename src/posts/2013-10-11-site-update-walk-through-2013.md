@@ -1,6 +1,5 @@
 ---
 title: 'kaidez 2013 Site Redesign'
-
 author: Kai Gittens
 layout: layouts/base.njk
 permalink: /site-redesign-2013/
