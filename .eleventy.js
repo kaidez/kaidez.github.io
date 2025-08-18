@@ -1,3 +1,5 @@
+// Updated .eleventy.js with Pagefind integration
+// 
 const moment = require("moment");
 
 module.exports = function(eleventyConfig) {
@@ -43,6 +45,21 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("head", (array, n) => {
     if (!Array.isArray(array)) return [];
     return array.slice(0, n);
+  });
+
+    // Pagefind build hook
+  eleventyConfig.on('eleventy.after', async ({ dir, results, runMode, outputMode }) => {
+    // Only run Pagefind in build mode, not serve mode
+    if (runMode === 'build') {
+      const { execSync } = require('child_process');
+      try {
+        console.log('[11ty] Running Pagefind indexing...');
+        execSync(`npx pagefind --site ${dir.output}`, { stdio: 'inherit' });
+        console.log('[11ty] Pagefind indexing complete!');
+      } catch (error) {
+        console.error('[11ty] Pagefind indexing failed:', error.message);
+      }
+    }
   });
   
   return {
