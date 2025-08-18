@@ -23,5 +23,8 @@
   "author": "Kai Gittens",
   "license": "MIT",
   "main": "index.js",
-  "type": "commonjs"
+  "type": "commonjs",
+  "dependencies": {
+    "moment": "^2.30.1"
+  }
 }

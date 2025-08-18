@@ -1,8 +1,12 @@
+const moment = require("moment");
+
 module.exports = function(eleventyConfig) {
   // Copy assets to output
   eleventyConfig.addPassthroughCopy("src/assets");
   
   // Add simple date filters
+
+  // Not being used, but kept for reference
   eleventyConfig.addFilter("readableDate", dateObj => {
     if (!dateObj) return "";
     const date = new Date(dateObj);
@@ -12,11 +16,15 @@ module.exports = function(eleventyConfig) {
       day: 'numeric' 
     });
   });
-  
+
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {
     if (!dateObj) return "";
     const date = new Date(dateObj);
     return date.toISOString().split('T')[0];
+  });
+
+  eleventyConfig.addFilter("dateReformat", () => {
+    return moment().format("MMMM Do, YYYY");
   });
   
   // Add collection for blog posts

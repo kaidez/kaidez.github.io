@@ -22,7 +22,7 @@ title: Home
             
             <div class="post-meta">
                 <time datetime="{{ post.date | htmlDateString }}">
-                    {{ post.date | readableDate }}
+                    {{ post.date | dateReformat }}
                 </time>
             </div>
             
