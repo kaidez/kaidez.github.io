@@ -15,7 +15,11 @@ document.addEventListener('DOMContentLoaded', function() {
             element: "#search",
             showImages: false,
             excerptLength: 20,
-            resetStyles: false
+            resetStyles: false,
+            translations: {
+        placeholder: "Search my website",
+        zero_results: "Couldn't find [SEARCH_TERM]"
+    }
         });
         console.log('Pagefind initialized successfully');
     } catch (error) {
