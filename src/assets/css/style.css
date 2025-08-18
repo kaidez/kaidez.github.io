@@ -172,10 +172,12 @@ a:hover {
 }
 
 .header-content {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
+  gap: var(--space-6);
   height: var(--header-height);
+  padding: var(--space-4) 0;
 }
 
 .site-title {
@@ -347,10 +349,11 @@ a:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
   .header-content {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: var(--space-4);
     height: auto;
     padding: var(--space-4) 0;
+    text-align: center;
   }
   
   .site-nav ul {

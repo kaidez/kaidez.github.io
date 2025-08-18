@@ -54,8 +54,19 @@ module.exports = function(eleventyConfig) {
     if (runMode === 'build') {
       try {
         console.log('[11ty] Running Pagefind indexing...');
-        execSync(`npx pagefind --site ${dir.output}`, { stdio: 'inherit' });
+        console.log('[11ty] Output directory:', dir.output);
+        execSync(`npx pagefind --site ${dir.output} --verbose`, { stdio: 'inherit' });
         console.log('[11ty] Pagefind indexing complete!');
+        
+        // Check if files were created
+        const fs = require('fs');
+        const pagefindDir = `${dir.output}/pagefind`;
+        if (fs.existsSync(pagefindDir)) {
+          const files = fs.readdirSync(pagefindDir);
+          console.log('[11ty] Pagefind files created:', files);
+        } else {
+          console.log('[11ty] Warning: Pagefind directory not found');
+        }
       } catch (error) {
         console.error('[11ty] Pagefind indexing failed:', error.message);
       }
