@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUTORIAL: What NYC Subways Can Teach Us About JavaScript Closures - kaidez</title>
+    <meta name="description" content="web development and stuff...">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="TUTORIAL: What NYC Subways Can Teach Us About JavaScript Closures">
+    <meta property="og:description"
+        content="web development and stuff...">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kaidez.com/javascript-closures-tutorial/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+    <meta property="article:publisher" content="http://facebook.com/kaidezblog" />
+    <meta property="article:section" content="Personal" />
+    <meta property="og:image" content="http://www.kaidez.com/img/NaN" />
+    <meta property="og:image:width" content="700" />
+    <meta property="og:image:height" content="300" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaidez" />
+    <meta name="twitter:creator" content="@kaidez" />
+    <meta name="twitter:title" content=" » kaidez" />
+    <meta name="twitter:image" content="http://www.kaidez.com/img/NaN" />
+    <meta name="twitter:description" content="" />
+</head>
+
+<body class="" data-pagefind-body>
+    <header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <a href="/" class="site-title">kaidez</a>
+            
+            <!-- Search Component -->
+            <!-- Simplified Search Component -->
+<div class="search-container">
+    <div id="search" class="pagefind-search"></div>
+</div>
+
+<!-- Load Pagefind -->
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    try {
+        // Simple initialization
+        new PagefindUI({ 
+            element: "#search",
+            showImages: false,
+            excerptLength: 20,
+            resetStyles: false,
+            translations: {
+                placeholder: "Search kaidez for stuff...",
+                zero_results: "Couldn't find [SEARCH_TERM]"
+            }
+        });
+        console.log('Pagefind initialized successfully');
+    } catch (error) {
+        console.error('Pagefind initialization failed:', error);
+    }
+});
+</script>
+
+<style>
+/* Simple search styling */
+.search-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.pagefind-search {
+    width: 100%;
+}
+
+/* Style the Pagefind input */
+.pagefind-ui__search-input {
+    width: 100% !important;
+    padding: var(--space-3) var(--space-4) !important;
+    border: 2px solid var(--color-border) !important;
+    border-radius: var(--border-radius-lg) !important;
+    background: var(--color-bg) !important;
+    color: var(--color-text) !important;
+    font-size: var(--text-base) !important;
+    font-family: var(--font-family-sans) !important;
+}
+
+.pagefind-ui__search-input:focus {
+    border-color: var(--color-primary) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Style the results */
+.pagefind-ui__results {
+    margin-top: var(--space-2) !important;
+    background: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--shadow-lg) !important;
+    max-height: 400px !important;
+    overflow-y: auto !important;
+}
+
+.pagefind-ui__result {
+    padding: var(--space-4) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+}
+
+.pagefind-ui__result:last-child {
+    border-bottom: none !important;
+}
+
+.pagefind-ui__result-link {
+    color: var(--color-text) !important;
+    text-decoration: none !important;
+}
+
+.pagefind-ui__result-link:hover {
+    color: var(--color-primary) !important;
+}
+
+.pagefind-ui__result-title {
+    font-weight: 600 !important;
+    font-size: var(--text-lg) !important;
+    margin-bottom: var(--space-2) !important;
+}
+
+.pagefind-ui__result-excerpt {
+    color: var(--color-text-muted) !important;
+    font-size: var(--text-sm) !important;
+}
+
+.pagefind-ui__result-excerpt mark {
+    background: rgba(37, 99, 235, 0.2) !important;
+    color: var(--color-primary) !important;
+    padding: 0 2px !important;
+    border-radius: 2px !important;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        max-width: 100%;
+    }
+}
+</style>
+            
+            <nav class="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="/coding-best-practices/">Coding Tips</a></li>
+                    <li><a href="/tutorials/">Tutorials</a></li>
+                    <li><a href="/personal/">Personal</a></li>
+                    <li><a href="/reviews/">Reviews</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <main class="main-content">
+        <p><a href="http://jsfiddle.net/kaidez/KypGQ/">VIEW THE DEMO FIRST »</a></p>
+<p>JavaScript doesn’t fit the strict definition of an object-oriented programming language, but it fits well enough so that you can use it to do object-oriented stuff. Closures play a big role here so understanding how they work is important.</p>
+<h2>Encapsulation</h2>
+<p>First, understand a programming concept called <em>encapsulation</em> and understand that it has two roles:</p>
+<ul>
+<li>Encapsulation hides your code from the web browser’s global space until the global space actually needs it, a top-notch JavaScript best practice.</li>
+<li>It organizes your code quite nicely.</li>
+</ul>
+<p>You encapsulate variables and functions for the most part, and do so by placing them inside another function. Encapsulated variables are called <em>private variables</em> while encapsulated functions are called <em>methods</em>.</p>
+<p>A private variable is not directly visible by the world outside of the encapsulating function. Encapsulated methods, however, act a little differently:</p>
+<ul>
+<li>An encapsulated method that returns something is called <em>public method</em> because whatever it returns, it returns to the global space. This means that other parts of your code can access it <em>if you tell your code to do so</em>.</li>
+<li>A public method is also a <em>privileged method</em>. This is because it has “privileged” access to any variables and methods that it’s encapsulated with.</li>
+<li>An encapsulated method can also be a <em>private method</em> if it doesn’t return anything that doesn’t return a specific value we give it (meaning that it will still return <code>undefined</code>). Despite this, always remember that it’s doing something…that’s the point of functions, isn’t it? Maybe it’s doing something as simple as sending out an alert, but it’s doing <em>something</em>. And if it’s encapsulated with a public method, the public method can take whatever the private method is doing and send out to the global space.</li>
+</ul>
+<p>The stricter object-oriented languages like C# and Java have syntax to create private, public and privileged code, but JavaScript does not. JavaScript can still create such code, and it can still be accessed if it’s private.</p>
+<p><em>In JavaScript, accessing private, encapsulated code from the outside is done with closures.</em></p>
+<p>Obviously, closures can be tough to understand at first, but understanding them is a must if you want to master JavaScript. So, I’m going to try to help here.</p>
+<p>A little parable about the New York City subway may help...</p>
+<h2>The Subway Story</h2>
+<p>Of all the subway systems in the world, New York City’s is the most famous. It averages 10 million rides a week and is made up of 421 subway stations.</p>
+<p>The NYC subway has 24 lines, each traveling through four of the city’s five boroughs: Manhattan, Brooklyn, Queens and the Bronx (sorry Staten Island). So for example: the L line travels from 8th Avenue in Manhattan to Canarsie in Brooklyn, the 6 train travels from Pelham Bay Park in the Bronx to Manhattan’s Wall Street neighborhood, and so on.</p>
+<p>There is no borough that all of these lines run through: every borough has a line that doesn’t run through it. And in the case of Manhattan, the busiest borough, that line is the G line that, as of this article, runs from Long Island City in Queens to the Kensington neighborhood in Brooklyn.</p>
+<p>The only way to get to “the G” from Manhattan is to take another subway line to a connecting station where the G stops, then transfer over. The G has many connecting stations that you can get to from Manhattan. A few options are:</p>
+<ul>
+<li>Someone catching the E train at its 14th Street Manhattan stop can take it to its Court Square Queens stop and catch the G.</li>
+<li>Someone catching the F train at its 2nd Avenue Manhattan stop can take it its to Fort Hamilton Parkway Brooklyn stop and catch the G.</li>
+<li>Someone catching the N train at its 34th Street Manhattan stop can take it to its 4th Avenue Brooklyn stop and catch the G.</li>
+</ul>
+<p>A more direct line between Manhattan and the neighborhoods that the G runs along would be great, but impossible. Strictly speaking, Manhattan can’t see the G line so it can’t access it directly.</p>
+<h2>The Simple Subway Closure Examples</h2>
+<p>Now…how does all of this subway stuff tie in with closures?</p>
+<ul>
+<li>Think of the G line as a private variable encapsulated by a function named <code>brooklyn</code>.</li>
+<li>All those stops along the G, like Court Square? Think of them as both public and privileged methods: they’re public because things outside of the <code>brooklyn</code> function can access them, but they’re also privileged because they’re inside the <code>brooklyn</code> function and have access to the private variable, the G line.</li>
+<li>Since the only way to get to the G is via one the connecting lines, think of the connecting lines as closures.</li>
+</ul>
+<p>Let’s start with small examples that will build up to the big one. I’ll be running these simple examples in Firebug Console for Firefox.</p>
+<p><em><strong>IMPORTANT: Every time you run a new block of code in the Console, you must do it in a new browser tab.</strong></em></p>
+<p>Cut-and-paste the code below in to the Console and run it:</p>
+<pre><code class="language-javascript">
+var GLine = "You have connected to the G line!";
+alert(GLine); //alert popup appears!
+</code></pre>
+<p>All works fine...we get an alert popup that says “You have connected to the G line!”</p>
+<p>Now, <strong>open up a new tab</strong> and plug this code in the console and run it:</p>
+<pre><code class="language-javascript">
+function brooklyn() {
+  var GLine = "You have connected to the G line!";
+}
+
+alert(GLine); //Oops! The alert doesn't show!
+</code></pre>
+<p>The console now returns a message that the <code>GLine</code> is not defined. This because <code>GLine</code> is now a private variable wrapped inside the <code>brooklyn</code> function, meaning the outside world can’t see it. And since our alert lives in the outside world, it’s giving us this error.</p>
+<p>A closure named <code>connectingLine</code> can help us here. <strong>Open up a new tab again</strong> and run this code in the console.</p>
+<pre><code class="language-javascript">
+function brooklyn() {
+  var GLine = "You have connected to the G line!";
+  return function() {
+    alert(GLine);
+  };
+}
+
+var connectingLine = brooklyn();
+connectingLine(); //alert popup appears!
+</code></pre>
+<p>And with that, the alert now pops up…let’s break down why:</p>
+<p>The <code>brooklyn</code> function now contains the not only the <code>GLine</code> private variable, but also an inner function. This inner function is a public method that’s also a privileged method.</p>
+<p>As a public method, the function returns whatever it does to the world outside of <code>brooklyn</code>, which is our alert from the earlier examples. And as a privileged method, the function has access to the <code>GLine</code> private variable that it’s encapsulated with, which is the alert message.</p>
+<p>Our closure, <code>connectingLine</code>, has the power to find what the public/privileged method returns to the world outside of <code>brooklyn</code>. And again, what it returns is an alert that displays the value of <code>GLine</code>.</p>
+<h2>The Difficult Subway Closure Example</h2>
+<p>We started with alerts for the sake of easy explanation-now let’s create something more complicated with a private method:</p>
+<h3>HTML for the difficult closure example</h3>
+<pre><code class="language-markup">
+<!DOCTYPE html>
+&lt;html lang="en"&gt;
+&lt;head&gt;
+ &lt;meta charset="utf-8"&gt;
+ &lt;title&gt;The NYC subway can teach you about closures!&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;ul&gt;
+ &lt;li&gt;&lt;a href="#" id="eTrain"&gt;Catch the G train by taking the E Train&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#" id="fTrain"&gt;Catch the G train by taking the F Train&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#" id="nTrain"&gt;Catch the G train by taking the N Train&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div id="myRoute"&gt;&lt;/div&gt;
+
+&lt;script src="http://code.jquery.com/jquery-1.7.2.js"&gt;&lt;/script&gt;
+&lt;script src="scripts.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>[2]: # Our simple HTML5-formatted page has three links, each with unique page ID. Using jQuery (note the jQuery core library is attached), our links will run the our JavaScript when clicked. Our JavaScript code will go in the <code>scripts.js</code> file.</p>
+<h3>JavaScript for the difficult closure example (scripts.js)</h3>
+<pre><code class="language-javascript">
+(function() {
+
+  var brooklyn, connectWithETrain, connectWithFTrain, connectWithNTrain;
+
+  brooklyn = function() {
+    var GLine = 'G line!';
+    function howToGetThere(trainLine,startingStation,endingStation) {
+      $('#myRoute').html('Catch the ' + trainLine + ' at the ' +   startingStation  + ' station. Take it to ' + endingStation + ' station   and get off to catch the ' + GLine);
+    }
+    return {
+      ETrain: function() {
+        howToGetThere('E train','14th Street, Manhattan','Court Square');
+      },
+      FTrain: function() {
+        howToGetThere('F train','2nd Avenue Manhattan','Fort Hamilton Parkway');
+      },
+      NTrain: function() {
+        howToGetThere('N train','34th Street Manhattan','4th Avenue');
+      }
+    };
+  };
+
+  connectWithETrain = brooklyn();
+  connectWithFTrain = brooklyn();
+  connectWithNTrain = brooklyn();
+
+  $('#eTrain').click(function () {
+    return connectWithETrain.ETrain();
+  });
+
+  $('#fTrain').click(function () {
+    return connectWithFTrain.FTrain();
+  });
+
+  $('#nTrain').click(function () {
+    return connectWithNTrain.NTrain();
+  });
+})();
+</code></pre>
+<p>Let’s break this code down:</p>
+<pre><code class="language-javascript">
+(function() {
+...
+})();
+</code></pre>
+<p>This is a lot of code and we don’t want it in the global space as that can screw things up, so we’re wrapping it in a <em>self-executing anonymous function</em> (it has other names, but I like this one).</p>
+<p>This means that we wrap all this code up in an unnamed function: note that there’s no name between <code>function</code> and <code>()</code> on the first line. The code ends with another <code>()</code> on the last line which makes the function run, or “self-execute.”</p>
+<p>And a little piece of trivia: the code for the jQuery core library is wrapped up in a self-executing anonymous function. This type of function has been around for a while, but jQuery’s usage of it has increased its popularity with developers.</p>
+<pre><code class="language-javascript">
+var brooklyn, connectWithETrain, connectWithFTrain, connectWithNTrain;
+</code></pre>
+<p>These are variables that we’re going to use at some point in our code. We’re naming them but not initializing them by giving them a value (although you should if possible).</p>
+<p>We’re creating them using the <em>single var pattern</em>, meaning that we group all of our variables together with one <code>var</code> keyword and comma-separate them. This keeps our variables organized and easy to find, and since <em><strong>JavaScript moves variables to the top of functions anyway</strong></em>, we might as well do it ourselves.</p>
+<pre><code class="language-javascript">
+brooklyn = function() {
+  ...
+};
+</code></pre>
+<p>Our <code>brooklyn</code> function has returned…only this time, it’s not a function. Remember, we declared it as a variable in the beginning.</p>
+<p>This <code>brooklyn</code> variable is now equal to another anonymous function that encapsulates a lot of code.</p>
+<pre><code class="language-javascript">
+var GLine = 'G line!';
+function howToGetThere(trainLine,startingStation,endingStation) {
+  $('#myRoute').html('Catch the ' + trainLine + ' at the ' +   startingStation  + ' station. Take it to ' + endingStation + ' station   and get off to catch the ' + GLine);
+}
+</code></pre>
+<p>Our <code>GLine</code> private variable is still here and it’s still a text string, but it’s shorter than the earlier versions. <code>GLine</code> is joined by a private method called <code>howToGetThere()</code>.</p>
+<p>A reminder: a private method is method that doesn’t return anything that returns no other value than <code>undefined</code> but does something. And as we can see, this describes <code>howToGetThere()</code> perfectly.</p>
+<p>And what’s <code>howToGetThere()</code> “doing?” It’s using jQuery to look for the <code>myRoute</code> ID on our HTML page, then load a text string into it with the jQuery’s <code>.html()</code> function (<em>FYI: <code>.html()</code> is actually a jQuery method!</em>)</p>
+<p>The <code>howToGetThere</code> method also has parameters that will be passed into the text string: <code>trainLine</code>, <code>startingStation</code> and <code>endingStation</code>. They will represent, respectively, the name of the train line to catch, where in Manhattan to catch it and where to get off to catch the G Line. The <code>GLine</code> variable will be passed to the text string as well.</p>
+<p>The <code>howToGetThere</code> private method is going to run when a link is clicked, but we have a few more things to do first, code-wise.</p>
+<pre><code class="language-javascript">
+return {
+ETrain: function() {
+  howToGetThere('E train','14th Street, Manhattan','Court Square');
+},
+FTrain: function() {
+  howToGetThere('F train','2nd Avenue Manhattan','Fort Hamilton Parkway');
+},
+NTrain: function() {
+  howToGetThere('N train','34th Street Manhattan','4th Avenue');
+}
+</code></pre>
+<p>Here are three public methods: <code>ETrain</code>, <code>FTrain</code> and <code>NTrain</code>. They all have access to the <code>howToGetThere</code> private method and are written out using something called the <em><a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript">module pattern</a></em>.</p>
+<p>Each of these methods runs the <code>howToGetThere</code> private method, returning the parameters we discussed earlier. Again, <code>howToGetThere</code> will run when a page link is clicked but before we talk about that, we have to set up our closures first.</p>
+<pre><code class="language-javascript">
+connectWithETrain = brooklyn();
+connectWithFTrain = brooklyn();
+connectWithNTrain = brooklyn();
+</code></pre>
+<p>Here are the closures. They’re actually the variable names we created at the top of our code with the single var pattern-we’ve just now given them a value.</p>
+<p>The value of each closure is the <code>brooklyn()</code> function, meaning it can access the public methods. It will do this with links, which we’ll now set up.</p>
+<pre><code class="language-javascript">
+$('#eTrain').click(function () {
+  return connectWithETrain.ETrain();
+});
+
+$('#fTrain').click(function () {
+  return connectWithFTrain.FTrain();
+});
+
+$('#nTrain').click(function () {
+  return connectWithNTrain.NTrain();
+});
+</code></pre>
+<p>Every time one of our three page links is clicked, jQuery’s <code>.click()</code> method runs a callback function. This function then runs one of our three public methods, which in turn, runs the <code>howToGetThere()</code> private method.</p>
+<p>This means that a text string will load into the <code>myRoute</code> page ID when a link is clicked. The parameters defined with the public methods decide what the text string will say.</p>
+<p>That’s it for the code. I hope it helps but am sure you want to read up more on the subject. These articles may help.</p>
+<h2>Further Reading</h2>
+<h3><a href="https://developer.mozilla.org/en/JavaScript/Guide/Closures">MDN Closure Article »</a></h3>
+<p>The Mozilla Developer Network’s excellent post on closures is your first stop. Take note of the potential performance issues mentioned at the end.</p>
+<h3><a href="http://howtonode.org/why-use-closure"><em>Why use “closure”?</em> by Tim Caswell »</a></h3>
+<p>Another excellent article by this California-based developer. His closure examples also use factory patterns and <code>Object.prototype</code>.</p>
+<h3><a href="http://vimeo.com/1967261">Stuart Langridge: Secrets of JavaScript Closures (video) »</a></h3>
+<p>Hilarious presentation from this UK-based developer.</p>
+<h2>Conclusion</h2>
+<p>Closures are tough to understand in the beginning, I don’t deny it. But they’re useful as hell and make your JavaScript super-efficient. Re-read this article if you need to, check out the articles on the reading list and hit me up if you have questions.</p>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-main">
+                <h3>kaidez</h3>
+                <p>web development and stuff...</p>
+                
+                <div class="social-links">
+                    <a href="https://twitter.com/kaidez" aria-label="Twitter" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/kaidez" aria-label="GitHub" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/kaigittens" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/posts/">Blog</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="/posts/javascript/">JavaScript</a></li>
+                        <li><a href="/posts/web-development/">Web Development</a></li>
+                        <li><a href="/posts/tutorials/">Tutorials</a></li>
+                        <li><a href="/posts/reviews/">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/feed.xml">RSS Feed</a></li>
+                        <li><a href="/sitemap.xml">Sitemap</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Built with <a href="https://11ty.dev" target="_blank" rel="noopener">11ty</a> and hosted on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+/* Footer Styles */
+.site-footer {
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--space-20);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-12);
+    padding: var(--space-12) 0 var(--space-8);
+}
+
+.footer-main h3 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-3);
+    color: var(--color-text);
+}
+
+.footer-main p {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-6);
+    max-width: none;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius);
+    background: var(--color-bg);
+    color: var(--color-text-muted);
+    transition: all var(--transition-fast);
+    border: 1px solid var(--color-border);
+}
+
+.social-links a:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+}
+
+.footer-section h4 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+    color: var(--color-text);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section li {
+    margin-bottom: var(--space-2);
+}
+
+.footer-section a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-section a:hover {
+    color: var(--color-primary);
+}
+
+.footer-bottom {
+    padding: var(--space-6) 0;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+}
+
+.footer-bottom p {
+    margin-bottom: var(--space-2);
+}
+
+.footer-bottom p:last-child {
+    margin-bottom: 0;
+}
+
+.footer-bottom a {
+    color: var(--color-primary);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+</style>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5549541-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

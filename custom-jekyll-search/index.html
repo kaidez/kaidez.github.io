@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUTORIAL: Jekyll Search with Non-JavaScript/CSS Fallback - kaidez</title>
+    <meta name="description" content="web development and stuff...">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="TUTORIAL: Jekyll Search with Non-JavaScript/CSS Fallback">
+    <meta property="og:description"
+        content="web development and stuff...">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kaidez.com/custom-jekyll-search/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+    <meta property="article:publisher" content="http://facebook.com/kaidezblog" />
+    <meta property="article:section" content="Personal" />
+    <meta property="og:image" content="http://www.kaidez.com/img/NaN" />
+    <meta property="og:image:width" content="700" />
+    <meta property="og:image:height" content="300" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaidez" />
+    <meta name="twitter:creator" content="@kaidez" />
+    <meta name="twitter:title" content=" » kaidez" />
+    <meta name="twitter:image" content="http://www.kaidez.com/img/NaN" />
+    <meta name="twitter:description" content="" />
+</head>
+
+<body class="" data-pagefind-body>
+    <header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <a href="/" class="site-title">kaidez</a>
+            
+            <!-- Search Component -->
+            <!-- Simplified Search Component -->
+<div class="search-container">
+    <div id="search" class="pagefind-search"></div>
+</div>
+
+<!-- Load Pagefind -->
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    try {
+        // Simple initialization
+        new PagefindUI({ 
+            element: "#search",
+            showImages: false,
+            excerptLength: 20,
+            resetStyles: false,
+            translations: {
+                placeholder: "Search kaidez for stuff...",
+                zero_results: "Couldn't find [SEARCH_TERM]"
+            }
+        });
+        console.log('Pagefind initialized successfully');
+    } catch (error) {
+        console.error('Pagefind initialization failed:', error);
+    }
+});
+</script>
+
+<style>
+/* Simple search styling */
+.search-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.pagefind-search {
+    width: 100%;
+}
+
+/* Style the Pagefind input */
+.pagefind-ui__search-input {
+    width: 100% !important;
+    padding: var(--space-3) var(--space-4) !important;
+    border: 2px solid var(--color-border) !important;
+    border-radius: var(--border-radius-lg) !important;
+    background: var(--color-bg) !important;
+    color: var(--color-text) !important;
+    font-size: var(--text-base) !important;
+    font-family: var(--font-family-sans) !important;
+}
+
+.pagefind-ui__search-input:focus {
+    border-color: var(--color-primary) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Style the results */
+.pagefind-ui__results {
+    margin-top: var(--space-2) !important;
+    background: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--shadow-lg) !important;
+    max-height: 400px !important;
+    overflow-y: auto !important;
+}
+
+.pagefind-ui__result {
+    padding: var(--space-4) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+}
+
+.pagefind-ui__result:last-child {
+    border-bottom: none !important;
+}
+
+.pagefind-ui__result-link {
+    color: var(--color-text) !important;
+    text-decoration: none !important;
+}
+
+.pagefind-ui__result-link:hover {
+    color: var(--color-primary) !important;
+}
+
+.pagefind-ui__result-title {
+    font-weight: 600 !important;
+    font-size: var(--text-lg) !important;
+    margin-bottom: var(--space-2) !important;
+}
+
+.pagefind-ui__result-excerpt {
+    color: var(--color-text-muted) !important;
+    font-size: var(--text-sm) !important;
+}
+
+.pagefind-ui__result-excerpt mark {
+    background: rgba(37, 99, 235, 0.2) !important;
+    color: var(--color-primary) !important;
+    padding: 0 2px !important;
+    border-radius: 2px !important;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        max-width: 100%;
+    }
+}
+</style>
+            
+            <nav class="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="/coding-best-practices/">Coding Tips</a></li>
+                    <li><a href="/tutorials/">Tutorials</a></li>
+                    <li><a href="/personal/">Personal</a></li>
+                    <li><a href="/reviews/">Reviews</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <main class="main-content">
+        <p><a href="/samples/jekyll-search/" class="demoLink" target="blank">VIEW THE DEMO</a></p>
+<p><a href="http://jekyllrb.com/" title="Go to the Jekyll blog engine site">Jekyll</a> is a static site generator: it creates static sites instead of database-driven ones. This means that it doesn't contain the site search functionality commonly bundled into CMS software like <a href="http://wordpress.org/" title="Go to wordpress.org">WordPress</a> and <a href="https://drupal.org/" title="Go to drupal.org">Drupal</a>.</p>
+<p>A common solution to this problem is to use some sort of JavaScript-based search functionality, but this won't work if the end-user has disabled JS in their browser. This tutorial shows you how to not only add JS-powered search functionality to your static site, but also how to create a fallback search method for situations where either JavaScript or, as an added bonus, CSS is disabled.</p>
+<h2>Table of Contents</h2>
+<ol>
+<li><a href="#three-steps">The Three Steps We Need To Take</a></li>
+<li><a href="#assumptions-notes">One Assumption...More Notes</a></li>
+<li><a href="#fallback-search-code">The Fallback Search Code</a></li>
+<li><a href="#tipue-walkthrough">A Very Quick Tipue Walkthrough</a></li>
+<li><a href="#build-pages">Step 1: Add the JavaScript Detection &amp; Fallback Code to HTML Pages</a></li>
+<li><a href="#create-javascript-search">Step 2: Dynamically Create the JS-powered Search Functionality</a></li>
+<li><a href="#css-detection">Step 3: Use JavaScript to Detect if CSS is Disabled</a></li>
+<li><a href="#notes">More Notes</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ol>
+<p><a name="three-steps"></a></p>
+<h2>The Three Steps We Need To Take</h2>
+<p>There are three steps we need to take to acheive our goal:</p>
+<ol>
+<li>
+<p><strong>Add the JavaScript Detection &amp; Fallback Code to HTML Pages</strong>: These pages will link to JavaScript and CSS files working together to check for the presence of JavaScript, and will also contain our fallback search functionality, courtesy of Google.</p>
+</li>
+<li>
+<p><strong>Dynamically Create the JS-powered Search Functionality</strong>: We'll create it off-DOM first, then load it onto the pages next.</p>
+</li>
+<li>
+<p><strong>Use JavaScript to Detect if CSS is Disabled</strong>: With JavaScript, we'll create code that provides the Google fallback search for times when CSS is disabled, but JavaScript is not. Because CSS is disabled, the Google page that returns the search results will not look pretty, but the results will be returned nonetheless.</p>
+</li>
+</ol>
+<p><a name="assumptions-notes"></a></p>
+<h2>One Assumption...More Notes</h2>
+<p>Since we're talking about creating search for static sites, the only assumption I'm making is that you have either Jekyll or some other static site software installed on your machine, and that you use it regularly.</p>
+<p>Some notes...</p>
+<ul>
+<li>
+<p>Expanding on the one assumption, let's be clear that the search functionality being described here isn't Jekyll-specific. This post is based on my personal Jekyll experiences. I haven't tested this code outside of Jekyll but as it's dependent on already-existing browser technologies and not any specific software, it should work for situations outside of Jekyll.</p>
+</li>
+<li>
+<p>The proper way to test this functionality is to disable both JavaScript and CSS <strong>BEFORE</strong> the code runs in a browser.  Disabling JavaScript before page load in either Chrome or Firefox is easy enough with <a href="http://chrispederick.com/work/web-developer/" title="Get Chris Pederick's Web Developer extension">Chris Pederick's Web Developer extension</a>.  But Pederick's tool currently can't disable CSS before page load. It can disable it afterwards but it won't stay disabled: CSS will be re-enabled after a page refresh and that doesn't help us. This <a href="http://stackoverflow.com/questions/14046738/how-to-disable-css-in-browser-for-testing-purposes" title="Learn how to disable a browser's CSS">Stack Overflow post on disabling a browser's CSS</a> discusses how to do this for various browsers. Refer to it when doing cross-browser testing before production deployments but for performing rapid tests while in development, both the Firefox and Safari methods seem to be the easiest way to disable CSS before page load. Firefox is <strong><em>View &gt; Page Style &gt; No Style</em></strong> while Safari is <strong><em>Develop &gt; Disable Styles</em></strong>.</p>
+</li>
+<li>
+<p>The JavaScript-powered search in this tutorial is provided by the <a href="http://www.tipue.com/search/" title="Read more about Tipue Search">Tipue search plugin for jQuery</a> but this post does not go into great detail on how of Tipue works. It bullet points what the code is doing to provide context for this tutorial, but that's it.  <a href="http://www.tipue.com/search/docs/" title="Read the Tipue documentation">Read the Tipue documentation</a> to fully understand how it works. Also, this method should work using static site search solutions other than Tipue: you will have to make code adjustments in some places, but it should still work.</p>
+</li>
+<li>
+<p>At some point while reading this, you may say to yourself, &quot;Isn't it easier to just place the fallback code inside a <code>&lt;noscript&gt;</code> tag?&quot;...maybe, but that doesn't always work.  Plus, if you're coding in XHTML instead of any version of HTML, <code>&lt;noscript&gt;</code> won't work at all. <a href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-noscript-element" title="Read the noscript section of the HTML5 specification">The W3C's HTML5 specification is clear about all this</a>.</p>
+</li>
+</ul>
+<p><a name="fallback-search-code"></a></p>
+<h2>The Fallback Search Code</h2>
+<p>Before we get to the three steps, we need to understand some things about the fallback code...</p>
+<p>Our fallback search functionality comes from <a href="https://www.google.com/cse" title="Learn more about Google Custom Search Engine (CSE)">Google Custom Search Engine (CSE)</a>, which comes in three versions at the time of this post. This tutorial uses the oldest version as it best suits our needs and although it's old, it's still widely in use, particularly on sites using <a href="http://octopress.org/" title="Learn about the Octopress framework for Jekyll">the Octopress framework for Jekyll</a>.</p>
+<p><a href="https://support.google.com/customsearch/answer/1351747?hl=en" title="Read Google's recommended way to use Google CSE with a form tag">The second version</a> is very similar to the first version and works when JavaScript is disabled, but adds an extra click-through to the user experience when compared to the first one...not what I wanted. <a href="https://developers.google.com/custom-search/docs/element" title="Read the official recommendation for Google CSE search boxes">The third version is what Google currently recommends</a> but is a pure JavaScript version that won't work if JS is disabled...also, not what I wanted.</p>
+<p>Let's look at version 1 of the code we'll be using:</p>
+<pre><code class="language-markup">
+<!DOCTYPE html>
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Search For Content&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Search here...&lt;/h1&gt;
+  &lt;form action="http://google.com/search" method="get"&gt;
+    &lt;fieldset role="search"&gt;
+      &lt;!-- change the "value" attribute below to point to your site --&gt;
+      &lt;input type="hidden" name="q" value="site:yoursite.com"/&gt;
+      &lt;input class="search" type="text" name="q" results="0" placeholder="Search"/&gt;
+    &lt;/fieldset&gt;
+  &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Note the setting of the <code>value</code> attribute in the first <code>&lt;input&gt;</code> tag: &quot;yoursite.com&quot;. You would need to change this to whatever your site URL is. Once that's done, any searches entered into this searchbox will return the results for that site, and return them inside a standard Google search results page.</p>
+<p>To be honest: if you want search engine functionality on your static site, you really can just apply a Google CSE solution and move on. The reason I went beyond Google CSE was because I wanted to deliver a certain experience on kaidez.com: when people performed a search on my site, I wanted them to stay on my site.</p>
+<p>None of the current CSE solutions do this, so I went with Tipue while using version 1 for my fallback code.</p>
+<p><a name="tipue-walkthrough"></a></p>
+<h2>A Very Quick Tipue Walkthrough</h2>
+<p>Very quick...</p>
+<p>Tipue is a jQuery plugin that provides static search. The search results must be returned to a properly-configured <code>search.html</code> page.</p>
+<p>Along with the <code>search.html</code> page, Tipue also needs five JS files to work and they should be listed in the following order:</p>
+<ol>
+<li>the core jQuery library.</li>
+<li><code>tipuesearch_content.js</code>, which contains the searchable site data that's returned to <code>search.html</code></li>
+<li><code>tipuesearch_set.js</code>, which filters words and phrases in the search results.</li>
+<li><code>js/tipuesearch.min.js</code>, which is the core Tipue code.</li>
+<li>a file containing the executable Tipue code that returns search results to <code>search.html</code>...this code will be placed in a file called <code>js/scripts.js</code> and we'll discuss it shortly.</li>
+</ol>
+<p><a name="build-pages"></a></p>
+<h2>Step 1: Add the JavaScript Detection &amp; Fallback Code to HTML Pages</h2>
+<p>We need to create web pages that include references to both a <code>.css</code> file and two more <code>.js</code> files. We're not going to review any of the Tipue-related files we just discussed as they don't play a role in the JS detection process, but these other files do play a role:</p>
+<ul>
+<li>index.html</li>
+<li>search.html</li>
+<li>css/styles.css</li>
+<li>js/detect.js</li>
+<li>js/scripts.js</li>
+</ul>
+<p>Let's review these files...</p>
+<p><strong>index.html</strong></p>
+<pre><code class="language-markup">
+<!DOCTYPE html>
+&lt;html lang="en" class="no-js"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Search For Content&lt;/title&gt;
+  &lt;link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet"&gt;
+  &lt;link href="css/tipuesearch.css" rel="stylesheet"&gt;
+  &lt;link href="css/styles.css" rel="stylesheet"&gt;
+  &lt;script src="js/detect.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id="container" class="containerClass"&gt;
+  &lt;h1&gt;Search here...&lt;/h1&gt;
+
+    &lt;!-- Tipue Search box will go here --&gt;
+    &lt;div id="searchbox"&gt; &lt;/div&gt;
+
+    &lt;!-- Google CSE search box starts here --&gt;
+    &lt;div id="no-js-searchbox"&gt;
+      &lt;form action="http://google.com/search" method="get"&gt;
+        &lt;fieldset role="search"&gt;
+          &lt;!-- change the "value" attribute below to point to your site --&gt;
+          &lt;input type="hidden" name="q" value="site:yoursite.com"/&gt;
+          &lt;input class="search" type="text" name="q" results="0" placeholder="Search"/&gt;
+        &lt;/fieldset&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;!-- Google CSE search box ends here --&gt;
+
+  &lt;/div&gt;
+
+  &lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"&gt;&lt;/script&gt;
+  &lt;script&gt;window.jQuery || document.write('&lt;script src="js/libs/jquery-1.10.2.min.js"&gt;&lt;\/script&gt;')&lt;/script&gt;
+  &lt;script src="js/tipuesearch_content.js"&gt;&lt;/script&gt;
+  &lt;script src="js/tipuesearch_set.js"&gt;&lt;/script&gt;
+  &lt;script src="js/tipuesearch.min.js"&gt;&lt;/script&gt;
+  &lt;script src="js/scripts.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>The key parts of the file:</p>
+<ul>
+<li>
+<p>A <code>no-js</code> class is attached to the <code>&lt;html&gt;</code> element. This will help us detect whether or not JavaScript is enabled.</p>
+</li>
+<li>
+<p>There are three CSS files but the first two are just there as per Tipue documentation...they load in Google Fonts, apply some styling and don't play a role in the detection process. The last file, <code>css/styles.css</code>, also applies some styling but contains a selector called <code>.js #no-js-searchbox</code>, which plays a HUGE role in the detection process.</p>
+</li>
+<li>
+<p>There's a file called <code>js/detect.js</code> which detects whether or not JavaScript is enabled.</p>
+</li>
+<li>
+<p>The Google search box is on the page and has an id name of <code>no-js-searchbox</code>. It's partially being targeted by the <code>.js #no-js-searchbox</code> selector we just talked about...this may not make sense now, but it will shortly.</p>
+</li>
+<li>
+<p>The Tipue search box is <em>not</em> on the page. As previously mentioned, we're going to use JavaScript to build it off-DOM first, then load it onto the page. We'll load it specifically into a page element called <code>&lt;div id=&quot;searchbox&quot;&gt;&lt;/div&gt;</code>.</p>
+</li>
+<li>
+<p><code>js/scripts.js</code> is also on the page and we'll soon see that for now, it only contains the code needed to execute Tipue searches. But as we move forward, it will be the place where we add both the code needed to build things off-DOM and our JS detection code.</p>
+</li>
+</ul>
+<p><strong>search.html</strong></p>
+<pre><code class="language-markup">
+<!DOCTYPE html>
+&lt;html lang="en" class="no-js"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Search Results&lt;/title&gt;
+  &lt;link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet"&gt;
+  &lt;link href="css/tipuesearch.css" rel="stylesheet"&gt;
+  &lt;link href="css/styles.css" rel="stylesheet"&gt;
+  &lt;script src="js/detect.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id="container" class="containerClass"&gt;
+  &lt;h1&gt;Search Results&lt;/h1&gt;
+
+    &lt;!-- Tipue Search box will go here --&gt;
+    &lt;div id="searchbox"&gt; &lt;/div&gt;
+
+    &lt;!-- Google CSE search box starts here --&gt;
+    &lt;div id="no-js-searchbox"&gt;
+      &lt;form action="http://google.com/search" method="get"&gt;
+        &lt;fieldset role="search"&gt;
+          &lt;!-- change the "value" attribute below to point to your site --&gt;
+          &lt;input type="hidden" name="q" value="site:yoursite.com"/&gt;
+          &lt;input class="search" type="text" name="q" results="0" placeholder="Search"/&gt;
+        &lt;/fieldset&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;!-- Google CSE search box ends here --&gt;
+
+  &lt;/div&gt;
+
+  &lt;div id="tipue_search_content"&gt;&lt;/div&gt;
+
+  &lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"&gt;&lt;/script&gt;
+  &lt;script&gt;window.jQuery || document.write('&lt;script src="js/libs/jquery-1.10.2.min.js"&gt;&lt;\/script&gt;')&lt;/script&gt;
+  &lt;script src="js/tipuesearch_content.js"&gt;&lt;/script&gt;
+  &lt;script src="js/tipuesearch_set.js"&gt;&lt;/script&gt;
+  &lt;script src="js/tipuesearch.min.js"&gt;&lt;/script&gt;
+  &lt;script src="js/scripts.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Again, <code>search.html</code> is the page where Tipue returns the search results.  It's similar to <code>index.html</code> but has an extra tag: <code>&lt;div id=&quot;tipue_search_content&quot;&gt;&lt;/div&gt;</code>. This is the page element where Tipue places the search results.</p>
+<p><strong>css/styles.css</strong></p>
+<pre><code class="language-css">
+.js #no-js-searchbox {
+  display: none;
+}
+
+/*
+ * The code below is just applying styles and has nothing to do with
+ * the CSS/JS detection process.
+ */
+body {
+  font: 12px/1.7 'open sans', sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+form, p {
+  text-align: center;
+}
+
+.containerClass {
+  margin: 0 auto;
+  width: auto;
+}
+</code></pre>
+<p>As mentioned, the <code>.js #no-js-searchbox</code> is the key class here...the rest of the styles just add generic styling. <code>.js #no-js-searchbox</code> will hide the Google CSE search <em>only when JavaScript is enabled</em>...let's start breaking down how that's done.</p>
+<p><strong>js/detect.js</strong></p>
+<pre><code class="language-javascript">
+// This code is stolen from Modernizr so if Modernizr is already on
+// your web page, don't use this part of the code.
+
+// This code is one file and not inline because it's a best practice as
+// per the Content Security Policy (CSP). Mike West breaks CSP down really
+// well over at: http://bit.ly/KzGWUZ. Also make sure to read the CSP
+// W3C spec at: http://bit.ly/vCQbiW
+
+var docElement = document.documentElement;
+docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2') + ('js');
+</code></pre>
+<p>A very important piece of our code:</p>
+<p><code>var docElement</code> is storing a short-hand reference to <code>document.documentElement</code>, which is a reference to our page's <code>&lt;html&gt;</code> tag. <code>docElement.className</code> is a reference to the tag's only class: <code>no-js</code>.</p>
+<p>A regular expression search is run against <code>docElement.className</code> when the page loads. When the search finds the text &quot;no-js&quot;, it replaces it with the text &quot;js&quot;.</p>
+<p>Our HTML tag will now look like this:</p>
+<p><code>&lt;html lang=&quot;en&quot; class=&quot;js&quot;&gt;</code></p>
+<p>Because of the class name change and because of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_selectors" title="Read about CSS descendant selectors">CSS descendant selectors</a>, the <code>.js #no-js-searchbox</code> selector will work and set our Google CSE search box to <code>display:none</code>. But if JavaScript is disabled, the regular expression search won't happen.</p>
+<p>If the regular expression search doesn't happen, it means that the <code>no-js</code> class will remain in the <code>&lt;html&gt;</code> tag and that the <code>.js #no-js-searchbox</code> selector cannot be applied; in other words, <em><strong>if JavaScript is disabled, the Google CSE search box will be visible.</strong></em> This is exactly what we want.</p>
+<p>As the comments say, this code is currently built into <a href="http://modernizr.com/" title="Read about the Modernizr feature detection library">Modernizr</a> so if Modernizr's already on your page, you don't need this code.</p>
+<p>Also, it's suggested that Modernizr be placed in the <code>&lt;head&gt;</code> tag so it can do work before the DOM starts constructing the page content. We're treating this piece of code the same way for the same reason.</p>
+<p>And as noted in the comments, this code is placed in its own JS file instead of inline because it's a best practice as per the Content Security Policy (CSP) that's starting to gain a consensus. Mike West's <a href="http://www.html5rocks.com/en/tutorials/security/content-security-policy/">Content Security Policy article on HTML5 Rocks</a> breaks it down really well but you should still <a href="http://www.w3.org/TR/CSP/" title="Read the W3C's Content Security Policy spec">read the W3C's Content Security Policy spec</a> sooner than later.</p>
+<p><strong>js/scripts.js</strong></p>
+<pre><code class="language-javascript">
+(function(){
+
+  // The Tipue-powered code that returns search results to
+  // "search.html".
+  $(function() {
+    $('#tipue_search_input').tipuesearch();
+  });
+
+})();
+</code></pre>
+<p>This file is just running our Tipue search code, which has absolutely nothing to do with the JS/CSS detection. But again, it's where we're going to add our remaining code and it's the only file we're really going to talk for the rest of this post.</p>
+<p>At this point we've established the basic structure for our pages as well as our system for detecting whether or not JavaScript is enabled. We also understand that if JavaScript is disabled, the Google search box will be visible.</p>
+<p>Let's now go to step two and build our Tipue search functionality.</p>
+<p><a name="create-javascript-search"></a></p>
+<h2>Step 2: Dynamically Create the JS-powered Search Functionality</h2>
+<p>We now need to create the Tipue search box off-DOM with JavaScript, then load it onto the page. Specifically, we need to create a form on both pages that looks like this:</p>
+<pre><code class="language-markup">
+&lt;form action="search.html" role="search"&gt;
+  &lt;input type="text" name="q" id="tipue_search_input" placeholder="Search..."&gt;
+  &lt;input type="submit" value="Search"&gt;
+&lt;/form&gt;
+</code></pre>
+<p>We'll add this code to our already-existing <code>js/scripts.js</code> file so it will now look like this:</p>
+<pre><code class="language-javascript">
+(function(){
+
+  // Tipue code
+  $(function() {
+    $('#tipue_search_input').tipuesearch();
+  });
+
+  var loadSearchBox = document.getElementById("searchbox"),
+    frag = document.createDocumentFragment(),
+    form = document.createElement("form"),
+    searchTextBox = document.createElement("input"),
+    searchButton = document.createElement("input");
+
+  form.action = "search.html";
+  form.setAttribute("role", "search");
+
+  searchTextBox.type = "text";
+  searchTextBox.name = "q";
+  searchTextBox.id = "tipue_search_input";
+  searchTextBox.placeholder = "Search...";
+
+  searchButton.type = "submit";
+  searchButton.value = "Search";
+
+  form.appendChild(searchTextBox);
+  form.appendChild(searchButton);
+
+  frag.appendChild(form);
+
+  loadSearchBox.appendChild(frag);
+
+})();
+</code></pre>
+<p>We already know what the Tipue code is doing so let's look at the &quot;build the search box code&quot;...</p>
+<pre><code class="language-javascript">
+var loadSearchBox = document.getElementById("searchbox"),
+  frag = document.createDocumentFragment(),
+  form = document.createElement("form"),
+  searchTextBox = document.createElement("input"),
+  searchButton = document.createElement("input");
+</code></pre>
+<p>We're using a <a href="http://tech.diaslopes.com/?p=51" title="Learn more about the single var pattern">single var pattern</a> to create five variables:</p>
+<ul>
+<li><code>loadSearchBox</code> is a variable reference to <code>&lt;div id=&quot;searchbox&quot;&gt;&lt;/div&gt;</code>, which is already on our pages.</li>
+<li><code>frag</code> is a variable reference to a newly created document fragment, which is basically a virtual box created in browser memory.</li>
+<li><code>form</code>, <code>searchTextBox</code> and <code>searchButton</code> are variable references to newly-created page elements: specifically a <code>&lt;form&gt;</code> tag and two <code>&lt;input&gt;</code> tags.</li>
+</ul>
+<pre><code class="language-javascript">
+form.action = "search.html";
+form.setAttribute("role", "search");
+</code></pre>
+<p>We have to apply attributes to our three newly-created page elements, starting with the <code>&lt;form&gt;</code> tag. We're setting the tag's <code>action</code> attribute to <code>search.html</code> (which targets Tipue's search results page) and setting its <code>role</code> attribute to <code>search</code> (which is good from a web semantics standpoint).</p>
+<p>The end result of all this is a form tag which, from a code perspective, looks like this: <code>&lt;form action=&quot;search.html&quot; role=&quot;search&quot;&gt;&lt;/form&gt;</code></p>
+<pre><code class="language-javascript">
+searchTextBox.type = "text";
+searchTextBox.name = "q";
+searchTextBox.id = "tipue_search_input";
+searchTextBox.placeholder = "Search...";
+</code></pre>
+<p>We next have to apply attributes to our first input element.  The main thing we have to do is turn it into a text box: that happens with the <code>searchTextBox.type = &quot;text&quot;</code> line of code.</p>
+<p>Both <code>searchTextBox.name = &quot;q&quot;</code> and <code>searchTextBox.id = &quot;tipue_search_input&quot;</code> are what's being done as per the Tipue documentation, so let's never change that code. <code>searchTextBox.placeholder = &quot;Search...&quot;</code> can be changed and even removed if you want to...I would change it but never remove it as it's a great visual cue for end-users.</p>
+<p>The end result of all this is an input tag which, from a code perspective, looks like this: <code>&lt;input type=&quot;text&quot; name=&quot;q&quot; id=&quot;tipue_search_input&quot; placeholder=&quot;Search...&quot;&gt;</code></p>
+<pre><code class="language-javascript">
+searchButton.type = "submit";
+searchButton.value = "Search";
+</code></pre>
+<p>We next have to apply attributes to our second input element.  The main thing we have to do is turn it into a submit button: that happens with the <code>searchButton.type = &quot;submit&quot;</code> line of code.</p>
+<p>The value of <code>searchButton.value</code> can be anything you want it to be.</p>
+<p>The end result of all this is a submit button which, from a code perspective, looks like this: <code>&lt;input type=&quot;submit&quot; value=&quot;Search&quot;&gt; </code></p>
+<p>Now we have to arrange all the page elements we created off-DOM.</p>
+<pre><code class="language-javascript">
+form.appendChild(searchTextBox);
+form.appendChild(searchButton);
+</code></pre>
+<p>Since the <code>&lt;form&gt;</code> tag should contain our two <code>&lt;input&gt;</code> tags, the <code>&lt;form&gt;</code> tag is viewed as the &quot;parent element&quot; and each <code>input</code> tag is viewed as a &quot;child element&quot;. We can add each child to the inside of the parent using the <code>appendChild()</code> method.</p>
+<p>Because the search box (which is represented by the <code>searchTextBox</code> variable) is appended first, it will appear in our code before the search button (which is represented by the <code>searchButton</code> variable).</p>
+<p>At this point, we've constructed our search box the way we want to and it exists off-DOM in the browser memory...the time has come to load it onto the pages.</p>
+<pre><code class="language-javascript">
+frag.appendChild(form);
+</code></pre>
+<p>We load our <code>&lt;form&gt;</code> tag and all of its contents into our document fragment, which is curently represented in the variable list above by our <code>frag</code> variable.</p>
+<pre><code class="language-javascript">
+loadSearchBox.appendChild(frag);
+</code></pre>
+<p>Since <code>frag</code> contains our complete <code>&lt;form&gt;</code> code, JavaScript takes it and loads it into the <code>&lt;div id=&quot;searchbox&quot;&gt;&lt;/div&gt;</code> element already on our web pages, targeting it with the <code>loadSearchBox</code> variable.</p>
+<p>At this point, this is what the JavaScript (not CSS) detection process looks like:</p>
+<ol>
+<li>
+<p>One of our HTML pages load.</p>
+</li>
+<li>
+<p>If the page loads in a browser where JavaScript is <strong><em>enabled</em></strong>, <code>js/detect.js</code> changes the <code>no-js</code> class in the <code>&lt;html&gt;</code> tag to <code>js</code>.</p>
+</li>
+<li>
+<p>The above class name change means that the <code>.js #no-js-searchbox</code> selector can apply a <code>display:none</code> setting to the Google CSE search box currently on the page and hide it.</p>
+</li>
+<li>
+<p><code>js/scripts.js</code> runs the code that builds the Tipue search box off-DOM and loads it onto the page.</p>
+</li>
+<li>
+<p>If the page loads in a browser where JavaScript is <strong><em>disabled</em></strong>, steps 2, 3 and 4 can't happen because they need JavaScript to run.  So the Google CSE search box won't be set to <code>display:none</code> and be completely visible, giving our end-users a search option.  Also, since JS is disabled, the Tipue search box won't be built.</p>
+</li>
+</ol>
+<p><em>(Shameless self-promotion: this part of the tutorial focused on dynamically constructing page elements off-DOM....if you want to learn more about this, check out my <a href="/javascript-off-dom/" title="kaidez screencast on creating web page elements off-DOM">off-DOM screencast tutorial</a>.)</em></p>
+<p><a name="css-detection"></a></p>
+<h2>Step 3: Use JavaScript to Detect if CSS is Disabled</h2>
+<p>The code in Step 2 works well if either JavaScript is disabled or if both JavaScript <em>and</em> CSS are disabled. But if <em>just</em> CSS is disabled, things fall apart.</p>
+<p>If <em>just</em> CSS is disabled, JavaScript will still change the <code>no-js</code> class name in our <code>&lt;html&gt;</code> tag to <code>js</code>. The point of this code was to allow the invocation of the <code>.js #no-js-searchbox</code> selector so we can hide our Google CSE search box.</p>
+<p>But if <em>just</em> CSS is disabled in a browser, it renders all custom styles useless and allows only the the browser's default styling to render. This means that <code>.js #no-js-searchbox</code> will be ignored and the CSE box will be visible.</p>
+<p>And since JavaScript is enabled in this case, the Tipue search box will load onto our page, meaning every page will have <em>two</em> search boxes. That's bad so we need to detect if CSS is <em>enabled</em>, making sure that the Tipue search box isn't built if CSS is <em>disabled</em>.  Which is fine because, as mentioned in the paragraph above, the Google search box will be visible if CSS is disabled, giving our end-users a search option in every situation.</p>
+<p>Someone by the name of &quot;Kethinov&quot; shared <a href="http://www.sitepoint.com/forums/showthread.php?592155-How-to-detect-whether-CSS-enabled-or-not-using-Javascript" title="How to detect whether CSS enabled or not using JavaScript">a very cool trick to use JavaScript to detect if CSS is enabled in a browser</a> over on the SitePoint forum. I made a few syntax changes but remain quite loyal to his ridiculously clever code.</p>
+<p>Let's update our already-existing <code>js/scripts.js</code> file so it looks like this:</p>
+<pre><code class="language-javascript">
+(function(){
+
+  // Tipue code
+  $(function() {
+    $('#tipue_search_input').tipuesearch();
+  });
+
+  // Variables used throughout the code
+  var loadMenu,
+    isCSSDisabled,
+    testCSS,
+    currStyle;
+
+  // Function that builds the Tipue search box
+  loadMenu = function() {
+    var loadSearchBox = document.getElementById("searchbox"),
+      frag = document.createDocumentFragment(),
+      form = document.createElement("form"),
+      searchTextBox = document.createElement("input"),
+      searchButton = document.createElement("input");
+
+    form.action = "search.html";
+    form.setAttribute("role", "search");
+
+    searchTextBox.type = "text";
+    searchTextBox.name = "q";
+    searchTextBox.id = "tipue_search_input";
+    searchTextBox.placeholder = "Search...";
+
+    searchButton.type = "submit";
+    searchButton.value = "Search";
+
+    form.appendChild(searchTextBox);
+    form.appendChild(searchButton);
+
+    frag.appendChild(form);
+
+    loadSearchBox.appendChild(frag);
+
+  }
+
+  // Start detecting if CSS is enabled or disabled
+  isCSSDisabled = false;
+
+  testCSS = document.createElement('div');
+
+  testCSS.style.position = 'absolute';
+
+  document.getElementsByTagName('body')[0].appendChild(testCSS);
+
+  if (testCSS.currentStyle) {
+    currStyle = testCSS.currentStyle['position'];
+  } else if (window.getComputedStyle) {
+      currStyle = document.defaultView.getComputedStyle(testCSS, null).getPropertyValue('position');
+  }
+
+  isCSSDisabled = (currStyle === 'static') ? true : false;
+
+  document.getElementsByTagName('body')[0].removeChild(testCSS);
+
+  if (isCSSDisabled === false) {
+    loadMenu();
+  } else {
+    return false;
+  }
+
+})();
+</code></pre>
+<p>We already know what the Tipue code is doing so let's look at the &quot;CSS enabled/disabled&quot; detection code...</p>
+<pre><code class="language-javascript">
+var loadMenu,
+  isCSSDisabled,
+  testCSS,
+  currstyle;
+</code></pre>
+<p>We're creating four new variables using the single var pattern again. We'll give them value as we go along, starting with the <code>loadMenu</code> variable.</p>
+<pre><code class="language-javascript">
+loadMenu = function() {
+...
+}
+</code></pre>
+<p>The code we used to build the Tipue search box is now a function stored in a variable called <code>loadMenu</code>.  The code hasn't changed so it's not displayed here, but it's important to understand that while the previous version of the code ran immediately, this new version isn't doing that. This code will now <em>not</em> run until we tell it to.</p>
+<pre><code class="language-javascript">
+isCSSDisabled = false;
+</code></pre>
+<p>The <code>isCSSDisabled</code> variable that we created earlier is a Boolean type variable, meaning it has a value of either true or false. We're setting it to <code>false</code>.</p>
+<p><code>isCSSDisabled</code> will be the variable that will tell us whether or not CSS is enabled in the browser....remember that.</p>
+<pre><code class="language-javascript">
+testCSS = document.createElement('div');
+</code></pre>
+<p>The <code>testCSS</code> variable that we created earlier is storing a reference to a <code>&lt;div&gt;</code> tag created with the <code>createElement()</code> method.</p>
+<pre><code class="language-javascript">
+testCSS.style.position = 'absolute';
+</code></pre>
+<p>The value of a <code>&lt;div&gt;</code> tag's position property is <code>static</code> by default...let's change the position property of our <code>testCSS</code> div to <code>absolute</code>.</p>
+<pre><code class="language-javascript">
+document.getElementsByTagName('body')[0].appendChild(testCSS);
+</code></pre>
+<p>Load the <code>testCSS</code> div onto our web page so we can properly detect it in a browser. Do this by finding the <code>&lt;body&gt;</code> tag and place the <code>testCSS</code> div inside of it. It will be placed just above the closing <code>&lt;body&gt;</code> tag because we're using <code>appendChild()</code>.</p>
+<pre><code class="language-javascript">
+if (testCSS.currentStyle) {
+  currStyle = testCSS.currentStyle['position'];
+} else if (window.getComputedStyle) {
+    currStyle = document.defaultView.getComputedStyle(testCSS, null).getPropertyValue('position');
+}
+</code></pre>
+<p>We need to find the value of our <code>testCSS</code> div's position property and place it inside the <code>currStyle</code> variable we created earlier. oldIE refers to this property one way...the other browsers refer to it another way. So we need to use a little feature detection here.</p>
+<p>If our <code>testCSS</code> div has a <code>currentStyle</code> property attached to it, we're in oldIE. So use <code>currentStyle</code> to find the position property and store it's value inside <code>currStyle</code>.</p>
+<p>But if the <code>window</code> object has a <code>getComputedStyle()</code> method attached to it, we're in a browser other than oldIE. So use <code>getComputedStyle()</code> to find the position property and store its value inside <code>currStyle</code>.</p>
+<pre><code class="language-javascript">
+isCSSDisabled = (currStyle === 'static') ? true : false;
+</code></pre>
+<p>Our <code>isCSSDisabled</code> variable runs a quick ternary operation, which is a short-hand conditional check.  As previously mentioned, <code>isCSSDisabled</code> will tell us whether or not CSS is enabled in the browser and does so as follows...</p>
+<p><code>isCSSDisabled</code> checks the value of our <code>currStyle</code> variable which, again, is storing the value of our <code>testCSS</code> div's position property.  If it still has its default <code>static</code> setting, it means our browser is ignoring the <code>absolute</code> property we applied...which would only happen if CSS was disabled in a browser.  So <code>isCSSDisabled</code> will equal <code>true</code>.</p>
+<p>But if <code>testCSS</code> div's position property is set to anything else <em>but</em> <code>static</code> (such as the <code>absolute</code> setting we gave it earlier), then CSS must be enabled. So <code>isCSSDisabled</code> will equal <code>false</code>.</p>
+<pre><code class="language-javascript">
+document.getElementsByTagName('body')[0].removeChild(testCSS);
+</code></pre>
+<p>Our test is done so we don't need <code>testCSS</code> div on our page anymore...let's remove it.</p>
+<pre><code class="language-javascript">
+if (isCSSDisabled === false) {
+  loadMenu();
+} else {
+  return false;
+}
+</code></pre>
+<p>Our <code>testCSS</code> div may be gone but our <code>isCSSDisabled</code> variable is still around, and we can check its value. And if <code>isCSSDisabled</code> is set to <code>false</code>, it means that CSS is <em>not</em> disabled so it's safe to run our <code>loadMenu()</code> function to build the Tipue search box. But in any other situation, such as <code>isCSSDisabled</code> being set to <code>true</code>, don't do anything else and, just to play it safe, do absolutely nothing by performing a basic <code>return false</code>.</p>
+<p><a name="notes"></a></p>
+<h2>More Notes</h2>
+<p>While this code works, there are a few things to keep in mind:</p>
+<ul>
+<li>
+<p>Because of how we've structured it, this code will run every time a page loads so we need to check its performance. On the average, the off-DOM building and JS/CSS detection code takes 0.6-0.9 milliseconds to run. But this code is in the same file as the code that executes Tipue searches, so that number can jump to around 1.2 milliseconds to run when such a search is invoked...it didn't get any higher than that.  This isn't bad but it's something to keep in mind.</p>
+</li>
+<li>
+<p>Hiding elements using <code>display:none</code> is generally frowned upon from an accessibility standpoint. But I stuck with it due to some other weird (minor) accessibility issues.</p>
+</li>
+</ul>
+<p><a name="conclusion"></a></p>
+<h2>Conclusion</h2>
+<p>There are lots of search options for static sites generators like Jekyll...we just need to try things and then implement, test, then deploy them. This is just one thing...I'm sure that there are more and I haven't found them.  Please share these things in the comments if you like.</p>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-main">
+                <h3>kaidez</h3>
+                <p>web development and stuff...</p>
+                
+                <div class="social-links">
+                    <a href="https://twitter.com/kaidez" aria-label="Twitter" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/kaidez" aria-label="GitHub" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/kaigittens" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/posts/">Blog</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="/posts/javascript/">JavaScript</a></li>
+                        <li><a href="/posts/web-development/">Web Development</a></li>
+                        <li><a href="/posts/tutorials/">Tutorials</a></li>
+                        <li><a href="/posts/reviews/">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/feed.xml">RSS Feed</a></li>
+                        <li><a href="/sitemap.xml">Sitemap</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Built with <a href="https://11ty.dev" target="_blank" rel="noopener">11ty</a> and hosted on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+/* Footer Styles */
+.site-footer {
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--space-20);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-12);
+    padding: var(--space-12) 0 var(--space-8);
+}
+
+.footer-main h3 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-3);
+    color: var(--color-text);
+}
+
+.footer-main p {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-6);
+    max-width: none;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius);
+    background: var(--color-bg);
+    color: var(--color-text-muted);
+    transition: all var(--transition-fast);
+    border: 1px solid var(--color-border);
+}
+
+.social-links a:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+}
+
+.footer-section h4 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+    color: var(--color-text);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section li {
+    margin-bottom: var(--space-2);
+}
+
+.footer-section a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-section a:hover {
+    color: var(--color-primary);
+}
+
+.footer-bottom {
+    padding: var(--space-6) 0;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+}
+
+.footer-bottom p {
+    margin-bottom: var(--space-2);
+}
+
+.footer-bottom p:last-child {
+    margin-bottom: 0;
+}
+
+.footer-bottom a {
+    color: var(--color-primary);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+</style>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5549541-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

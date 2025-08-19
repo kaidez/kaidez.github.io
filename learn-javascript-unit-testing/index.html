@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Want to Learn Javascript Unit Testing? Learn Functional Programming First! - kaidez</title>
+    <meta name="description" content="web development and stuff...">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Want to Learn Javascript Unit Testing? Learn Functional Programming First!">
+    <meta property="og:description"
+        content="web development and stuff...">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kaidez.com/learn-javascript-unit-testing/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+    <meta property="article:publisher" content="http://facebook.com/kaidezblog" />
+    <meta property="article:section" content="Personal" />
+    <meta property="og:image" content="http://www.kaidez.com/img/NaN" />
+    <meta property="og:image:width" content="700" />
+    <meta property="og:image:height" content="300" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaidez" />
+    <meta name="twitter:creator" content="@kaidez" />
+    <meta name="twitter:title" content=" » kaidez" />
+    <meta name="twitter:image" content="http://www.kaidez.com/img/NaN" />
+    <meta name="twitter:description" content="" />
+</head>
+
+<body class="" data-pagefind-body>
+    <header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <a href="/" class="site-title">kaidez</a>
+            
+            <!-- Search Component -->
+            <!-- Simplified Search Component -->
+<div class="search-container">
+    <div id="search" class="pagefind-search"></div>
+</div>
+
+<!-- Load Pagefind -->
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    try {
+        // Simple initialization
+        new PagefindUI({ 
+            element: "#search",
+            showImages: false,
+            excerptLength: 20,
+            resetStyles: false,
+            translations: {
+                placeholder: "Search kaidez for stuff...",
+                zero_results: "Couldn't find [SEARCH_TERM]"
+            }
+        });
+        console.log('Pagefind initialized successfully');
+    } catch (error) {
+        console.error('Pagefind initialization failed:', error);
+    }
+});
+</script>
+
+<style>
+/* Simple search styling */
+.search-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.pagefind-search {
+    width: 100%;
+}
+
+/* Style the Pagefind input */
+.pagefind-ui__search-input {
+    width: 100% !important;
+    padding: var(--space-3) var(--space-4) !important;
+    border: 2px solid var(--color-border) !important;
+    border-radius: var(--border-radius-lg) !important;
+    background: var(--color-bg) !important;
+    color: var(--color-text) !important;
+    font-size: var(--text-base) !important;
+    font-family: var(--font-family-sans) !important;
+}
+
+.pagefind-ui__search-input:focus {
+    border-color: var(--color-primary) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Style the results */
+.pagefind-ui__results {
+    margin-top: var(--space-2) !important;
+    background: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--shadow-lg) !important;
+    max-height: 400px !important;
+    overflow-y: auto !important;
+}
+
+.pagefind-ui__result {
+    padding: var(--space-4) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+}
+
+.pagefind-ui__result:last-child {
+    border-bottom: none !important;
+}
+
+.pagefind-ui__result-link {
+    color: var(--color-text) !important;
+    text-decoration: none !important;
+}
+
+.pagefind-ui__result-link:hover {
+    color: var(--color-primary) !important;
+}
+
+.pagefind-ui__result-title {
+    font-weight: 600 !important;
+    font-size: var(--text-lg) !important;
+    margin-bottom: var(--space-2) !important;
+}
+
+.pagefind-ui__result-excerpt {
+    color: var(--color-text-muted) !important;
+    font-size: var(--text-sm) !important;
+}
+
+.pagefind-ui__result-excerpt mark {
+    background: rgba(37, 99, 235, 0.2) !important;
+    color: var(--color-primary) !important;
+    padding: 0 2px !important;
+    border-radius: 2px !important;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        max-width: 100%;
+    }
+}
+</style>
+            
+            <nav class="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="/coding-best-practices/">Coding Tips</a></li>
+                    <li><a href="/tutorials/">Tutorials</a></li>
+                    <li><a href="/personal/">Personal</a></li>
+                    <li><a href="/reviews/">Reviews</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <main class="main-content">
+        <p>If you’re a self-taught JavaScript developer like me, you may not be doing JavaScript unit testing. Self-taught JS developers tend to jump right into coding and skip learning software development fundamentals...like unit testing.</p>
+<p>The best way to learn JavaScript unit testing is to realize you should write code in a functional programming style. Functional programming (or, FP) encourages writing small, easy-to-read functions, which are <strong>easy to test</strong>.</p>
+<h2>Table of Contents</h2>
+<ol>
+  <li class="post__list-item"><a href="#before-we-begin">Before we begin...</a></li>
+  <li class="post__list-item"><a href="#not-doing-js-unit-testing">Haven’t done JavaScript unit testing yet? That’s fine.</a></li>
+  <li class="post__list-item"><a href="#functional-programming">About functional programming</a></li>
+  <li class="post__list-item"><a href="#what-we-will-do">What we’re going to do</a></li>
+  <li class="post__list-item"><a href="#web-page">The web page for all this</a></li>
+  <li class="post__list-item"><a href="#test-suite">The test suite</a></li>
+  <li class="post__list-item"><a href="#about-qunit">A quick note about QUnit</a></li>
+  <li class="post__list-item"><a href="#test-driven development">Test-Driven Development (TDD)</a>
+    <ul style="margin-bottom: 0;">
+      <li><a href="#review-james-code">Review James’ code</a></li>
+      <li><a href="#first-failing-test">The first failing test</a></li>
+      <li><a href="#first-assertions">The first assertions</a></li>
+      <li><a href="#see-if-tests-failed">See if the tests failed</a></li>
+      <li><a href="#test-assert-throws">Test for error messages with <code>assert.throws()</code></a></li>
+    </ul>
+  </li>
+  <li class="post__list-item"><a href="#code-coverage">About code coverage</a>
+    <ul style="margin-bottom: 0;">
+      <li><a href="#coverage-in-test-suite">What code coverage looks like in the test suite</a></li>
+    </ul>
+  </li>
+  <li class="post__list-item">
+    <a href="#testing-more-functional-programming-composition">Testing more functional programming composition</a>
+    <ul style="margin-bottom: 0;">
+      <li><a href="#test-constructor-function">Unit test a constructor function</a></li>
+      <li><a href="#init-method">The <code>init()</code> method</a></li>
+      <li><a href="#test-returned-function">Unit test the returned function</a></li>
+    </ul>
+  </li>
+  <li class="post__list-item"><a href="#bring-it-altogether">Bringing it altogether</a></li>
+  <li class="post__list-item"><a href="#further-reading">Further reading</a></li>
+  <li class="post__list-item"><a href="#conclusion">Conclusion</a></li>
+</ol>
+<p><a name="before-we-begin"></a></p>
+<h2>Before we begin...</h2>
+While this post talks about functional programming, it’s written more as a beginner’s guide to JavaScript unit testing. The post demonstrates how FP makes unit testing easier, but doesn’t discuss FP beyond that.
+<p>Even with that, this post isn’t an in-depth JavaScript unit testing tutorial. It covers just enough to get you up and running: <strong>assertions, test suites, test coverage and test-driven development</strong>.</p>
+<p>The resources at the end of this post cover JavaScript unit testing and functional programming in depth.  If you want to follow along with the examples, <a href="https://github.com/kaidez/functional-programming-unit-testing">please read the instructions in the code repo</a>.</p>
+<p><a name="not-doing-js-unit-testing"></a></p>
+<h2>Haven’t done JavaScript unit testing yet? That’s fine.</h2>
+First of all, it’s OK if you haven’t regularly unit tested your JavaScript up to this point. This is because unit testing isn’t encouraged in the JS community like it is in other programming communities like Java.
+<p>JavaScript was built to be a low barrier of entry for beginner programmers: JS creator <a href="https://devchat.tv/js-jabber/124-jsj-the-origin-of-javascript-with-brendan-eich">Brendan Eich has said that</a>. JS was used for simple things like dropdown menus, rollover effects and cookies when it first came out; therefore, ignoring JS unit testing was acceptable.</p>
+<p>But starting with <a href="http://adaptivepath.org/ideas/ajax-new-approach-web-applications/">the Great AJAX Revolution of 2005</a>, JavaScript evolved into a full-on application platform. JS lives well on the server via Node, JS stack solutions like <a href="http://meanjs.org/">MEAN</a> and <a href="https://jamstack.org/">JAMstack</a> are getting popular and so on.</p>
+<p>With JavaScript now at this level, it makes sense to apply traditional software development practices. Like unit testing.</p>
+<p><a name="functional-programming"></a></p>
+<h2>About functional programming</h2>
+You should test small pieces of code, not big pieces. Functional programming encourages writing functions in small pieces.
+<p>The rules of functional programming are:</p>
+<ul>
+  <li class="post-list-item">A function should depend on its own scope to work, not its outer scope.</li>
+  <li class="post-list-item">Functions <em>definitely</em> shouldn’t change the outer scope.</li>
+  <li class="post-list-item">Functions should explicitly <code>return</code> something.</li>
+  <li class="post-list-item">If a function gives the same input, it should always produce the same output.</li>
+  <li class="post-list-item">Most of all, functions must be small and reusable.</li>
+</ul>
+This is just an FP summary: you can read more about it by clicking on this article’s various links. But the last point is the most relevant to JavaScript unit testing:
+<blockquote><p><em>Functions must be small and reusable.</em></p></blockquote>
+In addition, functional programming encourages composition: the combining of multiple functions to make another function. This is usually done by passing a function as a parameter to another function, where the passed function gets invoked inside the other one.
+<a name="what-we-will-do"></a>
+<h2>What we’re going to do</h2>
+James Sinclair wrote <a href="http://jrsinclair.com/articles/2016/gentle-introduction-to-functional-javascript-intro/">an excellent four-part tutorial on functional programming</a>. We’ll create unit tests for his function solutions in the tutorial’s first part.
+<p><a name="web-page"></a></p>
+<h2>The web page for all this</h2>
+Here’s what the web page for this, <code>index.html</code>, looks like:
+<pre><code class="language-markup">
+&lt;!-- index.html --&gt;
+<p>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Learn JS Unit Testing with Functional Programming&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;</p>
+<p>&lt;div id=&quot;carousel-one&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;carousel-two&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;main-carousel&quot;&gt;&lt;/div&gt;</p>
+<p>&lt;div id=&quot;unicorn&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;fairy&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;kitten&quot;&gt;&lt;/div&gt;</p>
+<p>&lt;a href=&quot;test/tests.html&quot; target=&quot;_blank&quot;&gt;View tests&lt;/a&gt;</p>
+<p>&lt;script src=&quot;jquery.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;app.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;scripts.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+We have a few page elements that we’ll target in our JS later. We also have a link to our group of tests (or, our test suite) and links to some JavaScript files.</p>
+<p>The core jQuery file is here. Other files include <code>app.js</code> and <code>scripts.js</code>: the code we’re testing is in <code>app.js</code>, but that code gets implemented in <code>scripts.js</code>.
+<a name="test-suite"></a></p>
+<h2>The test suite</h2>
+Our test suite lives in <code>test/tests.html</code> and looks like this:
+<pre><code class="language-markup">
+&lt;!-- test/tests.html -->
+<p>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Functional programming test suite&lt;/title&gt;</p>
+<p>&lt;link rel=&quot;stylesheet&quot; href=&quot;qunit.css&quot;&gt;
+&lt;script src=&quot;qunit.js&quot;&gt;&lt;/script&gt;</p>
+<p>&lt;script src=&quot;../jquery.js&quot;&gt;&lt;/script&gt;</p>
+<p>&lt;script src=&quot;../app.js&quot; data-cover&gt;&lt;/script&gt;</p>
+<p>&lt;script&gt;&lt;/script&gt;</p>
+<p>&lt;/head&gt;
+&lt;body&gt;</p>
+<p>&lt;div id=&quot;qunit&quot;&gt;&lt;/div&gt;</p>
+<p>&lt;div id=&quot;qunit-fixture&quot;&gt;&lt;/div&gt;</p>
+<p>&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+We’ll test James’ code with the <a href="https://qunitjs.com/">QUnit</a> framework. <code>qunit.css</code> will style the test suite page while <code>qunit.js</code> will actually perform the tests.</p>
+<p>The core jQuery library is here as well: we’re pointing to the one in the root of the <code>build</code> folder. We’ll use it to help us with some DOM-related tests.</p>
+<p>Next is the previously-mentioned <code>app.js</code> which contains the code getting tested. QUnit knows to only test <code>app.js</code> because of its <code>data-cover attribute</code>.</p>
+<p>The empty &lt;script&gt; tag is where we’ll write our tests.</p>
+<p>Finally, we have two <code><div></code> tags: <code><div id="qunit" /></code> and <code><div id="qunit-fixture" /></code>. QUnit’s test results load into <code><div id="qunit" /></code> and we’ll use <code><div id="qunit-fixture" /></code> to test DOM manipulation.</p>
+<p><a name="about-qunit"></a></p>
+<h2>A quick note about QUnit</h2>
+QUnit isn’t the only JavaScript unit testing framework and you should <a href="https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#JavaScript">review other JS unit testing frameworks</a> at some point. But if you want to learn JavaScript unit testing from the beginning, I think QUnit is best for that.
+<p>QUnit has a small API with easy-to-read documentation. This is because it’s maintained by the jQuery team, which is well-known for writing easy-to-read API documentation.</p>
+<p>Also, QUnit works great without command line tools like Grunt and Gulp when compared to other testing frameworks. It can run with those tools and you should run unit testing from the CLI eventually.</p>
+<p>But to learn JavaScript unit testing from the beginning, running tests in a browser and outside of CLI tooling is fine. Onto the tests...
+<a name="test-driven development"></a></p>
+<h2>Test-Driven Development (TDD)</h2>
+We’ll test this code using <a href="https://en.wikipedia.org/wiki/Test-driven_development">Test-Driven Development (TDD)</a>, meaning we’ll write our code in four steps:
+<ol>
+  <li class="post__list-item">write a test.</li>
+  <li class="post__list-item">make sure that test fails.</li>
+  <li class="post__list-item">write code to make the test pass.</li>
+  <li class="post__list-item">refactor code if needed.</li>
+</ol>
+<p>We’re not doing full-on TDD: we’re using James’ pre-written functions instead of writing tests first and code next. But we’ll add new functions as well as refactor some existing ones...we’ll do enough to understand TDD.
+<a name="review-james-code"></a></p>
+<h3>Review James’ code</h3>
+James’ first FP example used composition and created a small function that returned another small function. He did this by passing one function as a parameter to another:
+<pre><code class="language-javascript">
+// A function that gets returned
+var log = function(someVariable) {
+  console.log(someVariable);
+  return someVariable;
+}
+<p>// A function that takes another function as a parameter
+var doSomething = function(thing) {
+thing();
+}</p>
+<p>// Another function that gets returned and executes 'log()'
+var sayBigDeal = function() {
+var message = &quot;I'm kind of a big deal&quot;;
+log(message);
+}</p>
+<p>// All this in action
+doSomething(sayBigDeal); // logs 'I’m kind of a big deal
+</code></pre>
+We’ll use TDD to make <code>log()</code> work but will also update it as follows:</p>
+<ul>
+  <li class="post__list-item">log() should only accept a string type as a parameter.</li>
+  <li class="post__list-item">the string should have at least one character.</li>
+  <li class="post__list-item">make sure console errors get displayed if these two things don’t happen.</li>
+</ul>
+<p><a name="first-failing-test"></a></p>
+<h3>The first failing test</h3>
+We’ll create a failing test that checks to see if log() returns a string with at least one character:
+<pre><code class="language-markup">
+&lt;!-- test/tests.html --&gt;
+&lt;script>
+<p>QUnit.test('&quot;log()&quot; should return a string with at least 1 character', function(assert) {</p>
+<p>var myString = 'a string';</p>
+<p>assert.equal(log(myString), 'a string', 'the string was returned successfully!');</p>
+<p>assert.equal(myString.length &gt;= 1, true, 'the string has at least 1 character!');</p>
+<p>});</p>
+<p>&lt;/script&gt;
+</code></pre>
+We create a test with QUnit’s <code> test</code>  method. <code>test</code> takes two parameters: the test description and a callback function that runs the test.</p>
+<p>The test description is <code>&quot;'log()' should return a string with at least 1 character&quot;</code> and the callback takes a parameter called assert. And <code>assert</code> is THE most important term in unit testing.</p>
+<p><code>assert</code> refers to “assertion” and in unit testing, <strong>an assertion is something that our tests always expect to be true</strong>. <code>assert</code> points to a QUnit object with methods we can use in our tests.</p>
+<p>Our callback contains a variable called <code>myString</code>. This is a “mock,” which is dummy data for our test.</p>
+<p>Finally, the callback uses one of the <code>assert</code> methods we have access to: <code>assert.equal()</code>. And it uses it twice.
+</code></pre>
+<a name="first-assertions"></a></p>
+<h3>The first assertions</h3>
+<code>assert.equal()</code> takes three parameters:
+<ol>
+  <li class="post__list-item">the <strong>actual</strong> behavior: the code is being tested.</li>
+  <li class="post__list-item">the <strong>expected</strong>  behavior: what we expect the test result to be (or, what we’re “asserting”).</li>
+  <li class="post__list-item">what message should display if the test passes.</li>
+</ol>
+For the first assertion, we are:
+<ol>
+  <li class="post__list-item">executing the <code>log()</code> function by running <code>log(myString)</code>.</li>
+  <li class="post__list-item">expecting that the function’s returned result will be <code>"a string"</code>.</li>
+  <li class="post__list-item">if the test passes, we’ll get a message saying <code>"the string was returned successfully!"</code></li>
+</ol>
+For the next assertion, we are:
+<ol>
+  <li class="post__list-item">claiming that the string’s length is greater than or equal to 1, and it “actually” is.</li>
+  <li class="post__list-item">expecting the first point to be true with the help of a standard <code>Boolean</code> true check.</li>
+  <li class="post__list-item">if the test passes, we’ll get a message saying <code>"the string has at least 1 character!"</code></li>
+</ol>
+<p><a name="see-if-tests-failed"></a></p>
+<h3>See if the tests failed</h3>
+Our QUnit test suite shows failing tests when we load <code>test/tests.html</code> in a browser...
+<img src="/img/unit-testing-image-01.jpg" alt="First failing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+First failing test image for the learn JavaScript unit testing post
+We can make the test pass by adding James’ original log() code to app.js. And note the ES5 "use strict" statement: it will be important later on..
+<p>We can make the test pass by adding James’ original <code>log()</code> code to <code>app.js</code>. And note the ES5 <code>&quot;use strict&quot;</code> statement: it will be important later on...</p>
+<pre><code class="language-javascript">
+// app.js
+'use strict';
+
+var log = function(someVariable) {
+  console.log(someVariable);
+  return someVariable;
+}
+</code></pre>
+<p>...and we’ll see that both tests pass when we go back to our test suite and click on the description.
+<img src="/img/unit-testing-image-02.jpg" alt="First passing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+And if we run <code>log()</code> in <code>scripts.js</code>, a console message will appear when we go to our web page:</p>
+<pre><code class="language-javascript">
+// scripts.js
+log("I'm kind of a big deal"); // logs the first "I'm kind of a big deal"
+</code></pre>
+<p><a name="test-assert-throws"></a></p>
+<h3>Test for error messages with <code>assert.throws()</code></h3>
+<code>log()</code> should also throw an error message to the console if its parameter isn’t a string with at least one character. We’ll throw those messages using JavaScript’s <code>Error</code> object, creating this functionality with TDD.
+<p>QUnit’s assert functionality has a <code>throws()</code> method that tests if your custom error messages get thrown correctly. We’ll use it to create the failing tests for this “throw an error message” functionality.</p>
+<p>The failing tests go at the bottom of the <code>script</code> tag on our test suite page:</p>
+<pre><code class="language-markup">
+&lt;!-- test/tests.html --&gt;
+&lt;script&gt;
+...
+QUnit.test('"log()" should throw an error if no parameter is passed or if the parameter is not a string', function(assert) {
+
+  assert.throws(function () {
+    log();
+  }, 'an error was thrown because no parameters are passed to "log()"');
+
+  assert.throws(function () {
+    log('');
+  }, 'an error was thrown because an empty string is the parameter');
+
+  assert.throws(function () {
+    log(null);
+  }, 'an error was thrown because "null" is the parameter');
+
+  assert.throws(function () {
+    log(undefined);
+  }, 'an error was thrown because "undefined" is the parameter');
+
+  assert.throws(function () {
+    log(function(){});
+  }, 'an error was thrown because a function is the parameter');
+
+  assert.throws(function () {
+    log(new Symbol('a symbol'));
+  }, 'an error was thrown because an ES2015 symbol is the parameter"');
+  ...
+  // shortened so it's more readable
+});
+&lt;/script&gt;
+</code></pre>
+<p>Like before, we create a failing QUnit test with a description and a callback that runs the test. We create tests that assume that the parameter doesn’t exist for whatever reason: an empty parameter, an empty string, <code>null</code> and <code>undefined</code>.</p>
+<p>Next, we test if either a function or an ES6 Symbol is being passed. <a href="https://github.com/kaidez/functional-programming-unit-testing">This post’s source code</a> also tests for numbers, arrays, objects, Booleans and regular expressions....I left them out here to keep things more readable.</p>
+<p>This produces failing tests:
+<img src="/img/unit-testing-image-03.jpg" alt="Second failing test image for the learn JavaScript unit testing post post" class="post__image" style="float: none; margin-top: 10px;">
+The tests pass when in true TDD form, we refactor <code>log()</code>:</p>
+<pre><code class="language-javascript">
+// app.js
+...
+var log = function(someVariable) {
+  if((typeof someVariable !== 'string') || (someVariable.length <= 0)) {
+    throw new Error('expecting a string with at least one character');
+  } else {
+    console.log(someVariable);
+    return someVariable;
+  }
+};
+</code></pre>
+<p>And we go back and check our tests...
+<img src="/img/unit-testing-image-04.jpg" alt="Second passing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+The test suite confirms that <code>log()</code> throws errors when its parameter is not a string with at least one character. So if we update the <code>log()</code> call in <code>scripts.js</code> to look like this...</p>
+<pre><code class="language-javascript">
+// scripts.js
+...
+log(""); // logs 'Uncaught Error: expecting a string with at least one character'
+</code></pre>
+<p>...an error message will appear in the console when go to <code>index.html</code>.</p>
+<p>Make sure to reset <code>log(&quot;&quot;);</code> to <code>log(&quot;I’m kind of a big deal&quot;);</code> in <code>scripts.js</code> before proceeding.
+<a name="code-coverage"></a></p>
+<h2>About code coverage</h2>
+<em>Code coverage</em> is the analysis of how much of your code is getting tested. It’s almost always measured as a percentage.
+<p>Should you <em>always</em> go for 100% code coverage when unit testing? Maybe: search the web and you’ll find a million different answers to the question.</p>
+<p>I say do your research and make you’re own decision, but we’re going for 100% coverage in this small example. And in JS unit testing, the most popular code coverage tool is <a href="http://blanketjs.org/">Blanket.js</a>.</p>
+<p>We’ll add Blanket.js between <code>jquery.js</code> and <code>app.js</code> in <code>test/tests.html</code>:</p>
+<pre><code class="language-markup">
+&lt;!-- test/tests.html --&gt;
+...
+&lt;script src="../jquery.js"&gt;&lt;/script&gt;
+
+&lt;script src="blanket.min.js"&gt;&lt;/script&gt;
+
+&lt;script src="../app.js" data-cover&gt;&lt;/script&gt;
+...
+</code></pre>
+<p><a name="coverage-in-test-suite"></a></p>
+<h3>What code coverage looks like in the test suite</h3>
+Like we did with <code>log()</code>, we want <code>doSomething()</code> to do type-checking. So we’ll refactor James’ original FP code and add it to the bottom of <code>app.js</code>:
+<pre><code class="language-javascript">
+// app.js
+...
+var doSomething = function(someFunction) {
+  if(!$.isFunction(someFunction)) {
+    throw new Error("doSomething's parameter must be a function");
+  } else {
+    return someFunction();
+  }
+};
+</code></pre>
+We’re using jQuery <code>$.isFunction()</code> to check if the passed parameter is a function. Next, we’ll refresh our test suite and check the “Enable coverage” checkbox that now appears at the top.
+<p>The Blanket.js interface will appear: click on the link to <code>app.js</code> to see how much code is getting coverage:</p>
+<img src="/img/unit-testing-image-05.jpg" alt="Code coverage image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+<p>Whatever’s highlighted in green is being tested whatever’s highlighted in red is not. And as we see, <code>doSomething()</code> isn’t being test at all.</p>
+<p>We can add the following to the bottom of the <code>script</code> tag in our test suite page...</p>
+<pre><code class="language-markup">
+&lt;!-- test/tests.html --&gt;
+&lt;script&gt;
+  ...
+  QUnit.test('"doSomething()" should return a function', function(assert) {
+
+    var myFunc = function(returnFunc){};
+    assert.equal(doSomething(myFunc), myFunc(), 'the function was returned successfully!');
+
+  });
+&lt;/script&gt;
+</code></pre>
+<p>And if we look at the test suite coverage info, we see we’re testing more code that passes unit tests.</p>
+<img src="/img/unit-testing-image-06.jpg" alt="Second code coverage image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+<p>We’re not testing if our type-checking works like we did for the <code>log()</code> function. We can fix this by adding type checks again at the bottom of the test suite’s <code>script</code> tag:</p>
+<pre><code class="language-markup">
+&lt;!-- test/tests.html --&gt;
+&lt;script&gt;
+  ...
+  QUnit.test("'doSomething()' should throw an error if no parameter is passed or if the parameter is not a function", function(assert) {
+
+  assert.throws(function () {
+    doSomething();
+  }, 'an error was thrown because no parameters are passed to "doSomething()"');
+
+  assert.throws(function () {
+    doSomething("");
+  }, 'an error was thrown because an empty string is the parameter');
+
+  assert.throws(function () {
+    doSomething('function');
+  }, 'an error was thrown because a string is the parameter"');
+
+  assert.throws(function () {
+    doSomething(null);
+  }, 'an error was thrown because "null" is the parameter');
+
+  assert.throws(function () {
+    doSomething(undefined);
+  }, 'an error was thrown because "undefined" is the parameter');
+
+  assert.throws(function () {
+    doSomething(new Symbol("a symbol"));
+  }, 'an error was thrown because an ES2015 symbol is the parameter"');
+
+  assert.throws(function () {
+    doSomething(345345);
+  }, 'an error was thrown because an number is the parameter');
+  ...
+  // shortened so it's more readable
+&lt;/script&gt;
+</code></pre>
+<p><em>(Side note: Running <code>assert.throws()</code> in two different tests isn’t <a href="https://en.wikipedia.org/wiki/Don't_repeat_yourself">DRY</a>. I couldn’t find a way to DRY everything like I wanted, so this is something I’ll research in the future. Feel free to let me know if you have a cool way to do it.)</em></p>
+<p>The tests pass with 100% code coverage:</p>
+<img src="/img/unit-testing-image-07.jpg" alt="Third code coverage image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+<p>We can now implement James’ final code for this at the bottom of <code>scripts.js</code>:</p>
+<pre><code class="language-javascript">
+// scripts.js
+...
+var sayBigDeal = function() {
+  var message = "I'm kind of a big deal";
+  log(message);
+}
+
+doSomething(sayBigDeal); // logs the second "I'm kind of a big deal"
+</code></pre>
+<p><a name="testing-more-functional-programming-composition"></a></p>
+<h2>Testing more functional programming composition</h2>
+James Sinclair’s FP post demonstrated composition with another function that built a carousel:
+<pre><code class="language-javascript">
+function initialiseCarousel(id, frequency) {
+  var el = document.getElementById(id);
+  var slider = new Carousel(el, frequency);
+  slider.init();
+  return slider;
+}
+<p>initialiseCarousel('main-carousel', 3000);
+</code></pre>
+A lot going on here:</p>
+<ul>
+  <li class="post__list-item"><code>initialiseCarousel()</code> takes an <code>id</code> and <code>frequency</code> parameter.</li>
+  <li class="post__list-item"><code>id</code> is in the <code>el</code> variable, which finds an element on the page.</li>
+  <li class="post__list-item">the <code>el</code> variable and <code>frequency</code> parameter get passed to a <code>slider</code> variable, which is an instance of a constructor function called <code>Carousel()</code>.</li>
+  <li class="post__list-item"><code>slider</code>‘s two parameters, <code>el</code> and <code>frequency</code>, respectively define which element is a carousel and how many times it spins.</li>
+  <li class="post__list-item">instances of <code>Carousel()</code>, like <code>slider</code>, have access to an <code>init()</code> method.</li>
+  <li class="post__list-item"><code>slider</code> is explicitly returned.</li>
+  <li class="post__list-item">when <code>initialiseCarousel()</code> runs, it places a new carousel in a main-carousel page element and gives it a duration of 3000, which I assume represents milliseconds.</li>
+</ul>
+In our quest to learn JavaScript unit testing, we’ll test <code>Carousel()</code> and <code>initialiseCarousel()</code> separately. And since James’ tutorial didn’t create <code>Carousel()</code>, it’s an excellent chance to create it with TDD!
+<a name="test-constructor-function"></a>
+<h3>Unit test a constructor function</h3>
+Since <code>Carousel()</code> is a constructor function, we can attach its parameters to <code>this</code>, then return <code>this</code> itself. So we’ll place a failing unit test for this at the bottom of the <code>script</code> tag in our test suite:
+<pre><code class="language-markup">
+&lt;!-- test/tests.html --&gt;
+&lt;script&gt;
+  ...
+  QUnit.test('"Carousel()" should return a string and a number', function(assert) {
+
+    var someString = 'some-element';
+    var someNumber =  4545935234
+
+
+    assert.ok(new Carousel(someString, someNumber), 'a string and a number were returned!');
+  });
+&lt;/script&gt;
+</code></pre>
+<p><code>Carousel</code>‘s two parameters should be a string and a number. So we’ll create two variables called <code>someString</code> and <code>someNumber</code> and pass them to <code>new Carousel()</code> in our test.</p>
+<p>We’re using QUnit’s <code>assert.ok()</code> method, which really just checks if our actual value, <code>new Carousel(str, num)</code>, exists. I don’t know if this is the strongest unit test in the world: I just want you to be aware that <code>assert.ok()</code> is an option.</p>
+<p>Also, take note that we’re using the <code>new</code> keyword in our assertion. This goes back to our using <code>'use strict'</code> and how function’s define their scope in that scenario.</p>
+<p>Doing strict mode and <em>not</em> using <code>new</code> like this in your tests leads to bugs, so be sure to always use new in these cases. Read <a href="https://stackoverflow.com/questions/42459449/qunit-returns-error-in-strict-mode/42460436">the answer to the Stack Overflow question I asked about this</a> to learn more.</p>
+<p>We’ll confirm that the test fails...
+<img src="/img/unit-testing-image-08.jpg" alt="Carousel failing image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;"></p>
+<p>And add the following code to <code>app.js</code>:</p>
+<pre><code class="language-javascript">
+function Carousel(getElement, spinDuration) {
+  this.getElement = getElement;
+  this.spinDuration = spinDuration || 3000;
+  if(this.getElement === undefined) {
+    throw new Error('Carousel needs to know what element to load into');
+  } else {
+    return this;
+  }
+}
+</code></pre>
+<p><code>Carousel()</code> receives a getElement and spinDuration parameter. Their values will eventually get passed around to <code>initialiseCarousel()</code> when new <code>Carousel()</code> runs inside it.</p>
+<p>We’re letting <code>spinDuration</code> be an optional parameter by giving it a default value. If it’s left blank in a <code>Carousel()</code> instance, it will automatically be set to 3000.</p>
+<p>But we’re still expecting the <code>getElement</code> parameter: otherwise, our code won’t know where to place the carousel. So we’ll throw a console error if that’s left blank.</p>
+<p><em>(Side note: We’re not going to throw errors if the wrong types get passed. We’ve already done it twice and understand how it works but as a challenge, try adding them to this test on your own.)</em></p>
+<p>The test passes now. But our code coverage indicates that we didn’t test our thrown error functionality:</p>
+<img src="/img/unit-testing-image-09.jpg" alt="First carousel code coverage image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+<p>So we add this test:</p>
+<pre><code class="language-markup">
+&lt;!-- test/tests.html --&gt;
+&lt;script&gt;
+  ...
+  QUnit.test('"Carousel" should throw an error if an element was not passed as a parameter', function(assert) {
+
+    assert.throws(function () {
+      new Carousel();
+    }, 'an error was because an element was not passed as a parameter');
+
+  });
+&lt;/script&gt;
+</code></pre>
+<p>And we get 100% coverage on our tests:
+<img src="/img/unit-testing-image-10.jpg" alt="Second carousel code coverage image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+Adding a carousel without parameters to the bottom of <code>scripts.js</code> consequently produces a console error when <code>index.html</code> runs in the browser:</p>
+<pre><code class="language-javascript">
+// scripts.js
+...
+var someCarousel = new Carousel(); // logs "Carousel needs to know what element to load into"
+</code></pre>
+<p>But no errors appear when we pass both parameters...</p>
+<p>// scripts.js
+var someCarousel = new Carousel('carousel-one', 5435);
+someCarousel.init(); // show “The carousel-one carousel has started” on index.html</p>
+<p>var someOtherCarousel = new Carousel('carousel-two');
+someOtherCarousel.init(); // show “The carousel-two carousel has started” on index.html
+</code></pre></p>
+<pre><code class="language-javascript">
+// scripts.js
+...
+var someCarousel = new Carousel('carousel-one', 5345); // no console errors
+</code></pre>
+<p>Or even just one element parameter since we have a default value for <code>spinDuration</code>:</p>
+<pre><code class="language-javascript">
+// scripts.js
+...
+var someOtherCarousel = new Carousel('carousel-two'); // no console errors
+</code></pre>
+<p><a name="init-method"></a></p>
+<h3>The <code>init()</code> method</h3>
+We’ll just make the carousel’s <code>init()</code> method load text into the carousel page element. We’ll add the following test for this at the bottom of the <code>script</code> tag in the test suite:
+<pre><code class="language-markup">
+&lt;!-- test/tests.html --&gt;
+&lt;script&gt;
+  ...
+  QUnit.test('"Carousel()" should run its init() method and load the proper text', function(assert) {
+<p>var testCarousel = new Carousel('qunit-fixture');
+testCarousel.init();</p>
+<p>assert.equal($('#qunit-fixture').html(), 'The qunit-fixture carousel has started.', 'init() ran and loaded the proper text!');
+});
+&lt;/script&gt;
+</code></pre></p>
+<p>We create a new instance of <strong>Carousel()</strong> called testCarousel and pass <code>qunit-fixture</code> as its single parameter. <code>qunit-fixture</code> points to the standard page element where QUnit loads other elements that need testing.</p>
+<p>(<em>Side note: elements that load into <code>qunit-fixture</code> for testing are removed when the tests are done.)</em></p>
+<p>We don’t need to pass a number for the <code>spinDuration</code> parameter. We already gave it a default value in the <strong>Carousel()</strong> function in <code>app.js</code>, so this test should pass without it.</p>
+<p><code>init()</code> should place a custom message in <code><div id="qunit-fixture" /></code> that says <code>&quot;The qunit-fixture carousel has started.&quot;</code>. Then we’ll use jQuery’s <code>html()</code> function to look in the qunit-fixture and see if its copy matches our message.</p>
+<p>If the copy matches, our QUnit test will say <code>&quot;a slider was returned!&quot;</code> But for now, we have a failing test:
+<img src="/img/unit-testing-image-11.jpg" alt="Init failing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;"></p>
+<p>Adding this code to the bottom of app.js will get things to work:</p>
+<pre><code class="language-javascript">
+// app.js
+...
+Carousel.prototype.init = function() {
+  var getCarousel = document.getElementById(this.getElement);
+  getCarousel.innerHTML = 'The ' + this.getElement + ' carousel has started.';
+};
+</code></pre>
+<p>We’ve followed JavaScript best practices and placed init() on Carousel‘s prototype instead of in the Carousel constructor function. It finds the element defined in Carousel using document.getElementById(), which is this.element, and stores it in a getCarousel variable.</p>
+<p>Next, init() takes the value of this.element and uses it to build a custom message. The message gets loaded into whatever element getCarousel points to.</p>
+<p>As a result, our unit test passes with 100% code coverage:
+<img src="/img/unit-testing-image-12.jpg" alt="Init passing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+And if we run <code>init()</code> two times at the bottom of <code>scripts.js</code>...</p>
+<pre><code class="language-javascript">
+// scripts.js
+var someCarousel = new Carousel('carousel-one', 5435);
+someCarousel.init(); // show “The carousel-one carousel has started” on index.html
+
+var someOtherCarousel = new Carousel('carousel-two');
+someOtherCarousel.init(); // show “The carousel-two carousel has started” on index.html
+</code></pre>
+<p>And two text blocks will show up in the <code>carousel-one</code> and <code>carousel-two</code> page elements when <code>index.html</code> runs in the browser.
+<a name="test-returned-function"></a></p>
+<h3>Unit test the returned function</h3>
+In James’ example, the returning function, <code>initialiseCarousel()</code> was expected to return a new instance of <code>Carousel()</code>. A failing test for that looks like this:
+<pre><code class="language-markup">
+&lt;!-- test/tests.html --&gt;
+&lt;script&gt;
+  ...
+  QUnit.test('"initialiseCarousel()" should return a new instance of Carousel()', function(assert) {
+
+    var testCarouselInstance = initialiseCarousel('qunit-fixture', 3000);
+    var isCarouselInstance = testCarouselInstance instanceof Carousel;
+    assert.ok(isCarouselInstance, 'a new instance of Carousel() was returned!');
+
+  });
+&lt;/script&gt;
+</code></pre>
+<p>We’re testing with <code>assert.ok()</code> again. The test has a description and a callback as usual and the callback has two variables:</p>
+<ul>
+  <li class="post__list-item"><code>testCarouselInstance</code> stores an invocation of <code>initialiseCarousel()</code> that creates a carousel in <code>&lt;div id="qunit-fixture" /&gt;</code> with a 3000 millisecond duration.</li>
+  <li class="post__list-item"><code>isCarouselInstance</code> stores a test for if <code>testCarouselInstance</code> is actually an instance of <code>Carousel</code> using <code>instanceof</code>.</li>
+</ul>
+<p>So we have a failing test right now...
+<img src="/img/unit-testing-image-13.jpg" alt="initialiseCarousel failing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;"></p>
+<p>Then we get to pass by adding James’ original to <code>app.js</code>...</p>
+<pre><code class="language-javascript">
+//app.js
+...
+function initialiseCarousel(id, frequency) {
+  var el = document.getElementById(id);
+  var slider = new Carousel(el, frequency);
+  slider.init();
+  return slider;
+}
+</code></pre>
+<p>And the test passes...
+<img src="/img/unit-testing-image-14.jpg" alt="initialiseCarousel passing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;"></p>
+<p>And since our tests confirm that a new <code>Carousel()</code> instance exists and we’re explicitly returning that instance (<code>slider</code>), we can agree that our test is accurate.</p>
+<p>We can now invoke <code>initialiseCarousel()</code> in <code>scripts.js</code> to get it working in live code:</p>
+<pre><code class="language-javascript">
+// scripts.js
+...
+var testCarousel = initialiseCarousel('main-carousel', 3000); // "The main-carousel carousel has started" displays on the page
+</code></pre>
+<p><code>index.html</code> displays “The main-carousel carousel has started” when it runs in the browser. And since we’re already getting the DOM element in <code>Carousel()</code>, we can refactor <code>initialiseCarousel()</code> and removing that functionality from it:</p>
+<pre><code class="language-javascript">
+//app.js
+...
+function initialiseCarousel(id, frequency) {
+  var slider = new Carousel(id, frequency);
+  slider.init();
+  return slider;
+}
+</code></pre>
+<p>Note that <code>id</code> replaces <code>el</code> in slider‘s parameter.
+<a name="bring-it-altogether"></a></p>
+<h2>Bringing it altogether</h2>
+James’ last example performs roughly the same functionality as the others:
+<pre><code class="language-javascript">
+function addMagic(id, effect) {
+  var element = document.getElementById(id);
+  element.className += ' magic';
+  effect(element);
+}
+
+addMagic('unicorn', spin);
+addMagic('fairy', sparkle);
+addMagic('kitten', rainbow);
+</code></pre>
+<p><code>addMagic()</code> takes <code>id</code> and <code>effect</code> as parameters. <code>id</code> is passed to the <code>element</code> variable inside <code>addMagic()</code>, where <code>element</code> references a page element.</p>
+<p><code>element</code> gets a class named <code>magic</code> added to it. It also has an effect function invoked inside it, hence, the <code>effect</code> parameter.</p>
+<p><code>effect</code> can be either <code>spin</code>, <code>sparkle</code> or <code>rainbow</code>. Like before, we’ll update these functions to load text inside of a page element.</p>
+<p>We can unit test all this using everything we’ve learned up to this point. Our first failing test looks like this:</p>
+<pre><code class="language-markup">
+&lt;!-- test/tests.html --&gt;
+&lt;script&gt;
+  ...
+  QUnit.test('addMagic() should return a function and add a "magic" class to the target element', function(assert) {
+
+    function returnFunc(){}
+    addMagic('qunit-fixture', returnFunc);
+
+    assert.equal(typeof returnFunc, 'function', 'the function was returned successfully!');
+    assert.equal($('#qunit-fixture').hasClass('magic'), true, 'The targeted element has a class named "magic" !');
+
+  });;
+&lt;/script&gt;
+</code></pre>
+<p>The test invokes <code> addMagic()</code> to find the <code>qunit-fixture</code> page element and return a function named <code>returnFunc</code>. We’ve tested for returned functions before only this time, we’re testing for this using <code>typeof</code> in our first <code>assert</code>.</p>
+<p>The second assert tests if the <code>magic</code> class was dynamically added. It uses jQuery’s <code>hasClass</code> functionality to do so.</p>
+<p>The test structure for the three effects is a little different:</p>
+<pre><code class="language-markup">
+&lt;!-- test/tests.html --&gt;
+&lt;script&gt;
+  ...
+  QUnit.module('addMagic() effect tests', function() {
+    QUnit.test('spin() should load "spinning..." into its targeted element', function(assert) {
+      addMagic('qunit-fixture', spin);
+      assert.equal($('#qunit-fixture').html(), 'spinning...', 'The targeted element contains text that says "spinning..."');
+    });
+
+    QUnit.test('sparkle() should load "sparkling..." into its targeted element', function(assert) {
+      addMagic('qunit-fixture', sparkle);
+      assert.equal($('#qunit-fixture').html(), 'sparkling...', 'The targeted element contains text that says "sparkling..."');
+    });
+
+    QUnit.test('rainbow() should load "rainbowing..." into its targeted element', function(assert) {
+      addMagic('qunit-fixture', rainbow);
+      assert.equal($('#qunit-fixture').html(), 'rainbowing...', 'The targeted element contains text that says "rainbowing..."');
+    });
+
+  });
+&lt;/script&gt;
+</code></pre>
+<p>Each test passes an effect to <code>addMagic</code> as a parameter. Since each effect places text inside a page element, we’re using jQuery’s <code>html()</code> function again to look for the existence of that text.</p>
+<p>This time though, we’re wrapping all these tests inside <code>QUnit.module()</code>. This groups these three tests and makes them stand out a little in our test suite, which is a bit more readable.</p>
+<p>So, we have our failing tests now...
+<img src="/img/unit-testing-image-15.jpg" alt="addMagic failing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;"></p>
+<p>Adding this code to <code>app.js</code> makes the tests pass...</p>
+<pre><code class="language-javascript">
+// app.js
+...
+function addMagic(id, effect) {
+  if(!id || !effect) {
+    throw new Error('addMagic() needs an id and effect parameter');
+  } else {
+    var element = document.getElementById(id);
+    element.className += ' magic';
+    return effect(element);
+  }
+}
+
+function spin(getElement){
+  getElement.innerHTML = 'spinning...';
+}
+
+function sparkle(getElement){
+  getElement.innerHTML = 'sparkling...';
+}
+
+function rainbow(getElement){
+  getElement.innerHTML = 'rainbowing...';
+}
+</code></pre>
+<p>We’ve slightly adjusted <code>addMagic()</code> where it throws an error if either of its parameters aren’t passed. We’ve also explicitly returned the <code>effect</code> invocation.</p>
+<p>Next, we create our three very simple effect functions. Again, they just load some text in whatever page element is defined by their <code>getElement</code> parameters.</p>
+<p>We look at our test suite, including the code coverage..
+<img src="/img/unit-testing-image-16.jpg" alt="First addMagic code coverage test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+First addMagic code coverage test image for the learn JavaScript unit testing post</p>
+<p>And we see that the tests pass, but not with 100% code coverage.
+<img src="/img/unit-testing-image-17.jpg" alt="Second addMagic code coverage test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+This is due to our not testing <code>addMagic</code>‘s error throwing functionality. Adding a couple of <code>assert.throws()</code> tests will fix this...</p>
+<pre><code class="language-markup">
+&lt;!-- test/tests.html --&gt;
+&lt;script&gt;
+  ...
+  QUnit.test('"addMagic()" should throw an error if less than 2 parameters are passed', function(assert) {
+
+    assert.throws(function () {
+      addMagic();
+    }, 'an error was thrown because no parameters were passed to "addMagic()"');
+
+    assert.throws(function() {
+      addMagic(spin);
+    }, 'an error was thrown because only one parameter was passed to "addMagic()"');
+
+  });
+&lt;/script&gt;
+</code></pre>
+<p>And looking at our test suite and code coverage confirms this. Note that the grouped “addMagic() effect tests” are moved below these new tests even though the grouped tests are above them in the suite code.</p>
+<img src="/img/unit-testing-image-18.jpg" alt="Second addMagic throw error test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+<p>So we can add this code to <code>scripts.js</code>...</p>
+<pre><code class="language-javascript">
+// scripts.js
+...
+addMagic('unicorn', spin);
+addMagic('fairy', sparkle);
+addMagic('kitten', rainbow);
+</code></pre>
+<p>And copy loads into elements already on the page.</p>
+<p><a name="further-reading"></a></p>
+<h2>Further reading</h2>
+I’ll start with the JS unit test stuff first...
+<ul>
+  <li class="post__list-item"><a href="https://www.amazon.com/gp/product/0321683919/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=kaidez-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0321683919&linkId=dc8b88c6ddc8995efab28bd0dc4ca8e2"><strong>Test-Driven JavaScript Development</strong></a> & <a href="https://www.amazon.com/gp/product/1449323391/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=kaidez-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=1449323391&linkId=1e8169ef34f55c9c2e02a46d63bdf0d3">Testable JavaScript</a>: These two books stand from the others in the JavaScript unit testing worls. The second one is easier to read, but the first one is the most thorough book on the subject. You may want to read Testable first but make sure to read Test-Driven at some point.</li>
+  <li class="post__list-item"><a href="https://code.tutsplus.com/articles/tdd-terminology-simplified--net-30626"><strong>TDD Terminology Simplified</strong></a>: Truthfully? This is list of terms can be applied to unit testing overall and not just TDD. And if you’re concerned that I didn’t cover JavaScript unit testing top to bottom, this list is the next step. For example: we saw earlier that elements which load into <code>qunit-fixture</code> for testing are removed when the tests are done. Keep that in mind, then go to this link and read about “setups” and “teardowns.”</li>
+  <li class="post__list-item"><a href="https://medium.com/javascript-scene/what-every-unit-test-needs-f6cd34d9836d#.oxz430giw"><strong>5 Questions Every Unit Test Must Answer</strong></a>: A general primer from <a href="https://twitter.com/_ericelliott">Eric Elliot</a> on JavaScript unit testing with some smart best practices. Check out how he suggests using <code>equal</code> tests only for a week and his pattern for creating actual/expected tests in constants.</li>
+  <li class="post__list-item"><a href="https://alistapart.com/article/writing-testable-javascript"><strong>Writing Testable Javascript</strong></a>: A nice high-level view by <a href="https://twitter.com/rmurphey">Rebecca Murphey</a> of how to write FP-like code that’s easy to test...also watch <a href="https://www.youtube.com/watch?v=OzjogCFO4Zo">her conference talk of the same name</a>.</li>
+  <li class="post__list-item"><a href="https://github.com/rmurphey/js-assessment"><strong>JS Assessment</strong></a> & <a href="https://www.codewars.com/"><strong>Codewars</strong></a>: The first one is a CLI-powered test (also by Rebecca Murphey) and the second one’s an app. Each one requires you to write code that passes tests before moving forward. Codewars has a badge-like point system that’s pretty cool.</li>
+</ul>
+<p>Here’s some functional programming stuff...</p>
+<ul>
+  <li class="post__list-item"><a href="http://jrsinclair.com/articles/2016/gentle-introduction-to-functional-javascript-intro/"><strong>James Sinclair’s four-part functional programming tutorial</strong></a>: this post only covers the first part...read the whole thing!</li>
+  <li class="post__list-item"><a href="https://medium.com/javascript-scene/tagged/functional-programming"><strong>All of Eric Elliot’s functional programming writings</strong></a>: back to Eric Elliot again, he’s written extensively on the subject, and with great insight.</li>
+  <li class="post__list-item"><a href="http://eloquentjavascript.net/1st_edition/chapter6.html"><strong>Eloquent JavaScript – First Edition</strong></a>, Chapter 6 & <a href="http://eloquentjavascript.net/05_higher_order.html"><strong>Eloquent JavaScript – Second Edition</strong></a>, Chapter 5: both are good, both are slightly different from one another. Read both.</li>
+</ul>
+<p><a name="conclusion"></a></p>
+<h2>Conclusion</h2>
+Any developer can learn JavaScript unit testing. But not until they understand that they can never again place 50 lines of code in a single <code>$(document).ready()</code> block.
+<p>They must realize that using functional programming to create small, testable functions will make them an awesome JS unit tester. And a better developer as well!!!</p>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-main">
+                <h3>kaidez</h3>
+                <p>web development and stuff...</p>
+                
+                <div class="social-links">
+                    <a href="https://twitter.com/kaidez" aria-label="Twitter" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/kaidez" aria-label="GitHub" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/kaigittens" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/posts/">Blog</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="/posts/javascript/">JavaScript</a></li>
+                        <li><a href="/posts/web-development/">Web Development</a></li>
+                        <li><a href="/posts/tutorials/">Tutorials</a></li>
+                        <li><a href="/posts/reviews/">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/feed.xml">RSS Feed</a></li>
+                        <li><a href="/sitemap.xml">Sitemap</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Built with <a href="https://11ty.dev" target="_blank" rel="noopener">11ty</a> and hosted on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+/* Footer Styles */
+.site-footer {
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--space-20);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-12);
+    padding: var(--space-12) 0 var(--space-8);
+}
+
+.footer-main h3 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-3);
+    color: var(--color-text);
+}
+
+.footer-main p {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-6);
+    max-width: none;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius);
+    background: var(--color-bg);
+    color: var(--color-text-muted);
+    transition: all var(--transition-fast);
+    border: 1px solid var(--color-border);
+}
+
+.social-links a:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+}
+
+.footer-section h4 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+    color: var(--color-text);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section li {
+    margin-bottom: var(--space-2);
+}
+
+.footer-section a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-section a:hover {
+    color: var(--color-primary);
+}
+
+.footer-bottom {
+    padding: var(--space-6) 0;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+}
+
+.footer-bottom p {
+    margin-bottom: var(--space-2);
+}
+
+.footer-bottom p:last-child {
+    margin-bottom: 0;
+}
+
+.footer-bottom a {
+    color: var(--color-primary);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+</style>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5549541-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

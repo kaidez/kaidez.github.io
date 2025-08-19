@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kaidez 2013 Site Redesign - kaidez</title>
+    <meta name="description" content="web development and stuff...">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="kaidez 2013 Site Redesign">
+    <meta property="og:description"
+        content="web development and stuff...">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kaidez.com/site-redesign-2013/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+    <meta property="article:publisher" content="http://facebook.com/kaidezblog" />
+    <meta property="article:section" content="Personal" />
+    <meta property="og:image" content="http://www.kaidez.com/img/NaN" />
+    <meta property="og:image:width" content="700" />
+    <meta property="og:image:height" content="300" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaidez" />
+    <meta name="twitter:creator" content="@kaidez" />
+    <meta name="twitter:title" content=" » kaidez" />
+    <meta name="twitter:image" content="http://www.kaidez.com/img/NaN" />
+    <meta name="twitter:description" content="" />
+</head>
+
+<body class="" data-pagefind-body>
+    <header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <a href="/" class="site-title">kaidez</a>
+            
+            <!-- Search Component -->
+            <!-- Simplified Search Component -->
+<div class="search-container">
+    <div id="search" class="pagefind-search"></div>
+</div>
+
+<!-- Load Pagefind -->
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    try {
+        // Simple initialization
+        new PagefindUI({ 
+            element: "#search",
+            showImages: false,
+            excerptLength: 20,
+            resetStyles: false,
+            translations: {
+                placeholder: "Search kaidez for stuff...",
+                zero_results: "Couldn't find [SEARCH_TERM]"
+            }
+        });
+        console.log('Pagefind initialized successfully');
+    } catch (error) {
+        console.error('Pagefind initialization failed:', error);
+    }
+});
+</script>
+
+<style>
+/* Simple search styling */
+.search-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.pagefind-search {
+    width: 100%;
+}
+
+/* Style the Pagefind input */
+.pagefind-ui__search-input {
+    width: 100% !important;
+    padding: var(--space-3) var(--space-4) !important;
+    border: 2px solid var(--color-border) !important;
+    border-radius: var(--border-radius-lg) !important;
+    background: var(--color-bg) !important;
+    color: var(--color-text) !important;
+    font-size: var(--text-base) !important;
+    font-family: var(--font-family-sans) !important;
+}
+
+.pagefind-ui__search-input:focus {
+    border-color: var(--color-primary) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Style the results */
+.pagefind-ui__results {
+    margin-top: var(--space-2) !important;
+    background: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--shadow-lg) !important;
+    max-height: 400px !important;
+    overflow-y: auto !important;
+}
+
+.pagefind-ui__result {
+    padding: var(--space-4) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+}
+
+.pagefind-ui__result:last-child {
+    border-bottom: none !important;
+}
+
+.pagefind-ui__result-link {
+    color: var(--color-text) !important;
+    text-decoration: none !important;
+}
+
+.pagefind-ui__result-link:hover {
+    color: var(--color-primary) !important;
+}
+
+.pagefind-ui__result-title {
+    font-weight: 600 !important;
+    font-size: var(--text-lg) !important;
+    margin-bottom: var(--space-2) !important;
+}
+
+.pagefind-ui__result-excerpt {
+    color: var(--color-text-muted) !important;
+    font-size: var(--text-sm) !important;
+}
+
+.pagefind-ui__result-excerpt mark {
+    background: rgba(37, 99, 235, 0.2) !important;
+    color: var(--color-primary) !important;
+    padding: 0 2px !important;
+    border-radius: 2px !important;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        max-width: 100%;
+    }
+}
+</style>
+            
+            <nav class="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="/coding-best-practices/">Coding Tips</a></li>
+                    <li><a href="/tutorials/">Tutorials</a></li>
+                    <li><a href="/personal/">Personal</a></li>
+                    <li><a href="/reviews/">Reviews</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <main class="main-content">
+        <p>After over 2,000 Git commits, kaidez.com gets a long-overdue redesign. It was a struggle due to limited free time, but it was also a lot of fun and an excellent learning experience.</p>
+<p>The site code is open source and <a href="https://github.com/kaidez/kaidez.com/" title="go to kaidez.com GitHub repo">freely available on GitHub</a>. The repo's <a href="https://github.com/kaidez/kaidez.com/blob/master/README.md" title="read the kaidez.com README on GitHub">README</a> is a lengthy birds-eye view description of the code.</p>
+<p>The README uses a lot of verbose code-speak so a non-verbose (but also lengthy) walk-through is probably needed. So let's proceed with that, shall we?</p>
+<h2 class="tableOfContentsHeader">Table of Contents</h2>
+1. [Goodbye, WordPress...](#wordpress)
+2. [...Hello, Jekyll](#jekyll)
+3. [Design In-Browser](#design-in-browser)
+4. [Mobile First](#mobile-first)
+5. [Overall Design](#overall-design)
+6. [JavaScript...RequireJS Specifically](#RequireJS)
+7. [The Rest Of The JavaScript](#other-javscript)
+8. [Bower](#bower)
+9. [SEO &amp; Accessibility](#seo-accessibility)
+10. [Web Hosting](#web-hosting)
+11. [Grunt &amp; My Deployment Workflow](#grunt-deployment-workflow)
+12. [Post-Launch Tasks](#post-launch-tasks)
+13. [Conclusion](#conclusion)
+<p><a name="wordpress"></a></p>
+<h3>Goodbye, WordPress...</h3>
+<p>My initial plan was to design the site on top of WordPress while severely limiting its role on the front-end. WordPress would oversee the back-end (manage data, optimize SQL, etc.) but do little in terms of managing any JavaScript and CSS. That would be my job, particularly the JavaScript.</p>
+<p>WordPress manages its internal JS libraries in a way that kept me from controlling the JavaScript the way I wanted to (<a href="/requirejs-wordpress/" title="Read kaidez's Using RequireJS In WordPress' post">read more about this</a>). I probably could have lived with this but chose to be anal-retentive about it and moved away from WordPress.</p>
+<p><a name="jekyll" title="go to the jekyll section of this article"></a></p>
+<h3>...Hello, Jekyll</h3>
+<p>If you're a regular GitHub user then you're probably familiar with <a href="http://jekyllrb.com/" title="Visit to the Jekyll site">Jekyll</a>, the blog-aware static site generator. Sites that run using <a href="http://pages.github.com/" title="Learn more about GitHub pages">GitHub Pages</a> give Jekyll its underlying HTML structure, so the word &quot;Jekyll&quot; is regularly thrown around in GitHub circles.</p>
+<p>I used Jekyll to create multiple site layouts using <a href="http://liquidmarkup.org/" title="visit the liquid markup page">Liquid</a>, a templating markup language with some internal logic. Whenever I run <code>jekyll build</code> from the command line while in my project folder, Jekyll utilizes the templates and logic to output a static, production-ready copy of the site.</p>
+<p>The outputted site does some very cool things...here's short list:</p>
+<ul>
+<li>lots of content is written in <a href="http://daringfireball.net/projects/markdown/" title="visit the markdown documentation page">Markdown</a>...it all gets converted to HTML.</li>
+<li>the logic displays posts on the <a href="/">home page</a> in a very &quot;dynamic&quot; way (more on this in a future post).</li>
+<li>four category-specific pages are generated.</li>
+<li>an XML-powered RSS file for syndication is built.</li>
+<li>an HTML site map is created.</li>
+<li>a short list of related posts is placed at the end of each post.</li>
+</ul>
+<p>Ruby is a Jekyll dependency so this site does use two Ruby-based plugins at the development level: one for generating a <a href="http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/" title="tutorial for creating an XML Sitemap for Jekyll">search engine-friendly XML Sitemap,</a> and one used in conjunction with <a href="http://lea.verou.me/" title="visit Lea Verou's personal web site">Lea Verou's</a> excellent <a href="http://prismjs.com/" title="review the PrismJS syntax highlighter plugin">PrismJS syntax highlighter plugin</a>. But Jekyll really does the work of prepping this site's content for deployment.</p>
+<p>Because it generates static sites, Jekyll eliminates the need for SQL queries and server-side script parsing. Combine that with asset minification, applying a cache manifest and using <a href="http://tracking.maxcdn.com/c/72639/3968/378" title="review MaxCDN, a kaidez.com affiliate partner">MaxCDN</a> to serve up static content, kaidez.com loads into a web browser pretty fast. Ads, social networking widgets and images slow things down sometimes, but the site's overall page-load time is still minimal.</p>
+<p>I exported the content from my old WordPress site to Jekyll using the <a href="https://github.com/benbalter/wordpress-to-jekyll-exporter">WordPress to Jekyll Exporter</a>, but the <a href="http://jekyllrb.com/docs/migrations/" title="read the Jekyll migration documentation">Jekyll migration docs</a> lists alternative export methods. Also, <a href="http://vitobotta.com/migrating-from-wordpress-to-jekyll-part-one-why-i-gave-up-on-wordpress/#sthash.qDZ0Y6Qr.dpbs" title="Vito Botta post for migrating from WordPress to Jekyll">Vito Botta's two-part article on importing content from WordPress to Jekyll</a> is <em>the</em> definitive article on the subject.</p>
+<p>Jekyll is increasing in popularity: I'm guessing this is due to the fact that it can <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages">easily create a site which can be hosted on GitHub for free</a>. Also, Jekyll's attracting <a href="https://github.com/mojombo/jekyll/graphs/contributors">lots of contributors</a> that are working together to make the platform better.</p>
+<p>I'm happy with Jekyll but please note that walking away from WordPress was not easy after using it for five years. WordPress did a lot of work via its high-quality plugins...work that's now 100% my responsibility.</p>
+<p>Migrating from WordPress to Jekyll isn't always the &quot;right&quot; solution: <a href="http://css-tricks.com/just-use-insert-cms-still-love-wordpress/" title="Chris Coyier post on CMS software over static site generators">a succinct post from Chirs Coyier</a> sums up why.</p>
+<p>And let's be fair: it's easy to generate static content with WordPress. There would still be some database interaction so Jekyll may implements things faster, but it's possible. Frederick Townes' excellent <a href="http://wordpress.org/plugins/w3-total-cache/" title="Check out the W3 Total Cache">W3 Total Cache plugin</a> performs HTML static conversions quite well.</p>
+<p>Also, Jekyll is definitely geared towards the blogger that likes to write code so in most cases, it probably won't be used for a client solution. WordPress, Drupal, SiteCore and Joomla are still best of breed in this arena, my personal preference being for WordPress.</p>
+<p><a name="design-in-browser"></a></p>
+<h3>Design In-Browser</h3>
+<p>While I did use a pencil and paper to sketch out the site before coding things, I completely disregarded wireframes and PhotoShop mockups.  Reason being, wireframes and mockups don't account for the differences among the various browsers and devices...at least, not well.</p>
+<p>Instead, I designed this site within a browser using various desktop and remote tools to debug against the different browsers and devices. This was easy when I started working in WordPress and even easier when I jumped over to Jekyll.</p>
+<p><a href="http://nimbupani.com/">Divya Manian</a> outlines the design-in-browser process better than me...</p>
+<div class="vidWrapper">
+<div class="centerVideo">
+	<iframe width="560" height="315" src="//www.youtube.com/embed/h52uumn3sZc" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<p><a name="mobile-first"></a></p>
+<h3>Mobile First</h3>
+<p>&quot;Mobile First&quot; has gone from a buzz word to a <em>de facto</em> standard. It basically means &quot;develop and position content for mobile devices before doing so for desktop devices&quot;...this should always be applied to both content strategy and code.</p>
+<p>No issues with applying Mobile First to my content strategy. I did a complete content audit of my previous site based on the ROT principle, then either eliminated lots of content I didn't need or moved it to the bottom of the page.</p>
+<p>Going Mobile First with the code was a bit of problem that still needs to be cleaned up a bit. This site is responsive via CSS3 media queries and I implemented <a href="http://www.jonikorpi.com/leaving-old-IE-behind/">the method outlined by Jon Korpi</a>, coding a vertically thin, non-responsive layout outside the media queries, with the help of <a href="http://sass-lang.com/" title="Learn about the Sass CSS preprocessor">Sass</a>, of course.  All of this is for the benefit of oldIE.</p>
+<p>I may not have implemented this method properly...I ended up writing more code than I planned on. The code &quot;works&quot; but I know it can be neater and need to revisit it.</p>
+<p>Important note: by &quot;oldIE,&quot; I mean Internet Explorer 8 only. The site looks crappy in IE8 at the time of the relaunch, but I'm planning to fix it post-launch.</p>
+<p>In terms of supporting IE versions prior to 8, I'll just paraphrase Shakespeare:</p>
+<blockquote>
+<p><em>&quot;By my head, you don't support IE7 and IE6!!!&quot;</em></p>
+<p><em>&quot;By my heel, I care not!!!&quot;</em></p>
+</blockquote>
+<p>Past all this, some Mobile First things are done right:</p>
+<ul>
+<li>
+<p>no third-party affiliate ads load in the site's mobile view.  Google ads <em>have</em> to load in this view due to their rules and restrictions, but they do so asynchronously...<em>and</em> <a href="https://support.google.com/adsense/answer/3213689?hl=en">responsively</a>. More on that shortly.</p>
+</li>
+<li>
+<p>the site utilizes four vendor fonts but only two are available to the mobile view, resulting in two less server requests.</p>
+</li>
+<li>
+<p>CSS3 gradients, box shadows and text shadows render heavy browser paints that can impend site load time...they appear on the site's tablet and desktop views but are removed from the its mobile view.</p>
+</li>
+</ul>
+<p><a name="overall-design"></a></p>
+<h3>Overall Design</h3>
+<p>Blogs are usually simple in design...I stuck with that rule when redesigning kaidez.com.  I'm fine with the site's overall look &amp; feel but think the header could be better, especially since the two modules at the bottom look (I think) really nice.  I may revisit the header sometime in the future.</p>
+<p>The blue color is just something I came up with, color scheme-wise. I used <a href="http://www.colourlovers.com/palette/2892492/azure_sea.">this color palette over at Colour Lovers as an overall guide</a>.</p>
+<p>The site uses Google's Open Sans and Open Sans Bold fonts (mostly for page content) as well as Robot Condensed (mostly for headers). Some font icons also appear on the page courtesy of <a href="http://fortawesome.github.io/Font-Awesome/icons/">Font Awesome</a>.</p>
+<p>I employed the aforementioned (and awesome) PrismJS for code snippet highlighting. It has <a href="http://prismjs.com/download.html">a great build tool</a> which generates the plugin code needed to implement syntax highlighting wherever you want to on your site.</p>
+<p>I created a <a href="/404.html">404 page</a> with a little humor, but added content to it in the hopes of further engaging whomever lands on it.</p>
+<p>By ignoring oldIE, I was able to apply some CSS3 animations and transitions to the site...although not as much as I wanted to.  I did try to do some things that were more &quot;grand&quot; but ran into cross-browser issues on the modern browsers. So for now, these animations and transitions are limited to some of the link rollovers on the desktop view only.</p>
+<p>I did spend a few hours trying to apply a <a href="http://fltdsgn.com/">flat design</a> to the site, but it's tough. Like <a href="http://www.smashingmagazine.com/2009/07/17/lessons-from-swiss-style-graphic-design/">Swiss/International style</a> before it, flat design is all about designing a whole lot more with a whole lot less...this is easier said than done.</p>
+<p>But while its simplicity is difficult to implement, flat design ties in well with the general simplicity of most blog layouts. So I'll probably go with a flat design next time.</p>
+<p><em>Side note: flat design leads to a higher-performing site...oh, yes it does, for Paul Irish tells us so</em>.</p>
+<div class="vidWrapper">
+	<div class="centerVideo">
+	  <iframe width="420" height="315" src="//www.youtube.com/embed/Z1IqzeA3XXg" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+<p><a name="RequireJS"></a></p>
+<h3>JavaScript...RequireJS Specifically</h3>
+<p>As mentioned earlier, my primary goal while developing this site was to maintain total control over all the front-end code, especially the JavaScript. I'm proud to say I achieved that goal.</p>
+<p>The best thing about this site's JavaScript is that it's not 100% jQuery-dependent...lots of pure JS is implemented. jQuery is certainly used on the site, it just wasn't my starting point for writing JS like it has been in the past.</p>
+<p>Many leaders in the developer community are pushing for other devs to use more pure JavaScript and less jQuery. For my money, <a href="http://remysharp.com/2013/04/19/i-know-jquery-now-what/">Remy Sharp</a> and <a href="http://toddmotto.com/is-it-time-to-drop-jquery-essentials-to-learning-javascript-from-a-jquery-background/">Todd Motto</a> have provided the most compelling arguments here.</p>
+<p>Here's a rundown of how some of the JavaScript is being used on kaidez.com:</p>
+<ul>
+<li>to run PrismJS.</li>
+<li>to power the site's search functionality via the <a href="http://www.tipue.com/search/">Tipue plugin for jQuery</a>.</li>
+<li>to execute the mobile menu's show/hide functionality.</li>
+<li>to create both affiliate ads and the search box off-DOM, then load them onto the page (a DEFINITE future blog post).</li>
+<li>to show and hide the affiliate ads based on media queries with the help of the <a href="http://wicky.nillia.ms/enquire.js/">enquire.js</a>.</li>
+<li>to run client-side form validation.</li>
+<li>to let AJAX process form submissions.</li>
+</ul>
+<p>All of the above-mentioned JavaScript is managed by <a href="http://requirejs.org/">RequireJS</a>, the popular JavaScript module loader. And we need to talk about that...</p>
+<p>At the time of this blog post, there are 16 particular JS files I brought into the site build.  Some are core libraries, some are plugins and some contain code I wrote.</p>
+<p>Some of the code I wrote depends on some of the libraries and plugins. In the past, this meant I would have make sure all these files were listed in <code>&lt;script&gt;</code> tags on my page, and in a specific order to ensure that none of their functionality would break.</p>
+<p>Of course, I would concatenate and minify these 16 files into one, but would still need to ensure that the files were concatenated/minified in the proper order so, again, nothing broke. You have to worry about this stuff when doing JS development.</p>
+<p>RequireJS does all of the worrying for me. I made sure it was properly configured on my page, wrote single code modules, and made sure the modules referenced any libraries and/or plugins it depended on. RequireJS did the rest, including minifying and concatenating things in the proper order.</p>
+<p>RequireJS doesn't manage ALL of this site's JavaScript...we'll discuss that in a minute. But RequireJS manages most of it very well.</p>
+<p>Which is an important point: while it takes optimization seriously, RequireJS' main purpose in life is to allow developers to write JS in a modular, well-organized fashion (its <a href="http://requirejs.org/docs/api.html#usage">documentation</a> is very clear about this purpose	). I wrote singular bits of JavaScript in separate files without worrying about global variable leakage, things loading in the proper order, etc...developing with RequireJS made my life so much easier.</p>
+<p>There's not enough space in this post to discuss the brilliance of RequireJS so <a href="http://requirejs.org/docs/api.html">read the RequireJS API docs</a> so you can get up and running. The previously mentioned JavaScript/WordPress issues were RequireJS-related and are discussed <a href="/requirejs-wordpress/" title="Read kaidez's Using RequireJS In WordPress' post">here</a>. And I MIGHT do a RequireJS screencast in the future...not 100% sure about this yet.</p>
+<p>I also suggest that you <a href="https://gist.github.com/desandro/4686136" title="read this GitHub Gist about RequireJS">read this GitHub Gist</a> where David Desandro from Twitter asked a question that sparked an excellent discussion about the benefits of RequireJS as well as <a href="https://github.com/amdjs/amdjs-api/wiki/AMD" title="Go to the Asynchronous Module Definition Page">AMD</a>, which RequireJS is heavily based upon.</p>
+<p>There are some great comments in the Gist, many by well-known members of the JS Community. Read them all, especially the first comment from <a href="http://twitter.com/cowboy" title="Visit @cowboy A.K.A Ben Alman on Twitter ">@cowboy</a> that perfectly sums up how RequireJS eliminates lots of stress from JavaScript development.</p>
+<p><a name="other-javscript"></a></p>
+<h3>The Rest Of The JavaScript</h3>
+<p>RequireJS doesn't interact with <em>all</em> the site's JavaScipt. It ignores proxy JS bought in by ads and <a href="http://disqus.com/" title="Learn more above the Disqus commenting system">Disqus</a> but there are other things it ignores.</p>
+<p>Modernizr is one such thing.  While your RequireJS file should be placed as to close to the bottom as possible, it's best practice to place Modernizr above the closing <code>&lt;head&gt;</code> tag. The Google Fonts load in using the JS-based <a href="https://github.com/typekit/webfontloader">Google/Typekit Web Font Loader</a> and should be placed at the top of the page before Modernizr.</p>
+<p>The rest of the JavaScript that's outside of the RequireJS process loads asynchronously, i.e., it loads in a manner that doesn't hinder asset loading or content rendering. In this context, note two things:</p>
+<ol>
+<li>
+<p>RequireJS also runs its code asynchronously.</p>
+</li>
+<li>
+<p>the Web Font Loader code actually loads <strong>synchronously</strong>, but <em>can</em> load <strong>asynchronously</strong>. But, <a href="https://github.com/typekit/webfontloader#get-started" title="Read the Web Font Loader documentation">as its documentation states</a>, lots of <a href="http://www.paulirish.com/2009/fighting-the-font-face-fout/" title="Read about FOUT (Flash Of Unstyled Text">FOUTS</a> will be generated if the Loader comes into your page asynchronously.</p>
+</li>
+</ol>
+<p>This other asynchronous code consists of:</p>
+<ul>
+<li>
+<p><a href="https://support.google.com/analytics/answer/1142414?hl=en" title="Learn more about Google Analytics">Google Analytics</a>: watches/analyzes traffic.</p>
+</li>
+<li>
+<p><a href="https://support.google.com/analytics/answer/1142414?hl=en" title="Learn more about Google Webmaster Tools">Google Webmaster Tools</a>: tracks crawl errors, validates XML sitemaps, etc.</p>
+</li>
+<li>
+<p><a href="https://support.google.com/adsense/answer/3221666?hl=en" title="Learn more about Google Adsense">Google Adsense</a>: for loading ads.</p>
+</li>
+<li>
+<p><a href="https://gist.github.com/necolas/1025811" title="Get Nicholas Gallagher's asynchronous social widget code snippet">Social sharing functionality on the post pages</a>: props to Nicholas Gallagher here.</p>
+</li>
+</ul>
+<p>I also have to give props to the Google Dev Team: all their code mentioned here has been in need of a cleanup for the few years leading up to this writing. They certainly cleaned it up.</p>
+<p>Especially the ad code...not only is it async, but it's also <strong>RESPONSIVE!</strong></p>
+<p>Google ads don't scale when the window is resized. Its related code just uses media queries to detect the window width on page-load, then loads in a Google ad based on this detection. Your ads sizes can only be  <a href="https://support.google.com/adsense/answer/2953032?hl=en" title="get Google's approved ad sizes">the ones that Google has already designated</a>.</p>
+<p>All is not perfect with the Google stuff: the Adsense code still loads in a lot of unoptimized assets, causing a bit of a performance hit. But many of these assets load in async (as do the Disqus ones).</p>
+<p>None of that matters to me though...this responsive solution solves a MAJOR problem that many people were having with Google ads. I'm happy with (and respect) what the Google team has done here.
+<a name="bower"></a></p>
+<h3>Bower</h3>
+<p>This site's JavaScript/CSS libraries and frameworks get updated when they need to, but consistently keeping track of the updates is a pain. <a href="http://bower.io" title="Download Bower: a task manager for the web">Bower</a> makes it easy.</p>
+<p>Bower is a browser-based package manager that runs on top of Node. When it's properly configured and you type <code>bower list</code> on the command line from your project folder, Bower checks to see if any of these packages needs to be updated (as well as Bower itself). If any packages need updating, typing <code>bower update &lt;whatever-the-package&gt;</code> into the CLI takes care of the update.</p>
+<p>Bower does not track EVERY library on kaidez.com: it downloads packages from remote repos, primarily those hosted on GitHub. Some packages like Tipue aren't on remote repos...no worries.</p>
+<p><a name="seo-accessibility"></a></p>
+<h3>SEO &amp; Accessibility</h3>
+<p>The two best SEO practices you can implement on your site are 1) create compelling new content, and 2) regularly cultivate your existing content to make it <em>more</em> compelling. Compelling content is primarily (but not singularly) defined by the main search engines as content with a significant amount of external backlinks.</p>
+<p>If your content strategy doesn't implement these two tasks, you don't have a content strategy. And I've definitely gotten slight traffic bumps when I publish even a trivial post so there's definitely something to creating new content.</p>
+<p>So moving forward, I'll try to be more consistent with publishing stuff	 with the goal of making it as standout as possible to garner more external backlinks. This will require lengthy keyword research, running Google all-in-title searches and crafting enticing meta descriptions. I'll also be updating my existing GitHub tutorial post as it's in desperate need of cultivating.</p>
+<p>Still, I did the following SEO technical stuff behind the scenes:</p>
+<ul>
+<li>implemented <a href="http://schema.org" title="Learn more about schema.org">Schema.org</a> data.</li>
+<li>made sure each page had a canonical link.</li>
+<li>generated an XML sitemap for the search engines.</li>
+<li>made sure at least one section had pagination...view this <a href="/pages/">here</a>.</li>
+<li>embedded <a href="http://ogp.me/" title="Learn more about Open Graph protocol">Open Graph</a> protocols.</li>
+<li>signed up for <a href="https://dev.twitter.com/docs/cards" title="Sign up for Twitter Cards">Twitter Cards</a>.</li>
+</ul>
+<p>Making a site accessible to people with disabilities is also a good SEO practice...and something you should just do anyway. So I did the following:</p>
+<ul>
+<li>started marking up the links with a <code>title</code> attribute for easy tab-throughs (this will be &quot;in progress&quot; for a quite while).</li>
+<li>ran some pages through a screen-reader.</li>
+<li>turned off all styles and read the unstyled page content out loud (which is basically what a screen-reader does).</li>
+<li>made sure that any elements that needed to be hidden were done so properly as per some old accessibility suggestions from Yahoo. There are a few spots that I didn't do this, but it's mostly done site-wide.</li>
+</ul>
+<p>If you don't think making your site accessible to people with disabilities is worth your time, you're dead wrong. Accessibility is important...especially on mobile. Austin Seraphin <a href="http://behindthecurtain.us/2010/06/12/my-first-week-with-the-iphone/" title="Austin Seraphin article on iPhone providing great accessibility functions for the disabled">eloquently explains why</a>.</p>
+<p>If you still need convincing after reading that, refer to what <a href="http://www.jenkramer.org/" title="Go to technology instructor Jen Kramer's site">Jen Kramer</a> says:</p>
+<blockquote>
+<p><em>&quot;Websites that are built to be accessible will also be accessible your number one blind user: Google.&quot;</em></p>
+</blockquote>
+<p><a name="web-hosting"></a></p>
+<h3>Web Hosting</h3>
+<p>I'm sticking with my basic <a href="http://www.mediatemple.net#a_aid=5068b81963acf" title="Visit Media Temple: a kaidez.com affiliate">Media Temple</a> Grid Server package but deciding on a web host was really something I struggled with up to the last minute.</p>
+<p>I wanted a hosting package that would run my site as well as let me install things like Node and Ruby.  My Grid Server package doesn't really let me install anything extra so I could either upgrade to Media Temple <a href="http://mediatemple.net/webhosting/vps/managed/#a_aid=5068b81963acf" title="Review Media Temple's DV Managed Package">DV Managed</a> or sign up a with cloud-based host...either <a href="http://www.rackspace.com/" title="Check out Rackspace">Rackspace</a> or <a href="http://aws.amazon.com/" title="Check out Amazon Web Services">Amazon Web Services</a> in this case.</p>
+<p>Going with either DV Managed, Rackspace or AWS meant installing a LAMP stack on my own, which I'd never done up to that point. So I wanted SOME tech support in case I needed help and Rackspace seemed to pride itself on NOT providing any. So they were out.</p>
+<p>Media Temple has EXCELLENT customer service but DV Managed was bit more expensive then a general AWS package. So I passed on upgrading my MT account and planned on hooking up with AWS at some point.</p>
+<p>AWS also doesn't provide tech support but I got a better vibe from them, customer service-wise.  Plus, their popularity is steadily increasing to the point that there's tons of documentation for their various services online. So much so that I figured out how to install a LAMP stack on <a href="http://aws.amazon.com/free/" title="Read more about AWS's free Usage Tier">a (somewhat) free AWS Usage Tier</a>.</p>
+<p>Through its <a href="http://aws.amazon.com/s3/">S3 service</a>, AWS is well-suited for static sites....many people host static sites on S3 and serve their static content off of MaxCDN. <a href="http://kylerush.net/" title="Go to Kyle Rush's site">Kyle Rush</a> from the 2012 Obama campaign runs this setup and has <a href="http://blog.maxcdn.com/supercharge-your-site-with-jekyll-s3-and-maxcdn/" title="Learn how to set up a static site with Jekyll, Amazon S3 and MaxCDN">a great write-up about it</a>.</p>
+<p>My contact form requires PHP, which can't run on S3 unless you <a href="http://docs.aws.amazon.com/aws-sdk-php-2/guide/latest/installation.html" title="Install the Amazon PHP SDK with Composer">install the Amazon PHP SDK with Composer</a>. I was researching how to do this...until I started poking around <a href="https://www.heroku.com/" title="Review the Heroku Cloud Application Platform">Heroku</a>.</p>
+<p>Heroku is insanely awesome. It's a cloud application platform that's &quot;AWS-like&quot; but focuses on creating single-page applications whereas AWS can create SPAs but is focused on creating a whole lot more.</p>
+<p>Heroku will let me do a limited amount of Node/Ruby stuff for free....limited but powerful. I'm still researching how much of it is free but if it's enough, there's no reason to upgrade my current hosting package.</p>
+<p>I'm sticking with my generic, PHP-included Media Temple plan for now and will do some fancy coding stuff on Heroku. But while I took all of the above tech stuff into consideration, I have to say that MT's excellent customer service was a big reason I stayed with them.</p>
+<p>Media Temple recently began offering a <a href="http://mediatemple.net/webhosting/vps/developer/#a_aid=5068b81963acf" title="Review Media Temple's DV Developer Package">DV Developer Package</a> that offers a bare virtual machine. It may be too bare but it still may suit my specific future needs...still researching this as of this post.</p>
+<p><a name="grunt-deployment-workflow"></a></p>
+<h3>Grunt &amp; My Deployment Workflow</h3>
+<p>So far, we've discussed using Jekyll to build out my site for deployment, managing my CSS with Sass, using Bower to manage site runtime dependencies, creating a cache manifest, running Modernizr, using RequireJS to manage/concate/minify a lot of JavaScript and concatenating/minifying other assets.</p>
+<p>All these various processes means various tasks need to run at various times. And instead of manually performing the tasks one-by-one when needed, I've automated all of them under <a href="http://gruntjs.com" title="Go get Grunt: the JavScript task runner">Grunt</a>.</p>
+<p>And as I've told anyone that would listen for the past two months, Grunt is my new God.</p>
+<p>Created by the previously-mentioned <a href="http://benalman.com/" title="Go to Ben Alman's site">cowboy (A.K.A Ben Alman)</a> and similar to things like <a href="http://jasonseifer.com/2010/04/06/rake-tutorial" title="Learn more about Rake">Rake</a>, Grunt is a JavaScript task runner. It runs on top of Node and is locally installed in my project folder. This local installation interacts with a globally-installed Grunt CLI tool.</p>
+<p>A boatload of <a href="http://gruntjs.com/plugins" title="Look through all the Grunt plugins">Grunt plugins</a> have been created by both the community and the Grunt core committers. These plugins let me create tasks within my dev environment, giving it a high level of functionality.</p>
+<p>For example: there's a <a href="https://github.com/gruntjs/grunt-contrib-watch" title="Get the grunt-contrib-watch plugin">grunt-watch plugin</a> that lets me watch for file additions and changes, performing specific tasks when these additions/changes occur. If Bower updates jQuery core, Grunt automatically copies it over to a spot in my project folder. If a .png file is added to a certain folder, Grunt automatically fires up <a href="http://optipng.sourceforge.net/" title="Get optipng">optiping</a> to minify it.</p>
+<p>All the <code>grunt watch</code> stuff is awesome but it's my <code>grunt ppush</code> task where things really rock out. It's the task that triggers the production deployment sequence and works as follows:</p>
+<ol>
+<li>
+<p>The <a href="https://github.com/sindresorhus/grunt-shell" title="Get the grunt-shell plugin">grunt-shell plugin</a> runs a task that executes a bash command that creates a &quot;_deploy&quot; directory in my project folder.</p>
+</li>
+<li>
+<p>The <a href="https://github.com/changer/grunt-targethtml" title="Get grunt-targethtml plugin">grunt-targethtml plugin</a> runs a task that embeds both Google Analytics code and a production-ready copy of the site's main  CSS file to the previously mentioned page layouts.</p>
+</li>
+<li>
+<p>The <a href="https://github.com/dannygarcia/grunt-jekyll" title="Get grunt-jekyll plugin">grunt-jekyll plugin</a> runs a task that uses Jekyll to build the site based on the layouts and dumps the build into &quot;_deploy&quot;.</p>
+</li>
+<li>
+<p>The <a href="https://github.com/tactivos/grunt-cdn" title="Get grunt-cdn plugin">grunt-cdn plugin</a> runs a task that appends the MaxCDN URL to the proper images, CSS and JS files in &quot;_deploy&quot;.</p>
+</li>
+<li>
+<p>The <a href="https://github.com/gruntjs/grunt-contrib-htmlmin" title="Get grunt-contrib-htmlmin plugin">grunt-contrib-htmlmin plugin</a> runs a task that minifies the HTML in &quot;_deploy&quot;.</p>
+</li>
+<li>
+<p>The <a href="https://github.com/gunta/grunt-manifest" title="Get grunt-manifest plugin">grunt-manifest plugin</a> runs a task that builds the cache manifest and dumps it into &quot;_deploy&quot;.</p>
+</li>
+<li>
+<p>The <a href="https://github.com/thrashr888/grunt-sftp-deploy" title="Get grunt-sftp-deploy plugin">grunt-sftp-deploy plugin</a> runs a task that deploys the minified, optimized site build in &quot;_deploy&quot; up to my live site.</p>
+</li>
+<li>
+<p>The grunt-targethtml plugin runs another task that not only removes the Google Analytics code and minified CSS from the templates, but also adds an unminified dev version of the CSS file to the templates.  All this has to be done so the templates can safely build a dev version of the site.</p>
+</li>
+<li>
+<p>The grunt-jekyll plugin runs another task that builds a dev copy of the site. This is really just done as test to see if the previous task properly rebuilt the templates for the dev site and may be removed eventually.</p>
+</li>
+<li>
+<p>The grunt-shell plugin runs another task that executes a bash command that deletes &quot;_deploy&quot; from my project folder.</p>
+</li>
+</ol>
+<p>I'm being bombastic when outlining my deployment sequence like this but am doing so to prove a point. The combination all the above-mentioned Grunt tasks allowed me to craft a powerful, lightweight, highly-customizable IDE that not only lets me work efficiently but made the entire development process FUN!</p>
+<p><a name="post-launch-tasks"></a></p>
+<h3>Post-Launch Tasks</h3>
+<p>If you've ever read <a href="http://www.amazon.com/gp/product/B000SEGEKI/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B000SEGEKI&amp;linkCode=as2&amp;tag=kaidez-20" title="Buy The Pragmatic Programmer from Amazon"><em>The Pragmatic Programmer</em></a>, you're familiar with the term &quot;good enough software&quot;. It means, &quot;the code may not be perfect, but it gets the job done.&quot;  And I do feel that way about some parts of the site.</p>
+<p>Except for the overall neatness of the CSS, I'm fine with the production code. It's optimized for mobile, renders no console errors (although some 3rd-party code does), loads fast, looks and acts great across different browsers/devices (except oldIE-based stuff), utilizes SEO best practices and executes most post-load events at <a href="http://www.smashingmagazine.com/2013/06/10/pinterest-paint-performance-case-study/" title="Smasing Magazine article about browser paint performance">the current recommended target rate of 60 frames per second</a>.</p>
+<p>But I'm obviously critical about the CSS and somewhat critical of how some things are working at the development level.  The &quot;good enough software&quot; principle actually encourages such criticism so here are some things that I want to improve upon at a (not too) later date:</p>
+<ul>
+<li>
+<p><strong>Modify Grunt some more</strong>: Grunt tasks can be configured to some very finite degrees and I know that I can do more in this area. The image minification task is acting odd...need to figure that out. Also, some tasks are repetitive, particularly with the Bower stuff. Grunt has a programmatic API that (I think) can help <a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself" title="What is the DRY principle?">make things DRY</a> but I need to delve into it some more.</p>
+</li>
+<li>
+<p><strong>Clean up the CSS &amp; Sass</strong>: Again, I KNOW that the CSS/Sass in its current format could be cleaned up and optimized.  And I do want to make it work in IE8. My hope is to do all this using <a href="http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/" title="Smashing Magazine Article about OOCSS">OOCSS principles</a>.</p>
+</li>
+<li>
+<p><strong>Make the mobile menu/searchbox run off of CSS transitions instead of jQuery</strong>: when the site's width is set to 568px or less in a media query-enabled browser, both the menu and searchbox will only appear and disappear by clicking on some buttons at the top.This show/hide animation is powered by jQuery but powering it off of CSS3 animations is the more optimal approach (read more about this <a href="http://dev.opera.com/articles/view/css3-vs-jquery-animations/">here</a>). Doing this means restructuring the header and I was too close to being done with the redesign to do all that.  So this may be done later and if so, it will also be an opportunity to redo the header from a styling standpoint.</p>
+</li>
+<li>
+<p><strong>Using Backbone in the contact form</strong>: I'm really itching to use Backbone in a project and started to do so with my contact form, but this would add rendering/event weight to the form's performance and be too much.  I still want to use Backbone though so I may do this in the future.</p>
+</li>
+<li>
+<p><strong>A better deployment method</strong>: if your Jekyll site content is more than just a home page and blog posts AND is hosted anyplace other than GitHub, you may have to redeploy the ENTIRE site every time you make a change...even a small one. There are ways to use Git commit hooks to deploy your site after it's pushed up to GitHub, but it's tough to do with Jekyll.  Still researching this.</p>
+</li>
+</ul>
+<p><a name="conclusion"></a></p>
+<h3>Conclusion</h3>
+<p>Utilizing all these dev tools &amp; techniques was just as rewarding as redesigning the site. I received a WHOLE lot of education by doing all this and am the better developer for it.</p>
+<p>Thanks for reading this very VERY long post and feel free to ask me questions!!!</p>
+<p>-kdz</p>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-main">
+                <h3>kaidez</h3>
+                <p>web development and stuff...</p>
+                
+                <div class="social-links">
+                    <a href="https://twitter.com/kaidez" aria-label="Twitter" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/kaidez" aria-label="GitHub" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/kaigittens" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/posts/">Blog</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="/posts/javascript/">JavaScript</a></li>
+                        <li><a href="/posts/web-development/">Web Development</a></li>
+                        <li><a href="/posts/tutorials/">Tutorials</a></li>
+                        <li><a href="/posts/reviews/">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/feed.xml">RSS Feed</a></li>
+                        <li><a href="/sitemap.xml">Sitemap</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Built with <a href="https://11ty.dev" target="_blank" rel="noopener">11ty</a> and hosted on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+/* Footer Styles */
+.site-footer {
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--space-20);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-12);
+    padding: var(--space-12) 0 var(--space-8);
+}
+
+.footer-main h3 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-3);
+    color: var(--color-text);
+}
+
+.footer-main p {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-6);
+    max-width: none;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius);
+    background: var(--color-bg);
+    color: var(--color-text-muted);
+    transition: all var(--transition-fast);
+    border: 1px solid var(--color-border);
+}
+
+.social-links a:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+}
+
+.footer-section h4 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+    color: var(--color-text);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section li {
+    margin-bottom: var(--space-2);
+}
+
+.footer-section a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-section a:hover {
+    color: var(--color-primary);
+}
+
+.footer-bottom {
+    padding: var(--space-6) 0;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+}
+
+.footer-bottom p {
+    margin-bottom: var(--space-2);
+}
+
+.footer-bottom p:last-child {
+    margin-bottom: 0;
+}
+
+.footer-bottom a {
+    color: var(--color-primary);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+</style>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5549541-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

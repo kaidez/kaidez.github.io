@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Web Development Best Practices &amp;#8211; Starting Tips - kaidez</title>
+    <meta name="description" content="web development and stuff...">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mobile Web Development Best Practices &amp;#8211; Starting Tips">
+    <meta property="og:description"
+        content="web development and stuff...">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kaidez.com/mobile-web-development-best-practices-starting-tips/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+    <meta property="article:publisher" content="http://facebook.com/kaidezblog" />
+    <meta property="article:section" content="Personal" />
+    <meta property="og:image" content="http://www.kaidez.com/img/NaN" />
+    <meta property="og:image:width" content="700" />
+    <meta property="og:image:height" content="300" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaidez" />
+    <meta name="twitter:creator" content="@kaidez" />
+    <meta name="twitter:title" content=" » kaidez" />
+    <meta name="twitter:image" content="http://www.kaidez.com/img/NaN" />
+    <meta name="twitter:description" content="" />
+</head>
+
+<body class="" data-pagefind-body>
+    <header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <a href="/" class="site-title">kaidez</a>
+            
+            <!-- Search Component -->
+            <!-- Simplified Search Component -->
+<div class="search-container">
+    <div id="search" class="pagefind-search"></div>
+</div>
+
+<!-- Load Pagefind -->
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    try {
+        // Simple initialization
+        new PagefindUI({ 
+            element: "#search",
+            showImages: false,
+            excerptLength: 20,
+            resetStyles: false,
+            translations: {
+                placeholder: "Search kaidez for stuff...",
+                zero_results: "Couldn't find [SEARCH_TERM]"
+            }
+        });
+        console.log('Pagefind initialized successfully');
+    } catch (error) {
+        console.error('Pagefind initialization failed:', error);
+    }
+});
+</script>
+
+<style>
+/* Simple search styling */
+.search-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.pagefind-search {
+    width: 100%;
+}
+
+/* Style the Pagefind input */
+.pagefind-ui__search-input {
+    width: 100% !important;
+    padding: var(--space-3) var(--space-4) !important;
+    border: 2px solid var(--color-border) !important;
+    border-radius: var(--border-radius-lg) !important;
+    background: var(--color-bg) !important;
+    color: var(--color-text) !important;
+    font-size: var(--text-base) !important;
+    font-family: var(--font-family-sans) !important;
+}
+
+.pagefind-ui__search-input:focus {
+    border-color: var(--color-primary) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Style the results */
+.pagefind-ui__results {
+    margin-top: var(--space-2) !important;
+    background: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--shadow-lg) !important;
+    max-height: 400px !important;
+    overflow-y: auto !important;
+}
+
+.pagefind-ui__result {
+    padding: var(--space-4) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+}
+
+.pagefind-ui__result:last-child {
+    border-bottom: none !important;
+}
+
+.pagefind-ui__result-link {
+    color: var(--color-text) !important;
+    text-decoration: none !important;
+}
+
+.pagefind-ui__result-link:hover {
+    color: var(--color-primary) !important;
+}
+
+.pagefind-ui__result-title {
+    font-weight: 600 !important;
+    font-size: var(--text-lg) !important;
+    margin-bottom: var(--space-2) !important;
+}
+
+.pagefind-ui__result-excerpt {
+    color: var(--color-text-muted) !important;
+    font-size: var(--text-sm) !important;
+}
+
+.pagefind-ui__result-excerpt mark {
+    background: rgba(37, 99, 235, 0.2) !important;
+    color: var(--color-primary) !important;
+    padding: 0 2px !important;
+    border-radius: 2px !important;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        max-width: 100%;
+    }
+}
+</style>
+            
+            <nav class="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="/coding-best-practices/">Coding Tips</a></li>
+                    <li><a href="/tutorials/">Tutorials</a></li>
+                    <li><a href="/personal/">Personal</a></li>
+                    <li><a href="/reviews/">Reviews</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <main class="main-content">
+        <p>My last two articles, reviewing my work for both <a href="http://kaidez.com/almay-facebook-page/">the Almay/Facebook project</a> and <a href="http://kaidez.com/mitchum-html5-site/">the new Mitchum site</a>, have tried to drive the same point home: <strong>it’s good to apply mobile web development best practices when coding up a website, even if the site is only meant for desktop browsers.</strong> This article expands on that point.</p>
+<p>Here are the topics for this article:</p>
+<ul>
+<li><a href="#why">Why We Need To Code For Mobile</a></li>
+<li><a href="#list">The List of Tactics</a></li>
+<li><a href="#rule">The Golden Rule Of Site Speed</a></li>
+<li><a href="#images">The Images</a></li>
+<li><a href="#pageElements">The Page Elements</a></li>
+<li><a href="#tweak">Tweak All The Files</a></li>
+<li><a href="#compress">Compress The Files</a></li>
+<li><a href="#ySlowPageSpeed">YSlow &amp; Page Speed</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+<h2 id="why">Why We Need To Code For Mobile</h2>
+<p>There are two good reasons for you to start “thinking mobile” when writing code:</p>
+<ol>
+<li>applying mobile development tactics to a desktop-based website results in a site that loads faster.</li>
+<li>in April 2010, <a href="http://googlewebmastercentral.blogspot.com/2010/04/using-site-speed-in-web-search-ranking.html">Google announced that site speed would be factored into their search algorithm</a>. They were only doing this for 1% of sites at the time of the announcement and I can’t find any statements by Google saying that the number has changed. But you can bet that it will increase as mobile usage, which is VERY dependent on fast-loading sites, also increases.</li>
+</ol>
+<h2 id="list">The List of Tactics</h2>
+<p>Following the suggestions mentioned in <a href="http://developer.yahoo.com/performance/rules.html"> YDN’s “Best Practices for Speeding Up Your Web Site</a>” article is the best way to begin building some best practices into your coding habits. The article lists many things but for now, let’s just focus on some <em>beginning</em> tactics:</p>
+<ul>
+<li>optimize all your photos and graphic files for fast loading</li>
+<li>make sure each page has as few page elements as possible</li>
+<li>remove code that you’re not using</li>
+<li>compress your files</li>
+<li>constantly test your page speed with <a href="http://developer.yahoo.com/yslow/">Yahoo’s YSlow tool</a> and <a href="http://code.google.com/speed/page-speed/">Google’s Page Speed tool</a></li>
+</ul>
+<p>This outlines the “mobile thinking” method I used when doing the Almay/Facebook project I mentioned…let’s walk through that.</p>
+<p>First, let’s look at the <a href="http://www.facebook.com/almay?sk=app_227757730571729">What’s New section on Almay’s Facebook page</a> which is three pages long and the end result of all this “mobile thinking.” Feel free to review it as you’re reading.</p>
+<p>Next, let’s look the golden rule of site speed…</p>
+<h2 id="rule">The Golden Rule Of Site Speed</h2>
+<p>In 2010, the Yahoo User Interface team ran <a href="http://www.yuiblog.com/blog/2010/07/12/mobile-browser-cache-limits-revisited/">thorough tests on the cache limits of the most-popular mobile devices</a>. They found that the iPad running iOS 3.2 had the lowest limit, only caching elements that were 25.6kb or less.</p>
+<p>It’s important to note that newer iOS devices have, at least, <em>double</em> this cache limit. It’s also important to note that these tests show that devices with an older iOS didn’t cache anything at all, affecting older iPhones. And, interestingly enough, the cache limit for the Android 2.1 OS and up can go up to a whopping <em>2MB!!!</em></p>
+<p>Therefore, the Golden Rule Site Speed is to <strong>try to keep the page element file sizes at 25.6kb or lower</strong>: this was my mindset during the Almay/Facebook project. Older iPhones can’t cache anything at all: there was nothing I could do about this so I didn’t worry about it.</p>
+<h2 id="images">The Images</h2>
+<p>With this file size limit in mind, I created image sprites for almost all the site images. I basically compiled a lot of my images into one image like this:</p>
+<p>[![Almay Image Sprite][19]][19]</p>
+<p>[]: /img/copyArrowConcealerSprite.png
+[19]: /img/copyArrowConcealerSprite.png</p>
+<p>As you can see, this 24kb transparent PNG bundles six images used on the Almay Facebook page, most of which will be used on all three pages of the Almay/Facebook page. I basically used CSS to display certain parts of it when I needed to, while effectively blocking out the others.</p>
+<p>Since its file size is less than 25.6kb, the image will be stored in browser cache for most mobile devices. So when it’s needed on other pages, it will be pulled from the cache instead of getting called from the server. <strong>The less calls made to the server, the faster the site will be.</strong></p>
+<p>There are tons of great sprite tutorials out there so there’s no need for me to create another one. This <a href="http://css-tricks.com/css-sprites/">sprite tutorial at CSS Tricks</a> is simple, yet descriptive. Give it a read.</p>
+<h2 id="pageElements">The Page Elements</h2>
+<p>As you’re coding, keep a constant eye on how many page elements, or DOM elements, are on the page. A page element is any tag that you have on the page: , , , etc. The less you have, the faster the page loads.</p>
+<p>Using the Console in either Firebug for Firefox or Google Chrome Dev Tools is the easiest way to do this. Let’s use the one in Chrome tools:</p>
+<ul>
+<li>open your page in Google Chrome</li>
+<li>right-click on somewhere on it and click “Inspect Element”</li>
+<li>click on the “Console” Button</li>
+<li>a command-line prompt will open…type the following line:</li>
+</ul>
+<p><code>document.getElementsByTagName(&quot;*&quot;).length</code></p>
+<p>What this line is saying is:</p>
+<blockquote>
+<ul>
+<li>“Go through the entire page and search for all the page elements with a tag name. We definitely want <em>all</em> of them so we’ll add a wildcard symbol, which is “*”. We also want to see the exact number of how many you found, so we’ll end our command with “length.”</li>
+</ul>
+</blockquote>
+<p><a href="/img/console.png"><img src="/img/console.png" alt="Chrome Console Used for Almay/Facebook project"></a>
+By doing all of this, I got the page down to 44 elements, which is great! But...</p>
+<p>...while having a low amount of page elements is important to site speed, I don’t see them as weighing the page down TOO much. The YDN article points out that the Yahoo! home page loads pretty fast and it has a little less than 700 elements. Yes, the elements should be marked up correctly, but I wouldn’t spend a whole lot of time keeping the total page elements down when you have other things to do. I say, track it…don’t over-think it.</p>
+<h2 id="tweak">Tweak All The Files</h2>
+<p>The less code on your page, the smaller its final file size will be. It’s that simple.</p>
+<p>I attached the <a href="http://html5boilerplate.com/docs/#The-style">HTML5 CSS Reset file that comes with HTML5 Boilerplate</a> to these pages, which not only makes your site more cross-browser compliant, but also safely renders the newer HTML5 elements on the page without issue.</p>
+<p>At a lowly 9.6kb, this file follows the Golden Rule. But I still made it smaller by doing the following:</p>
+<ul>
+<li>the stylesheet adds code for CSS3 media queries…I didn’t create media queries so I deleted that code.</li>
+<li>the stylesheet adds code for that target’s Internet Explorer 6…I didn’t code for IE6 so I deleted that code.</li>
+<li>the stylesheet adds a lot of extra CSS classes that I didn’t even come close to using so I deleted that code.</li>
+<li>Page Speed (which I’ll discuss shortly) showed me which CSS code wasn’t being used so I deleted that code.</li>
+</ul>
+<h2>Compress The Files</h2>
+<p>After you’ve tweaked the files as much as you can tweak them, it’s time to compress them, or, “minify” them. Using <a href="http://html5boilerplate.com/docs/#Build-script">HTML5 Boilerplate’s build script</a> is the best way to achieve this.</p>
+<p>This script does many things: removes unreferenced images, combines multiple CSS files into one file, runs the same combination process for JS files and so on. It also removes whitespace from files and shrinks the images using <a href="http://optipng.sourceforge.net/">optiping</a> and <a href="http://jpegclub.org/jpegtran/">jpegtran</a>: for this project, these last two things can in handy.</p>
+<p>If you run the build script on a Mac OS 10.x machine, it will only run on a command line via the Terminal application. If you run it on a PC you can run it either on a command line via DOS or with a batch script that comes with the Boilerplate template.</p>
+<p>IMPORTANT POINT: if you saved your graphic files using Photoshop’s “Save for Web and Devices…” functionality or something similar, the build script won’t shrink them anymore than that. There’s only so far that you can compress images and saving them out with this functionality takes them that far.</p>
+<h2 id="ySlowPageSpeed">YSlow & Page Speed</h2>
+<p>As you’re coding, you should use Yahoo’s YSlow and Google’s Page Speed to estimate your site speed. Both are browser plugins for both Chrome and Firefox that scan your code and, based on its findings, grades how optimized for speed to determine how optimized it is.</p>
+<p>YSlow grades site speed from A to F while Page Speed grades it from 0 to 100. So obviously, the higher the grade your site receives, the more optimized it is.</p>
+<p>After tweaking images, deleting code, limiting page elements and minifying files, the Almay/Facebook earned a B from YSlow and an 85 from Page Speed. Not the highest marks, but good for now.</p>
+<p>YSlow for Almay/Facebook Page</p>
+<p><a href="/img/Yslow.png"><img src="/img/Yslow.png" alt="YSlow for Almay/Facebook Page"></a></p>
+<p>Page Speed for Almay/Facebook Page</p>
+<p><a href="/img/PageSpeed.png"><img src="/img/PageSpeed.png" alt="Page Speed for Almay/Facebook Page"></a></p>
+<p>The are two reasons for the B/85 are:</p>
+<ul>
+<li><strong>No content delivery network (CDN) to store images and files</strong> – we have one at Revlon but due to the depth of projects among the web team, we couldn’t configure it in time.</li>
+<li><strong>No gzip compression</strong> – gzip compression is server-side functionality that compresses all the site files hosted on your server. This Almay/Facebook content runs on a .NET/IIS setup so setting gzip up would have meant adding the related code to the web.config file,testing it in a development environment, then pushing it to the live site…again, no time.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>These are beginning tactics that mostly deal with front end code: there are many ways to speed things up on your web host as well. But if you’re just starting to “think mobile,” start with these steps, then ramp up on the server stuff.</p>
+<p>We’re talking about the front end code I created for this Facebook project, but not Facebook itself. I have some things to say about this, none of it good. <a href="http://kaidez.com/2-bad-facebook-app-things/">That will be the next post</a>.</p>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-main">
+                <h3>kaidez</h3>
+                <p>web development and stuff...</p>
+                
+                <div class="social-links">
+                    <a href="https://twitter.com/kaidez" aria-label="Twitter" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/kaidez" aria-label="GitHub" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/kaigittens" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/posts/">Blog</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="/posts/javascript/">JavaScript</a></li>
+                        <li><a href="/posts/web-development/">Web Development</a></li>
+                        <li><a href="/posts/tutorials/">Tutorials</a></li>
+                        <li><a href="/posts/reviews/">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/feed.xml">RSS Feed</a></li>
+                        <li><a href="/sitemap.xml">Sitemap</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Built with <a href="https://11ty.dev" target="_blank" rel="noopener">11ty</a> and hosted on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+/* Footer Styles */
+.site-footer {
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--space-20);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-12);
+    padding: var(--space-12) 0 var(--space-8);
+}
+
+.footer-main h3 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-3);
+    color: var(--color-text);
+}
+
+.footer-main p {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-6);
+    max-width: none;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius);
+    background: var(--color-bg);
+    color: var(--color-text-muted);
+    transition: all var(--transition-fast);
+    border: 1px solid var(--color-border);
+}
+
+.social-links a:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+}
+
+.footer-section h4 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+    color: var(--color-text);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section li {
+    margin-bottom: var(--space-2);
+}
+
+.footer-section a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-section a:hover {
+    color: var(--color-primary);
+}
+
+.footer-bottom {
+    padding: var(--space-6) 0;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+}
+
+.footer-bottom p {
+    margin-bottom: var(--space-2);
+}
+
+.footer-bottom p:last-child {
+    margin-bottom: 0;
+}
+
+.footer-bottom a {
+    color: var(--color-primary);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+</style>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5549541-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

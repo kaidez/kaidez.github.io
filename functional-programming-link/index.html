@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup Link Functionality with Functional Programming - kaidez</title>
+    <meta name="description" content="web development and stuff...">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Setup Link Functionality with Functional Programming">
+    <meta property="og:description"
+        content="web development and stuff...">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kaidez.com/functional-programming-link/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+    <meta property="article:publisher" content="http://facebook.com/kaidezblog" />
+    <meta property="article:section" content="Personal" />
+    <meta property="og:image" content="http://www.kaidez.com/img/NaN" />
+    <meta property="og:image:width" content="700" />
+    <meta property="og:image:height" content="300" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaidez" />
+    <meta name="twitter:creator" content="@kaidez" />
+    <meta name="twitter:title" content=" » kaidez" />
+    <meta name="twitter:image" content="http://www.kaidez.com/img/NaN" />
+    <meta name="twitter:description" content="" />
+</head>
+
+<body class="" data-pagefind-body>
+    <header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <a href="/" class="site-title">kaidez</a>
+            
+            <!-- Search Component -->
+            <!-- Simplified Search Component -->
+<div class="search-container">
+    <div id="search" class="pagefind-search"></div>
+</div>
+
+<!-- Load Pagefind -->
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    try {
+        // Simple initialization
+        new PagefindUI({ 
+            element: "#search",
+            showImages: false,
+            excerptLength: 20,
+            resetStyles: false,
+            translations: {
+                placeholder: "Search kaidez for stuff...",
+                zero_results: "Couldn't find [SEARCH_TERM]"
+            }
+        });
+        console.log('Pagefind initialized successfully');
+    } catch (error) {
+        console.error('Pagefind initialization failed:', error);
+    }
+});
+</script>
+
+<style>
+/* Simple search styling */
+.search-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.pagefind-search {
+    width: 100%;
+}
+
+/* Style the Pagefind input */
+.pagefind-ui__search-input {
+    width: 100% !important;
+    padding: var(--space-3) var(--space-4) !important;
+    border: 2px solid var(--color-border) !important;
+    border-radius: var(--border-radius-lg) !important;
+    background: var(--color-bg) !important;
+    color: var(--color-text) !important;
+    font-size: var(--text-base) !important;
+    font-family: var(--font-family-sans) !important;
+}
+
+.pagefind-ui__search-input:focus {
+    border-color: var(--color-primary) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Style the results */
+.pagefind-ui__results {
+    margin-top: var(--space-2) !important;
+    background: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--shadow-lg) !important;
+    max-height: 400px !important;
+    overflow-y: auto !important;
+}
+
+.pagefind-ui__result {
+    padding: var(--space-4) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+}
+
+.pagefind-ui__result:last-child {
+    border-bottom: none !important;
+}
+
+.pagefind-ui__result-link {
+    color: var(--color-text) !important;
+    text-decoration: none !important;
+}
+
+.pagefind-ui__result-link:hover {
+    color: var(--color-primary) !important;
+}
+
+.pagefind-ui__result-title {
+    font-weight: 600 !important;
+    font-size: var(--text-lg) !important;
+    margin-bottom: var(--space-2) !important;
+}
+
+.pagefind-ui__result-excerpt {
+    color: var(--color-text-muted) !important;
+    font-size: var(--text-sm) !important;
+}
+
+.pagefind-ui__result-excerpt mark {
+    background: rgba(37, 99, 235, 0.2) !important;
+    color: var(--color-primary) !important;
+    padding: 0 2px !important;
+    border-radius: 2px !important;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        max-width: 100%;
+    }
+}
+</style>
+            
+            <nav class="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="/coding-best-practices/">Coding Tips</a></li>
+                    <li><a href="/tutorials/">Tutorials</a></li>
+                    <li><a href="/personal/">Personal</a></li>
+                    <li><a href="/reviews/">Reviews</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <main class="main-content">
+        <p><a href="/samples/functional-programming-click-tutorial/">See the demo »</a> <a href="https://github.com/kaidez/functional-programming-click-tutorial/">Grab the code from Github »</a></p>
+<p>I lost my WordPress blog due to a sloppy, &quot;newbie-to-databases&quot; error. I've been rebuilding it slowly with <a href="https://jekyllrb.com/">Jekyll</a>, adding new functionality here and there.</p>
+<p>One thing I added was on the homepage, where post snippets inside <code>div</code>s go to a certain link when they get clicked.  To apply that functionality to <em>ALL</em> those links, functional programming made sense.</p>
+<p>The file structure looks like this, roughly:</p>
+<pre class=" language-markup">
+ <code class=" language-markup">
+├── build
+|   ├── 01-post
+|       └── index.html
+|   ├── 02-post
+|       └── index.html
+|   ├── 03-post
+|       └── index.html
+|   ├── 04-post
+|       └── index.html
+|   └── bundle.js
+|   └── index.html
+|   └── styles.css
+├── js-build
+|   ├── helpers.js
+|   └── index.js
+├── node_modules
+├── .babelrc
+├── package.json
+└── webpack.config.js
+ </code>
+</pre>
+<p>The best way to start understand the code is by looking at <code>build/index.html</code>:</p>
+<pre class=" language-markup">
+ <code class=" language-markup">
+&lt;!-- build/index.html --&gt;
+
+<!DOCTYPE html>
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+  &lt;title&gt;Functional Programming Click Tutorial&lt;/title&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;div class="post-link-hook" data-url="01-post"&gt;
+   The link to the first post.
+  &lt;/div&gt;
+
+  &lt;div class="post-link-hook" data-url="02-post"&gt;
+   The link to the second post.
+  &lt;/div&gt;
+
+  &lt;div class="post-link-hook" data-url="03-post"&gt;
+   The link to the third post.
+  &lt;/div&gt;
+
+  &lt;div class="post-link-hook" data-url="04-post"&gt;
+   The link to the fourth post.
+  &lt;/div&gt;
+
+ &lt;script type="text/javascript" src="bundle.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+  </code>
+</pre>
+<p>Note that all the <code>div</code> tags have a <code>post-link-hook</code> class and a <code>data-url</code> attribute. Our JavaScript will use both of these things make the <code>div</code>s clickable links without the need for an <code>a</code> tag.</p>
+<p>The core JavaScript is in <code>build/bundle.js</code> file but we'll discuss it shortly. The styles are in the <code>build/styles.css</code> and they're pretty basic:</p>
+<pre><code class="language-css">
+/* build/styles.css */
+
+.post-link-hook {
+  width: 400px;
+  height: 72px;
+  margin-bottom: 20px;
+  padding:6px;
+
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+ </code>
+</pre>
+<p>Very basic styles here that are applied to all the <code>div</code> tags. I should point out that <code>div</code>s have a <code>cursor: pointer</code> setting, allowing for a link hand cursor to appear when they're hovered over, making them act like <code>a</code> tags.</p>
+<p>Our code uses ES6 things like <code>const</code>, <code>let</code>, arrow functions and object destructuring. The (current) popular way to make this code cross-browser compatible is with <a href="https://webpack.js.org/">webpack</a> and <a href="http://babeljs.io/">Babel</a>.</p>
+<p>The setup for webpack/Babel starts in <code>package.json</code>:</p>
+<pre><code class="language-json">
+// package.json
+
+{
+  "name": "kaidez.com",
+  "version": "3.0.0",
+  "description": "Personal blog of Kai Gittens",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "webpack": "^3.5.5"
+  }
+}
+ </code>
+</pre>
+<p>The three key things here are:</p>
+<ol class="post-content__list">
+  <li class="post-content--list-item">
+    The <code>main</code> property which is optional here. It's the entry point for the webpack build, which works even if this property isn't here.  But doing so is a <em>de facto</em> webpack best practice in terms of documenting what the entry point is.
+  </li>
+  <li class="post-content--list-item">
+    The <code>scripts</code> property which contains two tasks: <code>build</code> which builds out the production-ready <code>build/bundle.js</code> file via webpack, and <code>watch</code>, which watches for changes to the your <code>.js</code> source files and runs that build.  These source files are in the <code>js-build</code> directory listed above and the tasks can be run using either <a href="https://yarnpkg.com/">Yarn</a> or <a href="https://www.npmjs.com/">npm</a>...I used Yarn to run <code>watch</code>.
+  </li>
+  <li class="post-content--list-item">
+    The <code>devDependencies</code> property which provides the packages needed to let webpack build ES6 out to the more cross-browser friendly ES5 syntax.
+  </li>
+</ol>
+<p>The <code>.babelrc</code> file uses Babel's default settings to transform ES6 syntax to ES5 syntax.</p>
+<pre><code class="language-js">
+// .babelrc
+{
+  "presets": ["env"]
+}
+</code></pre>
+<p><code>webpack.config.js</code> looks like this:</p>
+<pre><code class="language-js">
+// webpack.config.js
+
+const path = require('path');
+
+module.exports = {
+  module : {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: {
+         loader: 'babel-loader'
+        }
+      }
+    ]
+  },
+  entry: './js-build/index.js',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'build')
+  }
+};
+</code></pre>
+<p>webpack will look at the entry point of the file, <code>js-build/index.js</code>, which lists any dependency files needed to build out our site's JavaScript code. It will then transform any ES6 into ES5, and save things out in a file named <code>build/bundle.js</code>.</p>
+<p>That <code>js-build/index.js</code> entry point file is real simple due to the small amount of code here. Entry point files are always much more detailed, but this simple one looks like this:</p>
+<pre><code class="language-js">
+// js-build/index.js
+
+import { divClick } from "./helpers"
+
+// Run divClick code
+divClick
+</code></pre>
+<p>I'm using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">ES6 destructuring</a> to import <code>divClick</code> from this file's only dependency: <code>helpers.js</code>. And <code>helpers.js</code> contains the core code for our link functionality:</p>
+<pre><code class="language-js">
+// js-build/helper.js
+
+const getPostDiv =  document.querySelectorAll(".post-link-hook");
+
+const doEventOnElement = (element, getEvent, fn) => {
+  for (let i = 0; i < element.length; i++) {
+    element[i].addEventListener(getEvent, event => {
+      fn(element[i])
+    })
+  }
+}
+
+function goToPage(el) {
+  window.location = el.dataset.url
+}
+
+export const divClick = doEventOnElement(getPostDiv, 'click', goToPage)
+</code></pre>
+<p>Breaking this code down...</p>
+<pre><code class="language-js">
+const getPostDiv =  document.querySelectorAll(".post-link-hook");
+...
+</code></pre>
+<p><code>getPostDiv</code> refers to any page elements of with a class name of <code>post-link-hook</code>, which is all the <code>div</code>s in <code>index.html</code>. <code>getPostDiv</code> returns this group of elements as an array.</p>
+<pre><code class="language-js">
+...
+const doEventOnElement = (element, getEvent, fn) => {
+  for (let i = 0; i < element.length; i++) {
+    element[i].addEventListener(getEvent, event => {
+     fn(element[i])
+    })
+  }
+}
+...
+</code></pre>
+<p><code>doEventOnElement</code> is a function that takes our <strong><em>elements array</em></strong> and builds functionality where performing an <strong><em>event</em></strong> on each element (like <code>click</code>) runs a <strong><em>function</em></strong>.</p>
+<ul class="post-content__list">
+ <li class="post-content--list-item">The <code>element</code> parameter refers to the element array</li>
+ <li class="post-content--list-item">The <code>getEvent</code> parameter refers to the event</li>
+ <li class="post-content--list-item">The <code>fn</code> parameter refers to the function</li>
+</ul>
+<p><code>doEventOnElement</code> loops through the array items and places an event listener on each item. The event listener runs the event which, again, is defined by the <code>getEvent</code> parameter.</p>
+<p><code>doEventOnElement</code> also allows a callback function to run our other function defined by <code>fn</code>.  And <code>fn</code> takes a parameter as well: the <code>element</code> parameter we defined in the beginning.</p>
+<p>I get that this MIGHT be confusing, but walking through the <code>goToPage</code> function may clarify things:</p>
+<pre><code class="language-js">
+...
+function goToPage(el) {
+  window.location = el.dataset.url
+}
+...
+</code></pre>
+<p><code>goToPage</code> will be the function that runs when a <code>div</code> is clicked. Its job is to go to a particular web page.</p>
+<p>It does this by accepting a parameter <code>el</code>, which is expected to be a page element. <code>el</code> is expected to have a <code>data-url</code> attribute that can be accessed by looking at <code>el.dataset.url</code> which, by the way, all our <code>div</code> tags have.</p>
+<p>Once <code>goToPage</code> resolves all that, <code>goToPage</code> loads  <code>el.dataset.url</code> as a relative URL with the help of the <code>window.location</code> property. It will then go to that page in the browser.</p>
+<pre><code class="language-js">
+...
+export const divClick = doEventOnElement(getPostDiv, 'click', goToPage)
+</code></pre>
+<p>We create a constant called <code>divClick</code>. It's exported out as dependency, which we saw in <code>js-build/index.js</code>.</p>
+<p><code>divClick</code> contains an instance of <code>doEventOnElement()</code> which takes three parameters:</p>
+<ol class="post-content__list">
+  <li class="post-content--list-item">
+   <code>getPostDiv</code> which is the constant defined earlier and represents the elements that should be affected by our code. It's an array list of all the <code>div</code> tags with the <code>post-link-hook</code> class.
+  </li>
+  <li class="post-content--list-item">
+   <code>'click'</code> is the event that should affect the <code>div</code> tags. i.e. when we click on <code>div</code>s something should happen.
+  </li>
+  <li class="post-content--list-item">
+    <code>goToPage</code> is the "something" that should happen. It's the function that looks for the URLs stored in each element's <code>data-url</code> attribute and loads the URL into the browser.
+  </li>
+</ol>
+It's important to note that we're passing a function as a parameter here, which is a big deal in functional programming. Whenever you see or hear the phrase "functions are first class objects in JavaScript", passing functions as parameters is one of the many reasons why that's true.
+<p>And it's <strong>VERY</strong> important to note what happens when that function actually gets passed as a parameter.  In the context of our code, that means looking at <code>doEventOnElement()</code>.</p>
+<p>The last parameter passed to <code>doEventOnElement()</code> is <code>fn</code>. And in our code, that's the <code>goToPage()</code> function.</p>
+<p>So when <code>fn</code> runs in the <code>for</code> loop like this...</p>
+<pre><code class="language-js">
+fn(element[i])
+</code></pre>
+<p>It looks like this when the <code>fn</code> param is set...</p>
+<pre><code class="language-js">
+goToPage(element[i])
+</code></pre>
+<p>We built <code>goToPage()</code> to expect an element: that will be defined by <code>element[i]</code>. And since we set the <code>element</code> parameter to be <code>getPostDiv</code>, the function in the <code>for</code> loop look like this...</p>
+<pre><code class="language-js">
+goToPage(getPostDiv[i])
+</code></pre>
+<p>So as the loop iterates over an element array, it will look like this when it hits the array's second item...</p>
+<pre><code class="language-js">
+goToPage(getPostDiv[1])
+</code></pre>
+<p>And from there, it will look at the <code>data-url</code> attribute in the <code>getPostDiv[1]</code> and treat it as a link.</p>
+<p>This was something that took me some time to grasp while learning functional programming. It can be a bit mind-bending but understanding it is key.</p>
+<p>In closing and <a href="/format-dates-functional-programming/">like I said in my last post</a>, I try to implement JavaScript functional programming wherever I can, even if it's just for practice. Code like this may be too much for the task at hand, but I'm glad I did it: practice or no practice.</p>
+<p>Feel free to ask questions or make suggestions.</p>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-main">
+                <h3>kaidez</h3>
+                <p>web development and stuff...</p>
+                
+                <div class="social-links">
+                    <a href="https://twitter.com/kaidez" aria-label="Twitter" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/kaidez" aria-label="GitHub" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/kaigittens" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/posts/">Blog</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="/posts/javascript/">JavaScript</a></li>
+                        <li><a href="/posts/web-development/">Web Development</a></li>
+                        <li><a href="/posts/tutorials/">Tutorials</a></li>
+                        <li><a href="/posts/reviews/">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/feed.xml">RSS Feed</a></li>
+                        <li><a href="/sitemap.xml">Sitemap</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Built with <a href="https://11ty.dev" target="_blank" rel="noopener">11ty</a> and hosted on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+/* Footer Styles */
+.site-footer {
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--space-20);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-12);
+    padding: var(--space-12) 0 var(--space-8);
+}
+
+.footer-main h3 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-3);
+    color: var(--color-text);
+}
+
+.footer-main p {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-6);
+    max-width: none;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius);
+    background: var(--color-bg);
+    color: var(--color-text-muted);
+    transition: all var(--transition-fast);
+    border: 1px solid var(--color-border);
+}
+
+.social-links a:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+}
+
+.footer-section h4 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+    color: var(--color-text);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section li {
+    margin-bottom: var(--space-2);
+}
+
+.footer-section a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-section a:hover {
+    color: var(--color-primary);
+}
+
+.footer-bottom {
+    padding: var(--space-6) 0;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+}
+
+.footer-bottom p {
+    margin-bottom: var(--space-2);
+}
+
+.footer-bottom p:last-child {
+    margin-bottom: 0;
+}
+
+.footer-bottom a {
+    color: var(--color-primary);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+</style>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5549541-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

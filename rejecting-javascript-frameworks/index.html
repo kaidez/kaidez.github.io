@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Developers...Stop HATING Frameworks!!! - kaidez</title>
+    <meta name="description" content="web development and stuff...">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="JavaScript Developers...Stop HATING Frameworks!!!">
+    <meta property="og:description"
+        content="web development and stuff...">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kaidez.com/rejecting-javascript-frameworks/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+    <meta property="article:publisher" content="http://facebook.com/kaidezblog" />
+    <meta property="article:section" content="Personal" />
+    <meta property="og:image" content="http://www.kaidez.com/img/NaN" />
+    <meta property="og:image:width" content="700" />
+    <meta property="og:image:height" content="300" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaidez" />
+    <meta name="twitter:creator" content="@kaidez" />
+    <meta name="twitter:title" content=" » kaidez" />
+    <meta name="twitter:image" content="http://www.kaidez.com/img/NaN" />
+    <meta name="twitter:description" content="" />
+</head>
+
+<body class="" data-pagefind-body>
+    <header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <a href="/" class="site-title">kaidez</a>
+            
+            <!-- Search Component -->
+            <!-- Simplified Search Component -->
+<div class="search-container">
+    <div id="search" class="pagefind-search"></div>
+</div>
+
+<!-- Load Pagefind -->
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    try {
+        // Simple initialization
+        new PagefindUI({ 
+            element: "#search",
+            showImages: false,
+            excerptLength: 20,
+            resetStyles: false,
+            translations: {
+                placeholder: "Search kaidez for stuff...",
+                zero_results: "Couldn't find [SEARCH_TERM]"
+            }
+        });
+        console.log('Pagefind initialized successfully');
+    } catch (error) {
+        console.error('Pagefind initialization failed:', error);
+    }
+});
+</script>
+
+<style>
+/* Simple search styling */
+.search-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.pagefind-search {
+    width: 100%;
+}
+
+/* Style the Pagefind input */
+.pagefind-ui__search-input {
+    width: 100% !important;
+    padding: var(--space-3) var(--space-4) !important;
+    border: 2px solid var(--color-border) !important;
+    border-radius: var(--border-radius-lg) !important;
+    background: var(--color-bg) !important;
+    color: var(--color-text) !important;
+    font-size: var(--text-base) !important;
+    font-family: var(--font-family-sans) !important;
+}
+
+.pagefind-ui__search-input:focus {
+    border-color: var(--color-primary) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Style the results */
+.pagefind-ui__results {
+    margin-top: var(--space-2) !important;
+    background: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--shadow-lg) !important;
+    max-height: 400px !important;
+    overflow-y: auto !important;
+}
+
+.pagefind-ui__result {
+    padding: var(--space-4) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+}
+
+.pagefind-ui__result:last-child {
+    border-bottom: none !important;
+}
+
+.pagefind-ui__result-link {
+    color: var(--color-text) !important;
+    text-decoration: none !important;
+}
+
+.pagefind-ui__result-link:hover {
+    color: var(--color-primary) !important;
+}
+
+.pagefind-ui__result-title {
+    font-weight: 600 !important;
+    font-size: var(--text-lg) !important;
+    margin-bottom: var(--space-2) !important;
+}
+
+.pagefind-ui__result-excerpt {
+    color: var(--color-text-muted) !important;
+    font-size: var(--text-sm) !important;
+}
+
+.pagefind-ui__result-excerpt mark {
+    background: rgba(37, 99, 235, 0.2) !important;
+    color: var(--color-primary) !important;
+    padding: 0 2px !important;
+    border-radius: 2px !important;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        max-width: 100%;
+    }
+}
+</style>
+            
+            <nav class="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="/coding-best-practices/">Coding Tips</a></li>
+                    <li><a href="/tutorials/">Tutorials</a></li>
+                    <li><a href="/personal/">Personal</a></li>
+                    <li><a href="/reviews/">Reviews</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <main class="main-content">
+        <p>My last six months as a JavaScript developer have included a period of self-assessment. Primarily, I've reviewed <em>how</em> I write application code: not the libraries and frameworks that help me write it.</p>
+<p>I've also researched how other developers write code and, collectively, have learned great things from them. But when discussing libraries and frameworks, I've seen too many instances of developers rejecting them for the wrong reasons.</p>
+<h2 style="clear:both">A disclaimer</h2>
+I'm talking from a React point-of-view here because that's what I've been using lately. Don't take it to mean that I think everyone should use React...it's just my POV for this post.
+<h2>How this all began</h2>
+It all started after a lengthy period of using <a href="https://reactjs.org/">React</a> on a daily basis. Consequently, I see three positive things that React brings to the JavaScript developer conversation:
+<ol>
+<li><strong>manipulating app views with a state object</strong>: changing your app's view/state with a standard &quot;key:value&quot; object (not the DOM) is cool...and more efficient.</li>
+<li><strong>a focus on functional programming</strong>: React promotes the idea that a function should do one thing well, do that thing in its own world, and do it without screwing up the world around it.</li>
+<li><strong>thoughtful component model</strong>: I'm stealing that phrase from <a href="https://medium.com/bumpers/isnt-our-code-just-the-best-f028a78f33a9">Jacob Thornton's great React article</a> but he's right. React does a great job of encapsulating chunks of UI inside a single reusable component.</li>
+</ol>
+<p>All these things are great because <strong>they encourage computer science best practices within JavaScript development</strong>. As JS progresses from making neat rollovers to a full-on application language, it's right to bring in these practices.</p>
+<h2>There will be naysayers</h2>
+After its release, some developers labeled React as <strong>"JAJFLWYWCI" (Just-Another-JavaScript-Framework-Library-Whatever-You-Wanna-Call-It)</strong>. For whatever the reason, they said we shouldn't use it...a frequent reaction to frameworks and libraries among JS developers.
+<p>The comments for <em>not</em> using it aligned with at least one of these three opinions:</p>
+<ol>
+<li><em>&quot;Frameworks and libraries lead to slow performing web apps.&quot;</em></li>
+<li><em>&quot;It has a steep learning curve.&quot;</em></li>
+<li><em>&quot;Using frameworks and libraries is unprofessional programming.&quot;</em></li>
+</ol>
+<p>Some comments I engaged with (mostly online) and some I didn't. But they didn't bother me to the point I felt compelled to blog about it.</p>
+<p>I had real-world web developer stuff to deal with so I moved on.</p>
+<h2>What Kevin said</h2>
+Then, maybe on a subconscious impulse, I re-read <a href="https://web.archive.org/web/20130324030838/http://randyluecke.tumblr.com:80/post/45915323813/im-done-with-the-web">Kevin Luecke's "I'm done with the web" article</a>. An article that bummed me out when I first read it in 2013.
+<p>Kevin wasn't &quot;done with the web&quot; literally, but he was &quot;done&quot; with embracing the web developer community to the extent that he had. One reason for this was his frustration with why these developers hastily rejected certain JavaScript UI frameworks.</p>
+<p>Even though things like <a href="http://www.cappuccino-project.org/">Cappuccino</a> and <a href="https://www.emberjs.com/">Ember</a> solved problems, web devs shunned them because of their seemingly large, low-performant file sizes and steep learning curves. Little time, if any, was spent seeing if they solved problems: the knee-jerk reaction was to reject them based on those things.</p>
+<p>Kevin used other examples of web developers focusing on small-ish problems and he felt this was slowing web app progression. He felt that community was spending too much time worrying about the wrong stuff.</p>
+<p>He had enough of this &quot;stagnation&quot; as he phrased it so he, himself, moved on. From the web dev community, that is, and more towards native app development.</p>
+<p>What bummed me out about this article was how I'm a part of this community that rashly rejects stuff. Also, he made some <a href="https://www.youtube.com/watch?v=19g4n0ZxiYM&feature=youtu.be&t=2836">comments about &quot;people that don't know how to program&quot;</a> and I wondered if I was part of that group as well.</p>
+<h2>What Kevin's article was really about</h2>
+First, I don't know the context of Kevin Luecke's comments regarding people that don't know how to program. So I'm not going to take them <em>out</em> of context and let them bum me out.
+<p>I'm a self-taught, web developer: I learned web stuff at a time when those that knew even a <em>little</em> HTML were incredibly employable.  I've continued to do web stuff for a long time since then, giving me experience that <em>keeps</em> me incredibly employable.</p>
+<p>Since I'm not a classically-trained computer science developer, I'll always have to deal any feelings of insignificance that come up around this.  OK...I'll live with that.</p>
+<p>Second, worrying about my feelings kept me from realizing the main point of that article. That <strong>web developers focus on the wrong things when rejecting certain JS tooling, and this is holding them back</strong>.</p>
+<h2>The complaints about performance</h2>
+To be fair, I can't really say that the complaints about JS lib and framework performance are "wrong". Making apps as fast as possible is important as our dependency on mobile rises, and less JavaScript makes them faster.
+<p>But if an app requires lots of interactive features, as many do, then a library or framework may be needed to quickly build out those features. Thankfully, the JS community has developed lots of non-hacky best practices to increase performance for this use case.</p>
+<p>Most of these practices are built around <a href="https://webpack.js.org/">webpack</a>. With its ability to build out slim JS files for production and <a href="https://survivejs.com/webpack/building/code-splitting/">code-splitting functionality</a>, webpack has become a necessary tool for JavaScript app development.</p>
+<p>Andrew Welch wrote <a href="https://nystudio107.com/blog/an-annotated-webpack-4-config-for-frontend-web-development">a ridiculously thorough article on setting up webpack.</a> Just like JS libraries and frameworks, webpack has a bit of a learning curve so it's worth a read.</p>
+<p>Also, Addy Osmani wrote <a href="https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4">a pretty definitive article on JS performance</a>...give it a read as well.  It discusses webpack and code-splitting stuff, along with other things like performance budgets, critical paths and testing/auditing tools.</p>
+<h2>Other performance stuff</h2>
+Images are usually blamed for causing the most performance issues and Luecke mentions them in his article. But Osmani effectively argues that JS may be the bigger performance headache because images only have to download while JS files have to download, then parse and execute code.
+<p>Whatever your opinion here, optimize your images as well as your JavaScript. This means doing things like:</p>
+<ul>
+<li>using Photoshop  &quot;export/Save for Web&quot; on your images.</li>
+<li>adding an image minification step to your build process using something like <a href="https://github.com/imagemin/imagemin-cli">imagemin-cli</a>.</li>
+<li>if you can, using a CDN to serve out images...as well as JS, CSS and font files.</li>
+<li>~maybe~ looking at <a href="https://www.nikonusa.com/en/learn-and-explore/a/tips-and-techniques/bokeh-for-beginners.html">Bokeh</a> to further optimize your images.</li>
+</ul>
+<p>And performance depends on more than this: aggressive browser caching gives other performance wins. Plus, file minification is still a good idea, and your app will be slow if it's hosted with a low-end shared USD $5/month plan.</p>
+<p>Many things can slow an app down: don't put the blame for this all on JavaScript.</p>
+<h2>The complaints about learning curves</h2>
+In his post, Kevin Luecke is blunt about the defeatist attitude web devs take towards ramping up on new things. After quoting a developer who implied that it would take too long for their team to learn Ember, Luecke responded:
+<blockquote class="content--blockquote-margin">
+"This reaction to Ember just baffles me. Your day job is to build a piece of web software and you can't take a few days to learn the ins and outs? Presumably you're in a large team because this project is important and will take some time to complete. Nevertheless, I've seen this reaction many times in the web culture.
+</blockquote>
+<p>I can relate to having this defeatist attitude. Always having to ramp up on a new JavaScript technology has affected me negatively and <a href="http://www.kaidez.com/101th-post/">I've written about it</a>.</p>
+<p>But this is how JavaScript is right now and this rapid change shows no signs of slowing down. Newly-released JS libs and frameworks are part of this constant change...we all have to keep up.</p>
+<p>If you're used to changing your UI with DOM manipulation, React <em>might</em> have a bit of learning curve. React makes you change UI by updating a state object instead of using something like <code>document.querySelector()</code>.</p>
+<p>But regardless of learning curves, libraries and frameworks solve someone's problem somewhere in the world. So a developer that's familiar with at least the popular ones is a valuable asset.</p>
+<p>Developers like this have &quot;problem solving-power&quot;: the ability to look at a problem and say &quot;this framework is our solution.&quot;  Day job bosses and freelance clients love this.</p>
+<p>You have to invest in yourself and make time to learn new JavaScript stuff, frameworks and libraries included. You may think there's nothing to lose by not learning them, but there's certainly nothing to gain either.</p>
+<h2>The complaints about "unprofessional programming" (whatever that means)</h2>
+However, lots of developers believe the other ones using frameworks and libraries have no value and are unprofessional. That libs/frameworks should be completely avoided and we should just use vanilla JavaScript, and they're passionate in their belief.
+<p>I carried this belief once and to be honest, I became a better JavaScript developer as a result. My knowledge of JS fundamentals increased: writing powerful &amp; concise functions, using <code>return</code> correctly, understanding prototypal inheritance, etc.</p>
+<p>So yes, focusing my energy towards learning pure, unadulterated vanilla JS helped me. Still, I believe that <strong>the idea that using JavaScript frameworks and libraries is unprofessional is total bullshit.</strong></p>
+<p>Spend enough hours writing raw vanilla JS and you'll look for ways to write less of it with code abstraction. I can produce lots of high-quality code quickly when the right library or framework lets me.</p>
+<p>And what if you're part of a team of developers? Using a lib or framework helps here because <strong>it provides your team a shared language, making collaboration and communication easier</strong>.</p>
+<p>With React I can tell someone, &quot;solve your problem by using this pre-built component that so-and-so built.&quot; Much easier than &quot;cut-and-paste this code block that so-and-so wrote but you'll have to ask so-and-so what to do next.&quot;</p>
+<h2>Think about about what "unprofessional programming" means</h2>
+I've said this many MANY times before and I'll say it again:
+<blockquote class="content--blockquote-margin">
+Using JavaScript libraries and frameworks isn't unprofessional. Using them without understanding the core language fundamentals behind them is.
+</blockquote >
+<p>Yeah, I use React everyday now, but it's because of its above-mentioned thoughtful component model. It lets me create huge chunks of UI that are easily reusable and easily editable.</p>
+<p>That's all it does for me: from there, writing pure, vanilla JavaScript is my responsibility. I have to understand the use cases for using <code>let</code> or <code>const</code>, returning Promises and looping over JSON Objects.</p>
+<p>React doesn't help me with any of this.  It gives me a nice container to place that code inside of, but that's it.</p>
+<p>I'm using React to deliver production-quality code on time. I don't see why this is unprofessional.</p>
+<h2>Web developers can learn from native developers</h2>
+While commenting about the complaints about learning curves, Kevin Luecke compared web developers to native developers:
+<blockquote class="content--blockquote-margin">
+This mentality is pretty rare in the world of native development though. Almost every decent developer I know has no problem spending a weekend learning some new and cool tool, but sadly, this spirit seems to be absent from the web culture.
+</blockquote>
+I would apply that mentality to the web dev complaints about performance and "unprofessional programming." I never hear Java developers make the same complaints about Spring...same thing with PHP developers and Laravel.
+<p>And right now, imagine what would have happened if Ruby developers collectively rejected Rails for any of these reasons.</p>
+<h2>Understand the business process leading the app</h2>
+Before accepting or rejecting a JavaScript library/framework, have a clear understanding of the project's goals and business requirements. Understand what the app must do before rejecting the tools that can help you build it.
+<p>Ember, which <a href="https://www.lynda.com/Emberjs-tutorials/Up-Running-Emberjs/178116-2.html">I've obviously used</a>, has a big file size and gets updated too frequently for my comfort. But if I'm building an app that users will open up and then use for a long time (like they would with Excel), Ember's a great option here.</p>
+<p>This is not a chicken or the egg riddle. <strong>The business process leads the app: it never EVER follows it</strong>.</p>
+<p>Speaking for myself, this is an area where I've made mistakes in the past. Had I focused more on what the business needed to accomplish and less on the &quot;cool&quot; way to write code, I'd be a VP somewhere.</p>
+<p>You need to build a product and then ship it out the door: a library or framework may be a means to that end. So again, understand what your app must do because a framework or lib may help your app &quot;do&quot; it better.</p>
+<h2>The current JS build tooling is complex, but helpful</h2>
+While almost all the comments on Andrew Welch's webpack post are positive, the <em>very</em> first one was this:
+<blockquote class="content--blockquote-margin">
+Why do we keep making the build and deploy setups more complex than the apps we're deploying?
+</blockquote>
+I don't know if the build process is "more complex" then the apps, but know that the process itself is more complex than it was before. And Welch's response to the comment was proper: it terms of the complexity, "it depends on what you're building."
+<p>But this is the current state of JavaScript development. We're now using JS to build complex web <em>and</em> native apps, which can be created easier with libs and frameworks.</p>
+<p>So yes, the build process is harder and takes more work than before. But again, this is the world we live in.</p>
+<h2>Conclusion</h2>
+When discussing JavaScript frameworks and libraries, I believe that only <em>real</em> reason to reject them is their potential performance problems. And we have a ton ways to solve these problems.
+<p>Let's use these solves in our work so we can focus on the important thing: building apps fast and efficiently. And if a framework and library helps you do this (and you took the time to research if it does), so be it.</p>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-main">
+                <h3>kaidez</h3>
+                <p>web development and stuff...</p>
+                
+                <div class="social-links">
+                    <a href="https://twitter.com/kaidez" aria-label="Twitter" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/kaidez" aria-label="GitHub" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/kaigittens" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/posts/">Blog</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="/posts/javascript/">JavaScript</a></li>
+                        <li><a href="/posts/web-development/">Web Development</a></li>
+                        <li><a href="/posts/tutorials/">Tutorials</a></li>
+                        <li><a href="/posts/reviews/">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/feed.xml">RSS Feed</a></li>
+                        <li><a href="/sitemap.xml">Sitemap</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Built with <a href="https://11ty.dev" target="_blank" rel="noopener">11ty</a> and hosted on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+/* Footer Styles */
+.site-footer {
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--space-20);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-12);
+    padding: var(--space-12) 0 var(--space-8);
+}
+
+.footer-main h3 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-3);
+    color: var(--color-text);
+}
+
+.footer-main p {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-6);
+    max-width: none;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius);
+    background: var(--color-bg);
+    color: var(--color-text-muted);
+    transition: all var(--transition-fast);
+    border: 1px solid var(--color-border);
+}
+
+.social-links a:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+}
+
+.footer-section h4 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+    color: var(--color-text);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section li {
+    margin-bottom: var(--space-2);
+}
+
+.footer-section a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-section a:hover {
+    color: var(--color-primary);
+}
+
+.footer-bottom {
+    padding: var(--space-6) 0;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+}
+
+.footer-bottom p {
+    margin-bottom: var(--space-2);
+}
+
+.footer-bottom p:last-child {
+    margin-bottom: 0;
+}
+
+.footer-bottom a {
+    color: var(--color-primary);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+</style>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5549541-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

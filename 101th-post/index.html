@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My 101st Post – A Retrospective! - kaidez</title>
+    <meta name="description" content="web development and stuff...">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="My 101st Post – A Retrospective!">
+    <meta property="og:description"
+        content="web development and stuff...">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kaidez.com/101th-post/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+    <meta property="article:publisher" content="http://facebook.com/kaidezblog" />
+    <meta property="article:section" content="Personal" />
+    <meta property="og:image" content="http://www.kaidez.com/img/NaN" />
+    <meta property="og:image:width" content="700" />
+    <meta property="og:image:height" content="300" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaidez" />
+    <meta name="twitter:creator" content="@kaidez" />
+    <meta name="twitter:title" content=" » kaidez" />
+    <meta name="twitter:image" content="http://www.kaidez.com/img/NaN" />
+    <meta name="twitter:description" content="" />
+</head>
+
+<body class="" data-pagefind-body>
+    <header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <a href="/" class="site-title">kaidez</a>
+            
+            <!-- Search Component -->
+            <!-- Simplified Search Component -->
+<div class="search-container">
+    <div id="search" class="pagefind-search"></div>
+</div>
+
+<!-- Load Pagefind -->
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    try {
+        // Simple initialization
+        new PagefindUI({ 
+            element: "#search",
+            showImages: false,
+            excerptLength: 20,
+            resetStyles: false,
+            translations: {
+                placeholder: "Search kaidez for stuff...",
+                zero_results: "Couldn't find [SEARCH_TERM]"
+            }
+        });
+        console.log('Pagefind initialized successfully');
+    } catch (error) {
+        console.error('Pagefind initialization failed:', error);
+    }
+});
+</script>
+
+<style>
+/* Simple search styling */
+.search-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.pagefind-search {
+    width: 100%;
+}
+
+/* Style the Pagefind input */
+.pagefind-ui__search-input {
+    width: 100% !important;
+    padding: var(--space-3) var(--space-4) !important;
+    border: 2px solid var(--color-border) !important;
+    border-radius: var(--border-radius-lg) !important;
+    background: var(--color-bg) !important;
+    color: var(--color-text) !important;
+    font-size: var(--text-base) !important;
+    font-family: var(--font-family-sans) !important;
+}
+
+.pagefind-ui__search-input:focus {
+    border-color: var(--color-primary) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Style the results */
+.pagefind-ui__results {
+    margin-top: var(--space-2) !important;
+    background: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--shadow-lg) !important;
+    max-height: 400px !important;
+    overflow-y: auto !important;
+}
+
+.pagefind-ui__result {
+    padding: var(--space-4) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+}
+
+.pagefind-ui__result:last-child {
+    border-bottom: none !important;
+}
+
+.pagefind-ui__result-link {
+    color: var(--color-text) !important;
+    text-decoration: none !important;
+}
+
+.pagefind-ui__result-link:hover {
+    color: var(--color-primary) !important;
+}
+
+.pagefind-ui__result-title {
+    font-weight: 600 !important;
+    font-size: var(--text-lg) !important;
+    margin-bottom: var(--space-2) !important;
+}
+
+.pagefind-ui__result-excerpt {
+    color: var(--color-text-muted) !important;
+    font-size: var(--text-sm) !important;
+}
+
+.pagefind-ui__result-excerpt mark {
+    background: rgba(37, 99, 235, 0.2) !important;
+    color: var(--color-primary) !important;
+    padding: 0 2px !important;
+    border-radius: 2px !important;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        max-width: 100%;
+    }
+}
+</style>
+            
+            <nav class="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="/coding-best-practices/">Coding Tips</a></li>
+                    <li><a href="/tutorials/">Tutorials</a></li>
+                    <li><a href="/personal/">Personal</a></li>
+                    <li><a href="/reviews/">Reviews</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <main class="main-content">
+        <p>Happy New Year!</p>
+<p>For this first day of 2018, I'm publishing my 101st post: time to look at my developer career in retrospect. You would THINK that a retrospective like this would be the 100th post and it usually would, but here's what happened:</p>
+<p>As mentioned many times, I lost my entire blog by mistakenly deleting its database. With some help from the <a href="https://web.archive.org/web/*/kaidez.com">Internet Wayback Machine</a>, I recovered all but two blog posts.</p>
+<p>One post was on <a href="/front-end-web-developer-job-search/">looking for a web dev job in 2017</a> and the other was on JavaScript unit testing. These didn't appear on the IWM, but I was able to recall enough of the job search one from memory to rewrite it.</p>
+<p>I planned on rewriting the unit test one but kept writing new posts anyway, eventually totalling 99 posts in all. As I began to write post 100, I checked my site on the IWM...by chance.</p>
+<p>Lo and behold, the unit test post showed up...<a href="/learn-javascript-unit-testing/">here it is</a>. I added it back to my blog, meaning my already-published post on <a href="/temperatures-functional-programming/">using JavaScript functional programming to calculate average temperatures</a> was Post #100!</p>
+<p>So this retrospective post ends up being Post #101.  It happened...OK...off to the review.</p>
+<h2>The <em>MAIN</em> thing I've learned as a web developer</h2>
+At the time of this post, I've been a professionally-employed web developer for just over 12 years. The fundamental thing I've learned in this time is, the only way to get better as a developer is to "<strong>JUST CODE.</strong>"
+<p><a href="/write-code-every-f-king-day/">I've written about this before</a> but it bears repeating. Simply sitting down at your machine and writing code is the best way to learn the code you're writing.</p>
+<p>More so than reading books about code, or watching videos about code, or paying for coding classes. You have to literally write code, encounter problems along the way, then figure out how to solve them.</p>
+<p>I've paid for books, watched videos, paid for code courses.  I've even shelled out tons of money going to conferences...For example:</p>
+<p>JSConf 2013? Where a majority of the web developers in the world were first exposed to React? <em>Almost immediately</em> after Facebook open-sourced it? <a href="https://www.youtube.com/watch?v=GW0rj4sNH2w">I was there!!!</a></p>
+<p>On one hand, it was great that &quot;I was there.&quot; On the other hand, being &quot;there&quot; didn't teach me React, and I didn't even <em>use</em> it until three-and-a-half years later!</p>
+<p>I use React almost daily now and I'm proud of my knowledge of it...knowledge I got by trying it, building with it, failing with it, and nothing else. I'm not a React guru (yet), but I can take a React project on now with a high level of confidence.</p>
+<p>This isn't just true with me and React: I've written CodePens and GitHub repos of stuff I've thrown away. <a href="/kdz-build-tool/">I wrote a Node command-line tool</a> that I never used after I built it...despite publicly saying I would.</p>
+<p>I don't care: I learned stuff from all those throwaways and got to be a better developer. &quot;Just Coding&quot; for the sake of &quot;Just Coding&quot; upped my confidence as a developer.</p>
+<p>To be clear: I'm not saying <em>don't</em> learn from books, videos, classes or conferences. We all learn in different ways and as individuals, we should use whatever resources help us learn the best.</p>
+<p>I'm saying be sure that you write code <em>more</em> than you do those things. Doing the opposite is a major mistake I've made.</p>
+<h2>Change was good...and it was necessary</h2>
+Evolving as a developer goes beyond learning the new, hip front-end framework. It also includes seeking challenges in your work.
+<p>My leaving Revlon is the primary example of my seeking out such challenges.  And it was the right thing to do.</p>
+<p>I blogged about that <a href="/revlon/">here</a> and as I said then, leaving Revlon was a necessity. I was certainly writing the code I wanted to write, but the need for that specific code started to lessen in terms of what the company needed.</p>
+<p>All true. But it was also true that Revlon, at that time, wasn't the modern code shop I wanted to work in.</p>
+<p>I wanted to work in a JIRA-powered agile environment. I wanted to work with JSON APIs more often. I wanted Git to be the one and only source code management system I used. I wanted to work with content management systems less and less.</p>
+<p>I got some of this at Revlon but had leave the company to get it as a whole. And while leaving them was not something I was happy to do, I'll concede that I had to do it to grow as a developer.</p>
+<h2>Change made me appreciate teams more</h2>
+While I may not have been able to use the tools I wanted to use while at Revlon, it goes without saying that I worked on one of the best teams ever while there. From management on down, there were WAAAAY more strong links in that team chain than weak ones.
+<p>This was hard to find when I left. I've been on two different teams at my current employer and have found it there, but I never got the &quot;teamwork vibe&quot; at the spots in-between because they weren't as collaborative.</p>
+<p>As a result, I had less fun as a developer during this time. Every day before going to work, you should be able to say to yourself, &quot;Yay!!! I get to go to work today!&quot;</p>
+<p>I lost this for a minute due to the teams I was on. They were all made up of good developers, I just didn't vibe with as many as of them as I'd hoped to.</p>
+<p>My best work and best learning happens when I'm on a team that works as a unit towards a common goal and shares knowledge with one another. If a team has impatient &quot;cowboy coders&quot; that prefer to work alone, I'll leave the team.</p>
+<h2>My worst moment as a web developer was the best learning experience in my life</h2>
+A confession: there was a really bad, mentally strenuous week when I thought I didn't want to be a developer anymore.
+<p>I'd been struggling with a project using code I didn't fully understand, and the project's deadline was fast-approaching. This led to the realization that I would ALWAYS have to be learning if I remained a web dev, or run the risk of not knowing something I <em>should</em> know.</p>
+<p>And I didn't know if wanted to deal with this anymore. This led to my having an anxiety-induced panic attack as well as going through four days of clinical depression.</p>
+<p>Then I got off my ass and made some changes.</p>
+<p>The first change was to rediscover to the pleasure of learning new things that I had when I started coding. React combined with Redux is a <em>totally</em> different way of doing front-end dev...working with those two things helped me recapture that pleasure again.</p>
+<p>Next, I made my home workspace more comfortable. A clean, uncluttered desk actually made me WANT to sit and learn new stuff when I needed to learn it...ironically, it looks almost <em>exactly</em> like my old Revlon workspace.</p>
+<p>But the <em>biggest</em> change I made in my life was to start mindfulness-based meditation with the help of <a href="https://www.calm.com/">the awesome Calm app</a>. This, more than anything, changed my head (and life) for the better.</p>
+<p>Staying in the context of being a web developer, meditating made me recap what family, friends and colleagues said about my skills in the past. Almost all of were positive: I started carrying this fact around in my brain, revisiting it when I had to.</p>
+<p>Bottom line: I'm a good developer that doesn't know everything and needs to ask for help sometimes. Remembering this fact along with consistent meditation didn't end the anxiety, it helped me control it when it appeared so I could move forward as a web developer.</p>
+<p>This was, quite possibly, the biggest learning experience in my life...<em>ever!!!</em></p>
+<h2>I have embraced web development pragmatism</h2>
+Rebecca Murphey published <a href="http://rmurphey.com/blog/2012/04/12/a-baseline-for-front-end-developers"><em>A Baseline for Front-End Web Developers</em></a> in 2012 (see its follow-up <a href="http://rmurphey.com/blog/2015/03/23/a-baseline-for-front-end-developers-2015">here</a>). The article outlined the basic skill set web developers needed at the time of publishing.
+<p>The article discussed using multiple web development tools instead of using  a single integrated development environment (IDE). Many of the tools and techniques were command line-based: Git and its basic tasks, using Bash and aliasing its commands, testing tools, CSS preprocessors, template engines, etc.</p>
+<p>I shared the article on my Facebook page. My boss at the time read it and commented:</p>
+<blockquote>
+<p>"Isn't it easier just to license professional tools?"</p>
+</blockquote>
+<p>And with him being my boss, I respectfully responded:</p>
+<blockquote>
+<p>"Command line rocks...IDEs are for pu**ies."</p>
+</blockquote>
+<p>This was my attitude for quite a while: that the &quot;cool&quot; tools are <em>always</em> better than the &quot;practical&quot; ones. My attitude has evolved: the coolest tools are actually the ones that get the job done.</p>
+<p>Lots of developers goes through a period of loving just the cool stuff and quite frankly, it's needed. There must be a segment of the dev community that thinks outside the box and creates tools that push web development forward.</p>
+<p>But a developer needs to embrace practicality in the long run. Right now, I'm much more focused on using tools to get the job done...whatever they are.</p>
+<p>And if those tools get criticized on Hacker News, so be it.</p>
+<h2>Conclusion</h2>
+I have a lot to learn, and always will. That really is the life of a web developer.
+<p>But I'm totally happy with this. I definitely had some rough patches along the way but I wouldn't try to undo them since I learned from all of them.</p>
+<p>Writing Post #101 confirmed to me that it's <em>great</em> to be a web developer!</p>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-main">
+                <h3>kaidez</h3>
+                <p>web development and stuff...</p>
+                
+                <div class="social-links">
+                    <a href="https://twitter.com/kaidez" aria-label="Twitter" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/kaidez" aria-label="GitHub" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/kaigittens" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/posts/">Blog</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="/posts/javascript/">JavaScript</a></li>
+                        <li><a href="/posts/web-development/">Web Development</a></li>
+                        <li><a href="/posts/tutorials/">Tutorials</a></li>
+                        <li><a href="/posts/reviews/">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/feed.xml">RSS Feed</a></li>
+                        <li><a href="/sitemap.xml">Sitemap</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Built with <a href="https://11ty.dev" target="_blank" rel="noopener">11ty</a> and hosted on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+/* Footer Styles */
+.site-footer {
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--space-20);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-12);
+    padding: var(--space-12) 0 var(--space-8);
+}
+
+.footer-main h3 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-3);
+    color: var(--color-text);
+}
+
+.footer-main p {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-6);
+    max-width: none;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius);
+    background: var(--color-bg);
+    color: var(--color-text-muted);
+    transition: all var(--transition-fast);
+    border: 1px solid var(--color-border);
+}
+
+.social-links a:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+}
+
+.footer-section h4 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+    color: var(--color-text);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section li {
+    margin-bottom: var(--space-2);
+}
+
+.footer-section a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-section a:hover {
+    color: var(--color-primary);
+}
+
+.footer-bottom {
+    padding: var(--space-6) 0;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+}
+
+.footer-bottom p {
+    margin-bottom: var(--space-2);
+}
+
+.footer-bottom p:last-child {
+    margin-bottom: 0;
+}
+
+.footer-bottom a {
+    color: var(--color-primary);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+</style>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5549541-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

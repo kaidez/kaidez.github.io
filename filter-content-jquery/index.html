@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUTORIAL: Filter Content With jQuery.filter() &amp; jQuery Selectors - kaidez</title>
+    <meta name="description" content="web development and stuff...">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="TUTORIAL: Filter Content With jQuery.filter() &amp; jQuery Selectors">
+    <meta property="og:description"
+        content="web development and stuff...">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kaidez.com/filter-content-jquery/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+    <meta property="article:publisher" content="http://facebook.com/kaidezblog" />
+    <meta property="article:section" content="Personal" />
+    <meta property="og:image" content="http://www.kaidez.com/img/NaN" />
+    <meta property="og:image:width" content="700" />
+    <meta property="og:image:height" content="300" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaidez" />
+    <meta name="twitter:creator" content="@kaidez" />
+    <meta name="twitter:title" content=" » kaidez" />
+    <meta name="twitter:image" content="http://www.kaidez.com/img/NaN" />
+    <meta name="twitter:description" content="" />
+</head>
+
+<body class="" data-pagefind-body>
+    <header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <a href="/" class="site-title">kaidez</a>
+            
+            <!-- Search Component -->
+            <!-- Simplified Search Component -->
+<div class="search-container">
+    <div id="search" class="pagefind-search"></div>
+</div>
+
+<!-- Load Pagefind -->
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    try {
+        // Simple initialization
+        new PagefindUI({ 
+            element: "#search",
+            showImages: false,
+            excerptLength: 20,
+            resetStyles: false,
+            translations: {
+                placeholder: "Search kaidez for stuff...",
+                zero_results: "Couldn't find [SEARCH_TERM]"
+            }
+        });
+        console.log('Pagefind initialized successfully');
+    } catch (error) {
+        console.error('Pagefind initialization failed:', error);
+    }
+});
+</script>
+
+<style>
+/* Simple search styling */
+.search-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.pagefind-search {
+    width: 100%;
+}
+
+/* Style the Pagefind input */
+.pagefind-ui__search-input {
+    width: 100% !important;
+    padding: var(--space-3) var(--space-4) !important;
+    border: 2px solid var(--color-border) !important;
+    border-radius: var(--border-radius-lg) !important;
+    background: var(--color-bg) !important;
+    color: var(--color-text) !important;
+    font-size: var(--text-base) !important;
+    font-family: var(--font-family-sans) !important;
+}
+
+.pagefind-ui__search-input:focus {
+    border-color: var(--color-primary) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Style the results */
+.pagefind-ui__results {
+    margin-top: var(--space-2) !important;
+    background: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--shadow-lg) !important;
+    max-height: 400px !important;
+    overflow-y: auto !important;
+}
+
+.pagefind-ui__result {
+    padding: var(--space-4) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+}
+
+.pagefind-ui__result:last-child {
+    border-bottom: none !important;
+}
+
+.pagefind-ui__result-link {
+    color: var(--color-text) !important;
+    text-decoration: none !important;
+}
+
+.pagefind-ui__result-link:hover {
+    color: var(--color-primary) !important;
+}
+
+.pagefind-ui__result-title {
+    font-weight: 600 !important;
+    font-size: var(--text-lg) !important;
+    margin-bottom: var(--space-2) !important;
+}
+
+.pagefind-ui__result-excerpt {
+    color: var(--color-text-muted) !important;
+    font-size: var(--text-sm) !important;
+}
+
+.pagefind-ui__result-excerpt mark {
+    background: rgba(37, 99, 235, 0.2) !important;
+    color: var(--color-primary) !important;
+    padding: 0 2px !important;
+    border-radius: 2px !important;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        max-width: 100%;
+    }
+}
+</style>
+            
+            <nav class="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="/coding-best-practices/">Coding Tips</a></li>
+                    <li><a href="/tutorials/">Tutorials</a></li>
+                    <li><a href="/personal/">Personal</a></li>
+                    <li><a href="/reviews/">Reviews</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <main class="main-content">
+        <p><a href="http://codepen.io/kaidez/pen/azmRXm" class="demoLink" target="blank">VIEW THE DEMO</a></p>
+<p>I had a project where I needed to create functionality that filtered out specific page content on a link click. So if the page had three different content groups, clicking on a link had to display one group while removing the other two from view.</p>
+<p>I built the functionality using data attributes, jQuery's .filter() method, and some jQuery selector methods. There are certainly different ways to filter page content, but this is how I did it.</p>
+<h2>Table of Contents</h2>
+<ol>
+<li><a href="#brief-look-css">A (very) brief look at the CSS</a></li>
+<li><a href="#html-first-look">A first look at the HTML</a></li>
+<li><a href="#2-html-sections">The 2 sections of the HTML</a></li>
+<li><a href="#html-section-binding">The binding of the two HTML sections</a></li>
+<li><a href="#javascript-first-look">A first look at the JavaScript</a></li>
+<li><a href="#feature-detect-data-attributes">Feature-detect for data attributes</a></li>
+<li><a href="#jquery-attribute-selectors">Using jQuery attribute selectors</a></li>
+<li><a href="#add-remove-content">Adding &amp; removing content</a></li>
+<li><a href="#show-all-content">Show all the content with a click</a></li>
+<li><a href="#notes">Some notes</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ol>
+<p><a name="brief-look-css"></a></p>
+<h3>A (very) brief look at the CSS</h3>
+<p>We're using three files for our code: <code>index.html</code>, <code>styles.css</code> and <code>main.js</code>.  All the files are in the same directory.</p>
+<p>The things in <code>styles.css</code> are here to give the page some style and have  nothing to do with the functionality. We won't discuss them in depth, but here they are:</p>
+<pre><code class="language-css">
+body {
+  background-color: rgba(60, 105, 145, 1);
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 20px;
+}
+
+a {
+  margin:0 5px;
+}
+
+a:link {
+  color: rgba(100, 255, 0, 1);
+}
+
+a:visited {
+  color: rgba(100, 255, 0, 1);
+}
+
+a:hover {
+  color: rgba(0, 255, 193, 1);
+  text-decoration: none;
+}
+</code></pre>
+<p><a name="html-first-look"></a></p>
+<h3>A first look at the HTML</h3>
+<p>The <code>index.html</code> file looks like this...</p>
+<pre><code class="language-markup">
+<!DOCTYPE html>
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Filter Content On A Click With jQuery&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css" media="all" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Filter by team&lt;/h1&gt;
+
+    &lt;!-- The Teams --&gt;
+    &lt;a href="#" class="btn-player" data-team="chelsea"&gt;Chelsea&lt;/a&gt;
+    &lt;a href="#" class="btn-player" data-team="psg"&gt;Paris St-Germain&lt;/a&gt;
+    &lt;a href="#" class="btn-player" data-team="real-madrid"&gt;Real Madrid&lt;/a&gt;
+    &lt;a href="#" class="btn-player" data-team="barcelona"&gt;Barcelona&lt;/a&gt;
+    &lt;a href="#" id="btn-show-all"&gt;SHOW ALL PLAYERS&lt;/a&gt;
+
+    &lt;!-- The Players --&gt;
+    &lt;div class="player" data-players-team="chelsea"&gt;Cesc Fabregas&lt;/div&gt;
+    &lt;div class="player" data-players-team="psg"&gt;Zlatan Ibrahimović&lt;/div&gt;
+    &lt;div class="player" data-players-team="real-madrid"&gt;Cristiano Ronaldo&lt;/div&gt;
+    &lt;div class="player" data-players-team="chelsea"&gt;Didier Drogba&lt;/div&gt;
+    &lt;div class="player" data-players-team="chelsea"&gt;John Terry&lt;/div&gt;
+    &lt;div class="player" data-players-team="barcelona"&gt;Lionel Messi&lt;/div&gt;
+    &lt;div class="player" data-players-team="real-madrid"&gt;Sergio Ramos&lt;/div&gt;
+    &lt;div class="player" data-players-team="chelsea"&gt;Thibault Courtois&lt;/div&gt;
+    &lt;div class="player" data-players-team="psg"&gt;Thiago Motta&lt;/div&gt;
+
+    &lt;!-- Note that we're using the oldIE-friendly version of jQuery --&gt;
+    &lt;script src="http://code.jquery.com/jquery-1.11.1.js"&gt;&lt;/script&gt;
+    &lt;script src="main.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><a name="2-html-sections"></a></p>
+<h3>The 2 sections of the HTML</h3>
+<p>The page has two distinct sections: a list of <code>&lt;a&gt;</code> tags at the top and a list of <code>&lt;div&gt;</code> tags at the bottom. Except for the last one, every item in the top list has a class name of <code>btn-player</code> and a data attribute called <code>data-team</code>.</p>
+<p>Notice that the values of the <code>data-team</code> attribute differ across the links that have it. There are four different values: 1) <code>chelsea</code>, 2) <code>psg</code>, 3) <code>real-madrid</code> and 4) <code>barcelona</code>.</p>
+<p>At the bottom of this list is a link with an ID of <code>#btn-show-all</code>. We'll build functionality where clicking on this link will add back any content that has been removed.</p>
+<p>Every item in the bottom list is a <code>&lt;div&gt;</code> with a class name of <code>player</code> and a data attribute called <code>data-players-team</code>. The <code>player</code> class name is important and will be discussed but for now, notice that the values of the <code>data-players-team</code> attribute is shared across some of the <code>&lt;div&gt;</code> tags.</p>
+<p>For example: four tags have their <code>data-players-team</code> value set to <code>chelsea</code>, two of them have their attribute set <code>psg</code>. And so on and so on.
+<a name="html-section-binding"></a></p>
+<h3>The binding of the two HTML sections</h3>
+<p>The values of the <code>data-players-team</code> attribute in the section below matches the value of one of the <code>data-team</code> attributes in the section above. So the four tags with a <code>data-players-team</code> attribute with a value of <code>chelsea</code> match the value of the <code>data-team</code> attribute in the first <code>&lt;a&gt;</code> tag: it's value is also <code>chelsea</code>.</p>
+<p>These shared values create a binding between the two sections, As a result, when of a link is clicked, it will understand that it's their bound <code>&lt;div&gt;</code> tags that should be visible.
+<a name="javascript-first-look"></a></p>
+<h3>A first look at the JavaScript</h3>
+<p>But this is only a small part of the binding process...jQuery does a lot here, too.  That code is in <code>main.js</code> and looks like this:</p>
+<pre><code class="language-javascript">
+$( ".btn-player" ).click(function(){
+
+  var getLinkType, getElType, getElNotType;
+
+  // Feature-detect for dataset support
+  if( !this.dataset ) { // If IE 10 or lower
+    getLinkType = this.getAttribute( "data-team" );
+   } else { // For other browsers
+     getLinkType = this.dataset.team;
+   }
+
+  getElType = $( "div[data-players-team~="+getLinkType+"]" );
+
+  getElNotType = $( "div[data-players-team!="+getLinkType+"]" );
+
+   $( ".player" ).filter( getElNotType ).css( "display", "none" );
+   $( ".player" ).filter( getElType ).css( "display", "block" );
+
+});
+
+$( "#btn-show-all" ).click(function() {
+  $( ".player" ).css( "display", "block" );
+});
+</code></pre>
+<p>Quite a bit to discuss here...let's break it down:</p>
+<pre><code class="language-javascript">
+$( ".btn-player" ).click(function(){
+  ...
+});
+</code></pre>
+<p>There are four links at the top with a class name of <code>btn-player</code>. Whenever one of those buttons is clicked, a function performs some tasks.</p>
+<pre><code class="language-javascript">
+var getLinkType, getElType, getElNotType;
+</code></pre>
+<p>List three variables in a single var pattern for future use.
+<a name="feature-detect-data-attributes"></a></p>
+<h3>Feature-detect for data attributes</h3>
+<pre><code class="language-javascript">
+// Feature-detect for dataset support
+if( !this.dataset ) { // If IE 10 or lower
+  getLinkType = this.getAttribute( "data-team" );
+} else { // For other browsers
+  getLinkType = this.dataset.team;
+}
+</code></pre>
+<p>All the links with a <code>btn-player</code> class have a <code>data-team</code> attribute. When one of those links gets clicked, we need to find that attribute's value and store it in the previously-created <code>getLinkType</code> variable.</p>
+<p>We can find the value by looking directly at link's dataset property by saying <code>this.dataset</code>. But dataset isn't supported in Internet Explorer 10 and lower, so we need to provide fallback code for those browsers by applying feature detection.</p>
+<p>We'll start by checking to see if the clicked-on link does NOT have a <code>dataset</code> property and if it doesn't, we'll use the <code>getAttribute()</code> method to find the value of <code>data-team</code> and store it in the <code>getLinkType</code> variable. But for other browsers, we can use <code>dataset</code> to do the finding and storing.</p>
+<p>For a more in-depth discussion about data attributes and <code>getAttribute()</code>, <a href="/load-data-attributes-mouseclicks/" title="Read kaidez's blog post on loading in page content with data attributes">read my data attributes post</a>.
+<a name="jquery-attribute-selectors"></a></p>
+<h3>Using jQuery attribute selectors</h3>
+<pre><code class="language-javascript">
+getElType = $( "div[data-players-team~="+getLinkType+"]" );
+</code></pre>
+<p>jQuery's &quot;Attribute Contains&quot; selector functionality can help us here. jQuery has a lot of uses for this selector but in this case, we're using the <a href="http://api.jquery.com/attribute-contains-word-selector/">Attribute Contains Word Selector</a>.</p>
+<p>In this case, &quot;Attribute Contains&quot; uses <code>~</code> to look any <code>&lt;div&gt;</code> whose <code>data-players-team</code> value EXACTLY matches the value of <code>getLinkType</code>. The total <code>&lt;div&gt;</code> tags that match this criteria are stored in the previously-created <code>getElType</code> variable.</p>
+<p>In other words, if the <code>.btn-player</code> button that gets clicked has a <code>data-team</code> value of <code>chelsea</code>, then <code>chelsea</code> gets stored in <code>getLinkType</code>. Then, the &quot;Attribute Contains&quot; code will look for any <code>&lt;div&gt;</code> whose <code>data-players-team</code> value matches <code>chelsea</code>...it will find four <code>&lt;div&gt;</code> tags in this case.</p>
+<pre><code class="language-javascript">
+getElNotType = $( "div[data-players-team!="+getLinkType+"]" );
+</code></pre>
+<p>Almost the same code as just-discussed except we're now using jQuery's <a href="http://api.jquery.com/attribute-not-equal-selector/">Attribute Not Equal Selector</a> (note the &quot;!&quot; that's now before the &quot;=&quot; in the code instead of &quot;~&quot;). As you've may have guessed, this code is looking for all the <code>&lt;div&gt;</code> tags that have <code>data-players-team</code> values that do NOT match <code>getLinkType</code>, then stores them in a variable called <code>getElNotType</code>.
+<a name="add-remove-content"></a></p>
+<h3>Adding &amp; removing content</h3>
+<pre><code class="language-javascript">
+$( ".player" ).filter( getElNotType ).css( "display", "none" );
+</code></pre>
+<p>Lots jQuery chaining now...</p>
+<p>All the <code>&lt;div&gt;</code> tags at the bottom have a class called <code>.player</code> and we're finding them in the DOM with jQuery. Plus, they're all contained in either the <code>getElType</code> or the <code>getElNotType</code> variable.</p>
+<p>We first, use jQuery's <code>.filter()</code> method to &quot;filter&quot;, or &quot;pick out&quot; all the <code>.player</code> elements that are contained in <code>getElNotType</code>, which are the ones we DON'T want to display. From there, we use jQuery's <code>.css()</code> method to apply an inline style of <code>display:none;</code> to these particular <code>&lt;div&gt;</code> tags, removing them from view if they're not removed already.</p>
+<pre><code class="language-javascript">
+$( ".player" ).filter( getElType ).css( "display", "block" );
+</code></pre>
+<p>Next, we do the opposite: we look for any <code>&lt;div&gt;</code> with a <code>.player</code> class and use <code>.filter()</code> to filter out those stored in <code>getElType</code>, which are the ones we DO want to display. Then use <code>css()</code> to apply an inline style of <code>display:block;</code> to these particular <code>&lt;div&gt;</code> tags, making them visible if they're not visible already.
+<a name="show-all-content"></a></p>
+<h3>Show all the content with a click</h3>
+<pre><code class="language-javascript">
+$( "#btn-show-all" ).click(function() {
+  $( ".player" ).css( "display", "block" );
+});
+</code></pre>
+<p>We'll end our code with functionality that makes any hidden <code>&lt;div&gt;</code> tags visible. The very last link at the top of the page has an ID of <code>#btn-show-all</code>: when clicked, it uses jQuery to find all the <code>.player</code> elements and if any are set to <code>display:none;</code> they'll be set to <code>display:block;</code>.
+<a name="notes"></a></p>
+<h3>Some Notes</h3>
+<p>That's it for the code....here are a few interesting things to note:</p>
+<ul>
+<li>
+<p>This code does not work on IE 8 and lower...and I don't care.</p>
+</li>
+<li>
+<p>We only used two jQuery attribute selectors here but there are many more and they're all useful. <a href="http://api.jquery.com/category/selectors/" title="Read about jQuery Selectors on the jQuery API site">Read about the jQuery Selector API</a>.</p>
+</li>
+<li>
+<p>While we had to do <code>dataset</code> feature detection for the <code>data-team</code> attribute, take note that we didn't have to do that for <code>data-players-team</code>. This is because we had to find the exact value of <code>data-team</code> but with <code>data-players-team</code>, we just need to see if it existed in the DOM.</p>
+</li>
+<li>
+<p>The part of the code that uses <code>$.filter()</code> could be more elegant. It's written in a way that automatically assumes that all the <code>.player</code> elements aren't in view, which isn't the case. So it's probably neater to use something like <code>if/else</code> to check the DOM and see what elements are and aren't visible. But like any DOM checking, a search like that is a bit of a performance hit so it's left out of the code for that reason.</p>
+</li>
+</ul>
+<p><a name="conclusion"></a></p>
+<h3>Conclusion</h3>
+<p>I may or may not do some performance tests to see how much of a hit I'll take doing an <code>if/else</code> check but either way, I found this code to be a neater way of doing things when compared to some other implementations I commonly use. I like what I did here and will probably use the pattern again.</p>
+<p>Again, there may be other ways to do this...feel free to share alternatives.</p>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-main">
+                <h3>kaidez</h3>
+                <p>web development and stuff...</p>
+                
+                <div class="social-links">
+                    <a href="https://twitter.com/kaidez" aria-label="Twitter" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/kaidez" aria-label="GitHub" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/kaigittens" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/posts/">Blog</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="/posts/javascript/">JavaScript</a></li>
+                        <li><a href="/posts/web-development/">Web Development</a></li>
+                        <li><a href="/posts/tutorials/">Tutorials</a></li>
+                        <li><a href="/posts/reviews/">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/feed.xml">RSS Feed</a></li>
+                        <li><a href="/sitemap.xml">Sitemap</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Built with <a href="https://11ty.dev" target="_blank" rel="noopener">11ty</a> and hosted on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+/* Footer Styles */
+.site-footer {
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--space-20);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-12);
+    padding: var(--space-12) 0 var(--space-8);
+}
+
+.footer-main h3 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-3);
+    color: var(--color-text);
+}
+
+.footer-main p {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-6);
+    max-width: none;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius);
+    background: var(--color-bg);
+    color: var(--color-text-muted);
+    transition: all var(--transition-fast);
+    border: 1px solid var(--color-border);
+}
+
+.social-links a:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+}
+
+.footer-section h4 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+    color: var(--color-text);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section li {
+    margin-bottom: var(--space-2);
+}
+
+.footer-section a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-section a:hover {
+    color: var(--color-primary);
+}
+
+.footer-bottom {
+    padding: var(--space-6) 0;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+}
+
+.footer-bottom p {
+    margin-bottom: var(--space-2);
+}
+
+.footer-bottom p:last-child {
+    margin-bottom: 0;
+}
+
+.footer-bottom a {
+    color: var(--color-primary);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+</style>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5549541-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

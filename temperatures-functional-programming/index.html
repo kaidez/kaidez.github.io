@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Temperature Averages with JavaScript Functional Programming - kaidez</title>
+    <meta name="description" content="web development and stuff...">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Display Temperature Averages with JavaScript Functional Programming">
+    <meta property="og:description"
+        content="web development and stuff...">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kaidez.com/temperatures-functional-programming/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+    <meta property="article:publisher" content="http://facebook.com/kaidezblog" />
+    <meta property="article:section" content="Personal" />
+    <meta property="og:image" content="http://www.kaidez.com/img/NaN" />
+    <meta property="og:image:width" content="700" />
+    <meta property="og:image:height" content="300" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaidez" />
+    <meta name="twitter:creator" content="@kaidez" />
+    <meta name="twitter:title" content=" » kaidez" />
+    <meta name="twitter:image" content="http://www.kaidez.com/img/NaN" />
+    <meta name="twitter:description" content="" />
+</head>
+
+<body class="" data-pagefind-body>
+    <header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <a href="/" class="site-title">kaidez</a>
+            
+            <!-- Search Component -->
+            <!-- Simplified Search Component -->
+<div class="search-container">
+    <div id="search" class="pagefind-search"></div>
+</div>
+
+<!-- Load Pagefind -->
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    try {
+        // Simple initialization
+        new PagefindUI({ 
+            element: "#search",
+            showImages: false,
+            excerptLength: 20,
+            resetStyles: false,
+            translations: {
+                placeholder: "Search kaidez for stuff...",
+                zero_results: "Couldn't find [SEARCH_TERM]"
+            }
+        });
+        console.log('Pagefind initialized successfully');
+    } catch (error) {
+        console.error('Pagefind initialization failed:', error);
+    }
+});
+</script>
+
+<style>
+/* Simple search styling */
+.search-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.pagefind-search {
+    width: 100%;
+}
+
+/* Style the Pagefind input */
+.pagefind-ui__search-input {
+    width: 100% !important;
+    padding: var(--space-3) var(--space-4) !important;
+    border: 2px solid var(--color-border) !important;
+    border-radius: var(--border-radius-lg) !important;
+    background: var(--color-bg) !important;
+    color: var(--color-text) !important;
+    font-size: var(--text-base) !important;
+    font-family: var(--font-family-sans) !important;
+}
+
+.pagefind-ui__search-input:focus {
+    border-color: var(--color-primary) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Style the results */
+.pagefind-ui__results {
+    margin-top: var(--space-2) !important;
+    background: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--shadow-lg) !important;
+    max-height: 400px !important;
+    overflow-y: auto !important;
+}
+
+.pagefind-ui__result {
+    padding: var(--space-4) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+}
+
+.pagefind-ui__result:last-child {
+    border-bottom: none !important;
+}
+
+.pagefind-ui__result-link {
+    color: var(--color-text) !important;
+    text-decoration: none !important;
+}
+
+.pagefind-ui__result-link:hover {
+    color: var(--color-primary) !important;
+}
+
+.pagefind-ui__result-title {
+    font-weight: 600 !important;
+    font-size: var(--text-lg) !important;
+    margin-bottom: var(--space-2) !important;
+}
+
+.pagefind-ui__result-excerpt {
+    color: var(--color-text-muted) !important;
+    font-size: var(--text-sm) !important;
+}
+
+.pagefind-ui__result-excerpt mark {
+    background: rgba(37, 99, 235, 0.2) !important;
+    color: var(--color-primary) !important;
+    padding: 0 2px !important;
+    border-radius: 2px !important;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        max-width: 100%;
+    }
+}
+</style>
+            
+            <nav class="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="/coding-best-practices/">Coding Tips</a></li>
+                    <li><a href="/tutorials/">Tutorials</a></li>
+                    <li><a href="/personal/">Personal</a></li>
+                    <li><a href="/reviews/">Reviews</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <main class="main-content">
+        <p><a href="https://codepen.io/kaidez/pen/qpZrzw">See Demo »</a></p>
+<p>As mentioned both <a href="/format-dates-functional-programming/">here</a> and <a href="/functional-programming-link/">here</a>, I try to write as much <a href="http://eloquentjavascript.net/1st_edition/chapter6.html">JavaScript Functional Programming</a> when possible. Even when it's just for practice.</p>
+<p>I came across a pretty neat challenge on a Facebook beginning developers group I help to administer. The challenge provided some good FP practice.</p>
+<h2>Table of Contents</h2>
+<ol>
+  <li class="post__list-item"><a href="#challenge">The Challenge</a></li>
+  <li class="post__list-item"><a href="#solution">The Solution</a></li>
+  <li class="post__list-item"><a href="#basic-code">The Basic Code</a></li>
+  <li class="post__list-item"><a href="#determine-arrays">Determine the Inner Arrays</a></li>
+  <li class="post__list-item"><a href="#reducer-helper">The Reducer Helper</a></li>
+  <li class="post__list-item"><a href="#display-temperature-info">Display the Temperature Information</a></li>
+  <li class="post__list-item"><a href="#load-content">Load All the Content Onto the Page</a></li>
+  <li class="post__list-item"><a href="#final-code">The Final Code</a></li>
+  <li class="post__list-item"><a href="#conclusion">Conclusion</a></li>
+</ol>
+<p><a name="challenge"></a></p>
+<h2>The Challenge</h2>
+There was an array of arrays. Each inner array represented either column header info or a list containing both temperatures for a city and the city name itself.
+<p>The array of arrays looked like this:</p>
+<pre><code class="language-javascript">
+[
+  ["City", "00-08", "08-16", "16-24", "Average"],
+  ["Malmö", 12, 16, 9],
+  ["Mariestad", 13, 15, 10],
+  ["Stockholm", 13, 15, 13],
+  ["Upphärad", 14, 16, 15],
+  ["Göteborg", 13, 14, 11]
+]
+</code></pre>
+<p>I had to calculate the average temperature for each city, then run code that displayed the array data like this:
+<img src="/img/temperature-display.jpg" class="post__image">
+There were a few challenges here:</p>
+<ul>
+  <li class="post__list-item">How do I look at <em>just</em> the numbers in the array to get the average?</li>
+  <li class="post__list-item">How do I do that while ignoring the city in this array?</li>
+  <li class="post__list-item">How do I display all these arrays with reusable functions, while understanding that the one array is header content and the rest is temperature/city content?</li>
+</ul>
+<p><a name="solution"></a></p>
+<h2>The Solution</h2>
+The solution was, well, to use functional programming. In other words, I had to <strong>create separate functions that implemented specific parts of the above-described tasks</strong>.
+<p>I did this by:</p>
+<ul>
+  <li class="post__list-item">creating a function that determines whether or not the inner array has temperatures.</li>
+  <li class="post__list-item">creating a function that calculates the temperature average.</li>
+  <li class="post__list-item">creating a function that displays the content on the page.</li>
+  <li class="post__list-item">getting all these functions to work together as a team to display the array content on the page.</li>
+</ul>
+<p><a name="basic-code"></a></p>
+<h2>The Basic Code</h2>
+The HTML will look like this:
+<pre><code class="language-markup">
+&lt;div class="temperature-info__container">
+  &lt;div id="temperatureHeader" class="temperature-info__header">&lt;/div>
+  &lt;div id="temperatureInfo">&lt;/div>
+&lt;/div>
+</code></pre>
+<p>The <a href="http://getbem.com/introduction/">BEM-like CSS</a> will look like this:</p>
+<pre><code class="language-css">
+.temperature-info__container {
+  width: 650px;
+}
+
+.temperature-info__header {
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.temperature-info__single-temp-row {
+  margin-bottom: 10px;
+}
+
+.temperature-info__single-temp {
+  width: 100px;
+  display: inline-block;
+  margin-right: 30px;
+}
+</code></pre>
+<p><a name="determine-arrays"></a></p>
+<h2>Determine the Inner Arrays</h2>
+First, I created a function that checked if the inner array had numeric temp values. If it did, the function created a new array containing:
+<ul>
+  <li class="post__list-item">this inner array's temperatures.</li>
+  <li class="post__list-item">their average temperature.</li>
+  <li class="post__list-item">their respective city.</li>
+</ul>
+<p>If that array didn't have temperature values, I assumed it was the array that contained strings but no numbers. This would be the array above starting with <code>&quot;City&quot;</code> so it should load onto the page as column headers.</p>
+<p>The array of arrays was stored in a constant called <code>temperatureInfo</code>:</p>
+<pre><code class="language-javascript">
+const temperatureInfo = [
+  ["City", "00-08", "08-16", "16-24", "Average"],
+  ["Malmö", 12, 16, 9],
+  ["Mariestad", 13, 15, 10],
+  ["Stockholm", 13, 15, 13],
+  ["Upphärad", 14, 16, 15],
+  ["Göteborg", 13, 14, 11]
+]
+</code></pre>
+<p>The first function is called <code>formatData()</code>: it's important to note that running this function against our data is the catalyst for loading all the content onto the page. In other words, when we run <code>formatData(temperatureInfo)</code>, it runs other functions that help display and format the content.</p>
+<p><code>formatData()</code> looks like this:</p>
+<pre><code class="language-javascript">
+function formatData(outerArray) {
+
+  outerArray.map(innerArray => {
+
+    let numbersOnlyList = []
+
+    innerArray.map(index => {
+      if(typeof index === "number") {
+        return numbersOnlyList.push(index)
+      }
+    })
+
+    return numbersOnlyList.length
+    ?
+    displayTemperatureInfo(numbersOnlyList, innerArray[0])
+    :
+    displayArrayContent(innerArray, "#temperatureHeader")
+  })
+}
+</code></pre>
+<p>Breaking all this down...</p>
+<pre><code class="language-javascript">
+function formatData(outerArray) {
+ ...
+}
+</code></pre>
+<p><code>formatData</code> takes one parameter: <code>outerArray</code>. Eventually, the <code>temperatureInfo</code> const will be the passed parameter.</p>
+<pre><code class="language-javascript">
+outerArray.map(innerArray => {
+  ...
+})
+</code></pre>
+<p>Loop through the array of arrays with the <code>.map()</code> method.  The <code>innerArray</code> param will represent one of the single arrays inside <code>temperatureInfo</code> at various times.</p>
+<pre><code class="language-javascript">
+let numbersOnlyList = []
+</code></pre>
+<p>Inside this loop, create an empty array that will eventually contains numbers only.</p>
+<pre><code class="language-javascript">
+innerArray.map(index => {
+  if(typeof index === "number") {
+    return numbersOnlyList.push(index)
+  }
+})
+</code></pre>
+<p>Run another <code>.map()</code> function inside the first loop, which loops over each item in an inner array. If the item is a number, place it inside the <code>numbersOnlyList</code> array, otherwise do nothing.</p>
+<p>In other words, when looking at the inner arrays, the <code>index</code> param will look like this at some point:</p>
+<pre><code class="language-javascript">["Malmö", 12, 16, 9]</code></pre>
+<p>And when it does, the <code>innerArray.map()</code> loop will make <code>numbersOnlyList</code> look like this:</p>
+<pre><code class="language-javascript">[12, 16, 9]</code></pre>
+<p>It's REAAAAAAALY important to note that the <code>index</code> param will also look like this at some point:</p>
+<pre><code class="language-javascript">["City", "00-08", "08-16", "16-24", "Average"]</code></pre>
+<p>But this param has no numbers. Consequently, this will produce an empty <code>numbersOnlyList</code> array, giving it a length of &quot;0&quot;.</p>
+<pre><code class="language-javascript">
+return numbersOnlyList.length
+?
+displayTemperatureInfo(numbersOnlyList, innerArray[0])
+:
+displayArrayContent(innerArray, "#temperatureHeader")
+</code></pre>
+<p>As seen, <code>numbersOnlyList</code> can have a length, where each of its array items represents a list of temperatures. If it does have a length, pass it as a parameter to the <code>displayTemperatureInfo()</code> function that we haven't built yet.</p>
+<p>We'll create <code>displayTemperatureInfo()</code> later and discuss in depth. But for now, know that it does the following:</p>
+<ul>
+  <li class="post__list-item">calculates the average temperature.</li>
+  <li class="post__list-item">creates a new array containing that average temperature, the already-existing temperature list and city name.</li>
+  <li class="post__list-item">loads this new array's content onto the page.</li>
+</ul>
+<p><code>displayTemperatureInfo()</code> takes a second param called <code>innerArray[0]</code>: again, <code>innerArray</code> will look like <code>[&quot;Malmö&quot;, 12, 16, 9]</code> at some point. We know that the city name is at the beginning of the array, so <code>innerArray[0]</code> points directly to that.</p>
+<p>If <code>numbersOnlyList</code> does NOT have a length, we'll assume that we're looking at an empty array...created by that inner array starting with <code>&quot;City&quot;</code>. In that case, run that array using the <code>displayArrayContent()</code> function that we also haven't built yet.</p>
+<p><code>displayArrayContent()</code> loads the array content on the page and takes two params: the current <code>innerArray</code> index and a reference to page element where this array content will load. In this instance, that's the <code><div id="temperatureHeader" /></code> element.</p>
+<p><a name="reducer-helper"></a></p>
+<h2>The Reducer Helper</h2>
+The <code>.reduce()</code> method calculates the total sum of an array.  We'll need to do this to get the average temperatures but can't do it without something called an "accumulator function."
+<p>This accumulator function returns the sum and we'll create a basic one like this:</p>
+<pre><code class="language-javascript">
+function reducerHelper(accumulator, currentValue) {
+  return accumulator + currentValue
+}
+</code></pre>
+<p><a name="display-temperature-info"></a></p>
+<h2>Display the Temperature Information</h2>
+Again, <code>displayTemperatureInfo()</code> calculates the average temperature, creates a new array with all the temperatures, average temperature and city name, then loads the array content onto the page. It looks like this:
+<pre><code class="language-javascript">
+function displayTemperatureInfo(temperatureArray, getCity) {
+<p>const arrayLength = temperatureArray.length
+const getTemperatureSum = temperatureArray.reduce(reducerHelper)
+const temperatureAverage = getTemperatureSum/arrayLength</p>
+<p>temperatureArray.push(Math.round(temperatureAverage))</p>
+<p>temperatureArray.unshift(getCity)</p>
+<p>return displayArrayContent(temperatureArray, &quot;#temperatureInfo&quot;)</p>
+<p>}
+</code></pre>
+Breaking this one down now...</p>
+<pre><code class="language-javascript">
+function displayTemperatureInfo(temperatureArray, getCity) {
+ ...
+}
+</code></pre>
+<p>It takes two parameters: <code>temperatureArray</code> and <code>getCity</code>. As discussed, the first param is whatever the current value is of <code>numbersOnlyList</code> while the second param is the city name.</p>
+<pre><code class="language-javascript">
+const arrayLength = temperatureArray.length
+const getTemperatureSum = temperatureArray.reduce(reducerHelper)
+const temperatureAverage = getTemperatureSum/arrayLength
+</code></pre>
+<p>The <code>arrayLength</code> const represents the amount of temperatures in the <code>numbersOnlyList</code>. In the case of this code, that value will always be 3.</p>
+<p>The <code>getTemperatureSum</code> const represents the sum of those values in the array. We tell the <code>.reduce()</code> method to look at that array, then get this sum by applying our accumulator function to it.</p>
+<p>So if that array looks like <code>[12, 16, 9]</code>, then <code>getTemperatureSum</code> will equal 31.</p>
+<p>The <code>temperatureAverage</code> const represents the array's average. Basic algebra here: you always determine an average by dividing the combined value of set of numbers by the amount of numbers in the set.</p>
+<p>So if that array looks like <code>[12, 16, 9]</code>, then <code>temperatureAverage</code> will divide 31 by 3.</p>
+<pre><code class="language-javascript">
+temperatureArray.push(Math.round(temperatureAverage))
+</code></pre>
+<p>As mentioned, <code>displayTemperatureInfo()</code> adds this average to array we're working with. We add it to the <em>end</em> of the array using <code>.push()</code>.</p>
+<p><code>temperatureAverage</code> returns the average value as a decimal, so we'll use <code>Math.round()</code> to convert it to the nearest whole number.</p>
+<pre><code class="language-javascript">
+temperatureArray.unshift(getCity)
+</code></pre>
+<p>Also as mentioned, <code>displayTemperatureInfo()</code> adds the city name to array we're working with. That's available via the <code>getCity</code> parameter we passed so we'll add it to the <em>beginning</em> of the array using <code>.unshift()</code>.</p>
+<pre><code class="language-javascript">
+return displayArrayContent(temperatureArray, "#temperatureInfo")
+</code></pre>
+<p>Using the previously-discussed-but-not-yet-created <code>displayArrayContent()</code> function, we'll load this new array to the <code><div id="temperatureInfo" /></code> element on our page.</p>
+<p><a name="load-content"></a></p>
+<h2>Load All the Content Onto the Page</h2>
+We're using a <code>displayArrayContent()</code> function to load data onto the page.  I guess we should build it now.
+<p>This is all basic DOM manipulation and look like this:</p>
+<pre><code class="language-javascript">
+function displayArrayContent(arrayContent, target) {
+
+  const getTargetElement = document.querySelector(target)
+  const parentElement = document.createElement('div')
+  parentElement.setAttribute('class', 'temperature-info__single-temp-row')
+
+  arrayContent.map(index => {
+    const childElement = document.createElement('span');
+    childElement.setAttribute('class', 'temperature-info__single-temp')
+    childElement.innerHTML = index
+    parentElement.appendChild(childElement)
+  })
+
+  return getTargetElement.appendChild(parentElement)
+
+}
+</code></pre>
+<p>And...breaking this one down...</p>
+<pre><code class="language-javascript">
+function displayArrayContent(arrayContent, target) {
+  ...
+}
+</code></pre>
+<p>The function takes two parameters: <code>arrayContent</code> and <code>target</code>. Because of how we've coded stuff, <code>arrayContent</code> always represents one of the arrays we dynamically built using <code>displayTemperatureInfo()</code> while <code>target</code> represents <em>where</em> on the page we want to place it.</p>
+<pre><code class="language-javascript">
+const getTargetElement = document.querySelector(target)
+const parentElement = document.createElement('div')
+parentElement.setAttribute('class', 'temperature-info__single-temp-row')
+</code></pre>
+<p>We create two constants: <code>getTargetElement</code> and <code>parentElement</code>. <code>getTargetElement</code> is a DOM reference to the element we want to load content into (represented by <code>target</code>) while <code>parentElement</code> creates a <code>div</code> tag in memory that we'll use later.</p>
+<p>From there, we give this <code>div</code> tag a class name of <code>temperature-info__single-temp-row</code> to apply some basic styling to it.</p>
+<pre><code class="language-javascript">
+arrayContent.map(index => {
+  const childElement = document.createElement('span');
+  childElement.setAttribute('class', 'temperature-info__single-temp')
+  childElement.innerHTML = index
+  parentElement.appendChild(childElement)
+})
+</code></pre>
+<p>Another <code>.map()</code> function loops over the array and does the following with each array item:</p>
+<ul>
+  <li class="post__list-item">creates a <code>span</code> tag.</li>
+  <li class="post__list-item">gives the <code>span</code> a class name of <code>temperature-info__single-temp</code>.</li>
+  <li class="post__list-item">loads each array item into the <code>span</code> with the help of <code>innerHTML</code>.</li>
+  <li class="post__list-item">places the <code>span</code> at the bottom of <code>div</code> we created earlier with the help of the <code>appendChild()</code> method.</li>
+</ul>
+<pre><code class="language-javascript">
+return getTargetElement.appendChild(parentElement)
+</code></pre>
+<p>Take our <code>div</code> with all the array content and place it at the bottom of  <code>target</code> element which, again, is an element already on our web page.</p>
+<p><a name="run-the-code"></a></p>
+<h2>Run All This Code</h2>
+As mentioned earlier, <code>formatData()</code> is a catalyst: running this function runs all the code needed to load the <code>temperatureInfo</code> array on the page. So all we need to do is this:
+<pre><code class="language-javascript">
+formatData(temperatureInfo)
+</code></pre>
+Neat, huh?
+<p><a name="final-code"></a></p>
+<h2>The Final Code</h2>
+Our final, complete code looks like this:
+<pre><code class="language-javascript">
+const temperatureInfo = [
+  ["City", "00-08", "08-16", "16-24", "Average"],
+  ["Malmö", 12, 16, 9],
+  ["Mariestad", 13, 15, 10],
+  ["Stockholm", 13, 15, 13],
+  ["Upphärad", 14, 16, 15],
+  ["Göteborg", 13, 14, 11]
+]
+<p>function formatData(outerArray) {</p>
+<p>outerArray.map(innerArray =&gt; {</p>
+<p>let numbersOnlyList = []</p>
+<p>innerArray.map(index =&gt; {
+if(typeof index === &quot;number&quot;) {
+return numbersOnlyList.push(index)
+}</p>
+<p>})</p>
+<p>return numbersOnlyList.length
+?
+displayTemperatureInfo(numbersOnlyList, innerArray[0])
+:
+displayArrayContent(innerArray, &quot;#temperatureHeader&quot;)
+})
+}</p>
+<p>function reducerHelper(accumulator, currentValue) {
+return accumulator + currentValue
+}</p>
+<p>function displayTemperatureInfo(temperatureArray, getCity) {</p>
+<p>const arrayLength = temperatureArray.length
+const getTemperatureSum = temperatureArray.reduce(reducerHelper)
+const temperatureAverage = getTemperatureSum/arrayLength</p>
+<p>temperatureArray.push(Math.round(temperatureAverage))</p>
+<p>temperatureArray.unshift(getCity)</p>
+<p>return displayArrayContent(temperatureArray, &quot;#temperatureInfo&quot;)</p>
+<p>}</p>
+<p>function displayArrayContent(arrayContent, target) {</p>
+<p>const getTargetElement = document.querySelector(target)
+const parentElement = document.createElement('div')
+parentElement.setAttribute('class', 'temperature-info__single-temp-row')</p>
+<p>arrayContent.map(index =&gt; {
+const childElement = document.createElement('span');
+childElement.setAttribute('class', 'temperature-info__single-temp')
+childElement.innerHTML = index
+parentElement.appendChild(childElement)
+})</p>
+<p>return getTargetElement.appendChild(parentElement)</p>
+<p>}</p>
+<p>formatData(temperatureInfo)
+</code></pre></p>
+<p><a name="conclusion"></a></p>
+<h2>Conclusion</h2>
+This code has brittle spots:
+<ul>
+  <li class="post__list-item">Pointing to the city name using <code>innerArray[0]</code> assumes that the city name will always be the first item in the array...and it may not be. I <em> should</em> do something like use a regular expression to pick out the strings and numbers and then load stuff, or send an error message to the console indicating that the array needs to be properly formatted.</li>
+  <li class="post__list-item">Using <code>appendChild()</code> to load in the array data places it at the bottom of the page element. The way I wrote the code displayed the column header data first: it may have loaded second or third if I wrote it a different way. I should've written code that detects that specific array, then <em>prepends</em> its data instead of <em>appends</em></li>
+</ul>
+<p>It also should be said that, based on modern web dev techniques, <code>temperatureInfo</code> would be built with more stricter rules. It would be built using back-end web services and be returned in a JSON format.</p>
+<p>But none of that's the point. The point is that I did some JavaScript functional programming and did a job I'm proud of. The practice is what counts.</p>
+<p>Feel free to suggest changes, ask questions, etc.</p>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-main">
+                <h3>kaidez</h3>
+                <p>web development and stuff...</p>
+                
+                <div class="social-links">
+                    <a href="https://twitter.com/kaidez" aria-label="Twitter" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/kaidez" aria-label="GitHub" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/kaigittens" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/posts/">Blog</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="/posts/javascript/">JavaScript</a></li>
+                        <li><a href="/posts/web-development/">Web Development</a></li>
+                        <li><a href="/posts/tutorials/">Tutorials</a></li>
+                        <li><a href="/posts/reviews/">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/feed.xml">RSS Feed</a></li>
+                        <li><a href="/sitemap.xml">Sitemap</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Built with <a href="https://11ty.dev" target="_blank" rel="noopener">11ty</a> and hosted on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+/* Footer Styles */
+.site-footer {
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--space-20);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-12);
+    padding: var(--space-12) 0 var(--space-8);
+}
+
+.footer-main h3 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-3);
+    color: var(--color-text);
+}
+
+.footer-main p {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-6);
+    max-width: none;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius);
+    background: var(--color-bg);
+    color: var(--color-text-muted);
+    transition: all var(--transition-fast);
+    border: 1px solid var(--color-border);
+}
+
+.social-links a:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+}
+
+.footer-section h4 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+    color: var(--color-text);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section li {
+    margin-bottom: var(--space-2);
+}
+
+.footer-section a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-section a:hover {
+    color: var(--color-primary);
+}
+
+.footer-bottom {
+    padding: var(--space-6) 0;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+}
+
+.footer-bottom p {
+    margin-bottom: var(--space-2);
+}
+
+.footer-bottom p:last-child {
+    margin-bottom: 0;
+}
+
+.footer-bottom a {
+    color: var(--color-primary);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+</style>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5549541-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

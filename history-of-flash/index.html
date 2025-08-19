@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Short History of Flash (how I saw it) - kaidez</title>
+    <meta name="description" content="web development and stuff...">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="A Short History of Flash (how I saw it)">
+    <meta property="og:description"
+        content="web development and stuff...">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kaidez.com/history-of-flash/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+    <meta property="article:publisher" content="http://facebook.com/kaidezblog" />
+    <meta property="article:section" content="Personal" />
+    <meta property="og:image" content="http://www.kaidez.com/img/NaN" />
+    <meta property="og:image:width" content="700" />
+    <meta property="og:image:height" content="300" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaidez" />
+    <meta name="twitter:creator" content="@kaidez" />
+    <meta name="twitter:title" content=" » kaidez" />
+    <meta name="twitter:image" content="http://www.kaidez.com/img/NaN" />
+    <meta name="twitter:description" content="" />
+</head>
+
+<body class="" data-pagefind-body>
+    <header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <a href="/" class="site-title">kaidez</a>
+            
+            <!-- Search Component -->
+            <!-- Simplified Search Component -->
+<div class="search-container">
+    <div id="search" class="pagefind-search"></div>
+</div>
+
+<!-- Load Pagefind -->
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    try {
+        // Simple initialization
+        new PagefindUI({ 
+            element: "#search",
+            showImages: false,
+            excerptLength: 20,
+            resetStyles: false,
+            translations: {
+                placeholder: "Search kaidez for stuff...",
+                zero_results: "Couldn't find [SEARCH_TERM]"
+            }
+        });
+        console.log('Pagefind initialized successfully');
+    } catch (error) {
+        console.error('Pagefind initialization failed:', error);
+    }
+});
+</script>
+
+<style>
+/* Simple search styling */
+.search-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.pagefind-search {
+    width: 100%;
+}
+
+/* Style the Pagefind input */
+.pagefind-ui__search-input {
+    width: 100% !important;
+    padding: var(--space-3) var(--space-4) !important;
+    border: 2px solid var(--color-border) !important;
+    border-radius: var(--border-radius-lg) !important;
+    background: var(--color-bg) !important;
+    color: var(--color-text) !important;
+    font-size: var(--text-base) !important;
+    font-family: var(--font-family-sans) !important;
+}
+
+.pagefind-ui__search-input:focus {
+    border-color: var(--color-primary) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Style the results */
+.pagefind-ui__results {
+    margin-top: var(--space-2) !important;
+    background: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--shadow-lg) !important;
+    max-height: 400px !important;
+    overflow-y: auto !important;
+}
+
+.pagefind-ui__result {
+    padding: var(--space-4) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+}
+
+.pagefind-ui__result:last-child {
+    border-bottom: none !important;
+}
+
+.pagefind-ui__result-link {
+    color: var(--color-text) !important;
+    text-decoration: none !important;
+}
+
+.pagefind-ui__result-link:hover {
+    color: var(--color-primary) !important;
+}
+
+.pagefind-ui__result-title {
+    font-weight: 600 !important;
+    font-size: var(--text-lg) !important;
+    margin-bottom: var(--space-2) !important;
+}
+
+.pagefind-ui__result-excerpt {
+    color: var(--color-text-muted) !important;
+    font-size: var(--text-sm) !important;
+}
+
+.pagefind-ui__result-excerpt mark {
+    background: rgba(37, 99, 235, 0.2) !important;
+    color: var(--color-primary) !important;
+    padding: 0 2px !important;
+    border-radius: 2px !important;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        max-width: 100%;
+    }
+}
+</style>
+            
+            <nav class="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="/coding-best-practices/">Coding Tips</a></li>
+                    <li><a href="/tutorials/">Tutorials</a></li>
+                    <li><a href="/personal/">Personal</a></li>
+                    <li><a href="/reviews/">Reviews</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <main class="main-content">
+        <p>One reason why I'm curious about HTML5 is because of Apple's issues with the Adobe Flash web animation program.</p>
+<p>About a year ago from this post, Steve Jobs called Flash a &quot;memory hog&quot; and stated that Apple wouldn't support it on either the iPhone, iPad or iPod Touch.  He said that these devices would instead use HTML5 and Quicktime to display video, even though Flash is the unspoken web video standard.</p>
+<p>Steve said this at a time when it looked like the iPhone would rule the smartphone market for awhile and the iPad would be the cool new gadget everyone wanted.  It's a year later and the iPhone is losing market share to Google's Android while the iPad is &quot;cool,&quot; but not as &quot;cool&quot; as Apple thought it would be.</p>
+<img src="/img/flashLogo.jpg" class="post-pic" />
+This isn't all because of Apple's lack of Flash support for its products, but it's partially due to it.  They may know this and the fact [the Flash-ready Sky Fire web browser][1] the Flash-ready Sky Fire web browser can be installed on the iPhone and iPod Touch could be a sign that they're rethinking their position.
+<p>Flash is how I got into this business so it will always be close to my heart.  The Apple stuff made think about how far Flash has come and from my point of view, it's come a long way.</p>
+<h2>The Beginning</h2>
+<p><em>(Disclaimer: I wasn't there for Flash's beginning and don't claim to be a Flash guru like <a href="http://www.oreillynet.com/pub/au/568">Colin Moock</a>, but I was there a little before it got big and can more than get the job done with the application).</em></p>
+<p>Flash is the brainchild of software developer <a href="http://www.adobe.com/macromedia/events/john_gay/">Jonathan Gay</a>.  He started out designing computer games and eventually created a pen-powered graphics program called SmartSketch which eventually migrated into FutureSplash, a full-fledged web animation program.</p>
+<p>FutureSplash gained enough high-profile customers, like Disney, to gain the attention of a California-based graphics software company called Macromedia, who already had a web animation program called ShockWave.  But they felt that FutureSplash had promise so they brought the application's parent company in 1996 and renamed the application Flash.</p>
+<h2>The Big Moment</h2>
+<p>Flash versions 1 through 3 required that web designers create almost all their animations by hand with a mouse.  You could use light scripting commands to start and stop animations, but not much else.</p>
+<p>All that changed in 1999 when Macromedia bundled ActionScript 1.0 with Flash 4.  ActionScript was a full programming language that allowed for the creation of extremely complex web animations within Flash.  Plus, it allowed Flash to communicate with backend database setups like MySQL and Java, meaning that data could easily pass to and from a Flash site: you could create the coolest looking e-commerce site in Flash if you wanted to.</p>
+<p>Thanks to ActionScript, Flash showed the world how limitless web design was and it caused a design movement as revolutionary as Bauhaus (it didn't tick people off like Bauhaus did, but it  caused a revolution anyway).  A lot of great web design agencies spurred the Flash revolution, including <a href="http://www.balthaserstudios.com/">Balthaser</a>, <a href="http://www.webagent007.com/">WEBAGENT007</a>, the highly influential <a href="http://2advanced.com/">2Advanced</a> and the now defunct, extremely arrogant Kioken Studios.  A website designed in Flash cost double the price of one that wasn't, and people paid the money anyway.  Flash sites were everywhere.</p>
+<h2>The Problem</h2>
+<p>Flash sites looked good but had a weakness: the content within them couldn't easily be found by search engines.  The engines could find a site that <em>used</em> Flash, but not copy and images within it.</p>
+<p>This wasn't a big deal when Yahoo! and Alta Vista were the main search engines: they found and ranked sites using many other factors besides content.   But when Google became <em>the</em> main search engine, they deemed it that sites with the best content got the best ranks.  Thankfully, they provided web developers with all sorts of information on how to get good rankings: utilizing this info on your site didn't guarantee you good rankings, but it upped your chances.</p>
+<p>Google clearly stated that Flash didn't raise your chances, it lowered them.  Web designers followed suit.  Less Flash sites were created resulting in less commercial sales of Flash.  Many developers were now buying the program to create browser-based video games so Macromedia survived, but they still took a small financial hit.</p>
+<h2>The Big Moment, Part II</h2>
+<p>Meanwhile, cable and fiber optics were bringing super high-speed internet connections to homes.  This allowed for large files to be transmitted over the web at a faster rate.</p>
+<p>Online video streaming benefited the most from super high-speed internet connections, or broadband.  But what type of video was the best for web use?  Apple wanted people to use their QuickTime format while Windows Media was being promoted by its owner, Microsoft.  There were other video formats out there, all being promoted by their respective owners.</p>
+<p>Flash solved this problem by presenting the FLV format to the public in 2003.  Someone could now import almost any type of video into Flash and with a click a few buttons, an FLV would come out.</p>
+<p>The FLV was flexible: it was a video file that displayed in any type of web browser that supported Flash, which all of them did. Macromedia increased the flexibility by licensing the FLV to other software developers, meaning that you didn't need to buy Flash to create an FLV.  You could used one of the many cheaper alternatives that came about.</p>
+<p>I'm of the opinion that at this point, Adobe had seen enough.  Macromedia had always been their main competitor in the graphics software field, but the overlap was small.  Macromedia's most successful products were the ones geared towards web programmers, like web design program Dreamweaver and the ColdFusion database platform, while their graphic design products were just okay.  It was the reverse with Adobe: their PhotoShop, Illustrator and InDesign products were standards in the design world but their one web design tool, GoLive, was a bust.</p>
+<p>With Flash, Macromedia was showed that they could create products that appealed to both web designers <em>and&lt;</em> programmers. Factor in the creation of the FLV (which made Macromedia tons of money in licensing fees) and Adobe had more than enough inspiration to buy Macromedia, which they did in December 2005 for roughly $3.4 billion. It paid off in the end as YouTube was up and running at the time and were using the FLV format for video. Other online video sites like Hulu and Google Video, followed suit, resulting in more FLV licensing fees.</p>
+<p>Which brings us to today. Thousands are still using FLVs despite Steve Jobs' statements, but YouTube's slowly utilizing HTML5 video.  There are less Flash sites out there, but not that much less.  And Flash is still a great online game development platform.</p>
+<p>HTML5's video format (OOG) is free from license, as are the tools to create them.  So it may beat Adobe in the online video arena (one reason why I'm getting into HTML5).  But history has proven that Flash can weather the punches and change to meet the needs of the times.  I think it will be fine.</p>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-main">
+                <h3>kaidez</h3>
+                <p>web development and stuff...</p>
+                
+                <div class="social-links">
+                    <a href="https://twitter.com/kaidez" aria-label="Twitter" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/kaidez" aria-label="GitHub" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/kaigittens" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/posts/">Blog</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="/posts/javascript/">JavaScript</a></li>
+                        <li><a href="/posts/web-development/">Web Development</a></li>
+                        <li><a href="/posts/tutorials/">Tutorials</a></li>
+                        <li><a href="/posts/reviews/">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/feed.xml">RSS Feed</a></li>
+                        <li><a href="/sitemap.xml">Sitemap</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Built with <a href="https://11ty.dev" target="_blank" rel="noopener">11ty</a> and hosted on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+/* Footer Styles */
+.site-footer {
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--space-20);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-12);
+    padding: var(--space-12) 0 var(--space-8);
+}
+
+.footer-main h3 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-3);
+    color: var(--color-text);
+}
+
+.footer-main p {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-6);
+    max-width: none;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius);
+    background: var(--color-bg);
+    color: var(--color-text-muted);
+    transition: all var(--transition-fast);
+    border: 1px solid var(--color-border);
+}
+
+.social-links a:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+}
+
+.footer-section h4 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+    color: var(--color-text);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section li {
+    margin-bottom: var(--space-2);
+}
+
+.footer-section a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-section a:hover {
+    color: var(--color-primary);
+}
+
+.footer-bottom {
+    padding: var(--space-6) 0;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+}
+
+.footer-bottom p {
+    margin-bottom: var(--space-2);
+}
+
+.footer-bottom p:last-child {
+    margin-bottom: 0;
+}
+
+.footer-bottom a {
+    color: var(--color-primary);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+</style>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5549541-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

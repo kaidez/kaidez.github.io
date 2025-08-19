@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Project: WIREFRAME SERIES #1 – HOME PAGE - kaidez</title>
+    <meta name="description" content="web development and stuff...">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="HTML5 Project: WIREFRAME SERIES #1 – HOME PAGE">
+    <meta property="og:description"
+        content="web development and stuff...">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kaidez.com/html5-project-series-1-homepage-wireframe/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+    <meta property="article:publisher" content="http://facebook.com/kaidezblog" />
+    <meta property="article:section" content="Personal" />
+    <meta property="og:image" content="http://www.kaidez.com/img/NaN" />
+    <meta property="og:image:width" content="700" />
+    <meta property="og:image:height" content="300" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaidez" />
+    <meta name="twitter:creator" content="@kaidez" />
+    <meta name="twitter:title" content=" » kaidez" />
+    <meta name="twitter:image" content="http://www.kaidez.com/img/NaN" />
+    <meta name="twitter:description" content="" />
+</head>
+
+<body class="" data-pagefind-body>
+    <header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <a href="/" class="site-title">kaidez</a>
+            
+            <!-- Search Component -->
+            <!-- Simplified Search Component -->
+<div class="search-container">
+    <div id="search" class="pagefind-search"></div>
+</div>
+
+<!-- Load Pagefind -->
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    try {
+        // Simple initialization
+        new PagefindUI({ 
+            element: "#search",
+            showImages: false,
+            excerptLength: 20,
+            resetStyles: false,
+            translations: {
+                placeholder: "Search kaidez for stuff...",
+                zero_results: "Couldn't find [SEARCH_TERM]"
+            }
+        });
+        console.log('Pagefind initialized successfully');
+    } catch (error) {
+        console.error('Pagefind initialization failed:', error);
+    }
+});
+</script>
+
+<style>
+/* Simple search styling */
+.search-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.pagefind-search {
+    width: 100%;
+}
+
+/* Style the Pagefind input */
+.pagefind-ui__search-input {
+    width: 100% !important;
+    padding: var(--space-3) var(--space-4) !important;
+    border: 2px solid var(--color-border) !important;
+    border-radius: var(--border-radius-lg) !important;
+    background: var(--color-bg) !important;
+    color: var(--color-text) !important;
+    font-size: var(--text-base) !important;
+    font-family: var(--font-family-sans) !important;
+}
+
+.pagefind-ui__search-input:focus {
+    border-color: var(--color-primary) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Style the results */
+.pagefind-ui__results {
+    margin-top: var(--space-2) !important;
+    background: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--shadow-lg) !important;
+    max-height: 400px !important;
+    overflow-y: auto !important;
+}
+
+.pagefind-ui__result {
+    padding: var(--space-4) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+}
+
+.pagefind-ui__result:last-child {
+    border-bottom: none !important;
+}
+
+.pagefind-ui__result-link {
+    color: var(--color-text) !important;
+    text-decoration: none !important;
+}
+
+.pagefind-ui__result-link:hover {
+    color: var(--color-primary) !important;
+}
+
+.pagefind-ui__result-title {
+    font-weight: 600 !important;
+    font-size: var(--text-lg) !important;
+    margin-bottom: var(--space-2) !important;
+}
+
+.pagefind-ui__result-excerpt {
+    color: var(--color-text-muted) !important;
+    font-size: var(--text-sm) !important;
+}
+
+.pagefind-ui__result-excerpt mark {
+    background: rgba(37, 99, 235, 0.2) !important;
+    color: var(--color-primary) !important;
+    padding: 0 2px !important;
+    border-radius: 2px !important;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        max-width: 100%;
+    }
+}
+</style>
+            
+            <nav class="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="/coding-best-practices/">Coding Tips</a></li>
+                    <li><a href="/tutorials/">Tutorials</a></li>
+                    <li><a href="/personal/">Personal</a></li>
+                    <li><a href="/reviews/">Reviews</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <main class="main-content">
+        <p><em><strong>Read the entire “Wirefame Series”
+<a href="/html5-project-update-completed-wireframes/">Intro»</a>  Page 1»  <a href="/html5-project-series-2-work-subcategory-playlist-wireframes/">Page 2</a>»  <a href="/html5-project-series-3-about-contact-wireframes/">Page 3»</a></strong></em></p>
+<p>This is the first in a series of articles reviewing the wireframes for my HTML5 project, which is designing my web design &amp; development online portfolio using pure HTML5 (<a href="/html5-project-update-completed-wireframes/">see the article announcing the series</a>). This was the toughest page to lay out: I had multiple page elements that needed to be positioned <em>exactly</em> to the current HTML5 specification, which will now be referred to as <em>the spec</em>.</p>
+<p><em>(Important: I’ll be sending the final site to <a href="http://html5doctor.com/">HTML5 Doctor</a> and/or <a href="http://html5gallery.com/">HTML5 Gallery</a> for review when it’s done. While I’m confident that my site conforms to the HTML5 specification, these guys may say it doesn’t. Please keep that in mind when reading this.)</em></p>
+<p>This article is structured as follows:</p>
+<ul>
+<li><a href="#wfReview">Wireframe Review</a></li>
+<li><a href="#headFoot">HTML5′s <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> tags</a></li>
+<li><a href="#articleSection">HTML5′s <code>&lt;article&gt;</code>  and <code>&lt;section&gt;</code>  tags</a></li>
+<li><a href="#div">All the older  tags and their usage</a></li>
+<li><a href="#small">The <code>&lt;small&gt;</code> tag</a></li>
+<li><a href="#summary">Summary</a></li>
+</ul>
+<h2 id="wfReview">Wireframe Review</h2>
+<p>First, let’s look at the home page:</p>
+<p><a href="/img/home.jpg" title="Main Navigation screenshot for kaidez portfolio site"><img src="/img/home.jpg" alt="Home Page for kaidez portfolio site" title="Main Navigation screenshot for kaidez portfolio site"></a></p>
+<p>Now, let’s break it all down…</p>
+<p>There are three navigation elements, each appearing on every page of the site:</p>
+<ul>
+<li><strong>The main navigation at the top of the page in the  tag</strong></li>
+</ul>
+<p><img src="/img/mainNav.jpg" alt="Main Navigation screenshot for kaidez portfolio site" title="Main Navigation screenshot for kaidez portfolio site"></p>
+<ul>
+<li>The spec calls for only one  on the page. As this is the main navigation, this where  is going. role=”navigation” just makes the navigation more accessible to wider array of devices.</li>
+<li><strong>The  tag directly below the main navigation which contain links to my Facebook, Twitter and blog pages</strong></li>
+</ul>
+<p><img src="/img/socialNav.jpg" alt="Social networking navigation screen shot for kaidez portfolio home page wire frame" title="Social networking navigation screen shot for kaidez portfolio home page wire frame"></p>
+<ul>
+<li>The spec calls for the  tag to <em><strong>only contain links that go to pages within the site</strong></em>. Since both the Facebook and Twitter links leave the site, they need to be placed outside of  and into a .</li>
+</ul>
+<p>This portfolio will mostly likely live in a sub-domain: something like “work.kaidez.com.” This blog link goes to this site’s home page so when you click it, you go from “work.kaidez.com” to “kaidez.com.” Since it’s not going to page within the current site but still stays within the primary domain, I wasn’t sure if it should go in the  tag.</p>
+<p>I asked HTML5 Doctor about this and they said that it’s okay to put the blog link into , but I’m opting to put it with the social networking stuff. I may end up putting it back into  at the end of the day though.</p>
+<ul>
+<li>
+<p><strong>A reappearance of the main navigation in a  tag in the  tag at the bottom of the page</strong>
+<img src="/img/footerNav.jpg" alt="Footer navigation for the kaidez portfolio site" title="Footer navigation for the kaidez portfolio site"></p>
+</li>
+<li>
+<p>Again, the spec allows for only one  tag per page. Since a  tag already exists, putting these links in the  as I did here seems to be the way to go.</p>
+</li>
+</ul>
+<h2 id="headFoot"> HTML5′s header &amp; footer Tags</h2>
+You guessed it right.  should go at the very top of the page and contain header content…
+<p><img src="/img/header.jpg" alt="Header snippet for the kaidez portfolio site" title="Header snippet for the kaidez portfolio site"></p>
+<p>while <code>footer</code> should go at the very bottom of the page and contain footer content.</p>
+<p><img src="/img/footerSnippet.jpg" alt="Footer Snippet for kaidez portfolio site" title="Footer Snippet for kaidez portfolio site"></p>
+<h2 id="articleSection">HTML5′s article and section tags</h2>
+Almost all unique page content goes into either one or both of these tags, making them the two most exciting and most confusing aspects of HTML5 in terms of how the spec tells us to use them.
+<p>First, let’s see what what HTML5 Doctor has to say about this:</p>
+<blockquote>
+<p>There’s been a lot of confusion over the difference (or perceived lack of a difference) between the  and  elements in HTML5. The  element is a specialised kind of ; it has a more specific semantic meaning than  in that it is an independent, self-contained block of related content. We could use , but using  gives more semantic meaning to the content.
+By contrast  is only a block of related content, and  is only a block of content…To decide which of these three elements is appropriate, choose the first suitable option:</p>
+</blockquote>
+<blockquote>
+<ul>
+<li>Would the content would make sense on its own in a feed reader? If so use <code>&lt;article</code>&gt; .</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>Is the content related? If so use <code>&lt;section&gt;</code>.</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>Finally if there’s no semantic relationship use <code>&lt;div&gt;</code>.</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><a href="http://html5doctor.com/the-article-element/">Read the whole article (no pun intended) »</a></p>
+</blockquote>
+<p>So...</p>
+<p>I want to display four different samples of my work on the home page. Since I believe all my work is related on some level, I’m putting all of it into a  tag.</p>
+<p>I think each sample would make sense on its own in a feed reader if needed, so I’m putting each one in their own individual  tag.</p>
+<p><img src="/img/sectionOnlyHomePage.jpg" alt="Section screenshot of the kaidez home page"></p>
+<p>HTML5 Doctor may shoot this down when the time comes, but I think I did this right.</p>
+<h2 id="div">All the older div tags and their usage</h2>
+<p>The two organizations overseeing the creation of the HTML5 spec, <a href="http://www.w3.org/">W3C</a> and <a href="http://www.whatwg.org/">WHATWG</a>, want you to use the <code>&lt;div&gt;</code> tag as little as possible and, instead, use one of the newer tags. But they’re fine with you using <code>&lt;div&gt;</code> if it’s your only option.</p>
+<p>With the social networking and blog links I discussed above,  was my only option. Let’s look at some other  tags on the home page:</p>
+<ul>
+<li>**The Container **</li>
+</ul>
+<p><img src="/img/containerDiv.jpg" alt="Container Div for kaidez portfolio site" title="Container Div for kaidez portfolio site"></p>
+<p>It’s common practice to wrap every single solitary page element into a single  tag, usually with an ID of either “container” or “wrapper” (I used “container”). This has not changed…you should <em>always</em> do this for an HTML5 page.
+**The Page Content **</p>
+<p><img src="/img/entireMidSectionHomePage.jpg" alt="Entire Mid-section Home Page for the kaidez portfolio site"></p>
+<p>I used this to neatly contain both the  tag that contains all my work and another  tag with an ID called called “feeds”.</p>
+<p>Why is the “feeds” content in a  instead of  or ? Let’s talk about it...</p>
+<p>**The Feeds **</p>
+<p><img src="/img/feeds.jpg" alt="Feed screenshot for kaidez portfolio site" title="Feed screenshot for kaidez portfolio site"></p>
+<p>I’d want to display RSS feeds of my most recent, Facebook, Twitter and blog posts on the home page and I want them above the fold. I guess I could put them in either an  or  tag, but let’s go back and review what HTML5 Doctor told us earlier:</p>
+<blockquote>
+<ul>
+<li>Would the content would make sense on its own in a feed reader? If so use
+*   Is the content related? If so use
+*   Finally if there’s no semantic relationship use</li>
+</ul>
+</blockquote>
+<p>So...</p>
+<ul>
+<li>These Facebook, Twitter and blog posts are already in a feed. Having them stand alone in another feed seems repetitive to me so I think this cancels out #1.</li>
+<li>The content being displayed here are snippets from my blog and the social networking world. I don’t think they’re really related so I think this cancels out #2.</li>
+<li>With #1 and #2 canceled out, I’m going with #3.</li>
+</ul>
+<h2 id="small">The small Tag</h2>
+![][32]
+<p>In terms of how this tag renders text, there’s nothing new here. But in terms of <em>how</em> to use it as per the spec, there’s a difference.</p>
+<p>The  tag does exactly as it implies: it makes text smaller. In HTML 4.01, you could use it whenever and wherever you wanted.</p>
+<p>But according to the spec,  should only appear in an HTML5 page if it’s applied to small print…things like legal disclaimers and, in this case, copyrights.</p>
+<h2 id="summary">Summary</h2>
+As you can see, HTML5 is very big on semantics. The spec has many rules, regulations and best practices to follow when it comes to setting up the page tags. [HTML5 Doctor][5] does a great job of taking the somewhat verbose HTML5 spec and translating it into easy-to-understand terms, so they should be your first stop in understanding HTML5 as a whole.
+<p>A major <em>major</em> characteristic of HTML5 has to do with how all the page content relates to one another. I briefly discussed this in the  and  paragraphs above, but the  tag plays a big role here as well. This will be discussed in my next article (again, no pun intended).</p>
+<p><em><strong>Read the entire “Wirefame Series”: <a href="/html5-project-update-completed-wireframes/">Intro»</a> | Page 1» | <a href="/html5-project-series-2-work-subcategory-playlist-wireframes/">Page 2</a>» | <a href="/html5-project-series-3-about-contact-wireframes/">Page 3»</a></strong></em></p>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-main">
+                <h3>kaidez</h3>
+                <p>web development and stuff...</p>
+                
+                <div class="social-links">
+                    <a href="https://twitter.com/kaidez" aria-label="Twitter" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/kaidez" aria-label="GitHub" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/kaigittens" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/posts/">Blog</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="/posts/javascript/">JavaScript</a></li>
+                        <li><a href="/posts/web-development/">Web Development</a></li>
+                        <li><a href="/posts/tutorials/">Tutorials</a></li>
+                        <li><a href="/posts/reviews/">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/feed.xml">RSS Feed</a></li>
+                        <li><a href="/sitemap.xml">Sitemap</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Built with <a href="https://11ty.dev" target="_blank" rel="noopener">11ty</a> and hosted on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+/* Footer Styles */
+.site-footer {
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--space-20);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-12);
+    padding: var(--space-12) 0 var(--space-8);
+}
+
+.footer-main h3 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-3);
+    color: var(--color-text);
+}
+
+.footer-main p {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-6);
+    max-width: none;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius);
+    background: var(--color-bg);
+    color: var(--color-text-muted);
+    transition: all var(--transition-fast);
+    border: 1px solid var(--color-border);
+}
+
+.social-links a:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+}
+
+.footer-section h4 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+    color: var(--color-text);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section li {
+    margin-bottom: var(--space-2);
+}
+
+.footer-section a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-section a:hover {
+    color: var(--color-primary);
+}
+
+.footer-bottom {
+    padding: var(--space-6) 0;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+}
+
+.footer-bottom p {
+    margin-bottom: var(--space-2);
+}
+
+.footer-bottom p:last-child {
+    margin-bottom: 0;
+}
+
+.footer-bottom a {
+    color: var(--color-primary);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+</style>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5549541-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

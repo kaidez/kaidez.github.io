@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Simple Explanation of HTML5 - kaidez</title>
+    <meta name="description" content="web development and stuff...">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="A Simple Explanation of HTML5">
+    <meta property="og:description"
+        content="web development and stuff...">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kaidez.com/simple-html5-explanation/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+    <meta property="article:publisher" content="http://facebook.com/kaidezblog" />
+    <meta property="article:section" content="Personal" />
+    <meta property="og:image" content="http://www.kaidez.com/img/NaN" />
+    <meta property="og:image:width" content="700" />
+    <meta property="og:image:height" content="300" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaidez" />
+    <meta name="twitter:creator" content="@kaidez" />
+    <meta name="twitter:title" content=" » kaidez" />
+    <meta name="twitter:image" content="http://www.kaidez.com/img/NaN" />
+    <meta name="twitter:description" content="" />
+</head>
+
+<body class="" data-pagefind-body>
+    <header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <a href="/" class="site-title">kaidez</a>
+            
+            <!-- Search Component -->
+            <!-- Simplified Search Component -->
+<div class="search-container">
+    <div id="search" class="pagefind-search"></div>
+</div>
+
+<!-- Load Pagefind -->
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    try {
+        // Simple initialization
+        new PagefindUI({ 
+            element: "#search",
+            showImages: false,
+            excerptLength: 20,
+            resetStyles: false,
+            translations: {
+                placeholder: "Search kaidez for stuff...",
+                zero_results: "Couldn't find [SEARCH_TERM]"
+            }
+        });
+        console.log('Pagefind initialized successfully');
+    } catch (error) {
+        console.error('Pagefind initialization failed:', error);
+    }
+});
+</script>
+
+<style>
+/* Simple search styling */
+.search-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.pagefind-search {
+    width: 100%;
+}
+
+/* Style the Pagefind input */
+.pagefind-ui__search-input {
+    width: 100% !important;
+    padding: var(--space-3) var(--space-4) !important;
+    border: 2px solid var(--color-border) !important;
+    border-radius: var(--border-radius-lg) !important;
+    background: var(--color-bg) !important;
+    color: var(--color-text) !important;
+    font-size: var(--text-base) !important;
+    font-family: var(--font-family-sans) !important;
+}
+
+.pagefind-ui__search-input:focus {
+    border-color: var(--color-primary) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Style the results */
+.pagefind-ui__results {
+    margin-top: var(--space-2) !important;
+    background: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--shadow-lg) !important;
+    max-height: 400px !important;
+    overflow-y: auto !important;
+}
+
+.pagefind-ui__result {
+    padding: var(--space-4) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+}
+
+.pagefind-ui__result:last-child {
+    border-bottom: none !important;
+}
+
+.pagefind-ui__result-link {
+    color: var(--color-text) !important;
+    text-decoration: none !important;
+}
+
+.pagefind-ui__result-link:hover {
+    color: var(--color-primary) !important;
+}
+
+.pagefind-ui__result-title {
+    font-weight: 600 !important;
+    font-size: var(--text-lg) !important;
+    margin-bottom: var(--space-2) !important;
+}
+
+.pagefind-ui__result-excerpt {
+    color: var(--color-text-muted) !important;
+    font-size: var(--text-sm) !important;
+}
+
+.pagefind-ui__result-excerpt mark {
+    background: rgba(37, 99, 235, 0.2) !important;
+    color: var(--color-primary) !important;
+    padding: 0 2px !important;
+    border-radius: 2px !important;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        max-width: 100%;
+    }
+}
+</style>
+            
+            <nav class="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="/coding-best-practices/">Coding Tips</a></li>
+                    <li><a href="/tutorials/">Tutorials</a></li>
+                    <li><a href="/personal/">Personal</a></li>
+                    <li><a href="/reviews/">Reviews</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <main class="main-content">
+        <p>HTML5 is big news right now. Web developers have been developing sites with it for the past few years, but awareness among the business community and the general public is really just starting up.</p>
+<p>This is great! HTML5 is a major step forward in web development. Plus, HTML5 highlights some excellent coding standards that have been around for years, but aren’t as widely practiced as they should be.</p>
+<p>As awesome as this is, I’ve had a few conversations with non-developers who think HTML5 is a magic bullet. Most talk about it as something that they <em>should</em> be doing without fully understanding <em>what it actually is</em>.</p>
+<p>While some web developers may be frustrated by the misunderstanding, part of their job is to explain to clients and employers what’s good and bad about new technologies, and without a lot of tech terms. So I’m going to take a stab at providing a simple HTML5 explanation.</p>
+<p>And for the record: I think we should be using HTML5 when creating sites, but only in a way that helps us carry through our content strategy.</p>
+<p>Here are the topics for this article:</p>
+<ul>
+<li><a href="#What-Is-HTML5">What Is HTML5 <em>Exactly</em>?</a></li>
+<li><a href="#Where-Did-HTML5-Come-From">Where Did HTML5 Come From?</a></li>
+<li><a href="#Semantic-Markup">Semantic Markup</a></li>
+<li><a href="#Web-Applications">Web Applications</a></li>
+<li><a href="#Mobile-Web-Development">Mobile Web Development</a></li>
+<li><a href="#Making-The-Site-Look-Pretty">Making The Site Look Pretty</a></li>
+<li><a href="#How-Is-HTML5-Being-Used-As-of-This-Article">How Is HTML5 Being Used As of This Article?</a></li>
+<li><a href="#How-Can-Businesses-Use-HTML5-Related-Technologies-Right-Now">How Can Businesses Use HTML5 &amp; HTML5 Related-Technologies Right Now?</a></li>
+</ul>
+<h2 id="What-Is-HTML5">What Is HTML5 <i>Exactly</i>?</h2>
+<p>The 25-word answer is:</p>
+<blockquote>
+<p><em><strong>“HTML5 is a major update to HTML that brings excellent new features to both websites and web applications, but also highlights an important older feature.”</strong></em></p>
+</blockquote>
+<p>Expanding on this definition, the four key things to know about HTML5 are:</p>
+<ul>
+<li>it creates better <em>semantic markup</em> (the important older feature).</li>
+<li>it allows for the creation of more robust <em>web applications.</em></li>
+<li>it allows for top-notch <em>mobile web development.</em></li>
+<li>creating websites and web applications with HTML5 is a best practice but, in all honesty, not a requirement.
+<img src="/img/HTML5_Logo.png" alt="A Simple Explanation of HTML5" class="post-pic" style="margin-top:20px; float: right"></li>
+</ul>
+<h2 id="Where-Did-HTML5-Come-From">Where Did HTML5 Come From?</h2>
+<p>Created in 1990, HTML has always been a programming language that creates a website’s basic structure. To build a website, HTML “frames” it first, then things like copy and images are added to complete the job.</p>
+<p>HTML updates are overseen by the <a href="http://www.w3.org/">World Wide Web Consortium</a>, or, the W3C. When they began work on the next update in 2004, a group of outside companies spoke out against the direction the W3C was taking it.</p>
+<p>The update was great for <em>websites</em>, the companies said, but not so great for the new <em>web applications</em> that were starting to appear. Also, the W3C’s suggested update wasn’t backwards-compatible with older versions of HTML, which would cause developers a ton of problems.</p>
+<p>The companies felt that the W3C weren’t evolving HTML beyond a structural language, so they formed a separate group called the <a href="http://www.whatwg.org/">Web Hypertext Application Technology Working Group</a>, or WHATWG (pronounced “what-wig”) to do just that. Their goal was to build a new HTML that worked well for both websites <em>and</em> web applications and would also be backwards-compatible with the old HTML.</p>
+<p>In 2007, the W3C agreed with WHATWG’s point of view. The two groups remained separate but worked together on creating a new version of HTML, naming it “HTML5.”</p>
+<p>The two groups are still working together as the HTML5 specification isn’t finalized as of this article, but it’s still possible to use it to create websites and web applications…as many do.</p>
+<h2 id="Semantic-Markup">Semantic Markup</h2>
+<p>Semantic markup is HTML written in a way that gives site content specific meaning. Semantic markup is <em>not</em> a new a concept: it existed well before HTML5.</p>
+<p>HTML5 does create excellent semantic markup though…better than earlier HTML versions. Metaphorically speaking, the semantic markup of earlier versions tells the world, “this is some site content” while HTML5 semantic markup tells the world, “this is some site content, now let me give you some detailed information about it.”</p>
+<p>Sites written with semantic markup are easier to read on a multitude of devices: desktops, laptops, smartphones, screen-readers for the disabled, gaming consoles, just to name a few. But search engines also like semantic markup…so much so that web designer <a href="http://twitter.com/#!/zeldman/statuses/1137456194">Jeffrey Zeldman said it best in 2009:</a></p>
+<blockquote>
+<p><em>“Client who saves $5,000 buying cut-rate non-semantic HTML will later spend $25,000 on SEO consultant to compensate”</em></p>
+</blockquote>
+<p>Correct! Site content wrapped in non-semantic markup is tough for search engines to understand; therefore, it’s tough for search engines to rank and list in their search results.</p>
+<p>Hiring an SEO company to fix this is costly. If your site is coded with semantic markup at the beginning, this cost can be, at the very least, reduced.</p>
+<p>To be clear: semantic markup up will <em>not</em> improve a site’s search engine ranking. It just makes it easier for search engines to <em>understand</em> a site’s content, which in turn, makes it easier to rank in search resullts.</p>
+<p>Think of site content as a pirate’s treasure chest full of gold. Semantic markup gives search engines an awesome treasure map.</p>
+<p>One last note on the subject: sites written with semantic markup are said to be “following web standards.” Web developers have been coding with web standards for years, but too many haven’t. A push for <em>all</em> developers to use web standards has always existed, but HTML5 has strengthened this push more than ever before.</p>
+<h2 id="Web-Applications">Web Applications</h2>
+<p>A <em>website</em> is a site that gives people information, but doesn’t offer a lot in terms of interaction. People may be able to fill out a form of some sort while visiting the site, but the interaction won’t go much beyond that.</p>
+<p>A <em>web application</em> is a site that gives people information and offers a lot in terms of interaction. Some interaction examples are:</p>
+<ul>
+<li>adding copy, images &amp; videos.</li>
+<li>removing copy, images &amp; videos.</li>
+<li>editing copy, images &amp; (sometimes) videos.</li>
+<li>writing product reviews.</li>
+<li>sending messages to people.</li>
+<li>letting people know your current location.</li>
+</ul>
+<p>Looking at this list, Facebook, Twitter, FourSquare, and Yelp are great examples of web applications.</p>
+<p>Other web application examples include: Hotmail, Yahoo Mail, Gmail, Google Docs and Google Maps.</p>
+<p>HTML5′s role in web application development is a bit tricky to describe: start with understanding that there’s “HTML5″ and there’s “HTML5-related technology.”</p>
+<p>The following is an incomplete list of things that are part of HTML5:</p>
+<ul>
+<li><strong>Video:</strong> playing video on a website without needing things like Flash.</li>
+<li><strong>Audio:</strong> playing audio on a website without the need for plugins.</li>
+<li><strong>Canvas:</strong> using code to automatically draw stuff on a website.</li>
+<li><strong>Drag &amp; Drop:</strong> dragging and dropping stuff on a website.</li>
+<li><strong>Application Cache:</strong> storing website content, such as images, on a device, making the site run faster.</li>
+</ul>
+<p>The following is an incomplete list of things that are HTML5-related technologies:</p>
+<ul>
+<li><strong>WebGL:</strong> creates 3D graphics on a website.</li>
+<li><strong>Web Workers:</strong> a method of running and storing website code behind the scenes.</li>
+<li><strong>Geolocation:</strong> lets websites know where site visitors are geographically located.</li>
+</ul>
+<p>HTML5 and HTML5-related technologies can be combined with other technologies to create compelling web applications.</p>
+<p>For the sake of easy explanations, I called these things “HTML5-related technologies” but I can’t stress enough that they’re <em>not</em> HTML5. They’re “HTML5-related” at best and even that’s a stretch of the terminology.</p>
+<p>Many don’t care about this the proper term usage but do not be surprised if a real stickler comments on this article, telling me that calling these things “HTML5-related” is a no-no. If you want the techie details on this, visit <a href="https://developer.mozilla.org/en/HTML/HTML5">MDN’s HTML5 page</a> and take note of the section called “<a href="https://developer.mozilla.org/en/HTML/HTML5#Technologies_often_called_part_of_HTML5_that_aren't">Technologies often called part of HTML5 that aren’t</a>.”</p>
+<h2 id="Mobile-Web-Development">Mobile Web Development</h2>
+<p>The web browsers pre-installed in the majority of mobile devices released in the past two years support HTML5: both websites and web applications.</p>
+<p>First, understand that there are native applications and there are mobile web applications. Native applications are what are commonly called “apps” or “native apps;” small applications that you download from places such as Apple’s App Store or Google’s Android Market. Mobile web applications are applications that run inside a mobile web browser such as Safari Mobile or Opera Mini; they’re called “mobile web apps” nowadays.</p>
+<p>So if you’re on an iPhone, you can open the Safari Mobile web browser (a native app) and go to <a href="http://m.facebook.com/">Facebook’s mobile site</a> (a mobile web app). Or, you can open the App Store (another native app) and download the Facebook application (yet, another native app) and use Facebook from there.</p>
+<p>The good thing about native apps is they have more functionality than mobile web apps. The good thing about mobile web apps is that they’re less expensive to create than native apps.</p>
+<p>A native app that lives on your smartphone can use other native apps to aid in a particular task…the camera, the address book, directional apps like the compass and the maps, etc. Except for <em>very</em> few instances, mobile web apps can’t do any of this as of this article; therefore, native apps have more functionality.</p>
+<p>But it’s always a good idea to make your app to work on as many devices as possible, and doing so can be expensive. The current cost for creating an app that works on <em>just</em> iPhones and Androids is in the five-figure range. Mobile web apps are coded to work on mobile web browsers, which practically every mobile device has. So a mobile web app will work on almost any mobile device, and will be cheap to create when compared to the cost for creating a native app for <em>every</em> device.</p>
+<p>HTML5 is well-suited for mobile web apps for a lot a reasons, a big one being the above-mentioned application cache.</p>
+<p>When combined with certain HTML5-related technologies, application cache allows mobile web apps to work on devices <em>even if the device doesn’t have an internet connection!</em> These apps would probably need a connection to work as fully intended, but they can still do lots of things offline.</p>
+<p>Best of all mobile web browsers support many HTML5 features already. Non-mobile browsers are catching up, but the mobile browsers adopted them first and are ahead in the race as a result.</p>
+<p>Because of their offline functionality and early adoption rate among mobile devices, lots of web developers are promoting HTML5 mobile web apps as a viable alternative to native apps. Mobile web apps will need to be able access things like the camera if they expect to beat the native guys, but I believe they’ll have access to many of these things eventually.</p>
+<h2 id="Making-The-Site-Look-Pretty">Making The Site Look Pretty</h2>
+<p>There are some HTML5 things that can make sites look good, but very little. And again, these things don’t work in many desktop browsers, which are still used more than mobile browsers.</p>
+<p>So to make a site look good in as many browsers as possible, these three things are currently the best tools to do so:</p>
+<ul>
+<li><strong>CSS3:</strong> applies pictures, colors and few cool effects to websites.</li>
+<li><strong>JavaScript:</strong> creates interactivity on a website.</li>
+<li><strong>JavaScript-related technologies:</strong> <a href="http://jquery.com/">jQuery</a> is the biggest one of these right now.</li>
+</ul>
+<p>These things are not HTML5, but you will see them used in both HTML5 websites and web applications.</p>
+<h2 id="How-Is-HTML5-Being-Used-As-of-This-Article">How Is HTML5 Being Used As of This Article?</h2>
+<p>In many ways…</p>
+<ul>
+<li>HTML5 games make up a bulk of the HTML5 web apps being created: <a href="http://techcrunch.com/2011/01/27/facebook-bret-taylor/">Facebook is very committed to HTML5 games</a>.</li>
+<li>Web designers are excelling at creating sites with semantically correct HTML5 markup and making them look pretty. <a href="http://bostonglobe.com/">The Boston Globe</a> is one of the most celebrated of these sites but <a href="http://html5gallery.com/">HTML5 Gallery</a> also provides some nice samples.</li>
+<li>Web applications are popping up everywhere. One of my favorites is <a href="https://web.tweetdeck.com/">TweetDeck Web</a>.</li>
+<li>There are a few mobile web apps out there. Some use a lot of HTML5 and its related technologies, some use just a little of it. <a href="http://www.jqmgallery.com/">jQuery Mobile Gallery</a> is site that uses a fair amount of HTML5 stuff; the sites they display use HTML5 to varying degrees.</li>
+</ul>
+<h2 id="How-Can-Businesses-Use-HTML5-Related-Technologies-Right-Now">How Can Businesses Use HTML5 & HTML5 Related-Technologies Right Now?</h2>
+<p>I can’t stress the importance of web standard semantic markup enough. Businesses that don’t have it in their sites need to get it in there sooner, not later. They should either edit their current site and add the markup, or plan a site redesign that will include such markup.</p>
+<p>If businesses go with the redesign, they can also make it look pretty at that point using CSS, JavaScript and JavaScript-related technologies.</p>
+<p>As for web applications and mobile web development, I have to refer to a previous statement…creating websites and web applications with HTML5 is a best practice but, in all honesty, not a requirement.</p>
+<p>For example: Facebook and Twitter’s desktop browser applications converted to HTML5 only recently, but millions of people were using them as web apps before that. And both have robust mobile web applications, each one created with an older version of HTML. This is also true for CNN, Fox News, Sephora, ESPN, Ford, Dollar General…I can probably go on and on.</p>
+<p>So there’s no clear path here: using HTML5 certainly helps but it seems that <em>not</em> using it doesn’t hurt. Regardless of this, I believe that all sites and web apps from here on in, should be created with HTML5.</p>
+<p>I also believe that deciding whether to use HTML5 should not be the first task of a business-that should be focusing on delivering high quality content.</p>
+<p>I’m basing this opinion on what I learned at <a href="http://kaidez.com/nyc-social-media-week-event-recap-cross-mobile-promotion/">the mobile promotion panel during Social Media Week 2011</a>. Over and over again, the panelists stress how the mobile web was a better promoter than the native app and that we should spend more time developing an effective content strategy instead of following tech trends. Not one panelist mentioned HTML5 and there were many developers working with it at that time.</p>
+<p>So my HTML5 suggestions for business don’t have that much to do with HTML5. They are:</p>
+<ul>
+<li><strong>Confirm that your web developer or agency will create your site with HTML5 semantic web standard markup:</strong> Most do, but double-check anyway.</li>
+<li><strong>Remember that HTML5 isn’t the only thing that makes your site look good:</strong> The CSS3 and JavaScript stuff is very important here.</li>
+<li><strong>Develop your content strategy first:</strong> doing so will help you decide what parts of your content are the most important.</li>
+<li><strong>Don’t think you need to create an HTML5 app:</strong> You may find that you don’t need it after you devise your content strategy and that a website will do the job just fine.</li>
+</ul>
+<p>In closing, HTML5 is a highly discussed and debated subject right now and some may agree or disagree with what’s being said here. So please feel free to comment on this article and post your opinions.</p>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-main">
+                <h3>kaidez</h3>
+                <p>web development and stuff...</p>
+                
+                <div class="social-links">
+                    <a href="https://twitter.com/kaidez" aria-label="Twitter" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/kaidez" aria-label="GitHub" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/kaigittens" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/posts/">Blog</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="/posts/javascript/">JavaScript</a></li>
+                        <li><a href="/posts/web-development/">Web Development</a></li>
+                        <li><a href="/posts/tutorials/">Tutorials</a></li>
+                        <li><a href="/posts/reviews/">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/feed.xml">RSS Feed</a></li>
+                        <li><a href="/sitemap.xml">Sitemap</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Built with <a href="https://11ty.dev" target="_blank" rel="noopener">11ty</a> and hosted on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+/* Footer Styles */
+.site-footer {
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--space-20);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-12);
+    padding: var(--space-12) 0 var(--space-8);
+}
+
+.footer-main h3 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-3);
+    color: var(--color-text);
+}
+
+.footer-main p {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-6);
+    max-width: none;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius);
+    background: var(--color-bg);
+    color: var(--color-text-muted);
+    transition: all var(--transition-fast);
+    border: 1px solid var(--color-border);
+}
+
+.social-links a:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+}
+
+.footer-section h4 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+    color: var(--color-text);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section li {
+    margin-bottom: var(--space-2);
+}
+
+.footer-section a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-section a:hover {
+    color: var(--color-primary);
+}
+
+.footer-bottom {
+    padding: var(--space-6) 0;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+}
+
+.footer-bottom p {
+    margin-bottom: var(--space-2);
+}
+
+.footer-bottom p:last-child {
+    margin-bottom: 0;
+}
+
+.footer-bottom a {
+    color: var(--color-primary);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+</style>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5549541-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

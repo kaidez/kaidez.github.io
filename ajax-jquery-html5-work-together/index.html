@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUTORIAL: How AJAX, jQuery and HTML5 Work Together - kaidez</title>
+    <meta name="description" content="web development and stuff...">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="TUTORIAL: How AJAX, jQuery and HTML5 Work Together">
+    <meta property="og:description"
+        content="web development and stuff...">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kaidez.com/ajax-jquery-html5-work-together/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+    <meta property="article:publisher" content="http://facebook.com/kaidezblog" />
+    <meta property="article:section" content="Personal" />
+    <meta property="og:image" content="http://www.kaidez.com/img/NaN" />
+    <meta property="og:image:width" content="700" />
+    <meta property="og:image:height" content="300" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaidez" />
+    <meta name="twitter:creator" content="@kaidez" />
+    <meta name="twitter:title" content=" » kaidez" />
+    <meta name="twitter:image" content="http://www.kaidez.com/img/NaN" />
+    <meta name="twitter:description" content="" />
+</head>
+
+<body class="" data-pagefind-body>
+    <header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <a href="/" class="site-title">kaidez</a>
+            
+            <!-- Search Component -->
+            <!-- Simplified Search Component -->
+<div class="search-container">
+    <div id="search" class="pagefind-search"></div>
+</div>
+
+<!-- Load Pagefind -->
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    try {
+        // Simple initialization
+        new PagefindUI({ 
+            element: "#search",
+            showImages: false,
+            excerptLength: 20,
+            resetStyles: false,
+            translations: {
+                placeholder: "Search kaidez for stuff...",
+                zero_results: "Couldn't find [SEARCH_TERM]"
+            }
+        });
+        console.log('Pagefind initialized successfully');
+    } catch (error) {
+        console.error('Pagefind initialization failed:', error);
+    }
+});
+</script>
+
+<style>
+/* Simple search styling */
+.search-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.pagefind-search {
+    width: 100%;
+}
+
+/* Style the Pagefind input */
+.pagefind-ui__search-input {
+    width: 100% !important;
+    padding: var(--space-3) var(--space-4) !important;
+    border: 2px solid var(--color-border) !important;
+    border-radius: var(--border-radius-lg) !important;
+    background: var(--color-bg) !important;
+    color: var(--color-text) !important;
+    font-size: var(--text-base) !important;
+    font-family: var(--font-family-sans) !important;
+}
+
+.pagefind-ui__search-input:focus {
+    border-color: var(--color-primary) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Style the results */
+.pagefind-ui__results {
+    margin-top: var(--space-2) !important;
+    background: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--shadow-lg) !important;
+    max-height: 400px !important;
+    overflow-y: auto !important;
+}
+
+.pagefind-ui__result {
+    padding: var(--space-4) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+}
+
+.pagefind-ui__result:last-child {
+    border-bottom: none !important;
+}
+
+.pagefind-ui__result-link {
+    color: var(--color-text) !important;
+    text-decoration: none !important;
+}
+
+.pagefind-ui__result-link:hover {
+    color: var(--color-primary) !important;
+}
+
+.pagefind-ui__result-title {
+    font-weight: 600 !important;
+    font-size: var(--text-lg) !important;
+    margin-bottom: var(--space-2) !important;
+}
+
+.pagefind-ui__result-excerpt {
+    color: var(--color-text-muted) !important;
+    font-size: var(--text-sm) !important;
+}
+
+.pagefind-ui__result-excerpt mark {
+    background: rgba(37, 99, 235, 0.2) !important;
+    color: var(--color-primary) !important;
+    padding: 0 2px !important;
+    border-radius: 2px !important;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        max-width: 100%;
+    }
+}
+</style>
+            
+            <nav class="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="/coding-best-practices/">Coding Tips</a></li>
+                    <li><a href="/tutorials/">Tutorials</a></li>
+                    <li><a href="/personal/">Personal</a></li>
+                    <li><a href="/reviews/">Reviews</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <main class="main-content">
+        <p><strong>(Update: February 18, 2015: This article is outdated and somewhat indicates that AJAX, jQuery and HTML5 need to work together at all times, which isn't true. You may want to read my more <a href="/ajax-tutorial/">thorough tutorial on AJAX and jQuery</a>. Also, if you want to understand what HTML5 is, check out my previous post, <a href="/simple-html5-explanation/">&quot;A Simple Explanation of HTML5&quot;</a>.)</strong></p>
+<p>AJAX, jQuery and HTML5 are big buzz words in the web design/development community nowadays. While getting these web technologies to work together is exciting, the programming required to do this isn't new.</p>
+<p>AJAX, jQuery and HTML5 work together through the use of <em>page tags, page IDs</em> and <em>page classes</em> that exist between the two  tags of a web page. The JavaScript functionality embedded in jQuery and AJAX finds these tags , IDs and classes (which we'll now call <em>page elements</em>) and &quot;does&quot; something to them; maybe it changes their background color, maybe it's loading copy into them. Either way, it's doing <em>something</em> to them.</p>
+<p>This process of &quot;finding and doing something&quot; to these page elements with JavaScript is more commonly known as <em>&quot;traversing the DOM&quot;</em>. Simply put, <em><strong>traversing the DOM is the key to getting AJAX, jQuery and HTML5 to work together</strong></em>.</p>
+<p>Web developers have used DOM traversal for years so, again, there really isn't that much new programming involved when it comes to syncing up AJAX, jQuery and HTML5. Still, a layman's description of how all this works may be required, so I'll give it a try.</p>
+<h2>Traversing the DOM The Old School Way With JavaScript</h2>
+<p>DOM stands for Document Object Model. All the page elements live within the DOM, which is built into a web page. You find the elements by traversing the DOM with JavaScript, mostly through the use of the <code>getElementById()</code> function.</p>
+<p>Here's some HTML5-ready page code that uses it:</p>
+<pre><code class="language-javascript">
+<!DOCTYPE html>
+&lt;html dir="ltr" lang="en-US"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;Load Text Into An ID Using JavaScript&lt;/title&gt;
+&lt;script type="text/javascript"&gt;
+function loadText() {
+document.getElementById('words').innerHTML = 'Hello World!';
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;input type="button" onclick="loadText()" value="Load Some Copy!"/&gt;
+&lt;br /&gt;
+&lt;div id="words"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Let's look at the code and translate it..</p>
+<p>The <code>script</code> tag</p>
+<pre><code class="language-markup">
+&lt;script type="text/javascript"&gt;
+function loadText() {
+document.getElementById('words').innerHTML = 'Hello World!';
+}
+&lt;/script&gt;
+</code></pre>
+<p>TRANSLATION: create a JavaScript function called loadText(). When this function runs, it should find a page element with an id of 'words' and place some text inside of it that says Hello World!</p>
+<p>The <code>&lt;input&gt;</code> tag</p>
+<pre><code class="language-markup">
+&lt;input type="button" onclick="loadText()" value="Load Some Text!"/&gt;
+</code></pre>
+<p>TRANSLATION: Whenever this button is clicked, run the loadText() function. This will load that Hello World! copy into that page element with an id of 'words'.</p>
+<p>The <code>&lt;div&gt;</code> tag</p>
+<pre><code class="language-markup"> &lt;div id="words"&gt;&lt;/div&gt;</code></pre>
+<p>TRANSLATION: This empty <code>div</code> tag is the page element with an id of 'words,' so this is what's affected when the loadText() function runs. Therefore, this is where the Hello World! text will be placed into when the button is clicked.</p>
+<p>An ID must be unique on a web page so in our example, there can only be one page element with an ID of &quot;words.&quot; If you need to traverse the DOM with JavaScript to locate multiple page elements with the same name, it's best if you look for tags using the <code>getElementsByTagName()</code> function:</p>
+<pre><code class="language-markup">
+<!DOCTYPE html>
+&lt;html dir="ltr" lang="en-US"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;Load Text Into Multiple Tags Using JavaScript&lt;/title&gt;
+&lt;script type="text/javascript"&gt;
+function loadText() {
+var topDiv=document.getElementsByTagName("p")[0].innerHTML = "Hello World";
+var bottomDiv=document.getElementsByTagName("p")[1].innerHTML = "Goodbye World";
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;input type='button' onclick='loadText()' value='Load Some Copy!'/&gt;
+&lt;br /&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;/div&gt;</code></pre>
+<p>The function now creates two variables: one that looks for the first <code>&lt;p&gt;</code> tag on the page and one that looks for the second one. And since computers start counting at 0, each <code>&lt;p&gt;</code> tag is named <code>[0]</code> and <code>[1]</code>, respectively. Just as before, the function executes when the button is clicked; when that happens, text gets loaded into each <code>&lt;p&gt;</code> tag.</p>
+<p>It would be easier if you could find page elements with class names instead of tag names And you can traverse the DOM with <code>getElementsByClassName()</code>, but it doesn't always work when using JavaScript.</p>
+<p>It would be great if all of this could be made easier...jQuery does just that.</p>
+<h2>Traversing the DOM The New School Way With jQuery</h2>
+<p>jQuery is an extensive JavaScript library that, when attached to a web page, makes it easier for developers to write JavaScript. Its rise in popularity is mostly due to the neat effects it can produce: demos of effects like the accordion widget can be viewed at the jQuery UI demo page.</p>
+<p>As cool as these effects are, the fact that jQuery makes DOM traversal easier is, I believe, its best feature. Let's load the phrase &quot;Hello World!&quot; into a <code>&lt;div&gt;</code> tag with an ID like we did in our previous example, but with jQuery instead of JavaScript:</p>
+<pre><code class="language-markup">
+<!DOCTYPE html>
+&lt;html dir="ltr" lang="en-US"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;Load Text Into An ID Using jQuery&lt;/title&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+$(document).ready(function(){
+$("input").click(function () {
+$('#words').html("Hello World");
+});
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;input type="button" value="Load Some Copy!"/&gt;
+&lt;br /&gt;
+&lt;div id="words"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>We attached the jQuery library stored at Google Libraries to our web page:</p>
+<pre><code class="language-markup">
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"&lt;&lt;/script&lt;
+</code></pre>
+<p>Then we use the jQuery code in bold to create a function that traverses the DOM to find the <div> tag and loads text into it when it's clicked. We just did this in JavaScript and now did it with jQuery, and used a little less code in the process.</p>
+<p>Also with jQuery, we can now traverse the DOM with ease to locate classes, even if we have to locate more than one:</p>
+<pre><code class="language-markup">
+<!DOCTYPE html>
+&lt;html dir="ltr" lang="en-US"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;Load Text Into Multiple Classes Using jQuery&lt;/title&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+$(document).ready(function(){
+$("input").click(function () {
+$('.words').html("Hello World");
+});
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;input type='button' value='Load Some Copy!'/&gt;
+&lt;br /&gt;
+&lt;div class="words"&gt;&lt;/div&gt;
+&lt;div class="words"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>And yes, jQuery lets us traverse the DOM to locate tags, multiple ones if we need to:</p>
+<pre><code class="language-markup">
+<!DOCTYPE html>
+&lt;html dir="ltr" lang="en-US"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;Load Text Into A Tag With jQuery&lt;/title&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+$(document).ready(function(){
+$("input").click(function () {
+$('p').html("Hello World");
+});
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;input type='button' value='Load Some Copy!'/&gt;
+&lt;br /&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>This was easy so let's do something more advanced and add AJAX to our discussion.</p>
+<h2>Start Using AJAX With jQuery</h2>
+<p>AJAX is an acronym for Asynchronous JavaScript And XML. It is not a programming language but a programming concept. More specifically, AJAX is a set of unofficial rules for getting the following web technologies to work together on a website:</p>
+<p>*JavaScript
+*XML
+*HTML
+*The DOM</p>
+<p>AJAX can do a lot but its main purpose in life is to load and unload page content without actually reloading the page. A good example of this is the AJAX Example at W3 Schools. Click the &quot;Change Content&quot; button while looking at any banners on the page. Notice that the example content refreshed while the banners (i.e. the page) did not. Now refresh your browser page while looking at the banners: notice that they, along with the content, refreshed this time.</p>
+<p>JavaScript is what really brings AJAX together but the <code>XMLHttpRequest</code> object that's embedded in &quot;almost&quot; all web browsers plays an important role here as well.</p>
+<p>As I said, &quot;almost&quot; all browsers contain XMLHttpRequest. Not surprisingly, Internet Explorer 6 doesn't. It can still perform AJAX: it just needs the ActiveXObject to do it instead of <code>XMLHttpRequest</code>. So you always need to detect the browser before you use AJAX.</p>
+<p>The following code detects the browser, determines which version of AJAX to use based on the detection, then creates a JavaScript function that uses AJAX to load a text file that's stored on the server called <code>ajaxCopy.txt</code> <strong>(NOTE: you can only test this code if you upload it to your website)</strong>:</p>
+<pre><code class="language-markup">
+<!DOCTYPE html>
+&lt;html dir="ltr" lang="en-US">
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;AJAX Detection And Data Loading With JavaScript&lt;/title&gt;
+&lt;script type="text/javascript"&gt;
+&lt;!--create a variable to store the XMLHttpRequest object, but don't use it it yet--&gt;
+var xhrObject = false;
+
+&lt;!--If this browser isn't IE 6, store XMLHttpRequest() in our variable--&gt;
+if (window.XMLHttpRequest) {
+xhrObject = new XMLHttpRequest();
+
+&lt;!--But if this browser is IE 6, store ActiveXObject in our variable--&gt;
+} else if (window.ActiveXObject) {
+xhrObject = new ActiveXObject("Microsoft.XMLHTTP");
+}
+
+&lt;!--Create a function with 2 parameters: one for copy, one for a &lt;div&gt; to load it into--&gt;
+function loadCopy(externalTextFile, externalTextDiv) {
+
+&lt;!--if we can use AJAX--&gt;
+if(xhrObject) {
+
+&lt;!--create a new variable that traverses the DOM and finds the &lt;div&gt; tag we put into our second parameter--&gt;
+var pageText = document.getElementById(externalTextDiv);
+
+&lt;!--use AJAX to place a text file we put in our first parameter--&gt;
+xhrObject.open("GET",externalTextFile);
+
+&lt;!--if our AJAX variable found our data and the server is ready to send it out, bundle our data as a text string--&gt;
+xhrObject.onreadystatechange = function () {
+if(xhrObject.readyState == 4 && xhrObject.status == 200) {
+pageText.innerHTML = xhrObject.responseText; } }
+
+&lt;!--send our data out--&gt;
+xhrObject.send(null);
+}
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form&gt;
+&lt;!--Run the 'loadCopy' function when this button is clicked. Find the 'ajaxCopy.txt' on the server and load it into a &lt;div&gt; with an id of 'words'.--&gt;
+&lt;input type='button' value='Load Some Copy!' onclick="loadCopy('ajaxCopy.txt','words')"/&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;div id="words"&gt;&lt;/div&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>It's smart to know how this code works and if you're a beginner, you should write it out for practice. After you understand it, you can use jQuery's AJAX-related .load() function which does everything for you (NOTE: you can only test this code if you upload it to your website):</p>
+<pre><code class="language-markup">
+<!DOCTYPE html>
+&lt;html dir="ltr" lang="en-US"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;AJAX Detection And Data Loading With jQuery&lt;/title&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+$(document).ready(function(){
+$("input").click(function () {
+$('#words').load("ajaxCopy.txt");
+});
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;input type='button' value='Load Some Copy!'/&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;div id="words"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>jQuery's motto is &quot;write less, do more.&quot; The above example really live up to that motto.</p>
+<h2>Start Using HTML5 With AJAX and jQuery</h2>
+<p>HTML5 is the most recent version of HTML. Thanks to their built-in functionality, HTML5 tags like <code>&lt;video&gt;</code> and <code>&lt;canvas&gt;</code> allow web designers to easily add complex functionality to web pages. HTML5 tags also describe content in more detail, thanks to tags like <code>&lt;header&gt;</code> and <code>&lt;nav&gt;</code>. For a more detailed description of HTML5, please read my HTML5 Project page.</p>
+<p>Since HTML5 is tag-based and tags can have IDs and classes attached to them, traversing the HTML5 DOM is easy...as is AJAX.</p>
+<p>Here's the previous code example that uses jQuery, AJAX, and the new HTML5 <code>&lt;button&gt;</code> tag instead of input <strong>(NOTE: you can only test this code if you upload it to your website and you view it in an HTML5-ready browser...Google Chrome is the best one as of this post)</strong>:</p>
+<pre><code class="language-markup">
+<!DOCTYPE html>
+&lt;html dir="ltr" lang="en-US"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;AJAX Detection And Data Loading Using New School jQuery # HTML5: Example # 1&lt;/title&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+$(document).ready(function(){
+$("button").click(function () {
+$('#words').load("ajaxCopy.txt");
+});
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;button type="button"&gt;Load Some Copy!&lt;/button&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;div id="words"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;/button&gt;&lt;/nav&gt;
+</code></pre>
+<p>Building on this, here's an example that uses jQuery, AJAX, the new HTML5 button tag and the new HTML5 <code>&lt;section&gt;</code> tag <strong>(NOTE: you can only test this code if you upload it to your website and you view it in an HTML5-ready browser...Google Chrome is the best one as of this post)</strong>:</p>
+<pre><code class="language-markup">
+<!DOCTYPE html>
+&lt;html dir="ltr" lang="en-US"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;AJAX Detection And Data Loading Using New School jQuery & HTML5: Example # 2&lt;/title&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+$(document).ready(function(){
+$("button").click(function () {
+$('section').load("ajaxCopy.txt");
+});
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;button type="button"Load Some Copy!&lt;/button&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;article&gt;
+&lt;section&gt;
+&lt;/section&gt;
+&lt;/article&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Let's build on this one last time: here's an example that uses jQuery, AJAX, the new HTML5 <code>&lt;button&gt;</code> tag, and the new HTML5 <code>&lt;section&gt;</code> tag. But the <code>&lt;section&gt;</code> tag now has an ID: <strong>(NOTE: you can only test this code if you upload it to your website and you view it in an HTML5-ready browser…Google Chrome is the best one as of this post)</strong>:</p>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html dir="ltr" lang="en-US"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;AJAX Detection And Data Loading Using New School jQuery & HTML5: Example # 3&lt;/title&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+$(document).ready(function(){
+$("button").click(function () {
+$('#words').load("ajaxCopy.txt");
+});
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;button type="button"&gt;Load Some Copy!&lt;/button&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;article&gt;
+&lt;section id="words"&gt;
+&lt;/section&gt;
+&lt;/article&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>That's it for the coding examples. I've really only scratched the surface on what it takes to use AJAX, jQuery and HTML5 together on a web page. And in terms of the more-complicated HTML APIs like <code>&lt;canvas&gt;</code>, there are lots of jQuery HTML5 plug-ins that makes the APIs easier to implement.</p>
+<p>But the point of this post was to clarify how easy it is to use AJAX, jQuery and HTML5 in tandem with each other. I think you have enough to get started here.</p>
+<p>Remember...it's all about traversing the DOM!!!!!</p>
+<h2>Three Final Points</h2>
+<p>Before you start using AJAX, jQuery and HTML5 together, please keep the following three points in mind:</p>
+<ol>
+<li>You Need to Learn how to traverse the DOM</li>
+</ol>
+<p>I may sound like a broken record right now, but I cannot stress enough how important this is to the AJAX/jQuery/HTML5 process. Understanding DOM traversal is a key skill that you need to possess and eventually master. The best way to start mastering it is to learn how to do it using JavaScript before you learn how to do it with jQuery.</p>
+<ol start="2">
+<li>You Should Still Learn Some JavaScript Before You Commit Yourself To jQuery</li>
+</ol>
+<p>Some think that jQuery is a strict alternative to JavaScript. While jQuery does make most of the basic JavaScript tasks easier, it doesn't replace every JS function completely and there will be times where you'll want to use JavaScript instead. Learning some basic JavaScript will help you more than it will hurt you.</p>
+<ol start="3">
+<li>jQuery Will (most likely) Lead The Way</li>
+</ol>
+<p>Again, using all of these &quot;hip&quot; technologies in sync requires the use of some older coding practices. But if anything is going to change how they're used together, it will be jQuery. Lots of developers are behind the scenes making jQuery better and better every day, so expect to see them extend its AJAX and HTML5 functionality beyond what it is currently.</p>
+<p>Let's look at some other resources that will help you out.</p>
+<h2>Further Learning Resources</h2>
+<p>Here's a list of links that I've read and have helped me tremendously. There are some that cost money, some of which I have an affiliate program with, but I've used them and fully endorse anyway.</p>
+<p>Some of these links may overlap a bit: a jQuery resource that I listed may belong in the AJAX list instead. I'm not sure what is and isn't right in this case so I just used my best judgment.</p>
+<p>Because using AJAX, jQuery and HTML5 together is a hot topic, my goal is to update this list every time I come across a new resource.</p>
+<p><em>updated July 26th, 2013</em></p>
+<h3>DOM</h3>
+<ul>
+<li><a href="http://www.tizag.com/javascriptT/javascript-innerHTML.php">JavaScript InnerHTML Tutorial at Tizag.com</a></li>
+<li><a href="http://beginningjavascript.com/">BOOK: Beginning JavaScript With DOM Scripting And Ajax</a></li>
+</ul>
+<h3>AJAX</h3>
+<ul>
+<li><a href="http://www.adaptivepath.com/ideas/ajax-new-approach-web-applications">Jesse James Garret article that first used the term 'AJAX.'</a></li>
+<li><a href="http://en.wikipedia.org/wiki/XMLHttpRequest">Wikipedia article on XMLHttpRequest</a></li>
+</ul>
+<h3>jQuery</h3>
+<ul>
+<li><a href="http://jquery.com/">jQuery Home Page</a></li>
+<li><a href="http://api.jquery.com/">jQuery Documentation Page</a></li>
+<li><a href="http://api.jquery.com/category/ajax/">jQuery Ajax Category Page</a></li>
+<li><a href="http://jqueryui.com/">jQuery UI</a></li>
+<li><a href="http://www.lynda.com/jQuery-tutorials/essential-training/48370-2.html?srchtrk=index%3A7%0Alinktypeid%3A2%0Aq%3Ajquery%0Apage%3A1%0As%3Arelevance%0Asa%3Atrue%0Aproducttypeid%3A4&amp;utm_medium=affiliate&amp;utm_source=ldc_affiliate&amp;utm_content=524&amp;utm_campaign=CD2146&amp;bid=524&amp;aid=CD2146&amp;opt=">jQuery Essential Training course at Lynda.com</a></li>
+</ul>
+<h3>HTML5</h3>
+<ul>
+<li><a href="http://diveintohtml5.info/">Dive Into HTML5</a></li>
+<li><a href="http://diveintohtml5.info/peeks-pokes-and-pointers.html">Dive Into HTML5 Peeks, Pokes and Pointers Page</a></li>
+<li><a href="http://html5doctor.com">HTML5 Doctor</a></li>
+<li><a href="http://www.amazon.com/Pro-HTML5-Programming-Peter-Lubbers/dp/143023864X/ref=sr_1_1?ie=UTF8&amp;qid=1375059764&amp;sr=8-1&amp;keywords=pro+html5+programming">BOOK: Pro HTML5 Programming</a></li>
+</ul>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-main">
+                <h3>kaidez</h3>
+                <p>web development and stuff...</p>
+                
+                <div class="social-links">
+                    <a href="https://twitter.com/kaidez" aria-label="Twitter" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/kaidez" aria-label="GitHub" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/kaigittens" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/posts/">Blog</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="/posts/javascript/">JavaScript</a></li>
+                        <li><a href="/posts/web-development/">Web Development</a></li>
+                        <li><a href="/posts/tutorials/">Tutorials</a></li>
+                        <li><a href="/posts/reviews/">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/feed.xml">RSS Feed</a></li>
+                        <li><a href="/sitemap.xml">Sitemap</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Built with <a href="https://11ty.dev" target="_blank" rel="noopener">11ty</a> and hosted on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+/* Footer Styles */
+.site-footer {
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--space-20);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-12);
+    padding: var(--space-12) 0 var(--space-8);
+}
+
+.footer-main h3 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-3);
+    color: var(--color-text);
+}
+
+.footer-main p {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-6);
+    max-width: none;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius);
+    background: var(--color-bg);
+    color: var(--color-text-muted);
+    transition: all var(--transition-fast);
+    border: 1px solid var(--color-border);
+}
+
+.social-links a:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+}
+
+.footer-section h4 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+    color: var(--color-text);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section li {
+    margin-bottom: var(--space-2);
+}
+
+.footer-section a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-section a:hover {
+    color: var(--color-primary);
+}
+
+.footer-bottom {
+    padding: var(--space-6) 0;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+}
+
+.footer-bottom p {
+    margin-bottom: var(--space-2);
+}
+
+.footer-bottom p:last-child {
+    margin-bottom: 0;
+}
+
+.footer-bottom a {
+    color: var(--color-primary);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+</style>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5549541-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

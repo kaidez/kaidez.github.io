@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Site I Worked On: RevlonProBrands.com - kaidez</title>
+    <meta name="description" content="web development and stuff...">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="New Site I Worked On: RevlonProBrands.com">
+    <meta property="og:description"
+        content="web development and stuff...">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kaidez.com/revlon-pro-brands/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+    <meta property="article:publisher" content="http://facebook.com/kaidezblog" />
+    <meta property="article:section" content="Personal" />
+    <meta property="og:image" content="http://www.kaidez.com/img/NaN" />
+    <meta property="og:image:width" content="700" />
+    <meta property="og:image:height" content="300" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaidez" />
+    <meta name="twitter:creator" content="@kaidez" />
+    <meta name="twitter:title" content=" » kaidez" />
+    <meta name="twitter:image" content="http://www.kaidez.com/img/NaN" />
+    <meta name="twitter:description" content="" />
+</head>
+
+<body class="" data-pagefind-body>
+    <header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <a href="/" class="site-title">kaidez</a>
+            
+            <!-- Search Component -->
+            <!-- Simplified Search Component -->
+<div class="search-container">
+    <div id="search" class="pagefind-search"></div>
+</div>
+
+<!-- Load Pagefind -->
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    try {
+        // Simple initialization
+        new PagefindUI({ 
+            element: "#search",
+            showImages: false,
+            excerptLength: 20,
+            resetStyles: false,
+            translations: {
+                placeholder: "Search kaidez for stuff...",
+                zero_results: "Couldn't find [SEARCH_TERM]"
+            }
+        });
+        console.log('Pagefind initialized successfully');
+    } catch (error) {
+        console.error('Pagefind initialization failed:', error);
+    }
+});
+</script>
+
+<style>
+/* Simple search styling */
+.search-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.pagefind-search {
+    width: 100%;
+}
+
+/* Style the Pagefind input */
+.pagefind-ui__search-input {
+    width: 100% !important;
+    padding: var(--space-3) var(--space-4) !important;
+    border: 2px solid var(--color-border) !important;
+    border-radius: var(--border-radius-lg) !important;
+    background: var(--color-bg) !important;
+    color: var(--color-text) !important;
+    font-size: var(--text-base) !important;
+    font-family: var(--font-family-sans) !important;
+}
+
+.pagefind-ui__search-input:focus {
+    border-color: var(--color-primary) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Style the results */
+.pagefind-ui__results {
+    margin-top: var(--space-2) !important;
+    background: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--shadow-lg) !important;
+    max-height: 400px !important;
+    overflow-y: auto !important;
+}
+
+.pagefind-ui__result {
+    padding: var(--space-4) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+}
+
+.pagefind-ui__result:last-child {
+    border-bottom: none !important;
+}
+
+.pagefind-ui__result-link {
+    color: var(--color-text) !important;
+    text-decoration: none !important;
+}
+
+.pagefind-ui__result-link:hover {
+    color: var(--color-primary) !important;
+}
+
+.pagefind-ui__result-title {
+    font-weight: 600 !important;
+    font-size: var(--text-lg) !important;
+    margin-bottom: var(--space-2) !important;
+}
+
+.pagefind-ui__result-excerpt {
+    color: var(--color-text-muted) !important;
+    font-size: var(--text-sm) !important;
+}
+
+.pagefind-ui__result-excerpt mark {
+    background: rgba(37, 99, 235, 0.2) !important;
+    color: var(--color-primary) !important;
+    padding: 0 2px !important;
+    border-radius: 2px !important;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        max-width: 100%;
+    }
+}
+</style>
+            
+            <nav class="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="/coding-best-practices/">Coding Tips</a></li>
+                    <li><a href="/tutorials/">Tutorials</a></li>
+                    <li><a href="/personal/">Personal</a></li>
+                    <li><a href="/reviews/">Reviews</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <main class="main-content">
+        <p>Revlon, my employer, recently launched <a href="http://www.revlonprobrands.com/us" title="visit RevlonProBrands.com">RevlonProBrands.com</a>, a one-page site that  acts as a sales tool for the company's sales reps. It was designed by a Colorado web shop and passed on to Revlon's internal web team for integration into a <a href="http://www.sitecore.net/" title="visit Sitecore: a .NET based content management system">Sitecore</a> environment.</p>
+<p>There wasn't a need for lots complicated client-side code, but working on this project gave me the chance to use certain web development tools and code techniques. Let's discuss them:</p>
+<h2 class="tableOfContentsHeader">Table of Contents</h2>
+1. [GitHub Atom](#atom)
+2. [Jade (now Pug)](#jade)
+3. [OOCSS](#oocss)
+4. [Modernizr &amp; yepnope](#modernizr-yepnope)
+5. [Grunt &amp; Gulp](#grunt-gulp)
+6. [Conclusion](#conclusion)
+<p><a name="atom"></a></p>
+<h3>GitHub Atom</h3>
+<p><a href="http://www.sublimetext.com/" title="visit Sublime Text">Sublime Text</a> was my primary development environment for this project, but there were a few instances when I switched to <a href="https://atom.io/" title="visit Atom">Atom</a>. Which is a web editor that <a href="https://github.com/" title="visit GitHub">GitHub</a> released to beta a few months ago from this blog post.</p>
+<p>Atom definitely &quot;takes inspiration&quot; from Sublime Text in terms custom configuration...many features that needed to be installed in Sublime as third-party packages are native in Atom.</p>
+<p>This includes Git and GitHub integration, which is obvious when you consider Atom's creator. If your project is already Git-configured (i.e., if you've already done a full <code>git init</code> inside of it and it's been pushed up to GitHub at least once), the configs can communicate with Atom and perform lots of Git-related tasks.</p>
+<p>Here are a few of the tasks...</p>
+<ul>
+<li>Atom can read a project's <code>.gitignore</code> file  and tell you which files are ignored by greying them out in your project tree.</li>
+</ul>
+<figure class="postFigure">
+  <img src="/img/atom_01.jpg" class="imgBorder" alt="Screenshot of how gitignore works with Atom">
+  <figcaption class="postFigureCaption">Greyed-out files are in .gitignore</figcaption>
+</figure>
+* Atom tells you what branch you're currently working on.
+<figure class="postFigure">
+  <img src="/img/atom_02.jpg" class="imgBorder" alt="Screenshot of how Atom tracks your current Git branch">
+  <figcaption class="postFigureCaption">Current Git branch appears in the bottom-left corner of your editor</figcaption>
+</figure>
+* Atom uses color-coding to indicate that files need to be commited to your git repo.
+<figure class="postFigure">
+  <img src="/img/atom_03.jpg" class="imgBorder" alt="Screenshot of how Atom tracks your current Git branch">
+  <figcaption class="postFigureCaption">Orange indicates that an already-existing file has been updated while green indicates that a new file has been added to the project, but hasn't been committed yet</figcaption>
+</figure>
+<p>This is not to say that Sublime can't do any of these things, because it can.  It's just that these features come pre-installed into Atom: as packages but pre-installed nonetheless.</p>
+<p>That these features are installed as packages is key to Atom's design. Atom adopts a modularized architecture as a result, making it easy to configure and adjust the architecture if needed.</p>
+<p>This highly configurable setup is mostly thanks to Atom's deep Node integration. Peek at most of Atom's pre-installed plugins and you'll see a basic Node architectural pattern...if you're a regular Node hacker then adding Atom to your toolkit is close to a no-brainer.</p>
+<p>Managing settings in Atom is done using a nice user interface, something that Atom has over Sublime Text (at least I think so). Adding themes, installing/removing packages and creating custom settings is a breeze in Atom.</p>
+<p>Again, Atom is in beta at the time of this post but it a version 1.o release is looming.  GitHub once said that there would be both free and paid versions of the editor, but it appears that it's now <em>100% free!!!</em>.</p>
+<p>I'm not yet ready to leave Sublime Text for Atom...I've gotten extremely comfortable with Sublime Text over the years and have it setup just how I want it. Keystrokes are memorized, bash scripts are synced up, themes are picked, etc.</p>
+<p>But this may change.  Will probably go full-on Atom for next project and put to the test.
+<a name="jade"></a></p>
+<h3>Jade (now Pug)</h3>
+<p>RevlonProBrands.com is a <em>responsive/adaptive/insert-another-buzzword-here</em> website, but Sitecore is using server-side code to load in two versions of the page: one for desktops and another for everything else. So it made sense to use some sort of development-level templating system that would apply the common parts to each page.</p>
+<p>I chose <a href="https://pugjs.org/" title="visit the Pug templating">Jade (now called Pug)</a> for this, a very simple templating engine that compile pages into HTML. In terms of what code you have to write to get things done, Jade is similar to things like <a href="http://lesscss.org/" title="visit LESS, a JavaScript-based CSS processor">LESS</a> and <a href="http://haml.info/" title="visit Haml, an HTML abstraction markup language">Haml</a> in the sense that indentation defines block structure.</p>
+<p>So you <a href="https://github.com/pugjs/pug" title="install Pug with npm">use npm to install Pug</a> on your machine. Then create <code>.jade</code> files like this...</p>
+<pre><code class="language-markup">
+doctype html
+html
+  head
+    title kaidez.com
+  body
+    h1 My Page Header
+</code></pre>
+<p>And with a few keystrokes, this file will output an <code>.html</code> file like this</p>
+<pre><code class="language-markup">
+<!doctype html>
+&lt;html&lt;
+  &lt;head&lt;
+    &lt;title&lt;kaidez.com&lt;/title&lt;
+  &lt;/head&lt;
+  &lt;body&lt;
+    &lt;h1&lt;My Page Header&lt;/h1&lt;
+    &lt;p&lt;My Content&lt;/p&lt;
+  &lt;/body&lt;
+&lt;/html&lt;
+</code></pre>
+<p>I went with Pug because I've been playing with the <a href="http://mean.io/" title="review the MEAN stack">MEAN stack</a> lately and <a href="http://expressjs.com/" title="visit Express, the Node-based web server framework">Express</a> (the &quot;E&quot; in MEAN) likes to use Jade. So I figured it made sense for me to figure out.</p>
+<p>Pug has &quot;includes&quot; functionality similar to PHP includes and .NET user controls. In other words, small parts of page code can be broken out into their own files and then embedded into other pages for output.</p>
+<p>So in other words, these two <code>.pug</code> files...</p>
+<pre><code class="language-markup">
+//index.jade
+doctype html
+html
+  include includes/header //this is an include file
+  body
+    h1 My Page Header
+    p My Content
+</code></pre>
+<pre><code class="language-markup">
+//includes/header.jade
+head
+  title kaidez.com
+</code></pre>
+<p>...<em>SHOULD</em> output a single <code>.html</code> file like this...</p>
+<pre><code class="language-markup">
+&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;kaidez.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;My Page Header&lt;/h1&gt;
+    &lt;p&gt;My Content&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>The indentation didn't QUITE work out the way I wanted to when I used a <code>&lt;header&gt;</code> tag...not sure why that was after a doing a web search for an answer. I think I can figure out why this is later on down the line, or maybe just asking for an answer on Stack Overflow will work as well.</p>
+<p>That being said, I was approaching the delivery date for submitting the finalized code to the lead engineer, so I couldn't spend a whole lot of time on this problem. I'll will try to fix the issue but if it persists and I have to do a similar project in the future, I may just use <a href="http://jekyllrb.com/" title="visit Jekyll">Jekyll</a>, which has an incredibly straightforward templating system.
+<a name="oocss"></a></p>
+<h3>OOCSS</h3>
+<p>As mentioned in my <a href="http://kaidez.com/site-redesign-2013/" title="read 'kaidez.com 2013 Site Redesign' on kaidez.com">2013 site redesign post</a>, I really wanted to use object-oriented CSS, or OOCSS, in a project. I chose this project to do so and I am happy with what I accomplished and what learned in the process.</p>
+<p>There's not enough room in this blog post to go through all its characteristics. But, simply put, OOCSS is a CSS design pattern that implements what its name implies: an object-oriented method for writing CSS using some common best practices.</p>
+<p>OOCSS is a beautifully crafted set of ideas by <a href="https://twitter.com/stubbornella/" title="stubbornella at Twitter">Nicole Sullivan</a>. The central ideas include:</p>
+<ul>
+<li>placing styles under CSS classes and not IDs, reserving IDs for JavaScript hooks.</li>
+<li>separating these classes into two formats...one for style and one for structure.</li>
+<li>in true object-oriented style, reusing these classes across your page elements as needed.</li>
+<li>avoid inefficient CSS selectors, such as descendant selectors.</li>
+<li>always <a href="http://csslint.net/" title="lint you CSS with CSS Lint">linting your CSS</a> to test for bugs and confirm that CSS best practices are being followed.</li>
+</ul>
+<p>I applied these ideas to my Pro Brands page code, specifically the individual product image module. Each module contains lots and lots of shared CSS classes among the various page elements it contains.  Some of the module elements contain IDs; however, none of these elements have CSS styles applied on the ID level.</p>
+<p>OOCSS definitely takes some getting used to and takes more work.  Quite a few people have personally told me they disagree with it as a practice and don't use it.  But I have noticed that the CSS parses faster than if I hadn't used it so I'm not going to give up on it.</p>
+<p><a name="modernizr-yepnope"></a></p>
+<h3>Modernizr &amp; yepnope</h3>
+<p><em>(Author's note: Yepnope has sorta/kinda been deprecated (<a href="https://github.com/SlexAxton/yepnope.js#deprecation-notice">read more about this</a>) so this part of the post is here for historical purposes.)</em></p>
+<p>Sitecore loads one version of the site for desktops and a (slightly) different version of the site handheldz.</p>
+<p>Each product image reacts to a jQuery-powered <code>mouseover</code> on desktops and a jQuery-powered <code>click</code> on handhelds. The image reaction is, when one of those events happens, a window scrolls up over it displaying some product info using <code>jQuery.animate()</code>.</p>
+<p>The group of images is placed in a JS array where a <code>forEach</code> method loops over it, but <code>forEach</code> isn't supported in legacy Internet Explorer. That meant building a feature-detect for <code>forEach</code> and, if the site loaded into a browser that didn't support that, loading in a polyfill that would apply <code>forEach</code> support in such browsers.</p>
+<p>This whole process was managed by <a href="http://modernizr.com" title="Read more about Modernizr">Modernizr</a> and its <a href="http://modernizr.com/docs/#load" title="Read more about Modernizr.load()">Modernizr.load() method</a>.  And it's a pretty straightforward process when keeping a few things in mind...</p>
+<ul>
+<li>Note that <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#Polyfill" title="Get the 'forEach' polyfill code at Mozilla Developer Network">MDN provides a great piece of polyfill code<sup>1</sup></a>...I copied it into a file called <code>forEachPolyfill.js</code>.</li>
+<li>Remember that a full Modernizr build performs features detects for many things by default, but not everything.</li>
+<li>Remember that you can <a href="http://modernizr.com/download/" title="Create a custom Modernizr build">create a custom Modernizr build</a> with only the features-detects you want, and can also create your own custom features-detects for the things that Modernizr doesn't look for by default...this is done with Modernizr's sorely under-used <code>addTest()</code> method.</li>
+<li>Note that Modernizr provides a well-stocked list of <a href="https://github.com/Modernizr/Modernizr/tree/master/feature-detects" title="See some Modernizr pre-written feature detects">pre-written feature-detects in its GitHub repo</a>.</li>
+</ul>
+<p><small><em><sup>1</sup> the polyfill code has been updated since I first used it, but all works well for both versions.</em></small></p>
+<p>But most importantly, remember that Modernizr has a <code>Modernizr.load()</code> method that's based on yepnope.js
+I applied a custom feature-detect based on one of these pre-written pieces of code: <a href="https://github.com/Modernizr/Modernizr/blob/master/feature-detects/es5/array.js" title="See Modernizer's ES5 feature-detect polyfill">the ECMAScript 5.1 array feature-detects</a>. I then placed the code in a file called <code>forEachTest.js</code>.</p>
+<p>There are two versions of <code>app.js</code>: one for desktops and one for mobiles &amp; handhelds. Sitecore uses device detection to decide which one to load.</p>
+<p>The .js files look like this:</p>
+<p><strong>forEachTest.js</strong></p>
+<pre><code class="language-javascript">
+/*
+ * Make Modernizr test for "Array.prototype.forEach" so it can work
+ * cross-browser when building out the single product modules. When
+ * the test passes, "Modernizr.foreach" is attached to the list of
+ * Modernizr classes in the &lt;html&gt; tag.
+ */
+Modernizr.addTest("foreach", function(){
+  var forEachFunc = Array.prototype.forEach;
+  return typeof forEachFunc === "function"
+});
+
+Modernizr.load({
+  test: Modernizr.foreach,
+  yep: "js/app.js",
+  nope: ["forEachPolyfill.js", "app.js"]
+});
+</code></pre>
+<p><strong>app.js (Mobile/Handheld Version)</strong></p>
+<pre><code class="language-javascript">
+function ScrollContent() {}
+
+/*
+ * "buildScrolls" method: runs faster if it's attached to core
+ * function's prototype and not inside core function.
+ */
+ScrollContent.prototype.buildScrolls = function(element) {
+
+  /*
+   * scroll up code/down for mobile/handhelds using "jQuery.click()"
+   * below since this is the mobile/handheld version. In the desktop
+   * version, "jQuery.click()" is replaced by "jQuery.mouseover()".
+   */
+
+   // scroll up
+  $("#" + element + "Id").click(function() {
+    $("#" + element + "Content").animate({
+      top: "-=434px"
+    }, "fast");
+  });
+
+  // scroll down
+  $("#" + element + "Content").click(function() {
+    $(this).animate({
+      top: "+=434px"
+    }, "fast");
+  });
+
+};
+
+var products = new ScrollContent();
+["productOne","productTwo","productThree","productFour","productFive","productSix","productSeven"].forEach(products.buildScrolls);
+</code></pre>
+<p>And the HTML code for each scroll looks somewhat like this...</p>
+<pre><code class="language-markup">
+&lt;div id="productOneId"&gt;
+  &lt;div id="productOneContent"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="productTwoId"&gt;
+  &lt;div id="productTwoContent"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="productThreeId"&gt;
+  &lt;div id="productThreeContent"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="productFourId"&gt;
+  &lt;div id="productFourContent"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="productFiveId"&gt;
+  &lt;div id="productFiveContent"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="productSixId"&gt;
+  &lt;div id="productSixContent"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="productSevenId"&gt;
+  &lt;div id="productSevenContent"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>The divs that end in &quot;Id&quot; are buttons that run one of the mouse events while the divs that end in &quot;Content&quot; contain the  product images that appear on the mouse events.</p>
+<p>So on page-load, everything works as follows...</p>
+<ol>
+<li>
+<p>Inside <code>forEachTest.js</code>, Modernizr tests for the existence of <code>forEach</code> in the browser.</p>
+</li>
+<li>
+<p>If <code>forEach</code> exists, the &quot;yep&quot; part of the code runs and loads <code>app.js</code> into the browser.</p>
+</li>
+<li>
+<p>If <code>forEach</code> does NOT exist, the &quot;nope&quot; part of the code runs and adds both the polyfill code and <code>app.js</code> into the browser.</p>
+</li>
+<li>
+<p>When one of the divs ending in id receives one of the mouse events, the <code>ScrollContent.buildScrolls()</code> method in <code>app.js</code> runs.</p>
+</li>
+<li>
+<p><code>ScrollContent.buildScrolls()</code> takes an array of text strings, and each array item in the array is  passed as the <code>element</code> parameter in <code>buildScrolls()</code>.</p>
+</li>
+<li>
+<p>The parameters are text strings that get passed to the <code>element</code> reference in the jQuery event calls. So for example:</p>
+<ul>
+<li>the value of <code>element</code> in the forEach loop is &quot;productOne&quot;.</li>
+<li>two text strings are built as a result: &quot;#productOneId&quot; and &quot;#productOneContent&quot;.</li>
+<li>both text strings match the name of the div in the HTML code, synchronizing with the jQuery event calls</li>
+</ul>
+</li>
+</ol>
+<p><a name="grunt-gulp"></a></p>
+<h3>Grunt &amp; Gulp</h3>
+<p>I can't see task tools like <a href="http://gruntjs.com" title="Learn more about the Grunt task runner">Grunt</a> being omitted from my workflow and as discussed in my last site redesign post, <a href="/site-redesign-2013/#grunt-deployment-workflow" title="Read about kaidez.com's 2013 site redesign">Grunt ruled my workflow</a>. But <a href="http://gulpjs.com/," title="Learn more about Gulp">Gulp</a> has emerged as formidable challenger to Grunt.</p>
+<p>Grunt and Gulp are Node-based task runners that run from the command line. Both let you build custom tasks but there are tons of plugins available for each that let you run pre-built tasks. There are probably more similarities but these are the two that stick out to me the most.</p>
+<p>The BIG difference is how Gulp works behind the scenes...Gulp uses Node's streaming system to build and synchronize its tasks. Gulp creator Eric Schoffstall has said that you need to be a programmer to understand Gulp, but I think that the streaming system makes parts of it easier. Gulp streams allow for the easy chaining of tasks as well as requiring less configuration, and I like that.</p>
+<p>I used Gulp and Grunt while coding the Pro Brands site because for all of Gulp's advantage, there are more plug-ins available for Grunt. So in order to get certain tasks done within a short development timeline, I used Grunt to fill in the spots where a Gulp plugin wasn't available.</p>
+<p>The fact that there are less Gulp plugins that Grunt ones ties into Gulp's philosophy. Eric Schoffstall outlined this philosophy quite well on the <a href="http://javascriptjabber.com/097-jsj-gulp-js-with-eric-schoffstall/" title="Listen to Eric Schoffstall on JavaScript Jabber">JavaScript Jabber Podcast</a>...give it a listen.</p>
+<p><a name="conclusion"></a></p>
+<h3>Conclusion</h3>
+<p>There weren't REALLY a lot of code challenges for me in this project...a simple one-pager like this doesn't bring any. But I pushed myself with code a little and played with some new tools. I accomplished what I wanted to and as a developer, that's enough.</p>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-main">
+                <h3>kaidez</h3>
+                <p>web development and stuff...</p>
+                
+                <div class="social-links">
+                    <a href="https://twitter.com/kaidez" aria-label="Twitter" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/kaidez" aria-label="GitHub" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/kaigittens" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/posts/">Blog</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="/posts/javascript/">JavaScript</a></li>
+                        <li><a href="/posts/web-development/">Web Development</a></li>
+                        <li><a href="/posts/tutorials/">Tutorials</a></li>
+                        <li><a href="/posts/reviews/">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/feed.xml">RSS Feed</a></li>
+                        <li><a href="/sitemap.xml">Sitemap</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Built with <a href="https://11ty.dev" target="_blank" rel="noopener">11ty</a> and hosted on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+/* Footer Styles */
+.site-footer {
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--space-20);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-12);
+    padding: var(--space-12) 0 var(--space-8);
+}
+
+.footer-main h3 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-3);
+    color: var(--color-text);
+}
+
+.footer-main p {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-6);
+    max-width: none;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius);
+    background: var(--color-bg);
+    color: var(--color-text-muted);
+    transition: all var(--transition-fast);
+    border: 1px solid var(--color-border);
+}
+
+.social-links a:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+}
+
+.footer-section h4 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+    color: var(--color-text);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section li {
+    margin-bottom: var(--space-2);
+}
+
+.footer-section a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-section a:hover {
+    color: var(--color-primary);
+}
+
+.footer-bottom {
+    padding: var(--space-6) 0;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+}
+
+.footer-bottom p {
+    margin-bottom: var(--space-2);
+}
+
+.footer-bottom p:last-child {
+    margin-bottom: 0;
+}
+
+.footer-bottom a {
+    color: var(--color-primary);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+</style>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5549541-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Components Demo: Templates and (some) Shadow DOM - kaidez</title>
+    <meta name="description" content="web development and stuff...">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Web Components Demo: Templates and (some) Shadow DOM">
+    <meta property="og:description"
+        content="web development and stuff...">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kaidez.com/web-components-demo/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+    <meta property="article:publisher" content="http://facebook.com/kaidezblog" />
+    <meta property="article:section" content="Personal" />
+    <meta property="og:image" content="http://www.kaidez.com/img/NaN" />
+    <meta property="og:image:width" content="700" />
+    <meta property="og:image:height" content="300" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaidez" />
+    <meta name="twitter:creator" content="@kaidez" />
+    <meta name="twitter:title" content=" » kaidez" />
+    <meta name="twitter:image" content="http://www.kaidez.com/img/NaN" />
+    <meta name="twitter:description" content="" />
+</head>
+
+<body class="" data-pagefind-body>
+    <header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <a href="/" class="site-title">kaidez</a>
+            
+            <!-- Search Component -->
+            <!-- Simplified Search Component -->
+<div class="search-container">
+    <div id="search" class="pagefind-search"></div>
+</div>
+
+<!-- Load Pagefind -->
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    try {
+        // Simple initialization
+        new PagefindUI({ 
+            element: "#search",
+            showImages: false,
+            excerptLength: 20,
+            resetStyles: false,
+            translations: {
+                placeholder: "Search kaidez for stuff...",
+                zero_results: "Couldn't find [SEARCH_TERM]"
+            }
+        });
+        console.log('Pagefind initialized successfully');
+    } catch (error) {
+        console.error('Pagefind initialization failed:', error);
+    }
+});
+</script>
+
+<style>
+/* Simple search styling */
+.search-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.pagefind-search {
+    width: 100%;
+}
+
+/* Style the Pagefind input */
+.pagefind-ui__search-input {
+    width: 100% !important;
+    padding: var(--space-3) var(--space-4) !important;
+    border: 2px solid var(--color-border) !important;
+    border-radius: var(--border-radius-lg) !important;
+    background: var(--color-bg) !important;
+    color: var(--color-text) !important;
+    font-size: var(--text-base) !important;
+    font-family: var(--font-family-sans) !important;
+}
+
+.pagefind-ui__search-input:focus {
+    border-color: var(--color-primary) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Style the results */
+.pagefind-ui__results {
+    margin-top: var(--space-2) !important;
+    background: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--shadow-lg) !important;
+    max-height: 400px !important;
+    overflow-y: auto !important;
+}
+
+.pagefind-ui__result {
+    padding: var(--space-4) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+}
+
+.pagefind-ui__result:last-child {
+    border-bottom: none !important;
+}
+
+.pagefind-ui__result-link {
+    color: var(--color-text) !important;
+    text-decoration: none !important;
+}
+
+.pagefind-ui__result-link:hover {
+    color: var(--color-primary) !important;
+}
+
+.pagefind-ui__result-title {
+    font-weight: 600 !important;
+    font-size: var(--text-lg) !important;
+    margin-bottom: var(--space-2) !important;
+}
+
+.pagefind-ui__result-excerpt {
+    color: var(--color-text-muted) !important;
+    font-size: var(--text-sm) !important;
+}
+
+.pagefind-ui__result-excerpt mark {
+    background: rgba(37, 99, 235, 0.2) !important;
+    color: var(--color-primary) !important;
+    padding: 0 2px !important;
+    border-radius: 2px !important;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        max-width: 100%;
+    }
+}
+</style>
+            
+            <nav class="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="/coding-best-practices/">Coding Tips</a></li>
+                    <li><a href="/tutorials/">Tutorials</a></li>
+                    <li><a href="/personal/">Personal</a></li>
+                    <li><a href="/reviews/">Reviews</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <main class="main-content">
+        <p class="clearfix">
+  <ul>
+  <li style="display: inline-block; margin: 10px;"><a href="/samples/template-shadowdom-practice/" class="demoLink" target="blank">VIEW THE DEMO</a></li>
+  <li style="display: inline-block; margin: 10px;"><a href="https://github.com/kaidez/template-shadowdom-practice" class="demoLink">GRAB THE CODE ON GITHUB</a></li>
+</ul>
+</p>
+*Author's Note: it's best to review this code in Google Chrome 36+. Also, open up the Dev Tools and under "General" and then "Settings," make sure that the "Show user agent shadow DOM" box is checked.*
+<p>I spent some time hacking Web Components during a long flight layover and it was time well spent. I put together a small demo, just so I could better understand Web Components as a whole.</p>
+<p>Web Components is a concept composed of four sub-concepts, but I just focused on two of them for the demo: <em>templates</em> and <em>Shadow DOM</em>...primarily templates. At the time of this post, implementing Web Components neatly across the different browsers and devices requires a polyfill library like <a href="http://www.polymer-project.org/" title="visit the Polymer Web Components Library">Polymer</a> or <a href="http://x-tags.org/" title="visit the X-tag Web Components Library">X-Tag</a>, but I wanted to study the internal workings of each sub-concept before diving into the polyfills.</p>
+<h3>A quick Web Components description</h3>
+<p>Web Components are a set of emerging technologies working their way towards a firm specification, thanks to the hard work of the W3C. The goal of Web Components is to allow developers to create custom elements with HTML, CSS and JavaScript...these elements can also be thought of as widgets.</p>
+<p>An great example of this is the <code>&lt;github-card&gt;</code> custom element. If you have a GitHub account, <a href="http://pazguille.github.io/github-card/" title="go to &lt;github-card&gt; demo page">check out the &lt;github-card&gt; demo page</a>, add your GH username in the field to review the end result, then <a href="https://github.com/pazguille/github-card" title="go to &lt;github-card&gt; GitHub documentation">go to the &lt;github-card&gt; documentation</a> to download the code and see how to apply it to your page using a simple tag.</p>
+<p>The four sub-concepts that make up Web Components are:</p>
+<ol>
+<li><em><strong>Templates</strong></em>: a chunk of formatted HTML that can be cloned, inserted and rendered based on instructions you give it. <a href="http://www.html5rocks.com/en/tutorials/webcomponents/template/" title="Read more about Web Component templates">Read more »</a></li>
+<li><em><strong>Shadow DOM</strong></em>: an encapsulated separate DOM that you can add code to. It's best to think of it as &quot;a DOM within your DOM.&quot; <a href="http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/" title="Read more about Web Component Shadow DOM">Read more »</a></li>
+<li><em><strong>Custom Elements</strong></em>: the ability to create custom page tags, such as <code>&lt;github-card&gt;</code>. <a href="http://www.html5rocks.com/en/tutorials/webcomponents/customelements/">Read more »</a></li>
+<li><em><strong>HTML Imports</strong></em>: the ability to load in small pieces of HTML code into your page when needed via <code>&lt;link&gt;</code> tags. <a href="http://www.html5rocks.com/en/tutorials/webcomponents/imports/" title="Read more about Web Component HTML Imports">Read more»</a></li>
+</ol>
+<p><em>(all the above &quot;Read more »&quot; links courtesy of <a href="http://www.html5rocks.com/" title="Go to HTML5 Rocks">HTML5 Rocks</a>):</em></p>
+<p>While things like <code>&lt;github-card&gt;</code> utilize all the sub-concepts, each one can function on its own quite nicely. But when they all work together, they form Web Components...conceptually, it's best to think of WC in the same way as AJAX, where a group of technologies work together to perform a single task.</p>
+<p><em>(Side note: there's another sub-concept called &quot;decorators&quot; but lots of developers don't like it, so there's not a lot of focus in terms of finalizing its specification. It may disappear.)</em></p>
+<h3>Started out by focusing on templates...mostly</h3>
+<p>I've read about all of these sub-concepts (including decorators) but  played with the actual code just a little, and the best way to learn is by doing instead of reading. So I'm in the middle of hacking out code for each sub-concept, starting with templates.</p>
+<p>For the templates, I wanted to display a simple list of books based on a small JavaScript data object. Things started out like this...</p>
+<p><strong>index.html</strong></p>
+<pre><code class="language-markup">
+<!DOCTYPE html>
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;title&gt;JavaScript Books&lt;/title&gt;
+  &lt;link rel="stylesheet" href="css/normalize.min.css"&gt;
+  &lt;link rel="stylesheet" href="css/bootstrap.min.css"&gt;
+  &lt;link rel="stylesheet" href="css/styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id="container"&gt;
+    &lt;header&gt;
+      &lt;h1 class="page-header"&gt;JavaScript Books&lt;/h1&gt;
+      &lt;h2&gt;Built with templates & Shadow DOM&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;template id="singleBook"&gt;
+      &lt;style&gt;
+        .templateArticle {
+          display: inline-block;
+          margin: 6px;
+        }
+        .btn {
+          margin: 10px;
+          float: right;
+        }
+        .thumbnail {
+          margin-bottom: 0;
+        }
+        .bookTitleClass {
+          text-align: left;
+        }
+        #bookTitle {
+          font-style: italic;
+        }
+      &lt;/style&gt;
+      &lt;article class="templateArticle panel panel-default"&gt;
+        &lt;header class="panel-heading"&gt;
+          &lt;h2 class="panel-title bookTitleClass"&gt;
+            &lt;span id="bookTitle"&gt;&lt;/span&gt;
+            &lt;br /&gt;
+            by &lt;span id="bookAuthor"&gt;&lt;/span&gt;
+          &lt;/h2&gt;
+        &lt;/header&gt;
+        &lt;img src="" alt="" class="thumbnail"&gt;
+        &lt;a href="" id="btnPurchase" class="btn btn-primary" role="button" target="blank"&gt;Buy at Amazon&lt;/a&gt;
+      &lt;/article&gt;
+    &lt;/template&gt;
+    &lt;section id="allBooks" class="allBooksClass"&gt;&lt;/section&gt;
+    &lt;script src="scripts/main.js"&gt;&lt;/script&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><strong>css/styles.css</strong></p>
+<pre><code class="language-css">
+body {
+  margin: 20px;
+}
+h1, h2 {
+  text-align: center;
+}
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+.allBooksClass {
+  margin-top: 30px;
+  text-align: center;
+}
+</code></pre>
+<p><strong>scripts/main.js</strong></p>
+<pre><code class="language-javascript">
+(function(){
+
+  var jsBooks = {
+    "book1" : {
+      "title": "Object-Oriented Javascript",
+      "author": "Stoyan Stefanov",
+      "image": "images/ooj.jpg",
+      "amazonLink": "http://amzn.to/1sRFbEC"
+    },
+    "book2" : {
+      "title": "Effective Javascript",
+      "author": "David Herman",
+      "image": "images/effectivejs.jpg",
+      "amazonLink": "http://amzn.to/1pLu1A5"
+    },
+    "book3" : {
+      "title": "JavaScript: The Good Parts",
+      "author": "Douglas Crockford",
+      "image": "images/goodparts.jpg",
+      "amazonLink": "http://amzn.to/1ukjoIN"
+    },
+    "book4" : {
+      "title": "Eloquent Javascript",
+      "author": "Marijn Haverbeke",
+      "image": "images/eloquentjavascript.jpg",
+      "amazonLink": "http://amzn.to/1lPP6pn"
+    }
+  };
+
+  var template = document.querySelector("#singleBook"),
+    templateContent = template.content,
+    host = document.querySelector("#allBooks"),
+    root = host.createShadowRoot();
+
+  for (key in jsBooks) {
+    var title = jsBooks[key].title,
+      author = jsBooks[key].author,
+      image = jsBooks[key].image,
+      amazonLink = jsBooks[key].amazonLink;
+
+    templateContent.querySelector("img").src = image;
+    templateContent.querySelector("img").alt
+    = templateContent.querySelector("#bookTitle").innerHTML
+    = title;
+    templateContent.querySelector("#bookAuthor").innerHTML = author;
+    templateContent.querySelector("#btnPurchase").href = amazonLink;
+    root.appendChild(document.importNode(templateContent, true));
+  }
+})();
+</code></pre>
+<p><code>index.html</code> contains both <code>normalize.css</code> and the main Twitter Bootstrap CSS file. Bootstrap is providing responsive functionality, but is mostly here to make parts of the site look pretty. <code>styles.css</code> adds extra styling to some page elements and has a very small role in the project.</p>
+<p>Past that, there's some basic HTML but there's also the Web Component-centric template tag that has an ID of <code>singleBook</code>. The code inside of <code><template></code> contains HTML and some CSS in a <code><style></code> tag.</p>
+<p>The template contains an <code><article></code> tag: this is where the book data in the JS object will be parsed as content. The template tag is also inert, meaning it's not visible on page load and can't communicate with any outside code until we say so.</p>
+<p>Note that some parts of <code>&lt;article&gt;</code> are empty:</p>
+<ul>
+<li>the two <code>&lt;span&gt;</code> tags.</li>
+<li>the <code>src</code> and <code>alt</code> attributes for the only <code>&lt;img&gt;</code> tag.</li>
+<li>the <code>href</code> attribute for the only <code>&lt;a&gt;</code> tag.</li>
+</ul>
+<p>This empty parts will be populated with our object data...let's look at that...</p>
+<pre><code class="language-javascript">
+(function(){
+...
+})();
+</code></pre>
+<p>Everything's wrapped in an <a href="http://benalman.com/news/2010/11/immediately-invoked-function-expression/" title="Read more about IIFEs">IIFE</a>.</p>
+<pre><code class="language-javascript">
+var jsBooks = {
+  "book1" : {
+    "title": "Object-Oriented Javascript",
+    "author": "Stoyan Stefanov",
+    "image": "images/ooj.jpg",
+    "amazonLink": "http://amzn.to/1sRFbEC"
+  },
+...
+};
+</code></pre>
+<p>The JavaScript data object. There's only one item one listed here but it contains four items altogether, each about a particular JavaScript book.  Each item has a <code>title</code>, <code>author</code>, <code>image</code> and <code>amazonLink</code> property.</p>
+<pre><code class="language-javascript">
+var template = document.querySelector("#singleBook"),
+  templateContent = template.content,
+  host = document.querySelector("#allBooks"),
+  root = host.createShadowRoot();
+</code></pre>
+<p>Starting to create the Shadow DOM. I'm creating a single var pattern to define four variables...</p>
+<ul>
+<li><code>template</code> is a direct reference to the template, which has an ID of <code>singleBook</code>.</li>
+<li><code>templateContent</code> is a direct reference to value of the template's <code>content</code> attribute at the time of page-load...the page tags, their attributes. Everything. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template" title="Read about the &lt;template&gt; tag on MDN">Read more over on MDN</a>.</li>
+<li><code>host</code> is a direct reference to what's known as the &quot;shadow host&quot; and it's the page element where template content gets load into.  That's the <code>&lt;section id=&quot;allBooks&quot;&gt;</code> page element in this case. This is commonly referred to as the &quot;shadow host&quot; and it can have any variable name you want, but it's convention to name it &quot;host.&quot;</li>
+<li><code>root</code> is a direct reference to what's known as the &quot;shadow root&quot; and it's referring to the content that that gets generated <em>INSIDE</em> the template. Thanks to the <code>host.createShadowRoot()</code> line, I'm placing this content inside of <code>host</code>, which, again, is the <code>&lt;section id=&quot;allBooks&quot;&gt;</code> element...it may be easier to think of it as the actual Shadow DOM. When the content has fully loaded into the root, it gets returned to the web page as a document fragment...<a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment" title="Read about document fragments">read more about document fragments</a> It also can also have any variable name you want to give it, but it's convention to name it &quot;root.&quot;</li>
+</ul>
+<pre><code class="language-javascript">
+for (key in jsBooks) {
+...
+};
+</code></pre>
+<p>A for...in loop will populate the template with the content in the &quot;jsBooks&quot; object. That code needs to be broken down...</p>
+<pre><code class="language-javascript">
+var title = jsBooks[key].title,
+  author = jsBooks[key].author,
+  image = jsBooks[key].image,
+  amazonLink = jsBooks[key].amazonLink;
+</code></pre>
+<p>Assign simple variable references to all the single item properties in the <code>jsBooks</code> object.</p>
+<pre><code class="language-javascript">
+templateContent.querySelector("img").src = image;
+</code></pre>
+<p>Look for the <code>&lt;img&gt;</code> tag in the template and populate its <code>src</code> attribute with whatever the value is of the &quot;image&quot; property at the time of the loop.</p>
+<pre><code class="language-javascript">
+templateContent.querySelector("img").alt
+  = templateContent.querySelector("#bookTitle").innerHTML
+  = title;
+</code></pre>
+<p>Look for the <code>&lt;img&gt;</code> tag in the template and populate its <code>alt</code> attribute with whatever the value is of the &quot;title&quot; property at the time of the loop.</p>
+<p>At the same time, look for the <code>#bookTitle</code> element in the template (one of the <code>&lt;span&gt;</code> tags) and populate it with whatever the value is of the &quot;title&quot; property is at the time of the loop.</p>
+<pre><code class="language-javascript">
+templateContent.querySelector("#bookAuthor").innerHTML = author;
+</code></pre>
+<p>Look for the <code>#bookAuthor</code> element in the template (the other <code>&lt;span&gt;</code> tag) and populate it with whatever the value is of the &quot;author&quot; property at the time of the loop.</p>
+<pre><code class="language-javascript">
+templateContent.querySelector("#btnPurchase").href = amazonLink;
+</code></pre>
+<p>Look for the <code>#btnPurchase</code> element in the template (the only <code>a</code> tag) and populate its &quot;href&quot; attribute with whatever the value is of the current <code>amazonLink</code> property at the time of the loop.</p>
+<pre><code class="language-javascript">
+root.appendChild(document.importNode(templateContent, true));
+</code></pre>
+<p>Okay, we need to spend some time talking about this line of code...</p>
+<p>At this point in the code, all my object data has populated the template and is represented by the <code>templateContent</code> variable. But this is what was returned as a document fragment.</p>
+<p>The document fragment isn't part of the page DOM and, in this case, needs to be treated as an external document. The <code>document.importNode()</code> method can duplicate content from external documents, and by passing the <code>true</code> parameter, we're doing a deep copy of the content and copying <em>everything</em> inside of it.</p>
+<p>From there, we're treating the <code>root</code> as a parent element and appending (i.e., &quot;adding&quot;) a child inside of it. The child we're adding is the template content we just brought over with <code>document.importNode()</code>.</p>
+<p><em>(Side note: <code>document.importNode()</code> is cool...[read more about it over on MDN](https://developer.mozilla.org/en-US/docs/Web/API/document.importNode &quot;&quot;Read about document.importNode() on MDN&quot;)).</em></p>
+<p>And if we review index.html in Chrome 36 or higher with the &quot;Show user agent shadow DOM&quot; box checked, it should look (almost) like the demo. And if we then do an &quot;Inspect Element&quot; check and look in the <code>&lt;section&gt;</code> tag (which is the shadow host), you'll see the template content (which is the shadow root).</p>
+<img src="/img/shadow-root.png" class="imgBorderMaxWidth" alt="The shadow host in the shadow root">
+<p>But there's a problem: Bootstrap styles that are applied to certain elements inside of <code>&lt;template&gt;</code> are being ignored.  Anything class names containing the word <code>panel</code> or <code>btn</code> should have well-recognized Bootstrap styles, especially the buttons...</p>
+<img src="/img/pageScreenshot.jpg" class="imgBorderMaxWidth" alt="homepage screenshot with no Bootstrap styling">
+<p>This is happening because, as mentioned above, the code inside the template can't communicate with any outside code and, technically speaking, <code>&lt;template&gt;</code> is in the Shadow DOM, which is naturally-encapsulated. So none of the page's three stylesheets (<code>normalize.min.css</code>, <code>bootstrap.min.css</code> and <code>styles.css</code>) can affect the template's layout. And for now, adding stylesheets to the Shadow DOM with <code>&lt;link&gt;</code> isn't allowed.</p>
+<h3>Import the styles</h3>
+<p><code>styles.css</code> doesn't need to interact with the layout but the other two have to.  The solution is to use <code>@import</code> inside the template's <code>&lt;style&gt;</code> tag to bring both of them in:</p>
+<pre><code class="language-css">
+&lt;style&gt;
+  @import url("css/normalize.min.css");
+  @import url("css/bootstrap.min.css");
+...
+&lt;/style&gt;
+</code></pre>
+<p>Using <code>@import</code> is frowned upon from a performance standpoint, but it's how this particular problem gets solved. And as Google's Rob Dodson points out in his <a href="http://css-tricks.com/modular-future-web-components/" title="Read Rob Dodson's great Web Component article on CSS Tricks">excellent Web Components article</a>, using Polymer avoids doing this by bringing in the stylesheets with XHR requests.</p>
+<p>But there's another problem: by doing deep clones of template content at each loop iteration, the style tag is getting added four times when it really only needs to be added once.</p>
+<img src="/img/shadow-root-02.png" class="imgBorderMaxWidth" alt="The shadow host in the shadow root">
+<h3>Adjust the loop</h3>
+<p>This can be fixed by changing the loop procedure: every time the loop runs, deep-copy <em>just</em> the article tag by referring to its &quot;templateArticle&quot; class, then append it to the section tag. Leave the loop after it's ended, then append the style tag to section, which is the shadow host.</p>
+<p>This requires changing the end of the JavaScript from this...</p>
+<pre><code class="language-javascript">
+(function(){
+...
+    root.appendChild(document.importNode(templateContent, true));
+  }
+})();
+</code></pre>
+<p>...to this</p>
+<pre><code class="language-javascript">
+(function(){
+...
+    root.appendChild(document.importNode(templateContent.querySelector(".templateArticle"), true));
+  }
+  root.appendChild(document.importNode(templateContent.querySelector("style"), true));
+})();
+</code></pre>
+<p>And now there's only one style tag inside the shadow root and it's properly applying the styles.</p>
+<img src="/img/shadow-root-03.png" class="imgBorderMaxWidth" alt="The shadow host in the shadow root">
+<p>Because <code>&lt;style&gt;</code> gets added to <code>&lt;section&gt;</code> with <code>appendChild()</code>, it gets placed at the bottom.  Were this live production code, I would (probably) use something like <code>jQuery.prepend()</code> to place it at the top.</p>
+<p>But placing it at the bottom doesn't affect my goals for this project, which was to learn how templates and Shadow DOM work. Still, read more about <code>jQuery.prepend()</code> <a href="http://api.jquery.com/prepend/" title="Read about jQuery.prepend()">here</a>.</p>
+<h3>Further reading</h3>
+<p>There are links above to a Rob Dodson article and a group of links to various articles over on HTML5 Rocks. The Dodson article provides a great high-level view of Web Components so if you're at the early stages of discovering them, I would read that one first...the HTML5 Rocks articles next.</p>
+<p>The W3C has an older article called <a href="http://www.w3.org/TR/2013/WD-components-intro-20130606/" title="Read Introduction to Web Components">Introduction to Web Components</a>. It's a working draft and is over a year old based on this post's publish date but is still another high-level view that's slightly more technical....read it while keeping in mind it's old and hasn't been updated in a while.</p>
+<p>Truthfully, the W3C has been referring people to the <a href="http://www.w3.org/wiki/WebComponents/" title="Read the Web Components Wiki">Web Components Wiki</a> lately so you should review that.  It points to the HTML5 Rocks links and the specs for <a href="http://w3c.github.io/webcomponents/spec/shadow/" title="Read the Shadow DOM specification">Shadow DOM</a>, <a href="http://w3c.github.io/webcomponents/spec/custom/" title="Read the Shadow Custom Elements specification">Custom Elements</a> and <a href="http://w3c.github.io/webcomponents/spec/imports/" title="Read the HTML Imports specification">HTML Imports</a>. The WHATWG has the proper version of <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting.html#the-template-element" title="Read about Web Component template specification">the Template spec</a>.</p>
+<p>Specs may be verbose to read at times, but it's always a good idea to read them.</p>
+<p>Most profoundly, Microsoft has made no firm decision on what Web Component features Internet Explorer will and will not support at the time of this post's publish date. I'm assuming that will change in the future though...read more on the <a href="http://status.modern.ie/?iestatuses=underconsideration&amp;browserstatuses=notsupported,indevelopment,implemented&amp;browsers=chrome,firefox,opera,safari&amp;ieversion=11" title="Read about Web Component support in Internet Explorer">modern.ie status page</a>.</p>
+<p>Pointing out the IE issues makes a nice segue to polyfills...take note that Polymer is the most popular Web Component polyfill for now, but only supports IE 10 and up.  Read more on <a href="http://www.polymer-project.org/resources/compatibility.html" title="Read about browser compatibility for Polymer">Polymer's Browser Compatibility page</a>.</p>
+<p>X-Tag isn't as feature-rich as Polymer but supports a wider array of browsers, including IE 9 and up. Read more on <a href="http://x-tag.github.io/docs" title="Read about browser compatibility for X-Tags">X-Tag's Docs page</a>.</p>
+<h3>Conclusion</h3>
+<p>Using something like Polymer or X-Tag is what's needed to use Web Components in production-level code right now, but these libraries work ON TOP of Web Components. So it's best to learn the underlying code first.</p>
+<p>I can't say that my code is perfect, but I achieved the goal I set for myself and was able to solve any problems I faced by actually writing the code instead of just reading about it. I have a much better handle in templates and Shadow DOM then I did before, and that's enough.</p>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-main">
+                <h3>kaidez</h3>
+                <p>web development and stuff...</p>
+                
+                <div class="social-links">
+                    <a href="https://twitter.com/kaidez" aria-label="Twitter" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/kaidez" aria-label="GitHub" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/kaigittens" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/posts/">Blog</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="/posts/javascript/">JavaScript</a></li>
+                        <li><a href="/posts/web-development/">Web Development</a></li>
+                        <li><a href="/posts/tutorials/">Tutorials</a></li>
+                        <li><a href="/posts/reviews/">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/feed.xml">RSS Feed</a></li>
+                        <li><a href="/sitemap.xml">Sitemap</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Built with <a href="https://11ty.dev" target="_blank" rel="noopener">11ty</a> and hosted on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+/* Footer Styles */
+.site-footer {
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--space-20);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-12);
+    padding: var(--space-12) 0 var(--space-8);
+}
+
+.footer-main h3 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-3);
+    color: var(--color-text);
+}
+
+.footer-main p {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-6);
+    max-width: none;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius);
+    background: var(--color-bg);
+    color: var(--color-text-muted);
+    transition: all var(--transition-fast);
+    border: 1px solid var(--color-border);
+}
+
+.social-links a:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+}
+
+.footer-section h4 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+    color: var(--color-text);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section li {
+    margin-bottom: var(--space-2);
+}
+
+.footer-section a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-section a:hover {
+    color: var(--color-primary);
+}
+
+.footer-bottom {
+    padding: var(--space-6) 0;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+}
+
+.footer-bottom p {
+    margin-bottom: var(--space-2);
+}
+
+.footer-bottom p:last-child {
+    margin-bottom: 0;
+}
+
+.footer-bottom a {
+    color: var(--color-primary);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+</style>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5549541-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>
