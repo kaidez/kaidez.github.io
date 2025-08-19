@@ -1,11 +1,9 @@
 ---
 title: 'kaidez courses on lynda.com'
-
-
+date: 2014-09-17
+excerpt: kaidez has recorded Ember.js and Backbone.js courses for lynda.com, a leading online learning company.
 layout: layouts/base.njk
 permalink: /lynda-kaidez/
-excerpt: kaidez has recorded Ember.js and Backbone.js courses for lynda.com, a leading online learning company.
-
 tags: ["reviews"]
 # og-image: kaidez-lynda.jpg
 ---

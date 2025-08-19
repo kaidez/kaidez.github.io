@@ -1,12 +1,10 @@
 ---
 title: 'New Site I Worked On: parlorhairstudio.com'
-
-
-layout: layouts/base.njk
+date: 2015-03-25
 excerpt: kaidez created a WordPress site for a Montclair, NJ hair salon, with a strong focus on optimizing the site for local SEO.
+layout: layouts/base.njk
 permalink: /parlor-redesign/
 tags: ["personal"]
-
 # og-image: parlor-redesign.jpg
 ---
 Many, many, many years ago, I created a Flash site for a close friend of mine's Montclair, NJ hair salon, Parlor Hair Studio. At the time, I was really good with Flash and was able to design and develop a site that was aligned with the times.

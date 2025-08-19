@@ -1,11 +1,9 @@
 ---
 title: Mobile Web Development Best Practices &#8211; Starting Tips
-
-
-permalink: /mobile-web-development-best-practices-starting-tips/
-layout: layouts/base.njk
+date: 2011-06-08
 excerpt: Starter mobile web development best practices including YSlow & Page Speed tests and minifying pages with HTML5 Boilerplate's build script
-
+layout: layouts/base.njk
+permalink: /mobile-web-development-best-practices-starting-tips/
 tags: ["coding-best-practices"]
 # og-image: default-image.jpg
 ---

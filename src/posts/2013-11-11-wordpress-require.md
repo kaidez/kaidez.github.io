@@ -1,11 +1,9 @@
 ---
 title: 'Using RequireJS In WordPress'
-
-
-layout: layouts/base.njk
+date: 2013-11-11
 excerpt: Learn how to use RequireJS in WordPress. Includes a walk-through of how RequireJS works and how WordPress manages JavaScript internally.
+layout: layouts/base.njk
 permalink: /requirejs-wordpress/
-
 tags: ["coding-best-practices"]
 # og-image: require-wordpress.jpg
 ---

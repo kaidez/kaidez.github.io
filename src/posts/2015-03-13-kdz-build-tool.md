@@ -1,11 +1,9 @@
 ---
 title: "kdz - My Personal Scaffolding Tool"
-
-
-layout: layouts/base.njk
+date: 2015-03-13
 excerpt: kaidez used Node to create a tool for scaffolding out web development projects. Includes a link to thoroughly commented code on GitHub.
+layout: layouts/base.njk
 permalink: /kdz-build-tool/
-
 tags: ["coding-best-practices"]
 # og-image: kdz-header.jpg
 ---

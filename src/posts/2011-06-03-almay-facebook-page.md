@@ -1,12 +1,10 @@
 ---
 title: New Almay Facebook Page I Worked On
-
-
+date: 2011-06-03
 excerpt: kaidez developed Almay's Facebook What's New page following some best practices in terms of mobile web development.
 layout: layouts/base.njk
 permalink: /almay-facebook-page/
 tags: ["personal"]
-
 # og-image: default-image.jpg
 ---
 

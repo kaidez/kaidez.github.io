@@ -1,12 +1,10 @@
 ---
 title: "AJAX Tutorial Update"
-
-
-layout: layouts/base.njk
+data: 2015-02-18
 excerpt: kaidez's old AJAX tutorial was updated. jQuery AJAX is discussed in depth and there's a short discussion on JavaScript Promises.
+layout: layouts/base.njk
 permalink: /update-ajax-tutorial/
 tags: ["personal"]
-
 # og-image: ajax-image.jpg
 ---
 Happy 10th Birthday AJAX!!!!

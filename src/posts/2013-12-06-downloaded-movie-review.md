@@ -1,12 +1,11 @@
 ---
 title: "REVIEW: Downloaded"
-
-
+date: 2012-12-06
 layout: layouts/base.njk
 excerpt: The Napster documentary recaps the company’s story and the atmosphere it created, but it doesn't tell the whole story.
 permalink: /downloaded-movie-review/
-# og-image: napster-movie-pic.jpg
 tags: ["reviews"]
+# og-image: napster-movie-pic.jpg
 ---
 With all the focus we place on our iPhones, iPads, iPods, Droids, Windows Phones, Nexuses, etc., it's easy to forget that Napster, the controversial music file sharing software, was a major spark for mobile convergence. Napster let millions of people download as much music as they wanted to for free, demonstrating how pervasive music was.  Apple capitalized on that by creating an easy-to-use portable device to manage the music, a device that was the catalyst for an era of mobile innovation that's really only JUST beginning.
 

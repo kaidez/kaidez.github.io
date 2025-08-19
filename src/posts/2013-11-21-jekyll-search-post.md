@@ -1,12 +1,10 @@
 ---
 title: 'TUTORIAL: Jekyll Search with Non-JavaScript/CSS Fallback'
-
-
-layout: layouts/base.njk
+date: 2013-11-21
 excerpt: jQuery-powered search functionality for a Jekyll site with fallback code if JS or CSS is disabled. Look at the demo before using the code.
+layout: layouts/base.njk
 permalink: /custom-jekyll-search/
 tags: ["tutorials"]
-
 # og-image: jekyllSearchPostImage.jpg
 ---
 <a href="/samples/jekyll-search/" class="demoLink" target="blank">VIEW THE DEMO</a>

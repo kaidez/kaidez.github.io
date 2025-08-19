@@ -1,14 +1,11 @@
 ---
 title: "REVIEW: Effective JavaScript"
-
-
-layout: layouts/base.njk
+date: 2014-12-29
 excerpt: Excellent book that explains complicated JavaScript concepts like API design in painstaking clarity. Great for intermediate JS developers.
+layout: layouts/base.njk
 permalink: /effective-javascript-review/
-
-
-# og-image: effective-js.jpg
 tags: ["review"]
+# og-image: effective-js.jpg
 ---
 *"It very well may be the best JavaScript book ever written...read it!"*
 

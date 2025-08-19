@@ -1,12 +1,10 @@
 ---
 title: 'GitHub Tutorial Update'
-
-
+date: 2013-10-17
+excerpt: kaidez's Git/GitHub tutorial is updated to be shorter, provide information faster and by providing 2 new links to the learning resource list
 layout: layouts/base.njk
 permalink: github-tutorial-update/
-excerpt: kaidez's Git/GitHub tutorial is updated to be shorter, provide information faster and by providing 2 new links to the learning resource list
 tags: ["personal"]
-
 # og-image: gitTutorial.jpg
 ---
 The good news is, my "Remove Files From GitHub" tutorial is showing up in a lot of search results....an average of 1400 appearances a month. The not-so-good news is, the click-throughs are low...an average of 25 a month.

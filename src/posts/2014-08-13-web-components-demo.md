@@ -1,11 +1,9 @@
 ---
 title: 'Web Components Demo: Templates and (some) Shadow DOM'
-
-
+date: 2014-08-13
+excerpt: A Web Components demo using just templates and Shadow DOM, mostly templates. Post includes many links to Web Component learning resources.
 layout: layouts/base.njk
 permalink: /web-components-demo/
-excerpt: A Web Components demo using just templates and Shadow DOM, mostly templates. Post includes many links to Web Component learning resources.
-
 tags: ["coding-best-practices"]
 # og-image: web-components-demo.jpg
 redirect_from:

@@ -1,12 +1,10 @@
 ---
 title: Remembering Steve Jobs
-
-
-layout: layouts/base.njk
+date: 2011-10-06
 excerpt: kaidez recalls the best about Steve Jobs
+layout: layouts/base.njk
 permalink: /remembering-steve-jobs/
 tags: ["personal"]
-
 # og-image: default-image.jpg
 ---
 I’m sitting here, typing away on my Mac Intel, syncing podcasts to my iPhone, my Powermac G4 self-customed web server humming two feet away, wondering what’s the best way to recall a visionary in writing. It’s tough…a loss like this doesn’t happen everyday.
@@ -17,8 +15,6 @@ In this generation, no one will deliver the legacy of innovation, creativity and
 
 <img src="/img/sjPic.jpg" class="post-pic" />
 Being a web developer and making a blanket statement, I see two standout contributions from Jobs. And I have to go all “computer geek” when I talk about the first one: the OS X operating system.
-
-
 
 Released in 2001, OS X was UNIX-like operating system based on one of Jobs’ previous creations, Darwin OS. The open source web development community adopted at it lightning speed-the fact that a group dedicated to creating and freely giving away high-quality software were spending four figure amounts on Macs was something I always found humorously ironic.
 

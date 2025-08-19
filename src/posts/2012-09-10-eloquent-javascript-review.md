@@ -1,14 +1,11 @@
 ---
 title: "REVIEW: Eloquent JavaScript"
-
-
+date: 2012-09-10
 excerpt: Great JavaScript book for beginners covering the fundamentals in detail, focusing on how to use them in web applications, not just websites.
 layout: layouts/base.njk
 permalink: /eloquent-javascript-review/
-
-
-# og-image: default-image.jpg
 tags: ["reviews"]
+# og-image: default-image.jpg
 ---
 *Disclaimer: the author of this book has graciously [given it away for free online][2] but please feel free to support his efforts by buying it on Amazon either in [print format][3] or [Kindle format][4]. And know that, due to my affiliate relationships, you will be putting a few bucks in my pocket also if you buy it via one of these two links.*
 

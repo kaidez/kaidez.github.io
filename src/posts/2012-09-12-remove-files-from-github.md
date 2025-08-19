@@ -1,12 +1,10 @@
 ---
 title: 'TUTORIAL: Remove Files From GitHub'
-
-
+date: 2012-09-12
 excerpt: Get quick answers first, then learn how Git works with GitHub. This post also has an excellent list of Git/GitHub learning links at the end.
 layout: layouts/base.njk
 permalink: /remove-files-from-github/
 tags: ["tutorials"]
-
 # og-image: gitTutorial.jpg
 ---
 
