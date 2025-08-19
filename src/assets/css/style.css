@@ -79,7 +79,7 @@
   --color-kaidez-text: #0E2040;
   --color-kaidez-link: #78391E;
   --color-kaidez-card-link: #B34E56;
-  --color-kaidez-header-bg: #ED1C24;
+  --color-kaidez-supreme-red: #ED1C24;
   --color-kaidez-footer-bg: #BC647C;
 }
 
@@ -178,7 +178,7 @@ a:hover {
 /* Header */
 .site-header {
   border-bottom: 1px solid var(--color-border);
-  background-color: var(--color-kaidez-header-bg);
+  background-color: var(--color-kaidez-supreme-red);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -303,8 +303,9 @@ svg {
 
 .post-meta {
   font-size: var(--text-sm);
-  color: var(--color-text-muted);
+  color: var(--color-black);
   margin-bottom: var(--space-4);
+  font-family: "Jost", sans-serif;
 }
 
 .post-excerpt {
