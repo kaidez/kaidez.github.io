@@ -79,7 +79,7 @@
   --color-kaidez-text: #0E2040;
   --color-kaidez-link: #78391E;
   --color-kaidez-card-link: #B34E56;
-  --color-kaidez-header-bg: #D3B29F;
+  --color-kaidez-header-bg: #ED1C24;
   --color-kaidez-footer-bg: #BC647C;
 }
 
@@ -191,7 +191,13 @@ a:hover {
   align-items: center;
   gap: var(--space-6);
   height: var(--header-height);
-  padding: var(--space-4) 0;
+  /* padding: var(--space-4) 0; */
+}
+
+.header-content--hidden-text {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    margin-bottom: 0;
 }
 
 .site-title {
@@ -200,6 +206,11 @@ a:hover {
   color: var(--color-black);
   text-decoration: none;
 }
+
+svg {
+        width: 30%; /* Scales to the width of its parent container */
+        height: auto; /* Maintains aspect ratio */
+    }
 
 .site-title:hover {
   text-decoration: none;
@@ -281,7 +292,8 @@ a:hover {
 }
 
 .post-card h3 a {
-  color: var(--color-kaidez-card-link);
+  color: var(--color-black);
+  font-family: "Courier New", Courier, monospace;
   text-decoration: none;
 }
 
