@@ -127,7 +127,6 @@ body {
   font-size: var(--text-base);
   line-height: 1.6;
   color: var(--color-kaidez-text);
-  background-color: var(--color-kaidez-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
