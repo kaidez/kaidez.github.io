@@ -8,4 +8,5 @@ yarn.lock
 package-lock.json
 .bundle/
 vendor/
+coverage
 _drafts
