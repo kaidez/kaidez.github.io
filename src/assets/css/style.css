@@ -78,6 +78,9 @@
   --color-kaidez-bg: #E0DDD3;
   --color-kaidez-text: #0E2040;
   --color-kaidez-link: #78391E;
+  --color-kaidez-card-link: #B34E56;
+  --color-kaidez-header-bg: #D3B29F;
+  --color-kaidez-footer-bg: #BC647C;
 }
 
 /* Dark mode colors */
@@ -175,6 +178,7 @@ a:hover {
 /* Header */
 .site-header {
   border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-kaidez-header-bg);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -249,23 +253,26 @@ a:hover {
 
 /* Blog Posts */
 .posts-grid {
-  /* display: grid; */
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--space-8);
   margin: var(--space-12) 0;
 }
 
+.posts-homepage-post-list {
+  margin: var(--space-12) 0;
+}
+
 .post-card {
-  background: var(--color-surface);
+  /* background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: var(--border-radius-lg);
+  border-radius: var(--border-radius-lg);*/
   padding: var(--space-6);
   transition: all var(--transition-normal);
 }
 
 .post-card:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
   border-color: var(--color-primary);
 }
 
@@ -274,7 +281,7 @@ a:hover {
 }
 
 .post-card h3 a {
-  color: var(--color-text);
+  color: var(--color-kaidez-card-link);
   text-decoration: none;
 }
 
@@ -289,7 +296,7 @@ a:hover {
 }
 
 .post-excerpt {
-  color: var(--color-text-muted);
+  color: var(--color-black);
   line-height: 1.6;
 }
 
@@ -348,11 +355,10 @@ a:hover {
 
 /* Footer */
 .site-footer {
-  background: var(--color-surface);
+  background: var(--color-kaidez-footer-bg);
   border-top: 1px solid var(--color-border);
   padding: var(--space-12) 0 var(--space-8);
   margin-top: var(--space-20);
-  text-align: center;
   color: var(--color-text-muted);
 }
 
