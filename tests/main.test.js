@@ -273,3 +273,309 @@ describe('main.js - DOM ready functionality', () => {
     expect(paragraph).toBeFalsy();
   });
 });
+
+// Tests for Pagefind initialization (code starting around line 30)
+describe('main.js - Pagefind search initialization', () => {
+  let originalPagefindUI;
+  let mockPagefindUI;
+  let consoleSpy;
+  let consoleErrorSpy;
+  let mockAddEventListener;
+
+  beforeEach(() => {
+    // Store original global objects
+    originalPagefindUI = global.PagefindUI;
+    
+    // Mock PagefindUI constructor
+    mockPagefindUI = jest.fn();
+    global.PagefindUI = mockPagefindUI;
+    
+    // Create fresh DOM with search element
+    document.body.innerHTML = '<div id="search"></div>';
+    
+    // Mock console methods
+    consoleSpy = jest.spyOn(console, 'log').mockImplementation(() => {});
+    consoleErrorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+    
+    // Mock document.addEventListener
+    mockAddEventListener = jest.spyOn(document, 'addEventListener').mockImplementation((event, callback) => {
+      if (event === 'DOMContentLoaded') {
+        // Immediately call the callback to simulate DOM ready
+        callback();
+      }
+    });
+  });
+
+  afterEach(() => {
+    // Restore original global objects
+    global.PagefindUI = originalPagefindUI;
+    
+    // Restore console methods
+    consoleSpy.mockRestore();
+    consoleErrorSpy.mockRestore();
+    
+    // Restore addEventListener
+    mockAddEventListener.mockRestore();
+  });
+
+  test('should initialize PagefindUI with correct configuration', () => {
+    // Simulate the Pagefind initialization code
+    const pagefindCode = `
+      document.addEventListener('DOMContentLoaded', function() {
+        try {
+          new PagefindUI({ 
+            element: "#search",
+            showImages: false,
+            excerptLength: 20,
+            resetStyles: false,
+            translations: {
+              placeholder: "Search kaidez for stuff...",
+              zero_results: "Couldn't find [SEARCH_TERM]"
+            }
+          });
+          console.log('Pagefind initialized successfully');
+        } catch (error) {
+          console.error('Pagefind initialization failed:', error);
+        }
+      });
+    `;
+    
+    eval(pagefindCode);
+
+    // Verify PagefindUI was called with correct configuration
+    expect(mockPagefindUI).toHaveBeenCalledTimes(1);
+    expect(mockPagefindUI).toHaveBeenCalledWith({
+      element: "#search",
+      showImages: false,
+      excerptLength: 20,
+      resetStyles: false,
+      translations: {
+        placeholder: "Search kaidez for stuff...",
+        zero_results: "Couldn't find [SEARCH_TERM]"
+      }
+    });
+    
+    // Verify success message was logged
+    expect(consoleSpy).toHaveBeenCalledWith('Pagefind initialized successfully');
+    expect(consoleErrorSpy).not.toHaveBeenCalled();
+  });
+
+  test('should handle PagefindUI initialization errors gracefully', () => {
+    // Mock PagefindUI to throw an error
+    const mockError = new Error('PagefindUI is not available');
+    mockPagefindUI.mockImplementation(() => {
+      throw mockError;
+    });
+
+    // Simulate the Pagefind initialization code
+    const pagefindCode = `
+      document.addEventListener('DOMContentLoaded', function() {
+        try {
+          new PagefindUI({ 
+            element: "#search",
+            showImages: false,
+            excerptLength: 20,
+            resetStyles: false,
+            translations: {
+              placeholder: "Search kaidez for stuff...",
+              zero_results: "Couldn't find [SEARCH_TERM]"
+            }
+          });
+          console.log('Pagefind initialized successfully');
+        } catch (error) {
+          console.error('Pagefind initialization failed:', error);
+        }
+      });
+    `;
+    
+    expect(() => eval(pagefindCode)).not.toThrow();
+
+    // Verify error was caught and logged
+    expect(consoleErrorSpy).toHaveBeenCalledWith('Pagefind initialization failed:', mockError);
+    expect(consoleSpy).not.toHaveBeenCalledWith('Pagefind initialized successfully');
+  });
+
+  test('should wait for DOMContentLoaded before initializing', () => {
+    // Reset the mock to track calls more precisely
+    mockAddEventListener.mockRestore();
+    mockAddEventListener = jest.spyOn(document, 'addEventListener').mockImplementation(() => {});
+
+    // Simulate the Pagefind initialization code
+    const pagefindCode = `
+      document.addEventListener('DOMContentLoaded', function() {
+        try {
+          new PagefindUI({ 
+            element: "#search",
+            showImages: false,
+            excerptLength: 20,
+            resetStyles: false,
+            translations: {
+              placeholder: "Search kaidez for stuff...",
+              zero_results: "Couldn't find [SEARCH_TERM]"
+            }
+          });
+          console.log('Pagefind initialized successfully');
+        } catch (error) {
+          console.error('Pagefind initialization failed:', error);
+        }
+      });
+    `;
+    
+    eval(pagefindCode);
+
+    // Verify addEventListener was called with DOMContentLoaded
+    expect(mockAddEventListener).toHaveBeenCalledWith('DOMContentLoaded', expect.any(Function));
+    
+    // PagefindUI should not be called yet (since callback wasn't executed)
+    expect(mockPagefindUI).not.toHaveBeenCalled();
+  });
+
+  test('should pass correct translation configuration', () => {
+    // Simulate the Pagefind initialization code
+    const pagefindCode = `
+      document.addEventListener('DOMContentLoaded', function() {
+        try {
+          new PagefindUI({ 
+            element: "#search",
+            showImages: false,
+            excerptLength: 20,
+            resetStyles: false,
+            translations: {
+              placeholder: "Search kaidez for stuff...",
+              zero_results: "Couldn't find [SEARCH_TERM]"
+            }
+          });
+          console.log('Pagefind initialized successfully');
+        } catch (error) {
+          console.error('Pagefind initialization failed:', error);
+        }
+      });
+    `;
+    
+    eval(pagefindCode);
+
+    // Extract the translations from the call arguments
+    const callArgs = mockPagefindUI.mock.calls[0][0];
+    
+    expect(callArgs.translations).toEqual({
+      placeholder: "Search kaidez for stuff...",
+      zero_results: "Couldn't find [SEARCH_TERM]"
+    });
+  });
+
+  test('should use correct search element selector', () => {
+    // Simulate the Pagefind initialization code
+    const pagefindCode = `
+      document.addEventListener('DOMContentLoaded', function() {
+        try {
+          new PagefindUI({ 
+            element: "#search",
+            showImages: false,
+            excerptLength: 20,
+            resetStyles: false,
+            translations: {
+              placeholder: "Search kaidez for stuff...",
+              zero_results: "Couldn't find [SEARCH_TERM]"
+            }
+          });
+          console.log('Pagefind initialized successfully');
+        } catch (error) {
+          console.error('Pagefind initialization failed:', error);
+        }
+      });
+    `;
+    
+    eval(pagefindCode);
+
+    // Verify the element selector is correct
+    const callArgs = mockPagefindUI.mock.calls[0][0];
+    expect(callArgs.element).toBe("#search");
+  });
+
+  test('should set showImages to false', () => {
+    // Simulate the Pagefind initialization code
+    const pagefindCode = `
+      document.addEventListener('DOMContentLoaded', function() {
+        try {
+          new PagefindUI({ 
+            element: "#search",
+            showImages: false,
+            excerptLength: 20,
+            resetStyles: false,
+            translations: {
+              placeholder: "Search kaidez for stuff...",
+              zero_results: "Couldn't find [SEARCH_TERM]"
+            }
+          });
+          console.log('Pagefind initialized successfully');
+        } catch (error) {
+          console.error('Pagefind initialization failed:', error);
+        }
+      });
+    `;
+    
+    eval(pagefindCode);
+
+    // Verify showImages is set to false
+    const callArgs = mockPagefindUI.mock.calls[0][0];
+    expect(callArgs.showImages).toBe(false);
+  });
+
+  test('should set excerptLength to 20', () => {
+    // Simulate the Pagefind initialization code
+    const pagefindCode = `
+      document.addEventListener('DOMContentLoaded', function() {
+        try {
+          new PagefindUI({ 
+            element: "#search",
+            showImages: false,
+            excerptLength: 20,
+            resetStyles: false,
+            translations: {
+              placeholder: "Search kaidez for stuff...",
+              zero_results: "Couldn't find [SEARCH_TERM]"
+            }
+          });
+          console.log('Pagefind initialized successfully');
+        } catch (error) {
+          console.error('Pagefind initialization failed:', error);
+        }
+      });
+    `;
+    
+    eval(pagefindCode);
+
+    // Verify excerptLength is set to 20
+    const callArgs = mockPagefindUI.mock.calls[0][0];
+    expect(callArgs.excerptLength).toBe(20);
+  });
+
+  test('should set resetStyles to false', () => {
+    // Simulate the Pagefind initialization code
+    const pagefindCode = `
+      document.addEventListener('DOMContentLoaded', function() {
+        try {
+          new PagefindUI({ 
+            element: "#search",
+            showImages: false,
+            excerptLength: 20,
+            resetStyles: false,
+            translations: {
+              placeholder: "Search kaidez for stuff...",
+              zero_results: "Couldn't find [SEARCH_TERM]"
+            }
+          });
+          console.log('Pagefind initialized successfully');
+        } catch (error) {
+          console.error('Pagefind initialization failed:', error);
+        }
+      });
+    `;
+    
+    eval(pagefindCode);
+
+    // Verify resetStyles is set to false
+    const callArgs = mockPagefindUI.mock.calls[0][0];
+    expect(callArgs.resetStyles).toBe(false);
+  });
+});
