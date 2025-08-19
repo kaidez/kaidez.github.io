@@ -55,7 +55,6 @@ permalink: "/personal/"
     </div>
     
     <!-- Check if no posts were found -->
-    {% set foundPersonalPosts = false %}
     {% for post in collections.posts %}
         {% if post.data.tags %}
             {% for tag in post.data.tags %}

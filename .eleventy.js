@@ -1,6 +1,5 @@
-// Updated .eleventy.js with Pagefind integration
-
 const moment = require("moment");
+const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 const { execSync } = require('child_process');
 
 module.exports = function(eleventyConfig) {
@@ -114,6 +113,14 @@ eleventyConfig.addCollection("codingBestPractices", function(collectionApi) {
       }
     }
   });
+
+  // XML Sitemap configuration
+  eleventyConfig.addPlugin(sitemap, {
+    sitemap: {
+      hostname: "https://kaidez.com",
+    },
+  });
+  
   
   return {
     templateFormats: [
