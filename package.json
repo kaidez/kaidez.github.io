@@ -1,7 +1,8 @@
 {
-  "name": "kaidez-.com",
-  "version": "1.0.0",
-  "description": "Modern 11ty blog for kaidez.com",
+  "name": "kaidez.com",
+  "version": "4.0.0",
+  "description": "Personal blog of Kai Gittens",
+  "repository": "https://github.com/kaidez/kaidez.github.io.git",
   "scripts": {
     "start": "eleventy --serve --port=8080",
     "build": "eleventy",
