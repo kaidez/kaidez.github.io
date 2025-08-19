@@ -55,27 +55,6 @@
 <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
 <script src="/pagefind/pagefind-ui.js"></script>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    try {
-        // Simple initialization
-        new PagefindUI({ 
-            element: "#search",
-            showImages: false,
-            excerptLength: 20,
-            resetStyles: false,
-            translations: {
-                placeholder: "Search kaidez for stuff...",
-                zero_results: "Couldn't find [SEARCH_TERM]"
-            }
-        });
-        console.log('Pagefind initialized successfully');
-    } catch (error) {
-        console.error('Pagefind initialization failed:', error);
-    }
-});
-</script>
-
 <style>
 /* Simple search styling */
 .search-container {
@@ -1949,9 +1928,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
         
-        <div class="footer-bottom">
-            <p>Built with <a href="https://11ty.dev" target="_blank" rel="noopener">11ty</a> and hosted on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>.</p>
-        </div>
+        <div class="footer-bottom"></div>
     </div>
 </footer>
 
