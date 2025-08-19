@@ -249,7 +249,7 @@ a:hover {
 
 /* Blog Posts */
 .posts-grid {
-  display: grid;
+  /* display: grid; */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--space-8);
   margin: var(--space-12) 0;
