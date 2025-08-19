@@ -4,8 +4,8 @@ layout: layouts/base.njk
 title:  "The “Head First” Duck Simulator In Typescript
 "
 date:   2016-03-31 22:07:59 -0400
-categories: coding-best-practices
-category: Coding Tips
+
+tags: ["coding-best-practices"]
 permalink: /typescript-duck-simulator/
 excerpt: TypeScript recreates the Duck Simulator/Strategy pattern described in the &quot;Head First Design Patterns&quot; book. With lots of resource links.
 # og-image: duck-simulator-image.jpg

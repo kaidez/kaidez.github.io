@@ -1,14 +1,14 @@
 ---
 title: "REVIEW: Effective JavaScript"
 
-author: Kai Gittens
+
 layout: layouts/base.njk
 excerpt: Excellent book that explains complicated JavaScript concepts like API design in painstaking clarity. Great for intermediate JS developers.
 permalink: /effective-javascript-review/
-categories: reviews
-cat-name: "Reviews"
+
+
 # og-image: effective-js.jpg
-tags: [review, javascript]
+tags: ["review"]
 ---
 *"It very well may be the best JavaScript book ever written...read it!"*
 

@@ -1,14 +1,11 @@
 ---
 title: 10 Things To Remember About HTML5 Video
-
-author: Kai Gittens
+excerpt: HTML5 Video Tips from kaidez
+date: 2011-01-19
 layout: layouts/base.njk
 permalink: /html5-video-tips-january-2011/
-excerpt: HTML5 Video Tips from kaidez
-categories: coding-best-practices
-category: Coding Tips
+tags: ["coding-best-practices"]
 # og-image: default-image.jpg
-tags: [html5, mobile]
 ---
 Setting up HTML5 video for [my recent Almay project][1] was certainly a learning experience (thanks to Max at image0 for the help during this part of the project). Here’s what I learned…and will *never* forget:
 

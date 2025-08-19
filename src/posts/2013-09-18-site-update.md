@@ -1,13 +1,10 @@
 ---
 title: "Where I've Been...Upcoming Site Update"
 
-author: Kai Gittens
 layout: layouts/base.njk
 permalink: /site-update/
 excerpt: A quick update about the status of kaidez.com, including the announcing of a new, upcoming site design.
-category: Personal
-category-name: "Personal"
-tags: [html5, kai]
+tags: ["personal"]
 # og-image: default-image.jpg
 ---
 

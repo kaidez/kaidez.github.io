@@ -3,7 +3,7 @@ layout: layouts/base.njk
 
 title:  "Click to Tweet Link Created Dynamically With JS"
 date:   2015-07-30 22:07:59 -0400
-category: Tutorials
+tags: ["tutorials"]
 permalink: /click-to-tweet-link/
 excerpt: Tutorial for dynamically creating a click to Tweet link with JavaScript and the window.location object…no hard-coding. With demos and code samples.
 # og-image: click-to-tweet-open-graph.jpg

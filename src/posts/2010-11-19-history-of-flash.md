@@ -1,13 +1,11 @@
 ---
 title: A Short History of Flash (how I saw it)
 
-author: Kai Gittens
 layout: layouts/base.njk
 excerpt: kaidez's view of Flash's evolution, rise and (somewhat) fall.
 permalink: /history-of-flash/
-category: Personal
-category-name: "Personal"
-tags: [flash, me]
+tags: ["personal"]
+
 # og-image: default-image.jpg
 ---
 One reason why I'm curious about HTML5 is because of Apple's issues with the Adobe Flash web animation program.

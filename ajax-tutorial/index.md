@@ -1,6 +1,6 @@
 ---
 title: AJAX Tutorial for Beginners
-author: Kai Gittens
+
 layout: page
 permalink: /ajax-tutorial/
 excerpt: "Learn how to write AJAX using both pure JavaScript as well as jQuery. Includes many code examples that can be downloaded."

@@ -1,14 +1,13 @@
 ---
 title: Media Queries Are Important
 
-author: Kai Gittens
+
 layout: layouts/base.njk
 excerpt: CSS3 media queries can help sites perform better in Google search results and the W3C officially recommends them as a web standard.
 permalink: /media-queries-important/
-categories: coding-best-practices
-category: Coding Tips
+
+tags: ["coding-best-practices"]
 # og-image: HP-media-queries.jpg
-tags: [css3, media queries, best practice]
 ---
 
 CSS3 media queries have become a hit in recent years thanks to the increased popularity of responsive web design, which [I’ve previously written about][1]. This popularity is set to increase even more thanks to recent actions by Google and the W3C.

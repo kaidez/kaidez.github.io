@@ -1,14 +1,11 @@
 ---
 title: 'TUTORIAL: A Simple jQuery Image Fade In/Fade Out With A Delay'
-
-author: Kai Gittens
+date: 2010-01-10
+excerpt: An easy jQuery tutorial to fade in and fade out two images with a delay
 layout: layouts/base.njk
 permalink: /tutorial-simple-jquery-fade-in-fade-out/
-excerpt: An easy jQuery tutorial to fade in and fade out two images with a delay
-category: Tutorials
-category-name: "Tutorials"
+tags: ["tutorials"]
 # og-image: default-image.jpg
-tags: [ajax, jquery, html5]
 redirect_from:
   - /tutorial-simple-jquery/
 ---

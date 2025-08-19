@@ -1,0 +1,56 @@
+---
+layout: layouts/base.njk
+title: "Tutorials"
+description: "Step-by-step tutorials and how-to guides"
+permalink: "/tutorials/"
+---
+
+<div class="container">
+    <header class="category-header">
+        <h1>Tutorials</h1>
+        <p class="category-description">
+            Step-by-step tutorials and comprehensive guides to help you learn new skills.
+        </p>
+    </header>
+    
+    <div class="posts-grid">
+        {% for post in collections.posts %}
+            {% if post.data.tags %}
+                {% set hasTutorialTag = false %}
+                {% for tag in post.data.tags %}
+                    {% if tag == "tutorials" %}
+                        {% set hasTutorialTag = true %}
+                    {% endif %}
+                {% endfor %}
+                
+                {% if hasTutorialTag %}
+                <article class="post-card">
+                    <h3>
+                        <a href="{{ post.url }}">{{ post.data.title }}</a>
+                    </h3>
+                    
+                    <div class="post-meta">
+                        <time datetime="{{ post.date | htmlDateString }}">
+                            {{ post.date | readableDate }}
+                        </time>
+                        
+                        <div class="post-tags">
+                            {% for tag in post.data.tags %}
+                            {% if tag != "posts" %}
+                            <span class="tag">#{{ tag }}</span>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    
+                    {% if post.data.excerpt %}
+                    <p class="post-excerpt">{{ post.data.excerpt }}</p>
+                    {% else %}
+                    <p class="post-excerpt">{{ post.templateContent | excerpt }}</p>
+                    {% endif %}
+                </article>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

@@ -1,14 +1,13 @@
 ---
 title: 'HTML5 Project: WIREFRAME SERIES #1 – HOME PAGE'
 
-author: Kai Gittens
+
 layout: layouts/base.njk
 permalink: /html5-project-series-1-homepage-wireframe/
 excerpt: Wireframes for the kaidez portfolio site of New York/Jersey City, N.J. based web designer, Kai Gittens, who also works at Revlon and Almay
-category: Personal
-category-name: "Personal"
+tags: ["personal"]
+
 # og-image: default-image.jpg
-tags: [html5]
 ---
 ***Read the entire “Wirefame Series”
 [Intro»][1]  Page 1»  [Page 2][2]»  [Page 3»][3]***

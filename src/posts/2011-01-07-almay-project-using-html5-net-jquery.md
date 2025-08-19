@@ -1,13 +1,12 @@
 ---
 title: New Almay Project I Worked On
 
-author: Kai Gittens
+
 layout: layouts/base.njk
 permalink: /almay-project-using-html5-net-jquery/
 excerpt: Kaidez developed four micro-sites for Almay using HTML5 video, jQuery, .NET and CSS
-category: Personal
-category-name: "Personal"
-tags: [almay, css, .NET]
+tags: ["personal"]
+
 # og-image: default-image.jpg
 ---
 [Almay][1], which is wholly-owned by [my employer][2], launched four new products this week:

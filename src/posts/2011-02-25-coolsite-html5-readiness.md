@@ -1,14 +1,11 @@
 ---
 title: HTML5 Readiness -  NEW COOLSITE!
-
-author: Kai Gittens
+date: 2011-02-25
+excerpt: HTML5 Readiness neatly displays browser support for HTML5 and CSS3
 layout: layouts/base.njk
 permalink: /coolsite-html5-readiness/
-excerpt: HTML5 Readiness neatly displays browser support for HTML5 and CSS3
-categories: coding-best-practices
-category: Coding Tips
+tags: ["coding-best-practices"]
 # og-image: default-image.jpg
-tags: [html5, css3]
 ---
 *Note: This site no longer includes a 'Coolsites' section.*
 

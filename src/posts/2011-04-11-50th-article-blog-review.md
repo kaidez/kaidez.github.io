@@ -1,13 +1,10 @@
 ---
 title: 'My 50th Article &#8211; A Retrospective!'
-
-author: Kai Gittens
-layout: layouts/base.njk
+date: 2011-04-11
 excerpt: kaidez reviews his progress with learning web development and how his blog is doing in terms of content, SEO and social network promotion
+layout: layouts/base.njk
 permalink: /50th-article-blog-review/
-category: Personal
-category-name: "Personal"
-tags: [css, html5, seo, kai]
+tags: ["personal"]
 # og-image: default-image.jpg
 ---
 

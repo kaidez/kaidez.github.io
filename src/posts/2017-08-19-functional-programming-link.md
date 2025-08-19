@@ -1,10 +1,10 @@
 ---
-layout: layouts/base.njk
 title:  "Setup Link Functionality with Functional Programming"
 date:   2017-08-19
-category: Tutorials
-permalink: /functional-programming-link/
 excerpt: Use JavaScript functional programming to set click-to-link functionality on a set of elements. Code sample has a basic webpack/Babel setup.
+layout: layouts/base.njk
+permalink: /functional-programming-link/
+tags: ["tutorials"]
 # og-image: functional-programming-react.jpg
 # thumb-image: functional-programming-react-thumb.jpg
 ---

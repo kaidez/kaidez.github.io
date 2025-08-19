@@ -1,14 +1,11 @@
 ---
 title: 'TUTORIAL: A Simple, Effective jQuery Image Rollover'
-
-author: Kai Gittens
+date: 2010-01-12
+excerpt: A very popular, cross-browser complaint jQuery image rollover
 layout: layouts/base.njk
 permalink: /tutorial-simple-effective-jquery-image-rollover/
-excerpt: A very popular, cross-browser complaint jQuery image rollover
-category: Tutorials
-category-name: "Tutorials"
+tags: ["tutorials"]
 # og-image: default-image.jpg
-tags: [ajax, jquery, html5]
 ---
 I used the following code to create the image rollovers for [the recent Almay project I worked on][1].
 

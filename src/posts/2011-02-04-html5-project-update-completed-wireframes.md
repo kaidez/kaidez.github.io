@@ -1,14 +1,13 @@
 ---
 title: 'HTML5 Project: WIREFRAME SERIES &#8211; INTRO'
 
-author: Kai Gittens
+
 layout: layouts/base.njk
 permalink: /html5-project-update-completed-wireframes/
 excerpt: HTML5 wireframe preview of kaidez.com portfolio site
-category: Personal
-category-name: "Personal"
+tags: ["personal"]
+
 # og-image: default-image.jpg
-tags: [html5]
 ---
 ***Read the entire “Wirefame Series”***
 *** Intro | [Page 1»][1] | [Page 2»][2] | [Page 3»][3]***

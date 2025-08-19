@@ -3,7 +3,7 @@ title: Welcome Back!!!!!!!!
 date: 2010-11-08
 excerpt: kaidez.com is no longer a blog that focuses on soccer/footie...it now focuses on web development.
 permalink: /welcome-back/
-category: Personal
+tags: ["personal"]
 layout: layouts/base.njk
 ---
 

@@ -30,9 +30,51 @@ module.exports = function(eleventyConfig) {
     return moment().format("MMMM Do, YYYY");
   });
   
-  // Add collection for blog posts
-  eleventyConfig.addCollection("posts", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/posts/*.md").reverse();
+// Add collection for blog posts
+eleventyConfig.addCollection("posts", function(collectionApi) {
+  return collectionApi.getFilteredByGlob("src/posts/*.md").reverse();
+});
+
+// Add collections for specific categories - SIMPLE VERSION
+eleventyConfig.addCollection("personal", function(collectionApi) {
+  return collectionApi.getAll().filter(function(item) {
+    return item.data.tags && item.data.tags.includes("personal");
+  });
+});
+
+eleventyConfig.addCollection("tutorials", function(collectionApi) {
+  return collectionApi.getAll().filter(function(item) {
+    return item.data.tags && item.data.tags.includes("tutorials");
+  });
+});
+
+eleventyConfig.addCollection("reviews", function(collectionApi) {
+  return collectionApi.getAll().filter(function(item) {
+    return item.data.tags && item.data.tags.includes("reviews");
+  });
+});
+
+eleventyConfig.addCollection("codingBestPractices", function(collectionApi) {
+  return collectionApi.getAll().filter(function(item) {
+    return item.data.tags && item.data.tags.includes("coding-best-practices");
+  });
+});
+  
+  eleventyConfig.addCollection("categories", function(collectionApi) {
+    const posts = collectionApi.getFilteredByTag("posts");
+    const categories = new Set();
+    
+    posts.forEach(post => {
+      if (post.data.tags) {
+        post.data.tags.forEach(tag => {
+          if (tag !== "posts") {
+            categories.add(tag);
+          }
+        });
+      }
+    });
+    
+    return Array.from(categories).sort();
   });
   
   // Add excerpt filter

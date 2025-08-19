@@ -1,13 +1,12 @@
 ---
 title: 'Web Components Demo: Templates and (some) Shadow DOM'
 
-author: Kai Gittens
+
 layout: layouts/base.njk
 permalink: /web-components-demo/
 excerpt: A Web Components demo using just templates and Shadow DOM, mostly templates. Post includes many links to Web Component learning resources.
-categories: coding-best-practices
-category: Coding Tips
-tags: [web components, shadow DOM, templates]
+
+tags: ["coding-best-practices"]
 # og-image: web-components-demo.jpg
 redirect_from:
   - web-components-demo/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+kaidez-blog+%28kaidez%29

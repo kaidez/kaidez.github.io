@@ -1,6 +1,6 @@
 ---
 title: 'kaidez courses on lynda.com'
-author: Kai Gittens
+
 layout: page
 permalink: /lynda-kaidez/
 excerpt: kaidez has recorded Ember.js and Backbone.js courses for lynda.com, a leading online learning company.

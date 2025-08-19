@@ -1,9 +1,8 @@
 ---
 layout: layouts/base.njk
-
 title:  "10 Tips for High School Students Wanting to be Web designers/Developers-2016 edition"
 date:   2016-07-12 22:07:59 -0400
-category: Personal
+tags: ["personal"]
 permalink: /high-school-student-web-tips-2016/
 excerpt: Tips for high schoolers wanting to be web designers/developers while looking at the state of technology education and hiring in 2016.
 # og-image: high-school-2016-image.jpg

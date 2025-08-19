@@ -1,13 +1,10 @@
 ---
 title: 2 HTML5 Resources I Like
-
-author: Kai Gittens
-layout: layouts/base.njk
+date: 2010-11-17
 excerpt: Great HTML5 learning resources
+layout: layouts/base.njk
 permalink: /html5-resources-nov-17-2010/
-categories: coding-best-practices
-category: Coding Tips
-tags: [html5, html5 video]
+tags: ["coding-best-practices"]
 # og-image: default-image.jpg
 ---
 ## Video For Everybody!

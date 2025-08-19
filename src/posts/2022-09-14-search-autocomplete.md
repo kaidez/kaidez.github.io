@@ -2,9 +2,9 @@
 title: 'Search Autocomplete Thing I Did'
 date: 2022-09-14
 excerpt: Quick thoughts on building a small search autocomplete tool. What I learned, what I liked and what I didn't like.
-permalink: /search-autocomplete/
-category: Personal
 layout: layouts/base.njk
+permalink: /search-autocomplete/
+tags: ["coding-best-practices"]
 ---
 
 My employer has a lot of acronyms for business terms that we use throughout the day. I created a proof-of-concept for an acronym search engine, with the goal of releasing it internally.

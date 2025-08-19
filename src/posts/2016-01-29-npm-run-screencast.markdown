@@ -1,11 +1,11 @@
 ---
 layout: layouts/base.njk
 
-title:  " SCREENCAST: Build Tasks With “npm run”
-"
+title:  "SCREENCAST: Build Tasks With 'npm run'
+
 date:   2016-01-29 22:07:59 -0400
-categories: coding-best-practices
-category: Coding Tips
+
+tags: ["coding-best-practices"]
 permalink: /npm-run-screencast/
 excerpt: Watch how I use “npm run” to run HTML, CSS and JavaScript build tasks. An alternative to using Grunt, Gulp and similar tools.
 # og-image: npm-run.jpg

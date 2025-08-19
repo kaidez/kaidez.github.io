@@ -1,14 +1,11 @@
 ---
 title: 'HTML5 Project: Boilerplate WordPress Theme'
-
-author: Kai Gittens
+date: 2011-03-07
 layout: layouts/base.njk
 permalink: /html5-project-boilerplate-theme-wordpress/
 excerpt: Walk-through of Aaron T. Grogg's excellent HTML5 Boilerplate-based WordPress theme. Includes a great admin screen for custom configuration.
-categories: coding-best-practices
-category: Coding Tips
+tags: ["coding-best-practices"]
 # og-image: default-image.jpg
-tags: [html5, wordpress]
 ---
 *IMPORTANT: This article discusses [the HTML5 Boilerplate template][1] and assumes that you have, at least, a basic understanding of its page layout. I will discuss the layout in a very roundabout way, not in depth. I STRONGLY suggest that you not only [read the HTML5 Boilerplate documentation][2], but also [watch the really good 40 minute walk-through video of the code][3].*
 

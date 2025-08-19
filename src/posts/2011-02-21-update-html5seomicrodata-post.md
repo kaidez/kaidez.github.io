@@ -1,14 +1,11 @@
 ---
 title: Update to My HTML5/SEO/Microdata Post
-
-author: Kai Gittens
+date: 2011-02-21
+excerpt: Oli Studholme from HTML5 Doctor corrects my previous post on HTML5, SEO and microdata
 layout: layouts/base.njk
 permalink: /update-html5seomicrodata-post/
-excerpt: Oli Studholme from HTML5 Doctor corrects my previous post on HTML5, SEO and microdata
-categories: coding-best-practices
-category: Coding Tips
+tags: ["coding-best-practices"]
 # og-image: default-image.jpg
-tags: [html5, review]
 ---
 
 I published a well-read article entitled “[“HTML5, SEO and Microdata”][1]” on January 28, 2011. [Oli Studholme][2] from [HTML5 Doctor][3] helped me understand and adjust the code.

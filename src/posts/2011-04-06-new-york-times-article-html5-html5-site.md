@@ -1,14 +1,11 @@
 ---
 title: "New York Times Article On HTML5: Their New HTML5 Site"
-
-author: Kai Gittens
-layout: layouts/base.njk
+date: 2011-04-06
 excerpt: A great New York Times piece on HTML5 application development and a demo of their new HTML5 Skimmer site
+layout: layouts/base.njk
 permalink: /new-york-times-article-html5-html5-site/
-categories: coding-best-practices
-category: Coding Tips
+tags: ["coding-best-practices"]
 # og-image: default-image.jpg
-tags: [html5, kai]
 ---
 The New York Times was hot stuff in the HTML5 sector of the Twitterverse over the March 26/27 weekend of 2011. Reason being, their [“HTML5 Is Breathing New Life Into the Web”][1] article and their new Skimmer site.
 

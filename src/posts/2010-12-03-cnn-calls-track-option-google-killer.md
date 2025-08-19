@@ -1,13 +1,12 @@
 ---
 title: 'CNN calls the do not track option a "Google killer"'
 
-author: Kai Gittens
+
 layout: layouts/base.njk
 permalink: /cnn-calls-track-option-google-killer/
 excerpt: Quick recap of CNN's article on the FTC's proposal of adding a do not track feature that consumers can use for internet browsing, short opinion included
-category: Personal
-category-name: "Personal"
-tags: [rant]
+tags: ["personal"]
+
 # og-image: default-image.jpg
 ---
 CNN wrote a pretty decent article yesterday on the FTC’s proposed “do not track” option. The government agency is calling for the creation of a web browser plug-in that allows endusers to block their information from being collected by third parties.

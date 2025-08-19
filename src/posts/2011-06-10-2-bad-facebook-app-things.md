@@ -1,14 +1,13 @@
 ---
 title: 2 Bad Things About the Facebook App Setup
 
-author: Kai Gittens
+
 permalink: /2-bad-facebook-app-things/
 layout: layouts/base.njk
 excerpt: Creating a Facebook app is easy but doing so generates CSS expressions and creates page reflows, all of which reduce page optimization
-categories: coding-best-practices
-category: Coding Tips
+
+tags: ["coding-best-practices"]
 # og-image: default-image.jpg
-tags: [almay, facebook, practice]
 ---
 #
 

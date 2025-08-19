@@ -1,14 +1,13 @@
 ---
 title: 'TUTORIAL: Remove Files From GitHub'
 
-author: Kai Gittens
+
 excerpt: Get quick answers first, then learn how Git works with GitHub. This post also has an excellent list of Git/GitHub learning links at the end.
 layout: layouts/base.njk
 permalink: /remove-files-from-github/
-category: Tutorials
-category-name: "Tutorials"
+tags: ["tutorials"]
+
 # og-image: gitTutorial.jpg
-tags: [git, github]
 ---
 
 If you've every tried to remove files from a [GitHub](http://github.com/ "Go to GitHub") repository by putting them in the Trash/Recycle Bin and then doing a `git push`, you know that this doesn't work.

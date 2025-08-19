@@ -1,12 +1,11 @@
 ---
 title: 'kaidez 2013 Site Redesign'
-author: Kai Gittens
+
 layout: layouts/base.njk
 permalink: /site-redesign-2013/
 excerpt: kaidez.com uses Jekyll as a blog engine, Grunt as a task runner, RequireJS for modular JavaScript management, & Bower for package management
-category: Personal
-category-name: "Personal"
-tags: [jekyll, bower, requirejs, grunt, amd]
+tags: ["personal"]
+
 # og-image: site-relaunch.jpg
 ---
 After over 2,000 Git commits, kaidez.com gets a long-overdue redesign. It was a struggle due to limited free time, but it was also a lot of fun and an excellent learning experience.

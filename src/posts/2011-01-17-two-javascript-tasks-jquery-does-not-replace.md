@@ -1,14 +1,11 @@
 ---
 title: Two JavaScript Tasks That jQuery Does Not Replace
-
-author: Kai Gittens
+date: 2011-02-17
+excerpt: Short article about how jQuery does not have a replacement for JavaScript's document.write and has a not-so-great replacement for its navigator.UserAgent
 layout: layouts/base.njk
 permalink: /two-javascript-tasks-jquery-does-not-replace/
-excerpt: Short article about how jQuery does not have a replacement for JavaScript's document.write and has a not-so-great replacement for its navigator.UserAgent
-categories: coding-best-practices
-category: Coding Tips
+tags: ["coding-best-practices"]
 # og-image: default-image.jpg
-tags: [jquery, javascript]
 ---
 While developing HTML5 video for [my recent Almay project][1], I discovered two widely-used JavaScript techniques that, as of now, have no firm jQuery replacement. This should serve as a reminder that, while many believe that jQuery replaces every single solitary JavaScript task, this is simply not true.
 

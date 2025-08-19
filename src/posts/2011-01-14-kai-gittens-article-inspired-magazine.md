@@ -1,14 +1,13 @@
 ---
 title: Read My Article At Inspired Magazine!!!
 
-author: Kai Gittens
+
 layout: layouts/base.njk
 permalink: /kai-gittens-article-inspired-magazine/
 excerpt: Kaidez guest post at Inspired Magazine responded to Cameron Chapman's web designer article at Smashing Magazine
-category: Personal
-category-name: "Personal"
+tags: ["personal"]
+
 # og-image: default-image.jpg
-tags: [kai]
 ---
 I’m proud to announce that ***my first guest post ever*** can now be seen at [Inspired Magazine][1]. Titled “*[5 Survival Tips For Web Designers][2]*,” it’s my take on a heavily-debated Smashing Magazine article from late last year!
 

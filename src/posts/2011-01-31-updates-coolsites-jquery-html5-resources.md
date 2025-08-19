@@ -1,14 +1,13 @@
 ---
 title: Updates To Coolsites and HTML5/jQuery Resources
 
-author: Kai Gittens
+
 layout: layouts/base.njk
 permalink: /updates-coolsites-jquery-html5-resources/
 excerpt: Additions to my list of resources to help you learn web design and development and my Coolsites list, including a Sitecore and .NET development blog
-category: Personal
-category-name: "Personal"
+tags: ["personal"]
+
 # og-image: default-image.jpg
-tags: [html5, sitecore, css3]
 ---
 *Note: This site no longer includes a 'Coolsites' section.*
 

@@ -3,7 +3,7 @@ layout: layouts/base.njk
 
 title: 'What I Learned About Finding A Front End Web Developer Job In 2017-UPDATED'
 date: 2017-03-08
-category: Personal
+tags: ["personal"]
 permalink: /front-end-web-developer-job-search/
 excerpt: Random notes on my past & present experiences in looking for a front end web developer job in 2017. Has tips for code bootcamp graduates looking for work.
 # og-image: web-dev-job.jpg

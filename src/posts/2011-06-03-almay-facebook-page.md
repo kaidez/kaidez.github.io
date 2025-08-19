@@ -1,13 +1,12 @@
 ---
 title: New Almay Facebook Page I Worked On
 
-author: Kai Gittens
+
 excerpt: kaidez developed Almay's Facebook What's New page following some best practices in terms of mobile web development.
 layout: layouts/base.njk
 permalink: /almay-facebook-page/
-category: Personal
-category-name: "Personal"
-tags: [mobile, almay, html5, facebook, kai]
+tags: ["personal"]
+
 # og-image: default-image.jpg
 ---
 

@@ -1,0 +1,75 @@
+---
+layout: layouts/base.njk
+title: "Personal"
+description: "Personal thoughts, experiences, and reflections"
+permalink: "/personal/"
+---
+
+<div class="container">
+    <header class="category-header">
+        <h1>Personal</h1>
+        <p class="category-description">
+            Personal thoughts, experiences, and reflections on life and career.
+        </p>
+    </header>
+    
+    <div class="posts-grid">
+        {% for post in collections.posts %}
+            {% if post.data.tags %}
+                {% set hasPersonalTag = false %}
+                {% for tag in post.data.tags %}
+                    {% if tag == "personal" %}
+                        {% set hasPersonalTag = true %}
+                    {% endif %}
+                {% endfor %}
+                
+                {% if hasPersonalTag %}
+                <article class="post-card">
+                    <h3>
+                        <a href="{{ post.url }}">{{ post.data.title }}</a>
+                    </h3>
+                    
+                    <div class="post-meta">
+                        <time datetime="{{ post.date | htmlDateString }}">
+                            {{ post.date | readableDate }}
+                        </time>
+                        
+                        <div class="post-tags">
+                            {% for tag in post.data.tags %}
+                            {% if tag != "posts" %}
+                            <span class="tag">#{{ tag }}</span>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    
+                    {% if post.data.excerpt %}
+                    <p class="post-excerpt">{{ post.data.excerpt }}</p>
+                    {% else %}
+                    <p class="post-excerpt">{{ post.templateContent | excerpt }}</p>
+                    {% endif %}
+                </article>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    </div>
+    
+    <!-- Check if no posts were found -->
+    {% set foundPersonalPosts = false %}
+    {% for post in collections.posts %}
+        {% if post.data.tags %}
+            {% for tag in post.data.tags %}
+                {% if tag == "personal" %}
+                    {% set foundPersonalPosts = true %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+    
+    {% if not foundPersonalPosts %}
+    <div class="no-posts">
+        <p>No personal posts yet. Check back soon!</p>
+        <a href="/" class="button">Back to Home</a>
+    </div>
+    {% endif %}
+</div>

@@ -1,14 +1,11 @@
 ---
 title: 10 Tips For High Schoolers Wanting To Be Web Designers Or Developers
-
-author: Kai Gittens
-layout: layouts/base.njk
+date: 2011-03-09
 excerpt: An extensive article with tips, resources and ideas for high school students wanting to work in the web design or development field someday
+layout: layouts/base.njk
 permalink: /10-tips-high-school-students-web-designers-web-developers/
-category: Personal
-category-name: "Personal"
+tags: ["personal"]
 # og-image: default-image.jpg
-tags: [javascript, conference, kai]
 ---
 I have to thank my father for getting me into computers. He sampled a lot of personal PCs in the early eighties, from the Kaypro to the Apple II…eventually settling on the Apple Macintosh (what we now call the Mac). I paid attention and followed his lead, resulting in the career that I have now.
 

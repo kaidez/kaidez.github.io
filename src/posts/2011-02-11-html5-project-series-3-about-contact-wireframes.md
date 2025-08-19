@@ -1,14 +1,13 @@
 ---
 title: 'HTML5 Project: WIREFRAME SERIES #3 –  ABOUT &#038; CONTACT PAGES'
 
-author: Kai Gittens
+
 layout: layouts/base.njk
 permalink: /html5-project-series-3-about-contact-wireframes/
 excerpt: Final article in the HTML5 wireframe series for the kaidez portfolio site
-category: Personal
-category-name: "Personal"
+tags: ["personal"]
+
 # og-image: default-image.jpg
-tags: [html5]
 ---
 
 ***Read the entire “Wirefame Series”

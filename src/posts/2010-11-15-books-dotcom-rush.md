@@ -1,12 +1,12 @@
 ---
 title: The Two Best Books On The Dot-com Rush
 
-author: Kai Gittens
+
 layout: layouts/base.njk
 permalink: /books-dotcom-rush/
 excerpt: Michael Lewis and Joseph Menn wrote to great books on the Dot-com Rush.
-categories: reviews
-cat-name: "Reviews"
+
+
 tags: [book, review]
 # og-image: default-image.jpg
 ---

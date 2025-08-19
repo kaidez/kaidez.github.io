@@ -1,14 +1,11 @@
 ---
 title: 'HTML5 Project Update: Changing To A Responsive Web Design Using CSS3 Media Queries'
-
-author: Kai Gittens
-layout: layouts/base.njk
+date: 2011-03-16
 excerpt: An article on responsive web design, CSS3 media queries and using it in kaidez's HTML5 Project, resource list of links at the end
+layout: layouts/base.njk
 permalink: /html5-project-update-responsive-web-design/
-categories: coding-best-practices
-category: Coding Tips
+tags: ["coding-best-practices"]
 # og-image: default-image.jpg
-tags: [rwd, html5, media queries]
 ---
 In 2005, Jesse James Garrett wrote [an excellent article describing and coining the term “Ajax.”][1] He demonstrated Ajax as a method of using multiple web programming languages to neatly load content onto a web page *without* actually refreshing the page.
 

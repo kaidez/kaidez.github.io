@@ -1,14 +1,12 @@
 ---
 title: 'WordPress & WebMatrix'
 
-author: Kai Gittens
+
 layout: layouts/base.njk
 permalink: /wordpress-webmatrix/
 excerpt: Using WebMatrix to create a WordPress development site
-categories: coding-best-practices
-category: Coding Tips
 # og-image: default-image.jpg
-tags: [wordpress]
+tags: ["coding-best-practices"]
 ---
 <em><a href="http://www.microsoft.com/web/webmatrix/">Update: Microsoft now recommends Visual Studio Code over Web Matrix</a></em>
 

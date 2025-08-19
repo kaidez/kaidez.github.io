@@ -3,7 +3,7 @@ layout: layouts/base.njk
 
 title:  "kaidez 2015 site redesign"
 date:   2015-11-20 22:07:59 -0400
-category: Personal
+tags: ["personal"]
 permalink: /site-redesign-2015/
 excerpt: kaidez.com uses underscores to create a custom Swiss-style Wordpress theme for his blog’s new design. webpack and gulp manage the JS/CSS build process.
 # og-image: 2015-site-redesign.jpg

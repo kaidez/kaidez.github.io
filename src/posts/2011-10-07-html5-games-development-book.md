@@ -1,14 +1,14 @@
 ---
 title: 'REVIEW: HTML5 Games Development by Example: Beginner’s Guide'
 
-author: Kai Gittens
+
 layout: layouts/base.njk
 permalink: /html5-games-development-book/
 excerpt: Great book for learning HTML5 games development as well as web development best practices. Discusses offline storage, Canvas, node.js & more!
-categories: reviews
-cat-name: "Reviews"
+
+
 # og-image: default-image.jpg
-tags: [book, review, beginner]
+tags: ["reviews"]
 ---
 
 No doubt about it: the demand for HTML5 games is high and will only get higher. Game development has always been a lucrative skillset to possess and thanks to HTML5, web-based game development is a bit easier.

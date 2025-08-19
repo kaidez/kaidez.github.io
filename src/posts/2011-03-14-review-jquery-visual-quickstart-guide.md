@@ -1,14 +1,11 @@
 ---
 title: 'REVIEW: jQuery: Visual Quickstart Guide'
-
-author: Kai Gittens
-layout: layouts/base.njk
+date: 2011-03-14
 excerpt: "A negative review of Peachpit Press' jQuery: Visual Quickstart Guide, but it doesn't take away from the fact that the VQS Series is great"
+layout: layouts/base.njk
 permalink: /review-jquery-visual-quickstart-guide/
-categories: reviews
-cat-name: "Reviews"
+tags: ["reviews"]
 # og-image: default-image.jpg
-tags: [jquery, review, book]
 ---
 
 An unspoken rule of mine is to NOT give any products a bad review. I’ve tried to adopt an attitude of, “If you don’t have anything nice to say, don’t say anything at all.” But in the case of ***Peachpit Press’s jQuery: Visual Quickstart Guide***, I have to make an unfortunate exception.

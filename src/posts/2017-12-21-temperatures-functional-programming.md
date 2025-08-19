@@ -1,11 +1,10 @@
 ---
-layout: layouts/base.njk
 title:  "Display Temperature Averages with JavaScript Functional Programming"
 date:   2017-12-21
-category: Tutorials
-category-name: Tutorials
-permalink: /temperatures-functional-programming/
 excerpt: Use JavaScript functional programming to display average temperatures in certain cities. Uses the .map() & .reduce() methods. Includes demo.
+layout: layouts/base.njk
+permalink: /temperatures-functional-programming/
+tags: ["tutorials"]
 # og-image: temperature-functional-programming.jpg
 # thumb-image: temperature-functional-programming-thumb.jpg
 ---

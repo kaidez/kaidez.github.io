@@ -1,13 +1,11 @@
 ---
 title: "I'm Focusing On .NET C#"
 
-author: Kai Gittens
 layout: layouts/base.njk
 excerpt: kaidez lays out a plan on how he'll learn .NET/C#.
 permalink: /learning-microsoft-dot-net-c-sharp/
-category: Personal
-category-name: "Personal"
-tags: [kai, C#, .NET]
+tags: ["personal"]
+
 # og-image: default-image.jpg
 ---
 [My premier post][1] included a list of skills that I needed to improve upon for may day job. I’m not changing the list but I’m attacking it in a more organized way.

@@ -3,7 +3,7 @@ layout: layouts/base.njk
 
 title:  "Write Code Every F–king Day!"
 date:   2015-06-15 22:07:59 -0400
-category: Personal
+tags: ["personal"]
 permalink: /write-code-every-f-king-day/
 excerpt: The best way to learn web development is to try and write at least one piece of code a day, especially if the code is JavaScript.
 # og-image: git-contrib-map.jpg

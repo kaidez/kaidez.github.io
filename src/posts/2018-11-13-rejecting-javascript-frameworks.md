@@ -1,11 +1,10 @@
 ---
-layout: layouts/base.njk
 title:  "JavaScript Developers...Stop HATING Frameworks!!!"
 date:   2018-11-13
-categories: coding-best-practices
-category: Coding Tips
-permalink: /rejecting-javascript-frameworks/
 excerpt: JavaScript developers can avoid using frameworks and libraries if the have to, but too many developers avoid them for the wrong reasons.
+layout: layouts/base.njk
+permalink: /rejecting-javascript-frameworks/
+tags: ["coding-best-practices"]
 # og-image: js-framework-library.jpg
 # thumb-image: js-framework-library-thumb.jpg
 ---

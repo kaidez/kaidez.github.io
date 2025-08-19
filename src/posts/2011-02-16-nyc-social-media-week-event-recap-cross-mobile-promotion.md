@@ -1,12 +1,12 @@
 ---
 title: Social Media Week/NYC Recap – MOBILE PROMOTION PANEL
 
-author: Kai Gittens
+
 layout: layouts/base.njk
 permalink: /nyc-social-media-week-event-recap-cross-mobile-promotion/
 excerpt: The cross mobile promotion panel at NY Social Media Week used Nielsen and comScore stats to show how brands use mobile to promote products
-categories: reviews
-cat-name: "Reviews"
+
+
 # og-image: default-image.jpg
 tags: [mobile, review]
 ---

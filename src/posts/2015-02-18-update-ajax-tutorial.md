@@ -1,14 +1,13 @@
 ---
 title: "AJAX Tutorial Update"
 
-author: Kai Gittens
+
 layout: layouts/base.njk
 excerpt: kaidez's old AJAX tutorial was updated. jQuery AJAX is discussed in depth and there's a short discussion on JavaScript Promises.
 permalink: /update-ajax-tutorial/
-category: Personal
-category-name: "Personal"
+tags: ["personal"]
+
 # og-image: ajax-image.jpg
-tags: [ajax, javascript, kaidez]
 ---
 Happy 10th Birthday AJAX!!!!
 

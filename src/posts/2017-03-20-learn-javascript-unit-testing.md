@@ -2,8 +2,8 @@
 layout: layouts/base.njk
 title:  "Want to Learn Javascript Unit Testing? Learn Functional Programming First!"
 date:   2017-03-20
-categories: coding-best-practices
-category: Coding Tips
+
+tags: ["coding-best-practices"]
 permalink: /learn-javascript-unit-testing/
 excerpt: Learn JavaScript unit testing by creating smaller functions with functional programming & testing them with QUnit. Lots of learning resources links.
 # og-image: learn-javascript-unit-testing.jpg
