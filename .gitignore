@@ -1,12 +1,8 @@
 _site
-.sass-cache
-.jekyll-metadata
 node_modules/
-yarn.lock
 .DS_Store
 .vscode/
 package-lock.json
 .bundle/
-vendor/
 coverage
 _drafts
