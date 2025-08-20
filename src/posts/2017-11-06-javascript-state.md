@@ -15,7 +15,7 @@ Complain or not, JS has progressed to the point that developers need to understa
 <h3>In The Beginning...</h3>
 This is the first JavaScript book I ever bought:
 
-<img src="/img/js-book.jpg" class="post__image">
+<img src="/assets/img/js-book.jpg" class="post__image">
 
 It was published by Dori Smith and the late, (very) great Tom Negrino. I don't use it as a reference anymore, but keep it for sentimental reasons.
 
@@ -143,7 +143,7 @@ And when you see that <a href="https://www.theregister.co.uk/2017/04/24/stanford
   It’s getting real complicated. A background in computer science lays a lot of the groundwork so that you’re not making stupid mistakes and taking four months to learn how you should have done things. Yeah, computer science has a big influence on where the trajectory of front-end development is going, for sure.
   </p>
   <div>
-    <img src="/img/paul-irish-photo.jpg" alt="Paul Irish" style="border-radius: 16px;">
+    <img src="/assets/img/paul-irish-photo.jpg" alt="Paul Irish" style="border-radius: 16px;">
     <p style="margin-bottom: 0">-Paul Irish</p>
     <p>
       <a href="http://blog.teamtreehouse.com/treehouse-friends-paul-irish" style="font-size: 14px;">Source</a>

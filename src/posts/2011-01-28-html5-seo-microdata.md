@@ -73,7 +73,7 @@ Let’s breakdown the code…
   * For every piece of data within the `&lt;section>&gt; tag (name, address, etc.) an itemprop attribute needs to be applied to it. Look at the code and copy it like I did in terms of assign values.
   * All the data is then sent to Google and if it comes up in their search results, it will look like this:
 
-<img src="/img/microdataSample.png" />
+<img src="/assets/img/microdataSample.png" />
 
 If you need more proof of this result, see what information comes back when my test page is plugged into [Google’s Rich Snippets Testing Tool](http://www.google.com/webmasters/tools/richsnippets?url=http%3A%2F%2Fkaidez.com%2Fwp-content%2Fthemes%2Fkaidez%2FkaidezUnique%2FScript%2FmicrodataTest.html&view==).
 

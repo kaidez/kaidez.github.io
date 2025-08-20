@@ -44,7 +44,7 @@ The array of arrays looked like this:
 </code></pre>
 
 I had to calculate the average temperature for each city, then run code that displayed the array data like this:
-<img src="/img/temperature-display.jpg" class="post__image">
+<img src="/assets/img/temperature-display.jpg" class="post__image">
 There were a few challenges here:
 <ul>
   <li class="post__list-item">How do I look at <em>just</em> the numbers in the array to get the average?</li>

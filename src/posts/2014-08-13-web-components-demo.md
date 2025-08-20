@@ -283,11 +283,11 @@ From there, we're treating the `root` as a parent element and appending (i.e., "
 
 And if we review index.html in Chrome 36 or higher with the "Show user agent shadow DOM" box checked, it should look (almost) like the demo. And if we then do an "Inspect Element" check and look in the `<section>` tag (which is the shadow host), you'll see the template content (which is the shadow root).
 
-<img src="/img/shadow-root.png" class="imgBorderMaxWidth" alt="The shadow host in the shadow root">
+<img src="/assets/img/shadow-root.png" class="imgBorderMaxWidth" alt="The shadow host in the shadow root">
 
 But there's a problem: Bootstrap styles that are applied to certain elements inside of `<template>` are being ignored.  Anything class names containing the word `panel` or `btn` should have well-recognized Bootstrap styles, especially the buttons...
 
-<img src="/img/pageScreenshot.jpg" class="imgBorderMaxWidth" alt="homepage screenshot with no Bootstrap styling">
+<img src="/assets/img/pageScreenshot.jpg" class="imgBorderMaxWidth" alt="homepage screenshot with no Bootstrap styling">
 
 This is happening because, as mentioned above, the code inside the template can't communicate with any outside code and, technically speaking, `<template>` is in the Shadow DOM, which is naturally-encapsulated. So none of the page's three stylesheets (`normalize.min.css`, `bootstrap.min.css` and `styles.css`) can affect the template's layout. And for now, adding stylesheets to the Shadow DOM with `<link>` isn't allowed.
 
@@ -306,7 +306,7 @@ Using `@import` is frowned upon from a performance standpoint, but it's how this
 
 But there's another problem: by doing deep clones of template content at each loop iteration, the style tag is getting added four times when it really only needs to be added once.
 
-<img src="/img/shadow-root-02.png" class="imgBorderMaxWidth" alt="The shadow host in the shadow root">
+<img src="/assets/img/shadow-root-02.png" class="imgBorderMaxWidth" alt="The shadow host in the shadow root">
 
 ### Adjust the loop
 This can be fixed by changing the loop procedure: every time the loop runs, deep-copy <em>just</em> the article tag by referring to its "templateArticle" class, then append it to the section tag. Leave the loop after it's ended, then append the style tag to section, which is the shadow host.
@@ -334,7 +334,7 @@ This requires changing the end of the JavaScript from this...
 
 And now there's only one style tag inside the shadow root and it's properly applying the styles.
 
-<img src="/img/shadow-root-03.png" class="imgBorderMaxWidth" alt="The shadow host in the shadow root">
+<img src="/assets/img/shadow-root-03.png" class="imgBorderMaxWidth" alt="The shadow host in the shadow root">
 
 Because `<style>` gets added to `<section>` with `appendChild()`, it gets placed at the bottom.  Were this live production code, I would (probably) use something like `jQuery.prepend()` to place it at the top.
 

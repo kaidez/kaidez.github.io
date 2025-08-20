@@ -11,4 +11,4 @@ jQuery T-shirt...how cool am I? All my friends know I like t-shirts so no one sh
 
 You can get yours [here](http://devswag.com/products/classic-jquery-tshirt).
 
-<img src="/img/jqueryShirt.jpg" class="post-pic" />
+<img src="/assets/img/jqueryShirt.jpg" class="post-pic" />

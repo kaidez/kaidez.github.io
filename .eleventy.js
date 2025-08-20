@@ -28,6 +28,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("dateReformat", () => {
     return moment().format("MMMM Do, YYYY");
   });
+
+  eleventyConfig.addPassthroughCopy("src/assets/img"); 
   
 // Add collection for blog posts
 eleventyConfig.addCollection("posts", function(collectionApi) {

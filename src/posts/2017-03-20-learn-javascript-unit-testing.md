@@ -266,7 +266,7 @@ For the next assertion, we are:
 <a name="see-if-tests-failed"></a>
 <h3>See if the tests failed</h3>
 Our QUnit test suite shows failing tests when we load <code>test/tests.html</code> in a browser...
-<img src="/img/unit-testing-image-01.jpg" alt="First failing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+<img src="/assets/img/unit-testing-image-01.jpg" alt="First failing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
 First failing test image for the learn JavaScript unit testing post
 We can make the test pass by adding James’ original log() code to app.js. And note the ES5 "use strict" statement: it will be important later on..
 
@@ -281,7 +281,7 @@ var log = function(someVariable) {
 }
 </code></pre>
 ...and we’ll see that both tests pass when we go back to our test suite and click on the description.
-<img src="/img/unit-testing-image-02.jpg" alt="First passing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+<img src="/assets/img/unit-testing-image-02.jpg" alt="First passing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
 And if we run <code>log()</code> in <code>scripts.js</code>, a console message will appear when we go to our web page:
 <pre><code class="language-javascript">
 // scripts.js
@@ -333,7 +333,7 @@ Like before, we create a failing QUnit test with a description and a callback th
 Next, we test if either a function or an ES6 Symbol is being passed. <a href="https://github.com/kaidez/functional-programming-unit-testing">This post’s source code</a> also tests for numbers, arrays, objects, Booleans and regular expressions....I left them out here to keep things more readable.
 
 This produces failing tests:
-<img src="/img/unit-testing-image-03.jpg" alt="Second failing test image for the learn JavaScript unit testing post post" class="post__image" style="float: none; margin-top: 10px;">
+<img src="/assets/img/unit-testing-image-03.jpg" alt="Second failing test image for the learn JavaScript unit testing post post" class="post__image" style="float: none; margin-top: 10px;">
 The tests pass when in true TDD form, we refactor <code>log()</code>:
 <pre><code class="language-javascript">
 // app.js
@@ -348,7 +348,7 @@ var log = function(someVariable) {
 };
 </code></pre>
 And we go back and check our tests...
-<img src="/img/unit-testing-image-04.jpg" alt="Second passing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+<img src="/assets/img/unit-testing-image-04.jpg" alt="Second passing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
 The test suite confirms that <code>log()</code> throws errors when its parameter is not a string with at least one character. So if we update the <code>log()</code> call in <code>scripts.js</code> to look like this...
 <pre><code class="language-javascript">
 // scripts.js
@@ -396,7 +396,7 @@ We’re using jQuery <code>$.isFunction()</code> to check if the passed paramete
 
 The Blanket.js interface will appear: click on the link to <code>app.js</code> to see how much code is getting coverage:
 
-<img src="/img/unit-testing-image-05.jpg" alt="Code coverage image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+<img src="/assets/img/unit-testing-image-05.jpg" alt="Code coverage image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
 
 Whatever’s highlighted in green is being tested whatever’s highlighted in red is not. And as we see, <code>doSomething()</code> isn’t being test at all.
 
@@ -415,7 +415,7 @@ We can add the following to the bottom of the <code>script</code> tag in our tes
 </code></pre>
 And if we look at the test suite coverage info, we see we’re testing more code that passes unit tests.
 
-<img src="/img/unit-testing-image-06.jpg" alt="Second code coverage image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+<img src="/assets/img/unit-testing-image-06.jpg" alt="Second code coverage image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
 
 We’re not testing if our type-checking works like we did for the <code>log()</code> function. We can fix this by adding type checks again at the bottom of the test suite’s <code>script</code> tag:
 <pre><code class="language-markup">
@@ -460,7 +460,7 @@ We’re not testing if our type-checking works like we did for the <code>log()</
 
 The tests pass with 100% code coverage:
 
-<img src="/img/unit-testing-image-07.jpg" alt="Third code coverage image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+<img src="/assets/img/unit-testing-image-07.jpg" alt="Third code coverage image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
 
 We can now implement James’ final code for this at the bottom of <code>scripts.js</code>:
 <pre><code class="language-javascript">
@@ -524,7 +524,7 @@ Also, take note that we’re using the <code>new</code> keyword in our assertion
 Doing strict mode and <em>not</em> using <code>new</code> like this in your tests leads to bugs, so be sure to always use new in these cases. Read <a href="https://stackoverflow.com/questions/42459449/qunit-returns-error-in-strict-mode/42460436">the answer to the Stack Overflow question I asked about this</a> to learn more.
 
 We’ll confirm that the test fails...
-<img src="/img/unit-testing-image-08.jpg" alt="Carousel failing image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+<img src="/assets/img/unit-testing-image-08.jpg" alt="Carousel failing image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
 
 And add the following code to <code>app.js</code>:
 
@@ -549,7 +549,7 @@ But we’re still expecting the <code>getElement</code> parameter: otherwise, ou
 
 The test passes now. But our code coverage indicates that we didn’t test our thrown error functionality:
 
-<img src="/img/unit-testing-image-09.jpg" alt="First carousel code coverage image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+<img src="/assets/img/unit-testing-image-09.jpg" alt="First carousel code coverage image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
 
 So we add this test:
 <pre><code class="language-markup">
@@ -566,7 +566,7 @@ So we add this test:
 &lt;/script&gt;
 </code></pre>
 And we get 100% coverage on our tests:
-<img src="/img/unit-testing-image-10.jpg" alt="Second carousel code coverage image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+<img src="/assets/img/unit-testing-image-10.jpg" alt="Second carousel code coverage image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
 Adding a carousel without parameters to the bottom of <code>scripts.js</code> consequently produces a console error when <code>index.html</code> runs in the browser:
 <pre><code class="language-javascript">
 // scripts.js
@@ -623,7 +623,7 @@ We don’t need to pass a number for the <code>spinDuration</code> parameter. We
 <code>init()</code> should place a custom message in <code><div id="qunit-fixture" /></code> that says <code>"The qunit-fixture carousel has started."</code>. Then we’ll use jQuery’s <code>html()</code> function to look in the qunit-fixture and see if its copy matches our message.
 
 If the copy matches, our QUnit test will say <code>"a slider was returned!"</code> But for now, we have a failing test:
-<img src="/img/unit-testing-image-11.jpg" alt="Init failing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+<img src="/assets/img/unit-testing-image-11.jpg" alt="Init failing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
 
 Adding this code to the bottom of app.js will get things to work:
 <pre><code class="language-javascript">
@@ -639,7 +639,7 @@ We’ve followed JavaScript best practices and placed init() on Carousel‘s pro
 Next, init() takes the value of this.element and uses it to build a custom message. The message gets loaded into whatever element getCarousel points to.
 
 As a result, our unit test passes with 100% code coverage:
-<img src="/img/unit-testing-image-12.jpg" alt="Init passing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+<img src="/assets/img/unit-testing-image-12.jpg" alt="Init passing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
 And if we run <code>init()</code> two times at the bottom of <code>scripts.js</code>...
 
 <pre><code class="language-javascript">
@@ -676,7 +676,7 @@ We’re testing with <code>assert.ok()</code> again. The test has a description 
 </ul>
 
 So we have a failing test right now...
-<img src="/img/unit-testing-image-13.jpg" alt="initialiseCarousel failing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+<img src="/assets/img/unit-testing-image-13.jpg" alt="initialiseCarousel failing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
 
 Then we get to pass by adding James’ original to <code>app.js</code>...
 
@@ -691,7 +691,7 @@ function initialiseCarousel(id, frequency) {
 }
 </code></pre>
 And the test passes...
-<img src="/img/unit-testing-image-14.jpg" alt="initialiseCarousel passing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+<img src="/assets/img/unit-testing-image-14.jpg" alt="initialiseCarousel passing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
 
 And since our tests confirm that a new <code>Carousel()</code> instance exists and we’re explicitly returning that instance (<code>slider</code>), we can agree that our test is accurate.
 
@@ -785,7 +785,7 @@ Each test passes an effect to <code>addMagic</code> as a parameter. Since each e
 This time though, we’re wrapping all these tests inside <code>QUnit.module()</code>. This groups these three tests and makes them stand out a little in our test suite, which is a bit more readable.
 
 So, we have our failing tests now...
-<img src="/img/unit-testing-image-15.jpg" alt="addMagic failing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+<img src="/assets/img/unit-testing-image-15.jpg" alt="addMagic failing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
 
 Adding this code to <code>app.js</code> makes the tests pass...
 <pre><code class="language-javascript">
@@ -818,11 +818,11 @@ We’ve slightly adjusted <code>addMagic()</code> where it throws an error if ei
 Next, we create our three very simple effect functions. Again, they just load some text in whatever page element is defined by their <code>getElement</code> parameters.
 
 We look at our test suite, including the code coverage..
-<img src="/img/unit-testing-image-16.jpg" alt="First addMagic code coverage test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+<img src="/assets/img/unit-testing-image-16.jpg" alt="First addMagic code coverage test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
 First addMagic code coverage test image for the learn JavaScript unit testing post
 
 And we see that the tests pass, but not with 100% code coverage.
-<img src="/img/unit-testing-image-17.jpg" alt="Second addMagic code coverage test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+<img src="/assets/img/unit-testing-image-17.jpg" alt="Second addMagic code coverage test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
 This is due to our not testing <code>addMagic</code>‘s error throwing functionality. Adding a couple of <code>assert.throws()</code> tests will fix this...
 
 <pre><code class="language-markup">
@@ -845,7 +845,7 @@ This is due to our not testing <code>addMagic</code>‘s error throwing function
 
 And looking at our test suite and code coverage confirms this. Note that the grouped “addMagic() effect tests” are moved below these new tests even though the grouped tests are above them in the suite code.
 
-<img src="/img/unit-testing-image-18.jpg" alt="Second addMagic throw error test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+<img src="/assets/img/unit-testing-image-18.jpg" alt="Second addMagic throw error test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
 
 So we can add this code to <code>scripts.js</code>...
 

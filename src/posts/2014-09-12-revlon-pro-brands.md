@@ -31,17 +31,17 @@ Here are a few of the tasks...
 
 * Atom can read a project's `.gitignore` file  and tell you which files are ignored by greying them out in your project tree.
 <figure class="postFigure">
-  <img src="/img/atom_01.jpg" class="imgBorder" alt="Screenshot of how gitignore works with Atom">
+  <img src="/assets/img/atom_01.jpg" class="imgBorder" alt="Screenshot of how gitignore works with Atom">
   <figcaption class="postFigureCaption">Greyed-out files are in .gitignore</figcaption>
 </figure>
 * Atom tells you what branch you're currently working on.
 <figure class="postFigure">
-  <img src="/img/atom_02.jpg" class="imgBorder" alt="Screenshot of how Atom tracks your current Git branch">
+  <img src="/assets/img/atom_02.jpg" class="imgBorder" alt="Screenshot of how Atom tracks your current Git branch">
   <figcaption class="postFigureCaption">Current Git branch appears in the bottom-left corner of your editor</figcaption>
 </figure>
 * Atom uses color-coding to indicate that files need to be commited to your git repo.
 <figure class="postFigure">
-  <img src="/img/atom_03.jpg" class="imgBorder" alt="Screenshot of how Atom tracks your current Git branch">
+  <img src="/assets/img/atom_03.jpg" class="imgBorder" alt="Screenshot of how Atom tracks your current Git branch">
   <figcaption class="postFigureCaption">Orange indicates that an already-existing file has been updated while green indicates that a new file has been added to the project, but hasn't been committed yet</figcaption>
 </figure>
 

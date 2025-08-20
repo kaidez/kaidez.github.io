@@ -46,7 +46,7 @@ First, let’s look at all these pages…
 Now, let’s break it all down…
 
 ## The Main Work Page
-<img src="/img/Work.jpg" />
+<img src="/assets/img/Work.jpg" />
 This page was laid out using methods discussed in great detail [in my last article](/html5-project-series-1-homepage-wireframe/) whereI discuss  tags and  &  tags. So I’m just going to skim over this page’s explanation:
 
 *   While the HTML5 specification (from here on referred to as *the spec*) encourages you to use  as little as possible, it’s fine to use it if it’s your only option. I needed to wrap and position three  tags ***which were not related to each other***, so  was my only option. [*Read where I discuss  use in greater detail »*][12]
@@ -74,7 +74,7 @@ Based on the location of the  tag, it’s tempting to treat it like a traditiona
 
 ## Niko’s Playlist Page
 
-<img src="/img/Playlist.jpg" />
+<img src="/assets/img/Playlist.jpg" />
 
 ***Read the entire “Wirefame Series”:
 [Intro»][1] | [Page 1»][2] | Page 2» | [Page 3»][3]***

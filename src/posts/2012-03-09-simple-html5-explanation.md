@@ -49,7 +49,7 @@ Expanding on this definition, the four key things to know about HTML5 are:
 *   it allows for the creation of more robust *web applications.*
 *   it allows for top-notch *mobile web development.*
 *   creating websites and web applications with HTML5 is a best practice but, in all honesty, not a requirement.
-<img src="/img/HTML5_Logo.png" alt="A Simple Explanation of HTML5" class="post-pic" style="margin-top:20px; float: right">
+<img src="/assets/img/HTML5_Logo.png" alt="A Simple Explanation of HTML5" class="post-pic" style="margin-top:20px; float: right">
 <h2 id="Where-Did-HTML5-Come-From">Where Did HTML5 Come From?</h2>
 
 Created in 1990, HTML has always been a programming language that creates a website’s basic structure. To build a website, HTML “frames” it first, then things like copy and images are added to complete the job.
