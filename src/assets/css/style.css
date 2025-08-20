@@ -218,6 +218,10 @@ svg {
   text-decoration: none;
 }
 
+.site-nav {
+      width: 505px;
+}
+
 /* Navigation */
 .site-nav ul {
   display: flex;
@@ -385,7 +389,7 @@ svg {
   color: white;
   font-style: italic;
   font-weight: 900;
-  width: 200px;
+  width: 210px;
   font-size: var(--text-2xl);
   font-style: italic;
   font-family: var(--font-family-kaidez-primary-font)
