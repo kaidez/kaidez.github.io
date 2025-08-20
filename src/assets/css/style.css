@@ -183,6 +183,8 @@ a:hover {
   top: 0;
   z-index: 100;
   backdrop-filter: blur(10px);
+  height: var(--header-height);
+  overflow: visible;
 }
 
 .header-content {
@@ -192,6 +194,18 @@ a:hover {
   gap: var(--space-6);
   height: var(--header-height);
   /* padding: var(--space-4) 0; */
+}
+
+/* Ensure header search doesn't cause layout issues */
+.header-content .header-search {
+  position: static;
+  overflow: visible;
+}
+
+/* Ensure header search doesn't expand header */
+.header-search {
+  position: relative;
+  overflow: visible;
 }
 
 .header-content--hidden-text {
