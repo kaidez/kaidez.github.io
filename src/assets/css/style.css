@@ -81,7 +81,9 @@
   --color-kaidez-card-link: #B34E56;
   --color-kaidez-supreme-red: #ED1C24;
   --color-kaidez-footer-bg: #BC647C;
+  --font-family-kaidez-primary-font: "Jost", sans-serif;
   --font-family-kaidez-secondary-font: "Courier New", Courier, monospace;
+  
 }
 
 /* Dark mode colors */
@@ -384,6 +386,8 @@ svg {
   font-weight: 900;
   width: 200px;
   font-size: var(--text-2xl);
+  font-style: italic;
+  font-family: var(--font-family-kaidez-primary-font)
 }
 /* Category Pages Styling */
 
