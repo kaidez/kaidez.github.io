@@ -370,11 +370,12 @@ svg {
 
 /* Footer */
 .site-footer {
-  background: var(--color-kaidez-footer-bg);
+  background: var(--color-black);
   border-top: 1px solid var(--color-border);
   padding: var(--space-12) 0 var(--space-8);
   margin-top: var(--space-20);
-  color: var(--color-text-muted);
+  color: var(--color-white);
+  font-family: var(--font-family-kaidez-secondary-font)
 }
 
 .button-older-posts {
