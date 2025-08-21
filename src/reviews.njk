@@ -1,56 +1,43 @@
 ---
-layout: layouts/base.njk
+layout: layouts/category.njk
 title: "Reviews"
 description: "Reviews of tools, books, courses, and technology"
 permalink: "/reviews/"
 ---
 
 <div class="container">
-    <header class="category-header">
-        <h1>Reviews</h1>
-        <p class="category-description">
-            In-depth reviews of tools, books, courses, and technology.
-        </p>
-    </header>
-    
-    <div class="posts-grid">
-        {% for post in collections.posts %}
-            {% if post.data.tags %}
-                {% set hasReviewTag = false %}
-                {% for tag in post.data.tags %}
-                    {% if tag == "reviews" %}
-                        {% set hasReviewTag = true %}
-                    {% endif %}
-                {% endfor %}
-                
-                {% if hasReviewTag %}
-                <article class="post-card">
-                    <h3>
-                        <a href="{{ post.url }}">{{ post.data.title }}</a>
-                    </h3>
-                    
-                    <div class="post-meta">
-                        <time datetime="{{ post.date | htmlDateString }}">
-                            {{ post.date | readableDate }}
-                        </time>
-                        
-                        <div class="post-tags">
-                            {% for tag in post.data.tags %}
-                            {% if tag != "posts" %}
-                            <span class="tag">#{{ tag }}</span>
-                            {% endif %}
-                            {% endfor %}
-                        </div>
-                    </div>
-                    
-                    {% if post.data.excerpt %}
-                    <p class="post-excerpt">{{ post.data.excerpt }}</p>
-                    {% else %}
-                    <p class="post-excerpt">{{ post.templateContent | excerpt }}</p>
-                    {% endif %}
-                </article>
-                {% endif %}
-            {% endif %}
-        {% endfor %}
-    </div>
+
+  <div>
+    {% for post in collections.posts %}
+    {% if post.data.tags %}
+    {% set hasReviewTag = false %}
+    {% for tag in post.data.tags %}
+    {% if tag == "reviews" %}
+    {% set hasReviewTag = true %}
+    {% endif %}
+    {% endfor %}
+
+    {% if hasReviewTag %}
+    <article class="post-card">
+      <h3>
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+      </h3>
+
+      <div class="post-meta">
+        <time datetime="{{ post.date | htmlDateString }}">
+          {{ post.date | readableDate }}
+        </time>
+
+      </div>
+
+      {% if post.data.excerpt %}
+      <p class="post-excerpt">{{ post.data.excerpt }}</p>
+      {% else %}
+      <p class="post-excerpt">{{ post.templateContent | excerpt }}</p>
+      {% endif %}
+    </article>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+  </div>
 </div>
