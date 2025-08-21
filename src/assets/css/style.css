@@ -192,6 +192,8 @@ a:hover {
 
 time {
   margin: 0 auto 20px;
+  text-align: center;
+  display: inherit;
 }
 
 /* Layout */
@@ -201,7 +203,8 @@ time {
   padding: 0 var(--space-4);
 }
 
-.main-content {
+.main-content,
+.post-content {
   min-height: calc(100vh - var(--header-height) - 200px);
   padding: var(--space-8) 0;
 }
@@ -631,16 +634,10 @@ svg {
 
 /* Post tags styling */
 
-.post-content {
-  width: 700px;
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
 
 .post-content p {
   margin-bottom: 16px;
+  padding: 0 24px;
   font-size: var(--text-xl);
 }
 
