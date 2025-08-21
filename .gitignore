@@ -2,6 +2,7 @@ _site
 .sass-cache
 .jekyll-metadata
 node_modules/
+coverage/
 yarn.lock
 .DS_Store
 .vscode/
