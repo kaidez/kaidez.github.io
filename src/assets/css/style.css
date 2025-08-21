@@ -802,6 +802,10 @@ svg {
     padding: var(--space-2) var(--space-3);
     font-size: var(--text-xs);
   }
+
+  .post-content img {
+    padding: 0 10px
+  }
 }
 
 /* Utilities */
