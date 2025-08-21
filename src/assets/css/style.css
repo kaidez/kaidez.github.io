@@ -180,13 +180,13 @@ p {
 }
 
 a {
-  color: var(--color-primary);
+  color: var(--color-kaidez-supreme-red);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
 a:hover {
-  color: var(--color-primary);
+  color: var(--color-kaidez-supreme-red);
   text-decoration: underline;
 }
 
@@ -378,7 +378,16 @@ svg {
   max-width: 100%;
   height: auto;
   border-radius: var(--border-radius);
-  margin: var(--space-6) 0;
+  margin: var(--space-6) 0 60px;
+}
+
+.post-content ul {
+  margin-left: 30px;
+}
+
+.post-content li {
+  margin-bottom: 20px;
+  font-size: var(--text-xl);
 }
 
 .post-content pre {
@@ -610,6 +619,7 @@ svg {
 
 .post-content p {
   margin-bottom: 16px;
+  font-size: var(--text-xl);
 }
 
 .post-tags {
