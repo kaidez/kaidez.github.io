@@ -4,7 +4,7 @@ date: 2011-06-08
 excerpt: Starter mobile web development best practices including YSlow & Page Speed tests and minifying pages with HTML5 Boilerplate's build script
 layout: layouts/base.njk
 permalink: /mobile-web-development-best-practices-starting-tips/
-tags: ["coding-best-practices"]
+tags: [coding-best-practices]
 # og-image: default-image.jpg
 ---
 My last two articles, reviewing my work for both [the Almay/Facebook project][1] and [the new Mitchum site][2], have tried to drive the same point home: **it’s good to apply mobile web development best practices when coding up a website, even if the site is only meant for desktop browsers.** This article expands on that point.

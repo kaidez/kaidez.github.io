@@ -44,10 +44,12 @@
 
   <main class="post-content">
     <h3 class="post-title">{{ title }}</i></h3>
-
-    {{ date | readableDate }}
-
+    <time datetime="{{ date | htmlDateString }}">
+      {{ date | readableDate }}
+    </time>
+    <img src="/assets/img/{{ image }}" alt="image for '{{ title }}' post" />
     {{ content | safe }}
+    {# {% if image %} #}
   </main>
 
   {% include "partials/footer.njk" %}

@@ -4,6 +4,7 @@ date: 2022-09-14
 excerpt: Quick thoughts on building a small search autocomplete tool. What I learned, what I liked and what I didn't like.
 layout: layouts/post.njk
 permalink: /search-autocomplete/
+image: search-autocomplete.jpg
 tags: [coding-best-practices]
 ---
 

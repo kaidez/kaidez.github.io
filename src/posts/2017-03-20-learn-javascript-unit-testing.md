@@ -4,7 +4,7 @@ date:   2017-03-20
 excerpt: Learn JavaScript unit testing by creating smaller functions with functional programming & testing them with QUnit. Lots of learning resources links.
 layout: layouts/base.njk
 permalink: /learn-javascript-unit-testing/
-tags: ["coding-best-practices"]
+tags: [coding-best-practices]
 # og-image: learn-javascript-unit-testing.jpg
 # thumb-image: learn-javascript-unit-testing-thumb.jpg
 ---

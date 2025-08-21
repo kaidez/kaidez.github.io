@@ -4,7 +4,7 @@ date: 2011-02-28
 excerpt: Paul Irish's HTML5 Boilerplate video is extremely informative as it demonstrates many great CSS and JavaScript hacks and best practices
 layout: layouts/base.njk
 permalink: /html5-boilerplate-video/
-tags: ["coding-best-practices"]
+tags: [coding-best-practices]
 # og-image: default-image.jpg
 ---
 Most HTML5 fans know about [HTML5 Boilerplate][1], the open-source web page template that’s fully-stocked with lots of cool front-end web development hacks. But I have a feeling that many people simply go to the site, cut-and-paste *parts * of the code, then leave the site without fully absorbing all the site content.

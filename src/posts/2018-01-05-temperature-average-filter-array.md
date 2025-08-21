@@ -4,7 +4,7 @@ date:   2018-01-05
 excerpt: kaidez updates his JavaScript functional programming/average temperature post to use .filter() instead of an inner loop. Includes demo.
 layout: layouts/base.njk
 permalink: /temperature-average-filter-array/
-tags: ["coding-best-practices"]
+tags: [coding-best-practices]
 # og-image: temperature-functional-programming-filter.jpg
 # thumb-image: temperature-functional-programming-filter-thumb.jpg
 ---

@@ -4,7 +4,7 @@ date: 2010-12-13
 excerpt: HTML5 Gallery, mostly maintained by the HTML5 expert over at HTML5 Doctor, is added to kaidez.com's Coolsite list
 layout: layouts/base.njk
 permalink: /reasons-design-websites-internet-explorer-6/
-tags: ["coding-best-practices"]
+tags: [coding-best-practices]
 # og-image: default-image.jpg
 ---
 Bring up Internet Explorer Version 6 to a seasoned web designer and you’ll get an earful.

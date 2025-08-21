@@ -4,7 +4,7 @@ date: 2011-03-24
 excerpt: A quick review of HTML5 Boilerplate version 1.0, discussing the new build script for site optimization and custom site template build
 layout: layouts/base.njk
 permalink: /html5-boilerplate-version-1/
-tags: ["coding-best-practices"]
+tags: [coding-best-practices]
 # og-image: default-image.jpg
 ---
 As if it wasn’t awesome already, the [HTML5 Boilerplate][2] just got awesome-er.

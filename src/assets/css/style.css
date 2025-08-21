@@ -126,7 +126,7 @@ html {
 }
 
 body {
-  font-family: var(--font-family-sans);
+  font-family: var(--font-family-kaidez-primary-font);
   font-size: var(--text-base);
   line-height: 1.6;
   color: var(--color-kaidez-text);
@@ -188,6 +188,10 @@ a {
 a:hover {
   color: var(--color-primary);
   text-decoration: underline;
+}
+
+time {
+  margin: 0 auto 20px;
 }
 
 /* Layout */

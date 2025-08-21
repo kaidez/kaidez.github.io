@@ -4,7 +4,7 @@ date: 2011-04-06
 excerpt: A great New York Times piece on HTML5 application development and a demo of their new HTML5 Skimmer site
 layout: layouts/base.njk
 permalink: /new-york-times-article-html5-html5-site/
-tags: ["coding-best-practices"]
+tags: [coding-best-practices]
 # og-image: default-image.jpg
 ---
 The New York Times was hot stuff in the HTML5 sector of the Twitterverse over the March 26/27 weekend of 2011. Reason being, their [“HTML5 Is Breathing New Life Into the Web”][1] article and their new Skimmer site.

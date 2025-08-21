@@ -6,7 +6,7 @@ layout: layouts/base.njk
 permalink: /wordpress-webmatrix/
 excerpt: Using WebMatrix to create a WordPress development site
 # og-image: default-image.jpg
-tags: ["coding-best-practices"]
+tags: [coding-best-practices]
 ---
 <em><a href="http://www.microsoft.com/web/webmatrix/">Update: Microsoft now recommends Visual Studio Code over Web Matrix</a></em>
 

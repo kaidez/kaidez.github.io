@@ -4,7 +4,7 @@ date:   2018-11-13
 excerpt: JavaScript developers can avoid using frameworks and libraries if the have to, but too many developers avoid them for the wrong reasons.
 layout: layouts/base.njk
 permalink: /rejecting-javascript-frameworks/
-tags: ["coding-best-practices"]
+tags: [coding-best-practices]
 # og-image: js-framework-library.jpg
 # thumb-image: js-framework-library-thumb.jpg
 ---

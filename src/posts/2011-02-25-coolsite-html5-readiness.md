@@ -4,7 +4,7 @@ date: 2011-02-25
 excerpt: HTML5 Readiness neatly displays browser support for HTML5 and CSS3
 layout: layouts/base.njk
 permalink: /coolsite-html5-readiness/
-tags: ["coding-best-practices"]
+tags: [coding-best-practices]
 # og-image: default-image.jpg
 ---
 *Note: This site no longer includes a 'Coolsites' section.*
