@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title %}{{ title }} - {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description"
+    content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+  <meta property="article:publisher" content="http://facebook.com/kaidezblog" />
+  <meta property="article:section" content="Personal" />
+  <meta property="og:image" content="http://www.kaidez.com/img/{{page.og-image}}" />
+  <meta property="og:image:width" content="700" />
+  <meta property="og:image:height" content="300" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@kaidez" />
+  <meta name="twitter:creator" content="@kaidez" />
+  <meta name="twitter:title" content="{{ page.title }} » kaidez" />
+  <meta name="twitter:image" content="http://www.kaidez.com/img/{{page.og-image}}" />
+  <meta name="twitter:description" content="{{ page.excerpt }}" />
+</head>
+
+<body class="{% if bodyClass %}{{ bodyClass }}{% endif %}" data-pagefind-body>
+  {% include "partials/header.njk" %}
+
+  <main class="post-content">
+    <h3 class="post-title">{{ title }}</i></h3>
+
+    {{ date | readableDate }}
+
+    {{ content | safe }}
+  </main>
+
+  {% include "partials/footer.njk" %}
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-5549541-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

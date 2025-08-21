@@ -132,6 +132,9 @@ body {
   color: var(--color-kaidez-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Typography */
@@ -433,7 +436,8 @@ svg {
   border-bottom: 1px solid var(--color-border);
 }
 
-.category-header-title {
+.category-header-title,
+.post-title {
   color: var(--color-black);
   font-family: var(--font-family-kaidez-secondary-font);
   font-size: var(--text-3xl);
@@ -591,6 +595,19 @@ svg {
 }
 
 /* Post tags styling */
+
+.post-content {
+  width: 700px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-content p {
+  margin-bottom: 16px;
+}
+
 .post-tags {
   display: flex;
   flex-wrap: wrap;
