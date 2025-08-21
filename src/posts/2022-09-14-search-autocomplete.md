@@ -6,8 +6,9 @@ layout: layouts/post.njk
 permalink: /search-autocomplete/
 image: search-autocomplete.jpg
 tags: [coding-best-practices]
+category: Coding Best Practices
+secondary_tags: ["foo", "bar"]
 ---
-
 My employer has a lot of acronyms for business terms that we use throughout the day. I created a proof-of-concept for an acronym search engine, with the goal of releasing it internally.
 
 It had been a few months since I coded up something app-like, especially with JavaScript. So I created this using a few coding things I hadn't really played with yet.
@@ -24,8 +25,8 @@ Here's what I learned:
 <li>I used vanilla, non-framework-or-library JavaScript to do this. I'm happy about it.</li>
 <li>The vanilla JavaScript was written in Typescript and I'm REALLY happy about that. My code had less bugs, spotting the bugs was easier, writing tests was easier, etc.</li>
 <li>For compiling the newer ECMAScript versions down to legacy versions, I prefer TypeScript to Babel.  It seems to take less configuration and plug-in use.</li>
-<li>Using <code>fetch()</code> and <code>async/await</code> are current best practices. But if you're trying to share JSON data globally in your app, they're a major pain.  I almost reverted to the legacy <code>XmlHttpRequest()</code> object to get this done.</li>
+<li>Using <code>fetch()</code> and <code>async/await</code> are current best practices. But if you're trying to share JSON data globally in your app, they're a major pain in the a$$.  I almost reverted to the legacy <code>XmlHttpRequest()</code> object to get this done.</li>
 <li>All this <code>fetch()</code> and <code>async/await</code> annoying stuff happens when using the Reacts and Vues of the world. But those tools also do a great job of abstracting those annoyances out...I really respect that.</li>
 </ul>
 
-I don't see any tutorials coming directly out of this...again, I'm just documenting things. Feel free to ask me questions if you have any.
+I don't see any tutorials coming out of this directly...again, I'm just documenting things. Feel free to ask me questions if you have any.

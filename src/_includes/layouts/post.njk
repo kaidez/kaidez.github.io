@@ -42,6 +42,15 @@
 <body class="{% if bodyClass %}{{ bodyClass }}{% endif %}" data-pagefind-body>
   {% include "partials/header.njk" %}
 
+
+  <div class="post-tag-and-category-container">
+    <a href="/{{ tags }}" class="post-tag-or-category">{{ category }}</a>
+    {%- for secondary_tags in secondary_tags -%}
+      <a class="post-tag-or-category">{{ secondary_tags}}</a>
+    {%- endfor -%}
+  </div>
+
+
   <main class="post-content">
     <h3 class="post-title">{{ title }}</i></h3>
     <time datetime="{{ date | htmlDateString }}">
