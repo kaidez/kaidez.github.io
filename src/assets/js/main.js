@@ -15,7 +15,7 @@
         
         paragraphTag.innerHTML = `&copy;2008-${shortYear} Kai "kaidez" Gittens. All rights reserved.`;
         footerElement.appendChild(paragraphTag);
-    }q
+    }
     
     function initializePagefind() {
         try {
@@ -36,16 +36,10 @@
         }
     }
     
-    // Initialize everything when DOM is ready
-    function initialize() {
-        copyrightYear();
-        // initializePagefind();
-    }
-    
     // Ensure DOM is loaded
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initialize);
+        document.addEventListener('DOMContentLoaded', copyrightYear);
     } else {
-        initialize();
+        copyrightYear();
     }
 })();

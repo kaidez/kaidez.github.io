@@ -9,23 +9,16 @@ const path = require('path');
 const mainJsPath = path.join(__dirname, '../src/assets/js/main.js');
 const mainJsContent = fs.readFileSync(mainJsPath, 'utf8');
 
-// Extract functions from the IIFE for testing
-function createTestableFunctions() {
+// Extract the copyrightYear function from the IIFE for testing
+function createTestableFunction() {
   // Extract the copyrightYear function body
   const copyrightMatch = mainJsContent.match(/function copyrightYear\(\) \{([\s\S]*?)\n    \}/);
   if (!copyrightMatch) {
     throw new Error('Could not extract copyrightYear function from IIFE');
   }
   
-  // Extract the initializePagefind function body
-  const pagefindMatch = mainJsContent.match(/function initializePagefind\(\) \{([\s\S]*?)\n    \}/);
-  if (!pagefindMatch) {
-    throw new Error('Could not extract initializePagefind function from IIFE');
-  }
-  
-  // Create testable functions
+  // Create testable function
   const copyrightBody = copyrightMatch[1];
-  const pagefindBody = pagefindMatch[1];
   
   const copyrightYear = new Function('', `
     function copyrightYear() {${copyrightBody}
@@ -33,13 +26,7 @@ function createTestableFunctions() {
     return copyrightYear;
   `)();
   
-  const initializePagefind = new Function('', `
-    function initializePagefind() {${pagefindBody}
-    }
-    return initializePagefind;
-  `)();
-  
-  return { copyrightYear, initializePagefind };
+  return copyrightYear;
 }
 
 describe('main.js - copyrightYear function', () => {
@@ -48,9 +35,8 @@ describe('main.js - copyrightYear function', () => {
   let consoleSpy;
 
   beforeAll(() => {
-    // Create testable functions
-    const functions = createTestableFunctions();
-    copyrightYear = functions.copyrightYear;
+    // Create testable function
+    copyrightYear = createTestableFunction();
   });
 
   beforeEach(() => {
@@ -159,9 +145,8 @@ describe('main.js - Year calculation edge cases', () => {
   let copyrightYear;
 
   beforeAll(() => {
-    // Create testable functions
-    const functions = createTestableFunctions();
-    copyrightYear = functions.copyrightYear;
+    // Create testable function
+    copyrightYear = createTestableFunction();
   });
 
   beforeEach(() => {
@@ -215,9 +200,8 @@ describe('main.js - DOM ready functionality', () => {
   let mockAddEventListener;
 
   beforeAll(() => {
-    // Create testable functions
-    const functions = createTestableFunctions();
-    copyrightYear = functions.copyrightYear;
+    // Create testable function
+    copyrightYear = createTestableFunction();
   });
 
   beforeEach(() => {
