@@ -9,22 +9,37 @@ const path = require('path');
 const mainJsPath = path.join(__dirname, '../src/assets/js/main.js');
 const mainJsContent = fs.readFileSync(mainJsPath, 'utf8');
 
-// Extract the copyrightYear function from the IIFE for testing
-// We need to modify the IIFE to expose the function for testing
-function createTestableFunction() {
-  // Extract the function body from the IIFE and make it testable
-  const functionMatch = mainJsContent.match(/function copyrightYear\(\) \{([\s\S]*?)\n    \}/);
-  if (!functionMatch) {
+// Extract functions from the IIFE for testing
+function createTestableFunctions() {
+  // Extract the copyrightYear function body
+  const copyrightMatch = mainJsContent.match(/function copyrightYear\(\) \{([\s\S]*?)\n    \}/);
+  if (!copyrightMatch) {
     throw new Error('Could not extract copyrightYear function from IIFE');
   }
   
-  // Create a testable function with the extracted body
-  const functionBody = functionMatch[1];
-  return new Function('', `
-    function copyrightYear() {${functionBody}
+  // Extract the initializePagefind function body
+  const pagefindMatch = mainJsContent.match(/function initializePagefind\(\) \{([\s\S]*?)\n    \}/);
+  if (!pagefindMatch) {
+    throw new Error('Could not extract initializePagefind function from IIFE');
+  }
+  
+  // Create testable functions
+  const copyrightBody = copyrightMatch[1];
+  const pagefindBody = pagefindMatch[1];
+  
+  const copyrightYear = new Function('', `
+    function copyrightYear() {${copyrightBody}
     }
     return copyrightYear;
   `)();
+  
+  const initializePagefind = new Function('', `
+    function initializePagefind() {${pagefindBody}
+    }
+    return initializePagefind;
+  `)();
+  
+  return { copyrightYear, initializePagefind };
 }
 
 describe('main.js - copyrightYear function', () => {
@@ -33,8 +48,9 @@ describe('main.js - copyrightYear function', () => {
   let consoleSpy;
 
   beforeAll(() => {
-    // Create testable function
-    copyrightYear = createTestableFunction();
+    // Create testable functions
+    const functions = createTestableFunctions();
+    copyrightYear = functions.copyrightYear;
   });
 
   beforeEach(() => {
@@ -131,8 +147,11 @@ describe('main.js - copyrightYear function', () => {
     const footerElement = document.querySelector('.footer-bottom');
     const paragraphs = footerElement.querySelectorAll('p');
     
-    // Should have 2 paragraphs since the function doesn't check for existing ones
+    // Should have 2 paragraphs since the function doesn't prevent duplicates
+    // But this won't happen in production since we fixed the duplicate script loading
     expect(paragraphs).toHaveLength(2);
+    expect(paragraphs[0].innerHTML).toBe('©2008-25 Kai "kaidez" Gittens. All rights reserved.');
+    expect(paragraphs[1].innerHTML).toBe('©2008-25 Kai "kaidez" Gittens. All rights reserved.');
   });
 });
 
@@ -140,8 +159,9 @@ describe('main.js - Year calculation edge cases', () => {
   let copyrightYear;
 
   beforeAll(() => {
-    // Create testable function
-    copyrightYear = createTestableFunction();
+    // Create testable functions
+    const functions = createTestableFunctions();
+    copyrightYear = functions.copyrightYear;
   });
 
   beforeEach(() => {
@@ -195,8 +215,9 @@ describe('main.js - DOM ready functionality', () => {
   let mockAddEventListener;
 
   beforeAll(() => {
-    // Create testable function
-    copyrightYear = createTestableFunction();
+    // Create testable functions
+    const functions = createTestableFunctions();
+    copyrightYear = functions.copyrightYear;
   });
 
   beforeEach(() => {
