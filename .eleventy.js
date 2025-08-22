@@ -91,6 +91,32 @@ eleventyConfig.addCollection("codingBestPractices", function(collectionApi) {
     return array.slice(0, n);
   });
 
+  // Add collection for all secondary tags
+  eleventyConfig.addCollection("allSecondaryTags", function(collectionApi) {
+    const allSecondaryTags = new Set();
+    
+    collectionApi.getAll().forEach(post => {
+      if (post.data.secondary_tags && Array.isArray(post.data.secondary_tags)) {
+        post.data.secondary_tags.forEach(tag => {
+          allSecondaryTags.add(tag);
+        });
+      }
+    });
+    
+    return Array.from(allSecondaryTags).sort();
+  });
+
+  // Add filter to filter posts by secondary tag
+  eleventyConfig.addFilter("filterBySecondaryTag", function(posts, targetTag) {
+    if (!Array.isArray(posts)) return [];
+    
+    return posts.filter(post => {
+      return post.data.secondary_tags && 
+             Array.isArray(post.data.secondary_tags) && 
+             post.data.secondary_tags.includes(targetTag);
+    });
+  });
+
   // Pagefind build hook
   eleventyConfig.on('eleventy.after', async ({ dir, results, runMode, outputMode }) => {
     // Only run Pagefind in build mode, not serve mode

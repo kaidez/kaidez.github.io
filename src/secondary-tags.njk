@@ -1,0 +1,80 @@
+---
+layout: layouts/base.njk
+title: "Secondary Tags"
+description: "Browse posts by secondary tags"
+permalink: "/secondary-tags/"
+---
+
+<div class="container">
+    <header class="category-header">
+        <h1>Secondary Tags</h1>
+        <p class="category-description">
+            Browse posts by secondary tags
+        </p>
+    </header>
+    
+    <div class="tags-grid">
+        {% for tag in collections.allSecondaryTags %}
+        <div class="tag-card">
+            <a href="/secondary-tags/{{ tag }}/" class="tag-link">
+                <h3>{{ tag }}</h3>
+                <p class="tag-count">
+                    {% set postsWithTag = collections.all | filterBySecondaryTag(tag) %}
+                    {{ postsWithTag.length }} post{% if postsWithTag.length != 1 %}s{% endif %}
+                </p>
+            </a>
+        </div>
+        {% endfor %}
+        
+        {% if collections.allSecondaryTags.length == 0 %}
+        <div class="no-tags">
+            <p>No secondary tags found yet.</p>
+            <a href="/" class="button">Back to Home</a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<style>
+.tags-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+}
+
+.tag-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: var(--space-4);
+    transition: all var(--transition-fast);
+}
+
+.tag-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tag-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.tag-card h3 {
+    margin: 0 0 var(--space-2) 0;
+    color: var(--color-primary);
+}
+
+.tag-count {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+}
+
+.no-tags {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: var(--space-12);
+}
+</style>
