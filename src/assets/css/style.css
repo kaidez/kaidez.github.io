@@ -192,7 +192,6 @@ a:hover {
 
 time {
   margin: 0 auto 20px;
-  text-align: center;
   display: inherit;
 }
 
@@ -414,6 +413,10 @@ svg {
 .post-content li {
   margin-bottom: 24px;
   font-size: var(--text-xl);
+}
+
+.post-content time {
+  text-align: center;
 }
 
 .post-content pre {
