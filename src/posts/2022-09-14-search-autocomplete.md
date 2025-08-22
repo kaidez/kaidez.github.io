@@ -6,7 +6,7 @@ layout: layouts/post.njk
 permalink: /search-autocomplete/
 image: search-autocomplete.jpg
 tags: [coding-best-practices]
-category: Coding Best Practices
+category: Coding Tips
 secondary_tags: ["foo","bar"]
 ---
 My employer has a lot of acronyms for business terms that we use throughout the day. I created a proof-of-concept for an acronym search engine, with the goal of releasing it internally.
