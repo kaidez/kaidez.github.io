@@ -35,6 +35,16 @@
             console.error('Pagefind initialization failed:', error);
         }
     }
+
+
+    const menuToggle = document.querySelector('.mobile-menu-icon');
+    const mobileMenu = document.querySelector('.site-nav ul ');
+
+    menuToggle.addEventListener('click', () => {
+    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', !isExpanded);
+    mobileMenu.classList.toggle('isVisible');
+});
     
     // Ensure DOM is loaded
     if (document.readyState === 'loading') {
