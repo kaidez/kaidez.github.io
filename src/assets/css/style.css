@@ -192,7 +192,7 @@ a:hover {
 
 time {
   margin: 0 auto 20px;
-  display: inherit;
+  color: var( --color-gray-500)
 }
 
 /* Layout */
@@ -645,7 +645,7 @@ svg {
 }
 
 .post-tag-and-category-container {
-  margin: 50px auto 0px;
+  margin: 40px auto 0px;
 }
 
 .post-tag-or-category {
@@ -654,6 +654,9 @@ svg {
   margin-right: 20px;
   cursor: pointer;
   text-decoration: underline;
+}
+
+.post-category {
   text-transform: uppercase;
 }
 
@@ -661,6 +664,11 @@ svg {
 .post-tag-or-category:hover {
   text-decoration: none;
 } 
+
+.post-tag-container {
+  margin-top: 20px;
+  text-align: center;
+}
 
 .post-tags {
   display: inline-block;
@@ -672,6 +680,11 @@ svg {
   text-decoration: none;
   font-weight: 500;
   transition: all var(--transition-fast);
+}
+
+.post-date-separator {
+  margin: 0 10px;
+  color: var(--color-text-muted);
 }
 
 .tag:hover {

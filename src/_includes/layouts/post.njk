@@ -42,24 +42,31 @@
 <body class="{% if bodyClass %}{{ bodyClass }}{% endif %}" data-pagefind-body>
   {% include "partials/header.njk" %}
   <div class="post-tag-and-category-container">
-    <div>Category: <a href="/{{ tags }}" class="post-tag-or-category">{{ category }}</a> Tags:
-      {%- for tag in tags -%}
-      <a href="/tags/{{ tag }}/" class="post-tag-or-category">{{ tag }}</a>
-      {%- if not loop.last %}, {% endif %}
-      {%- endfor -%}
-    </div>
+      <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+      <span class="post-date-separator">|</span>
+      <a href="/{{ tags }}" class="post-tag-or-category post-category">{{ category }}</a>  
+
+    <div class="post-tag-container">
+      tags:
+      <br>
+      {# {%- for tag in tags -%}
+        <a href="/tags/{{ tag }}/" class="post-tag-or-category">{{ tag }}</a>
+        {%- if not loop.last %}, {% endif %}
+      {%- endfor -%} #}
+    
     {%- if secondary_tags and secondary_tags.length > 0 -%}
     {%- for secondary_tags in secondary_tags -%}
       <a  href="/tags/{{ secondary_tags }}/" class="post-tag-or-category">{{ secondary_tags }}</a>
     {%- endfor -%}
     {%- endif -%}
+    </div>
   </div>
 
   <main class="post-content">
     <h3 class="post-title">{{ title }}</i></h3>
-    <time datetime="{{ date | htmlDateString }}">
+    {# <time datetime="{{ date | htmlDateString }}">
       {{ date | readableDate }}
-    </time>
+    </time> #}
     <img src="/assets/img/{{ image }}" alt="image for '{{ title }}' post" />
     {{ content | safe }}
     {# {% if image %} #}
