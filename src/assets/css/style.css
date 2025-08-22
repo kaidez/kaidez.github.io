@@ -782,6 +782,19 @@ svg {
     cursor: pointer;
   }
 
+  .mobile-menu-text {
+    position: absolute;
+    font-family: var(--font-family-kaidez-secondary-font);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    top: 24px;
+    left: 0px;
+  }
+
+  .post-content {
+    margin: 0 16px;
+  }
+
 
 
   .hero {
