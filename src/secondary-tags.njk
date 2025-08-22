@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 title: "Secondary Tags"
 description: "Browse posts by secondary tags"
-permalink: "/secondary-tags/"
+permalink: "/tags/"
 ---
 
 <div class="container">
@@ -16,7 +16,7 @@ permalink: "/secondary-tags/"
     <div class="tags-grid">
         {% for tag in collections.allSecondaryTags %}
         <div class="tag-card">
-            <a href="/secondary-tags/{{ tag }}/" class="tag-link">
+            <a href="/tags/{{ tag }}/" class="tag-link">
                 <h3>{{ tag }}</h3>
                 <p class="tag-count">
                     {% set postsWithTag = collections.all | filterBySecondaryTag(tag) %}

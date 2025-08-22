@@ -4,7 +4,7 @@ pagination:
   data: collections.allSecondaryTags
   size: 1
   alias: tagName
-permalink: /secondary-tags/{{ tagName }}/
+permalink: /tags/{{ tagName }}/
 ---
 
 <div class="container">
@@ -58,7 +58,7 @@ permalink: /secondary-tags/{{ tagName }}/
         {% if taggedPosts.length == 0 %}
         <div class="no-posts">
             <p>No posts with this secondary tag yet.</p>
-            <a href="/secondary-tags/" class="button">Back to Secondary Tags</a>
+            <a href="/tags/" class="button">Back to Tags</a>
         </div>
         {% endif %}
     </div>
