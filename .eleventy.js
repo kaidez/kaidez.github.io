@@ -3,6 +3,10 @@ const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 const { execSync } = require('child_process');
 
 module.exports = function(eleventyConfig) {
+  // Copy Font Awesome assets from node_modules
+  eleventyConfig.addPassthroughCopy({"node_modules/@fortawesome/fontawesome-free/css": "assets/fontawesome/css"});
+  eleventyConfig.addPassthroughCopy({"node_modules/@fortawesome/fontawesome-free/webfonts": "assets/fontawesome/webfonts"});
+  
   // Copy assets to output
   eleventyConfig.addPassthroughCopy("src/assets");
   

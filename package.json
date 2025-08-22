@@ -34,5 +34,8 @@
   "author": "Kai Gittens",
   "license": "MIT",
   "main": "index.js",
-  "type": "commonjs"
+  "type": "commonjs",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.0.0"
+  }
 }
