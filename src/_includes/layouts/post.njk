@@ -42,10 +42,17 @@
 <body class="{% if bodyClass %}{{ bodyClass }}{% endif %}" data-pagefind-body>
   {% include "partials/header.njk" %}
   <div class="post-tag-and-category-container">
-    <a href="/{{ tags }}" class="post-tag-or-category">{{ category }}</a>
+    <div>Category: <a href="/{{ tags }}" class="post-tag-or-category">{{ category }}</a> Tags:
+      {%- for tag in tags -%}
+      <a href="/tags/{{ tag }}/" class="post-tag-or-category">{{ tag }}</a>
+      {%- if not loop.last %}, {% endif %}
+      {%- endfor -%}
+    </div>
+    {%- if secondary_tags and secondary_tags.length > 0 -%}
     {%- for secondary_tags in secondary_tags -%}
       <a  href="/tags/{{ secondary_tags }}/" class="post-tag-or-category">{{ secondary_tags }}</a>
     {%- endfor -%}
+    {%- endif -%}
   </div>
 
   <main class="post-content">
