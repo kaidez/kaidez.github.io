@@ -3,21 +3,21 @@ layout: layouts/base.njk
 pagination:
   data: collections.allSecondaryTags
   size: 1
-  alias: secondaryTag
-permalink: /secondary-tags/{{ secondaryTag }}/
+  alias: tagName
+permalink: /secondary-tags/{{ tagName }}/
 ---
 
 <div class="container">
     <header class="category-header">
-        <h1>Tagged "{{ secondaryTag }}"</h1>
+        <h1>Secondary Tag: "{{ tagName }}"</h1>
         <p class="category-description">
-            Posts tagged with "{{ secondaryTag }}"
+            Posts tagged with secondary tag "{{ tagName }}"
         </p>
     </header>
     
     <div class="posts-grid">
-        {% set postsWithTag = collections.all | filterBySecondaryTag(secondaryTag) %}
-        {% for post in postsWithTag | reverse %}
+        {% set taggedPosts = collections.all | filterBySecondaryTag(tagName) %}
+        {% for post in taggedPosts | reverse %}
         <article class="post-card">
             <h3>
                 <a href="{{ post.url }}">{{ post.data.title }}</a>
@@ -39,9 +39,9 @@ permalink: /secondary-tags/{{ secondaryTag }}/
                 {% endif %}
 
                 {% if post.data.secondary_tags %}
-                <div class="secondary-tags">
-                    {% for stag in post.data.secondary_tags %}
-                    <span class="secondary-tag">{{ stag }}</span>
+                <div class="post-secondary-tags">
+                    {% for secTag in post.data.secondary_tags %}
+                    <span class="secondary-tag">{{ secTag }}</span>
                     {% endfor %}
                 </div>
                 {% endif %}
@@ -55,11 +55,28 @@ permalink: /secondary-tags/{{ secondaryTag }}/
         </article>
         {% endfor %}
         
-        {% if postsWithTag.length == 0 %}
+        {% if taggedPosts.length == 0 %}
         <div class="no-posts">
             <p>No posts with this secondary tag yet.</p>
-            <a href="/" class="button">Back to Home</a>
+            <a href="/secondary-tags/" class="button">Back to Secondary Tags</a>
         </div>
         {% endif %}
     </div>
 </div>
+
+<style>
+.post-secondary-tags {
+    margin-top: var(--space-2);
+}
+
+.secondary-tag {
+    display: inline-block;
+    background: var(--color-accent);
+    color: white;
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--text-xs);
+    margin-right: var(--space-1);
+    margin-bottom: var(--space-1);
+}
+</style>

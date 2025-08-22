@@ -62,7 +62,7 @@ eleventyConfig.addCollection("codingBestPractices", function(collectionApi) {
 });
   
   eleventyConfig.addCollection("categories", function(collectionApi) {
-    const posts = collectionApi.getFilteredByTag("posts");
+    const posts = collectionApi.getFilteredByGlob("src/posts/*.md");
     const categories = new Set();
     
     posts.forEach(post => {
