@@ -8,12 +8,12 @@ permalink: /tags/{{ tagName }}/
 ---
 
 <div class="container">
-    <header class="category-header">
+    <header>
          <h3 class="category-header-title">stuff with a <i>"{{ tagName }}"</i> tag</h3>
         {{ content | safe }}
     </header>
     
-    <div class="posts-grid">
+    <div>
         {% set taggedPosts = collections.all | filterBySecondaryTag(tagName) %}
         {% for post in taggedPosts | reverse %}
         <article class="post-card">
