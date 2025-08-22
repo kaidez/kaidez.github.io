@@ -9,10 +9,8 @@ permalink: /tags/{{ tagName }}/
 
 <div class="container">
     <header class="category-header">
-        <h1>Secondary Tag: "{{ tagName }}"</h1>
-        <p class="category-description">
-            Posts tagged with secondary tag "{{ tagName }}"
-        </p>
+         <h3 class="category-header-title">stuff with a <i>"{{ tagName }}"</i> tag</h3>
+        {{ content | safe }}
     </header>
     
     <div class="posts-grid">
@@ -22,31 +20,6 @@ permalink: /tags/{{ tagName }}/
             <h3>
                 <a href="{{ post.url }}">{{ post.data.title }}</a>
             </h3>
-            
-            <div class="post-meta">
-                <time datetime="{{ post.date | htmlDateString }}">
-                    {{ post.date | readableDate }}
-                </time>
-                
-                {% if post.data.tags %}
-                <div class="post-tags">
-                    {% for tag in post.data.tags %}
-                    {% if tag != "posts" %}
-                    <span class="tag">#{{ tag }}</span>
-                    {% endif %}
-                    {% endfor %}
-                </div>
-                {% endif %}
-
-                {% if post.data.secondary_tags %}
-                <div class="post-secondary-tags">
-                    {% for secTag in post.data.secondary_tags %}
-                    <span class="secondary-tag">{{ secTag }}</span>
-                    {% endfor %}
-                </div>
-                {% endif %}
-            </div>
-            
             {% if post.data.excerpt %}
             <p class="post-excerpt">{{ post.data.excerpt }}</p>
             {% else %}
