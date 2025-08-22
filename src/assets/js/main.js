@@ -36,20 +36,32 @@
         }
     }
 
+    function toggleMobileMenu() {
+        const menuToggle = document.querySelector('.mobile-menu-icon');
+        const mobileMenu = document.querySelector('.site-nav ul');
+        
+        if (!menuToggle || !mobileMenu) {
+            console.warn('Mobile menu elements not found');
+            return;
+        }
+        
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('isVisible');
+        });
+    }
 
-    const menuToggle = document.querySelector('.mobile-menu-icon');
-    const mobileMenu = document.querySelector('.site-nav ul ');
-
-    menuToggle.addEventListener('click', () => {
-    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-    menuToggle.setAttribute('aria-expanded', !isExpanded);
-    mobileMenu.classList.toggle('isVisible');
-});
+    // Initialize all functionality
+    function init() {
+        copyrightYear();
+        toggleMobileMenu();
+    }
     
     // Ensure DOM is loaded
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', copyrightYear);
+        document.addEventListener('DOMContentLoaded', init);
     } else {
-        copyrightYear();
+        init();
     }
 })();

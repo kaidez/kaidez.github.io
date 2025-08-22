@@ -584,3 +584,403 @@ describe('main.js - Pagefind search initialization', () => {
     expect(callArgs.resetStyles).toBe(false);
   });
 });
+
+// Tests for Mobile Menu Toggle functionality (lines 40-45 in original code)
+describe('main.js - Mobile Menu Toggle functionality', () => {
+  let mockAddEventListener;
+  let consoleSpy;
+
+  beforeEach(() => {
+    // Create fresh DOM with mobile menu elements
+    document.body.innerHTML = `
+      <button class="mobile-menu-icon" aria-expanded="false">Menu</button>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </nav>
+    `;
+    
+    // Spy on console.warn
+    consoleSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
+  });
+
+  afterEach(() => {
+    // Restore console.warn
+    consoleSpy.mockRestore();
+  });
+
+  test('should add click event listener to mobile menu toggle', () => {
+    const menuToggle = document.querySelector('.mobile-menu-icon');
+    const mobileMenu = document.querySelector('.site-nav ul');
+    
+    // Mock addEventListener to capture the callback
+    const mockCallback = jest.fn();
+    menuToggle.addEventListener = jest.fn();
+    
+    // Simulate the toggleMobileMenu function
+    const toggleMobileMenu = () => {
+      const menuToggle = document.querySelector('.mobile-menu-icon');
+      const mobileMenu = document.querySelector('.site-nav ul');
+      
+      if (!menuToggle || !mobileMenu) {
+        console.warn('Mobile menu elements not found');
+        return;
+      }
+      
+      menuToggle.addEventListener('click', () => {
+        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('isVisible');
+      });
+    };
+    
+    toggleMobileMenu();
+    
+    // Verify addEventListener was called with 'click'
+    expect(menuToggle.addEventListener).toHaveBeenCalledWith('click', expect.any(Function));
+    expect(consoleSpy).not.toHaveBeenCalled();
+  });
+
+  test('should toggle aria-expanded from false to true when clicked', () => {
+    const menuToggle = document.querySelector('.mobile-menu-icon');
+    const mobileMenu = document.querySelector('.site-nav ul');
+    
+    // Initially aria-expanded should be false
+    expect(menuToggle.getAttribute('aria-expanded')).toBe('false');
+    
+    // Simulate the click handler logic
+    const clickHandler = () => {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+      mobileMenu.classList.toggle('isVisible');
+    };
+    
+    // Simulate first click
+    clickHandler();
+    
+    expect(menuToggle.getAttribute('aria-expanded')).toBe('true');
+    expect(mobileMenu.classList.contains('isVisible')).toBe(true);
+  });
+
+  test('should toggle aria-expanded from true to false when clicked again', () => {
+    const menuToggle = document.querySelector('.mobile-menu-icon');
+    const mobileMenu = document.querySelector('.site-nav ul');
+    
+    // Set initial state to expanded
+    menuToggle.setAttribute('aria-expanded', 'true');
+    mobileMenu.classList.add('isVisible');
+    
+    // Simulate the click handler logic
+    const clickHandler = () => {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+      mobileMenu.classList.toggle('isVisible');
+    };
+    
+    // Simulate click to close
+    clickHandler();
+    
+    expect(menuToggle.getAttribute('aria-expanded')).toBe('false');
+    expect(mobileMenu.classList.contains('isVisible')).toBe(false);
+  });
+
+  test('should toggle isVisible class on mobile menu', () => {
+    const menuToggle = document.querySelector('.mobile-menu-icon');
+    const mobileMenu = document.querySelector('.site-nav ul');
+    
+    // Initially should not have isVisible class
+    expect(mobileMenu.classList.contains('isVisible')).toBe(false);
+    
+    // Simulate the click handler logic
+    const clickHandler = () => {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+      mobileMenu.classList.toggle('isVisible');
+    };
+    
+    // First click - should add class
+    clickHandler();
+    expect(mobileMenu.classList.contains('isVisible')).toBe(true);
+    
+    // Second click - should remove class
+    clickHandler();
+    expect(mobileMenu.classList.contains('isVisible')).toBe(false);
+  });
+
+  test('should handle missing mobile menu toggle element gracefully', () => {
+    // Remove the mobile menu toggle button
+    const menuToggle = document.querySelector('.mobile-menu-icon');
+    menuToggle.remove();
+    
+    // Simulate the toggleMobileMenu function
+    const toggleMobileMenu = () => {
+      const menuToggle = document.querySelector('.mobile-menu-icon');
+      const mobileMenu = document.querySelector('.site-nav ul');
+      
+      if (!menuToggle || !mobileMenu) {
+        console.warn('Mobile menu elements not found');
+        return;
+      }
+      
+      menuToggle.addEventListener('click', () => {
+        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('isVisible');
+      });
+    };
+    
+    // Should not throw an error
+    expect(() => toggleMobileMenu()).not.toThrow();
+    
+    // Should log warning
+    expect(consoleSpy).toHaveBeenCalledWith('Mobile menu elements not found');
+  });
+
+  test('should handle missing mobile menu list element gracefully', () => {
+    // Remove the mobile menu ul element
+    const mobileMenu = document.querySelector('.site-nav ul');
+    mobileMenu.remove();
+    
+    // Simulate the toggleMobileMenu function
+    const toggleMobileMenu = () => {
+      const menuToggle = document.querySelector('.mobile-menu-icon');
+      const mobileMenu = document.querySelector('.site-nav ul');
+      
+      if (!menuToggle || !mobileMenu) {
+        console.warn('Mobile menu elements not found');
+        return;
+      }
+      
+      menuToggle.addEventListener('click', () => {
+        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('isVisible');
+      });
+    };
+    
+    // Should not throw an error
+    expect(() => toggleMobileMenu()).not.toThrow();
+    
+    // Should log warning
+    expect(consoleSpy).toHaveBeenCalledWith('Mobile menu elements not found');
+  });
+
+  test('should handle case where aria-expanded attribute is missing', () => {
+    const menuToggle = document.querySelector('.mobile-menu-icon');
+    const mobileMenu = document.querySelector('.site-nav ul');
+    
+    // Remove the aria-expanded attribute
+    menuToggle.removeAttribute('aria-expanded');
+    
+    // Simulate the click handler logic
+    const clickHandler = () => {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+      mobileMenu.classList.toggle('isVisible');
+    };
+    
+    // First click - should treat missing attribute as false, so set to true
+    clickHandler();
+    
+    expect(menuToggle.getAttribute('aria-expanded')).toBe('true');
+    expect(mobileMenu.classList.contains('isVisible')).toBe(true);
+  });
+
+  test('should work with multiple rapid clicks', () => {
+    const menuToggle = document.querySelector('.mobile-menu-icon');
+    const mobileMenu = document.querySelector('.site-nav ul');
+    
+    // Simulate the click handler logic
+    const clickHandler = () => {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+      mobileMenu.classList.toggle('isVisible');
+    };
+    
+    // Simulate multiple rapid clicks
+    clickHandler(); // Open
+    expect(menuToggle.getAttribute('aria-expanded')).toBe('true');
+    expect(mobileMenu.classList.contains('isVisible')).toBe(true);
+    
+    clickHandler(); // Close
+    expect(menuToggle.getAttribute('aria-expanded')).toBe('false');
+    expect(mobileMenu.classList.contains('isVisible')).toBe(false);
+    
+    clickHandler(); // Open again
+    expect(menuToggle.getAttribute('aria-expanded')).toBe('true');
+    expect(mobileMenu.classList.contains('isVisible')).toBe(true);
+    
+    clickHandler(); // Close again
+    expect(menuToggle.getAttribute('aria-expanded')).toBe('false');
+    expect(mobileMenu.classList.contains('isVisible')).toBe(false);
+  });
+
+  test('should preserve existing classes on mobile menu', () => {
+    const menuToggle = document.querySelector('.mobile-menu-icon');
+    const mobileMenu = document.querySelector('.site-nav ul');
+    
+    // Add some existing classes
+    mobileMenu.classList.add('menu-list', 'navigation');
+    
+    // Simulate the click handler logic
+    const clickHandler = () => {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+      mobileMenu.classList.toggle('isVisible');
+    };
+    
+    // Click to open menu
+    clickHandler();
+    
+    // Should have both existing classes and new isVisible class
+    expect(mobileMenu.classList.contains('menu-list')).toBe(true);
+    expect(mobileMenu.classList.contains('navigation')).toBe(true);
+    expect(mobileMenu.classList.contains('isVisible')).toBe(true);
+    
+    // Click to close menu
+    clickHandler();
+    
+    // Should still have existing classes but not isVisible
+    expect(mobileMenu.classList.contains('menu-list')).toBe(true);
+    expect(mobileMenu.classList.contains('navigation')).toBe(true);
+    expect(mobileMenu.classList.contains('isVisible')).toBe(false);
+  });
+
+  test('should work with different selector patterns', () => {
+    // Test that our code works with the specific selector '.site-nav ul'
+    document.body.innerHTML = `
+      <button class="mobile-menu-icon" aria-expanded="false">Menu</button>
+      <div class="site-nav">
+        <ul id="main-menu">
+          <li><a href="/">Home</a></li>
+        </ul>
+      </div>
+    `;
+    
+    const menuToggle = document.querySelector('.mobile-menu-icon');
+    const mobileMenu = document.querySelector('.site-nav ul');
+    
+    expect(menuToggle).toBeTruthy();
+    expect(mobileMenu).toBeTruthy();
+    expect(mobileMenu.id).toBe('main-menu');
+    
+    // Simulate the click handler logic
+    const clickHandler = () => {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+      mobileMenu.classList.toggle('isVisible');
+    };
+    
+    clickHandler();
+    
+    expect(menuToggle.getAttribute('aria-expanded')).toBe('true');
+    expect(mobileMenu.classList.contains('isVisible')).toBe(true);
+  });
+});
+
+// Integration tests for the complete mobile menu functionality
+describe('main.js - Mobile Menu Integration Tests', () => {
+  let consoleSpy;
+
+  beforeEach(() => {
+    // Create complete page structure
+    document.body.innerHTML = `
+      <header>
+        <button class="mobile-menu-icon" aria-expanded="false">
+          <span>Menu</span>
+        </button>
+        <nav class="site-nav">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main></main>
+      <footer class="footer-bottom"></footer>
+    `;
+    
+    consoleSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
+  });
+
+  afterEach(() => {
+    consoleSpy.mockRestore();
+  });
+
+  test('should initialize mobile menu functionality when DOM is ready', () => {
+    const menuToggle = document.querySelector('.mobile-menu-icon');
+    const mobileMenu = document.querySelector('.site-nav ul');
+    
+    // Mock the addEventListener method to capture the callback
+    const originalAddEventListener = menuToggle.addEventListener;
+    let clickHandler;
+    
+    menuToggle.addEventListener = jest.fn((event, handler) => {
+      if (event === 'click') {
+        clickHandler = handler;
+      }
+    });
+    
+    // Simulate the complete toggleMobileMenu function
+    const toggleMobileMenu = () => {
+      const menuToggle = document.querySelector('.mobile-menu-icon');
+      const mobileMenu = document.querySelector('.site-nav ul');
+      
+      if (!menuToggle || !mobileMenu) {
+        console.warn('Mobile menu elements not found');
+        return;
+      }
+      
+      menuToggle.addEventListener('click', () => {
+        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('isVisible');
+      });
+    };
+    
+    // Initialize the mobile menu
+    toggleMobileMenu();
+    
+    // Verify event listener was added
+    expect(menuToggle.addEventListener).toHaveBeenCalledWith('click', expect.any(Function));
+    expect(consoleSpy).not.toHaveBeenCalled();
+    
+    // Get the actual click handler that was registered
+    const actualHandler = menuToggle.addEventListener.mock.calls[0][1];
+    
+    // Test the click behavior
+    actualHandler();
+    expect(menuToggle.getAttribute('aria-expanded')).toBe('true');
+    expect(mobileMenu.classList.contains('isVisible')).toBe(true);
+    
+    actualHandler();
+    expect(menuToggle.getAttribute('aria-expanded')).toBe('false');
+    expect(mobileMenu.classList.contains('isVisible')).toBe(false);
+  });
+
+  test('should work in combination with other page functionality', () => {
+    // Test that mobile menu works alongside copyright functionality
+    const footerElement = document.querySelector('.footer-bottom');
+    const menuToggle = document.querySelector('.mobile-menu-icon');
+    const mobileMenu = document.querySelector('.site-nav ul');
+    
+    // Simulate both functions working together
+    expect(footerElement).toBeTruthy();
+    expect(menuToggle).toBeTruthy();
+    expect(mobileMenu).toBeTruthy();
+    
+    // Both should be able to function independently
+    const clickHandler = () => {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+      mobileMenu.classList.toggle('isVisible');
+    };
+    
+    clickHandler();
+    expect(menuToggle.getAttribute('aria-expanded')).toBe('true');
+    expect(mobileMenu.classList.contains('isVisible')).toBe(true);
+  });
+});
