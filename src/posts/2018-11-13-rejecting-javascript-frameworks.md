@@ -94,6 +94,7 @@ Many things can slow an app down: don't put the blame for this all on JavaScript
 <h2>The complaints about learning curves</h2>
 
 In his post, Kevin Luecke is blunt about the defeatist attitude web devs take towards ramping up on new things. After quoting a developer who implied that it would take too long for their team to learn Ember, Luecke responded:
+
 <blockquote class="content--blockquote-margin">
 "This reaction to Ember just baffles me. Your day job is to build a piece of web software and you can't take a few days to learn the ins and outs? Presumably you're in a large team because this project is important and will take some time to complete. Nevertheless, I've seen this reaction many times in the web culture.
 </blockquote>
