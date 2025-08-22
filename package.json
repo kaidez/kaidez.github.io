@@ -34,8 +34,5 @@
   "author": "Kai Gittens",
   "license": "MIT",
   "main": "index.js",
-  "type": "commonjs",
-  "dependencies": {
-    "@11ty/font-awesome": "^1.0.0-beta.1"
-  }
+  "type": "commonjs"
 }
