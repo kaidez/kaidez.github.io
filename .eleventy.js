@@ -9,6 +9,10 @@ module.exports = function(eleventyConfig) {
   
   // Copy assets to output
   eleventyConfig.addPassthroughCopy("src/assets");
+
+  eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
+
+  eleventyConfig.addPassthroughCopy("src/assets/img"); 
   
   // Add simple date filters
 
@@ -33,7 +37,7 @@ module.exports = function(eleventyConfig) {
     return moment().format("MMMM Do, YYYY");
   });
 
-  eleventyConfig.addPassthroughCopy("src/assets/img"); 
+  
   
 // Add collection for blog posts
 eleventyConfig.addCollection("posts", function(collectionApi) {
