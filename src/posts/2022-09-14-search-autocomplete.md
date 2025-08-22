@@ -5,7 +5,7 @@ excerpt: Quick thoughts on building a small search autocomplete tool. What I lea
 layout: layouts/post.njk
 permalink: /search-autocomplete/
 image: search-autocomplete.jpg
-secondary_tags: ["typescript", "javascript", "search"]
+secondary_tags: ["typescript", "javascript"]
 tags: [coding-best-practices]
 category: Coding Tips
 ---
