@@ -181,13 +181,13 @@ p {
 
 a {
   color: var(--color-kaidez-supreme-red);
-  text-decoration: none;
+  text-decoration: underline;
   transition: color var(--transition-fast);
 }
 
 a:hover {
   color: var(--color-kaidez-supreme-red);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 time {
@@ -378,13 +378,11 @@ svg {
 }
 
 .post-content a {
-  text-decoration: none;
-  color: #18272F;
-  font-weight: 700;
-  position: relative;
+  color: var(--color-kaidez-supreme-red);
+  /* font-weight: 700; */
 }
 
-.post-content a::before {
+/* .post-content a::before {
   content: '';
   background-color: var(--color-kaidez-link);
   position: absolute;
@@ -399,7 +397,7 @@ svg {
 .post-content a:hover::before {
   bottom: 0;
   height: 100%;
-}
+} */
 
 .post-content img {
   max-width: 100%;
