@@ -62,8 +62,9 @@ Our fallback search functionality comes from [Google Custom Search Engine (CSE)]
 
 Let's look at version 1 of the code we'll be using:
 
-<pre><code class="language-markup">
-<!DOCTYPE html>
+<pre class="language-markup">
+<code class="language-markup">
+&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;meta charset="UTF-8"&gt;
@@ -80,7 +81,10 @@ Let's look at version 1 of the code we'll be using:
   &lt;/form&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
+</code>
+</pre>
+
+
 Note the setting of the `value` attribute in the first `<input>` tag: "yoursite.com". You would need to change this to whatever your site URL is. Once that's done, any searches entered into this searchbox will return the results for that site, and return them inside a standard Google search results page.
 
 To be honest: if you want search engine functionality on your static site, you really can just apply a Google CSE solution and move on. The reason I went beyond Google CSE was because I wanted to deliver a certain experience on kaidez.com: when people performed a search on my site, I wanted them to stay on my site.

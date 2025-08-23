@@ -1,11 +1,17 @@
+const { execSync } = require('child_process');
 const moment = require("moment");
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
-const { execSync } = require('child_process');
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function(eleventyConfig) {
+
   // Copy Font Awesome assets from node_modules
   eleventyConfig.addPassthroughCopy({"node_modules/@fortawesome/fontawesome-free/css": "assets/fontawesome/css"});
   eleventyConfig.addPassthroughCopy({"node_modules/@fortawesome/fontawesome-free/webfonts": "assets/fontawesome/webfonts"});
+
+  // Copy over PrismJS assets
+  eleventyConfig.addPassthroughCopy({"src/assets/css/prism.css": "src/assets/css/prism.css"});
+  eleventyConfig.addPassthroughCopy({"src/assets/js/prism.js": "src/assets/js/prism.js"});
   
   // Copy assets to output
   eleventyConfig.addPassthroughCopy("src/assets");
@@ -36,6 +42,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("dateReformat", () => {
     return moment().format("MMMM Do, YYYY");
   });
+
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   
   
@@ -156,6 +164,8 @@ eleventyConfig.addCollection("codingBestPractices", function(collectionApi) {
       hostname: "https://kaidez.com",
     },
   });
+
+  
   
   
   return {
