@@ -329,17 +329,17 @@ svg {
   transform: translateY(-2px);
   border-color: var(--color-primary);
 }
-
+.post-card h2,
 .post-card h3 {
   margin-bottom: var(--space-3);
 }
-
+.post-card h2 a,
 .post-card h3 a {
   color: var(--color-black);
   font-family: var(--font-family-kaidez-secondary-font);
   text-decoration: none;
 }
-
+.post-card h2 a,
 .post-card h3 a:hover {
   color: var(--color-danger);
 }
