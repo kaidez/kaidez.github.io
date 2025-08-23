@@ -833,8 +833,6 @@ svg {
     margin: 0 16px;
   }
 
-
-
   .hero {
     padding: var(--space-12) 0;
   }
@@ -904,6 +902,14 @@ svg {
 
   .post-content img {
     padding: 0 10px
+  }
+
+  .related-posts ul {
+    display: block;
+  }
+
+  .related-posts li {
+    height: 48px;
   }
 }
 
