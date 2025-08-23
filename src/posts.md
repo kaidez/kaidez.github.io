@@ -7,7 +7,7 @@ pagination:
   size: 10
   alias: posts
 ---
-
+{{relatedPosts}}
 <section class="container">
   <h1 class="category-header-title">All posts on kaidez.com</h1>
   <div class="posts-homepage-post-list">
@@ -39,4 +39,5 @@ pagination:
 {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous Page</a> |{% endif %}
 
 {% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next Page</a>{% endif %}
+
 </section>
