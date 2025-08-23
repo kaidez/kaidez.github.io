@@ -79,6 +79,19 @@
     {# {% if image %} #}
   </main>
 
+  {% if related %}
+   <aside>
+      <h2>You might also like:</h2>
+      <ul role="list">
+       {% for relatedPost in related %}
+         <li></li>
+           <a href="{{ relatedPost.url }}">{{ relatedPost.data.title }}</a>
+         </li>
+       {% endfor %}
+      </ul>
+   </aside>
+{% endif %}
+
   {% include "partials/footer.njk" %}
   
 </body>
