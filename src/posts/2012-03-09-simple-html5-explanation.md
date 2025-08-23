@@ -192,7 +192,7 @@ In closing, HTML5 is a highly discussed and debated subject right now and some m
 
  [10]: http://www.w3.org/
  [11]: http://www.whatwg.org/
- [12]: http://twitter.com/#!/zeldman/statuses/1137456194
+ [12]: https://x.com/zeldman/status/1137456194
  [13]: https://developer.mozilla.org/en/HTML/HTML5
  [14]: https://developer.mozilla.org/en/HTML/HTML5#Technologies_often_called_part_of_HTML5_that_aren't
  [15]: http://m.facebook.com/

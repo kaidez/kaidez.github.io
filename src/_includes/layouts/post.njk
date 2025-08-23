@@ -77,20 +77,19 @@
     <img src="/assets/img/{{ image }}" alt="image for '{{ title }}' post" />
     {{ content | safe }}
     {# {% if image %} #}
+    {% if related %}
+      <aside class="related-posts">
+        <h2 class="related-posts-header">related posts</h2>
+           <ul role="list">
+          {% for relatedPost in related %}
+            <li>
+              <a href="{{ relatedPost.url }}">{{ relatedPost.data.title }}</a>
+            </li>
+          {% endfor %}
+          </ul>
+      </aside>
+    {% endif %}
   </main>
-
-  {% if related %}
-   <aside>
-      <h2>You might also like:</h2>
-      <ul role="list">
-       {% for relatedPost in related %}
-         <li>
-           <a href="{{ relatedPost.url }}">{{ relatedPost.data.title }}</a>
-         </li>
-       {% endfor %}
-      </ul>
-   </aside>
-{% endif %}
 
   {% include "partials/footer.njk" %}
   
