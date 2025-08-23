@@ -9,15 +9,15 @@ secondary_tags: ["javascript"]
 tags: [coding-best-practices]
 category: Coding Tips
 ---
-My last six months as a JavaScript developer have included a period of self-assessment. Primarily, I've reviewed <em>how</em> I write application code: not the libraries and frameworks that help me write it.
+My last six months as a JavaScript developer have included a period of self-assessment. Primarily, I've reviewed <i>how</i> I write application code: not the libraries and frameworks that help me write it.
 
 I've also researched how other developers write code and, collectively, have learned great things from them. But when discussing libraries and frameworks, I've seen too many instances of developers rejecting them for the wrong reasons.
 
-<h2 style="clear:both">A disclaimer</h2>
+<h3 style="clear:both">A disclaimer</h3>
 
 I'm talking from a React point-of-view here because that's what I've been using lately. Don't take it to mean that I think everyone should use React...it's just my POV for this post.
 
-<h2>How this all began</h2>
+<h3>How this all began</h3>
 
 It all started after a lengthy period of using <a href="https://reactjs.org/">React</a> on a daily basis. Consequently, I see three positive things that React brings to the JavaScript developer conversation:
 
@@ -27,21 +27,21 @@ It all started after a lengthy period of using <a href="https://reactjs.org/">Re
 
 All these things are great because <strong>they encourage computer science best practices within JavaScript development</strong>. As JS progresses from making neat rollovers to a full-on application language, it's right to bring in these practices.
 
-<h2>There will be naysayers</h2>
+<h3>There will be naysayers</h3>
 
 After its release, some developers labeled React as <strong>"JAJFLWYWCI" (Just-Another-JavaScript-Framework-Library-Whatever-You-Wanna-Call-It)</strong>. For whatever the reason, they said we shouldn't use it...a frequent reaction to frameworks and libraries among JS developers.
 
-The comments for <em>not</em> using it aligned with at least one of these three opinions:
+The comments for <i>not</i> using it aligned with at least one of these three opinions:
 
-1. <em>"Frameworks and libraries lead to slow performing web apps."</em>
-2. <em>"It has a steep learning curve."</em>
-3. <em>"Using frameworks and libraries is unprofessional programming."</em>
+1. <i>"Frameworks and libraries lead to slow performing web apps."</i>
+2. <i>"It has a steep learning curve."</i>
+3. <i>"Using frameworks and libraries is unprofessional programming."</i>
 
 Some comments I engaged with (mostly online) and some I didn't. But they didn't bother me to the point I felt compelled to blog about it.
 
 I had real-world web developer stuff to deal with so I moved on.
 
-<h2>What Kevin said</h2>
+<h3>What Kevin said</h3>
 
 Then, maybe on a subconscious impulse, I re-read <a href="https://web.archive.org/web/20130324030838/http://randyluecke.tumblr.com:80/post/45915323813/im-done-with-the-web">Kevin Luecke's "I'm done with the web" article</a>. An article that bummed me out when I first read it in 2013.
 
@@ -55,17 +55,17 @@ He had enough of this "stagnation" as he phrased it so he, himself, moved on. Fr
 
 What bummed me out about this article was how I'm a part of this community that rashly rejects stuff. Also, he made some <a href="https://www.youtube.com/watch?v=19g4n0ZxiYM&feature=youtu.be&t=2836">comments about "people that don't know how to program"</a> and I wondered if I was part of that group as well.
 
-<h2>What Kevin's article was really about</h2>
+<h3>What Kevin's article was really about</h3>
 
-First, I don't know the context of Kevin Luecke's comments regarding people that don't know how to program. So I'm not going to take them <em>out</em> of context and let them bum me out.
+First, I don't know the context of Kevin Luecke's comments regarding people that don't know how to program. So I'm not going to take them <i>out</i> of context and let them bum me out.
 
-I'm a self-taught, web developer: I learned web stuff at a time when those that knew even a <em>little</em> HTML were incredibly employable.  I've continued to do web stuff for a long time since then, giving me experience that <em>keeps</em> me incredibly employable.
+I'm a self-taught, web developer: I learned web stuff at a time when those that knew even a <i>little</i> HTML were incredibly employable.  I've continued to do web stuff for a long time since then, giving me experience that <i>keeps</i> me incredibly employable.
 
 Since I'm not a classically-trained computer science developer, I'll always have to deal any feelings of insignificance that come up around this.  OK...I'll live with that.
 
 Second, worrying about my feelings kept me from realizing the main point of that article. That <strong>web developers focus on the wrong things when rejecting certain JS tooling, and this is holding them back</strong>.
 
-<h2>The complaints about performance</h2>
+<h3>The complaints about performance</h3>
 
 To be fair, I can't really say that the complaints about JS lib and framework performance are "wrong". Making apps as fast as possible is important as our dependency on mobile rises, and less JavaScript makes them faster.
 
@@ -77,7 +77,7 @@ Andrew Welch wrote <a href="https://nystudio107.com/blog/an-annotated-webpack-4-
 
 Also, Addy Osmani wrote <a href="https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4">a pretty definitive article on JS performance</a>...give it a read as well.  It discusses webpack and code-splitting stuff, along with other things like performance budgets, critical paths and testing/auditing tools.
 
-<h2>Other performance stuff</h2>
+<h3>Other performance stuff</h3>
 
 Images are usually blamed for causing the most performance issues and Luecke mentions them in his article. But Osmani effectively argues that JS may be the bigger performance headache because images only have to download while JS files have to download, then parse and execute code.
 
@@ -91,7 +91,7 @@ And performance depends on more than this: aggressive browser caching gives othe
 
 Many things can slow an app down: don't put the blame for this all on JavaScript.
 
-<h2>The complaints about learning curves</h2>
+<h3>The complaints about learning curves</h3>
 
 In his post, Kevin Luecke is blunt about the defeatist attitude web devs take towards ramping up on new things. After quoting a developer who implied that it would take too long for their team to learn Ember, Luecke responded:
 
@@ -103,7 +103,7 @@ I can relate to having this defeatist attitude. Always having to ramp up on a ne
 
 But this is how JavaScript is right now and this rapid change shows no signs of slowing down. Newly-released JS libs and frameworks are part of this constant change...we all have to keep up.
 
-If you're used to changing your UI with DOM manipulation, React <em>might</em> have a bit of learning curve. React makes you change UI by updating a state object instead of using something like <code>document.querySelector()</code>.
+If you're used to changing your UI with DOM manipulation, React <i>might</i> have a bit of learning curve. React makes you change UI by updating a state object instead of using something like <code>document.querySelector()</code>.
 
 But regardless of learning curves, libraries and frameworks solve someone's problem somewhere in the world. So a developer that's familiar with at least the popular ones is a valuable asset.
 
@@ -111,7 +111,7 @@ Developers like this have "problem solving-power": the ability to look at a prob
 
 You have to invest in yourself and make time to learn new JavaScript stuff, frameworks and libraries included. You may think there's nothing to lose by not learning them, but there's certainly nothing to gain either.
 
-<h2>The complaints about "unprofessional programming" (whatever that means)</h2>
+<h3>The complaints about "unprofessional programming" (whatever that means)</h3>
 
 However, lots of developers believe the other ones using frameworks and libraries have no value and are unprofessional. That libs/frameworks should be completely avoided and we should just use vanilla JavaScript, and they're passionate in their belief.
 
@@ -125,7 +125,7 @@ And what if you're part of a team of developers? Using a lib or framework helps 
 
 With React I can tell someone, "solve your problem by using this pre-built component that so-and-so built." Much easier than "cut-and-paste this code block that so-and-so wrote but you'll have to ask so-and-so what to do next."
 
-<h2>Think about about what "unprofessional programming" means</h2>
+<h3>Think about about what "unprofessional programming" means</h3>
 
 I've said this many MANY times before and I'll say it again:
 
@@ -141,7 +141,7 @@ React doesn't help me with any of this.  It gives me a nice container to place t
 
 I'm using React to deliver production-quality code on time. I don't see why this is unprofessional.
 
-<h2>Web developers can learn from native developers</h2>
+<h3>Web developers can learn from native developers</h3>
 
 While commenting about the complaints about learning curves, Kevin Luecke compared web developers to native developers:
 
@@ -153,7 +153,7 @@ I would apply that mentality to the web dev complaints about performance and "un
 
 And right now, imagine what would have happened if Ruby developers collectively rejected Rails for any of these reasons.
 
-<h2>Understand the business process leading the app</h2>
+<h3>Understand the business process leading the app</h3>
 
 Before accepting or rejecting a JavaScript library/framework, have a clear understanding of the project's goals and business requirements. Understand what the app must do before rejecting the tools that can help you build it.
 
@@ -165,9 +165,9 @@ Speaking for myself, this is an area where I've made mistakes in the past. Had I
 
 You need to build a product and then ship it out the door: a library or framework may be a means to that end. So again, understand what your app must do because a framework or lib may help your app "do" it better.
 
-<h2>The current JS build tooling is complex, but helpful</h2>
+<h3>The current JS build tooling is complex, but helpful</h3>
 
-While almost all the comments on Andrew Welch's webpack post are positive, the <em>very</em> first one was this:
+While almost all the comments on Andrew Welch's webpack post are positive, the <i>very</i> first one was this:
 
 <blockquote class="content--blockquote-margin">
 "Why do we keep making the build and deploy setups more complex than the apps we're deploying?"
@@ -175,12 +175,12 @@ While almost all the comments on Andrew Welch's webpack post are positive, the <
 
 I don't know if the build process is "more complex" then the apps, but know that the process itself is more complex than it was before. And Welch's response to the comment was proper: it terms of the complexity, "it depends on what you're building."
 
-But this is the current state of JavaScript development. We're now using JS to build complex web <em>and</em> native apps, which can be created easier with libs and frameworks.
+But this is the current state of JavaScript development. We're now using JS to build complex web <i>and</i> native apps, which can be created easier with libs and frameworks.
 
 So yes, the build process is harder and takes more work than before. But again, this is the world we live in.
 
-<h2>Conclusion</h2>
+<h3>Conclusion</h3>
 
-When discussing JavaScript frameworks and libraries, I believe that only <em>real</em> reason to reject them is their potential performance problems. And we have a ton ways to solve these problems.
+When discussing JavaScript frameworks and libraries, I believe that only <i>real</i> reason to reject them is their potential performance problems. And we have a ton ways to solve these problems.
 
 Let's use these solves in our work so we can focus on the important thing: building apps fast and efficiently. And if a framework and library helps you do this (and you took the time to research if it does), so be it.

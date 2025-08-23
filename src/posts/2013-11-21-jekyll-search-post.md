@@ -28,7 +28,7 @@ A common solution to this problem is to use some sort of JavaScript-based search
 9. [Conclusion](#conclusion)
 
 <a name="three-steps"></a>
-## The Three Steps We Need To Take
+### The Three Steps We Need To Take
 There are three steps we need to take to acheive our goal:
 
 1. __Add the JavaScript Detection &amp; Fallback Code to HTML Pages__: These pages will link to JavaScript and CSS files working together to check for the presence of JavaScript, and will also contain our fallback search functionality, courtesy of Google.
@@ -38,7 +38,7 @@ There are three steps we need to take to acheive our goal:
 3. __Use JavaScript to Detect if CSS is Disabled__: With JavaScript, we'll create code that provides the Google fallback search for times when CSS is disabled, but JavaScript is not. Because CSS is disabled, the Google page that returns the search results will not look pretty, but the results will be returned nonetheless.
 
 <a name="assumptions-notes"></a>
-## One Assumption...More Notes
+### One Assumption...More Notes
 
 Since we're talking about creating search for static sites, the only assumption I'm making is that you have either Jekyll or some other static site software installed on your machine, and that you use it regularly.
 
@@ -53,7 +53,7 @@ Some notes...
 * At some point while reading this, you may say to yourself, "Isn't it easier to just place the fallback code inside a `<noscript>` tag?"...maybe, but that doesn't always work.  Plus, if you're coding in XHTML instead of any version of HTML, `<noscript>` won't work at all. [The W3C's HTML5 specification is clear about all this](http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-noscript-element "Read the noscript section of the HTML5 specification").
 
 <a name="fallback-search-code"></a>
-## The Fallback Search Code
+### The Fallback Search Code
 Before we get to the three steps, we need to understand some things about the fallback code...
 
 Our fallback search functionality comes from [Google Custom Search Engine (CSE)](https://www.google.com/cse "Learn more about Google Custom Search Engine (CSE)"), which comes in three versions at the time of this post. This tutorial uses the oldest version as it best suits our needs and although it's old, it's still widely in use, particularly on sites using [the Octopress framework for Jekyll](http://octopress.org/ "Learn about the Octopress framework for Jekyll").
@@ -92,7 +92,7 @@ To be honest: if you want search engine functionality on your static site, you r
 None of the current CSE solutions do this, so I went with Tipue while using version 1 for my fallback code.
 
 <a name="tipue-walkthrough"></a>
-## A Very Quick Tipue Walkthrough
+### A Very Quick Tipue Walkthrough
 Very quick...
 
 Tipue is a jQuery plugin that provides static search. The search results must be returned to a properly-configured `search.html` page.
@@ -106,7 +106,7 @@ Along with the `search.html` page, Tipue also needs five JS files to work and th
 5. a file containing the executable Tipue code that returns search results to `search.html`...this code will be placed in a file called `js/scripts.js` and we'll discuss it shortly.
 
 <a name="build-pages"></a>
-## Step 1: Add the JavaScript Detection &amp; Fallback Code to HTML Pages
+### Step 1: Add the JavaScript Detection &amp; Fallback Code to HTML Pages
 We need to create web pages that include references to both a `.css` file and two more `.js` files. We're not going to review any of the Tipue-related files we just discussed as they don't play a role in the JS detection process, but these other files do play a role:
 
 * index.html
@@ -306,7 +306,7 @@ At this point we've established the basic structure for our pages as well as our
 Let's now go to step two and build our Tipue search functionality.
 
 <a name="create-javascript-search"></a>
-## Step 2: Dynamically Create the JS-powered Search Functionality
+### Step 2: Dynamically Create the JS-powered Search Functionality
 
 We now need to create the Tipue search box off-DOM with JavaScript, then load it onto the page. Specifically, we need to create a form on both pages that looks like this:
 <pre><code class="language-markup">
@@ -442,7 +442,7 @@ At this point, this is what the JavaScript (not CSS) detection process looks lik
 *(Shameless self-promotion: this part of the tutorial focused on dynamically constructing page elements off-DOM....if you want to learn more about this, check out my [off-DOM screencast tutorial](/javascript-off-dom/ "kaidez screencast on creating web page elements off-DOM").)*
 
 <a name="css-detection"></a>
-## Step 3: Use JavaScript to Detect if CSS is Disabled
+### Step 3: Use JavaScript to Detect if CSS is Disabled
 
 The code in Step 2 works well if either JavaScript is disabled or if both JavaScript *and* CSS are disabled. But if *just* CSS is disabled, things fall apart.
 
@@ -609,7 +609,7 @@ if (isCSSDisabled === false) {
 Our `testCSS` div may be gone but our `isCSSDisabled` variable is still around, and we can check its value. And if `isCSSDisabled` is set to `false`, it means that CSS is *not* disabled so it's safe to run our `loadMenu()` function to build the Tipue search box. But in any other situation, such as `isCSSDisabled` being set to `true`, don't do anything else and, just to play it safe, do absolutely nothing by performing a basic `return false`.
 
 <a name="notes"></a>
-## More Notes
+### More Notes
 While this code works, there are a few things to keep in mind:
 
 * Because of how we've structured it, this code will run every time a page loads so we need to check its performance. On the average, the off-DOM building and JS/CSS detection code takes 0.6-0.9 milliseconds to run. But this code is in the same file as the code that executes Tipue searches, so that number can jump to around 1.2 milliseconds to run when such a search is invoked...it didn't get any higher than that.  This isn't bad but it's something to keep in mind.
@@ -617,5 +617,5 @@ While this code works, there are a few things to keep in mind:
 * Hiding elements using `display:none` is generally frowned upon from an accessibility standpoint. But I stuck with it due to some other weird (minor) accessibility issues.
 
 <a name="conclusion"></a>
-## Conclusion
+### Conclusion
 There are lots of search options for static sites generators like Jekyll...we just need to try things and then implement, test, then deploy them. This is just one thing...I'm sure that there are more and I haven't found them.  Please share these things in the comments if you like.
