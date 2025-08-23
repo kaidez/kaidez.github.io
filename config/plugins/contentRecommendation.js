@@ -20,9 +20,7 @@ module.exports = function (eleventyConfig) {
           });
         }
 
-        
-      // Remove duplicates and limit to a specific number of related posts, for instance, 3
-
+        //Remove duplicates and limit to a specific number of related posts, for instance, 3
         related = [...new Set(related)].slice(0, 3);
 
         post.data.related = related;
