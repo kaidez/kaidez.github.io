@@ -2,14 +2,17 @@
 title: 'TUTORIAL: Jekyll Search with Non-JavaScript/CSS Fallback'
 date: 2013-11-21
 excerpt: jQuery-powered search functionality for a Jekyll site with fallback code if JS or CSS is disabled. Look at the demo before using the code.
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /custom-jekyll-search/
+image: jekyllSearchPostImage.jpg
+secondary_tags: ["jekyll", "javascript", "css"]
 tags: ["tutorials"]
-# og-image: jekyllSearchPostImage.jpg
+category: Tutorials
 ---
-<a href="/samples/jekyll-search/" class="demoLink" target="blank">VIEW THE DEMO</a>
 
-[Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site") is a static site generator: it creates static sites instead of database-driven ones. This means that it doesn't contain the site search functionality commonly bundled into CMS software like [WordPress](http://wordpress.org/ "Go to wordpress.org") and [Drupal](https://drupal.org/ "Go to drupal.org").
+<em>(August: 2025) Author's note: as of this note, this post is 12 years old.  It doesn't use Jekyll, doesn't use any of the Tipue search functionality and there are noted links that are broken.  But the process for detecting wheter or not CSS is disabled that's outlined below is pretty cool!!! Check that out if you like!!! -k</em>
+
+[Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site") is a static site generator: it creates static sites instead of database-driven ones. This means that it doesn't contain the site search functionality commonly bundled into CMS software like [WordPress](http://wordpress.org/ "Go to wordpress.org") and [Drupal](https://new.drupal.org/home "Go to drupal.org").
 
 A common solution to this problem is to use some sort of JavaScript-based search functionality, but this won't work if the end-user has disabled JS in their browser. This tutorial shows you how to not only add JS-powered search functionality to your static site, but also how to create a fallback search method for situations where either JavaScript or, as an added bonus, CSS is disabled.
 
@@ -45,7 +48,7 @@ Some notes...
 
 * The proper way to test this functionality is to disable both JavaScript and CSS __BEFORE__ the code runs in a browser.  Disabling JavaScript before page load in either Chrome or Firefox is easy enough with [Chris Pederick's Web Developer extension](http://chrispederick.com/work/web-developer/ "Get Chris Pederick's Web Developer extension").  But Pederick's tool currently can't disable CSS before page load. It can disable it afterwards but it won't stay disabled: CSS will be re-enabled after a page refresh and that doesn't help us. This [Stack Overflow post on disabling a browser's CSS](http://stackoverflow.com/questions/14046738/how-to-disable-css-in-browser-for-testing-purposes "Learn how to disable a browser's CSS") discusses how to do this for various browsers. Refer to it when doing cross-browser testing before production deployments but for performing rapid tests while in development, both the Firefox and Safari methods seem to be the easiest way to disable CSS before page load. Firefox is __*View &gt; Page Style &gt; No Style*__ while Safari is __*Develop > Disable Styles*__.
 
-* The JavaScript-powered search in this tutorial is provided by the [Tipue search plugin for jQuery](http://www.tipue.com/search/ "Read more about Tipue Search") but this post does not go into great detail on how of Tipue works. It bullet points what the code is doing to provide context for this tutorial, but that's it.  [Read the Tipue documentation](http://www.tipue.com/search/docs/ "Read the Tipue documentation") to fully understand how it works. Also, this method should work using static site search solutions other than Tipue: you will have to make code adjustments in some places, but it should still work.
+* The JavaScript-powered search in this tutorial is provided by the Tipue search plugin for jQuery <em>(link no longer exists)</em> but this post does not go into great detail on how of Tipue works. It bullet points what the code is doing to provide context for this tutorial, but that's it. Read the Tipue documentation <em>(link no longer exists)</em>  to fully understand how it works. Also, this method should work using static site search solutions other than Tipue: you will have to make code adjustments in some places, but it should still work.
 
 * At some point while reading this, you may say to yourself, "Isn't it easier to just place the fallback code inside a `<noscript>` tag?"...maybe, but that doesn't always work.  Plus, if you're coding in XHTML instead of any version of HTML, `<noscript>` won't work at all. [The W3C's HTML5 specification is clear about all this](http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-noscript-element "Read the noscript section of the HTML5 specification").
 
@@ -355,7 +358,7 @@ var loadSearchBox = document.getElementById("searchbox"),
   searchButton = document.createElement("input");
 </code></pre>
 
-We're using a [single var pattern](http://tech.diaslopes.com/?p=51 "Learn more about the single var pattern") to create five variables:
+We're using a [single var pattern](https://www.webfx.com/blog/web-design/single-var-pattern/ "Learn more about the single var pattern") to create five variables:
 
 * `loadSearchBox` is a variable reference to `<div id="searchbox"></div>`, which is already on our pages.
 * `frag` is a variable reference to a newly created document fragment, which is basically a virtual box created in browser memory.
