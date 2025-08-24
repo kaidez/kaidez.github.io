@@ -1021,7 +1021,7 @@ svg {
   }
 }
 
-/* Utilities */
+/* A screen reader utility */
 .sr-only {
   position: absolute;
   width: 1px;
