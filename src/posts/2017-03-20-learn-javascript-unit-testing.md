@@ -11,7 +11,7 @@ category: Coding Tips
 # thumb-image: learn-javascript-unit-testing-thumb.jpg
 ---
 <p style="margin: 30px 0 40px; border-bottom: black 1px solid;">
-<em>(Author's note - August 2025: Both this code and accompanying demo use Blanket.js, a tool for determine what percentage of your code is being tested. Blanket.js is no longer maintained and its author suggests using <a href="https://github.com/istanbuljs">Istanbul</a> as a replacement. Cloning this post's repo <strong>should</strong> allow you to run the demo while it has Blanket, but please be prepared for an issues coming up.  Past that, you may get something out of the unit testing conversation) -k</em>
+<em>(Author's note - August 2025: Both this code and accompanying demo use Blanket.js, a tool for determine what percentage of your code is being tested. Blanket is no longer maintained and its author suggests using <a href="https://github.com/istanbuljs">Istanbul</a> as a replacement. Cloning this post's repo <strong>should</strong> allow you to run the demo while it has Blanket, but please be prepared for an issues coming up.  Past that, you may get something out of the unit testing conversation) -k</em>
 </p>
 
 If you’re a self-taught JavaScript developer like me, you may not be doing JavaScript unit testing. Self-taught JS developers tend to jump right into coding and skip learning software development fundamentals...like unit testing.
@@ -398,7 +398,7 @@ Make sure to reset <code>log("");</code> to <code>log("I’m kind of a big deal"
 
 Should you <em>always</em> go for 100% code coverage when unit testing? Maybe: search the web and you’ll find a million different answers to the question.
 
-I say do your research and make you’re own decision, but we’re going for 100% coverage in this small example. And in JS unit testing, the most popular code coverage tool is <a href="https://github.com/alex-seville/blanket">Blanket.js</a>. 
+I say do your research and make you’re own decision, but we’re going for 100% coverage in this small example. And in JS unit testing, the most popular code coverage tool is Blanket.js. 
 
 We’ll add Blanket.js between <code>jquery.js</code> and <code>app.js</code> in <code>test/tests.html</code>:
 <pre><code class="language-markup">
