@@ -2,10 +2,12 @@
 title: 'What I Learned About Finding A Front End Web Developer Job In 2017-UPDATED'
 date: 2017-03-08
 excerpt: Random notes on my past & present experiences in looking for a front end web developer job in 2017. Has tips for code bootcamp graduates looking for work.
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /front-end-web-developer-job-search/
+image: web-dev-job.jpg
+category: Personal
 tags: ["personal"]
-# og-image: web-dev-job.jpg
+secondary_tags: ["web developer job", "javascript"]
 # thumb-image: web-dev-job-minify.jpg
 ---
 
@@ -31,6 +33,7 @@ After a short bout of unemployment, I got a new front end web developer job this
 I performed a pretty intensive job search to get to this point...more so than ever before. I learned a lot (a <em>whole</em> lot) about finding a web dev gig in 2017 so here are my random notes on the subject with hopes it helps other job seekers.
 
 <h2>A preamble...like I start all my posts</h2>
+
 For all the nervousness and anxiety that comes with unemployment, I knew I would get a job sooner than later. Regardless of what I do and don’t know as a web dev, I know enough that I wasn’t going to be out of work for <strong>too</strong> long...only a month in the end.
 
 But I also knew my limited experience with the currently in-demand frameworks and libraries (Angular, React, etc.) meant I would have to work harder than others in getting a job. I’d used them a bit in customer-facing sites and had played with them on my own, but my limited “on-the-job” experience with them was going to be an issue.
@@ -42,12 +45,15 @@ I kept all this in mind for each 2017 interview I went on: not just the startup 
 Here’s what I learned and I’ll start off positive...
 
 <h2>You WILL find a front end web developer job...</h2>
+
 If you have front end web development experience, you will get a job. You may encounter some rejections in the process, from jobs you really want and from jobs you thought you were going to get.
 
 But as long as you have verifiable web development experience, you will get a web dev job. End of story.
 
-<h2>...But how fast you get one will depend on your library/framework experience</h2>
+<h2>...But how fast you get one will depend on your library/framework experience/h2>
+
 I tweeted this once in 2016:
+
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">For a JavaScript developer, Angular is like cleaning out your garage. Procrastinate all you want but you’ll have to deal with it eventually.</p>&mdash; kai gittens (@kaidez) <a href="https://twitter.com/kaidez/status/684336335050641408?ref_src=twsrc%5Etfw">January 5, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -64,6 +70,7 @@ But it’s absolutely fair for employers to insist you have specific framework/l
 Frameworks solve problems for lots of companies who will spend money to hire (and keep) those that know them. At the time of this post, it’s good to have as much React/Redux and Angular knowledge as possible.
 
 <h2>Use your time off to ramp up on those frameworks and libraries</h2>
+
 If you have to ramp up on those frameworks and libs, do it while you’re unemployed. On my first jobless day, I spent a few hours at Starbucks going through a ton of React tutorials.
 
 Over the days, I moved onto some Redux tutorials, including <a href="https://egghead.io/courses/getting-started-with-redux">those kick-a\*\* free Redux tutorials on Egghead</a>. With that, I felt confident enough to put React on my resumé, which led to more interviews.
@@ -71,6 +78,7 @@ Over the days, I moved onto some Redux tutorials, including <a href="https://egg
 <em><strong>UPDATE:</strong> The Egghead course is taught by Redux creator Dan Abramov and is worth watching. But if you're a Redux beginner, I would suggest watching <a href="https://learnredux.com/">Wes Bos' free Redux course</a> first. It holds your hand a bit more and also discusses how to use Redux inside React and not just Redux.</em>
 
 <h2>You still need to know vanilla JavaScript</h2>
+
 Every job I applied for listed “JavaScript” as a required skillset. Not Angular or React or Ember or jQuery...JavaScript.
 
 Besides, those frameworks won’t work without JavaScript anyway. I had a task once that required I refactor raw JS inside an Angular controller.
@@ -93,6 +101,7 @@ Knowing all the above (and more) indicates if a developer can maintain, debug an
 <em><strong>UPDATE:</strong> Newbie developers still tell me that they can do without CSS preprocessors and that I think this attitude weakens their employability. Frankly, this really ticks me off so, I'm going to implement some tough-love here: all developers need CSS preprocessor skills...those without them are significantly less employable.</em>
 
 <h2>About those programming riddles...</h2>
+
 The Holman article discussed the importance that interviewers place on programming riddles. He said that interviewees getting them right was important at times, but not that much...especially when it was time for the developer to get to work.
 
 He’s right: I once worked with two awesome front end web developers who had to ramp up on Ember. They did this, got good with it over the course of a year, and were still looking for bug solves on Stack Overflow.
@@ -106,6 +115,7 @@ But a developer incorrectly answering a programming problem on the spot doesn’
 <em>(Side note: I found <a href="http://kolesky.com/datums/job-search/">Jeff Kolesky’s excellent article on job searching</a> after I got my new front end web developer job. It didn’t prep me for my job search but expands on the programming riddle points Zach made in his article. Read it.)</em>
 
 <h2>Try to go above and beyond with your answers to those questions</h2>
+
 Still, you’re going to have to deal with those questions, just like I had to. A web search will give you a list of the most common web developer interview questions, and their answers.
 
 The most common JS questions I got in interviews were on <code>call</code>, <code>apply</code>, <code>this</code>/lexical scope, closures and Promises. But before you search for the perfect answer to a Promises question, ask yourself this:
@@ -148,21 +158,25 @@ Bootcamp graduates deserve respect for the work they put into become developers 
 <em><strong>UPDATE:</strong> I still speak to hiring manager & recruiter friends regularly and from what I'm hearing, it's not getting any easier for Bootcamp grads. There are tons of unfilled front end web developer jobs out there at the time of this update: the hiring managers in charge of filling them are ignoring the bootcamp resum&eacute;s more than they're reading them. In fact, companies are looking at computer science graduates more and more to fill these jobs, not because they're the only ones that know JavaScript & CSS, but because it further weeds out the bootcampers.</em>
 
 <h2>Learn more server-level Node</h2>
+
 Any front end web developer job will require using Node-powered tooling on the command line: Grunt, Gulp, etc. But employers increasingly want front end web devs with Node server experience as well.
 
 This is occurring everywhere and not just at startups (like I thought). According to the LinkedIn listings I saw, American Express, A&E and Bank of America want Node server developers as well.
 
 <h2>Indeed is the best online job search tool</h2>
+
 LinkedIn is a feature-rich social network built around searching for a job. <a href="https://www.indeed.com/">Indeed</a> does one thing and one thing well: it lets you search for jobs.
 
 Indeed has a barebones, Google-like search interface, displays your recent searches on the homepage and has a simple job-applying workflow. I got more face-to-face and phone interviews with it than with any other job searching resource.
 
 <h2>Using Dice leads to spam</h2>
+
 I applied for one job through Dice...ONE JOB!!! Fifteen minutes later, I started getting slammed with recruiter calls and emails.
 
 If you <em>really</em> need a job and want to use every resource available, you can use Dice. But using it brings on too much aggravation, at least, it did for me.
 
 <h2>Conclusion</h2>
+
 There’s a saying that “You need to treat finding a job as a job” and I did just that. I went on a job applying spree where at one point, I went on eight interviews in one week: with <strong>four on the same day</strong>.
 
 I learned a lot about in-demand skill sets, interviewing techniques, job sites and recruiters along the way. It was an informative journey...one that ended in my getting a new front end web developer job.
