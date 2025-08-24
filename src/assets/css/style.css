@@ -271,6 +271,10 @@ svg {
   padding: 0;
 }
 
+.site-nav li{
+  margin-left: auto;
+}
+
 .site-nav a {
   color: var(--color-black);
   font-weight: 600;
@@ -787,6 +791,19 @@ svg {
   padding: 20px;
   text-align: center;
 }
+
+.error-404-content {
+  display: grid;
+  grid-template-columns: 440px auto;
+  gap: 20px;
+}
+
+.error-404-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
 @media (min-width: 767px) {
   .mobile-menu-icon {
     display: none;
@@ -831,6 +848,8 @@ svg {
   .site-nav ul li {
     gap: 2rem;
     display: flex;
+    margin-left:auto;
+    
   }
 
   .site-nav ul li a {
