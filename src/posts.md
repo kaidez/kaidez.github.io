@@ -1,7 +1,6 @@
 ---
 layout: layouts/base.njk
 title: View all kaidez.com posts
-permalink: "/posts{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber }}{% endif %}/index.html"
 pagination:
   data: collections.posts
   size: 10
@@ -35,11 +34,4 @@ pagination:
     </article>
   {%- endfor %}
 
-  <div class="previous-next-button-container">
-    <div class="previous-next-button">
-      {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}"><i class="fa-solid fa-arrow-left-long"></i> Previous Page</a>{% endif %}
-    </div>
-    <div class="previous-next-button">
-      {% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next Page <i class="fa-solid fa-arrow-right-long"></i></a>{% endif %}</div>
-  </div>
 </section>

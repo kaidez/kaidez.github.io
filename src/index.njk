@@ -1,6 +1,11 @@
 ---
 layout: layouts/base.njk
 title: Tutorials & Articles about Web Development - kaidez
+permalink: "/{% if pagination.pageNumber > 0 %}/page-{{ pagination.pageNumber }}{% endif %}/index.html"
+pagination:
+  data: collections.posts
+  size: 10
+  alias: posts
 ---
 
 <section class="container">
@@ -27,9 +32,11 @@ title: Tutorials & Articles about Web Development - kaidez
     {% endfor %}
   </div>
 
-  <div style="text-align: center; margin-top: 3rem;">
-    <a href="/posts/" class="button-older-posts">
-      OLDER POSTS
-    </a>
+  <div class="previous-next-button-container">
+    <div class="previous-next-button">
+      {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}" class="pagination-buttons"><i class="fa-solid fa-arrow-left-long"></i> PREVIOUS PAGE</a>{% endif %}
+    </div>
+    <div class="previous-next-button">
+      {% if pagination.href.next %}<a href="{{ pagination.href.next }}" class="pagination-buttons">NEXT PAGE <i class="fa-solid fa-arrow-right-long"></i></a>{% endif %}</div>
   </div>
 </section>

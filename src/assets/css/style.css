@@ -463,17 +463,21 @@ svg {
   font-family: var(--font-family-kaidez-secondary-font)
 }
 
-.button-older-posts {
+.pagination-buttons {
   display: inline-block;
   padding: 0.75rem 1.5rem;
   background: var(--color-kaidez-supreme-red);
+  text-decoration: none;
   color: white;
-  font-style: italic;
   font-weight: 900;
-  width: 240px;
-  font-size: var(--text-2xl);
+  width: 190px;
+  font-size: var(--text-sm);
   font-style: italic;
   font-family: var(--font-family-kaidez-primary-font)
+}
+
+.pagination-buttons:hover {
+  color: var(--color-black);
 }
 
 /* Category Pages Styling */
