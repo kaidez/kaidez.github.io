@@ -194,7 +194,7 @@ a:hover {
 
 time {
   margin: 0 auto 20px;
-  color: var( --color-gray-500)
+  color: var(--color-gray-500);
 }
 
 /* Layout */
