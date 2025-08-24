@@ -4,8 +4,10 @@ date:   2017-11-06
 excerpt: React/Redux are part of JavaScript's progression to a full application language. Study this progression to prepare yourself for the future.
 layout: layouts/post.njk
 permalink: /javascript-state/
+image: state-of-javascript.jpg
 tags: ["personal"]
-# og-image: state-of-javascript.jpg
+secondary_tags: ["javascript", "react/redux", "rant"]
+category: Personal
 # thumb-image: state-of-javascript-thumb.jpg
 ---
 React and Redux combined have demonstrated the value of well-implemented state management in JavaScript applications. Despite this, lots of front-end web developers complain about it.
@@ -69,7 +71,8 @@ Google used <code>XMLHttpRequest</code> to build Gmail and Google Maps, two apps
 But as awesome as it was, <code>XMLHttpRequest</code> didn't change (most of) the world's opinion that the web was a fad.
 
 <h2>...A Guy Writes A Blog Post</h2>
-That changed when web developer Jesse James Garrett <a href="http://adaptivepath.org/ideas/ajax-new-approach-web-applications/">wrote a blog post defining apps that used <code>XMLHttpRequest</code> as "AJAX applications"</a>.
+
+That changed when web developer Jesse James Garrett <a href="https://designftw.mit.edu/lectures/apis/ajax_adaptive_path.pdf">wrote a blog post defining apps that used <code>XMLHttpRequest</code> as "AJAX applications"</a>.
 
 The article outlined how to build a web page that could load content without using page refreshes. In order to build AJAX apps, it said, you needed <code>XMLHttpRequest</code>, CSS, JavaScript and, of course, the DOM.
 
@@ -87,12 +90,14 @@ JSON was essentially data stored in back-end database systems that was sent to t
 
 With AJAX, JSON and DOM best practices in place, it made sense to encapsulate the practices in complete software bundles. One-stop pieces of software that gave developers all the tools they needed to build an app.
 
-That's where JavaScript frameworks and libraries came in. <a href="http://www.javascriptmvc.com/">JavaScript MVC</a>, <a href="https://dojotoolkit.org/">Dojo</a> and <a href="http://backbonejs.org/">Backbone</a> were the first popular ones, then came Angular, Ember, Dart, Knockout...and on and on.
+That's where JavaScript frameworks and libraries came in. JavaScript MVC (link is broken), <a href="https://dojotoolkit.org/">Dojo</a> and <a href="http://backbonejs.org/">Backbone</a> were the first popular ones, then came Angular, Ember, Dart, Knockout...and on and on.
 
 <h2>...The ES6 Makeover Arrives...</h2>
+
 Next, JavaScript got a major update called <a href="http://exploringjs.com/es6/">ES6</a>, or ES2015. Its syntax and features closely matched those of the more "traditional" programming languages: Java, C#, etc.
 
 <h2>...At (Roughly) The Same Time That React Arrives</h2>
+
 And then came React. It's a library for building the view portion of your application.
 
 React views are built using <a href="https://css-tricks.com/modular-future-web-components/">web components</a>, which have been around for a while but are now rising in popularity. A web component is a custom HTML tag encapsulates that other tags, CSS and JS functionality...it's essentially a widget.
@@ -109,7 +114,7 @@ In React, <strong>changes like this happen by updating the state...<em>not</em> 
 
 <h2>And now...Redux...</h2>
 
-Redux came out as a set of tools for managing and manipulating application state. It's based on <a href="https://facebook.github.io/flux/">Facebook's Flux design pattern</a> and was initially written to work with React, but it can work with any JavaScript library or framework.
+Redux came out as a set of tools for managing and manipulating application state. It's based on <a href="https://github.com/facebookarchive/flux">Facebook's Flux design pattern</a> and was initially written to work with React, but it can work with any JavaScript library or framework.
 
 It's possible for your app to have 20 React components, where each component manages it own state object. Redux takes the position that application state shouldn't be spread out like this and, instead, should be managed in one object.
 
@@ -148,20 +153,20 @@ And when you see that <a href="https://www.theregister.co.uk/2017/04/24/stanford
   ...
   </p>
    <p>
-  It’s getting real complicated. A background in computer science lays a lot of the groundwork so that you’re not making stupid mistakes and taking four months to learn how you should have done things. Yeah, computer science has a big influence on where the trajectory of front-end development is going, for sure.
+  It’s getting real complicated. A background in computer science lays a lot of the groundwork so that you’re not making stupid mistakes and taking four months to learn how you should have done things...Yeah, computer science has a big influence on where the trajectory of front-end development is going, for sure.
   </p>
   <div>
     <img src="/assets/img/paul-irish-photo.jpg" alt="Paul Irish" style="border-radius: 16px;">
     <p style="margin-bottom: 0">-Paul Irish</p>
     <p>
-      <a href="http://blog.teamtreehouse.com/treehouse-friends-paul-irish" style="font-size: 14px;">Source</a>
+      <a href="https://youtu.be/JhWGSD_TY2Y?si=I7WVzx0Sg68OA3q1&t=370" style="font-size: 14px;">Source</a>
     </p>
   </div>
 </blockquote>
 
 <h2>Where do we go from here?</h2>
 
-<a href="https://devchat.tv/js-jabber/124-jsj-the-origin-of-javascript-with-brendan-eich">Brendan Eich has said he created JavaScript with the beginner developer in mind</a>, but the language has progressed pass that. And will continue to do so.
+<a href="https://topenddevs.com/podcasts/javascript-jabber/episodes/124-jsj-the-origin-of-javascript-with-brendan-eich">Brendan Eich has said he created JavaScript with the beginner developer in mind</a>, but the language has progressed pass that. And will continue to do so.
 
 So the next step for us self-taught developers to embrace traditional computer science concepts. I went through <a href="https://www.youtube.com/playlist?list=PLB2BE3D6CA77BB8F7">this MIT intro to computer science course</a> and liked it, but you should take some time and search for other courses.
 
