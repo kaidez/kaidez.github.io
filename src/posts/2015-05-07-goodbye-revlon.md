@@ -2,8 +2,9 @@
 title: "Goodbye, Revlon"
 date: 2015-05-07
 
-layout: layouts/base.njk
+
 excerpt: After almost ten years, I'm leaving Revlon to pursue a exciting new opportunity.
+layout: layouts/base.njk
 permalink: /revlon/
 tags: ["personal"]
 # og-image: revlon-badge.jpg
