@@ -2,7 +2,7 @@
 title: 'TUTORIAL: Load data attributes with Mouse Clicks'
 date: 2014-12-01
 excerpt: "Use mouse clicks to load information stored in data attributes onto a web page in a cross-browser compatible way. Contains lots of demos."
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /load-data-attributes-mouseclicks/
 tags: ["tutorials"]
 # og-image: data-attribute.jpg

@@ -1,7 +1,7 @@
 ---
 title: 'Social Media Week/NYC Recap &#8211; SOCIAL LISTENING PANEL'
 
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /nyc-social-media-week-event-recap-social-listening/
 excerpt: The social listening panel at NYC Social Media Week showed how companies like Pepsi track their products within the social networks
 # og-image: default-image.jpg

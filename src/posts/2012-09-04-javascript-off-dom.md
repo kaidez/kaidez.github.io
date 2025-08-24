@@ -2,7 +2,7 @@
 title: 'SCREENCAST TUTORIAL: Using JavaScript Off-DOM'
 date: 2012-09-04
 excerpt: How to create/change page elements off-DOM with JavaScript. Discusses createDocumentFragment, cloneNode, appendChild, jQuery .attr() & more.
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /javascript-off-dom/
 tags: ["tutorials"]
 # og-image: default-image.jpg

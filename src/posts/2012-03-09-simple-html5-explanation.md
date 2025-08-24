@@ -1,7 +1,7 @@
 ---
 title: A Simple Explanation of HTML5
 date: 2012-03-09
-layout: layouts/base.njk
+layout: layouts/post.njk
 excerpt: A lengthy but simple explanation of what HTML5 is with suggestions on how business can use it. Very little technical language is used.
 permalink: /simple-html5-explanation/
 tags: [coding-best-practices]

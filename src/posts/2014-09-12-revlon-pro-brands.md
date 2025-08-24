@@ -2,7 +2,7 @@
 title: 'New Site I Worked On: RevlonProBrands.com'
 date: 2014-09-12
 excerpt: kaidez developed the RevlonProBrands.com site using GitHub Atom, Jade, OOCSS, Modernizr’s yepnope functionality, Gulp & Grunt.
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /revlon-pro-brands/
 tags: ["personal"]
 # og-image: revlon-pro-brands.jpg

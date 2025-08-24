@@ -2,7 +2,7 @@
 title: "New York Times Article On HTML5: Their New HTML5 Site"
 date: 2011-04-06
 excerpt: A great New York Times piece on HTML5 application development and a demo of their new HTML5 Skimmer site
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /new-york-times-article-html5-html5-site/
 tags: [coding-best-practices]
 # og-image: default-image.jpg

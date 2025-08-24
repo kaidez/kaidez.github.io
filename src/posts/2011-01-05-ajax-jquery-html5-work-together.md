@@ -3,7 +3,7 @@ title: 'TUTORIAL: How AJAX, jQuery and HTML5 Work Together'
 
 
 excerpt: AJAX, jQuery and HTML5 are big buzz words in the web design/development community nowadays.  While getting these web technologies to work together is exciting, the programming required to do this isn't new.
-layout: layouts/base.njk
+layout: layouts/post.njk
 date:   2011-01-05
 permalink: /ajax-jquery-html5-work-together/
 tags: ["tutorials"]

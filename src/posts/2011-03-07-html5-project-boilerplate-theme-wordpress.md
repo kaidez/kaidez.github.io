@@ -1,7 +1,7 @@
 ---
 title: 'HTML5 Project: Boilerplate WordPress Theme'
 date: 2011-03-07
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /html5-project-boilerplate-theme-wordpress/
 excerpt: Walk-through of Aaron T. Grogg's excellent HTML5 Boilerplate-based WordPress theme. Includes a great admin screen for custom configuration.
 tags: [coding-best-practices]

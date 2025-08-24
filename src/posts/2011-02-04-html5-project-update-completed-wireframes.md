@@ -2,7 +2,7 @@
 title: 'HTML5 Project: WIREFRAME SERIES &#8211; INTRO'
 
 
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /html5-project-update-completed-wireframes/
 excerpt: HTML5 wireframe preview of kaidez.com portfolio site
 tags: ["personal"]

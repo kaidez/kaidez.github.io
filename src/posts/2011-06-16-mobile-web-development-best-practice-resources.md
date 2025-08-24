@@ -2,7 +2,7 @@
 title: 5 Mobile Web Development Best Practice Resources
 date: 2011-06-16
 excerpt: Great mobile web development best practice resource list-includes site speed gurus, blogs & a podcast featuring jQuery creator, John Resig.
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /mobile-web-development-best-practice-resources/
 tags: [coding-best-practices]
 # og-image: default-image.jpg

@@ -2,7 +2,7 @@
 title: 'TUTORIAL: What NYC Subways Can Teach Us About JavaScript Closures'
 date: 2012-03-27
 excerpt: JavaScript closures tutorial using the New York City subway to explain how they work. With demo, code samples and short reading list.
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /javascript-closures-tutorial/
 tags: ["tutorials"]
 # og-image: default-image.jpg

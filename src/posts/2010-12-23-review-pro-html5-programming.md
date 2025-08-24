@@ -2,7 +2,7 @@
 title: 'REVIEW: Pro HTML5 Programming'
 date: 2010-12-23
 excerpt: A review of the Pro HTML5 Programming by Apress
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /review-pro-html5-programming/
 tags: ["reviews"]
 # og-image: default-image.jpg

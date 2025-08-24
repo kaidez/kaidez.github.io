@@ -2,7 +2,7 @@
 title:  "jQuery: It’s OK To Use It"
 date:   2016-05-12
 excerpt: jQuery allows for too much productivity for web developers to stop using it completely. But they should understand when to use it, and why.
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /use-jquery/
 tags: [coding-best-practices]
 # og-image: use-jquery.jpg

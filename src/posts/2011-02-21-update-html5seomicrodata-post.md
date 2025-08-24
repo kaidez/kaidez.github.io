@@ -2,7 +2,7 @@
 title: Update to My HTML5/SEO/Microdata Post
 date: 2011-02-21
 excerpt: Oli Studholme from HTML5 Doctor corrects my previous post on HTML5, SEO and microdata
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /update-html5seomicrodata-post/
 tags: [coding-best-practices]
 # og-image: default-image.jpg

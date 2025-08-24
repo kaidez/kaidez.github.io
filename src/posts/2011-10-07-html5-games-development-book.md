@@ -2,7 +2,7 @@
 title: 'REVIEW: HTML5 Games Development by Example: Beginner’s Guide'
 date: 2011-10-07
 excerpt: Great book for learning HTML5 games development as well as web development best practices. Discusses offline storage, Canvas, node.js & more!
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /html5-games-development-book/
 tags: ["reviews"]
 # og-image: default-image.jpg

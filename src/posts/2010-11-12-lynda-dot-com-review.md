@@ -2,7 +2,7 @@
 title: 'REVIEW: lynda.com'
 
 
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /lynda-dot-com-review/
 excerpt: A mostly positive review of lynda.com and its courses, front-end development and PhotoShop are discussed.
 

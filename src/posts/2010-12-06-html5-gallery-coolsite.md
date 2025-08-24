@@ -2,7 +2,7 @@
 title: 'HTML5 Gallery: NEW COOLSITE!'
 
 
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /html5-gallery-coolsite/
 excerpt: HTML5 Gallery, mostly maintained by the HTML5 expert over at HTML5 Doctor, is added to kaidez.com's Coolsite list
 

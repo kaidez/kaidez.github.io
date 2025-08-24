@@ -2,7 +2,7 @@
 title: New Mitchum Project I Worked On
 date: 2011-05-18
 excerpt: The new Mitchum site was developed with HTML5 using HTML5 Boilerplate, Visual Studio 2010 with NuGet, CSS and some light jQuery
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /mitchum-html5-site/
 tags: ["personal"]
 # og-image: default-image.jpg

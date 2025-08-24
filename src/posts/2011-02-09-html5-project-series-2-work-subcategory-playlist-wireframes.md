@@ -2,7 +2,7 @@
 title: 'HTML5 Project: WIREFRAME SERIES #2 –  WORK &#038; NIKO&lsquo;S PLAYLIST PAGES'
 
 
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /html5-project-series-2-work-subcategory-playlist-wireframes/
 excerpt: Part Two of my explanation on how I created wireframed my HTML5 site before I developed and designed it
 tags: ["personal"]

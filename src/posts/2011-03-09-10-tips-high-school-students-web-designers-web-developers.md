@@ -2,7 +2,7 @@
 title: 10 Tips For High Schoolers Wanting To Be Web Designers Or Developers
 date: 2011-03-09
 excerpt: An extensive article with tips, resources and ideas for high school students wanting to work in the web design or development field someday
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /10-tips-high-school-students-web-designers-web-developers/
 tags: ["personal"]
 # og-image: default-image.jpg

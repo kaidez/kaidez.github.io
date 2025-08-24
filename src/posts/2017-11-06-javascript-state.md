@@ -2,7 +2,7 @@
 title:  'The State of JavaScript'
 date:   2017-11-06
 excerpt: React/Redux are part of JavaScript's progression to a full application language. Study this progression to prepare yourself for the future.
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /javascript-state/
 tags: ["personal"]
 # og-image: state-of-javascript.jpg

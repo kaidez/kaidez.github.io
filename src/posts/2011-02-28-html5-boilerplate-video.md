@@ -2,7 +2,7 @@
 title: The HTML5 Boilerplate Video is AWESOME!!!!!!
 date: 2011-02-28
 excerpt: Paul Irish's HTML5 Boilerplate video is extremely informative as it demonstrates many great CSS and JavaScript hacks and best practices
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /html5-boilerplate-video/
 tags: [coding-best-practices]
 # og-image: default-image.jpg

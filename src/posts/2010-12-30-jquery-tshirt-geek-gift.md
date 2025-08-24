@@ -2,7 +2,7 @@
 title: 'jQuery T-shirt &#8211; Geek Gift To Myself'
 date: 2010-12-30
 excerpt: My cool jQuery t-shirt
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /jquery-tshirt-geek-gift/
 tags: ["personal"]
 # og-image: default-image.jpg

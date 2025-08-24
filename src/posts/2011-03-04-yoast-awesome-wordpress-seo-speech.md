@@ -2,7 +2,7 @@
 title: "Yoast's Awesome WordPress SEO Speech"
 date: 2011-03-04
 excerpt: A quick review of a great WordPress SEO speech from Joost de Valk, AKA Yoast, with the video embedded on the page for instant viewing
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /yoast-awesome-wordpress-seo-speech/
 tags: [coding-best-practices]
 # og-image: default-image.jpg

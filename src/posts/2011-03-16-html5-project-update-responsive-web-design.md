@@ -2,7 +2,7 @@
 title: 'HTML5 Project Update: Changing To A Responsive Web Design Using CSS3 Media Queries'
 date: 2011-03-16
 excerpt: An article on responsive web design, CSS3 media queries and using it in kaidez's HTML5 Project, resource list of links at the end
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /html5-project-update-responsive-web-design/
 tags: [coding-best-practices]
 # og-image: default-image.jpg

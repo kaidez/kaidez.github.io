@@ -2,7 +2,7 @@
 title: The Two Best Books On The Dot-com Rush
 
 
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /books-dotcom-rush/
 excerpt: Michael Lewis and Joseph Menn wrote to great books on the Dot-com Rush.
 

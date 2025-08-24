@@ -2,7 +2,7 @@
 title: Updates To Coolsites and HTML5/jQuery Resources
 
 
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /updates-coolsites-jquery-html5-resources/
 excerpt: Additions to my list of resources to help you learn web design and development and my Coolsites list, including a Sitecore and .NET development blog
 tags: ["personal"]

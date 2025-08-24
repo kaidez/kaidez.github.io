@@ -2,7 +2,7 @@
 title: 'kaidez 2013 Site Redesign'
 date: 2013-10-11
 excerpt: kaidez.com uses Jekyll as a blog engine, Grunt as a task runner, RequireJS for modular JavaScript management, & Bower for package management
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /site-redesign-2013/
 tags: ["personal"]
 # og-image: site-relaunch.jpg

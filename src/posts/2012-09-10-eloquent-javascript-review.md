@@ -2,7 +2,7 @@
 title: "REVIEW: Eloquent JavaScript"
 date: 2012-09-10
 excerpt: Great JavaScript book for beginners covering the fundamentals in detail, focusing on how to use them in web applications, not just websites.
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /eloquent-javascript-review/
 tags: ["reviews"]
 # og-image: default-image.jpg

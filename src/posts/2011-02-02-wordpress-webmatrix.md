@@ -2,7 +2,7 @@
 title: 'WordPress & WebMatrix'
 
 
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /wordpress-webmatrix/
 excerpt: Using WebMatrix to create a WordPress development site
 # og-image: default-image.jpg

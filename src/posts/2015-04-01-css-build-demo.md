@@ -2,7 +2,7 @@
 title: "SCREENCAST: CSS Build Demo"
 date: 2015-04-01
 excerpt: A demo of how to optimize CSS with Gulp, Grunt and tasks like uncss and critical path css. Has a link to fully-commented code on GitHub.
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /css-build-demo/
 tags: [coding-best-practices]
 # og-image: css-build-demo.jpg

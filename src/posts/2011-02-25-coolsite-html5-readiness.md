@@ -2,7 +2,7 @@
 title: HTML5 Readiness -  NEW COOLSITE!
 date: 2011-02-25
 excerpt: HTML5 Readiness neatly displays browser support for HTML5 and CSS3
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /coolsite-html5-readiness/
 tags: [coding-best-practices]
 # og-image: default-image.jpg

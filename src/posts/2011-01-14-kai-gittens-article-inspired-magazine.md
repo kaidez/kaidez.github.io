@@ -2,7 +2,7 @@
 title: Read My Article At Inspired Magazine!!!
 
 
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /kai-gittens-article-inspired-magazine/
 excerpt: Kaidez guest post at Inspired Magazine responded to Cameron Chapman's web designer article at Smashing Magazine
 tags: ["personal"]

@@ -1,7 +1,7 @@
 ---
 title: A Short History of Flash (how I saw it)
 
-layout: layouts/base.njk
+layout: layouts/post.njk
 excerpt: kaidez's view of Flash's evolution, rise and (somewhat) fall.
 permalink: /history-of-flash/
 tags: ["personal"]

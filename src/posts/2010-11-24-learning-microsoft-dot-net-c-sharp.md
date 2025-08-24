@@ -1,7 +1,7 @@
 ---
 title: "I'm Focusing On .NET C#"
 
-layout: layouts/base.njk
+layout: layouts/post.njk
 excerpt: kaidez lays out a plan on how he'll learn .NET/C#.
 permalink: /learning-microsoft-dot-net-c-sharp/
 tags: ["personal"]

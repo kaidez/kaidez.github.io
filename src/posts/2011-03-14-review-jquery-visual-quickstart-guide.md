@@ -2,7 +2,7 @@
 title: 'REVIEW: jQuery: Visual Quickstart Guide'
 date: 2011-03-14
 excerpt: "A negative review of Peachpit Press' jQuery: Visual Quickstart Guide, but it doesn't take away from the fact that the VQS Series is great"
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /review-jquery-visual-quickstart-guide/
 tags: ["reviews"]
 # og-image: default-image.jpg

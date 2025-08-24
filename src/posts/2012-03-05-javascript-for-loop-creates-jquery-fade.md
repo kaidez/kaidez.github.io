@@ -2,7 +2,7 @@
 title: 'SCREENCAST TUTORIAL: JavaScript for() loop That Creates A jQuery Fade In/Fade Out'
 date: 2012-03-05
 excerpt: JavaScript for loop dynamically creates a jQuery fade in/fade out effect with a delay; includes a demo, code sample and screencast tutorial.
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /javascript-for-loop-creates-jquery-fade/
 tags: ["tutorials"]
 

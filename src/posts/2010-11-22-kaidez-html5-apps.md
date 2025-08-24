@@ -2,7 +2,7 @@
 title: My HTML5 Applications
 date:   2010-11-22
 excerpt: I'm starting to narrow down what my favorite HTML5 tools are.
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /kaidez-html5-apps/
 tags: [coding-best-practices]
 # og-image: default-image.jpg

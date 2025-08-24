@@ -2,7 +2,7 @@
 title: 'My 50th Article &#8211; A Retrospective!'
 date: 2011-04-11
 excerpt: kaidez reviews his progress with learning web development and how his blog is doing in terms of content, SEO and social network promotion
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /50th-article-blog-review/
 tags: ["personal"]
 # og-image: default-image.jpg

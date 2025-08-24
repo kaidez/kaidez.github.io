@@ -2,7 +2,7 @@
 title: Easy-To-Read Version of The HTML5 Specification
 date: "2011-03-11"
 excerpt: Ben Schwarz gives us HTML5-A technical specification for Web developers, translating WHATWG's HTML5 arduous spec into layman's terms
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /easy-to-read-html5-spec/
 tags: [coding-best-practices]
 # og-image: default-image.jpg

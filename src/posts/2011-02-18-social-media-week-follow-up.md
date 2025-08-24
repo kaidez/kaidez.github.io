@@ -2,7 +2,7 @@
 title: 'Social Media Week Follow-Up &#038; A Word From Panelist Kristin Volk'
 
 
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /social-media-week-follow-up/
 excerpt: Kristin Volk of MediaVest added some extra information to my recap of the Cross-Mobile Promotion panel at the 2011 NYC Social Media Week
 

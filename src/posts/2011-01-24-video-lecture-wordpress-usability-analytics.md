@@ -2,7 +2,7 @@
 title: 'Great Video Lecture on WordPress Usability &#038; Analytics'
 date: 2011-01-24
 excerpt: Stefanos Kofopoulos from pestaola.gr shares some excellent usability & analytics tips that he applied to his Wordpress-based blog.
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /video-lecture-wordpress-usability-analytics/
 tags: [coding-best-practices]
 # og-image: default-image.jpg

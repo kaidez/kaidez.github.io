@@ -2,7 +2,7 @@
 title: 10 Things To Remember About HTML5 Video
 excerpt: HTML5 Video Tips from kaidez
 date: 2011-01-19
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /html5-video-tips-january-2011/
 tags: [coding-best-practices]
 # og-image: default-image.jpg

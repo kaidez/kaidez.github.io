@@ -2,7 +2,7 @@
 title: 'GitHub Tutorial Update'
 date: 2013-10-17
 excerpt: kaidez's Git/GitHub tutorial is updated to be shorter, provide information faster and by providing 2 new links to the learning resource list
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: github-tutorial-update/
 tags: ["personal"]
 # og-image: gitTutorial.jpg

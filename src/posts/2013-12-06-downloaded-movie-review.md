@@ -1,7 +1,7 @@
 ---
 title: "REVIEW: Downloaded"
 date: 2012-12-06
-layout: layouts/base.njk
+layout: layouts/post.njk
 excerpt: The Napster documentary recaps the company’s story and the atmosphere it created, but it doesn't tell the whole story.
 permalink: /downloaded-movie-review/
 tags: ["reviews"]

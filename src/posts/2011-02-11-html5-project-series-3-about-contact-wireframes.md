@@ -2,7 +2,7 @@
 title: 'HTML5 Project: WIREFRAME SERIES #3 –  ABOUT &#038; CONTACT PAGES'
 
 
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /html5-project-series-3-about-contact-wireframes/
 excerpt: Final article in the HTML5 wireframe series for the kaidez portfolio site
 tags: ["personal"]

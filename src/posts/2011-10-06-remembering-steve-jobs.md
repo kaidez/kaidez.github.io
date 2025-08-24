@@ -2,7 +2,7 @@
 title: Remembering Steve Jobs
 date: 2011-10-06
 excerpt: kaidez recalls the best about Steve Jobs
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /remembering-steve-jobs/
 tags: ["personal"]
 # og-image: default-image.jpg

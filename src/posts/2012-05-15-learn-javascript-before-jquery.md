@@ -3,7 +3,7 @@ title: 5 Reasons Why You Need To Learn To Use JavaScript Before jQuery
 date: 2012-05-15
 excerpt: A list of good reasons why it's better to learn JavaScript before jQuery. A short learning resource list at the end to help you get started.
 permalink: /learn-javascript-before-jquery/
-layout: layouts/base.njk
+layout: layouts/post.njk
 tags: [coding-best-practices]
 # og-image: default-image.jpg
 ---

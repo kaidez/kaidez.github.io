@@ -2,7 +2,7 @@
 title: HTML5 Recent Article Roundup
 
 
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /html5-article-roundup/
 excerpt: A list of great HTML5 articles compiled by kaidez
 

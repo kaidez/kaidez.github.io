@@ -2,7 +2,7 @@
 title: New Almay Project I Worked On
 
 
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /almay-project-using-html5-net-jquery/
 excerpt: Kaidez developed four micro-sites for Almay using HTML5 video, jQuery, .NET and CSS
 tags: ["personal"]
