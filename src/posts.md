@@ -35,9 +35,11 @@ pagination:
     </article>
   {%- endfor %}
 
-
-{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous Page</a> |{% endif %}
-
-{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next Page</a>{% endif %}
-
+  <div class="previous-next-button-container">
+    <div class="previous-next-button">
+      {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}"><i class="fa-solid fa-arrow-left-long"></i> Previous Page</a>{% endif %}
+    </div>
+    <div class="previous-next-button">
+      {% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next Page <i class="fa-solid fa-arrow-right-long"></i></a>{% endif %}</div>
+  </div>
 </section>

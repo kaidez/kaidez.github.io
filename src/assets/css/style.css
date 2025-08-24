@@ -771,6 +771,18 @@ svg {
   font-size: var(--text-base);
 }
 
+.previous-next-button-container {
+  display: grid;
+  /* Defines two columns, each taking an equal fraction of the available space */
+  grid-template-columns: auto auto;
+  /* Adds a gap between the grid items */
+  gap: 20px;
+}
+
+.previous-next-button {
+  padding: 20px;
+  text-align: center;
+}
 @media (min-width: 767px) {
   .mobile-menu-icon {
     display: none;
@@ -883,6 +895,11 @@ svg {
 
     .container {
       padding: 0 var(--space-3);
+    }
+
+    .previous-next-button-container {
+      /* On screens smaller than 600px, items will stack in a single column */
+      grid-template-columns: 1fr;
     }
 
     /* .header-content {
