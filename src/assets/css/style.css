@@ -420,7 +420,7 @@ svg {
 }
 
 .post-content li {
-  margin-bottom: 24px;
+  margin-bottom: 10px;
   font-size: var(--text-xl);
 }
 

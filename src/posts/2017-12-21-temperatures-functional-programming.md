@@ -2,10 +2,12 @@
 title:  "Display Temperature Averages with JavaScript Functional Programming"
 date:   2017-12-21
 excerpt: Use JavaScript functional programming to display average temperatures in certain cities. Uses the .map() & .reduce() methods. Includes demo.
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /temperatures-functional-programming/
+image: temperature-functional-programming.jpg
 tags: ["tutorials"]
-# og-image: temperature-functional-programming.jpg
+secondary_tags: ["javascript"]
+category: Tutorials
 # thumb-image: temperature-functional-programming-thumb.jpg
 ---
 <a href="https://codepen.io/kaidez/pen/qpZrzw">See Demo &raquo;</a>
@@ -29,6 +31,7 @@ I came across a pretty neat challenge on a Facebook beginning developers group I
 
 <a name="challenge"></a>
 <h2>The Challenge</h2>
+
 There was an array of arrays. Each inner array represented either column header info or a list containing both temperatures for a city and the city name itself.
 
 The array of arrays looked like this:
@@ -45,6 +48,7 @@ The array of arrays looked like this:
 
 I had to calculate the average temperature for each city, then run code that displayed the array data like this:
 <img src="/assets/img/temperature-display.jpg" class="post__image">
+
 There were a few challenges here:
 <ul>
   <li class="post__list-item">How do I look at <em>just</em> the numbers in the array to get the average?</li>
@@ -54,6 +58,7 @@ There were a few challenges here:
 
 <a name="solution"></a>
 <h2>The Solution</h2>
+
 The solution was, well, to use functional programming. In other words, I had to <strong>create separate functions that implemented specific parts of the above-described tasks</strong>.
 
 I did this by:
@@ -96,8 +101,10 @@ The <a href="http://getbem.com/introduction/">BEM-like CSS</a> will look like th
   margin-right: 30px;
 }
 </code></pre>
+
 <a name="determine-arrays"></a>
 <h2>Determine the Inner Arrays</h2>
+
 First, I created a function that checked if the inner array had numeric temp values. If it did, the function created a new array containing:
 
 <ul>
@@ -213,6 +220,7 @@ If <code>numbersOnlyList</code> does NOT have a length, we'll assume that we're 
 
 <a name="reducer-helper"></a>
 <h2>The Reducer Helper</h2>
+
 The <code>.reduce()</code> method calculates the total sum of an array.  We'll need to do this to get the average temperatures but can't do it without something called an "accumulator function."
 
 This accumulator function returns the sum and we'll create a basic one like this:
@@ -225,6 +233,7 @@ function reducerHelper(accumulator, currentValue) {
 
 <a name="display-temperature-info"></a>
 <h2>Display the Temperature Information</h2>
+
 Again, <code>displayTemperatureInfo()</code> calculates the average temperature, creates a new array with all the temperatures, average temperature and city name, then loads the array content onto the page. It looks like this:
 <pre><code class="language-javascript">
 function displayTemperatureInfo(temperatureArray, getCity) {
@@ -264,9 +273,11 @@ So if that array looks like <code>[12, 16, 9]</code>, then <code>getTemperatureS
 The <code>temperatureAverage</code> const represents the array's average. Basic algebra here: you always determine an average by dividing the combined value of set of numbers by the amount of numbers in the set.
 
 So if that array looks like <code>[12, 16, 9]</code>, then <code>temperatureAverage</code> will divide 31 by 3.
+
 <pre><code class="language-javascript">
 temperatureArray.push(Math.round(temperatureAverage))
 </code></pre>
+
 As mentioned, <code>displayTemperatureInfo()</code> adds this average to array we're working with. We add it to the <em>end</em> of the array using <code>.push()</code>.
 
 <code>temperatureAverage</code> returns the average value as a decimal, so we'll use <code>Math.round()</code> to convert it to the nearest whole number.
@@ -274,16 +285,18 @@ As mentioned, <code>displayTemperatureInfo()</code> adds this average to array w
 <pre><code class="language-javascript">
 temperatureArray.unshift(getCity)
 </code></pre>
+
 Also as mentioned, <code>displayTemperatureInfo()</code> adds the city name to array we're working with. That's available via the <code>getCity</code> parameter we passed so we'll add it to the <em>beginning</em> of the array using <code>.unshift()</code>.
 
 <pre><code class="language-javascript">
 return displayArrayContent(temperatureArray, "#temperatureInfo")
 </code></pre>
 
-Using the previously-discussed-but-not-yet-created <code>displayArrayContent()</code> function, we'll load this new array to the <code><div id="temperatureInfo" /></code> element on our page.
+Using the previously-discussed-but-not-yet-created <code>displayArrayContent()</code> function, we'll load this new array to the <code>div#temperatureInfo</code> element on our page.
 
 <a name="load-content"></a>
 <h2>Load All the Content Onto the Page</h2>
+
 We're using a <code>displayArrayContent()</code> function to load data onto the page.  I guess we should build it now.
 
 This is all basic DOM manipulation and look like this:
@@ -305,12 +318,15 @@ function displayArrayContent(arrayContent, target) {
 
 }
 </code></pre>
+
 And...breaking this one down...
+
 <pre><code class="language-javascript">
 function displayArrayContent(arrayContent, target) {
   ...
 }
 </code></pre>
+
 The function takes two parameters: <code>arrayContent</code> and <code>target</code>. Because of how we've coded stuff, <code>arrayContent</code> always represents one of the arrays we dynamically built using <code>displayTemperatureInfo()</code> while <code>target</code> represents <em>where</em> on the page we want to place it.
 
 <pre><code class="language-javascript">
@@ -332,6 +348,7 @@ arrayContent.map(index => {
 })
 </code></pre>
  Another <code>.map()</code> function loops over the array and does the following with each array item:
+
 <ul>
   <li class="post__list-item">creates a <code>span</code> tag.</li>
   <li class="post__list-item">gives the <code>span</code> a class name of <code>temperature-info__single-temp</code>.</li>
@@ -342,19 +359,25 @@ arrayContent.map(index => {
 <pre><code class="language-javascript">
 return getTargetElement.appendChild(parentElement)
 </code></pre>
+
 Take our <code>div</code> with all the array content and place it at the bottom of  <code>target</code> element which, again, is an element already on our web page.
 
 <a name="run-the-code"></a>
 <h2>Run All This Code</h2>
+
 As mentioned earlier, <code>formatData()</code> is a catalyst: running this function runs all the code needed to load the <code>temperatureInfo</code> array on the page. So all we need to do is this:
+
 <pre><code class="language-javascript">
 formatData(temperatureInfo)
 </code></pre>
+
 Neat, huh?
 
 <a name="final-code"></a>
 <h2>The Final Code</h2>
+
 Our final, complete code looks like this:
+
 <pre><code class="language-javascript">
 const temperatureInfo = [
   ["City", "00-08", "08-16", "16-24", "Average"],
@@ -427,6 +450,7 @@ formatData(temperatureInfo)
 
 <a name="conclusion"></a>
 <h2>Conclusion</h2>
+
 This code has brittle spots:
 <ul>
   <li class="post__list-item">Pointing to the city name using <code>innerArray[0]</code> assumes that the city name will always be the first item in the array...and it may not be. I <em> should</em> do something like use a regular expression to pick out the strings and numbers and then load stuff, or send an error message to the console indicating that the array needs to be properly formatted.</li>
