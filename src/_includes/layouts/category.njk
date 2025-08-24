@@ -47,7 +47,7 @@
 
 <body class="{% if bodyClass %}{{ bodyClass }}{% endif %}" data-pagefind-body>
   {% include "partials/header.njk" %}
-
+  <a name="main-content"></a>
   <main class="main-content">
     <h3 class="category-header-title">the <i>"{{ title }}"</i> category</h3>
     {{ content | safe }}

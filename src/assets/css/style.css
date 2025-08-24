@@ -414,7 +414,8 @@ svg {
 }
 
 .post-content ul,
-.post-content ol {
+.post-content ol,
+.error-404-navigation {
   margin-left: 30px;
 }
 
@@ -823,13 +824,15 @@ svg {
 }
 
 .error-404-definition {
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-16);
+  border-bottom: #0A0C10 solid 1px;
 }
 
 .error-404-navigation {
   display: flex;
   gap: var(--space-4);
   justify-content: flex-start;
+  margin-bottom: 16px;
 }
 
 .button-secondary {
@@ -1021,6 +1024,7 @@ svg {
   }
 }
 
+/*(* Accessibility Utilities  */
 /* A screen reader utility */
 .sr-only {
   position: absolute;
@@ -1032,4 +1036,20 @@ svg {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--color-primary);
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
 }
