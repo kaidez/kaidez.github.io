@@ -3,21 +3,27 @@ layout: layouts/base.njk
 title: Tutorials & Articles about Web Development - kaidez
 permalink: "404.html"
 ---
-<section class="container">
-  <h1 class="header-content--hidden-text">404 error - page not found</h1>
-  <article>
-    <div class="error-404-content">
-      <img src="/assets/img/404.jpg" alt="404 error - page not found" class="error-404-image"/>
-      <div class="error-404-text">
-        <p>
-          <h2 class="error-404-header">Moved to Atlanta</h2> <i>(/muvd tu at-lan-tuh/)</i>
-          <br />
-          <strong>verb phrase</strong>
-        </p>
-        <p>
-          <i>def. - </i> a slang term for when a page generates <strong>404 - page not found</strong> error...like this one has.  "404" refers to the area code for Atlanta, Georgia. (USA).
-        </p>
+<main class="container">
+  <h1 class="sr-only">404 Error - Page Not Found</h1>
+  
+  <article class="error-404-content">
+    <img src="/assets/img/404.jpg" alt="404 error illustration" class="error-404-image"/>
+    
+    <div class="error-404-text">
+      <header>
+        <h2 class="error-404-header">Moved to Atlanta</h2>
+        <p class="error-404-pronunciation"><i>(/muvd tu at-lan-tuh/)</i></p>
+        <p class="error-404-word-type"><strong>verb phrase</strong></p>
+      </header>
+      
+      <div class="error-404-definition">
+        <p><i>def. - </i>a slang term for when a page generates <strong>404 - page not found</strong> error...like this one has. "404" refers to the area code for Atlanta, Georgia. (USA).</p>
       </div>
+      
+      <nav class="error-404-navigation" aria-label="Error page navigation">
+        <a href="/" class="button">Return to Homepage</a>
+        <a href="/posts/" class="button button-secondary">Browse Articles</a>
+      </nav>
     </div>
   </article>
-</section>
+</main>
