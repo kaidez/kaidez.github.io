@@ -1,7 +1,7 @@
 ---
-title:  "SCREENCAST: Build Tasks With 'npm run'
+title:  "SCREENCAST: Build Tasks With npm run"
 date:   2016-01-29
-excerpt: Watch how I use “npm run” to run HTML, CSS and JavaScript build tasks. An alternative to using Grunt, Gulp and similar tools.
+excerpt: Watch how I use npm run to run HTML, CSS and JavaScript build tasks. An alternative to using Grunt, Gulp and similar tools.
 layout: layouts/base.njk
 permalink: /npm-run-screencast/
 tags: [coding-best-practices]
