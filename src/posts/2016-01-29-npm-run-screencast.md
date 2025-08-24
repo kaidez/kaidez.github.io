@@ -4,12 +4,13 @@ date:   2016-01-29
 excerpt: Watch how I use npm run to run HTML, CSS and JavaScript build tasks. An alternative to using Grunt, Gulp and similar tools.
 layout: layouts/post.njk
 permalink: /npm-run-screencast/
+image: npm-run.jpg
 tags: [coding-best-practices]
-# og-image: npm-run.jpg
+secondary_tags: ["javascript", "npm"]
+category: Coding Tips
 ---
 <p>
-  Using 
-  <code>npm run</code> 
+  Using <code>npm run</code> 
   to execute your project's build tasks is an excellent alternative to tools like 
   <a href="http://gruntjs.com/">Grunt</a> 
   and 
@@ -36,23 +37,16 @@ tags: [coding-best-practices]
 </p>
 
 <ul>
-  <li class="post-list-item">
-    <a href="http://substack.net/task_automation_with_npm_run">task automation with npm run</a> 
-    by 
-    <a href="http://twitter.com/substack">substack</a>.
+  <li class="post-list-item">task automation with npm run by substack (all these links are broken).
   </li>
   <li class="post-list-item">
-    <a href="https://bocoup.com/weblog/a-facade-for-tooling-with-npm-scripts">A Facade for Tooling with NPM Package Scripts</a> 
+    <a href="https://www.bocoup.com/blog/a-facade-for-tooling-with-npm-scripts">A Facade for Tooling with NPM Package Scripts</a> 
     by 
     <a href="https://twitter.com/kadamwhite">K. Adam White</a>.
   </li>
-  <li class="post-list-item">
-    <a href="http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/">How to Use npm as a Build Tool</a> 
-    by 
-    <a href="https://twitter.com/keithamus">Keith Cirkel</a>.
+  <li class="post-list-item">How to Use npm as a Build Tool (broken link) by <a href="https://twitter.com/keithamus">Keith Cirkel</a>.
   </li>
-  <li class="post-list-item">
-    <a href="http://blog.keithcirkel.co.uk/why-we-should-stop-using-grunt/">Why we should stop using Grunt &#038; Gulp</a> 
+  <li class="post-list-item">Why we should stop using Grunt &#038; Gulp (broken link)
     also by 
     <a href="https://twitter.com/keithamus">Keith Cirkel</a>.
   </li>
@@ -66,3 +60,5 @@ tags: [coding-best-practices]
 <p>
   ENJOY!!!
 </p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5VomwRZZiwc?si=rlXjfmL0zDL8ZNqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
