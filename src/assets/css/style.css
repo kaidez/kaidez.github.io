@@ -242,11 +242,16 @@ time {
   text-decoration: none;
 }
 
+.site-logo {
+  width: 170px;
+  height: 64px;
+  /* resize: both; */
+  overflow: auto;
+}
+
 svg {
-  width: 30%;
-  /* Scales to the width of its parent container */
-  height: auto;
-  /* Maintains aspect ratio */
+ width: 95%;
+ height: 95%;
 }
 
 .site-title:hover {
@@ -777,10 +782,14 @@ svg {
 @media (max-width: 768px) {
   .header-content {
     /* grid-template-columns: 1fr; */
-    gap: var(--space-4);
+    /* gap: var(--space-4); */
     height: auto;
     /* padding: var(--space-4) 0; */
     text-align: center;
+  }
+
+  .site-logo {
+    margin: 0 auto;
   }
 
   .site-nav {
@@ -794,12 +803,13 @@ svg {
   }
 
   .site-nav ul.isVisible {
-    display: inline-block;
+    display: inline;
     position: fixed;
     left: 0px;
-    top: 70px;
+    top: 13px;
     width: 100%;
     background: red;
+    margin-top: 52px;
   }
 
   .site-nav ul li {
@@ -815,6 +825,7 @@ svg {
   .mobile-menu-icon {
     position: absolute;
     top: 10px;
+    right: 23px;
     font-size: 26px;
     color: var(--color-white);
     cursor: pointer;
@@ -871,12 +882,12 @@ svg {
     }
 
     .container {
-      padding: 0 var(--space-2);
+      padding: 0 var(--space-3);
     }
 
-    .header-content {
+    /* .header-content {
       padding: var(--space-3) 0;
-    }
+    } */
   }
 
   /* Category responsive adjustments */
