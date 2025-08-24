@@ -41,7 +41,7 @@ Throughout this process, I discovered six things:
 <ol>
 
 <li class="post__list-item">
-<h3><b>React is the most in-demand skill, and that's not changing any time soon</b></h3>
+<h2><b>React is the most in-demand skill, and that's not changing any time soon</b></h2>
  
 <p>After its release, React solved problems that developers never knew they had. It gave them a great way to "component-ize" the UI, rendered that UI fast and made application state easier to manage.</p>
  
@@ -64,7 +64,7 @@ Throughout this process, I discovered six things:
 </li>
 
 <li class="post__list-item">
-<h3><b>The core skills required for web developer jobs has changed dramatically</b></h3>
+<h2><b>The core skills required for web developer jobs has changed dramatically</b></h2>
 <p>
 Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuery</a> skills was guaranteed a high-paying front end web developer job. jQuery begat <a href="https://backbonejs.org/">Backbone</a>, which begat <a href="https://angular.io/">Angular</a>, which begat React, and so on and so forth.
 </p>
@@ -89,7 +89,7 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
 </li>
 
 <li class="post__list-item">
-<h3><b>There are many open web developer jobs, but tragedy is the main reason why</b></h3>
+<h2><b>There are many open web developer jobs, but tragedy is the main reason why</b></h2>
  
 <p>Covid-19 is horrible. It's caused hundreds of thousands of deaths, massive lockdowns that have crippled small businesses and the quarantining of most employees.</p>
  
@@ -113,7 +113,7 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
 </li>
 
 <li class="post__list-item">
-<h3><b>The algorithm tests are everywhere</b></h3>
+<h2><b>The algorithm tests are everywhere</b></h2>
 <p><a href="https://www.dictionary.com/e/acronyms/faang/">FAANG companies</a> are known for the algorithm-based tests that interviewees must pass before getting hired by them. I took the Google one a few years ago and didn't make it (it's ok...I'm fine).</p>
  
 <p>It used to be that the FAANGs were the only companies requiring this test...not anymore. Throughout this process, a gaming company, a betting site and a handful of startups asked me to take the test.</p>
@@ -136,7 +136,7 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
 </li>
  
 <li class="post__list-item">
-<h3><b>The line dividing front end web developer jobs and a back end ones is getting smaller</b></h3>
+<h2><b>The line dividing front end web developer jobs and a back end ones is getting smaller</b></h2>
 <p>Some FE job openings I saw listed JavaScript and CSS as required skills. As well as Python, Java, and .NET.</p>
  
 <p>Technically, Python, Java and .NET aren't "back end languages", they just interact with the back end more than JavaScript does. Maybe the term "front end" now means "anything that doesn't require building an SQL database."</p>
@@ -151,7 +151,7 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
 </li>
  
 <li class="post__list-item">
-<h3><b>The line dividing front end web developer jobs and DevOps jobs is getting really REALLY small</b></h3>
+<h2><b>The line dividing front end web developer jobs and DevOps jobs is getting really REALLY small</b></h2>
 <p>As mentioned above, knowing how to work with cloud-based services is a hireable skill. This is because companies want to build the best DevOps system that they can.</p>
 
 <p>DevOps is the combining of best practices and tooling to build an automated, efficient code deployment process. A well-planned DevOps process pushes out application code fast and with minimal bugs...this saves companies money.</p>
