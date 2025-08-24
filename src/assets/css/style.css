@@ -918,12 +918,22 @@ svg {
   }
 
   .mobile-menu-icon {
+    width: 48px;
+    height: 48px;
     position: absolute;
     top: 10px;
     right: 23px;
     font-size: 26px;
     color: var(--color-white);
+    background-color: rgba(24, 100, 171, 0.5);
+    border: none;
     cursor: pointer;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    padding: 8px;
+    min-width: 44px;
+    min-height: 44px;
   }
 
   .mobile-menu-text {
@@ -931,8 +941,15 @@ svg {
     font-family: var(--font-family-kaidez-secondary-font);
     font-size: var(--text-sm);
     font-weight: 600;
-    top: 24px;
-    left: 0px;
+    top: 29px;
+    left: 6px;
+  }
+
+  .fa-ellipsis {
+    margin-top: 0px;
+    position: relative;
+    top: -5px;
+    right: 2px;
   }
 
   .post-content {
