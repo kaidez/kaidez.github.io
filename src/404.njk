@@ -20,16 +20,23 @@ permalink: "404.html"
         <p><i>def. - </i>a slang term for when a page generates <strong>404 - page not found</strong> error...like this one has. "404" refers to the area code for Atlanta, Georgia. (USA).</p>
       </div>
       
-      <nav class="error-404-navigation" aria-label="Error page navigation">
-        <a href="/" class="button">Return to Homepage</a>
-        <a href="/posts/" class="button button-secondary">Browse Articles</a>
-      </nav>
-
-      <p>Since you're here, I'd like you to look around ny site.</p>
+      <p>Since you're here, I'd like you to look around my site.</p>
       <p>The last thing I wrote was
         {% set postslist = collections.posts %}
           {% if postslist.length %}
-            <a href="{{ post.url }}">{{ postslist[0].data.title }}</a>
+            <a href="{{ postslist[0].url }}">{{ postslist[0].data.title }}</a>
         {% endif %}. You may want to check it out.
+      </p>
+      <p>I also have blog posts broken down by category:</p>
+      <nav class="error-404-navigation" aria-label="Error page navigation">
+        <ul>
+          <li><a href="/coding-best-practices/">Coding Tips</a></li>
+          <li><a href="/tutorials/">Tutorials</a></li>
+          <li><a href="/personal/">Personal</a></li>
+          <li><a href="/reviews/">Reviews</a></li>
+        </ul>
+      </nav>
+      <p>Or, you can just <a href="/">return to the home page.</a></p>
+    </div>
   </article>
 </main>
