@@ -2,10 +2,12 @@
 title:  "Use .filter() Instead of an Inner Loop in My JS Average Temperature Code"
 date:   2018-01-05
 excerpt: kaidez updates his JavaScript functional programming/average temperature post to use .filter() instead of an inner loop. Includes demo.
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /temperature-average-filter-array/
+image: temperature-functional-programming-filter.jpg
 tags: [coding-best-practices]
-# og-image: temperature-functional-programming-filter.jpg
+secondary_tags: ["css", "javascript"]
+category: Coding Tips
 # thumb-image: temperature-functional-programming-filter-thumb.jpg
 ---
 <a href="https://codepen.io/kaidez/pen/VybqmY">See Demo &raquo;</a>
@@ -13,6 +15,8 @@ tags: [coding-best-practices]
 My <a href="/temperatures-functional-programming/">JavaScript functional programming/average temperature tutorial</a> looped through an array of arrays to calculate data and display content.  In order to do all this, I used an inner loop with <code>.map()</code> on those inner arrays.
 
 I wasn't <em>really</em> worried about using an inner loop, but knew the code would look cleaner without it. After publishing that post, I realized I could use <code>.filter()</code> on the inner arrays instead of <code>.map()</code>, which was neater.
+
+<h2>The Original Code</h2>
 
 The original complete code looked like this:
 
@@ -118,6 +122,8 @@ formatData(temperatureInfo)
 
 Feel free to <a href="/temperatures-functional-programming/">look at the previous post to get a full walk-through of this code</a> but right now, I'm only going to look at one specific part...
 
+<h2>Refactoring the Inner Loop</h2>
+
 The inner loop is towards the top of the <code>formatData()</code> function and starts with <code>innerArray.map()</code>. It's needed to look at any array that has both a city name and numbers, then place the numbers only in an array called <code>numbersOnlyList</code>.
 
 This is what I wanted to refactor with <code>.filter()</code>. To do that while sticking to the <a href="http://eloquentjavascript.net/1st_edition/chapter6.html">JavaScript functional programming paradigm</a>, I first created a separate function defining what I wanted filtered...numbers in this case:
@@ -151,6 +157,8 @@ innerArray.map(index => {
 let numbersOnlyList = innerArray.filter(getNumbers)
 ...
 </code></pre>
+
+<h2>The Complete Updated Code</h2>
 
 The complete, updated complete JavaScript code looks like this.
 <pre><code class="language-javascript">
@@ -219,5 +227,7 @@ function displayArrayContent(arrayContent, target) {
 
 formatData(temperatureInfo)
 </code></pre>
+
+<h2>Conclusion</h2>
 
 Using inner loops isn't the performance headache it was years ago as browser technology has gotten better. But refactoring the it out, like I did here, is pretty cool.
