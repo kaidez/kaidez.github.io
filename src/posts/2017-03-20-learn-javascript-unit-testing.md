@@ -2,15 +2,22 @@
 title:  "Want to Learn Javascript Unit Testing? Learn Functional Programming First!"
 date:   2017-03-20
 excerpt: Learn JavaScript unit testing by creating smaller functions with functional programming & testing them with QUnit. Lots of learning resources links.
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /learn-javascript-unit-testing/
+image: learn-javascript-unit-testing.jpg
 tags: [coding-best-practices]
-# og-image: learn-javascript-unit-testing.jpg
+secondary_tags: ["javascript", "unit testing"]
+category: Coding Tips
 # thumb-image: learn-javascript-unit-testing-thumb.jpg
 ---
+<p style="margin: 30px 0 40px; border-bottom: black 1px solid;">
+<em>(Author's note - August 2025: Both this code and accompanying demo use Blanket.js, a tool for determine what percentage of your code is being tested. Blanket.js is no longer maintained and its author suggests using <a href="https://github.com/istanbuljs">Istanbul</a> as a replacement. Cloning this post's repo <strong>should</strong> allow you to run the demo while it has Blanket, but please be prepared for an issues coming up.  Past that, you may get something out of the unit testing conversation) -k</em>
+</p>
+
 If you’re a self-taught JavaScript developer like me, you may not be doing JavaScript unit testing. Self-taught JS developers tend to jump right into coding and skip learning software development fundamentals...like unit testing.
 
 The best way to learn JavaScript unit testing is to realize you should write code in a functional programming style. Functional programming (or, FP) encourages writing small, easy-to-read functions, which are <strong>easy to test</strong>.
+
 <h2>Table of Contents</h2>
 <ol>
   <li class="post__list-item"><a href="#before-we-begin">Before we begin...</a></li>
@@ -67,6 +74,7 @@ With JavaScript now at this level, it makes sense to apply traditional software 
 
 <a name="functional-programming"></a>
 <h2>About functional programming</h2>
+
 You should test small pieces of code, not big pieces. Functional programming encourages writing functions in small pieces.
 
 The rules of functional programming are:
@@ -78,14 +86,19 @@ The rules of functional programming are:
   <li class="post-list-item">Most of all, functions must be small and reusable.</li>
 </ul>
 This is just an FP summary: you can read more about it by clicking on this article’s various links. But the last point is the most relevant to JavaScript unit testing:
-<blockquote><p><em>Functions must be small and reusable.</em></p></blockquote>
+
+<blockquote><p><em>Functions must be small and reusable.</em></p>
+</blockquote>
+
 In addition, functional programming encourages composition: the combining of multiple functions to make another function. This is usually done by passing a function as a parameter to another function, where the passed function gets invoked inside the other one.
 <a name="what-we-will-do"></a>
 <h2>What we’re going to do</h2>
+
 James Sinclair wrote <a href="http://jrsinclair.com/articles/2016/gentle-introduction-to-functional-javascript-intro/">an excellent four-part tutorial on functional programming</a>. We’ll create unit tests for his function solutions in the tutorial’s first part.
 
 <a name="web-page"></a>
 <h2>The web page for all this</h2>
+
 Here’s what the web page for this, <code>index.html</code>, looks like:
 <pre><code class="language-markup">
 &lt;!-- index.html --&gt;
@@ -117,8 +130,10 @@ Here’s what the web page for this, <code>index.html</code>, looks like:
 We have a few page elements that we’ll target in our JS later. We also have a link to our group of tests (or, our test suite) and links to some JavaScript files.
 
 The core jQuery file is here. Other files include <code>app.js</code> and <code>scripts.js</code>: the code we’re testing is in <code>app.js</code>, but that code gets implemented in <code>scripts.js</code>.
+
 <a name="test-suite"></a>
 <h2>The test suite</h2>
+
 Our test suite lives in <code>test/tests.html</code> and looks like this:
 <pre><code class="language-markup">
 &lt;!-- test/tests.html -->
@@ -156,10 +171,11 @@ Next is the previously-mentioned <code>app.js</code> which contains the code get
 
 The empty &lt;script&gt; tag is where we’ll write our tests.
 
-Finally, we have two <code><div></code> tags: <code><div id="qunit" /></code> and <code><div id="qunit-fixture" /></code>. QUnit’s test results load into <code><div id="qunit" /></code> and we’ll use <code><div id="qunit-fixture" /></code> to test DOM manipulation.
+Finally, we have two <code><div></code> tags: <code><div id="qunit" /></code> and <code>div#qunit-fixture</code>. QUnit’s test results load into <code><div id="qunit" /></code> and we’ll use <code>div#qunit-fixture</code> to test DOM manipulation.
 
 <a name="about-qunit"></a>
 <h2>A quick note about QUnit</h2>
+
 QUnit isn’t the only JavaScript unit testing framework and you should <a href="https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#JavaScript">review other JS unit testing frameworks</a> at some point. But if you want to learn JavaScript unit testing from the beginning, I think QUnit is best for that.
 
 QUnit has a small API with easy-to-read documentation. This is because it’s maintained by the jQuery team, which is well-known for writing easy-to-read API documentation.
@@ -167,8 +183,10 @@ QUnit has a small API with easy-to-read documentation. This is because it’s ma
 Also, QUnit works great without command line tools like Grunt and Gulp when compared to other testing frameworks. It can run with those tools and you should run unit testing from the CLI eventually.
 
 But to learn JavaScript unit testing from the beginning, running tests in a browser and outside of CLI tooling is fine. Onto the tests...
+
 <a name="test-driven development"></a>
 <h2>Test-Driven Development (TDD)</h2>
+
 We’ll test this code using <a href="https://en.wikipedia.org/wiki/Test-driven_development">Test-Driven Development (TDD)</a>, meaning we’ll write our code in four steps:
 <ol>
   <li class="post__list-item">write a test.</li>
@@ -178,9 +196,12 @@ We’ll test this code using <a href="https://en.wikipedia.org/wiki/Test-driven_
 </ol>
 
 We’re not doing full-on TDD: we’re using James’ pre-written functions instead of writing tests first and code next. But we’ll add new functions as well as refactor some existing ones...we’ll do enough to understand TDD.
+
 <a name="review-james-code"></a>
 <h3>Review James’ code</h3>
+
 James’ first FP example used composition and created a small function that returned another small function. He did this by passing one function as a parameter to another:
+
 <pre><code class="language-javascript">
 // A function that gets returned
 var log = function(someVariable) {
@@ -212,7 +233,9 @@ We’ll use TDD to make <code>log()</code> work but will also update it as follo
 
 <a name="first-failing-test"></a>
 <h3>The first failing test</h3>
+
 We’ll create a failing test that checks to see if log() returns a string with at least one character:
+
 <pre><code class="language-markup">
 &lt;!-- test/tests.html --&gt;
 &lt;script>
@@ -229,6 +252,7 @@ QUnit.test('"log()" should return a string with at least 1 character', function(
 
 &lt;/script>
 </code></pre>
+
 We create a test with QUnit’s <code> test</code>  method. <code>test</code> takes two parameters: the test description and a callback function that runs the test.
 
 The test description is <code>"'log()' should return a string with at least 1 character"</code> and the callback takes a parameter called assert. And <code>assert</code> is THE most important term in unit testing.
@@ -241,6 +265,7 @@ Finally, the callback uses one of the <code>assert</code> methods we have access
 </code></pre>
 <a name="first-assertions"></a>
 <h3>The first assertions</h3>
+
 <code>assert.equal()</code> takes three parameters:
 
 <ol>
@@ -255,6 +280,7 @@ For the first assertion, we are:
   <li class="post__list-item">expecting that the function’s returned result will be <code>"a string"</code>.</li>
   <li class="post__list-item">if the test passes, we’ll get a message saying <code>"the string was returned successfully!"</code></li>
 </ol>
+
 For the next assertion, we are:
 
 <ol>
@@ -265,6 +291,7 @@ For the next assertion, we are:
 
 <a name="see-if-tests-failed"></a>
 <h3>See if the tests failed</h3>
+
 Our QUnit test suite shows failing tests when we load <code>test/tests.html</code> in a browser...
 <img src="/assets/img/unit-testing-image-01.jpg" alt="First failing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
 First failing test image for the learn JavaScript unit testing post
@@ -280,20 +307,24 @@ var log = function(someVariable) {
   return someVariable;
 }
 </code></pre>
+
 ...and we’ll see that both tests pass when we go back to our test suite and click on the description.
 <img src="/assets/img/unit-testing-image-02.jpg" alt="First passing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
 And if we run <code>log()</code> in <code>scripts.js</code>, a console message will appear when we go to our web page:
+
 <pre><code class="language-javascript">
 // scripts.js
 log("I'm kind of a big deal"); // logs the first "I'm kind of a big deal"
 </code></pre>
 <a name="test-assert-throws"></a>
 <h3>Test for error messages with <code>assert.throws()</code></h3>
+
 <code>log()</code> should also throw an error message to the console if its parameter isn’t a string with at least one character. We’ll throw those messages using JavaScript’s <code>Error</code> object, creating this functionality with TDD.
 
 QUnit’s assert functionality has a <code>throws()</code> method that tests if your custom error messages get thrown correctly. We’ll use it to create the failing tests for this “throw an error message” functionality.
 
 The failing tests go at the bottom of the <code>script</code> tag on our test suite page:
+
 <pre><code class="language-markup">
 &lt;!-- test/tests.html --&gt;
 &lt;script&gt;
@@ -328,6 +359,7 @@ QUnit.test('"log()" should throw an error if no parameter is passed or if the pa
 });
 &lt;/script&gt;
 </code></pre>
+
 Like before, we create a failing QUnit test with a description and a callback that runs the test. We create tests that assume that the parameter doesn’t exist for whatever reason: an empty parameter, an empty string, <code>null</code> and <code>undefined</code>.
 
 Next, we test if either a function or an ES6 Symbol is being passed. <a href="https://github.com/kaidez/functional-programming-unit-testing">This post’s source code</a> also tests for numbers, arrays, objects, Booleans and regular expressions....I left them out here to keep things more readable.
@@ -361,11 +393,12 @@ log(""); // logs 'Uncaught Error: expecting a string with at least one character
 Make sure to reset <code>log("");</code> to <code>log("I’m kind of a big deal");</code> in <code>scripts.js</code> before proceeding.
 <a name="code-coverage"></a>
 <h2>About code coverage</h2>
+
 <em>Code coverage</em> is the analysis of how much of your code is getting tested. It’s almost always measured as a percentage.
 
 Should you <em>always</em> go for 100% code coverage when unit testing? Maybe: search the web and you’ll find a million different answers to the question.
 
-I say do your research and make you’re own decision, but we’re going for 100% coverage in this small example. And in JS unit testing, the most popular code coverage tool is <a href="http://blanketjs.org/">Blanket.js</a>.
+I say do your research and make you’re own decision, but we’re going for 100% coverage in this small example. And in JS unit testing, the most popular code coverage tool is <a href="https://github.com/alex-seville/blanket">Blanket.js</a>. 
 
 We’ll add Blanket.js between <code>jquery.js</code> and <code>app.js</code> in <code>test/tests.html</code>:
 <pre><code class="language-markup">
@@ -380,6 +413,7 @@ We’ll add Blanket.js between <code>jquery.js</code> and <code>app.js</code> in
 </code></pre>
 <a name="coverage-in-test-suite"></a>
 <h3>What code coverage looks like in the test suite</h3>
+
 Like we did with <code>log()</code>, we want <code>doSomething()</code> to do type-checking. So we’ll refactor James’ original FP code and add it to the bottom of <code>app.js</code>:
 <pre><code class="language-javascript">
 // app.js
@@ -392,6 +426,7 @@ var doSomething = function(someFunction) {
   }
 };
 </code></pre>
+
 We’re using jQuery <code>$.isFunction()</code> to check if the passed parameter is a function. Next, we’ll refresh our test suite and check the “Enable coverage” checkbox that now appears at the top.
 
 The Blanket.js interface will appear: click on the link to <code>app.js</code> to see how much code is getting coverage:
@@ -475,6 +510,7 @@ doSomething(sayBigDeal); // logs the second "I'm kind of a big deal"
 </code></pre>
 <a name="testing-more-functional-programming-composition"></a>
 <h2>Testing more functional programming composition</h2>
+
 James Sinclair’s FP post demonstrated composition with another function that built a carousel:
 <pre><code class="language-javascript">
 function initialiseCarousel(id, frequency) {
@@ -496,9 +532,12 @@ A lot going on here:
   <li class="post__list-item"><code>slider</code> is explicitly returned.</li>
   <li class="post__list-item">when <code>initialiseCarousel()</code> runs, it places a new carousel in a main-carousel page element and gives it a duration of 3000, which I assume represents milliseconds.</li>
 </ul>
+
 In our quest to learn JavaScript unit testing, we’ll test <code>Carousel()</code> and <code>initialiseCarousel()</code> separately. And since James’ tutorial didn’t create <code>Carousel()</code>, it’s an excellent chance to create it with TDD!
 <a name="test-constructor-function"></a>
+
 <h3>Unit test a constructor function</h3>
+
 Since <code>Carousel()</code> is a constructor function, we can attach its parameters to <code>this</code>, then return <code>this</code> itself. So we’ll place a failing unit test for this at the bottom of the <code>script</code> tag in our test suite:
 
 <pre><code class="language-markup">
@@ -515,6 +554,7 @@ Since <code>Carousel()</code> is a constructor function, we can attach its param
   });
 &lt;/script&gt;
 </code></pre>
+
 <code>Carousel</code>‘s two parameters should be a string and a number. So we’ll create two variables called <code>someString</code> and <code>someNumber</code> and pass them to <code>new Carousel()</code> in our test.
 
 We’re using QUnit’s <code>assert.ok()</code> method, which really just checks if our actual value, <code>new Carousel(str, num)</code>, exists. I don’t know if this is the strongest unit test in the world: I just want you to be aware that <code>assert.ok()</code> is an option.
@@ -576,15 +616,14 @@ var someCarousel = new Carousel(); // logs "Carousel needs to know what element 
 
 But no errors appear when we pass both parameters...
 
-
+<pre><code class="language-javascript">
 // scripts.js
 var someCarousel = new Carousel('carousel-one', 5435);
 someCarousel.init(); // show “The carousel-one carousel has started” on index.html
 
 var someOtherCarousel = new Carousel('carousel-two');
 someOtherCarousel.init(); // show “The carousel-two carousel has started” on index.html
-</code></pre>
-<pre><code class="language-javascript">
+
 // scripts.js
 ...
 var someCarousel = new Carousel('carousel-one', 5345); // no console errors
@@ -599,6 +638,7 @@ var someOtherCarousel = new Carousel('carousel-two'); // no console errors
 
 <a name="init-method"></a>
 <h3>The <code>init()</code> method</h3>
+
 We’ll just make the carousel’s <code>init()</code> method load text into the carousel page element. We’ll add the following test for this at the bottom of the <code>script</code> tag in the test suite:
 <pre><code class="language-markup">
 &lt;!-- test/tests.html --&gt;
@@ -620,7 +660,7 @@ We create a new instance of <strong>Carousel()</strong> called testCarousel and 
 
 We don’t need to pass a number for the <code>spinDuration</code> parameter. We already gave it a default value in the <strong>Carousel()</strong> function in <code>app.js</code>, so this test should pass without it.
 
-<code>init()</code> should place a custom message in <code><div id="qunit-fixture" /></code> that says <code>"The qunit-fixture carousel has started."</code>. Then we’ll use jQuery’s <code>html()</code> function to look in the qunit-fixture and see if its copy matches our message.
+<code>init()</code> should place a custom message in <code>div#qunit-fixture</code> that says <code>"The qunit-fixture carousel has started."</code>. Then we’ll use jQuery’s <code>html()</code> function to look in the qunit-fixture and see if its copy matches our message.
 
 If the copy matches, our QUnit test will say <code>"a slider was returned!"</code> But for now, we have a failing test:
 <img src="/assets/img/unit-testing-image-11.jpg" alt="Init failing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
@@ -634,7 +674,8 @@ Carousel.prototype.init = function() {
   getCarousel.innerHTML = 'The ' + this.getElement + ' carousel has started.';
 };
 </code></pre>
-We’ve followed JavaScript best practices and placed init() on Carousel‘s prototype instead of in the Carousel constructor function. It finds the element defined in Carousel using document.getElementById(), which is this.element, and stores it in a getCarousel variable.
+
+We’ve followed JavaScript best practices and placed init() on Carousel‘s prototype instead of in the Carousel constructor function. It finds the element defined in Carousel using <code>document.getElementById()</code>, which is this.element, and stores it in a getCarousel variable.
 
 Next, init() takes the value of this.element and uses it to build a custom message. The message gets loaded into whatever element getCarousel points to.
 
@@ -653,6 +694,7 @@ someOtherCarousel.init(); // show “The carousel-two carousel has started” on
 And two text blocks will show up in the <code>carousel-one</code> and <code>carousel-two</code> page elements when <code>index.html</code> runs in the browser.
 <a name="test-returned-function"></a>
 <h3>Unit test the returned function</h3>
+
 In James’ example, the returning function, <code>initialiseCarousel()</code> was expected to return a new instance of <code>Carousel()</code>. A failing test for that looks like this:
 
 <pre><code class="language-markup">
@@ -716,6 +758,7 @@ function initialiseCarousel(id, frequency) {
 Note that <code>id</code> replaces <code>el</code> in slider‘s parameter.
 <a name="bring-it-altogether"></a>
 <h2>Bringing it altogether</h2>
+
 James’ last example performs roughly the same functionality as the others:
 
 <pre><code class="language-javascript">
@@ -861,12 +904,13 @@ And copy loads into elements already on the page.
 
 <a name="further-reading"></a>
 <h2>Further reading</h2>
+
 I’ll start with the JS unit test stuff first...
 
 <ul>
-  <li class="post__list-item"><a href="https://www.amazon.com/gp/product/0321683919/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=kaidez-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0321683919&linkId=dc8b88c6ddc8995efab28bd0dc4ca8e2"><strong>Test-Driven JavaScript Development</strong></a> & <a href="https://www.amazon.com/gp/product/1449323391/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=kaidez-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=1449323391&linkId=1e8169ef34f55c9c2e02a46d63bdf0d3">Testable JavaScript</a>: These two books stand from the others in the JavaScript unit testing worls. The second one is easier to read, but the first one is the most thorough book on the subject. You may want to read Testable first but make sure to read Test-Driven at some point.</li>
+  <li class="post__list-item"><a href="https://www.amazon.com/gp/product/0321683919/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=kaidez-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0321683919&linkId=dc8b88c6ddc8995efab28bd0dc4ca8e2"><strong>Test-Driven JavaScript Development</strong></a> & <a href="https://www.amazon.com/gp/product/1449323391/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=kaidez-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=1449323391&linkId=1e8169ef34f55c9c2e02a46d63bdf0d3"><strong>Testable JavaScript</strong></a>: These two books stand from the others in the JavaScript unit testing worls. The second one is easier to read, but the first one is the most thorough book on the subject. You may want to read Testable first but make sure to read Test-Driven at some point.</li>
   <li class="post__list-item"><a href="https://code.tutsplus.com/articles/tdd-terminology-simplified--net-30626"><strong>TDD Terminology Simplified</strong></a>: Truthfully? This is list of terms can be applied to unit testing overall and not just TDD. And if you’re concerned that I didn’t cover JavaScript unit testing top to bottom, this list is the next step. For example: we saw earlier that elements which load into <code>qunit-fixture</code> for testing are removed when the tests are done. Keep that in mind, then go to this link and read about “setups” and “teardowns.”</li>
-  <li class="post__list-item"><a href="https://medium.com/javascript-scene/what-every-unit-test-needs-f6cd34d9836d#.oxz430giw"><strong>5 Questions Every Unit Test Must Answer</strong></a>: A general primer from <a href="https://twitter.com/_ericelliott">Eric Elliot</a> on JavaScript unit testing with some smart best practices. Check out how he suggests using <code>equal</code> tests only for a week and his pattern for creating actual/expected tests in constants.</li>
+  <li class="post__list-item"><a href="https://medium.com/javascript-scene/what-every-unit-test-needs-f6cd34d9836d#.oxz430giw"><strong>5 Questions Every Unit Test Must Answer</strong></a>: A general primer from <a href="https://x.com/ericelliott_">Eric Elliot</a> on JavaScript unit testing with some smart best practices. Check out how he suggests using <code>equal</code> tests only for a week and his pattern for creating actual/expected tests in constants.</li>
   <li class="post__list-item"><a href="https://alistapart.com/article/writing-testable-javascript"><strong>Writing Testable Javascript</strong></a>: A nice high-level view by <a href="https://twitter.com/rmurphey">Rebecca Murphey</a> of how to write FP-like code that’s easy to test...also watch <a href="https://www.youtube.com/watch?v=OzjogCFO4Zo">her conference talk of the same name</a>.</li>
   <li class="post__list-item"><a href="https://github.com/rmurphey/js-assessment"><strong>JS Assessment</strong></a> & <a href="https://www.codewars.com/"><strong>Codewars</strong></a>: The first one is a CLI-powered test (also by Rebecca Murphey) and the second one’s an app. Each one requires you to write code that passes tests before moving forward. Codewars has a badge-like point system that’s pretty cool.</li>
 </ul>
@@ -881,6 +925,7 @@ Here’s some functional programming stuff...
 
 <a name="conclusion"></a>
 <h2>Conclusion</h2>
+
 Any developer can learn JavaScript unit testing. But not until they understand that they can never again place 50 lines of code in a single <code>$(document).ready()</code> block.
 
 They must realize that using functional programming to create small, testable functions will make them an awesome JS unit tester. And a better developer as well!!!
