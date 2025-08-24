@@ -6,7 +6,7 @@ layout: layouts/post.njk
 permalink: /npm-run-screencast/
 image: npm-run.jpg
 tags: [coding-best-practices]
-secondary_tags: ["javascript", "npm"]
+secondary_tags: ["javascript", "npm", build tools"]
 category: Coding Tips
 ---
 <p>
