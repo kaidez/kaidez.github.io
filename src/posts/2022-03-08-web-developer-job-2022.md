@@ -2,10 +2,12 @@
 title: 'What I Learned About Finding A Front End Web Developer Job In 2022'
 date: 2022-03-08
 excerpt: Six things I learned when looking for a front end web developer job in 2022. Also lists the top FE web dev skills employers are looking for.
-layout: layouts/base.njk
+layout: layouts/post.njk
 permalink: /front-end-web-developer-job-2022/
+image: web-dev-job-two.jpg
+category: Personal
 tags: ["personal"]
-# # og-image: web-dev-job-two.jpg
+secondary_tags: ["web developer job", "javascript"]
 # # thumb-image: web-dev-job-two-thumb.jpg
 ---
 
@@ -14,6 +16,7 @@ On March 8th, 2017, I wrote about <a href="/front-end-web-developer-job-search/"
 This new job search took effort, but much less than the previous one. But like before, I learned a lot about what it takes to get a web dev position in current times.
 
 <h2>What happened the last time I looked for a web dev job?</h2>
+
 In 2017, I "cast a wide net," meaning I applied for lots of jobs inside a short time frame. I applied for so many jobs that I hit a point where I had four interviews in one day.
  
 I had to do this because I had limited experience with the in-demand JavaScript frameworks of the day, specifically <a href="https://reactjs.org/">React</a>. Back then, I had over a decade of developer experience but was competing for jobs against people who had more of the required framework knowledge than me.
@@ -21,6 +24,7 @@ I had to do this because I had limited experience with the in-demand JavaScript 
 So I cast that wide net to better my chances of getting hired. And once I got a job (at JPMorgan Chase), I began building up five years of solid, quantifiable React experience.
  
 <h2>What happened when I looked for a web dev job <i>this</i> time?</h2>
+
 Having that experience paid off when the time came for me to find a new job. I still casted a wide net, but it didn't have to be as wide as before.
  
 The results of having this extra React experience were:
@@ -31,6 +35,7 @@ The results of having this extra React experience were:
 </ul>
  
 <h2>The six things I learned</h2>
+
 Throughout this process, I discovered six things:
  
 <ol>
@@ -160,6 +165,7 @@ Back in the late 2000's, someone with strong <a href="https://jquery.com/">jQuer
 </ol>
  
 <h2>What were my main takeaways from this job search?</h2>
+
 My biggest takeaway was:
 >"It's REALLY good to have React experience nowadays!!!"
 
@@ -170,6 +176,7 @@ There's a sticky note on my desktop listing the skills I need to ramp up on...cl
 Also, I was sad to see that interest in CSS hadn't grown much since my last article. But both <a href="https://tailwindcss.com/">Tailwind CSS</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties">logical properties</a> are exciting developers, so interest may grow again.
 
 <h2>Conclusion</h2>
+
 But finding time to ramp up my skills is the only issue right now.  And the fact that very few love CSS like I do is a personal position.
 
 The bottom line: it's absolutely, positively one of the BEST times to look for a front end web developer job. Especially if you know React.

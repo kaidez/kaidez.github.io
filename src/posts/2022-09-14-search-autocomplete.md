@@ -5,8 +5,8 @@ excerpt: Quick thoughts on building a small search autocomplete tool. What I lea
 layout: layouts/post.njk
 permalink: /search-autocomplete/
 image: search-autocomplete.jpg
-secondary_tags: ["typescript", "javascript"]
 tags: [coding-best-practices]
+secondary_tags: ["typescript", "javascript"]
 category: Coding Tips
 ---
 My employer has a lot of acronyms for business terms that we use throughout the day. I created a proof-of-concept for an acronym search engine, with the goal of releasing it internally.
