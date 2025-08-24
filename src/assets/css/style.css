@@ -794,7 +794,7 @@ svg {
 
 .error-404-content {
   display: grid;
-  grid-template-columns: 440px auto;
+  grid-template-columns: 440px 483px;
   gap: 20px;
 }
 
@@ -802,6 +802,13 @@ svg {
   width: 100%;
   max-width: 400px;
   height: auto;
+}
+
+.error-404-header {
+  font-size: var(--text-5xl);
+  font-family: var(--font-family-kaidez-secondary-font);
+  color: var(--color-black);
+  margin-bottom: 2px;
 }
 
 @media (min-width: 767px) {
