@@ -38,7 +38,7 @@ A few notes first...
 * This tool will (probably) never be published as an [npm](https://www.npmjs.com/) package so if you want to download it, please [read the repo's "Before you install" section](https://github.com/kaidez/kdz#before-you-install) first.
 
 <a name="how-this-started"></a>
-## How This Started
+<h2>How This Started</h2>
 
 I had a project at work where I had to create a single page website using a standard HTML5/CSS/JavaScript web stack. The project tooling was set up like this in my dev environment:
 
@@ -64,7 +64,7 @@ There was a rush to launch this project and as a result, it launched when the co
 There was no time to refactor it during work hours due to other projects on my team's plate, so I decided to refactor the bad code parts on my own time. Since I liked with the tooling environment I used for the project, I decided to use it for the refactor.
 
 <a name="the-problem"></a>
-## The Problem
+<h2>The Problem</h2>
 Recreating this setup was a pain in the a**. Since I was only refactoring _parts_ of the site code and not the _entire site_, the tooling need to be adjusted in some spots.
 
 For example: I didn't need all the dependencies listed in the `package.json` and `bower.json` files. I just needed the ones related to the code pieces I was refactoring, so I had to spend some time removing unneeded dependencies.
@@ -98,7 +98,7 @@ Adjusting the `.json` dependencies was a manageable inconvenience...adjusting th
 I knew I would use this setup again and again, so containing it in a template I could use to start my projects seemed to make sense. I started building the template when I finished the refactor.
 
 <a name="more-problems"></a>
-## More Problems
+<h2>More Problems</h2>
 The template started off as a bunch of files in a GitHub repo. It contained the `.less` and `.json` files and other things, like the Grunt &amp; Gulp files and a `.gitignore` file.
 
 Another set of problems soon appeared:
@@ -120,13 +120,13 @@ It was clear that I had to find a way to programmatically scaffold each project 
 But what I wanted was too specific so I doubted the Yeoman could help. So I decided to use Node to try and build the tool for this.
 
 <a name="tool-building-process"></a>
-## The Tool-Building Process
+<h2>The Tool-Building Process</h2>
 I asked around and did some Google searches, trying to figure out the best way to do this. It took me two nights to get files and folders to either download or be created with a Node command.
 
 From there, I became ridiculously anal-retentive and spent three weeks (THREE WEEKS) getting things to look and act how I wanted them to.  This was mostly centered around logging: what messages were sent to the terminal console as the app progressed, what it took to get them to appear in the proper order, etc.
 
 <a name="final-command"></a>
-## The Final Command
+<h2>The Final Command</h2>
 The end result of all this is `kdz`: a Node tool that lets me scaffold  a project and add small set of options. It downloads files from a GitHub repo, and it also creates files &amp; folders....all in a programmatic way.
 
 After you install it, typing `kdz` from anywhere in the terminal runs the `--help` command and outputs this:
@@ -243,7 +243,7 @@ There are slight variations among the LESS and Sass builds based on my self-impo
 Learn about these variations and rules over on [the "Understand the Basic structure" section in repo's style guide](https://github.com/kaidez/kdz/blob/master/source-shared-files/STYLEGUIDE.md#understand-the-basic-structure).
 
 <a name="behind-the-scenes"></a>
-## Behind The Scenes
+<h2>Behind The Scenes</h2>
 
 Some interesting points about how "kdz" works behind the scenes:
 
@@ -254,7 +254,7 @@ Some interesting points about how "kdz" works behind the scenes:
 * [chalk](https://www.npmjs.com/package/chalk "Read about the npm chalk module") adds some pretty sweet coloring to the outputted console statements.
 
 <a name="todo"></a>
-## What's Left To Do
+<h2>What's Left To Do</h2>
 A lot. The repo's README has a [TODO list](https://github.com/kaidez/kdz#todowish-list) of things I need/want to do, but here are the main things:
 
 * __get "kdz" working on Windows:__ we're at the point where there's no good reason for a Node app to work on Unix-like systems only.  Microsoft's done far too much good work in getting Node to work on their operating systems and Azure: I think "kdz" should respect that.
@@ -266,7 +266,7 @@ A lot. The repo's README has a [TODO list](https://github.com/kaidez/kdz#todowis
 * __make the options run on their own:__ right now, the `--gitignore`, `--less`, `--sass` and `--wordpress` won't run unless they're passed as options to commands. In other words, running `kdz app` will scaffold a basic project but if I want to download Sass files sometime after that, I would have to run `kdz app -s`. Sass files should be able to be downloaded without the `app` command so I'm working on that.
 
 <a name="further-reading"></a>
-## Further Reading
+<h2>Further Reading</h2>
 
 A main reason that I didn't write a tutorial was because there are so many good ones already out there. I found the [*Command-line utilities with Node.js* article by Glynn Phillips ](https://cruft.io/posts/2014-06-03-node-command-line-utilities/) to be the best one...I'd start there.
 
@@ -274,7 +274,7 @@ The [Node API docs](https://nodejs.org/api/ "Read the Node API") are also a read
 
 
 <a name="conclusion"></a>
-## Conclusion
+<h2>Conclusion</h2>
 "kdz" gives me the flexibility I needed. So back to the pre-processor conversation, I can add LESS and Sass files to a project by passing one of their respective options, but don't have to pass any options if I want to use Rework.
 
 And if every want to be able to configure Stylus or Jade for a project, I can just add an option to "kdz".  This will be really easy if I add a method library.
