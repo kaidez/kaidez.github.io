@@ -9,6 +9,8 @@ tags: ["personal"]
 secondary_tags: ["javascript", "build tools", "jekyll"]
 category: Personal
 ---
+<em>(Author's note - August 2025: as of this note, this post is 12 years old. But while it no longer uses Jekyll to generate the static site, it does use the [Eleventy/11ty](https://www.11ty.dev/) static site generator.  It doesn't use Jekyll, doesn't use any of the Tipue  search functionality (although their old web site points to what appears to be [a pretty interesting book(https://tipue.com/)]!!! Lots of links were update to point to their [Wayback Machine](https://web.archive.org/) equivalent. Past all this, you may want to read this post to get some historical perspective -k)</em>
+
 After over 2,000 Git commits, kaidez.com gets a long-overdue redesign. It was a struggle due to limited free time, but it was also a lot of fun and an excellent learning experience.
 
 The site code is open source and [freely available on GitHub](https://github.com/kaidez/kaidez.com/ "go to kaidez.com GitHub repo"). The repo's [README](https://github.com/kaidez/kaidez.com/blob/master/README.md "read the kaidez.com README on GitHub") is a lengthy birds-eye view description of the code.
@@ -47,7 +49,7 @@ I used Jekyll to create multiple site layouts using [Liquid](http://liquidmarkup
 The outputted site does some very cool things...here's short list:
 
 * lots of content is written in [Markdown](http://daringfireball.net/projects/markdown/ "visit the markdown documentation page")...it all gets converted to HTML.
-* the logic displays posts on the [home page](/) in a very "dynamic" way (more on this in a future post).
+* the logic displays posts on the [home page](/) in a very "dynamic" way <em>(Author's note: my current 11ty site does this too)</em>.
 * four category-specific pages are generated.
 * an XML-powered RSS file for syndication is built.
 * an HTML site map is created.
@@ -55,9 +57,9 @@ The outputted site does some very cool things...here's short list:
 
 Ruby is a Jekyll dependency so this site does use two Ruby-based plugins at the development level: one for generating a [search engine-friendly XML Sitemap,](http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/ "tutorial for creating an XML Sitemap for Jekyll") and one used in conjunction with [Lea Verou's](http://lea.verou.me/ "visit Lea Verou's personal web site") excellent [PrismJS syntax highlighter plugin](http://prismjs.com/ "review the PrismJS syntax highlighter plugin"). But Jekyll really does the work of prepping this site's content for deployment.
 
-Because it generates static sites, Jekyll eliminates the need for SQL queries and server-side script parsing. Combine that with asset minification, applying a cache manifest and using [MaxCDN](http://tracking.maxcdn.com/c/72639/3968/378 "review MaxCDN, a kaidez.com affiliate partner") to serve up static content, kaidez.com loads into a web browser pretty fast. Ads, social networking widgets and images slow things down sometimes, but the site's overall page-load time is still minimal.
+Because it generates static sites, Jekyll eliminates the need for SQL queries and server-side script parsing. Combine that with asset minification, applying a cache manifest and using MaxCDN to serve up static content, kaidez.com loads into a web browser pretty fast. Ads, social networking widgets and images slow things down sometimes, but the site's overall page-load time is still minimal. <em>(Author's not: kaidez.com no longer uses MaxCDN)</em>
 
-I exported the content from my old WordPress site to Jekyll using the [WordPress to Jekyll Exporter](https://github.com/benbalter/wordpress-to-jekyll-exporter), but the [Jekyll migration docs](http://jekyllrb.com/docs/migrations/ "read the Jekyll migration documentation") lists alternative export methods. Also, [Vito Botta's two-part article on importing content from WordPress to Jekyll](http://vitobotta.com/migrating-from-wordpress-to-jekyll-part-one-why-i-gave-up-on-wordpress/#sthash.qDZ0Y6Qr.dpbs "Vito Botta post for migrating from WordPress to Jekyll") is *the* definitive article on the subject.
+I exported the content from my old WordPress site to Jekyll using the [WordPress to Jekyll Exporter](https://github.com/benbalter/wordpress-to-jekyll-exporter), but the [Jekyll migration docs](https://import.jekyllrb.com/docs/home/ "read the Jekyll migration documentation") lists alternative export methods. Also, [Vito Botta's two-part article on importing content from WordPress to Jekyll](https://web.archive.org/web/20230205004554/https://vitobotta.com/2011/03/22/why-i-switched-from-wordpress-to-jekyll/ "Vito Botta post for migrating from WordPress to Jekyll") is *the* definitive article on the subject.
 
 Jekyll is increasing in popularity: I'm guessing this is due to the fact that it can [easily create a site which can be hosted on GitHub for free](https://help.github.com/articles/setting-up-a-custom-domain-with-pages). Also, Jekyll's attracting [lots of contributors](https://github.com/mojombo/jekyll/graphs/contributors) that are working together to make the platform better.
 
@@ -88,7 +90,7 @@ Instead, I designed this site within a browser using various desktop and remote 
 
 No issues with applying Mobile First to my content strategy. I did a complete content audit of my previous site based on the ROT principle, then either eliminated lots of content I didn't need or moved it to the bottom of the page.
 
-Going Mobile First with the code was a bit of problem that still needs to be cleaned up a bit. This site is responsive via CSS3 media queries and I implemented [the method outlined by Jon Korpi](http://www.jonikorpi.com/leaving-old-IE-behind/), coding a vertically thin, non-responsive layout outside the media queries, with the help of [Sass](http://sass-lang.com/ "Learn about the Sass CSS preprocessor" ), of course.  All of this is for the benefit of oldIE.
+Going Mobile First with the code was a bit of problem that still needs to be cleaned up a bit. This site is responsive via CSS3 media queries and I implemented [the method outlined by Jon Korpi](https://web.archive.org/web/20250320035327/https://www.jonikorpi.com/leaving-old-IE-behind/), coding a vertically thin, non-responsive layout outside the media queries, with the help of [Sass](http://sass-lang.com/ "Learn about the Sass CSS preprocessor" ), of course.  All of this is for the benefit of oldIE.
 
 I may not have implemented this method properly...I ended up writing more code than I planned on. The code "works" but I know it can be neater and need to revisit it.
 
@@ -114,7 +116,7 @@ Blogs are usually simple in design...I stuck with that rule when redesigning kai
 
 The blue color is just something I came up with, color scheme-wise. I used [this color palette over at Colour Lovers as an overall guide](http://www.colourlovers.com/palette/2892492/azure_sea.).
 
-The site uses Google's Open Sans and Open Sans Bold fonts (mostly for page content) as well as Robot Condensed (mostly for headers). Some font icons also appear on the page courtesy of [Font Awesome](http://fortawesome.github.io/Font-Awesome/icons/).
+The site uses Google's Open Sans and Open Sans Bold fonts (mostly for page content) as well as Robot Condensed (mostly for headers). Some font icons also appear on the page courtesy of [Font Awesome](https://fontawesome.com/icons).
 
 I employed the aforementioned (and awesome) PrismJS for code snippet highlighting. It has [a great build tool](http://prismjs.com/download.html) which generates the plugin code needed to implement syntax highlighting wherever you want to on your site.
 
@@ -122,7 +124,7 @@ I created a [404 page](/404.html) with a little humor, but added content to it i
 
 By ignoring oldIE, I was able to apply some CSS3 animations and transitions to the site...although not as much as I wanted to.  I did try to do some things that were more "grand" but ran into cross-browser issues on the modern browsers. So for now, these animations and transitions are limited to some of the link rollovers on the desktop view only.
 
-I did spend a few hours trying to apply a [flat design](http://fltdsgn.com/) to the site, but it's tough. Like [Swiss/International style](http://www.smashingmagazine.com/2009/07/17/lessons-from-swiss-style-graphic-design/) before it, flat design is all about designing a whole lot more with a whole lot less...this is easier said than done.
+I did spend a few hours trying to apply a [flat design](https://en.wikipedia.org/wiki/Flat_design/) to the site, but it's tough. Like [Swiss/International style](http://www.smashingmagazine.com/2009/07/17/lessons-from-swiss-style-graphic-design/) before it, flat design is all about designing a whole lot more with a whole lot less...this is easier said than done.
 
 But while its simplicity is difficult to implement, flat design ties in well with the general simplicity of most blog layouts. So I'll probably go with a flat design next time.
 
@@ -144,7 +146,7 @@ Many leaders in the developer community are pushing for other devs to use more p
 Here's a rundown of how some of the JavaScript is being used on kaidez.com:
 
 * to run PrismJS.
-* to power the site's search functionality via the [Tipue plugin for jQuery](http://www.tipue.com/search/).
+* to power the site's search functionality via the Tipue plugin for jQuery (plugin no longer exists).
 * to execute the mobile menu's show/hide functionality.
 * to create both affiliate ads and the search box off-DOM, then load them onto the page (a DEFINITE future blog post).
 * to show and hide the affiliate ads based on media queries with the help of the [enquire.js](http://wicky.nillia.ms/enquire.js/).
@@ -169,7 +171,7 @@ There's not enough space in this post to discuss the brilliance of RequireJS so 
 
 I also suggest that you [read this GitHub Gist](https://gist.github.com/desandro/4686136 "read this GitHub Gist about RequireJS") where David Desandro from Twitter asked a question that sparked an excellent discussion about the benefits of RequireJS as well as [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD "Go to the Asynchronous Module Definition Page"), which RequireJS is heavily based upon.
 
-There are some great comments in the Gist, many by well-known members of the JS Community. Read them all, especially the first comment from [@cowboy](http://twitter.com/cowboy "Visit @cowboy A.K.A Ben Alman on Twitter ") that perfectly sums up how RequireJS eliminates lots of stress from JavaScript development.
+There are some great comments in the Gist, many by well-known members of the JS Community. Read them all, especially the first comment from @cowboy that perfectly sums up how RequireJS eliminates lots of stress from JavaScript development.
 
 <a name="other-javscript"></a>
 ## The Rest Of The JavaScript
@@ -185,9 +187,9 @@ The rest of the JavaScript that's outside of the RequireJS process loads asynchr
 
 This other asynchronous code consists of:
 
-* [Google Analytics](https://support.google.com/analytics/answer/1142414?hl=en "Learn more about Google Analytics"): watches/analyzes traffic.
+* [Google Analytics](https://marketingplatform.google.com/about/analytics/ "Learn more about Google Analytics"): watches/analyzes traffic.
 
-* [Google Webmaster Tools](https://support.google.com/analytics/answer/1142414?hl=en "Learn more about Google Webmaster Tools"): tracks crawl errors, validates XML sitemaps, etc.
+* [Google Webmaster Tools (now Google Search)](https://developers.google.com/search): tracks crawl errors, validates XML sitemaps, etc.
 
 * [Google Adsense](https://support.google.com/adsense/answer/3221666?hl=en "Learn more about Google Adsense"): for loading ads.
 
@@ -223,9 +225,9 @@ Still, I did the following SEO technical stuff behind the scenes:
 * implemented [Schema.org](http://schema.org "Learn more about schema.org") data.
 * made sure each page had a canonical link.
 * generated an XML sitemap for the search engines.
-* made sure at least one section had pagination...view this [here](/pages/ "").
+* made sure at least one section had pagination...view this [here](/ "").
 * embedded [Open Graph](http://ogp.me/ "Learn more about Open Graph protocol") protocols.
-* signed up for [Twitter Cards](https://dev.twitter.com/docs/cards "Sign up for Twitter Cards").
+* signed up for [Twitter Cards](https://web.archive.org/web/20141230083336/https://dev.twitter.com/cards/overview).
 
 Making a site accessible to people with disabilities is also a good SEO practice...and something you should just do anyway. So I did the following:
 
@@ -234,7 +236,7 @@ Making a site accessible to people with disabilities is also a good SEO practice
 * turned off all styles and read the unstyled page content out loud (which is basically what a screen-reader does).
 * made sure that any elements that needed to be hidden were done so properly as per some old accessibility suggestions from Yahoo. There are a few spots that I didn't do this, but it's mostly done site-wide.
 
-If you don't think making your site accessible to people with disabilities is worth your time, you're dead wrong. Accessibility is important...especially on mobile. Austin Seraphin [eloquently explains why](http://behindthecurtain.us/2010/06/12/my-first-week-with-the-iphone/ "Austin Seraphin article on iPhone providing great accessibility functions for the disabled").
+If you don't think making your site accessible to people with disabilities is worth your time, you're dead wrong. Accessibility is important...especially on mobile. Austin Seraphin [eloquently explains why](https://web.archive.org/web/20141013113927/https://behindthecurtain.us/2010/06/12/my-first-week-with-the-iphone/ "Austin Seraphin article on iPhone providing great accessibility functions for the disabled").
 
 If you still need convincing after reading that, refer to what [Jen Kramer](http://www.jenkramer.org/ "Go to technology instructor Jen Kramer's site") says:
 
@@ -244,7 +246,7 @@ If you still need convincing after reading that, refer to what [Jen Kramer](http
 ## Web Hosting
 I'm sticking with my basic [Media Temple](http://www.mediatemple.net#a_aid=5068b81963acf "Visit Media Temple: a kaidez.com affiliate") Grid Server package but deciding on a web host was really something I struggled with up to the last minute.
 
-I wanted a hosting package that would run my site as well as let me install things like Node and Ruby.  My Grid Server package doesn't really let me install anything extra so I could either upgrade to Media Temple [DV Managed](http://mediatemple.net/webhosting/vps/managed/#a_aid=5068b81963acf "Review Media Temple's DV Managed Package") or sign up a with cloud-based host...either [Rackspace](http://www.rackspace.com/ "Check out Rackspace") or [Amazon Web Services](http://aws.amazon.com/ "Check out Amazon Web Services") in this case.
+I wanted a hosting package that would run my site as well as let me install things like Node and Ruby.  My Grid Server package doesn't really let me install anything extra so I could either upgrade to Media Temple [DV Managed](https://web.archive.org/web/20131230184557/http://mediatemple.net/webhosting/vps/managed/#a_aid=5068b81963acf) or sign up a with cloud-based host...either [Rackspace](http://www.rackspace.com/ "Check out Rackspace") or [Amazon Web Services](http://aws.amazon.com/ "Check out Amazon Web Services") in this case.
 
 Going with either DV Managed, Rackspace or AWS meant installing a LAMP stack on my own, which I'd never done up to that point. So I wanted SOME tech support in case I needed help and Rackspace seemed to pride itself on NOT providing any. So they were out.
 
@@ -252,9 +254,9 @@ Media Temple has EXCELLENT customer service but DV Managed was bit more expensiv
 
 AWS also doesn't provide tech support but I got a better vibe from them, customer service-wise.  Plus, their popularity is steadily increasing to the point that there's tons of documentation for their various services online. So much so that I figured out how to install a LAMP stack on [a (somewhat) free AWS Usage Tier](http://aws.amazon.com/free/ "Read more about AWS's free Usage Tier").
 
-Through its [S3 service](http://aws.amazon.com/s3/), AWS is well-suited for static sites....many people host static sites on S3 and serve their static content off of MaxCDN. [Kyle Rush](http://kylerush.net/ "Go to Kyle Rush's site") from the 2012 Obama campaign runs this setup and has [a great write-up about it](http://blog.maxcdn.com/supercharge-your-site-with-jekyll-s3-and-maxcdn/ "Learn how to set up a static site with Jekyll, Amazon S3 and MaxCDN").
+Through its [S3 service](http://aws.amazon.com/s3/), AWS is well-suited for static sites....many people host static sites on S3 and serve their static content off of MaxCDN. [Kyle Rush](http://kylerush.net/ "Go to Kyle Rush's site") from the 2012 Obama campaign runs this setup and has [a great write-up about it](hhttps://web.archive.org/web/20140809082621/http://blog.maxcdn.com/supercharge-your-site-with-jekyll-s3-and-maxcdn/).
 
-My contact form requires PHP, which can't run on S3 unless you [install the Amazon PHP SDK with Composer](http://docs.aws.amazon.com/aws-sdk-php-2/guide/latest/installation.html "Install the Amazon PHP SDK with Composer"). I was researching how to do this...until I started poking around [Heroku](https://www.heroku.com/ "Review the Heroku Cloud Application Platform").
+My contact form requires PHP, which can't run on S3 unless you [install the Amazon PHP SDK with Composer](https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/getting-started_installation.html "Install the Amazon PHP SDK with Composer"). I was researching how to do this...until I started poking around [Heroku](https://www.heroku.com/ "Review the Heroku Cloud Application Platform").
 
 Heroku is insanely awesome. It's a cloud application platform that's "AWS-like" but focuses on creating single-page applications whereas AWS can create SPAs but is focused on creating a whole lot more.
 
@@ -262,7 +264,7 @@ Heroku will let me do a limited amount of Node/Ruby stuff for free....limited bu
 
 I'm sticking with my generic, PHP-included Media Temple plan for now and will do some fancy coding stuff on Heroku. But while I took all of the above tech stuff into consideration, I have to say that MT's excellent customer service was a big reason I stayed with them.
 
-Media Temple recently began offering a [DV Developer Package](http://mediatemple.net/webhosting/vps/developer/#a_aid=5068b81963acf "Review Media Temple's DV Developer Package") that offers a bare virtual machine. It may be too bare but it still may suit my specific future needs...still researching this as of this post.
+Media Temple recently began offering a [DV Developer Package](https://www.godaddy.com/mediatemple#a_aid=5068b81963acf) that offers a bare virtual machine. It may be too bare but it still may suit my specific future needs...still researching this as of this post.
 
 <a name="grunt-deployment-workflow"></a>
 ## Grunt &amp; My Deployment Workflow
@@ -282,7 +284,7 @@ All the `grunt watch` stuff is awesome but it's my `grunt ppush` task where thin
 
 1. The [grunt-shell plugin](https://github.com/sindresorhus/grunt-shell "Get the grunt-shell plugin") runs a task that executes a bash command that creates a "_deploy" directory in my project folder.
 
-2. The [grunt-targethtml plugin](https://github.com/changer/grunt-targethtml "Get grunt-targethtml plugin") runs a task that embeds both Google Analytics code and a production-ready copy of the site's main  CSS file to the previously mentioned page layouts.
+2. The [grunt-targethtml plugin](https://github.com/c4urself/grunt-targethtml "Get grunt-targethtml plugin") runs a task that embeds both Google Analytics code and a production-ready copy of the site's main  CSS file to the previously mentioned page layouts.
 
 3. The [grunt-jekyll plugin](https://github.com/dannygarcia/grunt-jekyll "Get grunt-jekyll plugin") runs a task that uses Jekyll to build the site based on the layouts and dumps the build into "_deploy".
 
@@ -304,7 +306,7 @@ I'm being bombastic when outlining my deployment sequence like this but am doing
 
 <a name="post-launch-tasks"></a>
 ## Post-Launch Tasks
-If you've ever read [*The Pragmatic Programmer*](http://www.amazon.com/gp/product/B000SEGEKI/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B000SEGEKI&linkCode=as2&tag=kaidez-20 "Buy The Pragmatic Programmer from Amazon"), you're familiar with the term "good enough software". It means, "the code may not be perfect, but it gets the job done."  And I do feel that way about some parts of the site.
+If you've ever read [*The Pragmatic Programmer*](https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052/ref=sr_1_1?dib=eyJ2IjoiMSJ9.84Xun4zePRzxcYJXHbNXB0hEzAIrlAJFR7Bk9EG9dP3PuBp-93E8pUASAfINZvTgee1sKOSEQ4dC_sfUgTukfL806S4pSQEbncyxqbYE-qLjLXqsRmoToJDFxpFFfuXfJuywPQM5UCwq9UxcJ0We-7ZblfLjSKTP1JxnYhyJYxUduxZXS03unPZgFngtgA9oFD00tKzCG1peXlucyr0JnAvHuFQd5cxxxJCR7UAxQi8.Y7Rc7XVmbaRAGpO7kU8BQj2WuunD8ghm9QIQO9sJQiY&dib_tag=se&keywords=the+pragmatic+programmer&qid=1756155922&sr=8-1 "Buy The Pragmatic Programmer from Amazon"), you're familiar with the term "good enough software". It means, "the code may not be perfect, but it gets the job done."  And I do feel that way about some parts of the site.
 
 Except for the overall neatness of the CSS, I'm fine with the production code. It's optimized for mobile, renders no console errors (although some 3rd-party code does), loads fast, looks and acts great across different browsers/devices (except oldIE-based stuff), utilizes SEO best practices and executes most post-load events at [the current recommended target rate of 60 frames per second](http://www.smashingmagazine.com/2013/06/10/pinterest-paint-performance-case-study/ "Smasing Magazine article about browser paint performance").
 
@@ -314,7 +316,7 @@ But I'm obviously critical about the CSS and somewhat critical of how some thing
 
   * __Clean up the CSS &amp; Sass__: Again, I KNOW that the CSS/Sass in its current format could be cleaned up and optimized.  And I do want to make it work in IE8. My hope is to do all this using [OOCSS principles](http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/ "Smashing Magazine Article about OOCSS").
 
-  * __Make the mobile menu/searchbox run off of CSS transitions instead of jQuery__: when the site's width is set to 568px or less in a media query-enabled browser, both the menu and searchbox will only appear and disappear by clicking on some buttons at the top.This show/hide animation is powered by jQuery but powering it off of CSS3 animations is the more optimal approach (read more about this [here](http://dev.opera.com/articles/view/css3-vs-jquery-animations/)). Doing this means restructuring the header and I was too close to being done with the redesign to do all that.  So this may be done later and if so, it will also be an opportunity to redo the header from a styling standpoint.
+  * __Make the mobile menu/searchbox run off of CSS transitions instead of jQuery__: when the site's width is set to 568px or less in a media query-enabled browser, both the menu and searchbox will only appear and disappear by clicking on some buttons at the top.This show/hide animation is powered by jQuery but powering it off of CSS3 animations is the more optimal approach (read more about this [here](https://web.archive.org/web/20190821223109/https://dev.opera.com/articles/css3-vs-jquery-animations/). Doing this means restructuring the header and I was too close to being done with the redesign to do all that.  So this may be done later and if so, it will also be an opportunity to redo the header from a styling standpoint.
 
   * __Using Backbone in the contact form__: I'm really itching to use Backbone in a project and started to do so with my contact form, but this would add rendering/event weight to the form's performance and be too much.  I still want to use Backbone though so I may do this in the future.
 
