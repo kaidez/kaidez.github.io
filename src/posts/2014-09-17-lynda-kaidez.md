@@ -4,8 +4,10 @@ date: 2014-09-17
 excerpt: kaidez has recorded Ember.js and Backbone.js courses for lynda.com, a leading online learning company.
 layout: layouts/post.njk
 permalink: /lynda-kaidez/
-tags: ["reviews"]
-# og-image: kaidez-lynda.jpg
+image: kaidez-lynda.jpg
+tags: ["personal"]
+secondary_tags: ["javascript", "my work"]
+category: Personal
 ---
 If you [follow me on Twitter](http://twitter.com/kaidez "follow kaidez on Twitter"), you know that I've been recording JavaScript-based courses for [lynda.com](http://lynda.com "visit lynda.com: a leading online learning company"). My second of two courses was uploaded to their site the day before this post's publish date.
 
