@@ -358,4 +358,4 @@ Also be sure to check out both [X-Tag](http://x-tag.github.io/docs "Read about b
 ## Conclusion
 Using something like Lit or X-Tag is what's needed to use Web Components in production-level code right anymore, but these libraries work ON TOP of Web Components. So it's best to learn the underlying code first.
 
-I can't say that my code is perfect, but I achieved the goal I set for myself and was able to solve any problems I faced by actually writing the code instead of just reading about it. I have a much better handle in templates and Shadow DOM then I did before, and that's enough.
+I can't say that my code is perfect, but I achieved the goal I set for myself and was able to solve any problems I faced by actually writing the code instead of just reading about it. I have a much better handle on templates and Shadow DOM then I did before, and that's enough.
