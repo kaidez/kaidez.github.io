@@ -4,8 +4,10 @@ date: 2012-09-12
 excerpt: Get quick answers first, then learn how Git works with GitHub. This post also has an excellent list of Git/GitHub learning links at the end.
 layout: layouts/post.njk
 permalink: /remove-files-from-github/
+image: gitTutorial.jpg
 tags: ["tutorials"]
-# og-image: gitTutorial.jpg
+secondary_tags: ["git", "github"]
+category: Tutorials
 ---
 
 If you've every tried to remove files from a [GitHub](http://github.com/ "Go to GitHub") repository by putting them in the Trash/Recycle Bin and then doing a `git push`, you know that this doesn't work.
@@ -171,17 +173,17 @@ This post focused on how Git and GitHub handle file and folder deletions but the
 ### [The Git Site »](http://git-scm.com/ "Read about the Git source code management system")
 Obviously your first stop. The site went through a major redesign a while back, greatly improving the UI. Documentation and downloads are much easier to find and read.
 
-### [Try Git »](http://try.GitHub.com/ "A hands-on Git tutorial from Code School")
+### [Try Git »](https://web.archive.org/web/20141229113843/https://try.github.io/levels/1/challenges/1)
 If you need your hand held a bit when first learning Git (which is not a sin), you can check this site out. Sponsored by [Code School](http://codeschool.com/ "Visit Code School"), Try Git is a Codecademy-styled learning tool that takes you through some Git commands and processes that you may not be familiar with.
 
-### [GitHub Training »](https://GitHub.com/training/ "Review Git/GitHub traing course from GitHub")
-One of the reasons that GitHub has become popular is the same reason that [Chris Coyier](http://css-tricks.com/ "Visit Chris Coyier's CSS Tricks site") and [Paul Irish](http://paulirish.com/ "vist Paul Irish's site") have become popular: their desire to share as much knowledge as humanly possible. While some of the training things they offer cost money, they offer many things for free. Check out their [Free Resources](https://GitHub.com/training/free "Review free GitHub training courses") section as well as their [Online Training](https://GitHub.com/training/online "Review GitHub online training offerings") and [Events](https://GitHub.com/training/events "Review GitHub events") sections. For the last two, some things are free and some are not, but I think they're reasonably priced.
+### [GitHub Training »](https://www.linkedin.com/learning/complete-guide-to-git/history?resume=false "Review Git/GitHub traing course from GitHub")
+One of the reasons that GitHub has become popular is the same reason that [Chris Coyier](http://css-tricks.com/ "Visit Chris Coyier's CSS Tricks site") and [Paul Irish](http://paulirish.com/ "vist Paul Irish's site") have become popular: their desire to share as much knowledge as humanly possible. While some of the training things they offer cost money, they offer many things for free.
 
 ### [A Note About Git Commit Messages »](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html "Read Tim Pope's well-known article on proper Git commits")
 Written five years from the time of this post, this Tim Pope article on how to create a proper Git commit has become required reading for developers. Rarely will you find a software pro NOT follow these rules so it's best to include them in your workflow.
 
-### [Git Essential Training Course on lynda.com (premium) »](http://www.lynda.com/Git-tutorials/Git-Essential-Training/100222-2.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=524&utm_campaign=CD2146&bid=524&aid=CD2146' "Get thorough Git training on lynda.com: a kaidez.com affiliate")
-It costs money but is worth it. Taught by [Kevin Skoglund](http://www.kevinskoglund.com/), it's a thorough, hands-on Git course offered by [lynda.com](http://www.lynda.com/promo/trial/Default.aspx?lpk35=1833&utm_medium=ldc-partner&utm_source=SSPRC&utm_content=655&utm_campaign=CD2146&bid=655&aid=CD2146) (a kaidez.com affiliate)...definitely worth checking out.
+### [Complete Guide to Git on LinkedIn Learning (premium) »](http://www.lynda.com/Git-tutorials/Git-Essential-Training/100222-2.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=524&utm_campaign=CD2146&bid=524&aid=CD2146')
+It costs money but is worth it. Taught by [Kevin Skoglund](http://www.kevinskoglund.com/), it's a thorough, hands-on Git course offered by [LinkedIn Learning](https://www.linkedin.com/learning/)...definitely worth checking out.
 
 ### [Common Git Commands »](https://gist.GitHub.com/2043530#file_gistfile1.sh "Get an excellent list of Git commands")
 UK-based developer [Kerry Gallagher](http://www.kerrygallagher.co.uk/ "Visit Kerry Gallagher's website") put together a really useful list of Git commands. Print it out and tape it somewhere by your computer.
@@ -189,7 +191,7 @@ UK-based developer [Kerry Gallagher](http://www.kerrygallagher.co.uk/ "Visit Ker
 ### ["Git Is Simpler Than You Think" by Nick Farina »](http://nfarina.com/post/9868516270/git-is-simpler)
 If you want to Git works under the hood, check out this excellent post. Nick Farina opened Git up and spent a lot of time looking at its internal structure. Lots of great info in this post.
 
-### ["What is Version Control: Centralized vs. DVCS" by Giancarlo Lionetti »](https://blogs.atlassian.com/2012/02/version-control-centralized-dvcs/ "Learn about centralized and distributed version control systems")
+### ["What is Version Control: Centralized vs. DVCS" by Giancarlo Lionetti »](https://web.archive.org/web/20210224084517/https://www.atlassian.com/blog/software-teams/version-control-centralized-dvcs)
 I *really* want you to understand that Git is a distributed version control system as well as understand what that means. It's the part that makes sharing code via GitHub a snap and, let's be honest, a major reason behind their success. Lionetti provides the most in-depth, easy-to-understand article on the subject that I could find.
 
 ### [*Pro Git* by Scott Chacon »](http://git-scm.com/book "Read the free Pro Git Book")
