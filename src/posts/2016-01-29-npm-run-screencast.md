@@ -37,16 +37,16 @@ category: Coding Tips
 </p>
 
 <ul>
-  <li class="post-list-item">task automation with npm run by substack (all these links are broken).
+  <li>task automation with npm run by substack (all these links are broken).
   </li>
-  <li class="post-list-item">
+  <li>
     <a href="https://www.bocoup.com/blog/a-facade-for-tooling-with-npm-scripts">A Facade for Tooling with NPM Package Scripts</a> 
     by 
     <a href="https://twitter.com/kadamwhite">K. Adam White</a>.
   </li>
-  <li class="post-list-item">How to Use npm as a Build Tool (broken link) by <a href="https://twitter.com/keithamus">Keith Cirkel</a>.
+  <li>How to Use npm as a Build Tool (broken link) by <a href="https://twitter.com/keithamus">Keith Cirkel</a>.
   </li>
-  <li class="post-list-item">Why we should stop using Grunt &#038; Gulp (broken link)
+  <li>Why we should stop using Grunt &#038; Gulp (broken link)
     also by 
     <a href="https://twitter.com/keithamus">Keith Cirkel</a>.
   </li>

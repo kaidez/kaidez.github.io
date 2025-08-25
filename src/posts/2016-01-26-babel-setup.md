@@ -54,13 +54,13 @@ category: Coding Tips
 <p>A few assumptions:</p>
 
 <ul>
-  <li class="post-list-item">
+  <li>
     I'm assuming that you have Node/npm installed and know how to use npm to install packages. If not, 
     <a href="http://nodejs.org/">download Node and npm</a> 
     and 
     <a href="http://npmjs.org/">familiarize yourself with npm packages</a>.
   </li>
-  <li class="post-list-item">
+  <li>
     <p>
       I'm not assuming that you know Babel but am assuming that you have a 
       <em>basic</em> 
@@ -82,13 +82,13 @@ category: Coding Tips
 <p>A few notes:</p>
 
 <ul>
-  <li class="post-list-item">
+  <li>
     <a href="https://github.com/kaidez/babel-es2015-post">Grab the code on GitHub.</a>
   </li>
-  <li class="post-list-item">
+  <li>
     ECMAScript 2015 (ES2015) is sometimes referred to ECMAScript6 (ES6, like Axel's book does) or ES.next. ECMAScript 2015 is the official name so I'm going to refer to it using its common ES2015 abbreviation.
   </li>
-  <li class="post-list-item">
+  <li>
     I'm still learning about the whole ES2015/Babel/Browserify thing so there may be a better way to do all this. Feel free to leave me a comment if you think this is the case.
   </li>
 </ul>
@@ -151,11 +151,11 @@ es2015-stuff
 </p>
 
 <ul>
-  <li class="post-list-item">
+  <li>
     to work with ES2015 code while properly compiling it down to ES5, you need to install Browserify, Babelify and Babel ES2015 presets as 
     <code>devDependencies</code>.
   </li>
-  <li class="post-list-item">
+  <li>
     after this installation we need to add this field to our 
     <code>package.json</code> 
     so Browserify can work properly with Babel:
@@ -169,7 +169,7 @@ es2015-stuff
     </code>
     </pre>
   </li>
-  <li class="post-list-item">
+  <li>
     we'll also need to add code to our 
     <code>.babelrc</code> 
     configuration file so Babel works well with the presets:
@@ -181,14 +181,14 @@ es2015-stuff
     </code>
     </pre>
   </li>
-  <li class="post-list-item">
+  <li>
     we'll install two more 
     <code>devDependencies</code>: 
     Nodemon to watch for changes to our 
     <code>.js</code> 
     files and httpster to create a mock server for reviewing our updates in a browser. These packages have no effect on how our code works, they just make it easier to review the work as we move along.
   </li>
-  <li class="post-list-item">
+  <li>
     finally, we'll install jQuery and list in 
     <code>dependencies</code> 
     since it should ship with our production app.
@@ -443,7 +443,7 @@ import $ from 'jquery';
 </p>
 
 <ul>
-  <li class="post-list-item">
+  <li>
     it first looks at Node internally to see if it's an internal module, like 
     <code>fs</code> 
     or 
@@ -451,7 +451,7 @@ import $ from 'jquery';
     or 
     <code>os</code>.
   </li>
-  <li class="post-list-item">
+  <li>
     if it can't find it there, it looks inside 
     <code>node_modules/</code> 
     next which contains modules you install on your own&#8230; 
@@ -459,7 +459,7 @@ import $ from 'jquery';
     <code>gulp</code>, 
     etc.
   </li>
-  <li class="post-list-item">
+  <li>
     if it can't find it there, it assumes that it's your own custom module and you'll create the proper path for 
     <code>require()</code> 
     to find it.

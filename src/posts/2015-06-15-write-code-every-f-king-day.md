@@ -83,11 +83,11 @@ category: Personal
 <p>The blank <em>weekend</em> days mean that I took a break to have a life, which is awesome! We're still seeing that I wrote code pretty regularly and as a result of that, here's what happened when I got to Everyday Health:</p>
 
 <ul>
-  <li class="post-list-item">finding content inside a complex JSON API and loading it onto the page wasn't a problem for me.</li>
-  <li class="post-list-item">using jQuery for managing data and state instead of creating fancy fade-ins wasn't a problem for me.</li>
-  <li class="post-list-item">fixing cross-browser errors related to CSS transitions wasn't a problem for me.</li>
-  <li class="post-list-item">writing feature detection with pure JavaScript instead of Modernizr wasn't a problem for me.</li>
-  <li class="post-list-item">creating a responsive web site without Bootstrap or Foundation wasn't a problem for me.</li>
+  <li>finding content inside a complex JSON API and loading it onto the page wasn't a problem for me.</li>
+  <li>using jQuery for managing data and state instead of creating fancy fade-ins wasn't a problem for me.</li>
+  <li>fixing cross-browser errors related to CSS transitions wasn't a problem for me.</li>
+  <li>writing feature detection with pure JavaScript instead of Modernizr wasn't a problem for me.</li>
+  <li>creating a responsive web site without Bootstrap or Foundation wasn't a problem for me.</li>
 </ul>
 
 <p>
@@ -115,16 +115,16 @@ category: Personal
 <p>You go and start coding.  Here's how I suggest you do things:</p>
 
 <ul>
-  <li class="post-list-item">
+  <li>
     <strong>Track your progress with GitHub:</strong> building up that above commit map was a nice way to track the progress of my daily coding. Lengthening my &#8220;Current Streak&#8221; as much as I could was always a nice pat on the back I gave myself. Do the same if you can.
   </li>
-  <li class="post-list-item">
+  <li>
     <strong>Never ever EVER ask someone to write the code for you:</strong> I run into this a lot and readily admit to doing it myself in the past. You're not growing as a developer if you let someone else solve your code problems, but don't get me wrong. If someone's been working on a piece code for three hours and are stuck on a particular issue or two, I have absolutely no problem lending a helping hand. But if someone asks another to do their work from start to finish, that's the wrong way to do it and that someone's web development career is over before it started. Writing code everyday avoids this scenario.
   </li>
-  <li class="post-list-item">
+  <li>
     <strong>Write a lot of code, but make sure you maintain a work/life balance:</strong> <a href="https://twitter.com/kaidez/status/596670528515104768">I tweeted about coding everyday once</a> but Christian Heilmann chimed in saying that a social life is also needed. I didn't say that in my original tweet but do agree with him. Too many programmers code morning, noon and night while sacrificing their social life, and I definitely don't recommend that. John Resig highlights the importance of a work/life/side project balance in his blog post and as mentioned above, I took breaks during a few weekends. And the weekends that I did code, it wasn't THAT much as I was with family and friends.
   </li>
-  <li class="post-list-item">
+  <li>
     <strong>Share what you learn:</strong> A future tutorial of mine MIGHT cover a well-documented piece of the jQuery API that's been discussed on many other blogs. But the piece helped me solve a problem and changed my approach to building web apps, so I should share that info regardless of how many similar posts already exist. And if I share what I learned in an elegant way, I know the tutorial will help someone else. You should do the same: start a blog and write a lot of posts that say, &#8220;this was my problem, this is how I solved it, this is what I learned.&#8221; Write posts with the goal of helping people instead of inciting them to click on ads.
   </li>
 </ul>

@@ -149,12 +149,12 @@ category: Tutorials
 </p>
 
 <ol>
-  <li class="post-list-item">
+  <li>
     <strong>No need to use widgets.js:</strong> 
     <code>widgets.js</code> 
     is Twitter's core file for creating various Twitter web page elements. I'm not using it and as a result, my site makes one less server request. I should point out that Twitter prefers that you use this file on your site when creating Tweet functionality and you can add it if you want to, but this code seems to work fine without it.
   </li>
-  <li class="post-list-item">
+  <li>
     <strong>No need for plugins:</strong> 
     No need for any plugin of any kind; therefore, the code creates a very small footprint.
   </li>
@@ -406,21 +406,21 @@ window.open( "http://twitter.com/intent/tweet?url=" + tweetedLink + "&amp;text="
 </p>
 
 <ol>
-  <li class="post-list-item">
+  <li>
     The 
     <code>?url=" + tweetedLink"</code> 
     value that comes at the start of the query string contains the value of our 
     <code>tweetedLink</code> 
     variable which, again, is the URL in our address bar.
   </li>
-  <li class="post-list-item">
+  <li>
     The 
     <code>"&amp;text=" + getPostTitle</code> 
     value refers to the 
     <code>getPostTitle</code> 
     variable we defined at the top of our code is also built into the URL and, again, it stores the name of our blog post.
   </li>
-  <li class="post-list-item">
+  <li>
     The 
     <code>&amp;via=kaidez</code> 
     value that come next. Setting 
@@ -606,22 +606,22 @@ http://kaidez.com/samples/click-to-tweet/03/?query=some_query&amp;value=some_val
 </p>
 
 <ul>
-  <li class="post-list-item">
+  <li>
     <code>protocol</code> 
     grabs the link's server protocol: 
     <code>http:</code>
   </li>
-  <li class="post-list-item">
+  <li>
     We add 
     <code>//</code> 
     to build a proper link
   </li>
-  <li class="post-list-item">
+  <li>
     <code>host</code> 
     grabs the link's domain: 
     <code>samples.kadiez.com</code>
   </li>
-  <li class="post-list-item">
+  <li>
     <code>path</code> 
     grabs the link's path position: 
     <code>/click-to-tweet/03/</code>
@@ -723,7 +723,7 @@ if(!window.location.origin) {
 <h3>More things about window.location</h3>
 
 <ol>
-  <li class="post-list-item">
+  <li>
     There is a 
     <code>window.location.host</code> 
     property that 
@@ -740,13 +740,13 @@ if(!window.location.origin) {
     <code>host</code> 
     works cross-browser but I found that it didn't, so I ignored it.
   </li>
-  <li class="post-list-item">
+  <li>
     You can grab the query string info with 
     <code>window.location.search</code>
     &#8230;for our link, that would return 
     <code>?query=some_query&amp;value=some_value/</code>
   </li>
-  <li class="post-list-item">
+  <li>
     You can grab the hash tag info with 
     <code>window.location.hash</code>
     &#8230;for our link, that would return 

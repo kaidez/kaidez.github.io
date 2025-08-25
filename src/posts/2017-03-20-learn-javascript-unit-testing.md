@@ -79,11 +79,11 @@ You should test small pieces of code, not big pieces. Functional programming enc
 
 The rules of functional programming are:
 <ul>
-  <li class="post-list-item">A function should depend on its own scope to work, not its outer scope.</li>
-  <li class="post-list-item">Functions <em>definitely</em> shouldn’t change the outer scope.</li>
-  <li class="post-list-item">Functions should explicitly <code>return</code> something.</li>
-  <li class="post-list-item">If a function gives the same input, it should always produce the same output.</li>
-  <li class="post-list-item">Most of all, functions must be small and reusable.</li>
+  <li>A function should depend on its own scope to work, not its outer scope.</li>
+  <li>Functions <em>definitely</em> shouldn’t change the outer scope.</li>
+  <li>Functions should explicitly <code>return</code> something.</li>
+  <li>If a function gives the same input, it should always produce the same output.</li>
+  <li>Most of all, functions must be small and reusable.</li>
 </ul>
 This is just an FP summary: you can read more about it by clicking on this article’s various links. But the last point is the most relevant to JavaScript unit testing:
 

@@ -18,7 +18,7 @@ I try to implement a little functional programming in all my work, even if it's 
 
 Functional programming:
 
-<ul><li class="post-list-item">should depend on its own scope to work, not its outer scope.</li><li class="post-list-item">shouldn’t change the outer scope.</li><li class="post-list-item">should explicitly <code>return</code> something.</li><li class="post-list-item">means id function gives the same input, it will always produce the same output.</li><li class="post-list-item">must be small and reusable.</li></ul>
+<ul><li>should depend on its own scope to work, not its outer scope.</li><li>shouldn’t change the outer scope.</li><li>should explicitly <code>return</code> something.</li><li>means id function gives the same input, it will always produce the same output.</li><li>must be small and reusable.</li></ul>
 
 I did this with React, but let's look at the non-React way first...
 
