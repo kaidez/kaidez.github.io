@@ -4,8 +4,10 @@ date: 2013-09-18
 excerpt: A quick update about the status of kaidez.com, including the announcing of a new, upcoming site design.
 layout: layouts/post.njk
 permalink: /site-update/
+image: default-image.jpg
 tags: ["personal"]
-# og-image: default-image.jpg
+secondary_tags: ["my work"]
+category: Personal
 ---
 
 I'm still coding but haven't blogged in awhile. So it's time to not only get back to blogging but to also redesign this blog. Here's the whole story…
@@ -22,7 +24,7 @@ I'm not taking a [Mark Zuckerberg standpoint on HTML5][1] and say that I placed 
 
 The big thing at the time of this site launch was the difference in HTML5′s structure when compared to previous incarnations of HTML…things like the `<article>` and `<section>` tags. And while there was certainly a learning curve in understanding this structure, it was certainly easier to learn than other web development things.
 
-I had access to a really good premium learning outlet that taught me the structure ([thanks James][2]), then it was just a matter of actually writing out the code. From there, I would just reference both the [web developer][3] and [web author][4] versions of the spec if I had questions. I would then look online if I needed more in-depth analysis on certain HTML5 aspect: [HTML5 Doctor][5] was usually the first stop.
+I had access to a really good premium learning outlet that taught me the structure, then it was just a matter of actually writing out the code. From there, I would just reference both the [web developer][3] and web author versions of the spec if I had questions (the author spec has since been removed). I would then look online if I needed more in-depth analysis on certain HTML5 aspect: [HTML5 Doctor][5] was usually the first stop.
 
 ## Focusing More On JavaScript
 
