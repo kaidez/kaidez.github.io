@@ -28,7 +28,7 @@ Since this post's publish date the Polymer guys now recommend [Lit](https://lit.
 
 ## A quick Web Components description
 Web Components are a set of emerging technologies working their way towards a firm specification, thanks to the hard work of the W3C. The goal of Web Components is to allow developers to create custom elements with HTML, CSS and JavaScript...these elements can also be thought of as widgets.
-
+2014-08-13-web-components-demo
 An great example of this is the `<github-card>` custom element. If you have a GitHub account, [check out the &lt;github-card> demo page](http://pazguille.github.io/github-card/ "go to <github-card> demo page"), add your GH username in the field to review the end result, then [go to the &lt;github-card> documentation](https://github.com/pazguille/github-card "go to &lt;github-card> GitHub documentation") to download the code and see how to apply it to your page using a simple tag.
 
 The four sub-concepts that make up Web Components are:
@@ -36,7 +36,7 @@ The four sub-concepts that make up Web Components are:
 1. *__Templates__*: a chunk of formatted HTML that can be cloned, inserted and rendered based on instructions you give it. [Read more &raquo;](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template "Read more about Web Component templates")
 2. *__Shadow DOM__*: an encapsulated separate DOM that you can add code to. It's best to think of it as "a DOM within your DOM." [Read more &raquo;](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM "Read more about Web Component Shadow DOM")
 3. *__Custom Elements__*: the ability to create custom page tags, such as `<github-card>`. [Read more &raquo;](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements)
-4. *__HTML Imports (now abandoned from the spec)__ now abandoned*: the ability to load in small pieces of HTML code into your page when needed via `<link>` tags. [Read more&raquo;](https://www.webcomponents.org/community/articles/introduction-to-html-imports "Read more about Web Component HTML Imports")
+4. *__HTML Imports (now abandoned from the spec)__: the ability to load in small pieces of HTML code into your page when needed via `<link>` tags. [Read more&raquo;](https://www.webcomponents.org/community/articles/introduction-to-html-imports "Read more about Web Component HTML Imports")
 
 While things like <code>&lt;github-card&gt;</code> utilize all the sub-concepts, each one can function on its own quite nicely. But when they all work together, they form Web Components...conceptually, it's best to think of WC in the same way as AJAX, where a group of technologies work together to perform a single task.
 
@@ -64,7 +64,7 @@ __index.html__
   &lt;div id="container"&gt;
     &lt;header&gt;
       &lt;h1 class="page-header"&gt;JavaScript Books&lt;/h1&gt;
-      &lt;h2&gt;Built with templates & Shadow DOM&lt;/h1&gt;
+      &lt;h2&gt;Built with templates & Shadow DOM&lt;/h2&gt;
     &lt;/header&gt;
     &lt;template id="singleBook"&gt;
       &lt;style&gt;
@@ -158,7 +158,7 @@ __scripts/main.js__
   var template = document.querySelector("#singleBook"),
     templateContent = template.content,
     host = document.querySelector("#allBooks"),
-    root = attachShadow({ mode: "open" });
+    root = host.attachShadow({ mode: "open" });
 
   for (key in jsBooks) {
     var title = jsBooks[key].title,
@@ -346,7 +346,7 @@ Because `<style>` gets added to `<section>` with `appendChild()`, it gets placed
 But placing it at the bottom doesn't affect my goals for this project, which was to learn how templates and Shadow DOM work. Still, read more about `jQuery.prepend()` [here](http://api.jquery.com/prepend/ "Read about jQuery.prepend()").
 
 ## Further reading
-This post was update on August 2025: the previous version had a lot of vroken or out-of date links.  To be honest:  [the previously-mentioned MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) is probably the best starting point.
+This post was update on August 2025: the previous version had a lot of broken or out-of date links.  To be honest:  [the previously-mentioned MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) is probably the best starting point.
 
 
 The W3C has an older article called [Introduction to Web Components](https://www.w3.org/TR/components-intro/ "Read Introduction to Web Components"). It's a good read for historical purposes.
