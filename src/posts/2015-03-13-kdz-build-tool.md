@@ -4,14 +4,17 @@ date: 2015-03-13
 excerpt: kaidez used Node to create a tool for scaffolding out web development projects. Includes a link to thoroughly commented code on GitHub.
 layout: layouts/post.njk
 permalink: /kdz-build-tool/
+image: kdz-header.jpg
 tags: [coding-best-practices]
-# og-image: kdz-header.jpg
+secondary_tags: ["build tools", "javascript", "node"]
+category: Coding Tips
 ---
 I came up with some cool techniques after working on a bunch of web development projects, techniques based mostly around front-end tooling.  I knew I would use these techniques and tools in future projects, and also knew that I had to find a way to easily set them up at the start of each project.
 
 I solved the problem by creating a [Node](https://nodejs.org/ "Go to the Node site") scaffolding CLI tool. I'm also being cute about it and naming it based on my hacker alias, calling it "kdz".
 
-<h2 style="clear:both;">Table of Contents</h2>
+<h2>Table of Contents</h2>
+
 1. [Some Notes](#notes)
 2. [How This Started](#how-this-started)
 3. [The Problem](#the-problem)
@@ -24,22 +27,22 @@ I solved the problem by creating a [Node](https://nodejs.org/ "Go to the Node si
 10. [Conclusion](#conclusion)
 
 <a name="notes"></a>
-## Some Notes
+<h2>Some Notes</h2>
 
 A few notes first...
 
 * This is not a tutorial. I may do tutorials on certain parts of the code in the future but for now, I'm just documenting the approach I took to solve a specific problem.
 
-* [The "kdz" code is thoroughly commented on GitHub](https://github.com/kaidez/kdz "See the "kdz" code on GitHub") for your review: feel free to look at it and ask questions/make comments about it in a post comment. When reviewing the code, you want to look at the modules in the [`config` folder](https://github.com/kaidez/kdz/tree/master/config "Review the npm code modules for "kdz"") as well as [the core `kdz.js` file](https://github.com/kaidez/kdz/blob/master/kdz.js "Review the core "kdz.js" file").
+* <a href="https://github.com/kaidez/kdz" title="See the kdz code on GitHub">The "kdz" code is thoroughly commented on GitHub</a>for your review: feel free to look at it and ask questions/make comments about it in a post comment. When reviewing the code, you want to look at the modules in the <a href="https://github.com/kaidez/kdz/tree/master/config" title="Review the npm code modules for kdz">`config` folder</a> as well as <a href="https://github.com/kaidez/kdz/blob/master/kdz.js " title="Review the core kdz.js file">the core `kdz.js` file</a>.
 
-* This tool will (probably) never be published as an [npm](https://www.npmjs.com/) package so if you want to download it, please [read the repo's "Before you install" section](https://github.com/kaidez/kdz#before-you-install "Read the repo's "Before you install" section") first.
+* This tool will (probably) never be published as an [npm](https://www.npmjs.com/) package so if you want to download it, please [read the repo's "Before you install" section](https://github.com/kaidez/kdz#before-you-install) first.
 
 <a name="how-this-started"></a>
 ## How This Started
 
 I had a project at work where I had to create a single page website using a standard HTML5/CSS/JavaScript web stack. The project tooling was set up like this in my dev environment:
 
-* [Jade](https://pugjs.org/ "Review the Jade HTML template engine") was used for HTML5 pre-processing.
+* [Jade (now called "Pug")](https://pugjs.org/ "Review the Jade HTML template engine") was used for HTML5 pre-processing.
 * [LESS](http://lesscss.org/ "Review the LESS pre-processor") was used for CSS pre-processing.
 * [CoffeeScript](http://coffeescript.org/ "Review the CoffeeScript JS pre-processor") was used for JavaScript pre-processing.
 * I used the core CSS file that comes with [Twitter Bootstrap](http://getbootstrap.com/ "Review Twitter Bootstrap") because it I'm very productive when using it to build a responsive web design.
@@ -246,13 +249,13 @@ Some interesting points about how "kdz" works behind the scenes:
 
 * Obviously, "kdz" was built with Node.
 * [commander](https://www.npmjs.com/package/commander "Read about the npm commander module") was the key package used to build this tool. It's what I used to configure the commands and options. Thanks to [Ryan Ogden at Expand The Room](https://twitter.com/rogden83 "Visit Ryan Ogden on Twitter") for turning me on to it.
-* [q](https://www.npmjs.com/package/q "Read about the npm q module") was used to manage [JS Promises](https://promisesaplus.com/ "Read the Promises/A+ specification"). Node runs things asynchronously and I had to make sure that a certain step didn't run until some other steps ran before it. q properly managed that process.
+* [q (now deprecated)](https://www.npmjs.com/package/q "Read about the npm q module") was used to manage [JS Promises](https://promisesaplus.com/ "Read the Promises/A+ specification"). Node runs things asynchronously and I had to make sure that a certain step didn't run until some other steps ran before it. q properly managed that process.
 * The [download](https://www.npmjs.com/package/download "Read about the npm download module") and [download-status](https://www.npmjs.com/package/download-status "Read about the npm download-status module") modules work together to download files from the repo and display how the download is progressing.
 * [chalk](https://www.npmjs.com/package/chalk "Read about the npm chalk module") adds some pretty sweet coloring to the outputted console statements.
 
 <a name="todo"></a>
 ## What's Left To Do
-A lot. The repo's README has a [TODO list](https://github.com/kaidez/kdz#todowish-list "Read the TODO list on the "kdz" repo") of things I need/want to do, but here are the main things:
+A lot. The repo's README has a [TODO list](https://github.com/kaidez/kdz#todowish-list) of things I need/want to do, but here are the main things:
 
 * __get "kdz" working on Windows:__ we're at the point where there's no good reason for a Node app to work on Unix-like systems only.  Microsoft's done far too much good work in getting Node to work on their operating systems and Azure: I think "kdz" should respect that.
 
@@ -265,7 +268,7 @@ A lot. The repo's README has a [TODO list](https://github.com/kaidez/kdz#todowis
 <a name="further-reading"></a>
 ## Further Reading
 
-A main reason that I didn't write a tutorial was because there are so many good ones already out there. I found the [*Command-line utilities with Node.js* article by Glynn Phillips ](http://cruft.io/posts/node-command-line-utilities/) to be the best one...I'd start there.
+A main reason that I didn't write a tutorial was because there are so many good ones already out there. I found the [*Command-line utilities with Node.js* article by Glynn Phillips ](https://cruft.io/posts/2014-06-03-node-command-line-utilities/) to be the best one...I'd start there.
 
 The [Node API docs](https://nodejs.org/api/ "Read the Node API") are also a read. It's verbose in some spots but after pushing through it, I was able to write my own Node code where I would usually use a plugin...GOOD FOR ME!!!
 
