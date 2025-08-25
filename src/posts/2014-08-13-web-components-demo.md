@@ -11,17 +11,20 @@ category: Coding Tips
 redirect_from:
   - web-components-demo/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+kaidez-blog+%28kaidez%29
 ---
+<em>(Author's note - August 2025: This post is REALLY, REALLY old!!! It was written at a time when web components we're still in development. Now, a set of WC standards are in place ([read more about that over on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_components)), Polymer, the once go-to web component library, [suggests using Lit instead](https://lit.dev/ "visit the Lit Web Components Library"), and as far as building powerful, customizable elements for the web goes, [React](https://react.dev/) somewhat solved that problem. The original post had a lot of broken links that have either been removed or updated so yeah: this post is old. But you may want to go through this post to get some historical perspective. -k)</em>
+
 <p>
   <ul>
-  <li><a href="/samples/template-shadowdom-practice/" target="blank">VIEW THE DEMO</a></li>
-  <li><a href="https://github.com/kaidez/template-shadowdom-practice">GRAB THE CODE ON GITHUB</a></li>
-</ul>
+    <li><a href="/samples/template-shadowdom-practice/" target="blank">VIEW THE DEMO</a></li>
+    <li><a href="https://github.com/kaidez/template-shadowdom-practice">GRAB THE CODE ON GITHUB</a></li>
+  </ul>
 </p>
-*Author's Note: it's best to review this code in Google Chrome 36+. Also, open up the Dev Tools and under "General" and then "Settings," make sure that the "Show user agent shadow DOM" box is checked.*
 
 I spent some time hacking Web Components during a long flight layover and it was time well spent. I put together a small demo, just so I could better understand Web Components as a whole.
 
-Web Components is a concept composed of four sub-concepts, but I just focused on two of them for the demo: <em>templates</em> and <em>Shadow DOM</em>...primarily templates. At the time of this post, implementing Web Components neatly across the different browsers and devices requires a polyfill library like [Polymer](http://www.polymer-project.org/ "visit the Polymer Web Components Library") or [X-Tag](http://x-tags.org/ "visit the X-tag Web Components Library"), but I wanted to study the internal workings of each sub-concept before diving into the polyfills.
+Web Components is a concept composed of four sub-concepts, but I just focused on two of them for the demo: <em>templates</em> and <em>Shadow DOM</em>...primarily templates. At the time of this post, implementing Web Components neatly across the different browsers and devices requires a polyfill library like [Polymer](http://www.polymer-project.org/ "visit the Polymer Web Components Library") or [X-Tag](https://x-tag.github.io/ "visit the X-tag Web Components Library"), but I wanted to study the internal workings of each sub-concept before diving into the polyfills.
+
+Since this post's publish date the Polymer guys now recommend [Lit](https://lit.dev/ "visit the Lit Web Components Library").  X-Tag is still going strong.
 
 ## A quick Web Components description
 Web Components are a set of emerging technologies working their way towards a firm specification, thanks to the hard work of the W3C. The goal of Web Components is to allow developers to create custom elements with HTML, CSS and JavaScript...these elements can also be thought of as widgets.
@@ -33,7 +36,7 @@ The four sub-concepts that make up Web Components are:
 1. *__Templates__*: a chunk of formatted HTML that can be cloned, inserted and rendered based on instructions you give it. [Read more &raquo;](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template "Read more about Web Component templates")
 2. *__Shadow DOM__*: an encapsulated separate DOM that you can add code to. It's best to think of it as "a DOM within your DOM." [Read more &raquo;](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM "Read more about Web Component Shadow DOM")
 3. *__Custom Elements__*: the ability to create custom page tags, such as `<github-card>`. [Read more &raquo;](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements)
-4. *__HTML Imports__*: the ability to load in small pieces of HTML code into your page when needed via `<link>` tags. [Read more&raquo;](https://www.webcomponents.org/community/articles/introduction-to-html-imports "Read more about Web Component HTML Imports")
+4. *__HTML Imports (now abandoned from the spec)__ now abandoned*: the ability to load in small pieces of HTML code into your page when needed via `<link>` tags. [Read more&raquo;](https://www.webcomponents.org/community/articles/introduction-to-html-imports "Read more about Web Component HTML Imports")
 
 While things like <code>&lt;github-card&gt;</code> utilize all the sub-concepts, each one can function on its own quite nicely. But when they all work together, they form Web Components...conceptually, it's best to think of WC in the same way as AJAX, where a group of technologies work together to perform a single task.
 
@@ -343,21 +346,16 @@ Because `<style>` gets added to `<section>` with `appendChild()`, it gets placed
 But placing it at the bottom doesn't affect my goals for this project, which was to learn how templates and Shadow DOM work. Still, read more about `jQuery.prepend()` [here](http://api.jquery.com/prepend/ "Read about jQuery.prepend()").
 
 ## Further reading
-There are links above to a Rob Dodson article and a group of links to various articles over on HTML5 Rocks. The Dodson article provides a great high-level view of Web Components so if you're at the early stages of discovering them, I would read that one first...the HTML5 Rocks articles next.
+This post was update on August 2025: the previous version had a lot of vroken or out-of date links.  To be honest:  [the previously-mentioned MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) is probably the best starting point.
 
-The W3C has an older article called [Introduction to Web Components](https://www.w3.org/TR/components-intro/ "Read Introduction to Web Components"). It's a working draft and is over a year old based on this post's publish date but is still another high-level view that's slightly more technical....read it while keeping in mind it's old and hasn't been updated in a while.
 
-Truthfully, the W3C has been referring people to the [Web Components Wiki](http://www.w3.org/wiki/WebComponents/ "Read the Web Components Wiki") lately so you should review that.  It points to the HTML5 Rocks links and the specs for [Shadow DOM](http://w3c.github.io/webcomponents/spec/shadow/ "Read the Shadow DOM specification"), [Custom Elements](http://w3c.github.io/webcomponents/spec/custom/ "Read the Shadow Custom Elements specification") and [HTML Imports](http://w3c.github.io/webcomponents/spec/imports/ "Read the HTML Imports specification"). The WHATWG has the proper version of [the Template spec](http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting.html#the-template-element "Read about Web Component template specification").
+The W3C has an older article called [Introduction to Web Components](https://www.w3.org/TR/components-intro/ "Read Introduction to Web Components"). It's a good read for historical purposes.
 
-Specs may be verbose to read at times, but it's always a good idea to read them.
+The Web Incubator Community Group (WICG) has posted [a set of web component standards on GitHub](https://github.com/WICG/webcomponents). Give those a read.
 
-Most profoundly, Microsoft has made no firm decision on what Web Component features Internet Explorer will and will not support at the time of this post's publish date. I'm assuming that will change in the future though.
-
-Pointing out the IE issues makes a nice segue to polyfills...take note that Polymer is the most popular Web Component polyfill for now, but only supports IE 10 and up.  Read more on [Polymer's Browser Compatibility page](http://www.polymer-project.org/resources/compatibility.html "Read about browser compatibility for Polymer").
-
-X-Tag isn't as feature-rich as Polymer but supports a wider array of browsers, including IE 9 and up. Read more on [X-Tag's Docs page](http://x-tag.github.io/docs "Read about browser compatibility for X-Tags").
+Also be sure to check out both [X-Tag](http://x-tag.github.io/docs "Read about browser compatibility for X-Tags") and [Lit](https://lit.dev/ "visit the Lit Web Components Library") if you're looking for library support.
 
 ## Conclusion
-Using something like Polymer or X-Tag is what's needed to use Web Components in production-level code right now, but these libraries work ON TOP of Web Components. So it's best to learn the underlying code first.
+Using something like Lit or X-Tag is what's needed to use Web Components in production-level code right anymore, but these libraries work ON TOP of Web Components. So it's best to learn the underlying code first.
 
 I can't say that my code is perfect, but I achieved the goal I set for myself and was able to solve any problems I faced by actually writing the code instead of just reading about it. I have a much better handle in templates and Shadow DOM then I did before, and that's enough.
