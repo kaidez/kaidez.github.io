@@ -10,7 +10,7 @@ tags: ["tutorials"]
 category: Tutorials
 ---
 
-<em>(August: 2025) Author's note: as of this note, this post is 12 years old.  It doesn't use Jekyll, doesn't use any of the Tipue search functionality and there are noted links that are broken.  But the process for detecting wheter or not CSS is disabled that's outlined below is pretty cool!!! Check that out if you like!!! -k</em>
+<em>(August: 2025) Author's note: as of this note, this post is 12 years old.  It doesn't use Jekyll, doesn't use any of the Tipue search functionality and there are noted links that are broken.  But the process for detecting whether or not CSS is disabled that's outlined below is pretty cool!!! Check that out if you like!!! -k</em>
 
 [Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site") is a static site generator: it creates static sites instead of database-driven ones. This means that it doesn't contain the site search functionality commonly bundled into CMS software like [WordPress](http://wordpress.org/ "Go to wordpress.org") and [Drupal](https://new.drupal.org/home "Go to drupal.org").
 
@@ -29,7 +29,7 @@ A common solution to this problem is to use some sort of JavaScript-based search
 
 <a name="three-steps"></a>
 ### The Three Steps We Need To Take
-There are three steps we need to take to acheive our goal:
+There are three steps we need to take to achieve our goal:
 
 1. __Add the JavaScript Detection &amp; Fallback Code to HTML Pages__: These pages will link to JavaScript and CSS files working together to check for the presence of JavaScript, and will also contain our fallback search functionality, courtesy of Google.
 
