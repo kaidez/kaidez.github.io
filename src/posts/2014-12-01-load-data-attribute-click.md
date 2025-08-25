@@ -337,7 +337,7 @@ So every time a link with the `teamLink` class gets clicked, the `this` keyword 
 
 <h2><a name="getattribute-fallback"></a>
 Use `getAttribute()` as fallback code for `dataset` (<a href="http://codepen.io/kaidez/pen/QwbJBZ" target="blank">See the  demo</a>)</h2>
-`dateset` is awesome but, as mentioned in the beginning, isn't cross-browser compliant and doesn't work in all browsers. We can write fallback code with the `getAttribute()` method for those browsers, specifically IE 10 and lower.
+`dataset` is awesome but, as mentioned in the beginning, isn't cross-browser compliant and doesn't work in all browsers. We can write fallback code with the `getAttribute()` method for those browsers, specifically IE 10 and lower.
 
 The CSS and HTML stay the same while the JavaScript goes through some changes...
 <pre><code class="language-javascript">
@@ -384,6 +384,6 @@ We've made sure that the `teamValue`, `managerValue` and `homePitchValue` variab
 
 This was a very basic data attribute implementation and, quite frankly, data attribute implementations should be simple. Each link isn't overloaded with data attributes that have over 100 character lines of copy.
 
-Were that my data structure or something even more complicated, I would use a pure JS implementation and ignore data attributes. That was my opinion at the start of this but reading well-respected developer Divya Manian's excellent `dataset` post justifies my feelings (link is broken).
+Were that my data structure or something even more complicated, I would use a pure JS implementation and ignore data attributes. That was my opinion at the start of this but reading well-respected developer Divya Manian's excellent `dataset` post justifies my feelings. (link is broken)
 
 But for simple data structures, using data attributes will certainly fit your simpler use cases, especially if you need to load them with a mouse event. So there are many reasons to add them to your production code, and I hope this tutorial helps you.

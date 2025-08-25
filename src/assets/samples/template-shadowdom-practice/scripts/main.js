@@ -32,7 +32,7 @@
   var template = document.querySelector("#singleBook"),
     templateContent = template.content,
     host = document.querySelector("#allBooks"),
-    root = host.createShadowRoot(); // "#allBooks" is the Shadow Root
+    root = host.attachShadow({ mode: "open" }); // "#allBooks" is the Shadow Root
 
   // Use a for...in loop to load "jsBooks" data in  <template>
   for (key in jsBooks) {

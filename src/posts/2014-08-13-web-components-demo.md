@@ -4,15 +4,17 @@ date: 2014-08-13
 excerpt: A Web Components demo using just templates and Shadow DOM, mostly templates. Post includes many links to Web Component learning resources.
 layout: layouts/post.njk
 permalink: /web-components-demo/
+image: web-components-demo.jpg
 tags: [coding-best-practices]
-# og-image: web-components-demo.jpg
+secondary_tags: ["web components", "javascript"]
+category: Coding Tips
 redirect_from:
   - web-components-demo/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+kaidez-blog+%28kaidez%29
 ---
-<p class="clearfix">
+<p>
   <ul>
-  <li style="display: inline-block; margin: 10px;"><a href="/samples/template-shadowdom-practice/" class="demoLink" target="blank">VIEW THE DEMO</a></li>
-  <li style="display: inline-block; margin: 10px;"><a href="https://github.com/kaidez/template-shadowdom-practice" class="demoLink">GRAB THE CODE ON GITHUB</a></li>
+  <li><a href="/samples/template-shadowdom-practice/" target="blank">VIEW THE DEMO</a></li>
+  <li><a href="https://github.com/kaidez/template-shadowdom-practice">GRAB THE CODE ON GITHUB</a></li>
 </ul>
 </p>
 *Author's Note: it's best to review this code in Google Chrome 36+. Also, open up the Dev Tools and under "General" and then "Settings," make sure that the "Show user agent shadow DOM" box is checked.*
@@ -21,7 +23,7 @@ I spent some time hacking Web Components during a long flight layover and it was
 
 Web Components is a concept composed of four sub-concepts, but I just focused on two of them for the demo: <em>templates</em> and <em>Shadow DOM</em>...primarily templates. At the time of this post, implementing Web Components neatly across the different browsers and devices requires a polyfill library like [Polymer](http://www.polymer-project.org/ "visit the Polymer Web Components Library") or [X-Tag](http://x-tags.org/ "visit the X-tag Web Components Library"), but I wanted to study the internal workings of each sub-concept before diving into the polyfills.
 
-### A quick Web Components description
+## A quick Web Components description
 Web Components are a set of emerging technologies working their way towards a firm specification, thanks to the hard work of the W3C. The goal of Web Components is to allow developers to create custom elements with HTML, CSS and JavaScript...these elements can also be thought of as widgets.
 
 An great example of this is the `<github-card>` custom element. If you have a GitHub account, [check out the &lt;github-card> demo page](http://pazguille.github.io/github-card/ "go to <github-card> demo page"), add your GH username in the field to review the end result, then [go to the &lt;github-card> documentation](https://github.com/pazguille/github-card "go to &lt;github-card> GitHub documentation") to download the code and see how to apply it to your page using a simple tag.
@@ -39,13 +41,14 @@ While things like <code>&lt;github-card&gt;</code> utilize all the sub-concepts,
 
 *(Side note: there's another sub-concept called "decorators" but lots of developers don't like it, so there's not a lot of focus in terms of finalizing its specification. It may disappear.)*
 
-### Started out by focusing on templates...mostly
+## Started out by focusing on templates...mostly
 I've read about all of these sub-concepts (including decorators) but  played with the actual code just a little, and the best way to learn is by doing instead of reading. So I'm in the middle of hacking out code for each sub-concept, starting with templates.
 
 For the templates, I wanted to display a simple list of books based on a small JavaScript data object. Things started out like this...
 
 __index.html__
-<pre><code class="language-markup">
+
+<pre class="language-markup"><code class="language-markup">
 <!DOCTYPE html>
 &lt;html lang="en"&gt;
 &lt;head&gt;
@@ -102,7 +105,8 @@ __index.html__
 </code></pre>
 
 __css/styles.css__
-<pre><code class="language-css">
+<pre class="language-css">
+<code class="language-css">
 body {
   margin: 20px;
 }
@@ -120,7 +124,7 @@ footer {
 </code></pre>
 
 __scripts/main.js__
-<pre><code class="language-javascript">
+<pre class="language-javascript"><code class="language-javascript">
 (function(){
 
   var jsBooks = {
@@ -153,7 +157,7 @@ __scripts/main.js__
   var template = document.querySelector("#singleBook"),
     templateContent = template.content,
     host = document.querySelector("#allBooks"),
-    root = host.createShadowRoot();
+    root = attachShadow({ mode: "open" });
 
   for (key in jsBooks) {
     var title = jsBooks[key].title,
@@ -174,9 +178,9 @@ __scripts/main.js__
 
 `index.html` contains both `normalize.css` and the main Twitter Bootstrap CSS file. Bootstrap is providing responsive functionality, but is mostly here to make parts of the site look pretty. `styles.css` adds extra styling to some page elements and has a very small role in the project.
 
-Past that, there's some basic HTML but there's also the Web Component-centric template tag that has an ID of `singleBook`. The code inside of <code><template></code> contains HTML and some CSS in a <code><style></code> tag.
+Past that, there's some basic HTML but there's also the Web Component-centric template tag that has an ID of `singleBook`. The code inside of <code>&lt;template /&gt;</code> contains HTML and some CSS in a <code>&lt;style&gt;</code> tag.
 
-The template contains an <code><article></code> tag: this is where the book data in the JS object will be parsed as content. The template tag is also inert, meaning it's not visible on page load and can't communicate with any outside code until we say so.
+The template contains an `<code>`<article>` tag: this is where the book data in the JS object will be parsed as content. The template tag is also inert, meaning it's not visible on page load and can't communicate with any outside code until we say so.
 
 Note that some parts of `<article>` are empty:
 
@@ -186,7 +190,7 @@ Note that some parts of `<article>` are empty:
 
 This empty parts will be populated with our object data...let's look at that...
 
-<pre><code class="language-javascript">
+<pre class="language-javascript"><code class="language-javascript">
 (function(){
 ...
 })();
@@ -194,7 +198,7 @@ This empty parts will be populated with our object data...let's look at that...
 
 Everything's wrapped in an [IIFE](http://benalman.com/news/2010/11/immediately-invoked-function-expression/ "Read more about IIFEs").
 
-<pre><code class="language-javascript">
+<pre class="language-javascript"><code class="language-javascript">
 var jsBooks = {
   "book1" : {
     "title": "Object-Oriented Javascript",
@@ -212,7 +216,7 @@ The JavaScript data object. There's only one item one listed here but it contain
 var template = document.querySelector("#singleBook"),
   templateContent = template.content,
   host = document.querySelector("#allBooks"),
-  root = host.createShadowRoot();
+  root = host.attachShadow({ mode: "open" });
 </code></pre>
 
 Starting to create the Shadow DOM. I'm creating a single var pattern to define four variables...
@@ -220,7 +224,7 @@ Starting to create the Shadow DOM. I'm creating a single var pattern to define f
   * `template` is a direct reference to the template, which has an ID of `singleBook`.
   * `templateContent` is a direct reference to value of the template's `content` attribute at the time of page-load...the page tags, their attributes. Everything. [Read more over on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template "Read about the &lt;template> tag on MDN").
   * `host` is a direct reference to what's known as the "shadow host" and it's the page element where template content gets load into.  That's the `<section id="allBooks">` page element in this case. This is commonly referred to as the "shadow host" and it can have any variable name you want, but it's convention to name it "host."
-  * `root` is a direct reference to what's known as the "shadow root" and it's referring to the content that that gets generated <em>INSIDE</em> the template. Thanks to the `host.createShadowRoot()` line, I'm placing this content inside of `host`, which, again, is the `<section id="allBooks">` element...it may be easier to think of it as the actual Shadow DOM. When the content has fully loaded into the root, it gets returned to the web page as a document fragment...[read more about document fragments](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment "Read about document fragments") It also can also have any variable name you want to give it, but it's convention to name it "root."
+  * `root` is a direct reference to what's known as the "shadow root" and it's referring to the content that that gets generated <em>INSIDE</em> the template. Thanks to the `host.attachShadow({ mode: "open" })` line, I'm placing this content inside of `host`, which, again, is the `<section id="allBooks">` element...it may be easier to think of it as the actual Shadow DOM. When the content has fully loaded into the root, it gets returned to the web page as a document fragment...[read more about document fragments](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment "Read about document fragments") It also can also have any variable name you want to give it, but it's convention to name it "root."
 
 <pre><code class="language-javascript">
 for (key in jsBooks) {
@@ -291,7 +295,7 @@ But there's a problem: Bootstrap styles that are applied to certain elements ins
 
 This is happening because, as mentioned above, the code inside the template can't communicate with any outside code and, technically speaking, `<template>` is in the Shadow DOM, which is naturally-encapsulated. So none of the page's three stylesheets (`normalize.min.css`, `bootstrap.min.css` and `styles.css`) can affect the template's layout. And for now, adding stylesheets to the Shadow DOM with `<link>` isn't allowed.
 
-### Import the styles
+## Import the styles
 `styles.css` doesn't need to interact with the layout but the other two have to.  The solution is to use `@import` inside the template's `<style>` tag to bring both of them in:
 
 <pre><code class="language-css">
@@ -308,7 +312,7 @@ But there's another problem: by doing deep clones of template content at each lo
 
 <img src="/assets/img/shadow-root-02.png" class="imgBorderMaxWidth" alt="The shadow host in the shadow root">
 
-### Adjust the loop
+## Adjust the loop
 This can be fixed by changing the loop procedure: every time the loop runs, deep-copy <em>just</em> the article tag by referring to its "templateArticle" class, then append it to the section tag. Leave the loop after it's ended, then append the style tag to section, which is the shadow host.
 
 This requires changing the end of the JavaScript from this...
@@ -340,10 +344,10 @@ Because `<style>` gets added to `<section>` with `appendChild()`, it gets placed
 
 But placing it at the bottom doesn't affect my goals for this project, which was to learn how templates and Shadow DOM work. Still, read more about `jQuery.prepend()` [here](http://api.jquery.com/prepend/ "Read about jQuery.prepend()").
 
-### Further reading
+## Further reading
 There are links above to a Rob Dodson article and a group of links to various articles over on HTML5 Rocks. The Dodson article provides a great high-level view of Web Components so if you're at the early stages of discovering them, I would read that one first...the HTML5 Rocks articles next.
 
-The W3C has an older article called [Introduction to Web Components](http://www.w3.org/TR/2013/WD-components-intro-20130606/ "Read Introduction to Web Components"). It's a working draft and is over a year old based on this post's publish date but is still another high-level view that's slightly more technical....read it while keeping in mind it's old and hasn't been updated in a while.
+The W3C has an older article called [Introduction to Web Components](https://www.w3.org/TR/components-intro/ "Read Introduction to Web Components"). It's a working draft and is over a year old based on this post's publish date but is still another high-level view that's slightly more technical....read it while keeping in mind it's old and hasn't been updated in a while.
 
 Truthfully, the W3C has been referring people to the [Web Components Wiki](http://www.w3.org/wiki/WebComponents/ "Read the Web Components Wiki") lately so you should review that.  It points to the HTML5 Rocks links and the specs for [Shadow DOM](http://w3c.github.io/webcomponents/spec/shadow/ "Read the Shadow DOM specification"), [Custom Elements](http://w3c.github.io/webcomponents/spec/custom/ "Read the Shadow Custom Elements specification") and [HTML Imports](http://w3c.github.io/webcomponents/spec/imports/ "Read the HTML Imports specification"). The WHATWG has the proper version of [the Template spec](http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting.html#the-template-element "Read about Web Component template specification").
 
@@ -355,7 +359,7 @@ Pointing out the IE issues makes a nice segue to polyfills...take note that Poly
 
 X-Tag isn't as feature-rich as Polymer but supports a wider array of browsers, including IE 9 and up. Read more on [X-Tag's Docs page](http://x-tag.github.io/docs "Read about browser compatibility for X-Tags").
 
-### Conclusion
+## Conclusion
 Using something like Polymer or X-Tag is what's needed to use Web Components in production-level code right now, but these libraries work ON TOP of Web Components. So it's best to learn the underlying code first.
 
 I can't say that my code is perfect, but I achieved the goal I set for myself and was able to solve any problems I faced by actually writing the code instead of just reading about it. I have a much better handle in templates and Shadow DOM then I did before, and that's enough.
