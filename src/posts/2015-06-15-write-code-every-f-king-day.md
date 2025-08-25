@@ -6,7 +6,7 @@ layout: layouts/post.njk
 permalink: /write-code-every-f-king-day/
 image: git-contrib-map.jpg
 tags: ["personal"]
-secondary_tags: ["learn web development", "javascript"]
+secondary_tags: ["learn web development", "rant"]
 category: Personal
 # og-image: git-contrib-map.jpg
 ---
@@ -18,7 +18,7 @@ category: Personal
 
 <p>F#%king.</p><p>Day.</p><h2>About the new job</h2>
 
-<p>As mentioned in my last post, <a href="http://kaidez.com/revlon/" alt="Read about kaidez leaving Revlon">I left Revlon</a> and took a front end developer position at <a href="http://www.everydayhealth.com/" alt="Visit Everyday Health">Everyday Health</a> where I perform a variety of web stack-based tasks. By &#8220;web stack,&#8221; I mean I work primarily with HTML, CSS and JavaScript.</p>
+<p>As mentioned in my last post, <a href="/revlon/" alt="Read about kaidez leaving Revlon">I left Revlon</a> and took a front end developer position at <a href="http://www.everydayhealth.com/" alt="Visit Everyday Health">Everyday Health</a> where I perform a variety of web stack-based tasks. By &#8220;web stack,&#8221; I mean I work primarily with HTML, CSS and JavaScript.</p>
 
 <p>The first tasks I was given were JavaScript and CSS bug fixes. I also had to rewrite some HTML to make it cross-browser/device compliant, but I dealt with these bugs mostly.</p>
 
@@ -34,7 +34,7 @@ category: Personal
 
 <p>I am 100% convinced that my ability to do the job is the direct result of a decision I made months ago to <em>try</em> and write at least one piece of web stack code a day. I missed some days during the weekends but I'm still writing code on a consistent basis.</p>
 
-<p>Some of the code was for work, some of it was for <a href="http://kaidez.com/lynda-kaidez/" alt="Read about the lynda.com courses I created">the lynda.com courses I created</a>. Most of it was just my trying out some new framework or tool, or just playing with a certain part of the JavaScript core API.</p>
+<p>Some of the code was for work, some of it was for <a href="/lynda-kaidez/" alt="Read about the lynda.com courses I created">the lynda.com courses I created</a>. Most of it was just my trying out some new framework or tool, or just playing with a certain part of the JavaScript core API.</p>
 
 <p>I ended up writing lots of code&#8230;lots and lots and lots of code. Here's a recent snapshot of my GitHub commit map that proves it:</p>
 
