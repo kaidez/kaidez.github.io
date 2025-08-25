@@ -4,8 +4,10 @@ date: 2015-04-01
 excerpt: A demo of how to optimize CSS with Gulp, Grunt and tasks like uncss and critical path css. Has a link to fully-commented code on GitHub.
 layout: layouts/post.njk
 permalink: /css-build-demo/
+image: css-build-demo.jpg
 tags: [coding-best-practices]
-# og-image: css-build-demo.jpg
+secondary_tags: ["css", "build tools"]
+category: Coding Tips
 ---
 I interviewed a consultant once to help with some web projects at Revlon. As should be expected, I quizzed her on some various frameworks and libraries to gauge how up-to-date her skill-set was.
 
