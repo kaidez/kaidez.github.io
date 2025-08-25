@@ -4,8 +4,10 @@ date: 2013-10-11
 excerpt: kaidez.com uses Jekyll as a blog engine, Grunt as a task runner, RequireJS for modular JavaScript management, & Bower for package management
 layout: layouts/post.njk
 permalink: /site-redesign-2013/
+image: site-relaunch.jpg
 tags: ["personal"]
-# og-image: site-relaunch.jpg
+secondary_tags: ["javascript", "build tools", "jekyll"]
+category: Personal
 ---
 After over 2,000 Git commits, kaidez.com gets a long-overdue redesign. It was a struggle due to limited free time, but it was also a lot of fun and an excellent learning experience.
 
@@ -13,7 +15,8 @@ The site code is open source and [freely available on GitHub](https://github.com
 
 The README uses a lot of verbose code-speak so a non-verbose (but also lengthy) walk-through is probably needed. So let's proceed with that, shall we?
 
-<h2 class="tableOfContentsHeader">Table of Contents</h2>
+<h2>Table of Contents</h2>
+
 1. [Goodbye, WordPress...](#wordpress)
 2. [...Hello, Jekyll](#jekyll)
 3. [Design In-Browser](#design-in-browser)
@@ -29,13 +32,14 @@ The README uses a lot of verbose code-speak so a non-verbose (but also lengthy) 
 13. [Conclusion](#conclusion)
 
 <a name="wordpress"></a>
-### Goodbye, WordPress...
+## Goodbye, WordPress...
+
 My initial plan was to design the site on top of WordPress while severely limiting its role on the front-end. WordPress would oversee the back-end (manage data, optimize SQL, etc.) but do little in terms of managing any JavaScript and CSS. That would be my job, particularly the JavaScript.
 
 WordPress manages its internal JS libraries in a way that kept me from controlling the JavaScript the way I wanted to ([read more about this](/requirejs-wordpress/ "Read kaidez's Using RequireJS In WordPress' post")). I probably could have lived with this but chose to be anal-retentive about it and moved away from WordPress.
 
 <a name="jekyll" title="go to the jekyll section of this article"></a>
-### ...Hello, Jekyll
+## ...Hello, Jekyll
 If you're a regular GitHub user then you're probably familiar with [Jekyll](http://jekyllrb.com/ "Visit to the Jekyll site"), the blog-aware static site generator. Sites that run using [GitHub Pages](http://pages.github.com/ "Learn more about GitHub pages") give Jekyll its underlying HTML structure, so the word "Jekyll" is regularly thrown around in GitHub circles.
 
 I used Jekyll to create multiple site layouts using [Liquid](http://liquidmarkup.org/ "visit the liquid markup page"), a templating markup language with some internal logic. Whenever I run `jekyll build` from the command line while in my project folder, Jekyll utilizes the templates and logic to output a static, production-ready copy of the site.
@@ -59,14 +63,14 @@ Jekyll is increasing in popularity: I'm guessing this is due to the fact that it
 
 I'm happy with Jekyll but please note that walking away from WordPress was not easy after using it for five years. WordPress did a lot of work via its high-quality plugins...work that's now 100% my responsibility.
 
-Migrating from WordPress to Jekyll isn't always the "right" solution: [a succinct post from Chirs Coyier](http://css-tricks.com/just-use-insert-cms-still-love-wordpress/ "Chris Coyier post on CMS software over static site generators") sums up why.
+Migrating from WordPress to Jekyll isn't always the "right" solution: [a succinct post from Chris Coyier](http://css-tricks.com/just-use-insert-cms-still-love-wordpress/ "Chris Coyier post on CMS software over static site generators") sums up why.
 
 And let's be fair: it's easy to generate static content with WordPress. There would still be some database interaction so Jekyll may implements things faster, but it's possible. Frederick Townes' excellent [W3 Total Cache plugin](http://wordpress.org/plugins/w3-total-cache/ "Check out the W3 Total Cache") performs HTML static conversions quite well.
 
 Also, Jekyll is definitely geared towards the blogger that likes to write code so in most cases, it probably won't be used for a client solution. WordPress, Drupal, SiteCore and Joomla are still best of breed in this arena, my personal preference being for WordPress.
 
 <a name="design-in-browser"></a>
-### Design In-Browser
+## Design In-Browser
 While I did use a pencil and paper to sketch out the site before coding things, I completely disregarded wireframes and PhotoShop mockups.  Reason being, wireframes and mockups don't account for the differences among the various browsers and devices...at least, not well.
 
 Instead, I designed this site within a browser using various desktop and remote tools to debug against the different browsers and devices. This was easy when I started working in WordPress and even easier when I jumped over to Jekyll.
@@ -79,7 +83,7 @@ Instead, I designed this site within a browser using various desktop and remote 
 </div>
 
 <a name="mobile-first"></a>
-### Mobile First
+## Mobile First
 "Mobile First" has gone from a buzz word to a *de facto* standard. It basically means "develop and position content for mobile devices before doing so for desktop devices"...this should always be applied to both content strategy and code.
 
 No issues with applying Mobile First to my content strategy. I did a complete content audit of my previous site based on the ROT principle, then either eliminated lots of content I didn't need or moved it to the bottom of the page.
@@ -105,7 +109,7 @@ Past all this, some Mobile First things are done right:
 * CSS3 gradients, box shadows and text shadows render heavy browser paints that can impend site load time...they appear on the site's tablet and desktop views but are removed from the its mobile view.
 
 <a name="overall-design"></a>
-### Overall Design
+## Overall Design
 Blogs are usually simple in design...I stuck with that rule when redesigning kaidez.com.  I'm fine with the site's overall look &amp; feel but think the header could be better, especially since the two modules at the bottom look (I think) really nice.  I may revisit the header sometime in the future.
 
 The blue color is just something I came up with, color scheme-wise. I used [this color palette over at Colour Lovers as an overall guide](http://www.colourlovers.com/palette/2892492/azure_sea.).
@@ -130,7 +134,7 @@ But while its simplicity is difficult to implement, flat design ties in well wit
 </div>
 
 <a name="RequireJS"></a>
-### JavaScript...RequireJS Specifically
+## JavaScript...RequireJS Specifically
 As mentioned earlier, my primary goal while developing this site was to maintain total control over all the front-end code, especially the JavaScript. I'm proud to say I achieved that goal.
 
 The best thing about this site's JavaScript is that it's not 100% jQuery-dependent...lots of pure JS is implemented. jQuery is certainly used on the site, it just wasn't my starting point for writing JS like it has been in the past.
@@ -168,7 +172,7 @@ I also suggest that you [read this GitHub Gist](https://gist.github.com/desandro
 There are some great comments in the Gist, many by well-known members of the JS Community. Read them all, especially the first comment from [@cowboy](http://twitter.com/cowboy "Visit @cowboy A.K.A Ben Alman on Twitter ") that perfectly sums up how RequireJS eliminates lots of stress from JavaScript development.
 
 <a name="other-javscript"></a>
-### The Rest Of The JavaScript
+## The Rest Of The JavaScript
 RequireJS doesn't interact with *all* the site's JavaScipt. It ignores proxy JS bought in by ads and [Disqus](http://disqus.com/ "Learn more above the Disqus commenting system") but there are other things it ignores.
 
 Modernizr is one such thing.  While your RequireJS file should be placed as to close to the bottom as possible, it's best practice to place Modernizr above the closing `<head>` tag. The Google Fonts load in using the JS-based [Google/Typekit Web Font Loader](https://github.com/typekit/webfontloader) and should be placed at the top of the page before Modernizr.
@@ -199,7 +203,7 @@ All is not perfect with the Google stuff: the Adsense code still loads in a lot 
 
 None of that matters to me though...this responsive solution solves a MAJOR problem that many people were having with Google ads. I'm happy with (and respect) what the Google team has done here.
 <a name="bower"></a>
-### Bower
+## Bower
 This site's JavaScript/CSS libraries and frameworks get updated when they need to, but consistently keeping track of the updates is a pain. [Bower](http://bower.io "Download Bower: a task manager for the web") makes it easy.
 
 Bower is a browser-based package manager that runs on top of Node. When it's properly configured and you type `bower list` on the command line from your project folder, Bower checks to see if any of these packages needs to be updated (as well as Bower itself). If any packages need updating, typing `bower update <whatever-the-package>` into the CLI takes care of the update.
@@ -207,7 +211,7 @@ Bower is a browser-based package manager that runs on top of Node. When it's pro
 Bower does not track EVERY library on kaidez.com: it downloads packages from remote repos, primarily those hosted on GitHub. Some packages like Tipue aren't on remote repos...no worries.
 
 <a name="seo-accessibility"></a>
-### SEO &amp; Accessibility
+## SEO &amp; Accessibility
 The two best SEO practices you can implement on your site are 1) create compelling new content, and 2) regularly cultivate your existing content to make it *more* compelling. Compelling content is primarily (but not singularly) defined by the main search engines as content with a significant amount of external backlinks.
 
 If your content strategy doesn't implement these two tasks, you don't have a content strategy. And I've definitely gotten slight traffic bumps when I publish even a trivial post so there's definitely something to creating new content.
@@ -237,7 +241,7 @@ If you still need convincing after reading that, refer to what [Jen Kramer](http
 > *"Websites that are built to be accessible will also be accessible your number one blind user: Google."*
 
 <a name="web-hosting"></a>
-### Web Hosting
+## Web Hosting
 I'm sticking with my basic [Media Temple](http://www.mediatemple.net#a_aid=5068b81963acf "Visit Media Temple: a kaidez.com affiliate") Grid Server package but deciding on a web host was really something I struggled with up to the last minute.
 
 I wanted a hosting package that would run my site as well as let me install things like Node and Ruby.  My Grid Server package doesn't really let me install anything extra so I could either upgrade to Media Temple [DV Managed](http://mediatemple.net/webhosting/vps/managed/#a_aid=5068b81963acf "Review Media Temple's DV Managed Package") or sign up a with cloud-based host...either [Rackspace](http://www.rackspace.com/ "Check out Rackspace") or [Amazon Web Services](http://aws.amazon.com/ "Check out Amazon Web Services") in this case.
@@ -261,7 +265,7 @@ I'm sticking with my generic, PHP-included Media Temple plan for now and will do
 Media Temple recently began offering a [DV Developer Package](http://mediatemple.net/webhosting/vps/developer/#a_aid=5068b81963acf "Review Media Temple's DV Developer Package") that offers a bare virtual machine. It may be too bare but it still may suit my specific future needs...still researching this as of this post.
 
 <a name="grunt-deployment-workflow"></a>
-### Grunt &amp; My Deployment Workflow
+## Grunt &amp; My Deployment Workflow
 So far, we've discussed using Jekyll to build out my site for deployment, managing my CSS with Sass, using Bower to manage site runtime dependencies, creating a cache manifest, running Modernizr, using RequireJS to manage/concate/minify a lot of JavaScript and concatenating/minifying other assets.
 
 All these various processes means various tasks need to run at various times. And instead of manually performing the tasks one-by-one when needed, I've automated all of them under [Grunt](http://gruntjs.com "Go get Grunt: the JavScript task runner").
@@ -299,7 +303,7 @@ All the `grunt watch` stuff is awesome but it's my `grunt ppush` task where thin
 I'm being bombastic when outlining my deployment sequence like this but am doing so to prove a point. The combination all the above-mentioned Grunt tasks allowed me to craft a powerful, lightweight, highly-customizable IDE that not only lets me work efficiently but made the entire development process FUN!
 
 <a name="post-launch-tasks"></a>
-### Post-Launch Tasks
+## Post-Launch Tasks
 If you've ever read [*The Pragmatic Programmer*](http://www.amazon.com/gp/product/B000SEGEKI/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B000SEGEKI&linkCode=as2&tag=kaidez-20 "Buy The Pragmatic Programmer from Amazon"), you're familiar with the term "good enough software". It means, "the code may not be perfect, but it gets the job done."  And I do feel that way about some parts of the site.
 
 Except for the overall neatness of the CSS, I'm fine with the production code. It's optimized for mobile, renders no console errors (although some 3rd-party code does), loads fast, looks and acts great across different browsers/devices (except oldIE-based stuff), utilizes SEO best practices and executes most post-load events at [the current recommended target rate of 60 frames per second](http://www.smashingmagazine.com/2013/06/10/pinterest-paint-performance-case-study/ "Smasing Magazine article about browser paint performance").
@@ -317,7 +321,7 @@ But I'm obviously critical about the CSS and somewhat critical of how some thing
   * __A better deployment method__: if your Jekyll site content is more than just a home page and blog posts AND is hosted anyplace other than GitHub, you may have to redeploy the ENTIRE site every time you make a change...even a small one. There are ways to use Git commit hooks to deploy your site after it's pushed up to GitHub, but it's tough to do with Jekyll.  Still researching this.
 
 <a name="conclusion"></a>
-### Conclusion
+## Conclusion
 
 Utilizing all these dev tools & techniques was just as rewarding as redesigning the site. I received a WHOLE lot of education by doing all this and am the better developer for it.
 
