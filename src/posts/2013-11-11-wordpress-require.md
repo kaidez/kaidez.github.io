@@ -4,8 +4,10 @@ date: 2013-11-11
 excerpt: Learn how to use RequireJS in WordPress. Includes a walk-through of how RequireJS works and how WordPress manages JavaScript internally.
 layout: layouts/post.njk
 permalink: /requirejs-wordpress/
+image: require-wordpress.jpg
 tags: [coding-best-practices]
-# og-image: require-wordpress.jpg
+secondary_tags: ["wordpress", "javascript", "css", "jquery"]
+category: Reviews
 ---
 As mentioned in [my 2013 site redesign post](/site-redesign-2013/ "A walk-through of how kaidez.com was redesigned"), I started redesigning this site on top of [WordPress](http://wordpress.org/ "Go to WordPress.org") but eventually switched over to [Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site"). This was because my goal was to use [RequireJS](http://requirejs.org/ "Go to requirejs.org") to control all the site's JavaScript in a specific way, and WordPress kept me from doing this.
 
@@ -197,7 +199,7 @@ The callback function contains our custom code, which does the following tasks:
 
 Our code is done. When our HTML page loads into a browser, `scripts/require.js` looks at the configurations in `scripts/config` and notices the `deps: ["search"]` setting, which refers to `scripts/search.js`.  It then sees that `search` needs four files to work properly, all of which are listed in the `paths` object.
 
-RequireJS loads these four files and <code>scripts/search.js</code> into the <code><head></head></code> tag, and in the proper order. If the <code><script></code> tag is placed as close to the bottom of the page as possible, all the files will usually load in a manner that doesn't slow down your site's/app's load time. The code in `scripts/search.js` executes after everything loads.
+RequireJS loads these four files and `scripts/search.js` into the `<head>` tag, and in the proper order. If the `<script>` tag is placed as close to the bottom of the page as possible, all the files will usually load in a manner that doesn't slow down your site's/app's load time. The code in `scripts/search.js` executes after everything loads.
 
 *(Side note: your project's RequireJS files can be concatenated and minified down to a single file, but discussing this is outside the scope of this post. The [RequireJS optimization docs](http://requirejs.org/docs/optimization.html "Learn about optimizing RequireJS") outline how to get this done. Plus, Cary Landholt has [a great YouTube screencast on RequireJS Optimization](http://www.youtube.com/watch?v=m6VNhqKDM4E, "Check out Cary Landholt's screencast on optimizing RequireJS").)*
 

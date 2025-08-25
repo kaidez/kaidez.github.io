@@ -8,7 +8,6 @@ image: effective-js.jpg
 tags: ["reviews"]
 secondary_tags: ["javascript", "books"]
 category: Reviews
-
 ---
 *"It very well may be the best JavaScript book ever written...read it!"*
 
