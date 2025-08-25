@@ -6,15 +6,17 @@ excerpt: "Learn how to write AJAX using both pure JavaScript as well as jQuery. 
 tags: [javascript, jax, jquery]
 image: ajax-image.jpg
 ---
+<h1>AJAX Tutorial for Beginners</h1>
+
 <p style="margin: 30px 0 40px; border-bottom: black 1px solid;">
 <em>(Author's note - August 2025: This article is REALLY, REALLY old!!! Currently, the combined use of JavaScript's native <code>fetch</code>, <code>async/await</code> and <code>Promise</code> functionalities is the modern alternative to all this. And in the case of Promises, they weren't native at the time this article was published, but they're fully native now. So <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">MDN's "Using the Fetch API"</a> article covers the aforementioned modern alternative really well, but you may want to go through this article to get some historical perspective.  -k)</em>
 </p>
 
-AJAX has grown a lot since <a href="https://designftw.mit.edu/lectures/apis/ajax_adaptive_path.pdf" target="blank" title="Read Jesse James Garrett's original ‘AJAX' article">Jesse James Garrett defined it in 2005</a>. It described a way to create robust web applications and helped turn JavaScript into one of the world's most popular web programming languages.
+AJAX has grown a lot since <a href="https://designftw.mit.edu/lectures/apis/ajax_adaptive_path.pdf" target="blank" title="Read Jesse James Garrett's original 'AJAX' article">Jesse James Garrett defined it in 2005</a>. It described a way to create robust web applications and helped turn JavaScript into one of the world's most popular web programming languages.
 
 New developers (and a few intermediate ones) struggle to learn AJAX and are also not aware of how it's advanced inside of jQuery. This AJAX tutorial was written with those developers in mind.
 <a name="table-of-contents"></a>
-<h2 style="clear:both;">Table of Contents</h2>
+<h2>Table of Contents</h2>
 
 <ol>
 <li><a href="#assumptions">Assumptions</a></li>
@@ -73,14 +75,14 @@ New developers (and a few intermediate ones) struggle to learn AJAX and are also
     <li><a href="#conclusion">Conclusion</a></li>
   </ol>
 <a name="assumptions"></a>
-<h3 class="h3-guide">Assumptions</h3>
+<h2>Assumptions</h2>
 This AJAX tutorial assumes you understand HTML. It also assumes that you understand the basic building blocks of JavaScript: variables, functions, arrays, etc.
 
 This tutorial also takes the position that <a href="https://xhr.spec.whatwg.org/" target="blank" title="Read the WHAT WG XMLHttpRequest specification">the WHAT WG XMLHttpRequest specification</a> is the best source for understanding how AJAX works. It refers to other sources like <a href="http://api.jquery.com/category/ajax/" target="blank" title="Read jQuery's AJAX documentation">jQuery's AJAX documentation</a>, <A href="https://developer.mozilla.org/" target="blank" title="Go to the MDN home page">Mozilla Developer Network(MDN)</a> and <a href="https://msdn.microsoft.com/" target="blank" title="Go to the MSDN homepage">Microsoft Developer Network(MSDN)</a>, but it ultimately views the WHAT WG spec as the best reference.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
 <a name="how-code-examples-works"></a>
-<h3 class="h3-guide">How the code examples work</h3>
+<h2>How the code examples work</h2>
 
 [The code for all the examples is on GitHub ](https://github.com/kaidez/ajax-tutorial-samples)and looks similar to this:
 
@@ -104,7 +106,7 @@ Because examples use some form of the `XMLHttpRequest` browser object, they need
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
 <a name="what-is-ajax"></a>
-<h3 class="h3-guide">What Is AJAX</h3>
+<h2>What Is AJAX</h2>
 
 First, understand that `XMLHttpRequest`, or "XHR", is the heart of any AJAX code. Therefore, <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title="Read the WHATWG XMLHttpRequest specification">the current version of the XMLHttpRequest specification</a> helps to provide the simplest AJAX definition:
 
@@ -124,7 +126,7 @@ XHTML can be used as the presentation layer along with CSS. But using HTML5 inst
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
 
 <a name="brief-history-ajax"></a>
-<h3 class="h3-guide">A brief history of AJAX</h3>
+<h2>A brief history of AJAX</h2>
 
 *(NOTE: This section provides some historically perspective on AJAX but has nothing to do with the code in this guide. To start looking at code, you can <a href="#ajax-javascript">skip this section and go to "Create AJAX with Regular JavaScript"</a>.)*
 
