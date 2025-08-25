@@ -1,7 +1,7 @@
 ---
-layout: layouts/base.njk
+layout: layouts/posts.njk
 title: Tutorials & Articles about Web Development - kaidez
-permalink: "/{% if pagination.pageNumber > 0 %}/page-{{ pagination.pageNumber }}{% endif %}/index.html"
+permalink: "/page-{{ pagination.pageNumber }}/index.html # Optional: customize permalink"
 pagination:
   data: collections.posts
   size: 10
@@ -11,7 +11,7 @@ pagination:
 <section class="container">
   <h1 class="header-content--hidden-text">View the last 10 posts on kaidez.com</h1>
   <div class="posts-homepage-post-list">
-    {% for post in collections.posts | head(10) %}
+    {%- for post in posts %}
     <article class="post-card">
       <h3>
         <a href="{{ post.url }}">{{ post.data.title }}</a>
