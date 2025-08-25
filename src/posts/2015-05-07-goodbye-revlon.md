@@ -6,7 +6,7 @@ layout: layouts/post.njk
 permalink: /revlon/
 image: revlon-badge.jpg
 tags: ["personal"]
-secondary_tags: ["web developer job"]
+secondary_tags: ["web developer job", "rant"]
 category: Personal
 ---
 <h2>Nearly Ten Years at Revlon</h2>
