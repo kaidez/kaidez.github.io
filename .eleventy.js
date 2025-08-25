@@ -17,6 +17,8 @@ module.exports = function(eleventyConfig) {
   // Copy assets to output
   eleventyConfig.addPassthroughCopy("src/assets");
 
+  eleventyConfig.addPassthroughCopy({ 'src/assets/samples': '/samples' });
+
   eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
 
   eleventyConfig.addPassthroughCopy("src/assets/img"); 

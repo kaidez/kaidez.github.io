@@ -567,8 +567,7 @@ http://kaidez.com/samples/click-to-tweet/02/
 <p>
   But there's a problem with 
   <code>window.location.origin</code>: 
-  for Internet Explorer, it only works on certiain, newer versions of IE 11 and up. It barley worked on version 11 until 
-  <a href="https://connect.microsoft.com/IE/feedback/details/1763802/location-origin-is-undefined-in-ie-11-on-windows-10-but-works-on-windows-7">Microsoft released a bug fix for it</a>; 
+  for Internet Explorer, it only works on certiain, newer versions of IE 11 and up. It barley worked on version 11 until Microsoft released a bug fix for it; 
   hence, there are old versions of IE 11 (as well as the versions before it) where this code fails.
 </p>
 
