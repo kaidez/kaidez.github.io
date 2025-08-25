@@ -4,8 +4,10 @@ date:   2017-08-19
 excerpt: Use JavaScript functional programming to set click-to-link functionality on a set of elements. Code sample has a basic webpack/Babel setup.
 layout: layouts/post.njk
 permalink: /functional-programming-link/
+image: functional-programming-react.jpg
 tags: ["tutorials"]
-# og-image: functional-programming-react.jpg
+secondary_tags: ["javascript"]
+category: Tutorials
 # thumb-image: functional-programming-react-thumb.jpg
 ---
 <a href="/samples/functional-programming-click-tutorial/">See the demo &raquo;</a> <a href="https://github.com/kaidez/functional-programming-click-tutorial/">Grab the code from Github &raquo;</a>

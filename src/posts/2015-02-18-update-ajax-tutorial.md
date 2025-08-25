@@ -1,15 +1,21 @@
 ---
 title: "AJAX Tutorial Update"
-data: 2015-02-18
+date: 2015-02-18
 excerpt: kaidez's old AJAX tutorial was updated. jQuery AJAX is discussed in depth and there's a short discussion on JavaScript Promises.
 layout: layouts/post.njk
 permalink: /update-ajax-tutorial/
+image: ajax-image.jpg
 tags: ["personal"]
-# og-image: ajax-image.jpg
+secondary_tags: ["javascript"]
+category: Personal
 ---
+<p style="margin: 30px 0 40px; border-bottom: black 1px solid;">
+<em>(Author's note - August 2025: The AJAX article being dicussed here is REALLY, REALLY old!!! Currently, the combined use of JavaScript's native <code>fetch</code>, <code>async/await</code> and <code>Promise</code> functionalities is the modern alternative to all this. And in the case of Promises, they weren't native at the time that article was published, but they're fully native now. So <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">MDN's "Using the Fetch API"</a> article covers the aforementioned modern alternative really well, but you may want to go through my AJAX article to get some historical perspective. -k)</em>
+</p>
+
 Happy 10th Birthday AJAX!!!!
 
-Ten years ago today, web developer [Jesse James Garrett wrote his ground-breaking AJAX article](http://www.adaptivepath.com/ideas/ajax-new-approach-web-applications/) and changed the world in the process. At least the world of web development.
+Ten years ago today, web developer [Jesse James Garrett wrote his ground-breaking AJAX article](https://designftw.mit.edu/lectures/apis/ajax_adaptive_path.pdf) and changed the world in the process. At least the world of web development.
 
 If you're reading this and are a non-technical person, understand that AJAX described an efficient method to load content onto a web page.  This method *would* come about eventually...the Internet was evolving towards it.
 
@@ -49,7 +55,7 @@ All this showed me that it's worth it to rewrite a post when the numbers indicat
 
 * Speaking of monetizing things, I farmed myself out a little with this tutorial by advertising it on both Twitter and Facebook. Don't know how this will go but I'll be watching.
 
-I wanted to discuss jQuery Promises a little more and discuss [XHR2](http://www.w3.org/TR/XMLHttpRequest2/), but all this would make the article longer than it already is and I want to avoid that. If this tutorial is well-received, I'll update things and consider adding those things.
+I wanted to discuss jQuery Promises a little more and discuss [XHR2 (now discontinued)](http://www.w3.org/TR/XMLHttpRequest2/), but all this would make the article longer than it already is and I want to avoid that. If this tutorial is well-received, I'll update things and consider adding those things.
 
 Finally, if you read this I'm REALLY curious about your feedback. Is it too long? Too short? Is an important part not covered? Or covered too much?
 

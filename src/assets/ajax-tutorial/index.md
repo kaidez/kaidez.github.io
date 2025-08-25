@@ -1,17 +1,21 @@
 ---
 title: AJAX Tutorial for Beginners
-
-layout: page
+layout: layouts/page.njk
 permalink: /ajax-tutorial/
 excerpt: "Learn how to write AJAX using both pure JavaScript as well as jQuery. Includes many code examples that can be downloaded."
-tags: [ajax, javascript, jquery]
-og-image: ajax-image.jpg
+tags: [javascript, jax, jquery]
+image: ajax-image.jpg
 ---
-AJAX has grown a lot since <a href="http://adaptivepath.com/ideas/ajax-new-approach-web-applications/" target="blank" title="Read Jesse James Garrett original ‘AJAX' article">Jesse James Garrett defined it in 2005</a>. It described a way to create robust web applications and helped turn JavaScript into one of the world's most popular web programming languages.
+<p style="margin: 30px 0 40px; border-bottom: black 1px solid;">
+<em>(Author's note - August 2025: This article is REALLY, REALLY old!!! Currently, the combined use of JavaScript's native <code>fetch</code>, <code>async/await</code> and <code>Promise</code> functionalities is the modern alternative to all this. And in the case of Promises, they weren't native at the time this article was published, but they're fully native now. So <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">MDN's "Using the Fetch API"</a> article covers the aforementioned modern alternative really well, but you may want to go through this article to get some historical perspective.  -k)</em>
+</p>
+
+AJAX has grown a lot since <a href="https://designftw.mit.edu/lectures/apis/ajax_adaptive_path.pdf" target="blank" title="Read Jesse James Garrett's original ‘AJAX' article">Jesse James Garrett defined it in 2005</a>. It described a way to create robust web applications and helped turn JavaScript into one of the world's most popular web programming languages.
 
 New developers (and a few intermediate ones) struggle to learn AJAX and are also not aware of how it's advanced inside of jQuery. This AJAX tutorial was written with those developers in mind.
 <a name="table-of-contents"></a>
 <h2 style="clear:both;">Table of Contents</h2>
+
 <ol>
 <li><a href="#assumptions">Assumptions</a></li>
 <li><a href="#how-code-examples-works">How the code examples work</a></li>
@@ -77,6 +81,7 @@ This tutorial also takes the position that <a href="https://xhr.spec.whatwg.org/
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
 <a name="how-code-examples-works"></a>
 <h3 class="h3-guide">How the code examples work</h3>
+
 [The code for all the examples is on GitHub ](https://github.com/kaidez/ajax-tutorial-samples)and looks similar to this:
 
 <pre><code class="language-markup">
@@ -100,6 +105,7 @@ Because examples use some form of the `XMLHttpRequest` browser object, they need
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
 <a name="what-is-ajax"></a>
 <h3 class="h3-guide">What Is AJAX</h3>
+
 First, understand that `XMLHttpRequest`, or "XHR", is the heart of any AJAX code. Therefore, <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title="Read the WHATWG XMLHttpRequest specification">the current version of the XMLHttpRequest specification</a> helps to provide the simplest AJAX definition:
 
 > *"The XMLHttpRequest object is an API for fetching resources."*
@@ -116,8 +122,10 @@ The technologies were: XHR, JavaScript, XML/XSLT, XHTML, CSS and the Document Ob
 XHTML can be used as the presentation layer along with CSS. But using HTML5 instead of XHTML is recommended at the time of this guide's initial publish date.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="brief-history-ajax"></a>
 <h3 class="h3-guide">A brief history of AJAX</h3>
+
 *(NOTE: This section provides some historically perspective on AJAX but has nothing to do with the code in this guide. To start looking at code, you can <a href="#ajax-javascript">skip this section and go to "Create AJAX with Regular JavaScript"</a>.)*
 
 The roots of AJAX goes back to roughly late 1988/early 1999: <a href="https://devchat.tv/js-jabber/124-jsj-the-origin-of-javascript-with-brendan-eich" target="blank" title="Listen to Brendan Eich on the JavaScript Jabber Podcast">according to JavaScript creator, Brendan Eich</a>, Microsoft was using Java to make asynchronous requests inside of its Outlook Web Access application (OWA) at that time. Due to a conflict between Microsoft and Sun (who owned Java), Microsoft removed Java from OWA.
@@ -128,15 +136,18 @@ Other browsers added the object as well, but with a different implementation and
 
 The object was used to create to web applications that loaded data asynchronously, without page refreshes. The most notable applications came from Google: specifically Google Maps and <a href="http://www.searchenginejournal.com/beginners-guide-google-suggest-marketers-seo/73269/" target="blank" title="Read about Google Suggest">Google Suggest</a>..
 
-These web apps showed how useful XHR was but the developer community didn't really notice this on a wide scale. That changed in February 2005 when <a href="http://adaptivepath.com/ideas/ajax-new-approach-web-applications/" target="blank" title="Read Jesse James Garrett original AJAX article">Jesse James Garrett wrote his influential AJAX article</a>.
+These web apps showed how useful XHR was but the developer community didn't really notice this on a wide scale. That changed in February 2005 when <a href="https://designftw.mit.edu/lectures/apis/ajax_adaptive_path.pdf" target="blank" title="Read Jesse James Garrett original AJAX article">Jesse James Garrett wrote his influential AJAX article</a>.
 
 Garret's article defined AJAX and also listed its required technologies (<a href="#what-is-ajax">see the previous section for more on this</a>). The article inspired developers to create compelling web applications and continues to do so to this day.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="ajax-javascript"></a>
 <h3 class="h3-guide">Create AJAX with Regular JavaScript</h3>
+
 <a name="xhr-feature-detection"></a>
 <h4 class="h4-guide">XHR feature detection</h4>
+
 *(NOTE: Writing AJAX feature detection in pure JavaScript is discussed here for historically perspective only. It's primarily needed for Internet Explorer versions 6 and lower, but usage for those browsers has dropped significantly. Plus, jQuery version 1.x takes care of the feature detection for you if you use it. If you're not coding for those browsers and/or using jQuery version 1.x, <a href="#load-content">skip this section and go to "Load content onto a page with AJAX"</a>.)*
 
 As mentioned, Microsoft's XHR implementation was different from other browsers until IE7. In the older IE versions, `XMLHTTP` was not directly accessible in the browser...in other words, you couldn't access it by using `window.XMLHTTP` somewhere in your JavaScript code.
@@ -195,8 +206,10 @@ A JavaScript `try...catch` statement looked for the different versions of `Activ
 Go to MDN to  <a href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started#Step_3_.E2.80.93_A_Simple_Example" target="blank">learn more about feature-detection</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="blank">learn more about "try...catch" on MDN</a>.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="load-content"></a>
 <h4 class="h4-guide">Load content onto a page with AJAX</h4>
+
 Loading content with XHR is a four-step process:
 
 1. Create a new instance of the XHR object.
@@ -214,8 +227,10 @@ var xhr = new XMLHttpRequest();
 </code></pre>
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="xhr-states"></a>
 <h5 class="h5-guide"> Wait for an XHR state of 4</h5>
+
 An XHR request will be in one of fives states, each with a numerical value of 0 through 4. The last request state, number 4, is the most important one in AJAX code, but here's a simplified description of the states.
 
 *(NOTE: This section is here because it's an important part of the XHR spec, but because this guide focuses on the "4" state only, you can [skip this section and go to "Wait for 200 response code from the server"](#200-response "Go to "Wait for 200 response code from the server")".*
@@ -247,8 +262,10 @@ Microsoft's definition also attaches numbers to states, but the definition is sh
 * __4__ (complete)
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="200-response"></a>
 <h5 class="h5-guide">Wait for 200 response code from the server</h5>
+
 A web server sends many server response codes, each in the form of a numerical number.  With AJAX, the most important one is `200 OK`.
 
 When your AJAX code sees a `200 OK` response, it knows that your XHR has made a successful server request.
@@ -360,8 +377,10 @@ getArticleInfo.open("GET", "articleName.html");
 </code></pre>
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="callback-function"></a>
 <h4 class="h4-guide">Have "readyStateChange" run a callback function</h4>
+
 We've had "readyStateChange" request data using a named function called `loadText()`. Requesting data with a callback function is also an option (<a href="/samples/ajax-tutorial-samples/sample03/" target="blank">view the example</a>):
 <pre><code class="language-javascript">
 // sample03/scripts.js
@@ -384,8 +403,10 @@ getArticleInfo.onreadystatechange = function() {
 `getArticleInfo.onreadystatechange` immediately ran a callback function instead of going out and named function, making the code run slightly faster.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="logical-and-error"></a>
 <h4 class="h4-guide">Using "&&" generates an error</h4>
+
 *(NOTE: This section describes how NOT to do `readyState` and `status` checks. Developers still do this but this AJAX tutorial does not. This section is a demonstration of what not to do; it has no bearing on the examples. Feel free to <a href="#ajax-request-mouseclick">skip this section and go to "Make an AJAX request with mouseclick"</a>.)*
 
 Our code checked for the value of `readyState` first, _then_ checked for the server's status code. Some developers like to use the logical "AND" operator (&&) to simultaneously check for these values.
@@ -414,11 +435,13 @@ We didn't define functionality for those other use cases so as a result, the con
 
 Using `&&` like this doesn't perform a robust check of the application state in this case, so it's best to avoid it.
 
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND_.28&&.29" target="blank" title="Read more about the logical "AND" operator on MDN">Read more about the logical "AND" operator on MDN</a>.
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND_.28&&.29" target="blank">Read more about the logical "AND" operator on MDN</a>.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="ajax-request-mouseclick"></a>
 <h4 class="h4-guide">Make an AJAX request with mouseclick</h4>
+
 The previous examples used AJAX to load data automatically, but we can also make it load with events. Doing this with mouseclicks is common (<a href="/samples/ajax-tutorial-samples/sample05/" target="blank">view the example</a>):
 <pre><code class="language-markup">
 <!-- sample05/index.html -->
@@ -428,7 +451,8 @@ The previous examples used AJAX to load data automatically, but we can also make
 &lt;div id="textTarget"&gt;&lt;/div&gt;
 </code></pre>
 
-We added a button tag with an id of "getHTMLFile" above `<div     id="textTarget">`. Clicking on this button loaded the contents of an HTML file inside the div tag.
+We added a button tag with an id of "getHTMLFile" above `<div id="textTarget">`. Clicking on this button loaded the contents of an HTML file inside the div tag.
+
 <pre><code class="language-javascript">
 // sample05/scripts.js
 function loadHTML() {
@@ -457,8 +481,10 @@ All the AJAX code was placed in a `loadHTML` function and we added new code at t
 The button was "listening for", or "watching for", whatever event we told it to watch for...which was `click`. When the code saw that the button was been clicked, it ran the `loadHTML` function and processed the AJAX code.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="multiple-ajax-buttons"></a>
 <h4 class="h4-guide">Multiple buttons with AJAX functionality</h4>
+
 We can create multiple buttons that load different data with AJAX (<a href="/samples/ajax-tutorial-samples/sample06/" target="blank">view the example</a>):
 <pre><code class="language-markup">
 <!-- sample06/index.html -->
@@ -496,8 +522,10 @@ We also updated our button code: it still ran the `loadFile` function, but that 
 The new button loaded in a text file while the old button loaded in an HTML file.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="reusable-button-code"></a>
 <h4 class="h4-guide">Create reusable code for multiple buttons</h4>
+
 The code in the last demo is fine if we only have a few buttons, but would get messy if we had to create `onclick` functionality for a lot of buttons. So it's a best to create reusable code that the buttons can share (<a href="/samples/ajax-tutorial-samples/sample07/" target="blank">view the example</a>):
 <pre><code class="language-markup">
 <!-- sample07/index.html -->
@@ -548,9 +576,12 @@ But if `dataset` DID exist, we used it to get the value of the data attribute us
 *(Note: To learn more about data attributes, read my <a href="/load-data-attributes-mouseclicks/" target="blank" title="Read my 'Load data attributes with Mouse Clicks' tutorial">"Load data attributes with Mouse Clicks" tutorial</a> or my <a href="/filter-content-jquery/" target="blank" target="blank" title="Read my 'Filter Content With jQuery.filter() & jQuery Selectors' tutorial">"Filter Content With jQuery.filter() & jQuery Selectors" tutorial</a>.*
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="load-json-ajax"></a>
 <h4 class="h4-guide">Load JSON with AJAX</h4>
+
 AJAX can work with many data types but  JSON is the most-used data type at the time of this guide's initial publish date. There are many ways to use JSON with AJAX...this is a basic example (<a href="/samples/ajax-tutorial-samples/sample08/" target="blank">view the example</a>):
+
 <pre><code class="language-markup">
 <!-- sample08/index.html -->
 &lt;!DOCTYPE html&gt;
@@ -586,7 +617,9 @@ The buttons were removed from the HTML file.
     }
 }
 </code></pre>
+
 Instead of using AJAX to load in data from either an HTML or text file, we loaded it in from a JSON file called `soccerplayers.json`.
+
 <pre><code class="language-javascript">
 // sample08/scripts.js
 (function(){
@@ -655,8 +688,10 @@ Then we did a `for...in` loop that looped through JSON content stored inside the
 This was a basic example of how to use JSON with AJAX...the main takeaway from this is example is, __AJAX can load all different types of content, including JSON__.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="ajax-jquery"></a>
 <h3 class="h3-guide">AJAX & jQuery</h3>
+
 <a href="http://jquery.com" target="blank" title="Go to the jQuery site">jQuery</a> has always had excellent AJAX support. It lets you write highly-configurable AJAX functionality with less code.
 
 The release of jQuery 1.5 was significant because of certain AJAX-related changes:
@@ -666,8 +701,10 @@ The release of jQuery 1.5 was significant because of certain AJAX-related change
 * the already-existing jqXHR object added new functionality to AJAX in jQuery.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="add-jquery"></a>
 <h4 class="h4-guide">Add jQuery to the project</h4>
+
 For the rest of the examples, the core jQuery library has been added to `index.html` via the jQuery CDN. `index.html` now looks like this:
 <pre><code class="language-markup">
 &lt;!DOCTYPE html&gt;
@@ -688,8 +725,10 @@ Note that jQuery comes before `scripts.js` and that we're using a 1.x version of
 If you use jQuery 1.x, it will perform the ActiveX Object feature detection we reviewed earlier.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="understanding-jquery-ajax"></a>
 <h4 class="h4-guide">Understanding $.ajax</h4>
+
 `$.ajax` is a powerful, highly-configurable method in jQuery. It manages all AJAX calls made by jQuery.
 
 There are many ways to configure `$.ajax` and reviewing all of them is beyond the scope of this guide. But understanding its structure is important. <a href="/samples/ajax-tutorial-samples/sample09/" target="blank">View the example</a>:
@@ -745,8 +784,10 @@ We chained `.ajax`to the `.done` method, so it will run next. `.done` is discuss
 The callback used the `html` method to load "articleName.html" into `<div id="textTarget">` like it did before except this time, we passed the "data" parameter to `.html` instead of the file name. `.done` is smart enough to understand that it needs to look at the "url" value to find out what content needs to be loaded in.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="ajax-shorthand"></a>
 <h4 class="h4-guide">jQuery AJAX Shorthand methods</h4>
+
 `$.ajax` is powerful, but not needed for every project. According to <a href="http://api.jquery.com/jQuery.ajax/" target="blank" title="Read the jQuery.ajax documentation">the current version of the $.ajax documentation</a>:
 
 > *"The `$.ajax()` function underlies all Ajax requests sent by jQuery. It is often unnecessary to directly call this function, as several higher-level alternatives like `$.get()` and `.load()` are available and are easier to use. If less common options are required, though, `$.ajax()` can be used more flexibly."*
@@ -764,9 +805,11 @@ jQuery currently offers five AJAX shorthand methods:
 `jQuery.post` deals with server interaction, which is beyond the scope of this guide, so it won't be discussed here.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="jquery-load"></a>
 <h5 class="h5-guide">.load: the easiest way to use AJAX with jQuery</h5>
-If you want to use jQuery to load in file with AJAX like we've been doing, the `.load` function is the easiest way to do this. This is the jQuery version of <a href="#readystatechange" title="Read the "onreadystatechange section of this article">a JavaScript sample we looked at earlier.
+
+If you want to use jQuery to load in file with AJAX like we've been doing, the `.load` function is the easiest way to do this. This is the jQuery version of <a href="#readystatechange">a JavaScript sample we looked at earlier.
 
 <a href="/samples/ajax-tutorial-samples/sample10/" target="blank">View the example</a>:
 <pre><code class="language-markup">
@@ -792,8 +835,10 @@ $("#textTarget").load("articleName.html");
 jQuery looked for the `<div id="textTarget">` element on the page and ran it against the `.load` function. That function used AJAX to "load" content inside of the div...that content was defined as "articleName.html" in the `.load` parameter.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="jquery-ajax-request-mouseclick"></a>
 <h5 class="h5-guide">Use .load to make an AJAX request with mouseclick</h5>
+
 We used a mouseclick to [load content "AJAX in" content in a previous example](#ajax-request-mouseclick "Make an AJAX request with mouseclick")...here's its jQuery version (<a href="/samples/ajax-tutorial-samples/sample11/" target="blank">view the example</a>):
 <pre><code class="language-markup">
 <!-- sample11/index.html -->
@@ -812,8 +857,10 @@ $("#getHTMLFile").click(function(){
 We bound the jQuery `.click` method to the button we just added and had it run a callback function when clicked. The function ran the `.load` code in the previous example.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="jquery-reusable-button-code"></a>
 <h5 class="h5-guide">Create reusable code for multiple buttons with .load</h5>
+
 We used [plain JavaScript to create separate buttons to "AJAX in" different content](#multiple-ajax-buttons "Go to "Multiple buttons with AJAX functionality"). But [using plain JavaScript to create a shared function to load in content](#reusable-button-code "Go to "Create reusable code for multiple buttons") was more efficient (<a href="/samples/ajax-tutorial-samples/sample12/" target="blank">view the example</a>):
 <pre><code class="language-markup">
 <!-- sample12/index.html -->
@@ -841,8 +888,10 @@ We passed the name of data attribute we want to find as a parameter to the `.dat
 All that was stored in a variable called `getData`. Because `getData` refers to the value of the clicked-on button's data attribute (which is one of two files), we can pass that as a parameter to the `.load` method that loads files inside of `<div id="textTarget">`.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="load-fragments"></a>
 <h5 class="h5-guide">Load in fragments with .load</h5>
+
 The `.load` method can load in a piece of data from an HTML document instead of the entire document (<a href="/samples/ajax-tutorial-samples/sample13/" target="blank">view the example</a>):
 <pre><code class="language-markup">
 <!-- sample13/index.html -->
@@ -864,9 +913,10 @@ $("#textTarget").load("article.html #author");
 </code></pre>
 Use load to "AJAX in" the `article.html` but instead of loading in the entire file, just load in the content in the `<div id="author">` element.
 
-<a href="http://api.jquery.com/load/" target="blank" "title"=Read more about jQuery's '.load' method>Read more about jQuery's ".load()" method</a>.
+<a href="http://api.jquery.com/load/" target="blank">Read more about jQuery's ".load()" method</a>.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="jquery-get"></a>
 <h5 class="h5-guide">Use jQuery.get</h5>
 
@@ -896,8 +946,10 @@ The "data" parameter (which represented the content) was passed to the `.html` m
 <a href="http://api.jquery.com/jQuery.get/" target="blank">Read more about "jQuery.get"</a>.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="jquery-get-json"></a>
 <h5 class="h5-guide">Use jQuery.getJSON</h5>
+
 We can use jQuery's `.getJSON` method to load in JSON content [as we did before with plain JavaScript](#load-json-ajax) (<a href="/samples/ajax-tutorial-samples/sample15/" target="blank">view the example</a>).
 
 As a reminder, here's our JSON file
@@ -922,6 +974,7 @@ As a reminder, here's our JSON file
 }
 </code></pre>
 And our `scripts.js` file looks like this
+
 <pre><code class="language-javascript">
 // sample15/scripts.js
 $.getJSON("soccerplayers.json", function(players) {
@@ -932,6 +985,7 @@ $.getJSON("soccerplayers.json", function(players) {
   })
 });
 </code></pre>
+
 The first parameter for `.getJSON` was the JSON file with the content we wanted to load onto the page. The second parameter was a callback function that loaded the data onto the page.
 
 That callback function took one parameter we've called `player`, which references the JSON file. Next, we used jQuery's `.each` method to do what the `for...in` loop did before: look for properties in our JSON data.
@@ -945,8 +999,10 @@ The new div had content at that point: we then took it and used `.append` again 
 <a href="http://api.jquery.com/jQuery.getJSON/" target="blank">Read more about "jQuery.getJSON()"</a>.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="jquery-get-script"></a>
 <h5 class="h5-guide">Use jQuery.getScript</h5>
+
 `.getScript` loads a single JavaScript file via AJAX. A common practice is to use a callback function to execute code in the file after it loads.
 
 `index.html` looks the same as before, but we're adding a file called `loadFile.js` while updating `scripts.js` (<a href="/samples/ajax-tutorial-samples/sample16/" target="blank">view the example</a>):
@@ -1021,8 +1077,10 @@ If you look at the Network panel in the developer tools now, you'll notice that 
 <a href="http://api.jquery.com/jQuery.getScript/" target="blank">Read more about "jQuery.getScript()"</a>.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="jqxhr-promises-deferreds"></a>
 <h4 class="h4-guide">jqHXR & Promises</h4>
+
 The `$.ajax` method and some of the shorthand methods return the "jQuery XMLHttpRequest" object, commonly referred to as "jqHXR". The `.load` shorthand method does not return jqXHR.
 
 jqXHR is basically the traditional `XMLHttpRequest` browser object wrapped in a specific jQuery API. The jQuery documentation refers to jqXHR as a "superset" of the browser's XHR.
@@ -1030,8 +1088,10 @@ jqXHR is basically the traditional `XMLHttpRequest` browser object wrapped in a 
 An important part of this API are _jQuery Promises_ which are part of jQuery's _Deferred_ object. This guide focuses on using Promises with AJAX and not Deferreds, but Deferreds are useful so it's good to understand them...<a href="http://api.jquery.com/category/deferred-object/" target="blank" title="Read more about jQuery Deferreds">read the jQuery documentation to learn more about jQuery Deferreds</a>.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="what-is-a-javascript-promise"></a>
 <h4 class="h4-guide">What is a Promise?</h4>
+
 Promises are not a new technology, but are relatively new to JavaScript and are gaining an important role in the language. Discussing them in full is also beyond the scope of this guide but it's good to understand their basic ideas.
 
 According to the <a href="https://promisesaplus.com/" target="blank" title="Read the Promises/A+ specification">community-led Promises/A+ specification</a>:
@@ -1052,8 +1112,10 @@ There is much more to Promises than what's being discussed here, especially when
 Also, Forbes Lindesay has written <a href="https://www.promisejs.org/" target="blank" title="Read Forbes Lindesay's excellent Promises walk-through">an excellent walk-through on Promises</a>. Really good for beginners.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="jquery-promises"></a>
 <h4 class="h4-guide">An important note about jQuery Promises</h4>
+
 Since Promises aren't available in every browser, there are libraries you can add to make them work your project. The Promises spec has <a href="https://promisesaplus.com/implementations" target="blank" title="Read about the various Promise libraries">a list of libraries you can use to implement Promise functionality in your code</a>.
 
 jQuery isn't on the list. This is because the current jQuery build doesn't fully conform to the Promises spec in two ways:
@@ -1067,8 +1129,10 @@ Also, jQuery's `.then` method is based on an older version of the Promises spec.
 According to <a href="https://esdiscuss.org/topic/a-challenge-problem-for-promise-designers-was-re-futures#content-43" target="blank" title="Read Rick Waldron says about Promises in jQuery">comments from jQuery core committer Rick Waldron</a>, these things are happening because implementing Promises as per the spec would cause breaking changes in jQuery. It would break things to the point that things other than Promises wouldn't work.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="differed-methods"></a>
 <h4 class="h4-guide">Use Deferred methods with jqXHR</h4>
+
 Because jqXHR is part of jQuery Deferreds, it has access to all of Deferreds methods. The four most commonly-used methods are:
 
 1. `done`
@@ -1079,8 +1143,10 @@ Because jqXHR is part of jQuery Deferreds, it has access to all of Deferreds met
 As mentioned, Promises allow for the neater callback implementations. Using these four methods for callback implementation is considered a best practice in jQuery.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="done-method"></a>
 <h5 class="h5-guide">The .done method</h5>
+
 The `.done` method sets a callback for what to do after the code has "resolved"...i.e., has fully run. (<a href="/samples/ajax-tutorial-samples/sample18/" target="blank">view the example</a>):
 <pre><code class="language-markup">
 <!-- sample18/index.html -->
@@ -1151,8 +1217,10 @@ Since `article.html` was removed from the directory, the code failed. The `.fail
 <a href="http://api.jquery.com/deferred.fail/" target="blank" title="Read more about the jQuery 'deferred.fail()'">"Read more about the jQuery "deferred.fail()"</a>.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="always-method"></a>
 <h5 class="h5-guide">The .always method</h5>
+
 The `.always` method sets a callback for what to do if the code either resolves or is rejected <a href="/samples/ajax-tutorial-samples/sample21/" target="blank">view the example</a>:
 <pre><code class="language-markup">
 <!-- sample21/index.html -->
@@ -1196,8 +1264,10 @@ The first one loads in the existing "article.html" file, so its chained `.done` 
 <a href="http://api.jquery.com/deferred.always/" target="blank" title="Read more about the jQuery 'deferred.always()'">Read more about the jQuery "deferred.always()"</a>.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="then-method"></a>
 <h5 class="h5-guide">The .then method</h5>
+
 The `.then` method sets a callback for what to do if the code either resolves, is rejected or is still in progress (<a href="/samples/ajax-tutorial-samples/sample22/" target="blank">view the example</a>):
 <pre><code class="language-markup">
 &lt;!-- sample22/index.html --&gt;
@@ -1244,8 +1314,10 @@ As mentioned, jQuery's `then` method is based on an older version of the Promise
 <a href="http://api.jquery.com/deferred.then/" target="blank" title="Read more about the jQuery 'deferred.then()'">Read more about the jQuery "deferred.then()"</a>.
 
 <p class="toc-paragraph"><a href="#table-of-contents" class="toc">Back to the Table of Contents</a></p>
+
 <a name="conclusion"></a>
 <h3 class="h3-guide">Conclusion</h3>
+
 AJAX is something that should be second nature to JavaScript developers so I hope this AJAX tutorial is good start in your understanding how it works.  Understanding how it works internally and how jQuery makes it easier to implement are key things to understand.
 
 Reading <a href="https://xhr.spec.whatwg.org/#introduction" target="blank" title="Read the WHATWG XMLHttpRequest specification">the  official WHATWG XHR specification</a> should be your next step in understanding AJAX in full. From there, reading <a href="http://api.jquery.com/category/ajax/" target="blank" title="Read jQuery's AJAX documentation">jQuery's AJAX documentation</a> should be your next step.

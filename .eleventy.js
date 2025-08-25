@@ -18,6 +18,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
 
   eleventyConfig.addPassthroughCopy({ 'src/assets/samples': '/samples' });
+  
+  eleventyConfig.addPassthroughCopy({ 'src/ajax-tutorial': '/ajax-tutorial' });
 
   eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
 
