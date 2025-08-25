@@ -11,7 +11,7 @@ category: Coding Tips
 redirect_from:
   - web-components-demo/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+kaidez-blog+%28kaidez%29
 ---
-<em>(Author's note - August 2025: This post is REALLY, REALLY old!!! It was written at a time when web components we're still in development. Now, a set of WC standards are in place ([read more about that over on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_components)), Polymer, the once go-to web component library, [suggests using Lit instead](https://lit.dev/ "visit the Lit Web Components Library"), and as far as building powerful, customizable elements for the web goes, [React](https://react.dev/) somewhat solved that problem. The original post had a lot of broken links that have either been removed or updated so yeah: this post is old. But you may want to go through this post to get some historical perspective. -k)</em>
+<em>(Author's note - August 2025: This post is REALLY, REALLY old!!! It was written at a time when web components we're still in development. Now, a set of WC standards are in place ([read more about that over on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_components)), Polymer, the once go-to web component library, [suggests using Lit instead](https://lit.dev/ "visit the Lit Web Components Library"), and as far as building powerful, customizable elements for the web goes, [React](https://react.dev/) somewhat solved that problem. The original post had a lot of broken links that have either been removed or updated and the demo's JavaScript code needed to be fixed. So yeah: this post is old. But you may want to go through this post to get some historical perspective. -k)</em>
 
 <p>
   <ul>
