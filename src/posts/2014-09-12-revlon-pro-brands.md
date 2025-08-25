@@ -4,16 +4,18 @@ date: 2014-09-12
 excerpt: kaidez developed the RevlonProBrands.com site using GitHub Atom, Jade, OOCSS, Modernizr’s yepnope functionality, Gulp & Grunt.
 layout: layouts/post.njk
 permalink: /revlon-pro-brands/
+image: revlon-pro-brands.jpg
 tags: ["personal"]
 secondary_tags: ["javascript", "css", "my work"]
-# og-image: revlon-pro-brands.jpg
+category: Personal
 ---
 Revlon, my employer, recently launched [RevlonProBrands.com](http://www.revlonprobrands.com/us "visit RevlonProBrands.com"), a one-page site that  acts as a sales tool for the company's sales reps. It was designed by a Colorado web shop and passed on to Revlon's internal web team for integration into a [Sitecore](http://www.sitecore.net/ "visit Sitecore: a .NET based content management system") environment.
 
 There wasn't a need for lots complicated client-side code, but working on this project gave me the chance to use certain web development tools and code techniques. Let's discuss them:
 
-<h2 class="tableOfContentsHeader">Table of Contents</h2>
-1. [GitHub Atom](#atom)
+<h2>Table of Contents</h2>
+
+1. [GitHub Atom (now sunsetted)](#atom)
 2. [Jade (now Pug)](#jade)
 3. [OOCSS](#oocss)
 4. [Modernizr &amp; yepnope](#modernizr-yepnope)
@@ -21,8 +23,10 @@ There wasn't a need for lots complicated client-side code, but working on this p
 6. [Conclusion](#conclusion)
 
 <a name="atom"></a>
-### GitHub Atom
-[Sublime Text](http://www.sublimetext.com/ "visit Sublime Text") was my primary development environment for this project, but there were a few instances when I switched to [Atom](https://atom.io/ "visit Atom"). Which is a web editor that [GitHub](https://github.com/ "visit GitHub") released to beta a few months ago from this blog post.
+## GitHub Atom (now sunsetted)
+<em>(GitHub has sunsetted/discontinued Atom...<a href="https://github.blog/news-insights/product-news/sunsetting-atom/">read why</a>)</em>
+
+[Sublime Text](http://www.sublimetext.com/ "visit Sublime Text") was my primary development environment for this project, but there were a few instances when I switched to Atom. Which is a web editor that [GitHub](https://github.com/ "visit GitHub") released to beta a few months ago from this blog post. 
 
 Atom definitely "takes inspiration" from Sublime Text in terms custom configuration...many features that needed to be installed in Sublime as third-party packages are native in Atom.
 
@@ -60,7 +64,7 @@ I'm not yet ready to leave Sublime Text for Atom...I've gotten extremely comfort
 
 But this may change.  Will probably go full-on Atom for next project and put to the test.
 <a name="jade"></a>
-### Jade (now Pug)
+## Jade (now Pug)
 RevlonProBrands.com is a *responsive/adaptive/insert-another-buzzword-here* website, but Sitecore is using server-side code to load in two versions of the page: one for desktops and another for everything else. So it made sense to use some sort of development-level templating system that would apply the common parts to each page.
 
 I chose [Jade (now called Pug)](https://pugjs.org/ "visit the Pug templating") for this, a very simple templating engine that compile pages into HTML. In terms of what code you have to write to get things done, Jade is similar to things like [LESS](http://lesscss.org/ "visit LESS, a JavaScript-based CSS processor") and [Haml](http://haml.info/ "visit Haml, an HTML abstraction markup language") in the sense that indentation defines block structure.
@@ -91,7 +95,7 @@ And with a few keystrokes, this file will output an `.html` file like this
 &lt;/html&lt;
 </code></pre>
 
-I went with Pug because I've been playing with the [MEAN stack](http://mean.io/ "review the MEAN stack") lately and [Express](http://expressjs.com/ "visit Express, the Node-based web server framework") (the "E" in MEAN) likes to use Jade. So I figured it made sense for me to figure out.
+I went with Pug because I've been playing with the [MEAN stack](https://meanjs.org/ "review the MEAN stack") lately and [Express](http://expressjs.com/ "visit Express, the Node-based web server framework") (the "E" in MEAN) likes to use Jade. So I figured it made sense for me to figure out.
 
 Pug has "includes" functionality similar to PHP includes and .NET user controls. In other words, small parts of page code can be broken out into their own files and then embedded into other pages for output.
 
@@ -131,13 +135,14 @@ head
 The indentation didn't QUITE work out the way I wanted to when I used a `<header>` tag...not sure why that was after a doing a web search for an answer. I think I can figure out why this is later on down the line, or maybe just asking for an answer on Stack Overflow will work as well.
 
 That being said, I was approaching the delivery date for submitting the finalized code to the lead engineer, so I couldn't spend a whole lot of time on this problem. I'll will try to fix the issue but if it persists and I have to do a similar project in the future, I may just use [Jekyll](http://jekyllrb.com/ "visit Jekyll"), which has an incredibly straightforward templating system.
+
 <a name="oocss"></a>
-### OOCSS
-As mentioned in my [2013 site redesign post](http://kaidez.com/site-redesign-2013/ "read 'kaidez.com 2013 Site Redesign' on kaidez.com"), I really wanted to use object-oriented CSS, or OOCSS, in a project. I chose this project to do so and I am happy with what I accomplished and what learned in the process.
+## OOCSS
+As mentioned in my [2013 site redesign post](/site-redesign-2013/ "read 'kaidez.com 2013 Site Redesign' on kaidez.com"), I really wanted to use object-oriented CSS, or OOCSS, in a project. I chose this project to do so and I am happy with what I accomplished and what learned in the process.
 
 There's not enough room in this blog post to go through all its characteristics. But, simply put, OOCSS is a CSS design pattern that implements what its name implies: an object-oriented method for writing CSS using some common best practices.
 
-OOCSS is a beautifully crafted set of ideas by [Nicole Sullivan](https://twitter.com/stubbornella/ "stubbornella at Twitter"). The central ideas include:
+OOCSS is a beautifully crafted set of ideas by [Nicole Sullivan](https://bsky.app/profile/nicolesullivan.bsky.social "stubbornella at BlueSky"). The central ideas include:
 
 * placing styles under CSS classes and not IDs, reserving IDs for JavaScript hooks.
 * separating these classes into two formats...one for style and one for structure.
@@ -150,7 +155,7 @@ I applied these ideas to my Pro Brands page code, specifically the individual pr
 OOCSS definitely takes some getting used to and takes more work.  Quite a few people have personally told me they disagree with it as a practice and don't use it.  But I have noticed that the CSS parses faster than if I hadn't used it so I'm not going to give up on it.
 
 <a name="modernizr-yepnope"></a>
-### Modernizr &amp; yepnope
+## Modernizr &amp; yepnope
 *(Author's note: Yepnope has sorta/kinda been deprecated ([read more about this](https://github.com/SlexAxton/yepnope.js#deprecation-notice)) so this part of the post is here for historical purposes.)*
 
 Sitecore loads one version of the site for desktops and a (slightly) different version of the site handheldz.
@@ -273,8 +278,8 @@ So on page-load, everything works as follows...
     * both text strings match the name of the div in the HTML code, synchronizing with the jQuery event calls
 
 <a name="grunt-gulp"></a>
-### Grunt &amp; Gulp
-I can't see task tools like [Grunt](http://gruntjs.com "Learn more about the Grunt task runner") being omitted from my workflow and as discussed in my last site redesign post, [Grunt ruled my workflow](/site-redesign-2013/#grunt-deployment-workflow "Read about kaidez.com's 2013 site redesign"). But [Gulp](http://gulpjs.com/, "Learn more about Gulp") has emerged as formidable challenger to Grunt.
+## Grunt &amp; Gulp
+I can't see task tools like [Grunt](http://gruntjs.com "Learn more about the Grunt task runner") being omitted from my workflow and as discussed in my last site redesign post, [Grunt ruled my workflow](/site-redesign-2013/#grunt-deployment-workflow "Read about kaidez.com's 2013 site redesign"). But [Gulp](http://gulpjs.com/ "Learn more about Gulp") has emerged as formidable challenger to Grunt.
 
 Grunt and Gulp are Node-based task runners that run from the command line. Both let you build custom tasks but there are tons of plugins available for each that let you run pre-built tasks. There are probably more similarities but these are the two that stick out to me the most.
 
@@ -282,8 +287,8 @@ The BIG difference is how Gulp works behind the scenes...Gulp uses Node's stream
 
 I used Gulp and Grunt while coding the Pro Brands site because for all of Gulp's advantage, there are more plug-ins available for Grunt. So in order to get certain tasks done within a short development timeline, I used Grunt to fill in the spots where a Gulp plugin wasn't available.
 
-The fact that there are less Gulp plugins that Grunt ones ties into Gulp's philosophy. Eric Schoffstall outlined this philosophy quite well on the [JavaScript Jabber Podcast](http://javascriptjabber.com/097-jsj-gulp-js-with-eric-schoffstall/ "Listen to Eric Schoffstall on JavaScript Jabber")...give it a listen.
+The fact that there are less Gulp plugins that Grunt ones ties into Gulp's philosophy. Eric Schoffstall outlined this philosophy quite well on the [JavaScript Jabber Podcast](https://topenddevs.com/podcasts/javascript-jabber/episodes/097-jsj-gulp-js-with-eric-schoffstall "Listen to Eric Schoffstall on JavaScript Jabber")...give it a listen.
 
 <a name="conclusion"></a>
-### Conclusion
+## Conclusion
 There weren't REALLY a lot of code challenges for me in this project...a simple one-pager like this doesn't bring any. But I pushed myself with code a little and played with some new tools. I accomplished what I wanted to and as a developer, that's enough.
