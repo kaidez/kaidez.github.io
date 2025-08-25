@@ -11,7 +11,7 @@ category: Coding Tips
 redirect_from:
   - web-components-demo/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+kaidez-blog+%28kaidez%29
 ---
-<em>(Author's note - August 2025: This post is REALLY, REALLY old!!! It was written at a time when web components we're still in development. Now, a set of WC standards are in place ([read more about that over on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_components)), Polymer, the once go-to web component library, [suggests using Lit instead](https://lit.dev/ "visit the Lit Web Components Library"), and as far as building powerful, customizable elements for the web goes, [React](https://react.dev/) somewhat solved that problem. The original post had a lot of broken links that have either been removed or updated and the demo's JavaScript code needed to be fixed. So yeah: this post is old. But you may want to go through this post to get some historical perspective. -k)</em>
+<em>(Author's note - August 2025: This post is REALLY, REALLY old!!! It was written at a time when web components we're still in development. Now, a set of WC standards are in place ([read more about that over on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_components)), Polymer, the once go-to web component library, [suggests using Lit instead](https://lit.dev/ "visit the Lit Web Components Library"), and as far as building powerful, customizable elements for the web goes, [React](https://react.dev/) somewhat solved that problem. The original post had a lot of broken links that have either been removed or updated and the demo's JavaScript code needed to be fixed. So yeah: this post is old but you may want to go through it for historical perspective. -k)</em>
 
 <p>
   <ul>
@@ -346,7 +346,7 @@ Because `<style>` gets added to `<section>` with `appendChild()`, it gets placed
 But placing it at the bottom doesn't affect my goals for this project, which was to learn how templates and Shadow DOM work. Still, read more about `jQuery.prepend()` [here](http://api.jquery.com/prepend/ "Read about jQuery.prepend()").
 
 ## Further reading
-This post was update on August 2025: the previous version had a lot of broken or out-of date links.  To be honest:  [the previously-mentioned MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) is probably the best starting point.
+This post was updated on August 2025: the previous version had a lot of broken or out-of date links.  To be honest:  [the previously-mentioned MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) is probably the best starting point.
 
 
 The W3C has an older article called [Introduction to Web Components](https://www.w3.org/TR/components-intro/ "Read Introduction to Web Components"). It's a good read for historical purposes.
@@ -356,6 +356,6 @@ The Web Incubator Community Group (WICG) has posted [a set of web component stan
 Also be sure to check out both [X-Tag](http://x-tag.github.io/docs "Read about browser compatibility for X-Tags") and [Lit](https://lit.dev/ "visit the Lit Web Components Library") if you're looking for library support.
 
 ## Conclusion
-Using something like Lit or X-Tag is what's needed to use Web Components in production-level code right anymore, but these libraries work ON TOP of Web Components. So it's best to learn the underlying code first.
+You may want to use things like Lit or X-Tag right away, but these libraries work ON TOP of Web Components. So it's best to learn the underlying code first.
 
-I can't say that my code is perfect, but I achieved the goal I set for myself and was able to solve any problems I faced by actually writing the code instead of just reading about it. I have a much better handle on templates and Shadow DOM then I did before, and that's enough.
+I can't say that my code is perfect, but I achieved the goal I set for myself and was able to solve any problems I faced by actually writing the code instead of just reading about it. I have a much better handle on templates and Shadow DOM than I did before, and that's enough.
