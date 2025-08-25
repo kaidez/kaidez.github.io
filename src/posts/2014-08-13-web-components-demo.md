@@ -30,12 +30,10 @@ An great example of this is the `<github-card>` custom element. If you have a Gi
 
 The four sub-concepts that make up Web Components are:
 
-1. *__Templates__*: a chunk of formatted HTML that can be cloned, inserted and rendered based on instructions you give it. [Read more &raquo;](http://www.html5rocks.com/en/tutorials/webcomponents/template/ "Read more about Web Component templates")
-2. *__Shadow DOM__*: an encapsulated separate DOM that you can add code to. It's best to think of it as "a DOM within your DOM." [Read more &raquo;](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/ "Read more about Web Component Shadow DOM")
-3. *__Custom Elements__*: the ability to create custom page tags, such as `<github-card>`. [Read more &raquo;](http://www.html5rocks.com/en/tutorials/webcomponents/customelements/)
-4. *__HTML Imports__*: the ability to load in small pieces of HTML code into your page when needed via `<link>` tags. [Read more&raquo;](http://www.html5rocks.com/en/tutorials/webcomponents/imports/ "Read more about Web Component HTML Imports")
-
- *(all the above "Read more &raquo;" links courtesy of [HTML5 Rocks](http://www.html5rocks.com/ "Go to HTML5 Rocks")):*
+1. *__Templates__*: a chunk of formatted HTML that can be cloned, inserted and rendered based on instructions you give it. [Read more &raquo;](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template "Read more about Web Component templates")
+2. *__Shadow DOM__*: an encapsulated separate DOM that you can add code to. It's best to think of it as "a DOM within your DOM." [Read more &raquo;](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM "Read more about Web Component Shadow DOM")
+3. *__Custom Elements__*: the ability to create custom page tags, such as `<github-card>`. [Read more &raquo;](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements)
+4. *__HTML Imports__*: the ability to load in small pieces of HTML code into your page when needed via `<link>` tags. [Read more&raquo;](https://www.webcomponents.org/community/articles/introduction-to-html-imports "Read more about Web Component HTML Imports")
 
 While things like <code>&lt;github-card&gt;</code> utilize all the sub-concepts, each one can function on its own quite nicely. But when they all work together, they form Web Components...conceptually, it's best to think of WC in the same way as AJAX, where a group of technologies work together to perform a single task.
 
@@ -180,7 +178,7 @@ __scripts/main.js__
 
 Past that, there's some basic HTML but there's also the Web Component-centric template tag that has an ID of `singleBook`. The code inside of <code>&lt;template /&gt;</code> contains HTML and some CSS in a <code>&lt;style&gt;</code> tag.
 
-The template contains an `<code>`<article>` tag: this is where the book data in the JS object will be parsed as content. The template tag is also inert, meaning it's not visible on page load and can't communicate with any outside code until we say so.
+The template contains an `<article>` tag: this is where the book data in the JS object will be parsed as content. The template tag is also inert, meaning it's not visible on page load and can't communicate with any outside code until we say so.
 
 Note that some parts of `<article>` are empty:
 
@@ -353,7 +351,7 @@ Truthfully, the W3C has been referring people to the [Web Components Wiki](http:
 
 Specs may be verbose to read at times, but it's always a good idea to read them.
 
-Most profoundly, Microsoft has made no firm decision on what Web Component features Internet Explorer will and will not support at the time of this post's publish date. I'm assuming that will change in the future though...read more on the [modern.ie status page](http://status.modern.ie/?iestatuses=underconsideration&browserstatuses=notsupported,indevelopment,implemented&browsers=chrome,firefox,opera,safari&ieversion=11 "Read about Web Component support in Internet Explorer").
+Most profoundly, Microsoft has made no firm decision on what Web Component features Internet Explorer will and will not support at the time of this post's publish date. I'm assuming that will change in the future though.
 
 Pointing out the IE issues makes a nice segue to polyfills...take note that Polymer is the most popular Web Component polyfill for now, but only supports IE 10 and up.  Read more on [Polymer's Browser Compatibility page](http://www.polymer-project.org/resources/compatibility.html "Read about browser compatibility for Polymer").
 
