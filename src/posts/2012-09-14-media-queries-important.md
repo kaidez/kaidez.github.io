@@ -4,13 +4,14 @@ date: 2012-09-14
 excerpt: CSS3 media queries can help sites perform better in Google search results and the W3C officially recommends them as a web standard.
 layout: layouts/post.njk
 permalink: /media-queries-important/
+image: HP-media-queries.jpg
 tags: [coding-best-practices]
-# og-image: HP-media-queries.jpg
+secondary_tags: ["media queries", "css"]
+category: Coding Tips
 ---
-
 CSS3 media queries have become a hit in recent years thanks to the increased popularity of responsive web design, which [I’ve previously written about][1]. This popularity is set to increase even more thanks to recent actions by Google and the W3C.
 
- [1]: http://kaidez.com/html5-project-update-responsive-web-design/
+ [1]: /html5-project-update-responsive-web-design/
 
 On June 6, 2012 via their [Webmaster Central Blog][2], Google stated that sites well-optimized for mobile have “the best chance of performing well in Google’s search results,” making it clear that using media queries is the ideal way to optimize things. Thirteen days later, [the World Wide Web Consortium (W3C) formally recommended media queries as a web standard][3].
 
@@ -29,7 +30,7 @@ Nothing reaches Recommendation status until all of its features are 100% impleme
 
  [4]: http://en.wikipedia.org/wiki/Browser_wars
 
-The W3C wanted CSS3 to gain Recommendation status at a faster pace than earlier versions so [they decided to break CSS3 into separate modules][5]. This meant that instead of the world waiting for the entire spec to go to Reco, the modules could reach the status on their own. The decision was a smart one and allowed media queries to go to Recommendation quickly.
+The W3C wanted CSS3 to gain Recommendation status at a faster pace than earlier versions so [they decided to break CSS3 into many such separate modules][5]. This meant that instead of the world waiting for the entire spec to go to Reco, the modules could reach the status on their own. The decision was a smart one and allowed media queries to go to Recommendation quickly.
 
  [5]: http://www.w3.org/Style/2011/CSS-process
 
@@ -39,7 +40,7 @@ By being defined as a web standard, media queries are now seen as a key componen
 
 In truth, this was a no-brainer move for the W3C. Layout-based media queries have been an immediate hit with developers, mostly due to [Ethan Marcotte’s set of ALA articles][7]. Their rise in popularity [caused most modern browsers to support them][8] before the spec even went to Reco.
 
- [7]: http://www.alistapart.com/authors/m/emarcotte
+ [7]: https://alistapart.com/author/emarcotte/
  [8]: http://caniuse.com/css-mediaqueries
 
 It was Google’s move that was a surprise but, if you look some of their recent actions, not a big one.
