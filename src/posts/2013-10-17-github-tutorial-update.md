@@ -4,8 +4,10 @@ date: 2013-10-17
 excerpt: kaidez's Git/GitHub tutorial is updated to be shorter, provide information faster and by providing 2 new links to the learning resource list
 layout: layouts/post.njk
 permalink: github-tutorial-update/
+image: gitTutorial.jpg
+secondary_tags: ["github"]
 tags: ["personal"]
-# og-image: gitTutorial.jpg
+category: Personal
 ---
 The good news is, my "Remove Files From GitHub" tutorial is showing up in a lot of search results....an average of 1400 appearances a month. The not-so-good news is, the click-throughs are low...an average of 25 a month.
 
@@ -15,7 +17,7 @@ The updates are as follows:
 
 * __Added, updated and removed copy__: make it more to the point, less verbose.
 
-* __Got rid of all the images__: the previous post contained a lot of screenshots of both terminal commands and my GitHub repo. The terminal screenshots have been replaced with syntax highlighting and the repo shots have been deleted in full. This will make the post not only easier to read, but will also make it load faster.  And as an added bonus, less images means less charges against my [MaxCDN](http://tracking.maxcdn.com/c/72639/3968/378 "Visit MaxCDN: a content delivery network provider and kaidez.com affiliate") account.
+* __Got rid of all the images__: the previous post contained a lot of screenshots of both terminal commands and my GitHub repo. The terminal screenshots have been replaced with syntax highlighting and the repo shots have been deleted in full. This will make the post not only easier to read, but will also make it load faster.  And as an added bonus, less images means less charges against my MaxCDN account. <em>(Author's note - August 2025: I've since cancelled this account)</em>
 
 * __Rewrote the meta description__: the goal here was to rewrite the description so people would be more enticed to click through to whole post.  There was a technical catch with this: the old meta description was still embedded in the Open Graph network and needed to be replaced with the new one. This was done with the [Facebook Debugger](https://developers.facebook.com/tools/debug)...sometimes known as the URL Linter.
 
