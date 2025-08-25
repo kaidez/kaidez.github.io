@@ -29,7 +29,7 @@ I built the functionality using data attributes, jQuery's .filter() method, and 
 11. [Conclusion](#conclusion)
 
 <a name="brief-look-css"></a>
-### A (very) brief look at the CSS
+## A (very) brief look at the CSS
 We're using three files for our code: `index.html`, `styles.css` and `main.js`.  All the files are in the same directory.
 
 The things in `styles.css` are here to give the page some style and have  nothing to do with the functionality. We won't discuss them in depth, but here they are:
@@ -59,7 +59,7 @@ a:hover {
 }
 </code></pre>
 <a name="html-first-look"></a>
-### A first look at the HTML
+## A first look at the HTML
 The `index.html` file looks like this...
 <pre><code class="language-markup">
 <!DOCTYPE html>
@@ -97,7 +97,7 @@ The `index.html` file looks like this...
 &lt;/html&gt;
 </code></pre>
 <a name="2-html-sections"></a>
-### The 2 sections of the HTML
+## The 2 sections of the HTML
 The page has two distinct sections: a list of `<a>` tags at the top and a list of `<div>` tags at the bottom. Except for the last one, every item in the top list has a class name of `btn-player` and a data attribute called `data-team`.
 
 Notice that the values of the `data-team` attribute differ across the links that have it. There are four different values: 1) `chelsea`, 2) `psg`, 3) `real-madrid` and 4) `barcelona`.
@@ -108,12 +108,12 @@ Every item in the bottom list is a `<div>` with a class name of `player` and a d
 
 For example: four tags have their `data-players-team` value set to `chelsea`, two of them have their attribute set `psg`. And so on and so on.
 <a name="html-section-binding"></a>
-### The binding of the two HTML sections
+## The binding of the two HTML sections
 The values of the `data-players-team` attribute in the section below matches the value of one of the `data-team` attributes in the section above. So the four tags with a `data-players-team` attribute with a value of `chelsea` match the value of the `data-team` attribute in the first `<a>` tag: it's value is also `chelsea`.
 
 These shared values create a binding between the two sections, As a result, when of a link is clicked, it will understand that it's their bound `<div>` tags that should be visible.
 <a name="javascript-first-look"></a>
-### A first look at the JavaScript
+## A first look at the JavaScript
 But this is only a small part of the binding process...jQuery does a lot here, too.  That code is in `main.js` and looks like this:
 <pre><code class="language-javascript">
 $( ".btn-player" ).click(function(){
@@ -157,7 +157,7 @@ var getLinkType, getElType, getElNotType;
 
 List three variables in a single var pattern for future use.
 <a name="feature-detect-data-attributes"></a>
-### Feature-detect for data attributes
+## Feature-detect for data attributes
 <pre><code class="language-javascript">
 // Feature-detect for dataset support
 if( !this.dataset ) { // If IE 10 or lower
@@ -175,7 +175,7 @@ We'll start by checking to see if the clicked-on link does NOT have a `dataset` 
 
 For a more in-depth discussion about data attributes and `getAttribute()`, [read my data attributes post](/load-data-attributes-mouseclicks/ "Read kaidez's blog post on loading in page content with data attributes").
 <a name="jquery-attribute-selectors"></a>
-### Using jQuery attribute selectors
+## Using jQuery attribute selectors
 <pre><code class="language-javascript">
 getElType = $( "div[data-players-team~="+getLinkType+"]" );
 </code></pre>
@@ -190,7 +190,7 @@ getElNotType = $( "div[data-players-team!="+getLinkType+"]" );
 </code></pre>
 Almost the same code as just-discussed except we're now using jQuery's [Attribute Not Equal Selector](http://api.jquery.com/attribute-not-equal-selector/) (note the "!" that's now before the "=" in the code instead of "~"). As you've may have guessed, this code is looking for all the `<div>` tags that have `data-players-team` values that do NOT match `getLinkType`, then stores them in a variable called `getElNotType`.
 <a name="add-remove-content"></a>
-### Adding & removing content
+## Adding & removing content
 <pre><code class="language-javascript">
 $( ".player" ).filter( getElNotType ).css( "display", "none" );
 </code></pre>
@@ -205,7 +205,7 @@ $( ".player" ).filter( getElType ).css( "display", "block" );
 </code></pre>
 Next, we do the opposite: we look for any `<div>` with a `.player` class and use `.filter()` to filter out those stored in `getElType`, which are the ones we DO want to display. Then use `css()` to apply an inline style of `display:block;` to these particular `<div>` tags, making them visible if they're not visible already.
 <a name="show-all-content"></a>
-### Show all the content with a click
+## Show all the content with a click
 <pre><code class="language-javascript">
 $( "#btn-show-all" ).click(function() {
   $( ".player" ).css( "display", "block" );
@@ -213,7 +213,7 @@ $( "#btn-show-all" ).click(function() {
 </code></pre>
 We'll end our code with functionality that makes any hidden `<div>` tags visible. The very last link at the top of the page has an ID of `#btn-show-all`: when clicked, it uses jQuery to find all the `.player` elements and if any are set to `display:none;` they'll be set to `display:block;`.
 <a name="notes"></a>
-### Some Notes
+## Some Notes
 That's it for the code....here are a few interesting things to note:
 
 *   This code does not work on IE 8 and lower...and I don't care.
@@ -225,7 +225,7 @@ That's it for the code....here are a few interesting things to note:
 *   The part of the code that uses `$.filter()` could be more elegant. It's written in a way that automatically assumes that all the `.player` elements aren't in view, which isn't the case. So it's probably neater to use something like `if/else` to check the DOM and see what elements are and aren't visible. But like any DOM checking, a search like that is a bit of a performance hit so it's left out of the code for that reason.
 
 <a name="conclusion"></a>
-### Conclusion
+## Conclusion
 I may or may not do some performance tests to see how much of a hit I'll take doing an `if/else` check but either way, I found this code to be a neater way of doing things when compared to some other implementations I commonly use. I like what I did here and will probably use the pattern again.
 
 Again, there may be other ways to do this...feel free to share alternatives.
