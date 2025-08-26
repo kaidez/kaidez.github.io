@@ -4,8 +4,10 @@ date: 2012-09-04
 excerpt: How to create/change page elements off-DOM with JavaScript. Discusses createDocumentFragment, cloneNode, appendChild, jQuery .attr() & more.
 layout: layouts/post.njk
 permalink: /javascript-off-dom/
+image: default-image.jpg
 tags: ["tutorials"]
-# og-image: default-image.jpg
+secondary_tags: ["javascript", "jquery"]
+category: Tutorials
 ---
 
 Using JavaScript off-DOM is an efficient way to manipulate web page content. By “work off-DOM,” I mean “work inside of the browser memory instead of on a web page.”
