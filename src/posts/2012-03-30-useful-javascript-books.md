@@ -4,8 +4,10 @@ date: 2012-03-30
 layout: layouts/post.njk
 excerpt: Great, useful JavaScript books listed from easiest to hardest. Authors include John Resig, Douglas Crockford and Stoyan Stefanov.
 permalink: /useful-javascript-books/
+image: default-image.jpg
 tags: ["reviews"]
-# og-image: default-image.jpg
+secondary_tags: ["javascript", "books"]
+category: Reviews
 ---
 
 *Disclaimer: because of my affiliate relationships, you will make me money if you click on any of the book links below, then buy a book.*
@@ -14,9 +16,9 @@ The good news is, there are a lot of JavaScript learning resources online. The b
 
 This is why whenever I try to learn a new computer skill, I’ll buy a book about it first. Books go through rigid editing processes like fact checking and proofreading, all helping to filter out the bad content.
 
-I have a [lynda.com][1] account so lately, I’ve used that as learning resource more than books. But JavaScript is the exception: a lot of great books have come out in the past few years, many of them “thinking books” that seemingly use theory when talking about JS.
+I have a [lynda.com (now LinkedIn Learning)][1] account so lately, I’ve used that as learning resource more than books. But JavaScript is the exception: a lot of great books have come out in the past few years, many of them “thinking books” that seemingly use theory when talking about JS.
 
- [1]: http://www.lynda.com/home/otl.aspx?utm_medium=affiliate&utm_source=ldc_affiliate&utm_content=329&utm_campaign=CD2146&bid=329&aid=CD2146&opt=
+ [1]: https://www.linkedin.com/learning/
 
 Some books are better than others. I’ve read *a lot* of JavaScript books in the year before this article’s publish date. So as far as *those* books go, I’ve created a list of JS books which, I think, helps with the filtering process and lists only the best ones…so far. Here they are:
 
@@ -38,15 +40,15 @@ Regardless of its limited coverage of JavaScript’s OOP possibilities, *Visual 
 
 ## [2. *Object-Oriented JavaScript* by Stoyan Stefanov][6]
 
-[6]: https://www.amazon.com/Object-Oriented-JavaScript-2nd-Stoyan-Stefanov/dp/1849693129/ref=sr_1_2?s=books&ie=UTF8&qid=1502327185&sr=1-2&keywords=object+oriented+programming++stoyanI’ll get straight to the point: this is an *excellent* book!
+[6]: https://www.amazon.com/Object-Oriented-JavaScript-2nd-Stoyan-Stefanov/dp/1849693129/ref=sr_1_2?s=books&ie=UTF8&qid=1502327185&sr=1-2&keywords=object+oriented+programming++stoyan
+
+I’ll get straight to the point: this is an *excellent* book!
 
 Embellishing a bit more, Yahoo developer Stefanov does an awesome job of teaching the reader how to treat JavaScript as a full-on object-oriented language. He also does an awesome job of explaining the “hows” and “whys” job of the code exercises.
 
 *OOJ* does cover JavaScript basics like variables and arrays, but not as in-depth as *Visual QuickStart Guide*. And it doesn’t matter because every topic he discusses, inheritance, closures, prototypes, getters, setters-all of it is useful in today’s JavaScript environment and are discussed in-depth.
 
-A few things: *OOJ* was published by Packt Publishing who is notorious for releasing books with grammatical and spelling errors-this book is no exception. If you buy it, go to [Packt’s Support page][8], click on the “Title” drop-down menu and find the book title: you’ll see the errors.
-
- [8]: http://www.packtpub.com/support
+A few things: *OOJ* was published by Packt Publishing who is notorious for releasing books with grammatical and spelling errors-this book is no exception.
 
 Also, [Stefanov is working on the 2nd Edition of this book.][9] He’ll be tackling ECMAScript5 and will have a new chapter on JS testing and documentation.
 
