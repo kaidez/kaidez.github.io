@@ -1,12 +1,13 @@
 ---
 title: A Short History of Flash (how I saw it)
-
+date: 2010-11-19
 layout: layouts/post.njk
 excerpt: kaidez's view of Flash's evolution, rise and (somewhat) fall.
 permalink: /history-of-flash/
+image: default-image.jpg
 tags: ["personal"]
-
-# og-image: default-image.jpg
+secondary_tags: ["html 5", "flash", "rant"]
+category: Personal
 ---
 One reason why I'm curious about HTML5 is because of Apple's issues with the Adobe Flash web animation program.
 
@@ -24,11 +25,11 @@ Flash is how I got into this business so it will always be close to my heart.  T
 ## The Beginning
 *(Disclaimer: I wasn't there for Flash's beginning and don't claim to be a Flash guru like [Colin Moock][2], but I was there a little before it got big and can more than get the job done with the application).*
 
-[2]: http://www.oreillynet.com/pub/au/568
+[2]: http://www.moock.org/
 
 Flash is the brainchild of software developer [Jonathan Gay][3].  He started out designing computer games and eventually created a pen-powered graphics program called SmartSketch which eventually migrated into FutureSplash, a full-fledged web animation program.
 
-[3]: http://www.adobe.com/macromedia/events/john_gay/
+[3]: https://en.wikipedia.org/wiki/Jonathan_Gay
 
 FutureSplash gained enough high-profile customers, like Disney, to gain the attention of a California-based graphics software company called Macromedia, who already had a web animation program called ShockWave.  But they felt that FutureSplash had promise so they brought the application's parent company in 1996 and renamed the application Flash.
 ## The Big Moment
