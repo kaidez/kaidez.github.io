@@ -4,8 +4,10 @@ date: 2012-09-10
 excerpt: Great JavaScript book for beginners covering the fundamentals in detail, focusing on how to use them in web applications, not just websites.
 layout: layouts/post.njk
 permalink: /eloquent-javascript-review/
+image: default-image.jpg
 tags: ["reviews"]
-# og-image: default-image.jpg
+secondary_tags: ["books", "javascript"]
+category: Reviews
 ---
 *Disclaimer: the author of this book has graciously [given it away for free online][2] but please feel free to support his efforts by buying it on Amazon either in [print format][3] or [Kindle format][4]. And know that, due to my affiliate relationships, you will be putting a few bucks in my pocket also if you buy it via one of these two links.*
 
@@ -18,7 +20,11 @@ If you’ve ever played any level of organized basketball, you know that you don
 
 Simply put, you must master the fundamentals before you become a star. JavaScript is no different and Marijn Haverbeke’s *Eloquent JavaScript* is one of the best fundamental JS books I’ve ever read.
 
-<img src="/assets/img/ejs.png" class="post-pic" alt="Eloquent JavaScript book cover" width="250" height="330">*Eloquent* takes all the basic JavaScript building blocks, variables, functions, arrays, etc., and goes into great detail on their role in JS. By doing things like pointing out that objects and arrays are how JS manages data and clarifying the role of variables (“They do not *contain* values, they *grasp* them”), the book does great job highlighting that the basics are more than just, well, basic
+
+<img src="/assets/img/ejs.png" class="review-pic" alt="Eloquent JavaScript book cover" style="padding-bottom: 18px">
+
+*Eloquent* takes all the basic JavaScript building blocks, variables, functions, arrays, etc., and goes into great detail on their role in JS. By doing things like pointing out that objects and arrays are how JS manages data and clarifying the role of variables (“They do not *contain* values, they *grasp* them”), the book does great job highlighting that the basics are more than just, well, basic.
+
 
 The book also discusses other common JavaScript concepts such as regular expressions and event handling. But it’s key to mention that it covers things that have increased in popularity over the years, dependency management, prototypal inheritance and proper namespacing in particular. The fact that it covers these three latter things highlight an important point:
 
@@ -33,3 +39,20 @@ I had no problem buying the print version of the book in support of the author a
 Speaking of the code samples, they’re also good and will definitely help you. Some samples send out a `print` command though, and, depending on your browser, will actually try to print something out on your printer. My suggestion is to substitute `print` for `console.log()` for best results: I did so using the consoles bundled in both Chrome Developer Tools and Opera Dragonfly and had no problems. The online version of *Eloquent* does come bundled with a custom console application where you can run code, but I found it a little buggy.
 
 Don’t let these little things with the code samples discourage you. *Eloquent JavaScript* is a unique book when compared to all the JS books in the market. It will prepare you for complex JavaScript app development much better than many other books.
+
+
+
+<style>
+.review-pic {
+  float: left; 
+  padding: 0 12px 0 0;
+}
+
+@media (max-width: 768px) {
+  .review-pic {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+}
+</style>

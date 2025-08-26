@@ -415,6 +415,10 @@ svg {
   margin: var(--space-6) 0 60px;
 }
 
+.post-content .header-image  {
+  border-radius: 6px;
+  width: 100%;
+}
 .post-content ul,
 .post-content ol,
 .error-404-navigation {
