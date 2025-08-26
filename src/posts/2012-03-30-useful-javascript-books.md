@@ -1,5 +1,5 @@
 ---
-title: 5 Best JavaScript Books for Developers (2025 Edition) - Beginner to Advanced
+title: Best JavaScript Learning Resources for Developers (2025) - 4 Books + 1 Podcast
 date: 2012-03-30
 layout: layouts/post.njk
 excerpt: Great, useful JavaScript books listed from easiest to hardest. Authors include John Resig, Douglas Crockford and Stoyan Stefanov.

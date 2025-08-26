@@ -1,15 +1,15 @@
 ---
 title: New Almay Project I Worked On
-
-
+date: 2011-01-07
 layout: layouts/post.njk
-permalink: /almay-project-using-html5-net-jquery/
 excerpt: Kaidez developed four micro-sites for Almay using HTML5 video, jQuery, .NET and CSS
-tags: ["personal"]
-
-# og-image: default-image.jpg
+permalink: /almay-project-using-html5-net-jquery/
+image: default-image.jpg
+tags: [personal]
+secondary_tags: ["my work"]
+category: Personal
 ---
-[Almay][1], which is wholly-owned by [my employer][2], launched four new products this week:
+Back when I worked at [Revlon Cosmetics][2], their [Almay][1] brand, which is wholly-owned by former employer, Revlon, launched four new products this week:
 
  [1]: http://almay.com/
  [2]: http://revlon.com/
@@ -19,13 +19,13 @@ tags: ["personal"]
 *   almay smart shade smart balance™ powder
 *   almay one coat get up and grow™ mascara
 
-Each product required a unique micro-site: the other web designer mocked them up in PhotoShop, I then converted the design to page code with CSS, .NET, jQuery and HTML5. Visual Studio 2008 was my development environment.
+Each product required a small, unique web presence we called a "micro-site": the other web designer mocked them up in PhotoShop, I then converted the design to page code with CSS, .NET, jQuery and HTML5. Visual Studio 2008 was my development environment.
 
 Breaking down my code…
 
 ### CSS
 
-All the microsites shared the same skeletal layout so I created a global CSS template for this in about two hours.
+All the micro-sites shared the same skeletal layout so I created a global CSS template for this in about two hours.
 
 ### .NET
 
@@ -33,7 +33,7 @@ For each individual micro-site, almost all of their pages shared the same header
 
 ### jQuery
 
-The client wanted a fade-in/fade-out animation on each micro-site home page so I used (surprise!) the fadeIn() and fadeOut() functions embedded in jQuery. I also used jQuery to create a much more effective rollover for all the micro-site navigations.
+The client wanted a fade-in/fade-out animation on each micro-site home page so I used (surprise!) the `fadeIn()` and `fadeOut()` functions embedded in jQuery. I also used jQuery to create a much more effective rollover for all the micro-site navigations.
 
 ### HTML5
 
