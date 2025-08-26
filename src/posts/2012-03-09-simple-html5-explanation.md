@@ -81,7 +81,7 @@ Correct! Site content wrapped in non-semantic markup is tough for search engines
 
 Hiring an SEO company to fix this is costly. If your site is coded with semantic markup at the beginning, this cost can be, at the very least, reduced.
 
-To be clear: semantic markup up will *not* improve a site’s search engine ranking. It just makes it easier for search engines to *understand* a site’s content, which in turn, makes it easier to rank in search results.
+To be clear: semantic markup will *not* improve a site’s search engine ranking. It just makes it easier for search engines to *understand* a site’s content, which in turn, makes it easier to rank in search results.
 
 Think of site content as a pirate’s treasure chest full of gold. Semantic markup gives search engines an awesome treasure map.
 
