@@ -5,7 +5,7 @@ layout: layouts/post.njk
 excerpt: Great, useful JavaScript books listed from easiest to hardest. Authors include John Resig, Douglas Crockford and Stoyan Stefanov.
 permalink: /useful-javascript-books/
 image: default-image.jpg
-tags: ["reviews"]
+tags: [reviews]
 secondary_tags: ["javascript", "books"]
 category: Reviews
 ---

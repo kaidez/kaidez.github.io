@@ -1,5 +1,5 @@
 ---
-title: Two JavaScript Tasks That jQuery Does Not Replace
+title: Two JavaScript Tasks That jQuery Does Not Replace - ARCHIVE
 date: 2011-02-17
 excerpt: Short article about how jQuery does not have a replacement for JavaScript's document.write and has a not-so-great replacement for its navigator.UserAgent
 layout: layouts/post.njk

@@ -4,21 +4,23 @@ date: 2010-01-10
 excerpt: An easy jQuery tutorial to fade in and fade out two images with a delay
 layout: layouts/post.njk
 permalink: /tutorial-simple-jquery-fade-in-fade-out/
+image: default-image.jpg
 tags: ["tutorials"]
-# og-image: default-image.jpg
+secondary_tags: ["javascript", "jquery"]
+category: Tutorials
 redirect_from:
   - /tutorial-simple-jquery/
 ---
-*Update: March 3rd, 2012: the code below is simple and will do the job. But if you’re looking for something more dynamic, [please see this code’s update][1]. It still uses jQuery, but uses a for() loop to make things dynamic. A detailed screencast tutorial on how to create a JavaScript for() loop is included as well!*
+<p style="margin: 30px 0 40px; border-bottom: black 1px solid;">
+<em>(Author's note - August 2025: This tutorial is WAAAAAAAAY out of date, but it remains my most-trafficked, most-shared blog post EVER! It's because of the post that I got a boatload of social media followers and multiple requests to help developers in other countries that saw me as an authority.  I've deleted old and outdated posts and articles from this blog, but I can't let this one go.  Purely here for historical perspective...there are way more modern approaches to do what's being discussed here. -k)</em></p>
 
- [1]: http://kaidez.com/javascript-for-loop-creates-jquery-fade/
+ [1]: /javascript-for-loop-creates-jquery-fade/
 
 Clients *looooooove* images that fade in and fade out on home pages. Flash was once the main tool of choice for this but jQuery now lets us do it with less code and guarantees that things will show up on multiple devices, iPhones included.
 
-I had to do this recently for the project I mentioned in [my previous post][2]. You can view the end-result of this [over at the Almay site][3].
+I had to do this recently for the project I mentioned in [my previous post][2].
 
- [2]: http://kaidez.com/almay-project-using-html5-net-jquery/
- [3]: http://www.almay.com/microsites/WakeUpMakeup/Default.aspx
+ [2]: /almay-project-using-html5-net-jquery/
 
 Here’s how I did it:
 

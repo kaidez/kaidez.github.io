@@ -1,26 +1,23 @@
 ---
 title: Social Media Week/NYC Recap – MOBILE PROMOTION PANEL
-
-
+date: 2011-02-16
+excerpt: The cross mobile promotion panel at NY Social Media Week used Nielsen and comScore stats to show how brands use mobile to promote products
 layout: layouts/post.njk
 permalink: /nyc-social-media-week-event-recap-cross-mobile-promotion/
-excerpt: The cross mobile promotion panel at NY Social Media Week used Nielsen and comScore stats to show how brands use mobile to promote products
-
-
-# og-image: default-image.jpg
-tags: [mobile, review]
+image: default-image.jpg
+tags: [reviews]
+secondary_tags: ["conferences"]
+category: Reviews
 ---
 *Correction: In a previous version of this article, Farrah Bostic was incorrectly identified as Kristin Volk in a photo caption, and vice versa. All of the opening statistics, starting with “only 30% of the mobile users have a smartphone,” were incorrectly attributed to coming from Kristen Volk only).*
 
-As mentioned in my last post, a friend at JWT got me into the top two panels for [NYC Social Media Week 2011][1]: the social listening one, titled **“Pay Attention! Social Listening Done Right;” **and the mobile promotion one, titled **Cross-Mobile Brand Strategy**.
+As mentioned in my last post, a friend at JWT got me into the top two panels for [NYC Social Media Week 2011][1]: the social listening one, titled **“Pay Attention! Social Listening Done Right;”** and the mobile promotion one, titled **Cross-Mobile Brand Strategy**.
 
-
+ [1]: https://web.archive.org/web/20110322003135/http://socialmediaweek.org/
 
 [I've already recapped the second biggest one, the social listening panel][2] so it's time to recap the big one: the mobile strategy panel. This panel was the most-anticipated and, interestingly enough, the most-surprising one of the conference.
 
-
 The panel topic was just as the title says, *how to properly integrate a mobile strategy into your overall marketing plan*. Its main takeaway was:
-
 
 > iPhones and Androids provide a great user experience and we should care about the new functionality that they provide. But when it comes to effective product and brand promotion, they under-perform when compared to both text messaging and the mobile web, at least, for now. Whatever your mobile strategy though, it should “play a role” in your promotional campaign, not “be” your promotional campaign, Plus, it needs to interact with good, desirable content. Because content is, indeed, king.
 
@@ -175,5 +172,4 @@ Or, in layman's terms...
 
 In closing, take note that the panelists came armed with tons of data to back their claims: think about this before you challenge their methods or come up with reasons for “why this won't work for you.”
 
- [1]: http://socialmediaweek.org/
  [2]: /nyc-social-media-week-event-recap-social-listening/

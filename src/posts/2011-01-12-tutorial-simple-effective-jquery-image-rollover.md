@@ -1,15 +1,17 @@
 ---
-title: 'TUTORIAL: A Simple, Effective jQuery Image Rollover'
+title: 'TUTORIAL: A Simple, Effective jQuery Image Rollover - ARCHIVE'
 date: 2010-01-12
 excerpt: A very popular, cross-browser complaint jQuery image rollover
 layout: layouts/post.njk
 permalink: /tutorial-simple-effective-jquery-image-rollover/
+image: default-image.jpg
 tags: ["tutorials"]
-# og-image: default-image.jpg
+secondary_tags: ["javascript", "jquery"]
+category: Tutorials
 ---
 I used the following code to create the image rollovers for [the recent Almay project I worked on][1].
 
- [1]: http://kaidez.com/almay-project-using-html5-net-jquery/
+ [1]: /almay-project-using-html5-net-jquery/
 
 Truthfully, I wasn't going to post this: I found it on another site and felt that re-posting it here would be claiming it as my own creation. But I found quite a few other sites using the exact same script, so I'm not the only one re-posting it. Plus, this rollover code works…well I might add. It doesn't use CSS, making it much more cross-browser compliant; it's not as buggy as some other JavaScript rollover code I've encountered, and it gets the job done with very little code.
 
@@ -45,7 +47,7 @@ function() { this.src = this.src.replace("_on", "_off");
 &lt;/html&gt;
 </code></pre>
 
-First, make sure that you create your rollover images. Each individual rollover needs two images attached to it: one named 'yourFilename_off.gif' and the other named 'yourFilename_on.gif'. As long as these images are of the same file type, it doesn't matter what file type it is. GIF, JPEG, PNG…it doesn't matter. For this example, I have four images that will be used in two rollovers:
+First, make sure that you create your rollover images. Each individual rollover needs two images attached to it: one named `yourFilename_off.gif` and the other named `yourFilename_on.gif`. As long as these images are of the same file type, it doesn't matter what file type it is. GIF, JPEG, PNG…it doesn't matter. For this example, I have four images that will be used in two rollovers:
 
 <pre><code class="language-markup">
 imageOne_off.png

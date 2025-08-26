@@ -1,15 +1,17 @@
 ---
-title: 'Social Media Week/NYC Recap &#8211; SOCIAL LISTENING PANEL'
-
+title: 'Social Media Week/NYC Recap - SOCIAL LISTENING PANEL'
+date: 2011-02-14
+excerpt: The social listening panel at NYC Social Media Week showed how companies like Pepsi track their products within the social networks
 layout: layouts/post.njk
 permalink: /nyc-social-media-week-event-recap-social-listening/
-excerpt: The social listening panel at NYC Social Media Week showed how companies like Pepsi track their products within the social networks
-# og-image: default-image.jpg
-tags: "reviews"
+image: default-image.jpg
+tags: [reviews]
+secondary_tags: ["conferences"]
+category: Reviews
 ---
 [Social Media Week][1] is a semi-annual global conference covering all things social media-related. It runs concurrently in ten cities across globe, reaching as far as Istanbul. Of course, my home base of NYC was one of the ten cities.
 
- [1]: http://socialmediaweek.org/
+ [1]: https://web.archive.org/web/20110322003135/http://socialmediaweek.org/
 
 JWT was one of the main sponsors and with the help of an old friend that works there (thanks soooooooo much Heather), I was able to attend the second biggest panel of the conference: **"Pay Attention! Social Listening Done Right."** The subject: *how companies track and analyze consumer reaction to their products within the various social media channels.*
 
@@ -64,6 +66,7 @@ Nothing really surprising here:
 
 
 <h2 id="panelContent">The Panel Discussion Content</h2>
+
 All the panelists said they used social listening to measure a variety of user statistics from Twitter, Facebook, the blogosphere, etc., then made a decision on how to best react to the stats, if they reacted at all. Singh at PepsiCo provided such an example:
 
 For the 2011 Super Bowl, his company ran one of the first and most talked-about TV spots: the [Brisk Iced Tea][10] ad featuring an animated Eminem. While tracking response to the ad on Twitter, members of the PepsiCo social media team in New York discovered an Eminem promotional party in Brooklyn and decided to pay a visit. They arrived at the party to discover not only an extremely positive response to the ad, but also to their product.
@@ -71,6 +74,7 @@ For the 2011 Super Bowl, his company ran one of the first and most talked-about 
  [10]: http://www.drinkbrisk.com/
 
 There were some examples of how too much listening could be a bad thing, the prime example coming from Clark at GMD Studios. He recalled the story of the *very* early Twitter promotion of *Snakes On A Plane*, which occurred while the film was in post-production. Movie geeks tweeted how *they* thought the movie’s storyline should run. The filmmakers took the tweets to heart and, as they were in post-production, re-edited the movie to so that the storyline matched the geek’s suggestions. The result: *Snakes* opened to a tepid response from movie-goers; there’s no direct proof that the film was great to begin with and that the Twitter users made the film worse, but they sure didn’t make it better.
+
 <figcaption class="post-image-box">
 <img src="/assets/img/packedHouse.jpg" />
 <figcaption class="post-image-caption">A packed house for the event!</figcaption>
@@ -78,10 +82,11 @@ There were some examples of how too much listening could be a bad thing, the pri
 
 This "hit-or-miss" scenario led to a lot of agreement between the panelists. They all conceded that while social listening is an important part of the process, it’s not an exact science when it comes reaching consumers. Social networks like Facebook and Twitter may have reached critical mass on the communication level, they said, but no one has perfected the process of using them to sell products.
 
-But they all agreed that the best way to reach consumers was by finding the best "influencers" within the social networks: people with influence and authority that can spread the word about a product *if* they like it. If you’ve read *Purple Cow* by Seth Godin (and every budding entrepreneur should read it), think of influencers as "sneezers spreading the ideavirus."
+But they all agreed that the best way to reach consumers was by finding the best "influencers" within the social networks: people with influence and authority that can spread the word about a product *if* they like it. If you’ve read [*Purple Cow* by Seth Godin][11] (and every budding entrepreneur <i>should</i> read it), think of influencers as "sneezers spreading the ideavirus."
 
 The influencers may be the brass ring that companies reach for, but every panelist was adamant that they were interested in *every* customer and not just the tastemakers. They "socially listen" to every response that Twitter, Facebook and the like send out. They may not react but they listen.
 
+[11]: https://www.amazon.com/Purple-Cow-Transform-Business-Remarkable/dp/014101640X
 
  [12]: http://gan.doubleclick.net/gan_click?lid=41000000012871747&pid=9781101184554&adurl=http://search.barnesandnoble.com/Purple-Cow/Seth-Godin/e/9781101184554&usg=AFHzDLtR7sej9Oo9BkVlb_p4j9nRyFSG0g&pubid=21000000000317732
 
@@ -89,12 +94,13 @@ The influencers may be the brass ring that companies reach for, but every paneli
 
 <h2 id="tools">Social Listening Tools</h2>
 
-Lots of applications are available for tracking social media activity and many were discussed at the panel. But the most-talked about one was [Radian6][13].
-
- [13]: http://www.radian6.com/
+Lots of applications are available for tracking social media activity and many were discussed at the panel. But the most-talked about one was Radian6.
 
 Based out of Canada, Radian6 is slowly becoming the Nielsen of social media. It allows its clients to "listen, measure and engage in conversations across the social web." Its interface is easy-to-use, has a built-in workflow engine and tracks Facebook and Twitter; along with YouTube, Technorati, delicious and a variety of blogs and RSS feeds.
 
+<em>(Author's note - August 2025: [Radian6 is now part of Salesforce][13])</em>
+
+[13]: https://hevodata.com/learn/radian6-salesforce-social-studio/#:~:text=Salesforce%20owns%20Radian6%2C%20which%20it%20acquired%20in,a%20key%20area%20for%20social%20media%20monitoring.
 I can’t give you a hands-on review of Radian6. Since it costs $600 a month, don’t expect one from me anytime soon. They also have a few competitors that I checked out and their product may or may not be better.
 
 But based on my research and my observations during the panel discussion, I can promise you that the following is true:
@@ -103,9 +109,6 @@ But based on my research and my observations during the panel discussion, I can 
 *   of the 75% that use social listening applications, 90% said that they used Radian6.
 *   almost all the panelists admitted to using Radian6.
 *   Radian6, without question, does a better job of marketing their product than their competitors.
-
-A basic over of the company can be seen in this video:
-<iframe width="420" height="315" src="//www.youtube.com/embed/yqv_RuGxPqQ" frameborder="0" allowfullscreen></iframe> 
 
 Check out their application interface, or Engagement Console, in this video:
 <iframe width="560" height="315" src="//www.youtube.com/embed/aqpfhQWx8FI" frameborder="0" allowfullscreen></iframe>
@@ -135,10 +138,12 @@ Outside of utilizing Facebook Connect, which provides *some* information to comp
 *   **Don’t rush to do something just because you can** – Shiv Singh of PepsiCo, the most insightful one on the panel, described his three pillars of social listening: **Listen. Respond. React.**
 
     According to Singh, whenever Pepsi "hears" something going with their brand inside social media, the PR, Web and Marketing departments meet as a team to discuss the next step. Sometimes they react, sometimes they don’t. But their reactions are carefully gauged.
-*   **If your brand gets a negative reaction within the social networks, don’t respond to it unless you can fix the problem ** – Customers reacting negatively to your product inside the social networks is the cost of doing business. All the panelists agreed that trying to solve everyone’s problem is impossible. But they also agreed that solving a problem is one of the best ways to build customer loyalty…even if you’re building it one customer at a time. So fixing a problem that you actually *can* fix is always a good idea. That housewife in Idaho that simply "didn’t like" your product and decided to tell her 27 followers on Twitter about it? Well, you have to pick your battles.
+
+*   **If your brand gets a negative reaction within the social networks, don’t respond to it unless you can fix the problem** – Customers reacting negatively to your product inside the social networks is the cost of doing business. All the panelists agreed that trying to solve everyone’s problem is impossible. But they also agreed that solving a problem is one of the best ways to build customer loyalty…even if you’re building it one customer at a time. So fixing a problem that you actually *can* fix is always a good idea. That housewife in Idaho that simply "didn’t like" your product and decided to tell her 27 followers on Twitter about it? Well, you have to pick your battles.
 
 
 <h2 id="conclusion">Conclusion</h2>
+
 Clark at GMD, the more philosophical panelist, posed the question: "Is social listening an expertise or a science?" The eternal question, perhaps, but it’s clearly a job that needs to get done. Whether it’s within the company or with the help of a vendor, utilize social listening whenever you can.
 
 As I said, Heather got me into the second biggest panel of the conference. She also got me into the first one a day later: **["Cross-Mobile Brand Strategy."][15]** I’ll be discussing that one in the next article.

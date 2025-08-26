@@ -3,10 +3,14 @@ title: "New York Times Article On HTML5: Their New HTML5 Site"
 date: 2011-04-06
 excerpt: A great New York Times piece on HTML5 application development and a demo of their new HTML5 Skimmer site
 layout: layouts/post.njk
+image: default-image.jpg
 permalink: /new-york-times-article-html5-html5-site/
 tags: [coding-best-practices]
-# og-image: default-image.jpg
+secondary_tags: ["html 5"]
+category: Coding Tips
 ---
+<em>(Author's note - August 2025: This post is old but is really good for historical perspective. It was a nig deal when the NY Times went the HTML5 route: give it a read. -k)</em></p>
+
 The New York Times was hot stuff in the HTML5 sector of the Twitterverse over the March 26/27 weekend of 2011. Reason being, their [“HTML5 Is Breathing New Life Into the Web”][1] article and their new Skimmer site.
 
  [1]: http://www.nytimes.com/2011/03/27/business/27unboxed.html
@@ -14,7 +18,7 @@ The New York Times was hot stuff in the HTML5 sector of the Twitterverse over th
 The article referenced two other articles: [a previous Scientific American article by Tim Berners-Lee][3] and [another Wired article co-authored by Chris Anderson and Michael Wolff][4]. The cumulative point of the Sci American and Wired pieces was that applications like Facebook and mobile apps operated inside the open web while maintaining and storing information behind a non-searchable wall, which is not what the Word Wide Web is about. HTML5, according to the Times, will deliver most open source web-based apps which will break this wall down.
 
  [3]: http://www.scientificamerican.com/article.cfm?id=long-live-the-web
- [4]: http://www.wired.com/magazine/2010/08/ff_webrip/all/1
+ [4]: https://web.archive.org/web/20150330003638/http://www.wired.com/2010/08/ff_webrip/all/1
 
 This article makes lots of big promises on HTML5′s part. As much as I love HTML5, I’ll admit that there’s a *slight* chance that it won’t live up to the promise highlighted in this article. Technology changes rapidly, so it’s always tough develop standards around it and then proclaim “This is how things will be, forever and always!”
 
