@@ -3,10 +3,16 @@ title: 5 Reasons Why You Need To Learn To Use JavaScript Before jQuery
 date: 2012-05-15
 excerpt: A list of good reasons why it's better to learn JavaScript before jQuery. A short learning resource list at the end to help you get started.
 permalink: /learn-javascript-before-jquery/
+image: default-image.jpg
 layout: layouts/post.njk
 tags: [coding-best-practices]
-# og-image: default-image.jpg
+secondary_tags: ["javascript","jquery", "rant"]
+category: Coding Tips
 ---
+<p style="margin: 30px 0 40px; border-bottom: black 1px solid;">
+<em>(Author's note - August 2025: Many frameworks, libraries and approaches in this post are out of date.  Many links have been updated with their Wayback Machine alternative links.  Good historical perspective, tho! -k)</em>
+</p>
+
 A project came up at work involving [Node][1], the software system that allows JavaScript to run server-side instead of client-side. I wasn’t involved in the project but wanted to play with the code once it landed in production and wanted to be ready if ever asked to support it. So I set Node up on my Mac laptop, read parts of its documentation and found some beginning Node learning resources online.
 
  [1]: http://nodejs.org/
@@ -68,7 +74,7 @@ Now, let’s look at this list:
 *   [JSON][16]
 *   [JSONselect][17]
 *   [PhoneGap][18]
-*   [Titanium][19]
+*   [Titanium][19] (discontinued)
 *   [HTML5 Canvas API][20]
 *   [Geolocation API][21]
 *   [Web Workers API][22]
@@ -77,12 +83,11 @@ Now, let’s look at this list:
 *   [Handlebars.js][25]
 *   [QUnit][26]
 *   [Jasmine][27]
-*   [github.js][28]
 
  [5]: http://learn.jquery.com/plugins/basic-plugin-creation/
- [6]: http://howtonode.org/how-to-module
+ [6]: https://web.archive.org/web/20120221133258/http://howtonode.org/how-to-module
  [7]: http://modernizr.com/
- [8]: http://yepnopejs.com/
+ [8]: https://web.archive.org/web/20150328024946/https://yepnopejs.com/
  [9]: http://www.ecma-international.org/publications/standards/Ecma-262.htm
  [10]: http://dojotoolkit.org/
  [11]: http://script.aculo.us/
@@ -91,17 +96,16 @@ Now, let’s look at this list:
  [15]: http://backbonejs.org/
  [16]: http://www.json.org/
  [17]: https://github.com/lloyd/JSONSelect
- [18]: http://phonegap.com/
- [19]: http://www.appcelerator.com/platform/titanium-sdk
+ [18]: https://web.archive.org/web/20111103070032/http://phonegap.com/
+ [19]: https://www.axway.com/en/appcelerator-end-of-life
  [20]: https://developer.mozilla.org/en/HTML/Canvas
- [21]: https://developer.mozilla.org/en/Using_geolocation
- [22]: https://developer.mozilla.org/en/Using_web_workers
+ [21]: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
+ [22]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
  [23]: http://coffeescript.org/
  [24]: https://github.com/janl/mustache.js
  [25]: http://handlebarsjs.com/
  [26]: https://github.com/jquery/qunit
  [27]: https://jasmine.github.io/
- [28]: http://fitzgen.github.com/github-api/
 
 …you get the idea.
 
@@ -129,7 +133,7 @@ Why? Well for starters, lots of customer projects are created using the stuff in
 
 I’ll toot my own horn here and mention my last post on [great JavaScript books for beginners][31] but you have to pay for those. Here are some great free ones, two of which are jQuery-related:
 
- [31]: http://kaidez.com/useful-javascript-books/
+ [31]: /useful-javascript-books/
 
 ### [Codecademy »][32]
 Great for beginners. It starts you at the JavaScript basics, building you up to creating structured JavaScript applications.
@@ -143,6 +147,6 @@ Paul Irish walks you through the core JavaScript code behind the jQuery library,
 Think I left some reasons or resources out? Feel free to comment. AND NO SPAM!! I know what it looks like.
 
  [32]: http://www.codecademy.com/
- [34]: http://jqfundamentals.com/
+ [34]: https://web.archive.org/web/20171229234102/http://jqfundamentals.com/
  [35]: http://rmurphey.com/
  [36]: http://www.youtube.com/watch?v=i_qE1iAmjFg
