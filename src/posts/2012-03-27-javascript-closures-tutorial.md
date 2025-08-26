@@ -6,7 +6,7 @@ layout: layouts/post.njk
 permalink: /javascript-closures-tutorial/
 image: default-image.jpg
 tags: ["tutorials"]
-secondary_tags: ["javascript"]
+secondary_tags: ["javascript", "html 5"]
 category: Tutorials
 ---
 <p style="margin: 30px 0 40px; border-bottom: black 1px solid;">

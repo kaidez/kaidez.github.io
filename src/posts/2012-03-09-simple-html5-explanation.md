@@ -4,10 +4,11 @@ date: 2012-03-09
 layout: layouts/post.njk
 excerpt: A lengthy but simple explanation of what HTML5 is with suggestions on how business can use it. Very little technical language is used.
 permalink: /simple-html5-explanation/
+image: default-image.jpg
 tags: [coding-best-practices]
-# og-image: default-image.jpg
+secondary_tags: ["html 5"]
+category: Coding Tips
 ---
-
 HTML5 is big news right now. Web developers have been developing sites with it for the past few years, but awareness among the business community and the general public is really just starting up.
 
 This is great! HTML5 is a major step forward in web development. Plus, HTML5 highlights some excellent coding standards that have been around for years, but aren’t as widely practiced as they should be.
