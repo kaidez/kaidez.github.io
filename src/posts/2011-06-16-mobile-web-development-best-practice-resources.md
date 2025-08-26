@@ -4,8 +4,10 @@ date: 2011-06-16
 excerpt: Great mobile web development best practice resource list-includes site speed gurus, blogs & a podcast featuring jQuery creator, John Resig.
 layout: layouts/post.njk
 permalink: /mobile-web-development-best-practice-resources/
+image: default-image.jpg
 tags: [coding-best-practices]
-# og-image: default-image.jpg
+secondary_tags: ["mobile web development"]
+category: Coding Tips
 ---
 #
 
@@ -20,7 +22,7 @@ The one that really showed developers the way in terms of creating fast-loading 
  [1]: http://stevesouders.com/
  [2]: http://www.amazon.com/gp/product/0596529309?ie=UTF8&tag=stevsoud-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596529309
  [3]: http://www.amazon.com/gp/product/0596522304?ie=UTF8&tag=stevsoud-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596522304
- [4]: http://html5boilerplate.com/docs/#Build-script
+ [4]: https://www.youtube.com/watch?v=OXpCB3U_4Ig&ab_channel=PaulIrish
 
 ## 2) PPK
 
