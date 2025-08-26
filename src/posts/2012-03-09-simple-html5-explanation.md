@@ -9,6 +9,9 @@ tags: [coding-best-practices]
 secondary_tags: ["html 5"]
 category: Coding Tips
 ---
+<p style="margin: 30px 0 40px; border-bottom: black 1px solid;">
+<em>(Author's note - August 2025: This article is 13 years old as of this note.  This is actually a good article to get some historical perspective on HTML5's evolution.  But please note that in this post's context, a lot of things have change, especially in the mobile world. -k)</em></p>
+
 HTML5 is big news right now. Web developers have been developing sites with it for the past few years, but awareness among the business community and the general public is really just starting up.
 
 This is great! HTML5 is a major step forward in web development. Plus, HTML5 highlights some excellent coding standards that have been around for years, but aren’t as widely practiced as they should be.
@@ -38,7 +41,7 @@ Here are the topics for this article:
  [7]: #Making-The-Site-Look-Pretty
  [8]: #How-Is-HTML5-Being-Used-As-of-This-Article
  [9]: #How-Can-Businesses-Use-HTML5-Related-Technologies-Right-Now
-<h2 id="What-Is-HTML5">What Is HTML5 <i>Exactly</i>?</h2>
+## What Is HTML5 *Exactly*?
 
 The 25-word answer is:
 
@@ -50,8 +53,8 @@ Expanding on this definition, the four key things to know about HTML5 are:
 *   it allows for the creation of more robust *web applications.*
 *   it allows for top-notch *mobile web development.*
 *   creating websites and web applications with HTML5 is a best practice but, in all honesty, not a requirement.
-<img src="/assets/img/HTML5_Logo.png" alt="A Simple Explanation of HTML5" class="post-pic" style="margin-top:20px; float: right">
-<h2 id="Where-Did-HTML5-Come-From">Where Did HTML5 Come From?</h2>
+![A Simple Explanation of HTML5](/assets/img/HTML5_Logo.png){.post-pic style="margin-top:20px; float: right"}
+## Where Did HTML5 Come From?
 
 Created in 1990, HTML has always been a programming language that creates a website’s basic structure. To build a website, HTML “frames” it first, then things like copy and images are added to complete the job.
 
@@ -65,7 +68,7 @@ In 2007, the W3C agreed with WHATWG’s point of view. The two groups remained s
 
 The two groups are still working together as the HTML5 specification isn’t finalized as of this article, but it’s still possible to use it to create websites and web applications…as many do.
 
-<h2 id="Semantic-Markup">Semantic Markup</h2>
+## Semantic Markup
 
 Semantic markup is HTML written in a way that gives site content specific meaning. Semantic markup is *not* a new a concept: it existed well before HTML5.
 
@@ -78,14 +81,13 @@ Correct! Site content wrapped in non-semantic markup is tough for search engines
 
 Hiring an SEO company to fix this is costly. If your site is coded with semantic markup at the beginning, this cost can be, at the very least, reduced.
 
-To be clear: semantic markup up will *not* improve a site’s search engine ranking. It just makes it easier for search engines to *understand* a site’s content, which in turn, makes it easier to rank in search resullts.
+To be clear: semantic markup up will *not* improve a site’s search engine ranking. It just makes it easier for search engines to *understand* a site’s content, which in turn, makes it easier to rank in search results.
 
 Think of site content as a pirate’s treasure chest full of gold. Semantic markup gives search engines an awesome treasure map.
 
 One last note on the subject: sites written with semantic markup are said to be “following web standards.” Web developers have been coding with web standards for years, but too many haven’t. A push for *all* developers to use web standards has always existed, but HTML5 has strengthened this push more than ever before.
 
-<h2 id="Web-Applications">Web Applications</h2>
-
+## Web Applications
 A *website* is a site that gives people information, but doesn’t offer a lot in terms of interaction. People may be able to fill out a form of some sort while visiting the site, but the interaction won’t go much beyond that.
 
 A *web application* is a site that gives people information and offers a lot in terms of interaction. Some interaction examples are:
@@ -121,9 +123,9 @@ HTML5 and HTML5-related technologies can be combined with other technologies to 
 
 For the sake of easy explanations, I called these things “HTML5-related technologies” but I can’t stress enough that they’re *not* HTML5. They’re “HTML5-related” at best and even that’s a stretch of the terminology.
 
-Many don’t care about this the proper term usage but do not be surprised if a real stickler comments on this article, telling me that calling these things “HTML5-related” is a no-no. If you want the techie details on this, visit [MDN’s HTML5 page][13] and take note of the section called “[Technologies often called part of HTML5 that aren’t][14].”
+Many don’t care about this the proper term usage but do not be surprised if a real stickler comments on this article, telling me that calling these things “HTML5-related” is a no-no. If you want the techie details on this, visit [MDN’s HTML5 page][13] and take note of the section called “Technologies often called part of HTML5 that aren’t” (<em>link has been removed</em>).
 
-<h2 id="Mobile-Web-Development">Mobile Web Development</h2>
+## Mobile Web Development
 
 The web browsers pre-installed in the majority of mobile devices released in the past two years support HTML5: both websites and web applications.
 
@@ -145,7 +147,7 @@ Best of all mobile web browsers support many HTML5 features already. Non-mobile 
 
 Because of their offline functionality and early adoption rate among mobile devices, lots of web developers are promoting HTML5 mobile web apps as a viable alternative to native apps. Mobile web apps will need to be able access things like the camera if they expect to beat the native guys, but I believe they’ll have access to many of these things eventually.
 
-<h2 id="Making-The-Site-Look-Pretty">Making The Site Look Pretty</h2>
+## Making The Site Look Pretty
 
 There are some HTML5 things that can make sites look good, but very little. And again, these things don’t work in many desktop browsers, which are still used more than mobile browsers.
 
@@ -157,7 +159,7 @@ So to make a site look good in as many browsers as possible, these three things 
 
 These things are not HTML5, but you will see them used in both HTML5 websites and web applications.
 
-<h2 id="How-Is-HTML5-Being-Used-As-of-This-Article">How Is HTML5 Being Used As of This Article?</h2>
+## How Is HTML5 Being Used As of This Article?
 
 In many ways…
 
@@ -166,7 +168,7 @@ In many ways…
 *   Web applications are popping up everywhere. One of my favorites is [TweetDeck Web][20].
 *   There are a few mobile web apps out there. Some use a lot of HTML5 and its related technologies, some use just a little of it. [jQuery Mobile Gallery][21] is site that uses a fair amount of HTML5 stuff; the sites they display use HTML5 to varying degrees.
 
-<h2 id="How-Can-Businesses-Use-HTML5-Related-Technologies-Right-Now">How Can Businesses Use HTML5 & HTML5 Related-Technologies Right Now?</h2>
+## How Can Businesses Use HTML5 & HTML5 Related-Technologies Right Now?
 
 I can’t stress the importance of web standard semantic markup enough. Businesses that don’t have it in their sites need to get it in there sooner, not later. They should either edit their current site and add the markup, or plan a site redesign that will include such markup.
 
@@ -180,7 +182,7 @@ So there’s no clear path here: using HTML5 certainly helps but it seems that *
 
 I also believe that deciding whether to use HTML5 should not be the first task of a business-that should be focusing on delivering high quality content.
 
-I’m basing this opinion on what I learned at [the mobile promotion panel during Social Media Week 2011][22]. Over and over again, the panelists stress how the mobile web was a better promoter than the native app and that we should spend more time developing an effective content strategy instead of following tech trends. Not one panelist mentioned HTML5 and there were many developers working with it at that time.
+I’m basing this opinion on what I learned at <a href="/nyc-social-media-week-event-recap-cross-mobile-promotion/">the mobile promotion panel during Social Media Week 2011</a>. Over and over again, the panelists stress how the mobile web was a better promoter than the native app and that we should spend more time developing an effective content strategy instead of following tech trends. Not one panelist mentioned HTML5 and there were many developers working with it at that time.
 
 So my HTML5 suggestions for business don’t have that much to do with HTML5. They are:
 
@@ -195,7 +197,6 @@ In closing, HTML5 is a highly discussed and debated subject right now and some m
  [11]: http://www.whatwg.org/
  [12]: https://x.com/zeldman/status/1137456194
  [13]: https://developer.mozilla.org/en/HTML/HTML5
- [14]: https://developer.mozilla.org/en/HTML/HTML5#Technologies_often_called_part_of_HTML5_that_aren't
  [15]: http://m.facebook.com/
  [16]: http://jquery.com/
  [17]: http://techcrunch.com/2011/01/27/facebook-bret-taylor/
@@ -203,4 +204,3 @@ In closing, HTML5 is a highly discussed and debated subject right now and some m
  [19]: http://html5gallery.com/
  [20]: https://web.tweetdeck.com/
  [21]: http://www.jqmgallery.com/
- [22]: http://kaidez.com/nyc-social-media-week-event-recap-cross-mobile-promotion/
