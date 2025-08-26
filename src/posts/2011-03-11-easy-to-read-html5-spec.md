@@ -9,8 +9,6 @@ tags: [coding-best-practices]
 ---
 Lots of thanks and praises to Australian web developer, [Ben Schwarz][1] for creating [HTML5-A technical specification for Web developers][2]. It takes the somewhat rigorously-written [HTML5-A technical specification for Web developers][3]and rewords it in a very easy-to-read format.
 
-
-
 There was no way on the planet that I was going to read the original spec; now I have no excuse not to read it.  Also, I've made some HTML5 mistakes...reading this simpler version of the spec will help me avoid future ones.
 
 I've been reading a piece here and there during downtime.  I WILL read this thing the whole way through...no "ifs", "ands", or "buts" about it.
