@@ -4,12 +4,15 @@ date: 2012-03-27
 excerpt: JavaScript closures tutorial using the New York City subway to explain how they work. With demo, code samples and short reading list.
 layout: layouts/post.njk
 permalink: /javascript-closures-tutorial/
+image: default-image.jpg
 tags: ["tutorials"]
-# og-image: default-image.jpg
+secondary_tags: ["javascript"]
+category: Tutorials
 ---
+<p style="margin: 30px 0 40px; border-bottom: black 1px solid;">
+<em>(Author's note - August 2025: This article is 12 years old as of this note.  Closures were a great way to encapsulate class-like values in JavaScript back then but nowadays, <a href="https://www.typescriptlang.org/">Typescript</a> does this for us. But if you're new to the JS language, closures are an excellent concept to learn.  If that's you then read this. -k)</em></p>
 
 [VIEW THE DEMO FIRST »][1]
-
 
  [1]: http://jsfiddle.net/kaidez/KypGQ/
 
@@ -138,7 +141,7 @@ We started with alerts for the sake of easy explanation-now let’s create somet
 &lt;/html&gt;
 </code></pre>
 
-[2]: # Our simple HTML5-formatted page has three links, each with unique page ID. Using jQuery (note the jQuery core library is attached), our links will run the our JavaScript when clicked. Our JavaScript code will go in the `scripts.js` file.
+Our simple HTML5-formatted page has three links, each with unique page ID. Using jQuery (note the jQuery core library is attached), our links will run the our JavaScript when clicked. Our JavaScript code will go in the `scripts.js` file.
 
 ### JavaScript for the difficult closure example (scripts.js)
 <pre><code class="language-javascript">
@@ -290,7 +293,7 @@ The Mozilla Developer Network’s excellent post on closures is your first stop.
 
 ### [*Why use “closure”?* by Tim Caswell »][5]
 
- [5]: http://howtonode.org/why-use-closure
+ [5]: https://web.archive.org/web/20160316060143/http://howtonode.org/why-use-closure
 
 Another excellent article by this California-based developer. His closure examples also use factory patterns and `Object.prototype`.
 

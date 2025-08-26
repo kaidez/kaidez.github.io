@@ -9,7 +9,6 @@ tags: ["personal"]
 secondary_tags: ["my work"]
 category: Personal
 ---
-
 I'm still coding but haven't blogged in awhile. So it's time to not only get back to blogging but to also redesign this blog. Here's the whole story…
 
 ## How This Blog Began
