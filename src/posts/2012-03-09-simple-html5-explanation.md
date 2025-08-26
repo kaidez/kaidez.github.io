@@ -41,6 +41,7 @@ Here are the topics for this article:
  [7]: #Making-The-Site-Look-Pretty
  [8]: #How-Is-HTML5-Being-Used-As-of-This-Article
  [9]: #How-Can-Businesses-Use-HTML5-Related-Technologies-Right-Now
+ 
 ## What Is HTML5 *Exactly*?
 
 The 25-word answer is:
