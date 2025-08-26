@@ -46,7 +46,7 @@ Expanding on this definition, the four key things to know about HTML5 are:
 *   it allows for the creation of more robust *web applications.*
 *   it allows for top-notch *mobile web development.*
 *   creating websites and web applications with HTML5 is a best practice but, in all honesty, not a requirement.
-![A Simple Explanation of HTML5](/assets/img/HTML5_Logo.png)
+<img src="/assets/img/HTML5_Logo.png" class="page-pic" alt="A Simple Explanation of HTML5" />
 
 <a name="Where-Did-HTML5-Come-From"></a>
 ## Where Did HTML5 Come From?
@@ -71,6 +71,7 @@ Semantic markup is HTML written in a way that gives site content specific meanin
 HTML5 does create excellent semantic markup though…better than earlier HTML versions. Metaphorically speaking, the semantic markup of earlier versions tells the world, "this is some site content" while HTML5 semantic markup tells the world, "this is some site content, now let me give you some detailed information about it."
 
 Sites written with semantic markup are easier to read on a multitude of devices: desktops, laptops, smartphones, screen-readers for the disabled, gaming consoles, just to name a few. But search engines also like semantic markup…so much so that web designer [Jeffrey Zeldman said it best in 2009:][12]
+
 > *"Client who saves $5,000 buying cut-rate non-semantic HTML will later spend $25,000 on SEO consultant to compensate"*
 
 Correct! Site content wrapped in non-semantic markup is tough for search engines to understand; therefore, it's tough for search engines to rank and list in their search results.
@@ -206,3 +207,19 @@ In closing, HTML5 is a highly discussed and debated subject right now and some m
  [19]: http://html5gallery.com/
  [20]: https://pro.x.com/
  [21]: http://www.jqmgallery.com/
+
+
+ <style>
+.page-pic {
+  float: right; 
+  padding: 30px 0 0 12px;
+}
+
+@media (max-width: 768px) {
+  .page-pic {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+}
+</style>
