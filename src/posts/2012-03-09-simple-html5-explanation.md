@@ -4,7 +4,7 @@ date: 2012-03-09
 layout: layouts/post.njk
 excerpt: A lengthy but simple explanation of what HTML5 is with suggestions on how business can use it. Very little technical language is used.
 permalink: /simple-html5-explanation/
-image: mix11-header-image.jpg
+image: default-image.jpg
 tags: [coding-best-practices]
 secondary_tags: ["html 5"]
 category: Coding Tips

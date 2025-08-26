@@ -1,11 +1,13 @@
 ---
-title: Mobile Web Development Best Practices &#8211; Starting Tips
+title: Mobile Web Development Best Practices - Starting Tips
 date: 2011-06-08
 excerpt: Starter mobile web development best practices including YSlow & Page Speed tests and minifying pages with HTML5 Boilerplate's build script
 layout: layouts/post.njk
 permalink: /mobile-web-development-best-practices-starting-tips/
+image: default-image.jpg
 tags: [coding-best-practices]
-# og-image: default-image.jpg
+secondary_tags: ["mobile web development"]
+category: Coding Tips
 ---
 My last two articles, reviewing my work for both [the Almay/Facebook project][1] and [the new Mitchum site][2], have tried to drive the same point home: **it’s good to apply mobile web development best practices when coding up a website, even if the site is only meant for desktop browsers.** This article expands on that point.
 
@@ -54,9 +56,8 @@ Following the suggestions mentioned in [ YDN’s “Best Practices for Speeding 
 *   make sure each page has as few page elements as possible
 *   remove code that you’re not using
 *   compress your files
-*   constantly test your page speed with [Yahoo’s YSlow tool][14] and [Google’s Page Speed tool][15]
+*   constantly test your page speed with [Google’s Page Speed tool][15]
 
- [14]: http://developer.yahoo.com/yslow/
  [15]: http://code.google.com/speed/page-speed/
 
 This outlines the “mobile thinking” method I used when doing the Almay/Facebook project I mentioned…let’s walk through that.
@@ -168,11 +169,11 @@ These are beginning tactics that mostly deal with front end code: there are many
 
 We’re talking about the front end code I created for this Facebook project, but not Facebook itself. I have some things to say about this, none of it good. [That will be the next post][28].
 
- [21]: /img/console.png
+ [21]: /assets/img/console.png
  [22]: http://html5boilerplate.com/docs/#The-style
  [23]: http://html5boilerplate.com/docs/#Build-script
  [24]: http://optipng.sourceforge.net/
  [25]: http://jpegclub.org/jpegtran/
- [26]: /img/Yslow.png
- [27]: /img/PageSpeed.png
- [28]: http://kaidez.com/2-bad-facebook-app-things/
+ [26]: /assets/img/Yslow.png
+ [27]: /assets/img/PageSpeed.png
+ [28]: /2-bad-facebook-app-things/
