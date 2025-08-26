@@ -66,7 +66,7 @@ Again, check out Max’s post here to see what he did on the back-end.
  [8]: http://developers.whatwg.org/
  [9]: http://html5doctor.com/
  [10]: http://html5gallery.com/
- [11]: http://kaidez.com/at-mix11/
+ [11]: /at-mix11/
  [12]: http://nuget.org/
  [13]: http://channel9.msdn.com/Events/MIX/MIX11/FRM09
  [14]: http://jeffcroft.com/

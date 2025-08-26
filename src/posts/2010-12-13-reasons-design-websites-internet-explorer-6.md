@@ -1,5 +1,5 @@
 ---
-title: 5 Reasons To Design Websites For Internet Explorer 6
+title: 5 Reasons To Design Websites For Internet Explorer 6 - ARCHIVE
 date: 2010-12-13
 excerpt: HTML5 Gallery, mostly maintained by the HTML5 expert over at HTML5 Doctor, is added to kaidez.com's Coolsite list
 layout: layouts/post.njk

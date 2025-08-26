@@ -1,5 +1,5 @@
 ---
-title: 2 HTML5 Resources I Like
+title: 2 HTML5 Resources I Like - ARCHIVE
 date: 2010-11-17
 excerpt: Great HTML5 learning resources
 layout: layouts/post.njk

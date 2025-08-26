@@ -1,5 +1,5 @@
 ---
-title: 'HTML5 Gallery: NEW COOLSITE!'
+title: 'HTML5 Gallery: NEW COOLSITE! - ARCHIVE'
 
 
 layout: layouts/post.njk

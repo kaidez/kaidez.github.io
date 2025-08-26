@@ -1,5 +1,5 @@
 ---
-title: 'TUTORIAL: Create The Building Blocks For An HTML5 Page'
+title: 'TUTORIAL: Create The Building Blocks For An HTML5 Page - ARCHIVE'
 layout: layouts/post.njk
 permalink: /create-html5-page/
 excerpt: Understanding the HTML5 DTD and Character Set Needed For Your First HTML5 Page.
