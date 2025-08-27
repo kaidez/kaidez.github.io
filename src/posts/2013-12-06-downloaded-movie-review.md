@@ -5,7 +5,7 @@ layout: layouts/post.njk
 excerpt: The Napster documentary recaps the company’s story and the atmosphere it created, but it doesn't tell the whole story.
 permalink: /downloaded-movie-review/
 image: napster-movie-pic.jpg
-tags: ["reviews"]
+tags: [reviews]
 secondary_tags: ["books"]
 category: Reviews
 ---

@@ -223,3 +223,19 @@ In closing, HTML5 is a highly discussed and debated subject right now and some m
   }
 }
 </style>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "A Simple Explanation of HTML5",
+    "description": "A lengthy but simple explanation of what HTML5 is with suggestions on how business can use it. Very little technical language is used.",
+    "author": {
+        "@type": "Person",
+        "name": "Kai Gittens",
+		"url" : "http://kaidez.com/"
+    },
+    "datePublished": "2012-03-09",
+    "dateModified": "2025-08-27"
+}
+</script>

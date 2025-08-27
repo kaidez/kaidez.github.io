@@ -6,7 +6,7 @@ layout: layouts/post.njk
 permalink: /write-code-every-f-king-day/
 image: git-contrib-map.jpg
 tags: ["personal"]
-secondary_tags: ["learn web development", "rant"]
+secondary_tags: ["learning", "rant"]
 category: Personal
 ---
 

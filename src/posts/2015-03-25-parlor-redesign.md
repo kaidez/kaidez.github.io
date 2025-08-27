@@ -1,5 +1,5 @@
 ---
-title: 'New Site I Worked On: parlorhairstudio.com'
+title: 'Site I Worked On: parlorhairstudio.com'
 date: 2015-03-25
 excerpt: kaidez created a WordPress site for a Montclair, NJ hair salon, with a strong focus on optimizing the site for local SEO.
 layout: layouts/post.njk

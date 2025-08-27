@@ -333,20 +333,22 @@ Thanks for reading this very VERY long post and feel free to ask me questions!!!
 
  <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "TechArticle",
-  "headline": "TUTORIAL: Jekyll Search with Non-JavaScript/CSS Fallback",
-  "description": "jQuery-powered search functionality for a Jekyll site with fallback code if JS or CSS is disabled. Look at the demo before using the code.",
-  "author": {
-    "@type": "Person",
-    "name": "Kai Gittens"
-  },
-  "datePublished": "2013-11-21",
-  "dateModified": "2025-08-26",
-  "programmingLanguage": [
-    "JavaScript",
-    "CSS",
-    "jQuery"
-  ]
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "kaidez 2013 Site Redesign",
+    "description": " kaidez.com uses Jekyll as a blog engine, Grunt as a task runner, RequireJS for modular JavaScript management, & Bower for package management",
+    "author": {
+        "@type": "Person",
+        "name": "Kai Gittens",
+        "url": "http://kaidez.com/"
+    },
+    "datePublished": "2013-10-11",
+    "dateModified": "2025-08-26",
+    "programmingLanguage": [
+        "JavaScript",
+        "CSS",
+        "jQuery"
+    ],
+    "dependencies": "Jekyll"
 }
 </script>

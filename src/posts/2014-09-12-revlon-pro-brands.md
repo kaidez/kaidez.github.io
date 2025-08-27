@@ -1,5 +1,5 @@
 ---
-title: 'New Site I Worked On: RevlonProBrands.com'
+title: 'Site I Worked On: RevlonProBrands.com'
 date: 2014-09-12
 excerpt: kaidez developed the RevlonProBrands.com site using GitHub Atom, Jade, OOCSS, Modernizr’s yepnope functionality, Gulp & Grunt.
 layout: layouts/post.njk
@@ -9,7 +9,7 @@ tags: ["personal"]
 secondary_tags: ["javascript", "css", "my work"]
 category: Personal
 ---
-Revlon, my employer, recently launched [RevlonProBrands.com](http://www.revlonprobrands.com/us "visit RevlonProBrands.com"), a one-page site that  acts as a sales tool for the company's sales reps. It was designed by a Colorado web shop and passed on to Revlon's internal web team for integration into a [Sitecore](http://www.sitecore.net/ "visit Sitecore: a .NET based content management system") environment.
+Back when I worked at Revlon Cosmetics, they launched [RevlonProBrands.com](http://www.revlonprobrands.com/us "visit RevlonProBrands.com"), a one-page site that  acts as a sales tool for the company's sales reps. It was designed by a Colorado web shop and passed on to Revlon's internal web team for integration into a [Sitecore](http://www.sitecore.net/ "visit Sitecore: a .NET based content management system") environment.
 
 There wasn't a need for lots complicated client-side code, but working on this project gave me the chance to use certain web development tools and code techniques. Let's discuss them:
 
@@ -292,3 +292,19 @@ The fact that there are less Gulp plugins that Grunt ones ties into Gulp's philo
 <a name="conclusion"></a>
 ## Conclusion
 There weren't REALLY a lot of code challenges for me in this project...a simple one-pager like this doesn't bring any. But I pushed myself with code a little and played with some new tools. I accomplished what I wanted to and as a developer, that's enough.
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Site I Worked On: RevlonProBrands.com",
+    "description": "kaidez developed the RevlonProBrands.com site using GitHub Atom, Jade, OOCSS, Modernizr’s yepnope functionality, Gulp & Grunt.",
+    "author": {
+        "@type": "Person",
+        "name": "Kai Gittens",
+		"url" : "http://kaidez.com/"
+    },
+    "datePublished": "2012-09-12",
+    "dateModified": "2025-08-27"
+}
+</script>
