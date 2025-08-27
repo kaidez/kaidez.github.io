@@ -10,7 +10,7 @@ secondary_tags: ["javascript"]
 category: Personal
 ---
 <p style="margin: 30px 0 40px; border-bottom: black 1px solid;">
-<em>(Author's note - August 2025: The AJAX article being discussed here is REALLY, REALLY old!!! Currently, the combined use of JavaScript's native <code>fetch</code>, <code>async/await</code> and <code>Promise</code> functionalities is the modern alternative to all this. And in the case of Promises, they weren't native at the time that article was published, but they're fully native now. So <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">MDN's "Using the Fetch API"</a> article covers the aforementioned modern alternative really well, but you may want to go through my AJAX article to get some historical perspective. -k)</em>
+<em>(Author's note - August 2025: This AJAX article and the tutorial it's referring to being discussed here is REALLY, REALLY old!!! Currently, the combined use of JavaScript's native <code>fetch</code>, <code>async/await</code> and <code>Promise</code> functionalities is the modern alternative to all this. And in the case of Promises, they weren't native at the time that article was published, but they're fully native now. So <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">MDN's "Using the Fetch API"</a> article covers the aforementioned modern alternative really well, but you may want to go through my AJAX article to get some historical perspective. -k)</em>
 </p>
 
 Happy 10th Birthday AJAX!!!!
@@ -62,3 +62,19 @@ Finally, if you read this I'm REALLY curious about your feedback. Is it too long
 Please let me know by either add a comment to this blog post or created an issue in [the tutorial's issue tracker](https://github.com/kaidez/ajax-tutorial-samples/issues).
 
 Now, please check out the updated [AJAX beginners tutorial](/ajax-tutorial/).
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "AJAX Tutorial Update",
+  "description": "kaidez's old AJAX tutorial was updated. jQuery AJAX is discussed in depth and there's a short discussion on JavaScript Promises",
+  "author": {
+    "@type": "Person",
+    "name": "Kai Gittens"
+  },
+  "datePublished": "2015-02-18",
+  "dateModified": "2025-09-14",
+  "programmingLanguage": "JavaScript"
+}
+</script>

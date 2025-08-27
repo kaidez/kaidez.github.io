@@ -330,3 +330,23 @@ Utilizing all these dev tools & techniques was just as rewarding as redesigning 
 Thanks for reading this very VERY long post and feel free to ask me questions!!!
 
  -kdz
+
+ <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "TUTORIAL: Jekyll Search with Non-JavaScript/CSS Fallback",
+  "description": "jQuery-powered search functionality for a Jekyll site with fallback code if JS or CSS is disabled. Look at the demo before using the code.",
+  "author": {
+    "@type": "Person",
+    "name": "Kai Gittens"
+  },
+  "datePublished": "2013-11-21",
+  "dateModified": "2025-08-26",
+  "programmingLanguage": [
+    "JavaScript",
+    "CSS",
+    "jQuery"
+  ]
+}
+</script>

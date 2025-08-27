@@ -359,3 +359,21 @@ Also be sure to check out both [X-Tag](http://x-tag.github.io/docs "Read about b
 You may want to use things like Lit or X-Tag right away, but these libraries work ON TOP of Web Components. So it's best to learn the underlying code first.
 
 I can't say that my code is perfect, but I achieved the goal I set for myself and was able to solve any problems I faced by actually writing the code instead of just reading about it. I have a much better handle on templates and Shadow DOM than I did before, and that's enough.
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Web Components Demo: Templates and (some) Shadow DOM",
+  "description": "A Web Components demo using just templates and Shadow DOM, mostly templates. Post includes many links to Web Component learning resources.",
+  "author": {
+    "@type": "Person",
+    "name": "Kai Gittens"
+  },
+  "datePublished": "2013-08-14",
+  "dateModified": "2025-09-14",
+  "programmingLanguage": "JavaScript"
+}
+</script>
+

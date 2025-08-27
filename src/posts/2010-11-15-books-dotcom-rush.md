@@ -72,3 +72,57 @@ The two books above, I believe, best chronicle the beginning and end of the Dot-
   }
 }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Review",
+  "author": {
+    "@type": "Person",
+    "name": "Kai 'kaidez' Gittens"
+  },
+  "reviewBody": "'The New New Thing' by Michael Lewis tells the story of how the dot-com rush of the mid-to-late 1990s started, with a strong focus on the Netscape IPO",
+  "itemReviewed": {
+    "@type": "Book",
+    "name": "The New New Thing",
+    "author": {
+      "@type": "Person",
+      "name": "Michael Lewis"
+    },
+    "isbn": "9781480580237"
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Review",
+  "author": {
+    "@type": "Person",
+    "name": "Kai 'kaidez' Gittens"
+  },
+  "reviewBody": "'The New New Thing' by Joseph Menn tells the story of how the dot-com rush of the mid-to-late 1990s started, with a strong focus on the Netscape IPO",
+  "itemReviewed": {
+    "@type": "Book",
+    "name": "All the Rave: The Rise and Fall of Shawn Fanning's Napster",
+    "author": {
+      "@type": "Person",
+      "name": "Joseph Menn"
+    },
+    "isbn": "9781400050062"
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5"
+  }
+}
+</script>
+
+

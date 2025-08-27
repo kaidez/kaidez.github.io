@@ -112,3 +112,22 @@ That should do it…but let me make two points:
   * Properly syncing the various fades took a little planning. Note the combined time for <code>.fadeIn()</code> and <code>.delay()</code> for the first image is five seconds, equal to the timing on the <code>.delay()</code> for the second image. Also note that the first image takes 1.5 seconds to fade out while the second one takes the same amount of time to fade in. This keeps everything neat.
 
 My HTML5 video posts are coming soon but another short jQuery-related post is coming next.
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "TUTORIAL: A Simple jQuery Image Fade In/Fade Out With A Delay",
+    "description": "An easy jQuery tutorial to fade in and fade out two images with a delay",
+    "author": {
+      "@type": "Person",
+      "name": "Kai Gittens"
+    },
+    "datePublished": "2010-01-10",
+    "dateModified": "2025-08-26",
+    "programmingLanguage": "JavaScript",
+    "dependencies": "jQuery 1.4.4"
+  }
+</script>
+
+
