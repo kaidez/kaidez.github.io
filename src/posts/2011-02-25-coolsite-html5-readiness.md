@@ -1,5 +1,5 @@
 ---
-title: HTML5 Readiness -  NEW COOLSITE!
+title: HTML5 Readiness -  NEW COOLSITE! - ARCHIVE
 date: 2011-02-25
 excerpt: HTML5 Readiness neatly displays browser support for HTML5 and CSS3
 layout: layouts/post.njk

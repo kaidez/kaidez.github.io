@@ -1,5 +1,5 @@
 ---
-title: Updates To Coolsites and HTML5/jQuery Resources
+title: Updates To Coolsites and HTML5/jQuery Resources - ARCHIVE
 
 
 layout: layouts/post.njk
@@ -13,9 +13,7 @@ tags: ["personal"]
 
 The more I read about HTML5, CSS3 and jQuery, the more cool online resources I need to share on this blog. Unfortunately, I also need to remove one.
 
-I created [a list of learning resources at the end of my recent AJAX, jQuery and HTML5 article][1], saying that I’d update it with new links when I could. I’ve since added three extra resources:
-
- [1]: http://kaidez.com/ajax-jquery-html5-work-together/
+I created a list of learning resources at the end of my recent AJAX, jQuery and HTML5 article, saying that I’d update it with new links when I could. I’ve since added three extra resources:
 
 *   [“A Preview of HTML 5″ by Lachlan Hunt][3] *(added January 24, 2011)* – Posted on the awesome “A List Apart” site. Over three years old as of this post and *still* valid.
 *   [“Semantics in HTML 5″ by John Allsopp][4]* (added January 24, 2011)* – A great review of the HTML5 rules, also posted on “A List Apart.”
@@ -24,7 +22,7 @@ improve-your-jquery-25-excellent-tips.aspx
  [3]: http://www.alistapart.com/articles/previewofhtml5/
  [4]: http://www.alistapart.com/articles/semanticsinhtml5/
 
-I also added the image0 blog to the “Coding Favorite Sites” section of my right-hand sidebar. It’s run by my co-worker Max, who’s taught me a lot about the some basic object-oriented programing principles over the years and I’m grateful for his assistance. He continues to discuss OOP on his blog, mostly from the .NET side of things. If you develop for Sitecore, the .NET-based content management system, check out his Sitecore Series. He’s been doing Sitecore development for over a year and will have a lot to say about.
+I also added the image0 blog to the “Coding Favorite Sites” section of my right-hand sidebar. It’s run by my co-worker Max, who’s taught me a lot about the some basic object-oriented programming principles over the years and I’m grateful for his assistance. He continues to discuss OOP on his blog, mostly from the .NET side of things. If you develop for Sitecore, the .NET-based content management system, check out his Sitecore Series. He’s been doing Sitecore development for over a year and will have a lot to say about.
 
 
 Sadly, the day I added the two ALA pieces, I removed [CSS3.info][7] from the “Coding Favorite Sites.” It’s a good source for CSS3, just not one of the first places I go for CSS3 information. Plus, it isn’t updated frequently enough for me to keep visiting it.

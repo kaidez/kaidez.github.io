@@ -2,18 +2,20 @@
 title: 'HTML5 Project Update: Changing To A Responsive Web Design Using CSS3 Media Queries'
 date: 2011-03-16
 excerpt: An article on responsive web design, CSS3 media queries and using it in kaidez's HTML5 Project, resource list of links at the end
+image: default-image.jpg
 layout: layouts/post.njk
 permalink: /html5-project-update-responsive-web-design/
 tags: [coding-best-practices]
-# og-image: default-image.jpg
+secondary_tags: ["css"]
+category: Coding Tips
 ---
+<em>(Author's note - August 2025: The HTML5 Project is a defunct personal project I started awhile ago: read about it [here][25]. In terms of responsive web design, the techniques here still work and are still used on many websites, but CSS grid layouts are the preferred way to implement RWD right now.  Read [MDN's CSS grid layout documentation][26] to learn more. about that.  -k)</em>
+
 In 2005, Jesse James Garrett wrote [an excellent article describing and coining the term “Ajax.”][1] He demonstrated Ajax as a method of using multiple web programming languages to neatly load content onto a web page *without* actually refreshing the page.
 
- [1]: http://adaptivepath.org/ideas/ajax-new-approach-web-applications/
+ [1]: https://designftw.mit.edu/lectures/apis/ajax_adaptive_path.pdf
 
-It’s tough to accurately describe this functionality to people not familiar with web development, and it’s even tougher for those people to actually *visualize* this functionality in action (although [this page will help you][2]). But trust me, Garrett’s article changed the game for web programmers. Ajax stretched the imagination of designers and developers, showing them the seemingly infinite list of possibilities of what they could do when creating web applications.
-
- [2]: /ajax-tutorial/
+It’s tough to accurately describe this functionality to people not familiar with web development, and it’s even tougher for those people to actually *visualize* this functionality in action. But trust me, Garrett’s article changed the game for web programmers. Ajax stretched the imagination of designers and developers, showing them the seemingly infinite list of possibilities of what they could do when creating web applications.
 
 Google has given us the most widely-used Ajax applications: Gmail, Maps and their [Suggest functionality][3], just to name a few. And many others besides Google have given us great Ajax applications as well but the point is, Garrett’s article got the creative juices flowing for lots of designers and developers. By showing them what was possible, he made them rethink their entire creative process.
 
@@ -26,9 +28,7 @@ What Jesse James Garrett was to Ajax, [Ethan Marcotte][4] may end up being to *r
 
 Inspired by modern architectural theory, responsive web design uses CSS3 to detect the width of a device…a web browser, a tablet, a smartphone…whatever. Combine this detection process with traditional CSS techniques for positioning page elements, and **you’re able to create *one* website that neatly displays on *all* devices.**
 
-I’d like to present this as an opportunity to our team at work, but I need to develop and test out code on my own first. So I may adjust the portfolio for [my HTML5 Project][6] to accommodate a responsive web design. Doing this requires my understanding of the process...here’s what I’ve learned so far.
-
- [6]: http://kaidez.com/html5-project/
+I’d like to present this as an opportunity to our team at work, but I need to develop and test out code on my own first. So I may adjust the portfolio for [my HTML5 Project][25] to accommodate a responsive web design. Doing this requires my understanding of the process...here’s what I’ve learned so far.
 
 ### Setting Up CSS For Responsive Web Design
 
@@ -87,7 +87,7 @@ As I see it, responsive web design must utilize the following:
 &lt;meta name = "viewport" content = "width = EnterYourOwnWidth"&gt;
 </code></pre>
 
-It’s good to know how the Viewport meta tag works so [read up on it over at the Apple Developer site][10].
+It’s good to know how the Viewport meta tag works so [read more about it on MDN][10].
 
 *   ***Added Bonus:***
 #### Marcotte’s Responsive Images JavaScript Library
@@ -142,7 +142,7 @@ Feel free to share any responsive web design resources that you like…and your 
 
  [8]: http://www.alistapart.com/articles/fluidgrids/
  [9]: http://unstoppablerobotninja.com/entry/fluid-images/
- [10]: http://developer.apple.com/library/safari/#documentation/appleapplications/reference/safariwebcontent/UsingtheViewport/UsingtheViewport.html
+ [10]: https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Viewport_meta_element
  [11]: https://github.com/filamentgroup/Responsive-Images
  [12]: http://filamentgroup.com/examples/responsive-images/
  [13]: https://cloudfour.com/thinks/css-media-query-for-mobile-is-fools-gold/
@@ -157,3 +157,5 @@ Feel free to share any responsive web design resources that you like…and your 
  [22]: http://mediaqueri.es/
  [23]: http://books.alistapart.com/products/responsive-web-design
  [24]: http://twitter.com/#!/abookapart
+ [25]: /html5-project-update-january-21-2011/
+ [26]: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Grids

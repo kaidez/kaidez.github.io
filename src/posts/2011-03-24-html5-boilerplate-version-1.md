@@ -1,5 +1,5 @@
 ---
-title: HTML5 Boilerplate Goes To Version 1.0
+title: HTML5 Boilerplate Goes To Version 1.0 - ARCHIVE
 date: 2011-03-24
 excerpt: A quick review of HTML5 Boilerplate version 1.0, discussing the new build script for site optimization and custom site template build
 layout: layouts/post.njk

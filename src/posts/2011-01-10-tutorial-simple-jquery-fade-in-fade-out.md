@@ -14,8 +14,6 @@ redirect_from:
 <p style="margin: 30px 0 40px; border-bottom: black 1px solid;">
 <em>(Author's note - August 2025: This tutorial is WAAAAAAAAY out of date, but it remains my most-trafficked, most-shared blog post EVER! It's because of this post that I got a boatload of social media followers and multiple requests to help other developers that saw me as some kind of JavaScript authority.  I've deleted old and outdated posts and articles from this blog, but I can't let this one go.  Purely here for historical perspective...there are way more modern approaches to do what's being discussed here. -k)</em></p>
 
- [1]: /javascript-for-loop-creates-jquery-fade/
-
 Clients *looooooove* images that fade in and fade out on home pages. Flash was once the main tool of choice for this but jQuery now lets us do it with less code and guarantees that things will show up on multiple devices, iPhones included.
 
 I had to do this recently for the project I mentioned in [my previous post][2].
@@ -110,8 +108,6 @@ That should do it…but let me make two points:
   * I used transparent GIFs for this because transparent PNGs looked weird when they faded in and out. Of course, you can use a JPEG if your images don’t need to be transparent.  
 
   * Properly syncing the various fades took a little planning. Note the combined time for <code>.fadeIn()</code> and <code>.delay()</code> for the first image is five seconds, equal to the timing on the <code>.delay()</code> for the second image. Also note that the first image takes 1.5 seconds to fade out while the second one takes the same amount of time to fade in. This keeps everything neat.
-
-My HTML5 video posts are coming soon but another short jQuery-related post is coming next.
 
 <script type="application/ld+json">
   {

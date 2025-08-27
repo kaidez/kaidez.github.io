@@ -1,15 +1,17 @@
 ---
 title: 'HTML5 Project: WIREFRAME SERIES #1 – HOME PAGE'
-
-
+date: 2011-02-07
 layout: layouts/post.njk
 permalink: /html5-project-series-1-homepage-wireframe/
-excerpt: Wireframes for the kaidez portfolio site of New York/Jersey City, N.J. based web designer, Kai Gittens, who also works at Revlon and Almay
+excerpt: Wireframes for the portfolio site of Kai Gittens, who has worked at Blue Cross/Blue Shield, JPMorgan Chase, jetBlue, MedPage Today & Revlon
+image: default-image.jpg
 tags: ["personal"]
-
-# og-image: default-image.jpg
+secondary_tags: ["my work", "html 5"]
+category: Personal
 ---
-***Read the entire “Wirefame Series”
+<em>(Author's note - August 2025: The HTML5 Project was a personal project I started when the HTML5 markup language was still new. The goal was to rebuild my blog in pure HTML5 while documenting what I learned about it as things progressed. Web development work for both my day job and other personal projects taught me more enough HTML5, so I abandoned this project. But I'm proud of both the research and wire-framing I did on this so I'm keeping most of my HTML Project posts up for historical perspective. -k)</em>
+
+***Read the entire “Wireframe Series”
 [Intro»][1]  Page 1»  [Page 2][2]»  [Page 3»][3]***
 
  [1]: /html5-project-update-completed-wireframes/
@@ -139,7 +141,8 @@ So...
   *   With #1 and #2 canceled out, I’m going with #3.
 
 <h2 id="small">The small Tag</h2>
-![][32]
+
+![Small tag screen shot for the kaidez portfolio site][32]
 
 In terms of how this tag renders text, there’s nothing new here. But in terms of *how* to use it as per the spec, there’s a difference.
 
@@ -148,24 +151,42 @@ The  tag does exactly as it implies: it makes text smaller. In HTML 4.01, you co
 But according to the spec,  should only appear in an HTML5 page if it’s applied to small print…things like legal disclaimers and, in this case, copyrights.
 
 <h2 id="summary">Summary</h2>
+
 As you can see, HTML5 is very big on semantics. The spec has many rules, regulations and best practices to follow when it comes to setting up the page tags. [HTML5 Doctor][5] does a great job of taking the somewhat verbose HTML5 spec and translating it into easy-to-understand terms, so they should be your first stop in understanding HTML5 as a whole.
 
 A major *major* characteristic of HTML5 has to do with how all the page content relates to one another. I briefly discussed this in the  and  paragraphs above, but the  tag plays a big role here as well. This will be discussed in my next article (again, no pun intended).
 
-***Read the entire “Wirefame Series”: [Intro»][1] | Page 1» | [Page 2][2]» | [Page 3»][3]***
+***Read the entire “Wireframe Series”: [Intro»][1] | Page 1» | [Page 2][2]» | [Page 3»][3]***
 
 
- [19]: /img/home.jpg "Main Navigation screenshot for kaidez portfolio site"
- [20]: /img/mainNav.jpg "Main Navigation screenshot for kaidez portfolio site"
- [21]: /img/socialNav.jpg "Social networking navigation screen shot for kaidez portfolio home page wire frame"
- [22]: /img/footerNav.jpg "Footer navigation for the kaidez portfolio site"
- [23]: /img/header.jpg "Header snippet for the kaidez portfolio site"
- [24]: /img/footerSnippet.jpg "Footer Snippet for kaidez portfolio site"
+ [19]: /assets/img/home.jpg "Main Navigation screenshot for kaidez portfolio site"
+ [20]: /assets/img/mainNav.jpg "Main Navigation screenshot for kaidez portfolio site"
+ [21]: /assets/img/socialNav.jpg "Social networking navigation screen shot for kaidez portfolio home page wire frame"
+ [22]: /assets/img/footerNav.jpg "Footer navigation for the kaidez portfolio site"
+ [23]: /assets/img/header.jpg "Header snippet for the kaidez portfolio site"
+ [24]: /assets/img/footerSnippet.jpg "Footer Snippet for kaidez portfolio site"
  [25]: http://html5doctor.com/the-article-element/
- [26]: /img/sectionOnlyHomePage.jpg
+ [26]: /assets/img/sectionOnlyHomePage.jpg
  [27]: http://www.w3.org/
  [28]: http://www.whatwg.org/
- [29]: /img/containerDiv.jpg "Container Div for kaidez portfolio site"
- [30]: /img/entireMidSectionHomePage.jpg
- [31]: /img/feeds.jpg "Feed screenshot for kaidez portfolio site"
- [32]: /img/small.jpg "Small tag screen shot for the kaidez portfolio site"
+ [29]: /assets/img/containerDiv.jpg "Container Div for kaidez portfolio site"
+ [30]: /assets/img/entireMidSectionHomePage.jpg
+ [31]: /assets/img/feeds.jpg "Feed screenshot for kaidez portfolio site"
+ [32]: /assets/img/small.jpg "Small tag screen shot for the kaidez portfolio site"
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "HTML5 Project: WIREFRAME SERIES #1 – HOME PAGE",
+    "description": "Wireframes for the portfolio site of Kai Gittens, who has worked at Blue Cross/Blue Shield, JPMorgan Chase, jetBlue, MedPage Today & Revlon",
+    "author": {
+        "@type": "Person",
+        "name": "Kai Gittens",
+		    "url" : "http://kaidez.com/"
+    },
+    "datePublished": "2011-02-09",
+    "dateModified": "2025-08-27",
+    "programmingLanguage": "HTML"
+}
+</script>

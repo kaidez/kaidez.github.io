@@ -1,16 +1,17 @@
 ---
-title: 'HTML5 Project: WIREFRAME SERIES #3 –  ABOUT &#038; CONTACT PAGES'
-
-
+title: 'HTML5 Project: WIREFRAME SERIES #3 –  ABOUT & CONTACT PAGES'
+date: 2011-02-14
 layout: layouts/post.njk
 permalink: /html5-project-series-3-about-contact-wireframes/
+image: default-image.jpg
 excerpt: Final article in the HTML5 wireframe series for the kaidez portfolio site
 tags: ["personal"]
-
-# og-image: default-image.jpg
+secondary_tags: ["my work", "html 5"]
+category: Personal
 ---
+<em>(Author's note - August 2025: The HTML5 Project was a personal project I started when the HTML5 markup language was still new. The goal was to rebuild my blog in pure HTML5 while documenting what I learned about it as things progressed. Web development work for both my day job and other personal projects taught me more enough HTML5, so I abandoned this project. But I'm proud of both the research and wire-framing I did on this so I'm keeping most of my HTML Project posts up for historical perspective. -k)</em>
 
-***Read the entire “Wirefame Series”
+***Read the entire “Wireframe Series”
 [Intro»][1]  [Page 1»][2]  [Page 2»][3]  Page 3»***
 
  [1]: http://kaidez.com/html5-project-update-completed-wireframes/
@@ -90,21 +91,41 @@ This concludes my HTML5 Project Wireframe Series. I learned a lot about HTML5 pa
 
 Looking at [the task list I created for this project][15], my next task should be the creation of a simple site architectural document; i.e., sketch out how I’m going to link up all external script files & stylesheets as well as what the directory structure will be. But [HTML5 Boilerplate][16] already demonstrates the best way to plug in the external files (so much so that I’ve added it as a Coding Favorites Coolsite), so I’m just going to copy their method.
 
- [15]: http://kaidez.com/html5-project-update-january-21-2011/
+ [15]: /html5-project-update-january-21-2011/
  [16]: http://html5boilerplate.com/
 
 As far as sketching out the directory structure, I’ll be using WordPress which will automatically build the structure for me when the time comes…no need for a sketch, I suppose. I still have some WordPress work to do though, so I’m going to strikeout the architectural document and replace it with this:
 
 > “research WordPress page layouts to understand the best way to convert them to HTML5″
 
-I’m going to duplicate WordPress’ TwentyTen theme into a child theme, then tweak the child them to my own design. **This is going to be a lot of work**: I’ve started to look at the TwentyTen code and there’s a lot I have to tweak, but I’ve done it before so I should be OK. Update: instead of tweaking the TwentyTen theme to suit my needs, I’ll be tweaking using [Aaron Grogg’s HTML5-ready Boilerplate theme][17].)
-
- [17]: http://wordpress.org/extend/themes/boilerplate
+I’m going to duplicate WordPress’ TwentyTen theme into a child theme, then tweak the child them to my own design. **This is going to be a lot of work**: I’ve started to look at the TwentyTen code and there’s a lot I have to tweak, but I’ve done it before so I should be OK.
 
 Thanks for sticking with me through my series. And again, any and all feedback is appreciated!!!
 
 -kaidez
 
-*P.S. – I’m going to take a very short break from discussing HTML5 and code-related stuff. My next two articles will be a mini-review of **JWT’s Social Media Week Event** (for which, I attended the two big panel discussions. I’ll be critiquing the panel, discussing the new knowledge I gained and how this new knowledge affects my skillset learning track.*
+*P.S. – I’m going to take a very short break from discussing HTML5 and code-related stuff. My next two articles will be a mini-review of **JWT’s Social Media Week Event.**  I attended the two big panel discussions and will  be critiquing each panel.  I'll also discuss the new knowledge I gained and how this new knowledge affects my skillset learning track.*
 
-> ***Read the entire “Wirefame Series”: [Intro»][1] | [Page 1»][2] | [Page 2»][3] | Page 3»***
+*Update - August 2025: here are the links to the two Social Media Week articles: [Social Media Week/NYC Recap - SOCIAL LISTENING PANEL][17] and [Social Media Week/NYC Recap - SOCIAL LISTENING PANEL][18]*
+
+[17]: /nyc-social-media-week-event-recap-social-listening/
+[18]: /nyc-social-media-week-event-recap-cross-mobile-promotion/
+
+> ***Read the entire “Wireframe Series”: [Intro»][1] | [Page 1»][2] | [Page 2»][3] | Page 3»***
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "HTML5 Project: WIREFRAME SERIES #3 –  ABOUT & CONTACT PAGES",
+    "description": "Final article in the HTML5 wireframe series for the kaidez portfolio site",
+    "author": {
+        "@type": "Person",
+        "name": "Kai Gittens",
+		    "url" : "http://kaidez.com/"
+    },
+    "datePublished": "2011-02-09",
+    "dateModified": "2025-08-27",
+    "programmingLanguage": "HTML"
+}
+</script>

@@ -1,16 +1,18 @@
 ---
-title: 'HTML5 Project: WIREFRAME SERIES &#8211; INTRO'
-
-
+title: 'HTML5 Project: WIREFRAME SERIES - INTRO'
+date: 2011-02-04
 layout: layouts/post.njk
-permalink: /html5-project-update-completed-wireframes/
 excerpt: HTML5 wireframe preview of kaidez.com portfolio site
+permalink: /html5-project-update-completed-wireframes/
+image: default-image.jpg
 tags: ["personal"]
-
-# og-image: default-image.jpg
+secondary_tags: ["my work", "html 5"]
+category: Personal
 ---
-***Read the entire “Wirefame Series”***
-*** Intro | [Page 1»][1] | [Page 2»][2] | [Page 3»][3]***
+<em>(Author's note - August 2025: The HTML5 Project was a personal project I started when the HTML5 markup language was still new. The goal was to rebuild my blog in pure HTML5 while documenting what I learned about it as things progressed. Web development work for both my day job and other personal projects taught me more enough HTML5, so I abandoned this project. But I'm proud of both the research and wire-framing I did on this so I'm keeping most of my HTML Project posts up for historical perspective. -k)</em>
+
+***Read the entire “Wireframe Series”***
+***Intro | [Page 1»][1] | [Page 2»][2] | [Page 3»][3]***
 
  [1]: /html5-project-series-1-homepage-wireframe/
  [2]: /html5-project-series-2-work-subcategory-playlist-wireframes/
@@ -29,7 +31,7 @@ My attitude about wireframes as always been “maybe, maybe not.” Unless a pro
  [6]: http://html5doctor.com/
  [7]: http://html5gallery.com/
 
-But the HTML5 language is a *semantic* one: there are *extremely* strict rules as to when and when not to use certain tags, rules that we all should follow to the letter. So, armed with the cloud-based wireframe RIA [Hotgloo][8], I wireframed my portfolio site.
+But the HTML5 language is a *semantic* one: there are *extremely* strict rules as to when and when not to use certain tags, rules that we all should follow to the letter. So, armed with the cloud-based wireframe RIA Hotgloo, I wireframed my portfolio site.
 
  [8]: http://www.hotgloo.com/
 
@@ -44,7 +46,7 @@ The pages are broken down as follows:
 *   **Work/Day Job Page** – this is also self-explanatory
 *   **About Page** – again, self-explanatory
 *   **Contact Page** – yet again, self-explanatory
-*   **Niko’s Playlist Page ** – this bears some explaining. My son loooooves Katy Perry and Beyonce…good for him but there’s only so much of this I can deal with. I’ve been sitting with him in front of my computer once a day, pumping everything from Sonny Rollins to the Clash to Slum Village in his ear. He responds to some of it positively so this page will document what he likes while injecting a little humor to the site.
+*   **Niko’s Playlist Page** – this bears some explaining. My son loooooves Katy Perry and Beyonce…good for him but there’s only so much of this I can deal with. I’ve been sitting with him in front of my computer once a day, pumping everything from Sonny Rollins to the Clash to Slum Village in his ear. He responds to some of it positively so this page will document what he likes while injecting a little humor to the site.
 
 Enough talk, here’s the gallery *(updated Feb 6, 2011):*
 
@@ -67,6 +69,22 @@ Lastly…this design is NOT etched in stone: there may be changes when I create 
 
 The series hasn’t started yet, so I’m open to modifying the wireframes if some suggests it. That being said, feel free to let me know what you think! Any help is appreciated!
 
- 
 
-> ***Read the entire “Wirefame Series”: Intro | [Page 1»][1] | [Page 2»][2] | [Page 3»][3]***
+> ***Read the entire “Wireframe Series”: Intro | [Page 1»][1] | [Page 2»][2] | [Page 3»][3]***
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "HTML5 wireframe preview of kaidez.com portfolio site",
+    "description": "Part Two of my explanation on how I created wireframed my HTML5 site before I developed and designed it",
+    "author": {
+        "@type": "Person",
+        "name": "Kai Gittens",
+		    "url" : "http://kaidez.com/"
+    },
+    "datePublished": "2011-02-04",
+    "dateModified": "2025-08-27",
+    "programmingLanguage": "HTML"
+}
+</script>

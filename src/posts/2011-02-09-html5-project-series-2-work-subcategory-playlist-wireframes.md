@@ -1,16 +1,17 @@
 ---
-title: 'HTML5 Project: WIREFRAME SERIES #2 –  WORK &#038; NIKO&lsquo;S PLAYLIST PAGES'
-
-
+title: "HTML5 Project: WIREFRAME SERIES #2 –  WORK & NIKO'S PLAYLIST PAGES"
+date: 2011-02-09
+excerpt: Part Two of my explanation on how I created wireframed my HTML5 site before I developed and designed it
 layout: layouts/post.njk
 permalink: /html5-project-series-2-work-subcategory-playlist-wireframes/
-excerpt: Part Two of my explanation on how I created wireframed my HTML5 site before I developed and designed it
+image: default-image.jpg
 tags: ["personal"]
-
-# og-image: default-image.jpg
+secondary_tags: ["my work", "html 5"]
+category: Personal
 ---
+<em>(Author's note - August 2025: The HTML5 Project was a personal project I started when the HTML5 markup language was still new. The goal was to rebuild my blog in pure HTML5 while documenting what I learned about it as things progressed. Web development work for both my day job and other personal projects taught me more enough HTML5, so I abandoned this project. But I'm proud of both the research and wire-framing I did on this so I'm keeping most of my HTML Project posts up for historical perspective. -k)</em>
 
-***Read the entire “Wirefame Series” [Intro»][1] | [Page 1»][2] | Page 2» | [Page 3»][3]***
+***Read the entire “Wireframe Series” [Intro»][1] | [Page 1»][2] | Page 2» | [Page 3»][3]***
 
  [1]: /html5-project-update-completed-wireframes/
  [2]: /html5-project-series-1-homepage-wireframe/
@@ -76,7 +77,7 @@ Based on the location of the  tag, it’s tempting to treat it like a traditiona
 
 <img src="/assets/img/Playlist.jpg" />
 
-***Read the entire “Wirefame Series”:
+***Read the entire “Wireframe Series”:
 [Intro»][1] | [Page 1»][2] | Page 2» | [Page 3»][3]***
 
  [9]: /img/Work.jpg
@@ -84,3 +85,20 @@ Based on the location of the  tag, it’s tempting to treat it like a traditiona
  [13]: http://kaidez.com/html5-project-series-1-homepage-wireframe/#articleSection
  [16]: /img/Experiments-02.jpg
  [15]: http://html5doctor.com/aside-revisited/
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "HTML5 Project: WIREFRAME SERIES #2 –  WORK & NIKO'S PLAYLIST PAGES",
+    "description": "Part Two of my explanation on how I created wireframed my HTML5 site before I developed and designed it",
+    "author": {
+        "@type": "Person",
+        "name": "Kai Gittens",
+		    "url" : "http://kaidez.com/"
+    },
+    "datePublished": "2010-02-14",
+    "dateModified": "2025-08-27",
+    "programmingLanguage": "HTML"
+}
+</script>

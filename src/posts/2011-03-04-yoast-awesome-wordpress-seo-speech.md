@@ -1,5 +1,5 @@
 ---
-title: "Yoast's Awesome WordPress SEO Speech"
+title: "Yoast's Awesome WordPress SEO Speech - ARCHIVE"
 date: 2011-03-04
 excerpt: A quick review of a great WordPress SEO speech from Joost de Valk, AKA Yoast, with the video embedded on the page for instant viewing
 layout: layouts/post.njk
