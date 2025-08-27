@@ -8,7 +8,6 @@ image: git-contrib-map.jpg
 tags: ["personal"]
 secondary_tags: ["learn web development", "rant"]
 category: Personal
-# og-image: git-contrib-map.jpg
 ---
 
 <p>I've been planning this post for a few months now. My initial plan was to make it my 100th post, using that milestone to review the things I've done to be best web developer I can be.</p>
