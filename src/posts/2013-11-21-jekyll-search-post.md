@@ -5,7 +5,7 @@ excerpt: jQuery-powered search functionality for a Jekyll site with fallback cod
 layout: layouts/post.njk
 permalink: /custom-jekyll-search/
 image: jekyllSearchPostImage.jpg
-secondary_tags: ["jekyll", "javascript", "css"]
+secondary_tags: ["jekyll", "javascript", "jquery", "css"]
 tags: ["tutorials"]
 category: Tutorials
 ---
@@ -625,7 +625,8 @@ There are lots of search options for static sites generators like Jekyll...we ju
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
-  "headline": "kaidez 2013 Site Redesign",
+  "headline": "TUTORIAL: Jekyll Search with Non-JavaScript/CSS Fallback",
+  "description": "jQuery-powered search functionality for a Jekyll site with fallback code if JS or CSS is disabled. Look at the demo before using the code",
   "author": {
     "@type": "Person",
     "name": "Kai Gittens"
@@ -634,7 +635,8 @@ There are lots of search options for static sites generators like Jekyll...we ju
   "dateModified": "2025-08-26",
   "programmingLanguage": [
     "JavaScript",
-    "Jekyll"
+    "Jekyll",
+    "CSS"
   ]
 }
 </script>
