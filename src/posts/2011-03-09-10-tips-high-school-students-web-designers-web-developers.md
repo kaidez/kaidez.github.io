@@ -4,9 +4,15 @@ date: 2011-03-09
 excerpt: An extensive article with tips, resources and ideas for high school students wanting to work in the web design or development field someday
 layout: layouts/post.njk
 permalink: /10-tips-high-school-students-web-designers-web-developers/
+image: default-image.jpg
 tags: ["personal"]
-# og-image: default-image.jpg
+secondary_tags: ["web developer job", "learning"]
+category: Personal
 ---
+<em>(Author's note - August 2025: This post is still relevant but there's updated post [here][1] -k)</em></p>
+
+[1]: /high-school-student-web-tips-2016/
+
 I have to thank my father for getting me into computers. He sampled a lot of personal PCs in the early eighties, from the Kaypro to the Apple II…eventually settling on the Apple Macintosh (what we now call the Mac). I paid attention and followed his lead, resulting in the career that I have now.
 
 In turn, my son *might* follow my lead and strive for a career in web design and development, but I’m fine if he doesn’t. Ask any parent what they want for their kid and most will answer, “I want them to be happy and healthy.” I’ve heartily adopted this philosophy and while I’ll make sure that he’s afforded every opportunity to succeed, my son could be a janitor for all I care, just so long as he possesses those two characteristics.
@@ -93,11 +99,28 @@ If you have a little-better-than-basic understanding of web design and developme
 
 I’ll concede that this is easier to accomplish if you live in either a big or medium-sized city. And I’ll also concede that opportunities like this are usually provided to college students over high school students. But it’s still worth your while to research this as a possibility.
 
-### 10. Check Out The Scrunchup Site
+### 10. Check Out The Scrunchup Site (site has since been taken down)
 
-Started by UK-based web designer Anna Debenham, [Scrunchup][3] is a fabulous resource for young and aspiring web designers. From advice on how to start a web career to CSS tutorials, there’s a little bit of everything on this site. Anna’s own [“Why we made Scrunchup”][4] article is nice starting point for the site.
+Started by UK-based web designer Anna Debenham, Scrunchup is a fabulous resource for young and aspiring web designers. From advice on how to start a web career to CSS tutorials, there’s a little bit of everything on this site. Anna’s own [“Why we made Scrunchup”][4] article is nice starting point for the site.
 
- [3]: http://scrunchup.com/
- [4]: http://scrunchup.com/article/why-we-made-scrunchup/
+ [4]: https://www.maban.co.uk/18/
 
 Do any web designers/developers have tips for the younger generation? If you’re a high school student, would you follow any of these tips? And what do parents think? Feel free to comment!!!!
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "10 Tips For High Schoolers Wanting To Be Web Designers Or Developers",
+    "description": "An extensive article with tips, resources and ideas for high school students wanting to work in the web design or development field someday",
+    "author": {
+        "@type": "Person",
+        "name": "Kai Gittens",
+        "url": "http://kaidez.com"
+    },
+    "datePublished": "2011-03-09",
+    "dateModified": "2025-08-26",
+    "programmingLanguage": "JavaScript",
+    "dependencies": "jQuery 1.4.4"
+}
+</script>

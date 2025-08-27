@@ -1,22 +1,24 @@
 ---
-title: 'HTML5 Project: Boilerplate WordPress Theme'
+title: 'HTML5 Project: Boilerplate WordPress Theme - ARCHIVE'
 date: 2011-03-07
+excerpt: Walk-through of Aaron T. Grogg's excellent HTML5 Boilerplate-based WordPress theme. Includes a great admin screen for custom configuration.
 layout: layouts/post.njk
 permalink: /html5-project-boilerplate-theme-wordpress/
-excerpt: Walk-through of Aaron T. Grogg's excellent HTML5 Boilerplate-based WordPress theme. Includes a great admin screen for custom configuration.
+image: default-image.jpg
 tags: [coding-best-practices]
-# og-image: default-image.jpg
+secondary_tags: ["html 5", "wordpress"]
+category: Coding Tips
 ---
 *IMPORTANT: This article discusses [the HTML5 Boilerplate template][1] and assumes that you have, at least, a basic understanding of its page layout. I will discuss the layout in a very roundabout way, not in depth. I STRONGLY suggest that you not only [read the HTML5 Boilerplate documentation][2], but also [watch the really good 40 minute walk-through video of the code][3].*
 
  [1]: http://html5boilerplate.com/
  [2]: https://github.com/paulirish/html5-boilerplate/wiki
- [3]: http://kaidez.com/html5-boilerplate-video/
+ [3]: /html5-boilerplate-video/
 
 With [the wireframes][4] completed for the portfolio site for [my HTML5 Project][5], I’ve been researching the best way to use HTML5 page tags while developing within WordPress.
 
- [4]: http://kaidez.com/html5-project-update-completed-wireframes/
- [5]: http://kaidez.com/html5-project/
+ [4]: /html5-project-update-completed-wireframes/
+ [5]: /html5-project/
 
 My initial plan was to duplicate the default TwentyTen theme that comes with WordPress, then convert it to HTML5. I REALLY didn’t want to use a pre-built WP HTML5 theme, preferring to instead convert the  tags to HTML5 myself, learning things as I go. In other words, I wanted to figure out the answers to the test myself instead of copying off of someone else’s paper.
 
@@ -46,7 +48,7 @@ Best of all, the Boilerplate theme installs a really good Admin panel under the 
 
 [View a screenshot of the Boilerplate Admin panel][12].
 
- [12]: http://kaidez.com/wp-content/uploads/2011/03/boilerplate.png
+ [12]: /wp-content/uploads/2011/03/boilerplate.png
 
 Boilerplate theme is really bare-bones, suiting all my development needs. This may be my main starter them for WordPress development from here on in.
 

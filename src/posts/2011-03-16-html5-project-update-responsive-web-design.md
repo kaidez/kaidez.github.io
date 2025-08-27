@@ -159,3 +159,20 @@ Feel free to share any responsive web design resources that you like…and your 
  [24]: http://twitter.com/#!/abookapart
  [25]: /html5-project-update-january-21-2011/
  [26]: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Grids
+
+ <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "HTML5 Project Update: Changing To A Responsive Web Design Using CSS3 Media Queries",
+    "description": "An article on responsive web design, CSS3 media queries and using it in kaidez's HTML5 Project, resource list of links at the end",
+    "author": {
+        "@type": "Person",
+        "name": "Kai Gittens",
+        "url": "http://kaidez.com/"
+    },
+    "datePublished": "2011-03-16",
+    "dateModified": "2025-08-26",
+    "programmingLanguage": "CSS"
+}
+</script>

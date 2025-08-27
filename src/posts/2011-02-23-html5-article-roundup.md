@@ -1,16 +1,14 @@
 ---
-title: HTML5 Recent Article Roundup
-
-
+title: HTML5 Recent Article Roundup - ARCHIVE
+date: 2011-02-23
+excerpt: A list of great HTML5 articles compiled by kaidez
 layout: layouts/post.njk
 permalink: /html5-article-roundup/
-excerpt: A list of great HTML5 articles compiled by kaidez
-
-
-# og-image: default-image.jpg
-tags: [html5, review]
+image: default-image.jpg
+tags: [reviews]
+secondary_tags: ["html 5"]
+category: Reviews
 ---
-
 I wanted to deliver as much original content as possible when I started blogging again and didn’t want to do article roundups. I certainly didn’t want to do an HTML5-based round up as those articles and blog posts are a dime a dozen right now.
 
 But some ***very authoritative, high-profile HTML5 articles*** have popped up recently and I’d like to make sure that as many people read them as possible…so here we go:
@@ -38,7 +36,7 @@ IMPORTANT: Before I list the final two articles, let be crystal clear about some
 
 Awesome…and <a href="http://www.zeldman.com/2011/01/27/html5-vs-html/#comment-58000">I sort of said so in the article’s comments section</a>.
 
-*   <a hreef="http://www.w3.org/html/logo/">W3C HTML5 Logo</a> – Released by the W3C in an effort to get designers to place the logo on their HTML5-designed sites. They also are selling a t-shirt and yes, I’ll be buying one eventually.
+*   <a href="http://www.w3.org/html/logo/">W3C HTML5 Logo</a> – Released by the W3C in an effort to get designers to place the logo on their HTML5-designed sites. They also are selling a t-shirt and yes, I’ll be buying one eventually.
 
 Give them *all* a read and feel free to add any articles I may have missed!!!!
 

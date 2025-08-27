@@ -1,13 +1,14 @@
 ---
-title: 'My 50th Article &#8211; A Retrospective!'
+title: 'My 50th Article - A Retrospective!'
 date: 2011-04-11
 excerpt: kaidez reviews his progress with learning web development and how his blog is doing in terms of content, SEO and social network promotion
 layout: layouts/post.njk
 permalink: /50th-article-blog-review/
+image: default-image.jpg
 tags: ["personal"]
-# og-image: default-image.jpg
+secondary_tags: ["my work"]
+category: Personal
 ---
-
 Maintaining a blog to the point that it contains 50 posts (I call them articles) is a milestone. As I just hit the 50 mark, it’s time to review how things are going.
 
 ## Learning Web Development
@@ -24,10 +25,10 @@ I’d give myself a higher grade had I implemented any CSS3 in any projects. I t
 *   **jQuery** – I earned a B. I’ve done some small projects here and there and also wrote [a well-trafficked jQuery tutorial][5]. Furthermore, I’m utilizing jQuery more and more while not having to look up answers to jQuery problems on the web.
 
  [1]: http://developers.whatwg.org/
- [2]: http://kaidez.com/almay-project-using-html5-net-jquery/
+ [2]: /almay-project-using-html5-net-jquery/
  [3]: http://www.lynda.com/CSS-training/css3-first-look/73288-2C.html
- [4]: http://kaidez.com/css3-pie-link-tutorial/
- [5]: http://kaidez.com/tutorial-simple-jquery-fade-in-fade-out/
+ [4]: /css3-pie-link-tutorial/
+ [5]: /tutorial-simple-jquery-fade-in-fade-out/
 
 So I’m happy with my overall progress but have more work to do, which I’m not worried about.
 
@@ -43,7 +44,7 @@ I did say that documenting my web development learning process was this blog’s
 
     Blogging about a hot topic is not a bad thing. Not having a plan to expand your blog beyond that hot topic if/when it’s no longer hot, that’s a bad thing.
 *   **SEO**
-    During the WordPress Wordcamp/Bulgaria in 2011, Joost de Valk, pretty much [*the* WordPress SEO expert][6], delivered [one of the most inspirational blogging lectures][7] I’ve ever heard. Among the many great things he said, this was his most brilliant quote:
+    During the WordPress Wordcamp/Bulgaria in 2011, Joost de Valk, pretty much [*the* WordPress SEO expert][6], delivered one of the most inspirational blogging lectures I’ve ever heard. Among the many great things he said, this was his most brilliant quote:
 
     > “The funny thing is, if you have really good content, SEO is the easiest game in the world. If you have sh*t content, SEO is really REALLY hard because you’re working against your content all the time.”
 
@@ -67,8 +68,7 @@ I did say that documenting my web development learning process was this blog’s
 So here I am at my 50th article. While I still have work to do in certain areas, I’m happy overall and will enjoy getting to article #100!!! I hope you stay with me!!!
 
  [6]: http://yoast.com/
- [7]: http://kaidez.com/yoast-awesome-wordpress-seo-speech/
- [8]: http://kaidez.com/about-kaidez/
+ [8]: /about-kaidez/
  [9]: http://facebook.com/kaidez/
  [10]: http://twitter.com/kaidez/
  [11]: http://www.quora.com/Kai-Gittens

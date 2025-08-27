@@ -6,7 +6,7 @@ layout: layouts/post.njk
 permalink: /high-school-student-web-tips-2016/
 image: high-school-2016-image.jpg
 tags: ["personal"]
-secondary_tags: ["web developer job"]
+secondary_tags: ["web developer job", "learning"]
 category:  Personal
 # thumb-image: high-school-2016-image-thumb.jpg
 ---

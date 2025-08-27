@@ -9,7 +9,7 @@ tags: [coding-best-practices]
 secondary_tags: ["html 5"]
 category: Coding Tips
 ---
-<em>(Author's note - August 2025: This post is old but is really good for historical perspective. It was a nig deal when the NY Times went the HTML5 route: give it a read. -k)</em></p>
+<em>(Author's note - August 2025: This post is old but is really good for historical perspective. It was a big deal when the NY Times went the HTML5 route: give it a read. -k)</em></p>
 
 The New York Times was hot stuff in the HTML5 sector of the Twitterverse over the March 26/27 weekend of 2011. Reason being, their [“HTML5 Is Breathing New Life Into the Web”][1] article and their new Skimmer site.
 
@@ -31,3 +31,19 @@ Still, I think HTML5 will go far. Too many in the open source community, includi
 The article also announced the launch of their HTML5-driven Skimmer site, which provides a scannable layout of snippets of their just published articles. It appears to be implementing a responsive web design, but I couldn’t find any media queries when I checked the CSS code. They could be there and I just didn’t see them…will keep looking.
 
 While it crashed my iPhone, it’s still a good-looking site.
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "New York Times Article On HTML5: Their New HTML5 Site",
+    "description": "A great New York Times piece on HTML5 application development and a demo of their new HTML5 Skimmer site",
+    "author": {
+      "@type": "Person",
+      "name": "Kai Gittens"
+    },
+    "datePublished": "2010-04-21",
+    "dateModified": "2025-08-27",
+    "programmingLanguage": "HTML 5",
+  }
+</script>
