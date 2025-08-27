@@ -12,7 +12,7 @@ redirect_from:
   - /tutorial-simple-jquery/
 ---
 <p style="margin: 30px 0 40px; border-bottom: black 1px solid;">
-<em>(Author's note - August 2025: This tutorial is WAAAAAAAAY out of date, but it remains my most-trafficked, most-shared blog post EVER! It's because of the post that I got a boatload of social media followers and multiple requests to help developers in other countries that saw me as an authority.  I've deleted old and outdated posts and articles from this blog, but I can't let this one go.  Purely here for historical perspective...there are way more modern approaches to do what's being discussed here. -k)</em></p>
+<em>(Author's note - August 2025: This tutorial is WAAAAAAAAY out of date, but it remains my most-trafficked, most-shared blog post EVER! It's because of this post that I got a boatload of social media followers and multiple requests to help other developers that saw me as some kind of JavaScript authority.  I've deleted old and outdated posts and articles from this blog, but I can't let this one go.  Purely here for historical perspective...there are way more modern approaches to do what's being discussed here. -k)</em></p>
 
  [1]: /javascript-for-loop-creates-jquery-fade/
 
