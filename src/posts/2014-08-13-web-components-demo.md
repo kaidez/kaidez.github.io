@@ -371,7 +371,7 @@ I can't say that my code is perfect, but I achieved the goal I set for myself an
     "@type": "Person",
     "name": "Kai Gittens"
   },
-  "datePublished": "2013-08-14",
+  "datePublished": "2013-08-13",
   "dateModified": "2025-09-14",
   "programmingLanguage": "JavaScript"
 }

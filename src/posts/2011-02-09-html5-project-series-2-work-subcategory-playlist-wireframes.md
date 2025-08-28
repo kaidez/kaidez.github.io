@@ -97,7 +97,7 @@ Based on the location of the  tag, it’s tempting to treat it like a traditiona
         "name": "Kai Gittens",
 		    "url" : "http://kaidez.com/"
     },
-    "datePublished": "2010-02-14",
+    "datePublished": "2011-02-09",
     "dateModified": "2025-08-27",
     "programmingLanguage": "HTML"
 }

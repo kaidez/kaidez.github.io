@@ -44,18 +44,19 @@ Working with .NET was very rewarding. I’ve been working in Visual Studio for a
 Working with HTML5 video was just as rewarding and I’m glad I did it, but it was definitely a learning experience. The client requested that videos display on as many mobile devices as possible, so I had to figure out a lot of things on the fly. It was frustrating at times but I’m glad I went through the process.
 
 <script type="application/ld+json">
-  {
+{
     "@context": "https://schema.org",
     "@type": "TechArticle",
     "headline": "New Almay Project I Worked On",
     "description": "Kai Gittens developed four micro-sites for Almay using HTML5 video, jQuery, .NET and CSS",
     "author": {
-      "@type": "Person",
-      "name": "Kai Gittens"
+        "@type": "Person",
+        "name": "Kai Gittens",
+        "url": "http://kaidez.com/"
     },
-    "datePublished": "2011-01-05",
+    "datePublished": "2011-01-07",
     "dateModified": "2025-08-26",
     "programmingLanguage": "JavaScript",
-    "dependencies": "HTML5
-  }
+    "dependencies": "HTML5"
+}
 </script>

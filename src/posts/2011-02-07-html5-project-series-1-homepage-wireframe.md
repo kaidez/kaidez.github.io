@@ -185,7 +185,7 @@ A major *major* characteristic of HTML5 has to do with how all the page content 
         "name": "Kai Gittens",
 		    "url" : "http://kaidez.com/"
     },
-    "datePublished": "2011-02-09",
+    "datePublished": "2011-02-07",
     "dateModified": "2025-08-27",
     "programmingLanguage": "HTML"
 }

@@ -304,7 +304,7 @@ There weren't REALLY a lot of code challenges for me in this project...a simple 
         "name": "Kai Gittens",
 		"url" : "http://kaidez.com/"
     },
-    "datePublished": "2012-09-12",
+    "datePublished": "2014-09-12",
     "dateModified": "2025-08-27"
 }
 </script>

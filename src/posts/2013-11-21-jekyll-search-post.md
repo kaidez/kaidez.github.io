@@ -631,7 +631,7 @@ There are lots of search options for static sites generators like Jekyll...we ju
     "@type": "Person",
     "name": "Kai Gittens"
   },
-  "datePublished": "2013-10-11",
+  "datePublished": "2013-11-21",
   "dateModified": "2025-08-26",
   "programmingLanguage": [
     "JavaScript",

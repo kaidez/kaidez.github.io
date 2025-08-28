@@ -35,7 +35,7 @@ Check out the courses and [hit me up on Twitter/X](http://x.com/kaidez "contact 
         "name": "Kai Gittens",
 		"url" : "http://kaidez.com/"
     },
-    "datePublished": "2012-09-17",
+    "datePublished": "2014-09-17",
     "dateModified": "2025-08-27"
 }
 </script>

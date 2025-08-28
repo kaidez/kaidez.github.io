@@ -312,11 +312,11 @@ Closures are tough to understand in the beginning, I donâ€™t deny it. But theyâ€
     "@context": "https://schema.org",
     "@type": "TechArticle",
     "headline": "TUTORIAL: What NYC Subways Can Teach Us About JavaScript Closures",
-    "description": "JavaScript closures tutorial using the New York City subway to explain how they work. With demo, code samples and short reading list..",
+    "description": "JavaScript closures tutorial using the New York City subway to explain how they work. With demo, code samples and short reading list.",
     "author": {
         "@type": "Person",
         "name": "Kai Gittens",
-		"url" : "http://kaidez.com/"
+        "url": "http://kaidez.com/"
     },
     "datePublished": "2012-03-27",
     "dateModified": "2025-08-27"

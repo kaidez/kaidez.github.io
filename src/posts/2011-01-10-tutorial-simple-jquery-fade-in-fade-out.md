@@ -119,7 +119,7 @@ That should do it…but let me make two points:
       "@type": "Person",
       "name": "Kai Gittens"
     },
-    "datePublished": "2010-01-10",
+    "datePublished": "2011-01-10",
     "dateModified": "2025-08-26",
     "programmingLanguage": "JavaScript",
     "dependencies": "jQuery 1.4.4"

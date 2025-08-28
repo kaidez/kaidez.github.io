@@ -75,7 +75,7 @@ The two books above, I believe, best chronicle the beginning and end of the Dot-
 
 <script type="application/ld+json">
 {
-  "@context": "http://schema.org/",
+  "@context": "https://schema.org/",
   "@type": "Review",
   "author": {
     "@type": "Person",
@@ -101,13 +101,13 @@ The two books above, I believe, best chronicle the beginning and end of the Dot-
 
 <script type="application/ld+json">
 {
-  "@context": "http://schema.org/",
+  "@context": "https://schema.org/",
   "@type": "Review",
   "author": {
     "@type": "Person",
     "name": "Kai 'kaidez' Gittens"
   },
-  "reviewBody": "'The New New Thing' by Joseph Menn tells the story of how the dot-com rush of the mid-to-late 1990s started, with a strong focus on the Netscape IPO",
+  "reviewBody": "'All the Rave: The Rise and Fall of Shawn Fanning's Napster' by Joseph Menn tells the story of how the Napster file-sharing app gained popularity very fast and went out of business even faster",
   "itemReviewed": {
     "@type": "Book",
     "name": "All the Rave: The Rise and Fall of Shawn Fanning's Napster",

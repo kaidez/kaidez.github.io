@@ -9,7 +9,7 @@ tags: [coding-best-practices]
 ---
 *MUCH thanks to at Oli Studholme at HTML5 Doctor for helping me understand this!!!!*
 
-*Update July 28, 2013: Not only are many points in this post erroneous, but the correct points are a bit outdated. The [schema.org](http://schema.org/) library is recommend for marking up microdata instead of the older data-vocabulary.org one.*
+*Update July 28, 2013: Not only are many points in this post erroneous, but the correct points are a bit outdated. The [schema.org](https://schema.org/) library is recommend for marking up microdata instead of the older data-vocabulary.org one.*
 
 *Update February 21, 2011: Oli looked at this post and suggested some code & semantics changes. Simply put, there are a lot of semantic mistakes in this article. The code below was changed as per his suggestions but the semantics were many. So many that it was easier to create a new post listing them instead of editing this article. Review the code below as it contains his edits, then [read my post listing his semantic suggestions](/update-html5seomicrodata-post/). – k*
 
@@ -69,7 +69,7 @@ Let’s breakdown the code…
 
   * Note that the opening `&lt;section>&gt; tag has two attributes: itemscope and itemtype.
   * `itemscope` tells the browser that everything within the `&lt;section>&gt; tags is microdata and should be treated as such.
-  * `itemtype` attaches the microdata to the "Person" vocabulary library stored at <del>[data-vocabulary.org](http://www.data-vocabulary.org/)</del> [schema.org](http://schema.org/), the common data vocabulary collaboration of several major search engines.
+  * `itemtype` attaches the microdata to the "Person" vocabulary library stored at <del>[data-vocabulary.org](http://www.data-vocabulary.org/)</del> [schema.org](https://schema.org/), the common data vocabulary collaboration of several major search engines.
   * For every piece of data within the `&lt;section>&gt; tag (name, address, etc.) an itemprop attribute needs to be applied to it. Look at the code and copy it like I did in terms of assign values.
   * All the data is then sent to Google and if it comes up in their search results, it will look like this:
 
@@ -97,7 +97,7 @@ Some other HTML5 SEO things...
   * ~~Bing and Yahoo! use microdata as well. To be fair, Bing was the first search engine to use it…go and read more about this.~~; So erroneus, it's not even funny.
   * Update (Jan 28, 2011): this may or may not be true…am in the middle of verifying this.
   * Update (Feb 02, 2011): Have to strikethrough this line…see this comment below.
-  * "Person" is just one of nine vocabularies currently stored over at data-vocabulary.org. The complete list as of this post is: Person, Event, Organization, Product, Review, Review-aggregate, Breadcrumb, Offer and Offer-aggregate. [Go and read about all of them](http://schema.org/).
+  * "Person" is just one of nine vocabularies currently stored over at data-vocabulary.org. The complete list as of this post is: Person, Event, Organization, Product, Review, Review-aggregate, Breadcrumb, Offer and Offer-aggregate. [Go and read about all of them](https://schema.org/).
   * Note that one of the vocabularies is named "Products." So if you’re selling stuff online, microdata can help you.
   * If you want reviews of your products to appear in search results, take note of the "Review" and "Review-aggregate" vocabularies.
   * One of best uses of microdata is to create a well-designed digital business card, or a vCard. [Many web designers use this tactic; see some of their work](http://www.queness.com/post/524/32-amazing-mini-vcard-websites-with-slick-javascript-animation).

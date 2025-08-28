@@ -9,13 +9,13 @@ tags: [coding-best-practices]
 secondary_tags: ["html 5"]
 category: Coding Tips
 ---
-<em>(Author's note - August 2025: This post is old but is really good for historical perspective. It was a big deal when the NY Times went the HTML5 route: give it a read. -k)</em></p>
+<p style="margin: 30px 0 40px; border-bottom: black 1px solid;"><em>(Author's note - August 2025: This post is old but is really good for historical perspective. It was a big deal when the NY Times went the HTML5 route: give it a read. -k)</em></p>
 
 The New York Times was hot stuff in the HTML5 sector of the Twitterverse over the March 26/27 weekend of 2011. Reason being, their [“HTML5 Is Breathing New Life Into the Web”][1] article and their new Skimmer site.
 
  [1]: http://www.nytimes.com/2011/03/27/business/27unboxed.html
 
-The article referenced two other articles: [a previous Scientific American article by Tim Berners-Lee][3] and [another Wired article co-authored by Chris Anderson and Michael Wolff][4]. The cumulative point of the Sci American and Wired pieces was that applications like Facebook and mobile apps operated inside the open web while maintaining and storing information behind a non-searchable wall, which is not what the Word Wide Web is about. HTML5, according to the Times, will deliver most open source web-based apps which will break this wall down.
+The article referenced two other articles: [a previous Scientific American article by Tim Berners-Lee][3] and [another Wired article co-authored by Chris Anderson and Michael Wolff][4]. The cumulative point of the Sci American and Wired pieces was that applications like Facebook and mobile apps operated inside the open web while maintaining and storing information behind a non-searchable wall, which is not what the World Wide Web is about. HTML5, according to the Times, will deliver most open source web-based apps which will break this wall down.
 
  [3]: http://www.scientificamerican.com/article.cfm?id=long-live-the-web
  [4]: https://web.archive.org/web/20150330003638/http://www.wired.com/2010/08/ff_webrip/all/1
@@ -42,8 +42,8 @@ While it crashed my iPhone, it’s still a good-looking site.
       "@type": "Person",
       "name": "Kai Gittens"
     },
-    "datePublished": "2010-04-21",
+    "datePublished": "2011-04-26",
     "dateModified": "2025-08-27",
-    "programmingLanguage": "HTML 5",
+    "programmingLanguage": "HTML 5"
   }
 </script>
