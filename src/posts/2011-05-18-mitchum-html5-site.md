@@ -47,7 +47,7 @@ I saw a couple of NuGet demos at MIX11, with the best one being the demo hosted 
 
 As far as how I’ve been “thinking” like a developer, I have to jump back to MIX11:
 
-Before attending the NuGet session at MIX11, I attended [Jeff Croft’s][14] session on being a designer/developer hybrid. During the Q&A panel, I asked him if thought that mobile was driving people to be both designers and developers since mobile puts less emphasis on design. He provided a very simple answer, which I’m paraphrasing here:
+Before attending the NuGet session at MIX11, I attended Jeff Croft’s session on being a designer/developer hybrid. During the Q&A panel, I asked him if thought that mobile was driving people to be both designers and developers since mobile puts less emphasis on design. He provided a very simple answer, which I’m paraphrasing here:
 
 
 > *“Mobile may be pushing some in directions where they need to be both designers and developers, but they’re directions that we should have been going anyway. We need to be thinking about developing for many devices.”*
@@ -65,5 +65,4 @@ Coding Mitchum was a good project for me…I’m glad I did it.
  [10]: http://html5gallery.com/
  [11]: /at-mix11/
  [12]: http://nuget.org/
- [13]: http://channel9.msdn.com/Events/MIX/MIX11/FRM09
  [14]: http://jeffcroft.com/

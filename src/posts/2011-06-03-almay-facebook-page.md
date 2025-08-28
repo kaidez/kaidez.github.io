@@ -4,8 +4,10 @@ date: 2011-06-03
 excerpt: kaidez developed Almay's Facebook What's New page following some best practices in terms of mobile web development.
 layout: layouts/post.njk
 permalink: /almay-facebook-page/
+image: default-image.jpg
 tags: ["personal"]
-# og-image: default-image.jpg
+secondary_tags: ["my work"]
+category: Personal
 ---
 
 On June 2, 2011, Almay, which is wholly owned by [my employer][1], updated the[ What’s New section of its Facebook page][2], which I coded up. I spent four days developing it under the new Facebook app rules and another two dealing with an Internet Explorer bug.
@@ -19,8 +21,8 @@ As implied, I didn’t need to do this. There were no mobile specifications from
 
 But as I said [in my last article][3], the ever-changing mobile landscape is making me reevaluate my own internal web developer thought process. Writing optimized web code for mobile devices forces developers to write cleaner code and manage page assets as neatly as possible, all of which makes sites load faster regardless of which device you’re viewing them on. So taking time to build up such a process isn’t a bad idea.
 
- [3]: http://kaidez.com/mitchum-html5-site/
+ [3]: /mitchum-html5-site/
 
-That being said, my next article will be a nice, long-winded one on this subject as I outline my methods and the tools I had at my disposal for this small Facebook project. I hope to write things up in an [*ALA*][4] type of fashion but the article’s main goal will be to share my views on **beginning to “think” like a mobile developer and creating an optimized websites for *all* devices. **
+That being said, my next article will be a nice, long-winded one on this subject as I outline my methods and the tools I had at my disposal for this small Facebook project. I hope to write things up in an [*ALA*][4] type of fashion but the article’s main goal will be to share my views on **beginning to “think” like a mobile developer and creating an optimized websites for *all* devices.**
 
  [4]: http://www.alistapart.com/

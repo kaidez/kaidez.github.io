@@ -11,7 +11,6 @@ category: Coding Tips
 ---
 My last two articles, reviewing my work for both [the Almay/Facebook project][1] and [the new Mitchum site][2], have tried to drive the same point home: **it’s good to apply mobile web development best practices when coding up a website, even if the site is only meant for desktop browsers.** This article expands on that point.
 
-
 Here are the topics for this article:
 
  [1]: http://kaidez.com/almay-facebook-page/
@@ -82,10 +81,9 @@ Therefore, the Golden Rule Site Speed is to **try to keep the page element file 
 
 With this file size limit in mind, I created image sprites for almost all the site images. I basically compiled a lot of my images into one image like this:
 
-[![Almay Image Sprite][19]][19]
+![Almay Image Sprite][19]
 
- []: /img/copyArrowConcealerSprite.png
- [19]: /img/copyArrowConcealerSprite.png
+ [19]: /assets/img/copyArrowConcealerSprite.png
 
 As you can see, this 24kb transparent PNG bundles six images used on the Almay Facebook page, most of which will be used on all three pages of the Almay/Facebook page. I basically used CSS to display certain parts of it when I needed to, while effectively blocking out the others.
 
@@ -151,11 +149,11 @@ After tweaking images, deleting code, limiting page elements and minifying files
 
 YSlow for Almay/Facebook Page
 
-[![YSlow for Almay/Facebook Page][26]][26]
+![YSlow for Almay/Facebook Page][26]
 
 Page Speed for Almay/Facebook Page
 
-[![Page Speed for Almay/Facebook Page][27]][27]
+[![Page Speed for Almay/Facebook Page][27]]
 
 
 The are two reasons for the B/85 are:
@@ -167,8 +165,6 @@ The are two reasons for the B/85 are:
 
 These are beginning tactics that mostly deal with front end code: there are many ways to speed things up on your web host as well. But if you’re just starting to “think mobile,” start with these steps, then ramp up on the server stuff.
 
-We’re talking about the front end code I created for this Facebook project, but not Facebook itself. I have some things to say about this, none of it good. [That will be the next post][28].
-
  [21]: /assets/img/console.png
  [22]: http://html5boilerplate.com/docs/#The-style
  [23]: http://html5boilerplate.com/docs/#Build-script
@@ -176,4 +172,3 @@ We’re talking about the front end code I created for this Facebook project, bu
  [25]: http://jpegclub.org/jpegtran/
  [26]: /assets/img/Yslow.png
  [27]: /assets/img/PageSpeed.png
- [28]: /2-bad-facebook-app-things/
