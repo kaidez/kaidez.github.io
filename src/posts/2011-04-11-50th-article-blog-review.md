@@ -61,14 +61,14 @@ I did say that documenting my web development learning process was this blog’s
 
     I’ve recently been involved in [Quora][11]. In that space, I answer and ask questions on a wide variety of topics, but also trying to promote myself as an overall nice guy. I try answer as many questions as I can about HTML5: if I can’t directly answer someone’s question, I try to help them find an answer online.
 
-    I’m also thinking of expanding to Tumblr. I was really influenced by [the Mashable article on fashion brands flocking to Tumblr][12], specifically the part about how Kate Spade uses various social networking sites for specific tasks, making them a more efficient company in terms of their promotional efforts. Mashable has recently implemented the same tactic, [using their Tumble site specifically for sharing the company’s behind-the-scenes activities with their readers.][13].
+    I’m also thinking of expanding to Tumblr. I was really influenced by [the Mashable article on fashion brands flocking to Tumblr][12], specifically the part about how Kate Spade uses various social networking sites for specific tasks, making them a more efficient company in terms of their promotional efforts. Mashable has recently implemented the same tactic, [sing their Tumble site specifically for sharing the company’s behind-the-scenes activities with their readers.
 
     While I’ve sort of done this with Quora, using a social network channel for the specific task of promoting myself as someone willing to help, applying this method to my overall blogging strategy will take me a little time though.
 
 So here I am at my 50th article. While I still have work to do in certain areas, I’m happy overall and will enjoy getting to article #100!!! I hope you stay with me!!!
 
  [6]: http://yoast.com/
- [8]: /about-kaidez/
+ [8]: /welcome-back/
  [9]: http://facebook.com/kaidez/
  [10]: http://twitter.com/kaidez/
  [11]: http://www.quora.com/Kai-Gittens
