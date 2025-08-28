@@ -4,17 +4,16 @@ date: 2011-05-18
 excerpt: The new Mitchum site was developed with HTML5 using HTML5 Boilerplate, Visual Studio 2010 with NuGet, CSS and some light jQuery
 layout: layouts/post.njk
 permalink: /mitchum-html5-site/
+image: default-image.jpg
 tags: ["personal"]
-# og-image: default-image.jpg
+secondary_tags: ["my work"]
+category: Personal
 ---
-
-It has been INSANELY busy at work lately, hence, no blog posts in over a month. One of the projects that has literally kept me up late is the new Mitchum deodorant website. And yes, HTML5 was used.
-
-[Mitchum][1], which is wholly owned by [my employer][2], launched a new site on Sunday, May 15, 2011. While Max over at image0], set up the back-end development on Sitecore and managed the development process with Scrummy, I wired up the front-end code. As with [a previous site I worked on for my bosses][5], I just hooked up most of the front-end code and didn’t design it.
+[Mitchum][1], which is wholly owned by former employer [Revlon][2], launched a new site on Sunday, May 15, 2011. While my coworker Max set up the back-end development on Sitecore and managed the development process with Scrummy, I wired up the front-end code, primarily with HTML5. As with [a previous site I worked on for my bosses][5], I just hooked up most of the front-end code and didn’t design it.
 
  [1]: http://www.mitchum.com/
  [2]: http://www.revlon.com/
- [5]: http://kaidez.com/almay-project-using-html5-net-jquery/
+ [5]: /almay-project-using-html5-net-jquery/
 
 Despite the tight time constraint and late nights, this was a pretty easy project. I walked away with two major positives: I used a lot of cool new front-end development tools in my work and really refined the process of “thinking” like a developer.
 
@@ -42,9 +41,9 @@ NuGet is a Visual Studio extension that allows you to add, subtract and update t
 
 NuGet hosts a few different packages of HTML5 Boilerplate package so I added the one for web forms to my Visual Studio setup. The package contained an older version of jQuery so I updated it using NuGet as well. I’m also looking to clean up and optimize the code on the near future so I’m looking at some NuGet minify packages right now.
 
-Simply put, NuGet is an incredibly awesome tool and I can’t visualize myself using Visual Studio without it. It also runs on Visual Web Developer but not WebMatrix or SharePoint Designer. It will, most likely, never run on the last two.
+Simply put, NuGet is an incredibly awesome tool and I can’t visualize myself using Visual Studio without it. It also runs on Visual Web Developer.
 
-I saw a couple of NuGet demos at MIX11, with the best one being the demo hosted by Scott Hanselman and Phil Haack. Check it out [here][13]. The Silverlight’s pretty crappy though; I suggest watching the WMV with Window Media Player.
+I saw a couple of NuGet demos at MIX11, with the best one being the demo hosted by Scott Hanselman and Phil Haack.
 
 As far as how I’ve been “thinking” like a developer, I have to jump back to MIX11:
 

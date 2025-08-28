@@ -6,7 +6,7 @@ layout: layouts/post.njk
 permalink: /parlor-redesign/
 image: parlor-redesign.jpg
 tags: ["personal"]
-secondary_tags: ["wordpress", "seo"]
+secondary_tags: ["wordpress", "seo", "my work"]
 category: Personal
 ---
 Many, many, many years ago, I created a Flash site for a close friend of mine's Montclair, NJ hair salon, Parlor Hair Studio. At the time, I was really good with Flash and was able to design and develop a site that was aligned with the times.
