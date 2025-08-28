@@ -4,7 +4,7 @@ date: 2011-05-18
 excerpt: The new Mitchum site was developed with HTML5 using HTML5 Boilerplate, Visual Studio 2010 with NuGet, CSS and some light jQuery
 layout: layouts/post.njk
 permalink: /mitchum-html5-site/
-image: default-image.jpg
+image: mitchum.jpg
 tags: ["personal"]
 secondary_tags: ["my work"]
 category: Personal
@@ -57,8 +57,6 @@ I was somewhat applying this mindset to my work before he said this but his answ
 Factor in all the reading on mobile design and media queries that I’ve been doing on my own lately, and I really believe that all designers and developers should think this way-strive to create clean, optimized code that work on as many devices as possible. It will better prepare us for the future and is how I’m living my life moving forward on all of my work.
 
 Coding Mitchum was a good project for me…I’m glad I did it.
-
-Again, check out Max’s post here to see what he did on the back-end.
 
  [6]: http://html5boilerplate.com/
  [7]: http://www.modernizr.com/
