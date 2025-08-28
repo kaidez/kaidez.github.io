@@ -236,3 +236,53 @@ https://yoast.com/deleting-pages-from-your-site/
 
 google search guidelines:
 https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf
+
+CLAUDE PROMPT EXAMPLE:
+you're an expert on making tech blogs very SEO-friendly.  I have posts that have content that's currently irrelevant...they currently have the word "ARCHIVE" in their page titles.  I'd like to give them a tag that's on display and I'd like the tag to be semantically correct.  what do you suggest?
+
+EXAMPLE RESPONSE OF THIS:
+
+Based on my analysis of your blog structure, I found 29 posts with "ARCHIVE" in their titles from 2010-2011. Here are my SEO-friendly recommendations for tagging archived content:
+
+## Semantic Archive Tag Options:
+
+**1. "legacy" tag** (Recommended)
+- SEO-friendly: indicates historical content that's still valuable
+- Professional tone: suggests established, foundational knowledge
+- Schema.org compatible: can be marked up as historical content
+
+**2. "historical" tag**
+- Clear semantic meaning for both users and search engines
+- Indicates content of historical interest/context
+- Good for tech evolution topics
+
+**3. "foundational" tag**
+- Positions old content as building blocks for current knowledge
+- SEO-positive: suggests fundamental, important information
+- Appeals to beginners learning the basics
+
+## Implementation Strategy:
+
+**Current Structure Analysis:**
+- Your posts use both `tags` (primary) and `secondary_tags` arrays
+- The post layout displays secondary_tags prominently
+- You have a working tag system with dedicated tag pages
+
+**Recommendation:**
+Add `"legacy"` to the `secondary_tags` array in your archived posts' front matter. This will:
+
+1. **Display visibly** on each post as a clickable tag
+2. **Create SEO value** - search engines understand "legacy" as valuable historical content
+3. **Improve user experience** - visitors know they're reading foundational content
+4. **Maintain content discoverability** - creates a browsable archive collection
+5. **Preserve SEO equity** - doesn't devalue content, just contextualizes it
+
+**Example front matter update:**
+```yaml
+---
+title: 10 WordPress Tips For Web Designers
+secondary_tags: ["wordpress", "web design", "legacy"]
+---
+```
+
+The "legacy" tag is semantically correct, SEO-friendly, and positions your archived content as valuable foundational knowledge rather than outdated information.
