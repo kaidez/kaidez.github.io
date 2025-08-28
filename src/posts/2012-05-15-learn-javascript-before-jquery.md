@@ -150,3 +150,19 @@ Think I left some reasons or resources out? Feel free to comment. AND NO SPAM!! 
  [34]: https://web.archive.org/web/20171229234102/http://jqfundamentals.com/
  [35]: http://rmurphey.com/
  [36]: http://www.youtube.com/watch?v=i_qE1iAmjFg
+
+ <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "5 Reasons Why You Need To Learn To Use JavaScript Before jQuery",
+    "description": "A list of good reasons why it's better to learn JavaScript before jQuery. A short learning resource list at the end to help you get started.",
+    "author": {
+        "@type": "Person",
+        "name": "Kai Gittens",
+        "url": "http://kaidez.com/"
+    },
+    "datePublished": "2012-05-15",
+    "dateModified": "2025-08-27"
+}
+</script>
