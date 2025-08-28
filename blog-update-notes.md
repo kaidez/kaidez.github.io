@@ -228,3 +228,11 @@ You're spot on - **JSON-LD is superior to microdata** for SEO. Since your site a
 - **Tutorial categorization**: Better understanding of content type
 
 Since your site already has JSON-LD infrastructure, adding this schema should integrate seamlessly with your existing implementation!
+
+
+DELETING PAGES
+
+https://yoast.com/deleting-pages-from-your-site/
+
+google search guildlines:
+https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf

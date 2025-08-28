@@ -15,7 +15,8 @@ About a year ago from this post, Steve Jobs called Flash a "memory hog" and stat
 
 Steve said this at a time when it looked like the iPhone would rule the smartphone market for awhile and the iPad would be the cool new gadget everyone wanted.  It's a year later and the iPhone is losing market share to Google's Android while the iPad is "cool," but not as "cool" as Apple thought it would be.
 
-<img src="/assets/img/flashLogo.jpg" class="post-pic" />
+<img src="/assets/img/flashLogo.jpg" class="flash-pic" />
+
 This isn't all because of Apple's lack of Flash support for its products, but it's partially due to it.  They may know this and the fact [the Flash-ready Sky Fire web browser][1] the Flash-ready Sky Fire web browser can be installed on the iPhone and iPod Touch could be a sign that they're rethinking their position.
 
 [1]: http://www.skyfire.com/en/for-consumers
@@ -32,6 +33,7 @@ Flash is the brainchild of software developer [Jonathan Gay][3].  He started out
 [3]: https://en.wikipedia.org/wiki/Jonathan_Gay
 
 FutureSplash gained enough high-profile customers, like Disney, to gain the attention of a California-based graphics software company called Macromedia, who already had a web animation program called ShockWave.  But they felt that FutureSplash had promise so they brought the application's parent company in 1996 and renamed the application Flash.
+
 ## The Big Moment
 Flash versions 1 through 3 required that web designers create almost all their animations by hand with a mouse.  You could use light scripting commands to start and stop animations, but not much else.
 
@@ -60,8 +62,23 @@ The FLV was flexible: it was a video file that displayed in any type of web brow
 
 I'm of the opinion that at this point, Adobe had seen enough.  Macromedia had always been their main competitor in the graphics software field, but the overlap was small.  Macromedia's most successful products were the ones geared towards web programmers, like web design program Dreamweaver and the ColdFusion database platform, while their graphic design products were just okay.  It was the reverse with Adobe: their PhotoShop, Illustrator and InDesign products were standards in the design world but their one web design tool, GoLive, was a bust.
 
-With Flash, Macromedia was showed that they could create products that appealed to both web designers *and<* programmers. Factor in the creation of the FLV (which made Macromedia tons of money in licensing fees) and Adobe had more than enough inspiration to buy Macromedia, which they did in December 2005 for roughly $3.4 billion. It paid off in the end as YouTube was up and running at the time and were using the FLV format for video. Other online video sites like Hulu and Google Video, followed suit, resulting in more FLV licensing fees.
+With Flash, Macromedia was showed that they could create products that appealed to both web designers *and* programmers. Factor in the creation of the FLV (which made Macromedia tons of money in licensing fees) and Adobe had more than enough inspiration to buy Macromedia, which they did in December 2005 for roughly $3.4 billion. It paid off in the end as YouTube was up and running at the time and were using the FLV format for video. Other online video sites like Hulu and Google Video, followed suit, resulting in more FLV licensing fees.
 
 Which brings us to today. Thousands are still using FLVs despite Steve Jobs' statements, but YouTube's slowly utilizing HTML5 video.  There are less Flash sites out there, but not that much less.  And Flash is still a great online game development platform.
 
-HTML5's video format (OOG) is free from license, as are the tools to create them.  So it may beat Adobe in the online video arena (one reason why I'm getting into HTML5).  But history has proven that Flash can weather the punches and change to meet the needs of the times.  I think it will be fine.
+HTML5's video format (OOG) is free from license, as are the tools to create them.  So it may beat Adobe in the online video arena (one reason why I'm getting into HTML5).  But history has proven that Flash can weather the punches and change to meet the needs of the times.  I think it will be fine. <em>(Author's note - August, 2025: well, THIS last comment didn't age well, did it?)</em>
+
+ <style>
+.flash-pic {
+  float: left; 
+  padding: 0 12px 0 0;
+}
+
+@media (max-width: 768px) {
+  .flash-pic {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+}
+</style>

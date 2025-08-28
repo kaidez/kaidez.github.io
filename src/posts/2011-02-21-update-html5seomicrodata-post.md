@@ -4,13 +4,14 @@ date: 2011-02-21
 excerpt: Oli Studholme from HTML5 Doctor corrects my previous post on HTML5, SEO and microdata
 layout: layouts/post.njk
 permalink: /update-html5seomicrodata-post/
+image: default-image.jpg
 tags: [coding-best-practices]
-# og-image: default-image.jpg
+secondary_tags: ["html 5"]
+category: Coding Tips
 ---
-
 I published a well-read article entitled “[“HTML5, SEO and Microdata”][1]” on January 28, 2011. [Oli Studholme][2] from [HTML5 Doctor][3] helped me understand and adjust the code.
 
- [1]: http://kaidez.com/html5-seo-microdata/
+ [1]: /html5-seo-microdata/
  [2]: http://twitter.com/boblet
  [3]: http://html5doctor.com/
 
