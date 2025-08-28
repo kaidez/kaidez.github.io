@@ -234,5 +234,5 @@ DELETING PAGES
 
 https://yoast.com/deleting-pages-from-your-site/
 
-google search guildlines:
+google search guidelines:
 https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf
