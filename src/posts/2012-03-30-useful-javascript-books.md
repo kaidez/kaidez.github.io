@@ -9,7 +9,6 @@ tags: [reviews]
 secondary_tags: ["javascript", "books"]
 category: Reviews
 ---
-
 *Disclaimer: because of my affiliate relationships, you will make me money if you click on any of the book links below, then buy a book.*
 
 The good news is, there are a lot of JavaScript learning resources online. The bad news is, there are a lot of JavaScript learning resources online. Filtering the bad ones out from the good ones is hard.
