@@ -6,7 +6,7 @@ layout: layouts/post.njk
 permalink: /html5-games-development-book/
 image: default-image.jpg
 tags: ["reviews"]
-secondary_tags: ["html 5"]
+secondary_tags: ["html5"]
 category: Reviews
 ---
 

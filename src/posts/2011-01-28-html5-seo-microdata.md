@@ -6,7 +6,7 @@ layout: layouts/post.njk
 permalink: /html5-seo-microdata/
 image: default-image.jpg
 tags: [coding-best-practices]
-secondary_tags: ["html 5"]
+secondary_tags: ["html5"]
 category: Coding Tips
 ---
 *MUCH thanks to at Oli Studholme at HTML5 Doctor for helping me understand this!!!!*

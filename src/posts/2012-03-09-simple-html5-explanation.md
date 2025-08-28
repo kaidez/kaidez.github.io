@@ -6,7 +6,7 @@ excerpt: A lengthy but simple explanation of what HTML5 is with suggestions on h
 permalink: /simple-html5-explanation/
 image: default-image.jpg
 tags: [coding-best-practices]
-secondary_tags: ["html 5"]
+secondary_tags: ["html5"]
 category: Coding Tips
 ---
 <p style="margin: 30px 0 40px; border-bottom: black 1px solid;">

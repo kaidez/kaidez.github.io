@@ -1,16 +1,14 @@
 ---
 title: 'HTML5 Gallery: NEW COOLSITE! - ARCHIVE'
-
-
+date: 2010-12-06
+excerpt: HTML5 Gallery, mostly maintained by the HTML5 expert over at HTML5 Doctor, is added to kaidez.com's Coolsite list
 layout: layouts/post.njk
 permalink: /html5-gallery-coolsite/
-excerpt: HTML5 Gallery, mostly maintained by the HTML5 expert over at HTML5 Doctor, is added to kaidez.com's Coolsite list
-
-
-tags: [html5]
-# og-image: default-image.jpg
+image: default-image.jpg
+tags: [coding-best-practices]
+secondary_tags: ["html5", "legacy"]
+category: Coding Tips
 ---
-
 *Note: This site no longer includes a sidebar.*
 A nice gallery of HTML5 sites that are neatly reviewed and critiqued. The reviews/critiques discuss whether or not the site’s HTML5 is good and valid. Users can add comments.
 

@@ -6,7 +6,7 @@ layout: layouts/post.njk
 image: default-image.jpg
 permalink: /new-york-times-article-html5-html5-site/
 tags: [coding-best-practices]
-secondary_tags: ["html 5"]
+secondary_tags: ["html5"]
 category: Coding Tips
 ---
 <p style="margin: 30px 0 40px; border-bottom: black 1px solid;"><em>(Author's note - August 2025: This post is old but is really good for historical perspective. It was a big deal when the NY Times went the HTML5 route: give it a read. -k)</em></p>

@@ -1,9 +1,11 @@
 ---
-title: 'TUTORIAL: Create The Building Blocks For An HTML5 Page - ARCHIVE'
+title: 'TUTORIAL: Create The Building Blocks For An HTML5 Page'
 layout: layouts/post.njk
 permalink: /create-html5-page/
 excerpt: Understanding the HTML5 DTD and Character Set Needed For Your First HTML5 Page.
-tags: [html5]
+tags: [tutorials]
+secondary_tags: ["html5"]
+category: tutorials
 # og-image: default-image.jpg
 ---
 This is a very simple tutorial. It won’t teach you how to use ,  or any other HTML5-specific tags. All it does is describe what building blocks are needed BEFORE you insert those tags. And it all comes down to two lines of code.

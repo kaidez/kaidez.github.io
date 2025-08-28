@@ -6,7 +6,7 @@ permalink: /html5-project-series-3-about-contact-wireframes/
 image: default-image.jpg
 excerpt: Final article in the HTML5 wireframe series for the kaidez portfolio site
 tags: ["personal"]
-secondary_tags: ["my work", "html 5"]
+secondary_tags: ["my work", "html5"]
 category: Personal
 ---
 <em>(Author's note - August 2025: The HTML5 Project was a personal project I started when the HTML5 markup language was still new. The goal was to rebuild my blog in pure HTML5 while documenting what I learned about it as things progressed. Web development work for both my day job and other personal projects taught me more enough HTML5, so I abandoned this project. But I'm proud of both the research and wire-framing I did on this so I'm keeping most of my HTML Project posts up for historical perspective. -k)</em>

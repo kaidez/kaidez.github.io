@@ -6,7 +6,7 @@ layout: layouts/post.njk
 permalink: /html5-article-roundup/
 image: default-image.jpg
 tags: [reviews]
-secondary_tags: ["html 5"]
+secondary_tags: ["html5"]
 category: Reviews
 ---
 I wanted to deliver as much original content as possible when I started blogging again and didn’t want to do article roundups. I certainly didn’t want to do an HTML5-based round up as those articles and blog posts are a dime a dozen right now.

@@ -6,7 +6,7 @@ excerpt: kaidez's view of Flash's evolution, rise and (somewhat) fall.
 permalink: /history-of-flash/
 image: default-image.jpg
 tags: ["personal"]
-secondary_tags: ["html 5", "flash", "rant"]
+secondary_tags: ["html5", "flash", "rant"]
 category: Personal
 ---
 One reason why I'm curious about HTML5 is because of Apple's issues with the Adobe Flash web animation program.

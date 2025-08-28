@@ -6,7 +6,7 @@ excerpt: My HTML5 Project will use HTML5, CSS3, jQuery, Modernizr, maybe CSS PIE
 permalink: /html5-project-update-january-21-2011/
 image: default-image.jpg
 tags: ["personal"]
-secondary_tags: ["my work", "html 5"]
+secondary_tags: ["my work", "html5"]
 category: Personal
 ---
 My [HTML5 Project][1] is a centerpiece of this blog. I’ve been slacking on it but I’ve now made some decisions:

@@ -6,7 +6,7 @@ layout: layouts/post.njk
 permalink: /load-data-attributes-mouseclicks/
 image: data-attribute.jpg
 tags: ["tutorials"]
-secondary_tags: ["javascript", "html 5"]
+secondary_tags: ["javascript", "html5"]
 category: Tutorials
 ---
 A recent project at work *almost* required my creating functionality that loaded content stored in HTML5 data attributes onto a web page with mouse clicks. At that point, I had used data attributes in practice code a bit, but readily admitted to not knowing everything about them.

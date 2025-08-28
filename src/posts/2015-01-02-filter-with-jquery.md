@@ -6,7 +6,7 @@ layout: layouts/post.njk
 permalink: /filter-content-jquery/
 image: jquery-filter.jpg
 tags: ["tutorials"]
-secondary_tags: ["javascript", "jquery", "html 5"]
+secondary_tags: ["javascript", "jquery", "html5"]
 category: Tutorials
 ---
 <a href="http://codepen.io/kaidez/pen/azmRXm" class="demoLink" target="blank">VIEW THE DEMO</a>

@@ -6,7 +6,7 @@ layout: layouts/post.njk
 permalink: /update-html5seomicrodata-post/
 image: default-image.jpg
 tags: [coding-best-practices]
-secondary_tags: ["html 5"]
+secondary_tags: ["html5"]
 category: Coding Tips
 ---
 I published a well-read article entitled “[“HTML5, SEO and Microdata”][1]” on January 28, 2011. [Oli Studholme][2] from [HTML5 Doctor][3] helped me understand and adjust the code.
