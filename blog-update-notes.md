@@ -329,3 +329,5 @@ secondary_tags: ["wordpress", "web design", "legacy"]
 - **"foundational"**: Suggests fundamental importance
 
 The key is choosing terminology that accurately describes the content without suggesting it's obsolete or low-quality. "Legacy" remains my top recommendation for semantic accuracy and professional presentation, even without specific search engine documentation.
+
+Find that save Anthropic post from Morten R.H.
