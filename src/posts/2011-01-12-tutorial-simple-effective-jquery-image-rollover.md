@@ -1,19 +1,19 @@
 ---
-title: 'TUTORIAL: A Simple, Effective jQuery Image Rollover - ARCHIVE'
+title: 'TUTORIAL: A Simple, Effective jQuery Image Rollover'
 date: 2010-01-12
 excerpt: A very popular, cross-browser complaint jQuery image rollover
 layout: layouts/post.njk
 permalink: /tutorial-simple-effective-jquery-image-rollover/
 image: default-image.jpg
 tags: ["tutorials"]
-secondary_tags: ["javascript", "jquery"]
+secondary_tags: ["javascript", "jquery", "legacy"]
 category: Tutorials
 ---
 I used the following code to create the image rollovers for [the recent Almay project I worked on][1].
 
  [1]: /almay-project-using-html5-net-jquery/
 
-Truthfully, I wasn't going to post this: I found it on another site and felt that re-posting it here would be claiming it as my own creation. But I found quite a few other sites using the exact same script, so I'm not the only one re-posting it. Plus, this rollover code works…well I might add. It doesn't use CSS, making it much more cross-browser compliant; it's not as buggy as some other JavaScript rollover code I've encountered, and it gets the job done with very little code.
+Truthfully, I wasn't going to post this: I found it on another site and felt that re-posting it here would be claiming it as my own creation. But I found quite a few other sites using the exact same script, so I'm not the only one re-posting it. Plus, this rollover code works…well, I might add. It doesn't use CSS, making it much more cross-browser compliant; it's not as buggy as some other JavaScript rollover code I've encountered, and it gets the job done with very little code.
 
 I'm viewing all those other re-posts as an endorsement of how almost-perfect this code is. Here's my endorsement:
 

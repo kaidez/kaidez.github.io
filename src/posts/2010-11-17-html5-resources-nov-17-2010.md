@@ -1,11 +1,13 @@
 ---
-title: 2 HTML5 Resources I Like - ARCHIVE
+title: 2 HTML5 Resources I Like
 date: 2010-11-17
 excerpt: Great HTML5 learning resources
 layout: layouts/post.njk
 permalink: /html5-resources-nov-17-2010/
+image: default-image.jpg
 tags: [coding-best-practices]
-# og-image: default-image.jpg
+secondary_tags: ["html5", "legacy"]
+category: Coding Tips
 ---
 ## Video For Everybody!
 

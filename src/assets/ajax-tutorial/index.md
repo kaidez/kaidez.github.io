@@ -6,7 +6,6 @@ excerpt: "Learn how to write AJAX using both pure JavaScript as well as jQuery. 
 tags: [javascript, ajax, jquery]
 image: ajax-image.jpg
 ---
-
 <p style="margin: 30px 0 40px; border-bottom: black 1px solid;">
 <em>(Author's note - August 2025: This article is REALLY, REALLY old!!! Currently, the combined use of JavaScript's native <code>fetch</code>, <code>async/await</code> and <code>Promise</code> functionalities is the modern alternative to all this. And in the case of Promises, they weren't native at the time this article was published, but they're fully native now. So <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">MDN's "Using the Fetch API"</a> article covers the aforementioned modern alternative really well, but you may want to go through this article to get some historical perspective.  -k)</em>
 </p>

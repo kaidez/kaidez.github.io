@@ -1,14 +1,13 @@
 ---
-title: 'REVIEW: lynda.com - ARCHIVE'
-
-
+title: 'REVIEW: lynda.com'
+date: 2010-11-12
+excerpt: A mostly positive review of lynda.com and its courses, front-end development and PhotoShop are discussed.
 layout: layouts/post.njk
 permalink: /lynda-dot-com-review/
-excerpt: A mostly positive review of lynda.com and its courses, front-end development and PhotoShop are discussed.
-
-
-tags: ["reviews"]
-# og-image: default-image.jpg
+image: default-image.jpg
+tags: [coding-best-practices]
+secondary_tags: ["learning", "legacy"]
+category: Reviews
 ---
 A few months ago at work, I and the other web designer got [lynda.com][1] accounts. After test-driving it for a few months, I have to say that my employer’s money was well spent! lynda.com is a **great** web design learning resource!
 

@@ -6,7 +6,7 @@ layout: layouts/post.njk
 permalink: /tutorial-simple-jquery-fade-in-fade-out/
 image: default-image.jpg
 tags: ["tutorials"]
-secondary_tags: ["javascript", "jquery"]
+secondary_tags: ["javascript", "jquery", "legacy"]
 category: Tutorials
 redirect_from:
   - /tutorial-simple-jquery/

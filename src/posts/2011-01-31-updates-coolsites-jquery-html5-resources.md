@@ -1,13 +1,13 @@
 ---
-title: Updates To Coolsites and HTML5/jQuery Resources - ARCHIVE
-
-
+title: Updates To Coolsites and HTML5/jQuery Resources
+date: 2011-01-31
+excerpt: Additions to my list of resources to help you learn web design and development and my Coolsites list, including a Sitecore and .NET development blog
 layout: layouts/post.njk
 permalink: /updates-coolsites-jquery-html5-resources/
-excerpt: Additions to my list of resources to help you learn web design and development and my Coolsites list, including a Sitecore and .NET development blog
+image: default-image.jpg
 tags: ["personal"]
-
-# og-image: default-image.jpg
+secondary_tags: ["html5","jquery", "legacy"]
+category: Personal
 ---
 *Note: This site no longer includes a 'Coolsites' section.*
 

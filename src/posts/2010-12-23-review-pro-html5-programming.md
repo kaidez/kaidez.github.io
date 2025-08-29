@@ -1,11 +1,13 @@
 ---
-title: 'REVIEW: Pro HTML5 Programming - ARCHIVE'
+title: 'REVIEW: Pro HTML5 Programming'
 date: 2010-12-23
 excerpt: A review of the Pro HTML5 Programming by Apress
 layout: layouts/post.njk
 permalink: /review-pro-html5-programming/
+image: default-image.jpg
 tags: ["reviews"]
-# og-image: default-image.jpg
+secondary_tags: ["html5", "legacy"]
+category: Reviews
 ---
 There are quite a few HTML5 books on the market right now. Some are better than others.
 

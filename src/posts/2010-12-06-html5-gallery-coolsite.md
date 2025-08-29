@@ -1,5 +1,5 @@
 ---
-title: 'HTML5 Gallery: NEW COOLSITE! - ARCHIVE'
+title: 'HTML5 Gallery: NEW COOLSITE!'
 date: 2010-12-06
 excerpt: HTML5 Gallery, mostly maintained by the HTML5 expert over at HTML5 Doctor, is added to kaidez.com's Coolsite list
 layout: layouts/post.njk

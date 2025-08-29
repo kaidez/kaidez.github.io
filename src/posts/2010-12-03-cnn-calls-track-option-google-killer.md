@@ -1,14 +1,16 @@
 ---
-title: 'CNN calls the do not track option a "Google killer" - ARCHIVE'
-
-
+title: 'CNN calls the do not track option a "Google killer"'
+date: 2010-12-03
+excerpt: Quick recap of CNN's article on the FTC's proposal of adding a do not track feature that consumers can use for internet browsing, short opinion included
 layout: layouts/post.njk
 permalink: /cnn-calls-track-option-google-killer/
-excerpt: Quick recap of CNN's article on the FTC's proposal of adding a do not track feature that consumers can use for internet browsing, short opinion included
+image: default-image.jpg
 tags: ["personal"]
-
-# og-image: default-image.jpg
+secondary_tags: ["internet privacy", "legacy"]
+category: Personal
 ---
+(<em>(Author's note - August 2025: This article is quite old.  It's been removed from <a href="https://www.cnn.com/">CNN.com</a> and the link to it below has been replaced by its <a href="https://web.archive.org/">Wayback Machine</a> equivalent.  But from a historical perspective, it's really interesting to see how the government's handling of internet privacy has progressed. For better or for worse . -k)</em>)
+
 CNN wrote a pretty decent article yesterday on the FTC’s proposed “do not track” option. The government agency is calling for the creation of a web browser plug-in that allows endusers to block their information from being collected by third parties.
 
 The positive of this is increased enduser privacy, which is a growing concern. The negative is the cascading effect it could have on business, especially for companies like Google that track user information in order to properly target ads to consumers.
@@ -23,4 +25,20 @@ My opinion comes from knowing how this stuff works so let me just say this: if y
 
 The CNN story is [here][1]…and feel free to agree or disagree with my opinion.
 
- [1]: http://money.cnn.com/2010/12/02/technology/ftc_do_not_track/index.htm?source=cnn_bin&hpt=Sbin
+ [1]: https://web.archive.org/web/20101223205418/http://money.cnn.com/2010/12/02/technology/ftc_do_not_track/index.htm?source=cnn_bin&hpt=Sbin
+
+ <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "NN calls the do not track option a "Google killer"",
+    "description": "Quick recap of CNN's article on the FTC's proposal of adding a do not track feature that consumers can use for internet browsing, short opinion ",
+    "author": {
+        "@type": "Person",
+        "name": "Kai Gittens",
+		"url" : "http://kaidez.com/"
+    },
+    "datePublished": "200-12-03",
+    "dateModified": "2025-08-27"
+}
+</script>

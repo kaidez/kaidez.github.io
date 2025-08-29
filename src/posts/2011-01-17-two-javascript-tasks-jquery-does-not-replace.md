@@ -1,15 +1,19 @@
 ---
-title: Two JavaScript Tasks That jQuery Does Not Replace - ARCHIVE
+title: Two JavaScript Tasks That jQuery Does Not Replace
 date: 2011-02-17
 excerpt: Short article about how jQuery does not have a replacement for JavaScript's document.write and has a not-so-great replacement for its navigator.UserAgent
+image: default-image.jpg
 layout: layouts/post.njk
 permalink: /two-javascript-tasks-jquery-does-not-replace/
 tags: [coding-best-practices]
-# og-image: default-image.jpg
+secondary_tags: ["my work", "html5", "legacy"]
+category: Coding Tips
 ---
+<em>(Author's note - August 2025: This article is incredibly out of date. jQuery solved both of these issues.  Please read for historical perspective and nothing more. -k)</em>
+
 While developing HTML5 video for [my recent Almay project][1], I discovered two widely-used JavaScript techniques that, as of now, have no firm jQuery replacement. This should serve as a reminder that, while many believe that jQuery replaces every single solitary JavaScript task, this is simply not true.
 
- [1]: http://kaidez.com/almay-project-using-html5-net-jquery/
+ [1]: /almay-project-using-html5-net-jquery/
 
 These are the two tasks that I’ve found *so far*...I expect find more as time goes by:
 
@@ -46,9 +50,26 @@ So to recap: jQuery offers a coding alternative to a piece of JavaScript code th
 
 It’s important to note that even *if* you use the .browser property in your code, it can only detect Internet Explorer, Firefox, Opera and the various Webkit browsers. In other words, it can’t detect Androids or older Blackberries and it may or may not detect iPhones, newer Blackberries and the various tablets like the iPad and the new Blackberry Playbook.
 
-As an alternative to .browser, jQuery offers the .support property which detects browser-specific properties. The jQuery documentation goes in great detail on [how to use .support][4] as well as [why you shouldn’t use <em>.browser</em>][5]. I suggest that you read up on both of them before you attempt you use the code.
+As an alternative to .browser, jQuery offers the .support property which detects browser-specific properties. The jQuery documentation goes in great detail on [how to use `.support`][4] ~~as well as [why you shouldn’t use `.browser`][5]~~ but jQuery no longer uses [`.browser`][5].
 
  [4]: http://api.jquery.com/jQuery.support/
  [5]: http://api.jquery.com/jQuery.browser/
 
 Next up: my take on HTML5 video!
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Two JavaScript Tasks That jQuery Does Not Replace",
+    "description": "Short article about how jQuery does not have a replacement for JavaScript's document.write and has a not-so-great replacement for its navigator.UserAgent",
+    "author": {
+        "@type": "Person",
+        "name": "Kai Gittens",
+		    "url" : "http://kaidez.com/"
+    },
+    "datePublished": "2012-01-10",
+    "dateModified": "2025-08-28",
+    "programmingLanguage": "JavaScript"
+}
+</script>

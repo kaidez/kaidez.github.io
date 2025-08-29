@@ -1,17 +1,17 @@
 ---
-title: 'TUTORIAL: How AJAX, jQuery and HTML5 Work Together - ARCHIVE'
-
-
+title: 'TUTORIAL: How AJAX, jQuery and HTML5 Work Together'
+date:   2011-01-05
 excerpt: AJAX, jQuery and HTML5 are big buzz words in the web design/development community nowadays.  While getting these web technologies to work together is exciting, the programming required to do this isn't new.
 layout: layouts/post.njk
-date:   2011-01-05
 permalink: /ajax-jquery-html5-work-together/
+image: default-image.jpg
 tags: ["tutorials"]
-# cat-name: "Tutorial"
-# tags: [ajax, jquery, html5]
-# # og-image: default-image.jpg
+secondary_tags: ["html5", "javascript", "jquery", "legacy"]
+category: Tutorials
 ---
-__(Update: February 18, 2015: This article is outdated and somewhat indicates that AJAX, jQuery and HTML5 need to work together at all times, which isn't true. You may want to read my more [thorough tutorial on AJAX and jQuery](/ajax-tutorial/). Also, if you want to understand what HTML5 is, check out my previous post, ["A Simple Explanation of HTML5"](/simple-html5-explanation/).)__
+<p style="margin: 30px 0 40px; border-bottom: black 1px solid;">
+<em>(Author's note - August 2025: This article is REALLY, REALLY old!!! Currently, the combined use of JavaScript's native <code>fetch</code>, <code>async/await</code> and <code>Promise</code> functionalities is the modern alternative to all this. And in the case of Promises, they weren't native at the time this article was published, but they're fully native now. So <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">MDN's "Using the Fetch API"</a> article covers the aforementioned modern alternative really well, but you may want to go through this article to get some historical perspective on how things once were.  -k)</em>
+</p>
 
 AJAX, jQuery and HTML5 are big buzz words in the web design/development community nowadays. While getting these web technologies to work together is exciting, the programming required to do this isn't new.
 
@@ -191,10 +191,10 @@ This was easy so let's do something more advanced and add AJAX to our discussion
 
 AJAX is an acronym for Asynchronous JavaScript And XML. It is not a programming language but a programming concept. More specifically, AJAX is a set of unofficial rules for getting the following web technologies to work together on a website:
 
-*JavaScript
-*XML
-*HTML
-*The DOM
+ * JavaScript
+ * XML
+ * HTML
+ * The DOM
 
 AJAX can do a lot but its main purpose in life is to load and unload page content without actually reloading the page. A good example of this is the AJAX Example at W3 Schools. Click the "Change Content" button while looking at any banners on the page. Notice that the example content refreshed while the banners (i.e. the page) did not. Now refresh your browser page while looking at the banners: notice that they, along with the content, refreshed this time.
 
@@ -399,13 +399,12 @@ Some of these links may overlap a bit: a jQuery resource that I listed may belon
 
 Because using AJAX, jQuery and HTML5 together is a hot topic, my goal is to update this list every time I come across a new resource.
 
-*updated July 26th, 2013*
 ### DOM
 * [JavaScript InnerHTML Tutorial at Tizag.com](http://www.tizag.com/javascriptT/javascript-innerHTML.php)
-* [BOOK: Beginning JavaScript With DOM Scripting And Ajax](http://beginningjavascript.com/)
+* [BOOK: Beginning JavaScript With DOM Scripting And Ajax](https://www.amazon.com/exec/obidos/ASIN/1590596803/onlinetoolsorg/103-1380453-3336648)
 
 ### AJAX
-* [Jesse James Garret article that first used the term 'AJAX.'](http://www.adaptivepath.com/ideas/ajax-new-approach-web-applications)
+* [Jesse James Garret article that first used the term 'AJAX.'](https://designftw.mit.edu/lectures/apis/ajax_adaptive_path.pdf)
 * [Wikipedia article on XMLHttpRequest](http://en.wikipedia.org/wiki/XMLHttpRequest)
 
 ### jQuery
@@ -413,10 +412,26 @@ Because using AJAX, jQuery and HTML5 together is a hot topic, my goal is to upda
 * [jQuery Documentation Page](http://api.jquery.com/)
 * [jQuery Ajax Category Page](http://api.jquery.com/category/ajax/)
 * [jQuery UI](http://jqueryui.com/)
-* [jQuery Essential Training course at Lynda.com](http://www.lynda.com/jQuery-tutorials/essential-training/48370-2.html?srchtrk=index%3A7%0Alinktypeid%3A2%0Aq%3Ajquery%0Apage%3A1%0As%3Arelevance%0Asa%3Atrue%0Aproducttypeid%3A4&utm_medium=affiliate&utm_source=ldc_affiliate&utm_content=524&utm_campaign=CD2146&bid=524&aid=CD2146&opt=)
 
 ### HTML5
-* [Dive Into HTML5](http://diveintohtml5.info/)
-* [Dive Into HTML5 Peeks, Pokes and Pointers Page](http://diveintohtml5.info/peeks-pokes-and-pointers.html)
+* [Dive Into HTML5](https://mislav.github.io/diveintohtml5/)
+* [Dive Into HTML5 Peeks, Pokes and Pointers Page](https://mislav.github.io/diveintohtml5/peeks-pokes-and-pointers.html)
 * [HTML5 Doctor](http://html5doctor.com)
 * [BOOK: Pro HTML5 Programming](http://www.amazon.com/Pro-HTML5-Programming-Peter-Lubbers/dp/143023864X/ref=sr_1_1?ie=UTF8&qid=1375059764&sr=8-1&keywords=pro+html5+programming)
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "HTML5 Project: WIREFRAME SERIES #1 – HOME PAGE",
+    "description": "Wireframes for the portfolio site of Kai Gittens, who has worked at Blue Cross/Blue Shield, JPMorgan Chase, jetBlue, MedPage Today & Revlon",
+    "author": {
+        "@type": "Person",
+        "name": "Kai Gittens",
+		"url" : "http://kaidez.com/"
+    },
+    "datePublished": "2011-12-01",
+    "dateModified": "2025-08-2",
+    "programmingLanguage": ["HTML", "JavaScript", "jQuery"]
+}
+</script>
