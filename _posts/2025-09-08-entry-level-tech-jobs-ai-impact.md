@@ -58,4 +58,6 @@ A quick side-note: I mentioned that I'm redoing my blog and this includes review
 
 A lot of things I <i>thought</i> would happen didn't. I wouldn't be surprised if this post fits this category.
 
-On one hand: AI could evolve to create more jobs than it eliminates.
+The truth is, no one else can predict the long term effects that AI will have on tech labor. AI could evolve to create more tech jobs than it eliminates...many in the tech field are optimistic about this.
+
+It's also true that when it comes to steady employment, we all live in a knowledge-based economy.  We will always need to know something this year that we didn't know last year in order to remain employable.
