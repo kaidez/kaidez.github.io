@@ -19,4 +19,10 @@ According to the report's findings, software development was listed as one of th
 <a href="https://digitaleconomy.stanford.edu/wp-content/uploads/2025/08/Canaries_BrynjolfssonChandarChen.pdf" target="_blank" rel="noopener" aria-label="Stanford study on AI employment effects - PDF document">Stanford's 2025 AI Employment Study: "Canaries in the Coal Mine" (PDF)</a>
 found that AI tools could effectively perform tasks usually done by entry level workers.  At the same time, there was a "a 6% decline in employment from late 2022 to July 2025 in the most AI-exposed occupations."  
 
-However, there was "a 6-9% increase [in employment] for older workers" in these same occupations.  The report sees this as a suggestion that "declining employment AI-exposed jobs is driving tepid overall employment growth for 22- to 25- year-olds as employment for older workers continues to grow."
+However, there was "a 6-9% increase [in employment] for older workers" in these same occupations.  From this, concludes that "declining employment AI-exposed jobs is driving tepid overall employment growth for 22- to 25- year-olds as employment for older workers continues to grow."
+
+## What Entry-Level Workers Can Do
+
+Job opportunities in tech fluctuate; sometimes there are tons of open positions and sometimes there are very few.  At the time of this blog post, there are fewer opportunities due to a whole lot of industry-wide layoffs.
+
+So 
