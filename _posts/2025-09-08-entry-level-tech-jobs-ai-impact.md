@@ -16,13 +16,13 @@ According to the report's findings, software development was listed as one of th
 
 <h2>Younger, Entry-Level Workers vs. Older, Experienced Workers</h2>
 
-<a href="https://digitaleconomy.stanford.edu/wp-content/uploads/2025/08/Canaries_BrynjolfssonChandarChen.pdf" target="_blank" rel="noopener" aria-label="Stanford study on AI employment effects - PDF document">Stanford's 2025 AI Employment Study: "Canaries in the Coal Mine" (PDF)</a> found that AI tools could effectively perform tasks usually done by entry-level workers.  At the same time, there was <strong>"a 6% decline in employment from late 2022 to July 2025 in the most AI-exposed occupations."</strong>
+<a href="https://digitaleconomy.stanford.edu/wp-content/uploads/2025/08/Canaries_BrynjolfssonChandarChen.pdf" target="_blank" rel="noopener" aria-label="Stanford study on AI employment effects - PDF document">Stanford's 2025 AI Employment Study: "Canaries in the Coal Mine" (PDF)</a> found that AI could effectively perform tasks usually done by entry-level workers.  At the same time, there was <strong>"a 6% decline in employment from late 2022 to July 2025 in the most AI-exposed occupations"</strong> among that age group.
 
 However, there was <strong>"a 6-9% increase [in employment] for older workers"</strong> in these same occupations.  From this, the report concludes that <strong>"declining employment [in] AI-exposed jobs is driving tepid overall employment growth for 22- to 25- year-olds as employment for older workers continues to grow."</strong>
 
 <h2>The Obvious Things That Entry-Level Workers Can Do</h2>
 
-Job opportunities in tech fluctuate; sometimes there are tons of open positions and sometimes there are very few.  At the time of this blog post, there are fewer opportunities due to a whole lot of industry-wide layoffs.
+Job opportunities in tech fluctuate; sometimes there are tons of open positions and sometimes there are very few.  At the time of this blog post, there are fewer opportunities due to industry-wide layoffs.
 
 As a result, <strong>young workers looking for their first tech job should try and gain <em>some</em> experience, at least for now</strong>.  And if I were a young worker, here's how I would begin:
 
@@ -40,7 +40,7 @@ As a result, <strong>young workers looking for their first tech job should try a
 
 <h2>The (Maybe) Not-So-Obvious Things That Entry-Level Workers Can Do</h2>
 
-But this list is, I believe, pretty clear cut on what to do. There are some other things that young workers can do that may be not-so-obvious:
+But this list is, I believe, a pretty clear cut path on what to do. There are some other things that young workers can do that may be not-so-obvious:
 
 <ul>
   <li class="post__list-item">
@@ -56,7 +56,7 @@ But this list is, I believe, pretty clear cut on what to do. There are some othe
 
 A quick side-note: I mentioned that I'm redoing my blog and this includes reviewing older posts for potential archiving. I have a lot of old posts that discuss a certain tech subject that was popular at the time.
 
-A lot of things I <i>thought</i> would happen didn't. I wouldn't be surprised if this post fits this category.
+A lot of tech things I <i>thought</i> would happen didn't. This post may certainly fit in this category some day.
 
 The truth is, no one else can predict the long-term effects that AI will have on tech labor. AI could evolve to create more tech jobs than it eliminates across all age ranges...many in tech are optimistic about this.
 
