@@ -40,7 +40,7 @@ As a result, <strong>young workers looking for their first tech job should try a
 
 <h2>The (Maybe) Not-So-Obvious Things That Entry-Level Workers Can Do</h2>
 
-But this list is, I believe, pretty clear cut. There are some other things that young workers can do that may be not-so-obvious:
+But this list is, I believe, pretty clear cut on what to do. There are some other things that young workers can do that may be not-so-obvious:
 
 <ul>
   <li class="post__list-item">
