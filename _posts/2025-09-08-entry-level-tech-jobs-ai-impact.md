@@ -57,3 +57,5 @@ But this list is, I believe, pretty clear cut. There are some other things that 
 A quick side-note: I mentioned that I'm redoing my blog and this includes reviewing older posts for potential archiving. I have a lot of old posts that discuss a certain tech subject that was popular at the time.
 
 A lot of things I <i>thought</i> would happen didn't. I wouldn't be surprised if this post fits this category.
+
+On one hand: AI could evolve to create more jobs than it eliminates.
