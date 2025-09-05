@@ -54,13 +54,15 @@ But this list is, I believe, a pretty clear cut path on what to do. There are so
 
 <h2>The Tech Job Market Will (Probably) Change</h2>
 
-A quick side-note: I mentioned that I'm redoing my blog and this includes reviewing older posts for potential archiving. I have a lot of old posts that discuss a certain tech subject that was popular at the time.
+I mentioned that I'm redoing my blog and this includes reviewing older posts for potential archiving. I have a lot of old posts that discuss a certain tech subject that was popular at the time.
 
 A lot of tech subjects I <i>thought</i> would happen didn't. This post may certainly fall into this category some day.
 
-The truth is, no one else can predict the long-term effects that AI will have on tech labor. AI could evolve to create more tech jobs than it eliminates across all age ranges...many in tech are optimistic about this.
+I purposely wrote this post in way that I hope drives that point home. Mentioning the year it was written, using phrases like "for now" and " at the time of this blog post," etc.
 
-It's also true that when it comes to steady employment, we all live in a knowledge-based economy.  We will always need to know something this year that we didn't know last year in order to remain employable.
+The truth is, no one else can predict the long-term effects that AI will have on tech labor. AI could evolve to create more tech jobs than it eliminates across all age ranges... many in tech are optimistic about this.
+
+It's also true that when it comes to steady employment, we all live in a knowledge-based economy.  "We must continuously learn new skills to remain employable.
 
 <h2>Conclusion</h2>
 
