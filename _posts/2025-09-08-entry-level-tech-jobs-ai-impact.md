@@ -56,7 +56,7 @@ But this list is, I believe, a pretty clear cut path on what to do. There are so
 
 A quick side-note: I mentioned that I'm redoing my blog and this includes reviewing older posts for potential archiving. I have a lot of old posts that discuss a certain tech subject that was popular at the time.
 
-A lot of tech things I <i>thought</i> would happen didn't. This post may certainly fit in this category some day.
+A lot of tech subjects I <i>thought</i> would happen didn't. This post may certainly fall into this category some day.
 
 The truth is, no one else can predict the long-term effects that AI will have on tech labor. AI could evolve to create more tech jobs than it eliminates across all age ranges...many in tech are optimistic about this.
 
