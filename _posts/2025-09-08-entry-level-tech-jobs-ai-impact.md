@@ -51,7 +51,6 @@ But this list is, I believe, a pretty clear-cut path on what to do. There are so
   </li>
 </ul>
 
-
 <h2>The Tech Job Market Will (Probably) Change</h2>
 
 I mentioned that I'm redoing my blog, and this includes reviewing older posts for potential archiving. I have a lot of old posts that discuss a certain tech subject that was popular at the time.
