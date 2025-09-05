@@ -51,8 +51,9 @@ But this list is, I believe, pretty clear cut. There are some other things that 
   </li>
 </ul>
 
+
 <h2>The Tech Job Market Will (Probably) Change</h2>
 
-A quick side-note: I mentioned that I'm redoing my blog and this includes reviewing older posts for potential archiving. I have a lot of old posts that discuss a certain tech "thing" that was popular at the time.
+A quick side-note: I mentioned that I'm redoing my blog and this includes reviewing older posts for potential archiving. I have a lot of old posts that discuss a certain tech subject that was popular at the time.
 
-In reviewing those posts, 
+A lot of things I <i>thought</i> would happen didn't. I wouldn't be surprised if this post fits this category.
