@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: How AI is Changing Entry-Level Tech Jobs (And What New Developers Can Do)
-date: 2025-09-03
+date: 2025-09-08
 categories: personal
 category-name: Personal
 permalink: /entry-level-developer-jobs-ai-changes/
@@ -41,3 +41,12 @@ As a result, <strong>young workers looking for their first tech job should try a
 <h2>The (Maybe) Not-So-Obvious Things That Entry-Level Workers Can Do</h2>
 
 But these list of things to do is, I believe, pretty clear cut. There are some other things that young workers can do that may be not-so-obvious:
+
+<ul>
+  <li>
+    <b>Take AI Seriously:</b> A permeating mantra in the software development world is "AI won't take your job but a developer using AI will." And while anything can happen, I'm personally starting to see the benefits coding alongside AI tools.  At the time of this post, I've been redesign/recoding this blog with the help of <a href="https://claude.ai/">Claude AI</a> and see the benefits. I certainly didn't (and wouldn't) use Claude to write every line of code, but it was a great helper.  Generating unit tests, reviewing blog posts to see if they were <A href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG-ready</a> and SEO-friendly.
+  </li>
+  <li>
+    <b>Participate In Open Source:</b> Still the best, free way to display and quantify your coding skills.  And don't just post the code and walk away from it: put some effort into the README file, explaining what you did and why.
+  </li>
+</ul>
