@@ -1,5 +1,5 @@
 ---
-title: 'CNN calls the do not track option a "Google killer"'
+title: CNN calls the do not track option a 'Google killer'
 date: 2010-12-03
 excerpt: Quick recap of CNN's article on the FTC's proposal of adding a do not track feature that consumers can use for internet browsing, short opinion included
 layout: layouts/post.njk

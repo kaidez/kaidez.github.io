@@ -1,7 +1,7 @@
 ---
 title: 'The Head First Duck Simulator In Typescript'
 date: 2016-03-31
-excerpt: TypeScript recreates the Duck Simulator/Strategy pattern described in the "Head First Design Patterns" book. With lots of resource links.
+excerpt: TypeScript recreates the Duck Simulator/Strategy pattern described in the 'Head First Design Patterns' book. With lots of resource links.
 layout: layouts/post.njk
 permalink: /typescript-duck-simulator/
 image: duck-simulator-image.jpg
