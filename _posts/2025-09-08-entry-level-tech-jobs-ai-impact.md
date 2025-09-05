@@ -34,6 +34,10 @@ As a result, <strong>young workers looking for their first tech job should try a
     <b>Start Coding Stuff & Display It On GitHub:</b> Still the best, free way to display and quantify your coding skills.  And don't just post the code and walk away from it: put some effort into the README file, explaining what you did and why.
   </li>
     <li>
-    <b>Start Blogging About Software Development:</b> It's old school but still effective.
+    <b>Start Blogging About Software Development:</b> It may seem like a dated practice in a full-on social media world, but it's still effective. Try. Build. Fail or Be Successful. Then write about it and post it online.
   </li>
 </ul>
+
+<h2>The (Maybe) Not-So-Obvious Things That Entry-Level Workers Can Do</h2>
+
+But these list of things to do is, I believe, pretty clear cut. There are some other things that young workers can do that may be not-so-obvious:
