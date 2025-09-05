@@ -3,12 +3,12 @@ layout: post
 comments: true
 title: How AI is Changing Entry-Level Tech Jobs (And What New Developers Can Do)
 date: 2025-09-03
-categories: personal
-category-name: Personal
+categories: coding-best-practices
+category-name: Coding Tips
 permalink: /entry-level-developer-jobs-ai-changes/
 excerpt: "Stanford study shows AI hurting entry-level tech jobs. Young developers need experience to compete in 2025 job market."
 og-image: cs-intern.jpg
-thumb-image: search-autocomplete-thumb.jpg
+thumb-image: cs-intern-thumb.jpeg
 ---
 On August 26th, 2025, Stanford University released a report on how generative AI, or AI, is affecting the labor market.  It had six key findings, the first being that there were <strong>"substantial declines in employment for early-career workers (ages 22-25) in occupations most exposed to AI."</strong>
 
