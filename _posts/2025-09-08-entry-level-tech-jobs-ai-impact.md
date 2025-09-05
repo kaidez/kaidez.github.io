@@ -14,15 +14,26 @@ On August 26th 2025, Stanford University released a report on how generative AI,
 
 According to the report's findings, software development was listed as one of the most exposed career fields (alongside customer service). So, for now, young entry-level workers should consider gaining tech experience before pursuing their first real technology job.
 
-## Younger, Entry-Level Workers vs. Older, Experienced Workers
+<h2>Younger, Entry-Level Workers vs. Older, Experienced Workers</h2>
 
-<a href="https://digitaleconomy.stanford.edu/wp-content/uploads/2025/08/Canaries_BrynjolfssonChandarChen.pdf" target="_blank" rel="noopener" aria-label="Stanford study on AI employment effects - PDF document">Stanford's 2025 AI Employment Study: "Canaries in the Coal Mine" (PDF)</a>
-found that AI tools could effectively perform tasks usually done by entry level workers.  At the same time, there was a "a 6% decline in employment from late 2022 to July 2025 in the most AI-exposed occupations."  
+<a href="https://digitaleconomy.stanford.edu/wp-content/uploads/2025/08/Canaries_BrynjolfssonChandarChen.pdf" target="_blank" rel="noopener" aria-label="Stanford study on AI employment effects - PDF document">Stanford's 2025 AI Employment Study: "Canaries in the Coal Mine" (PDF)</a> found that AI tools could effectively perform tasks usually done by entry level workers.  At the same time, there was "a 6% decline in employment from late 2022 to July 2025 in the most AI-exposed occupations."  
 
 However, there was "a 6-9% increase [in employment] for older workers" in these same occupations.  From this, concludes that "declining employment AI-exposed jobs is driving tepid overall employment growth for 22- to 25- year-olds as employment for older workers continues to grow."
 
-## What Entry-Level Workers Can Do
+<h2>The Obvious Things That Entry-Level Workers Can Do</h2>
 
 Job opportunities in tech fluctuate; sometimes there are tons of open positions and sometimes there are very few.  At the time of this blog post, there are fewer opportunities due to a whole lot of industry-wide layoffs.
 
-So 
+As a result, <strong>young workers looking for their first tech job should try and gain <em>some</em> experience, at least for now</strong>.  And if I were a young worker, here's how I would begin:
+
+<ul>
+  <li>
+    <b>Start interning:</b> This is the obvious start but it bears repeating. Interning at an office while doing tech work is the best way to get your foot in the job market door.  And it doesn't need to be a tech company: non-tech sectors such as banking, real estate and healthcare have tons of software development work that needs to get done.
+  </li>
+  <li>
+    <b>Start Coding Stuff & Display It On GitHub:</b> Still the best, free way to display and quantify your coding skills.  And don't just post the code and walk away from it: put some effort into the README file, explaining what you did and why.
+  </li>
+    <li>
+    <b>Start Blogging About Software Development:</b> It's old school but still effective.
+  </li>
+</ul>
