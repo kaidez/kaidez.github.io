@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: How AI is Changing Entry-Level Tech Jobs (And What New Developers Can Do)
-date: 2025-09-03
+date: 2025-09-08
 categories: coding-best-practices
 category-name: Coding Tips
 permalink: /entry-level-developer-jobs-ai-changes/
