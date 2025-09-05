@@ -1,0 +1,13 @@
+---
+    permalink: /api/posts.json
+---
+    [
+      {% for post in collections.posts %}
+      {
+        "title": "{{ post.data.title | safe }}",
+        "url": "{{ post.url | url }}",
+        "excerpt": "{{ post.data.excerpt | safe }}",
+        "category": "{{ post.data.category | safe }}"
+      }{% if not loop.last %},{% endif %}
+      {% endfor %}
+    ]
