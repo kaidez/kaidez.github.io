@@ -44,9 +44,9 @@ But these list of things to do is, I believe, pretty clear cut. There are some o
 
 <ul>
   <li>
-    <b>Take AI Seriously:</b> A permeating mantra in the software development world is "AI won't take your job but a developer using AI will." And while anything can happen, I'm personally starting to see the benefits coding alongside AI tools.  At the time of this post, I've been redesign/recoding this blog with the help of <a href="https://claude.ai/">Claude AI</a> and see the benefits. I certainly didn't (and wouldn't) use Claude to write every line of code, but it was a great helper.  Generating unit tests, reviewing blog posts to see if they were <A href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG-ready</a> and SEO-friendly.
+    <b>Take AI Seriously:</b> A permeating mantra in the software development world is "AI won't take your job but a developer using AI will." And while anything can happen, I'm personally starting to see the benefits of coding alongside AI tools.  At the time of this post, I've been redesign/recoding this blog with the help of <a href="https://claude.ai/">Claude AI</a> really like it. I certainly didn't (and wouldn't) use Claude to write every line of code, but it was a great helper.  Generating unit tests, reviewing blog posts to see if they are <A href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG-ready</a> and SEO-friendly, fixing bugs I couldn't fix after spending 20 minutes trying to fix them. Claude excelled here.
   </li>
   <li>
-    <b>Participate In Open Source:</b> Still the best, free way to display and quantify your coding skills.  And don't just post the code and walk away from it: put some effort into the README file, explaining what you did and why.
+    <b>Participate In Open Source:</b>
   </li>
 </ul>
