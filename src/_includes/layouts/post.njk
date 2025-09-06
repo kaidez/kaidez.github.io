@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if title %}{{ title }} - {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}">
+  <meta name="description" content="{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}{% endif %}">
 
   <!-- Open Graph -->
   <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}">
@@ -65,7 +65,7 @@
   </div>
 
   <main class="post-content">
-    <h1 class="post-title">{{ title }}</i></h1>
+    <h1 class="post-title">{{ title }}</h1>
     {# <time datetime="{{ date | htmlDateString }}">
       {{ date | readableDate }}
     </time> #}
@@ -89,12 +89,21 @@
   {% include "partials/footer.njk" %}
   <script src="/assets/js/relatedPosts.js"></script>
   <script>
-      // The `category` array is injected directly into the script.
-      // We use JSON.stringify to safely convert the array to a string.
-      window.pageData = {
-          category: {{ category | dump | safe }}
-      };
-    </script>
+    window.pageData = {
+      category: "{{ category }}"
+    };
+  </script>
+
+
+ <!--
+  <script>
+    // The `category` array is injected directly into the script.
+    // We use JSON.stringify to safely convert the array to a string.
+    window.pageData = {
+        category: {{ category | dump | safe }}
+    };
+  </script>
+  -->
 </body>
 
 </html>
