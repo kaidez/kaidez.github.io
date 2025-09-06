@@ -64,15 +64,4 @@
     } else {
         init();
     }
-})();
-
-
-
-fetch('/api/posts.json')
-      .then(response => response.json())
-      .then(posts => {
-        // Now 'posts' is a JavaScript array of your Eleventy post data
-        console.log(posts);
-        // You can now manipulate and display your post data
-      })
-      .catch(error => console.error('Error fetching posts:', error));
+})();      
