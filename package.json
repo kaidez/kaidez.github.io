@@ -9,7 +9,9 @@
     "clean": "rm -rf _site",
     "deploy": "npm run build && gh-pages -d _site",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "debug11ty": "ELEVENTY_DEBUG=true eleventy",
+    "verboseDebug": "DEBUG=Eleventy* npx @11ty/eleventy"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
