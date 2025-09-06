@@ -6,7 +6,7 @@ excerpt: Understanding the HTML5 DTD and Character Set Needed For Your First HTM
 tags: [tutorials]
 secondary_tags: ["html5"]
 category: tutorials
-# og-image: default-image.jpg
+image: default-image.jpg
 ---
 This is a very simple tutorial. It won’t teach you how to use ,  or any other HTML5-specific tags. All it does is describe what building blocks are needed BEFORE you insert those tags. And it all comes down to two lines of code.
 
