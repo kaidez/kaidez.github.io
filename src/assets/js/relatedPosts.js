@@ -1,6 +1,5 @@
-
 document.addEventListener('DOMContentLoaded', async () => {
-  
+
   // Ensure pageData exists
   if (!window.pageData || !window.pageData.category) {
     console.warn('Page data not available');
