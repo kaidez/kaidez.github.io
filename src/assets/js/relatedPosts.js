@@ -9,14 +9,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   try {
     const data = await fetch('/api/posts.json').then(res => res.json());
 
-    const pageCategory = window.pageData.category;
+    const blogPostCategory = window.pageData.category;
         
-    const postsByCategory = data.filter(post => 
-      post.category && post.category.toLowerCase() === pageCategory.toLowerCase()
+    const getPostsByCategory = data.filter(post => 
+      post.category && post.category.toLowerCase() === blogPostCategory.toLowerCase()
     );
     
     console.log('All posts:', data);
-    console.log('Posts in same category:', postsByCategory);
+    console.log('Posts in same category:', getPostsByCategory);
     
     // Do something with the filtered posts
     
