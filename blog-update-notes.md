@@ -331,3 +331,36 @@ secondary_tags: ["wordpress", "web design", "legacy"]
 The key is choosing terminology that accurately describes the content without suggesting it's obsolete or low-quality. "Legacy" remains my top recommendation for semantic accuracy and professional presentation, even without specific search engine documentation.
 
 Find that save Anthropic post from Morten R.H.
+
+
+
+
+
+
+
+
+
+
+I've fixed the Nunjucks template JavaScript syntax error. The issue was that VSCode was trying to parse Nunjucks template syntax (`{{ tags | dump | safe }}`) as JavaScript, which caused syntax errors.
+
+**The solution:**
+1. **Moved template syntax out of JavaScript context**: Placed the Nunjucks template syntax in a `data-tags` attribute on the `<body>` element instead of directly in the JavaScript
+2. **Clean JavaScript separation**: Replaced the problematic inline script with clean JavaScript that reads from the data attribute
+3. **Added error handling**: Included try/catch with fallback values in case the JSON parsing fails or `tags` is undefined
+
+**What changed:**
+- Added `data-tags="{% if tags %}{{ tags | dump | safe }}{% else %}[]{% endif %}"` to the body element
+- Replaced the problematic script with clean JavaScript that safely reads and parses the data attribute:
+  ```javascript
+  try {
+      const tagsData = document.body.getAttribute('data-tags');
+      window.pageData = {
+          tags: tagsData ? JSON.parse(tagsData) : []
+      };
+  } catch (e) {
+      console.warn('Failed to parse tags data, using empty array');
+      window.pageData = { tags: [] };
+  }
+  ```
+
+This approach follows best practices for passing server-side data to client-side JavaScript and should eliminate the VSCode syntax errors you were experiencing while maintaining the same functionality.
