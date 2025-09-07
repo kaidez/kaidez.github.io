@@ -4,11 +4,18 @@ module.exports = function (eleventyConfig) {
       .getAll()
       .filter((item) => !item.data.draft)
       .map((post) => {
+        
         let related = [];
-
+        
         if (post.data.tags) {
           post.data.tags.forEach((tag) => {
             collection.getFilteredByTag(tag).forEach((item) => {
+              console.log(post)
+              // const relatedPostCategory = item.data.category ? item.data.category.toLowerCase() : "";
+
+              //  console.log([relatedPostCategory, item.data.title, item.url]);
+
+              
               if (
                 item.url !== post.url &&
                 !related.includes(item) &&
