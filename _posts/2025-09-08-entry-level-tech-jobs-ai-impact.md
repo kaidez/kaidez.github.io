@@ -2,11 +2,11 @@
 layout: post
 comments: true
 title: How AI is Changing Entry-Level Tech Jobs (And What New Developers Can Do)
-date: 2025-09-08
+date: 2025-09-07
 categories: coding-best-practices
 category-name: Coding Tips
 permalink: /entry-level-developer-jobs-ai-changes/
-excerpt: "Stanford study shows AI hurting entry-level tech jobs. Young developers need experience to compete in 2025 job market."
+excerpt: "A Stanford study shows AI hurting entry-level tech jobs. Young developers need experience to compete in 2025 job market."
 og-image: cs-intern.jpg
 thumb-image: cs-intern-thumb.jpeg
 ---
