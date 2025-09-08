@@ -1,5 +1,5 @@
 ---
-title: HTML5 Recent Article Roundup - ARCHIVE
+title: HTML5 Recent Article Roundup
 date: 2011-02-23
 excerpt: A list of great HTML5 articles compiled by kaidez
 layout: layouts/post.njk
@@ -9,6 +9,8 @@ tags: [reviews]
 secondary_tags: ["html5"]
 category: Reviews
 ---
+<em>(Author's note - August 2025: This is an old, out-of-date blog post. But the links to the applications are still up and running.  Kinda cool to check out for historical purposes -k)</em>
+
 I wanted to deliver as much original content as possible when I started blogging again and didn’t want to do article roundups. I certainly didn’t want to do an HTML5-based round up as those articles and blog posts are a dime a dozen right now.
 
 But some ***very authoritative, high-profile HTML5 articles*** have popped up recently and I’d like to make sure that as many people read them as possible…so here we go:
@@ -34,7 +36,7 @@ IMPORTANT: Before I list the final two articles, let be crystal clear about some
 
 > “[The W3C] has learned to engage its constituents and to seek approval beyond its immediate constituents—i.e. to reach out to the business community, not just to the authors of O’Reilly and Peachpit books.”
 
-Awesome…and <a href="http://www.zeldman.com/2011/01/27/html5-vs-html/#comment-58000">I sort of said so in the article’s comments section</a>.
+Awesome…and I sort of said so in the article’s comments section (update: comments has since been deleted).
 
 *   <a href="http://www.w3.org/html/logo/">W3C HTML5 Logo</a> – Released by the W3C in an effort to get designers to place the logo on their HTML5-designed sites. They also are selling a t-shirt and yes, I’ll be buying one eventually.
 

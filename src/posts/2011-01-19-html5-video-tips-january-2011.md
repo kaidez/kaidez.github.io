@@ -1,5 +1,5 @@
 ---
-title: 10 Things To Remember About HTML5 Video - ARCHIVE
+title: 10 Things To Remember About HTML5 Video
 excerpt: HTML5 Video Tips from kaidez
 date: 2011-01-19
 layout: layouts/post.njk
@@ -7,10 +7,11 @@ permalink: /html5-video-tips-january-2011/
 tags: [coding-best-practices]
 # og-image: default-image.jpg
 ---
+<em>(Author's note - August 2025: This is an old, out-of-date blog post. But the links to the applications are still up and running.  Kinda cool to check out for historical purposes   -k)</em>
+
 Setting up HTML5 video for [my recent Almay project][1] was certainly a learning experience (thanks to Max at image0 for the help during this part of the project). Here’s what I learned…and will *never* forget:
 
- [1]: http://kaidez.com/almay-project-using-html5-net-jquery/
- [2]: http://blog.image0.com/
+ [1]: /almay-project-using-html5-net-jquery/
 
 ## 1. You Need To Budget Enough Time To Do This
 

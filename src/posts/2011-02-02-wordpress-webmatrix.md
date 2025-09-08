@@ -1,5 +1,5 @@
 ---
-title: 'WordPress & WebMatrix - ARCHIVE'
+title: 'WordPress & WebMatrix'
 
 
 layout: layouts/post.njk
@@ -8,7 +8,7 @@ excerpt: Using WebMatrix to create a WordPress development site
 # og-image: default-image.jpg
 tags: [coding-best-practices]
 ---
-<em><a href="http://www.microsoft.com/web/webmatrix/">Update: Microsoft now recommends Visual Studio Code over Web Matrix</a></em>
+<em> Web Matrix is discontinued so as far as MS products go, <a href="https://code.visualstudio.com/download">Visual Studio Code</a> is hte go-to tool for all this.</em>
 
 HAPPY GROUNDHOG DAY!!!!!!!!!!!!!
 

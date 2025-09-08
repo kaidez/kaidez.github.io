@@ -1,5 +1,5 @@
 ---
-title: My HTML5 Applications - ARCHIVE
+title: My HTML5 Applications
 date:   2010-11-22
 excerpt: I'm starting to narrow down what my favorite HTML5 tools are.
 layout: layouts/post.njk
@@ -7,15 +7,15 @@ permalink: /kaidez-html5-apps/
 tags: [coding-best-practices]
 # og-image: default-image.jpg
 ---
-As mentioned, [The HTML5 Project][1] is basically me creating a (hopefully) pure HTML5 and CSS3 website, the end result being my getting my head around both technologies. I still have to work out things like wireframes and SEO but I’ve just about narrowed down what applications and code frameworks I’ll be using.
+<em>(Author's note - August 2025: This is an old, out-of-date blog post. But the links to the applications are still up and running.  Kinda cool to check out for historical purposes   -k)</em>
 
- [1]: http://kaidez.com/html5-project/
+As mentioned, [The HTML5 Project] is basically me creating a (hopefully) pure HTML5 and CSS3 website, the end result being my getting my head around both technologies. I still have to work out things like wireframes and SEO but I’ve just about narrowed down what applications and code frameworks I’ll be using.
 
 ## Adobe Dreamweaver CS5
 
 I’m committing a web developer sin here by endorsing this product since most serious web developers hate it, but it’s not that bad for HTML5 development. Adobe’s Dreamweaver CS5 11.0.3 Updater contains an extension that allows for HTML5 code hinting, resulting in less coding errors (get it [here][2]). I’ve tested it and works well, so I’m using it.
 
- [2]: http://www.adobe.com/support/dreamweaver/downloads_updaters.html#dwcs5
+ [2]: https://www.adobe.com/products/dreamweaver.html
 
 ## Modernizr
 
@@ -41,3 +41,5 @@ Those are the “must-haves”…here are the “maybes”:
 *   WordPress (will most-likely go with this in the end, but I have looked at Drupal).
 
 Please let me know if I’m missing something.
+
+ [6]: /html5-project-update-january-21-2011/
