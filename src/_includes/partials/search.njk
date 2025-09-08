@@ -1,34 +1,95 @@
 <!-- Simplified Search Component -->
 <div class="search-container">
-    <div id="search" class="pagefind-search"></div>
+    <p style="color: red; font-weight: bold;">SEARCH COMPONENT LOADED</p>
+    <div id="search" class="pagefind-search">
+        <p style="color: blue;">Pagefind container</p>
+    </div>
 </div>
 
 <!-- Load Pagefind -->
 <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
 <script src="/pagefind/pagefind-ui.js"></script>
 
+<script>
+    // Wait a bit longer for everything to load
+    setTimeout(() => {
+        console.log('Initializing PagefindUI...');
+        
+        const searchElement = document.getElementById('search');
+        if (!searchElement) {
+            console.error('Search element not found');
+            return;
+        }
+        
+        // Check if PagefindUI is available
+        if (typeof PagefindUI === 'undefined') {
+            console.error('PagefindUI not found - creating fallback input');
+            searchElement.innerHTML = '<input type="text" placeholder="Search..." style="width: 100%; padding: 12px; border: 2px solid #ccc; border-radius: 8px; font-size: 16px; pointer-events: auto;">';
+            return;
+        }
+        
+        try {
+            // Clear any existing content
+            searchElement.innerHTML = '';
+            
+            const pagefind = new PagefindUI({ 
+                element: "#search",
+                showImages: false,
+                showSubResults: true,
+                excerptLength: 15
+            });
+            console.log('PagefindUI initialized successfully');
+            
+            // Ensure the input is interactive
+            setTimeout(() => {
+                const input = searchElement.querySelector('input');
+                if (input) {
+                    input.style.pointerEvents = 'auto';
+                    input.removeAttribute('readonly');
+                    input.removeAttribute('disabled');
+                }
+            }, 500);
+            
+        } catch (error) {
+            console.error('Error initializing PagefindUI:', error);
+            searchElement.innerHTML = '<input type="text" placeholder="Search (fallback)..." style="width: 100%; padding: 12px; border: 2px solid #ccc; border-radius: 8px; font-size: 16px; pointer-events: auto;">';
+        }
+    }, 1000);
+</script>
+
 <style>
 /* Simple search styling */
 .search-container {
     max-width: 400px;
-    width: 295px;;
-    margin: 0 auto;
+    width: 295px;
+    margin: 20px auto;
+    position: relative;
+    z-index: 1000;
+    background: #ffffff;
+    padding: 10px;
+    border: 2px solid #ff0000; /* Temporary red border to make it visible */
+    border-radius: 8px;
 }
 
 .pagefind-search {
     width: 100%;
+    min-height: 50px;
+    background: #f0f0f0; /* Temporary background to see the container */
 }
 
 /* Style the Pagefind input */
 .pagefind-ui__search-input {
     width: 100% !important;
-    padding: var(--space-3) var(--space-4) !important;
-    border: 2px solid var(--color-border) !important;
-    border-radius: var(--border-radius-lg) !important;
-    /* background: var(--color-bg) !important; */
-    color: var(--color-text) !important;
-    font-size: var(--text-base) !important;
-    font-family: var(--font-family-sans) !important;
+    padding: 12px 16px !important;
+    border: 2px solid #cccccc !important;
+    border-radius: 8px !important;
+    background: #ffffff !important;
+    color: #333333 !important;
+    font-size: 16px !important;
+    font-family: Arial, sans-serif !important;
+    min-height: 20px !important;
+    display: block !important;
+    visibility: visible !important;
 }
 
 .pagefind-ui__search-input:focus {
