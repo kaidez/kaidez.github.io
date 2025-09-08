@@ -1,5 +1,5 @@
 ---
-title: 'REVIEW: jQuery: Visual Quickstart Guide - ARCHIVE'
+title: "REVIEW: jQuery: Visual Quickstart Guide"
 date: 2011-03-14
 excerpt: "A negative review of Peachpit Press' jQuery: Visual Quickstart Guide, but it doesn't take away from the fact that the VQS Series is great"
 layout: layouts/post.njk
@@ -9,11 +9,16 @@ tags: [reviews]
 secondary_tags: ["books", "legacy"]
 category: Reviews
 ---
+<em>(Author's note - This post is out-of-date. Please visit the [jQuery site][1] instead -k)</em>
+
+[1]: http://jquery.com/
+
 An unspoken rule of mine is to NOT give any products a bad review. I’ve tried to adopt an attitude of, “If you don’t have anything nice to say, don’t say anything at all.” But in the case of ***Peachpit Press’s jQuery: Visual Quickstart Guide***, I have to make an unfortunate exception.
 
 Since I’m about to beat this book up, let me quantify why I think it’s OK for me to do this…
 
-<img src="/assets/img/jqueryBook.jpg" class="post-pic" />
+<img src="/assets/img/jqueryBook.jpg" class="book-pic" />
+
 Whenever I try to learn a new web skill, I’ve almost always looked to [Peachpit Press’ Visual Quickstart (VQS) series][2] first and foremost. I’ve done this for HTML, CSS, Flash/ActionScript, JavaScript, PHP and PhotoShop…just to name a few.
 
  [2]: http://www.peachpit.com/imprint/series_detail.aspx?ser=335245
@@ -36,6 +41,17 @@ To ensure that it doesn’t appear that I’m destroying one learning resource i
 
  [4]: http://docs.jquery.com/Main_Page
 
-Update – March 21, 2011: According to [the Wikipedia entry for Elizabeth Castro][5], the primary author of the HTML books in the VQS series, the *HTML5: Visual Quickstart Guide* that she’s authoring will be released in December 2011.
+<style>
+.book-pic {
+  float: left; 
+  padding: 0 12px 0 0;
+}
 
- [5]: http://en.wikipedia.org/wiki/Elizabeth_Castro
+@media (max-width: 768px) {
+  .book-pic {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+}
+</style>

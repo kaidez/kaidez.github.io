@@ -19,7 +19,8 @@ With all the talk about fancy JavaScript libraries like [jQuery][3] and [Moderni
  [4]: http://www.modernizr.com/
  [5]: http://css3pie.com/
 
-<img src="/assets/img/CSS3-PIE.png" class="post-pic" />
+<img src="/assets/img/CSS3-PIE.png" class="pie-pic" />
+
 Internet Explorer 9 provides wide CSS3 support while the previous versions of IE don’t support it at all. But CSS3 PIE is a lightweight library (32kb as of this post) that allows developers to apply a limited amount of CSS3 features to Internet Explorer versions 6 through 8. Let’s take a peek at these features by creating a link with rounded corners and transparency.
 
 This tutorial will first create code that’s not friendly for older versions of IE, progressively adding the CSS3 PIE code so you get a before-and-after view of things. I’ll be using both Internet Explorer 8 and Google Chrome to test my code.
@@ -188,3 +189,19 @@ Please help me get better at explaining things…feel free to let me know if I�
  [7]: /assets/img/pie-tut-IE.png "IE"
  [8]: http://twitter.com/css3pie
  [9]: http://kaidez.com/html5-project-update-january-21-2011/
+
+
+<style>
+.pie-pic {
+  float: left; 
+  padding: 0 12px 0 0;
+}
+
+@media (max-width: 768px) {
+  .pie-pic {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+}
+</style>
