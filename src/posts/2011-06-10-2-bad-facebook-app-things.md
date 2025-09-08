@@ -1,5 +1,5 @@
 ---
-title: 2 Bad Things About the Facebook App Setup - ARCHIVE
+title: 2 Bad Things About the Facebook App Setup
 date: 2011-06-10
 excerpt: Creating a Facebook app is easy but doing so generates CSS expressions and creates page reflows, all of which reduce page optimization
 layout: layouts/post.njk
@@ -9,17 +9,17 @@ tags: [coding-best-practices]
 secondary_tags: ["html5", "css", "legacy"]
 category: Coding Tips
 ---
-#
+<em>(Author's note - This post is out-of-date.  It's here for historical perspective and no more. k)</em>
 
 For the [Almay/Facebook][1] project I recently worked on, I had to create a Facebook app under their new set of rules, which was interesting.
 
- [1]: http://kaidez.com/almay-facebook-page/
+ [1]: /almay-facebook-page/
 
 Creating Facebook apps, which are basically web pages, used to require the Facebook Markup Language (FBML) which is simply a flavor of XML. Facebook recently changed this, saying that developers now simply need to create FB app web pages with HTML, CSS, JavaScript, etc., then host the pages on their own web server. These pages then get fed to Facebook via an iframe.
 
 This is an easier web development process and all the page content displays fine. But I’m in a headspace of creating page code that’s as optimized and as fast-loading as I can get it….my current [“thinking mobile”][2] process. That being said, there are two things about the Facebook app setup which, I think, could be made better from a page optimization standpoint.
 
- [2]: http://kaidez.com/mobile-web-development-best-practices-starting-tips/
+ [2]: /mobile-web-development-best-practices-starting-tips/
 
 And it all points back to a JavaScript file named “all.js” that needs to be installed on your web pages in order for the app to work:
 
@@ -49,9 +49,10 @@ According to Safari’s Activity Monitor, the “all.js” dynamically adjusts l
 
 Changing properties like this triggers a render tree reflow, the recalculation of a web page’s layout and geometry. All of this takes time and browser resources, meaning all of this slows down a page…no good.
 
-Paul Irish discusses this in his most-recent how-to video, “HTML5, CSS3, and DOM Performance” that’s listed below. He alludes to Stoyan Stefanov’s brilliant [reflow/relayout article][5], which is the end-all-be-all discussion on the subject.
+Paul Irish discusses this in his most-recent how-to video, [“HTML5, CSS3, and DOM Performance”][6] that’s listed below. He alludes to Stoyan Stefanov’s brilliant [reflow/relayout article][5], which is the end-all-be-all discussion on the subject.
 
  [5]: http://www.phpied.com/rendering-repaint-reflowrelayout-restyle/
+ [6]: https://www.youtube.com/watch?v=q_O9_C2ZjoA&t=1075s&ab_channel=GoogleforDevelopers
 
 
 
