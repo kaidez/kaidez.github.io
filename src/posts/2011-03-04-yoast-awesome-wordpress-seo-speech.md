@@ -1,11 +1,13 @@
 ---
-title: "Yoast's Awesome WordPress SEO Speech - ARCHIVE"
+title: Yoast's Awesome WordPress SEO Speech - ARCHIVE
 date: 2011-03-04
 excerpt: A quick review of a great WordPress SEO speech from Joost de Valk, AKA Yoast, with the video embedded on the page for instant viewing
 layout: layouts/post.njk
 permalink: /yoast-awesome-wordpress-seo-speech/
+image: default-image.jpg
 tags: [coding-best-practices]
-# og-image: default-image.jpg
+secondary_tags: ["html5", "legacy"]
+category: Coding Tips
 ---
 Quite possibly, *the* most inspirational speech in existence on not only WordPress search engine optimization but blogging itself. Given by Joost de Valk, AKA Yoast; owner of the awesome [site of the same name][1].
 

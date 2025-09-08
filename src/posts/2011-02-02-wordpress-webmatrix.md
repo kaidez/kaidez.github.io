@@ -1,12 +1,13 @@
 ---
 title: 'WordPress & WebMatrix'
-
-
+date: 2011-02-02
+excerpt: Using WebMatrix to create a WordPress development site
 layout: layouts/post.njk
 permalink: /wordpress-webmatrix/
-excerpt: Using WebMatrix to create a WordPress development site
-# og-image: default-image.jpg
+image: default-image.jpg
 tags: [coding-best-practices]
+secondary_tags: ["html5", "legacy"]
+category: Coding Tips
 ---
 <em> Web Matrix is discontinued so as far as MS products go, <a href="https://code.visualstudio.com/download">Visual Studio Code</a> is hte go-to tool for all this.</em>
 

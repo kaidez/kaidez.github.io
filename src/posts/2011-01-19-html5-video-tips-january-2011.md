@@ -4,8 +4,10 @@ excerpt: HTML5 Video Tips from kaidez
 date: 2011-01-19
 layout: layouts/post.njk
 permalink: /html5-video-tips-january-2011/
+image: default-image.jpg
 tags: [coding-best-practices]
-# og-image: default-image.jpg
+secondary_tags: ["html5", "legacy"]
+category: Coding Tips
 ---
 <em>(Author's note - August 2025: This is an old, out-of-date blog post. But the links to the applications are still up and running.  Kinda cool to check out for historical purposes   -k)</em>
 

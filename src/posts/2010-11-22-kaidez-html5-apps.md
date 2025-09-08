@@ -4,8 +4,10 @@ date:   2010-11-22
 excerpt: I'm starting to narrow down what my favorite HTML5 tools are.
 layout: layouts/post.njk
 permalink: /kaidez-html5-apps/
+image: default-image.jpg
 tags: [coding-best-practices]
-# og-image: default-image.jpg
+secondary_tags: ["html5", "legacy"]
+category: Coding Tips
 ---
 <em>(Author's note - August 2025: This is an old, out-of-date blog post. But the links to the applications are still up and running.  Kinda cool to check out for historical purposes   -k)</em>
 

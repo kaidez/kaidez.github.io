@@ -4,8 +4,10 @@ date: 2011-06-10
 excerpt: Creating a Facebook app is easy but doing so generates CSS expressions and creates page reflows, all of which reduce page optimization
 layout: layouts/post.njk
 permalink: /2-bad-facebook-app-things/
+image: default-image.jpg
 tags: [coding-best-practices]
-# og-image: default-image.jpg
+secondary_tags: ["html5", "css", "legacy"]
+category: Coding Tips
 ---
 #
 

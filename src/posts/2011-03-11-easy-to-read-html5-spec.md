@@ -6,7 +6,7 @@ layout: layouts/post.njk
 permalink: /easy-to-read-html5-spec/
 image: default-image.jpg
 tags: [coding-best-practices]
-secondary_tags: ["conferences"]
+secondary_tags: ["html5", "legacy"]
 category: Coding Tips
 ---
 Lots of thanks and praises to Australian web developer, [Ben Schwarz][1] for creating [HTML5-A technical specification for Web developers][2]. It takes the somewhat rigorously-written [HTML5-A technical specification for Web developers][3]and rewords it in a very easy-to-read format.

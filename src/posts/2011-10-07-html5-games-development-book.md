@@ -6,10 +6,9 @@ layout: layouts/post.njk
 permalink: /html5-games-development-book/
 image: default-image.jpg
 tags: ["reviews"]
-secondary_tags: ["html5"]
+secondary_tags: ["html5", "legacy"]
 category: Reviews
 ---
-
 No doubt about it: the demand for HTML5 games is high and will only get higher. Game development has always been a lucrative skill-set to possess and thanks to HTML5, web-based game development is a bit easier.
 
 So if you already have basic HTML5, CSS and JavaScript skills, Packt Publishing’s ***[HTML5 Games Development by Example: Beginner’s Guide][1]*** is a learning resource that’s worth checking out if you want to get into game development. And if you don’t want to get into gaming, it may be worth a purchase anyway.

@@ -6,7 +6,7 @@ layout: layouts/post.njk
 permalink: /review-jquery-visual-quickstart-guide/
 image: default-image.jpg
 tags: [reviews]
-secondary_tags: ["learning", "legacy"]
+secondary_tags: ["books", "legacy"]
 category: Reviews
 ---
 An unspoken rule of mine is to NOT give any products a bad review. I’ve tried to adopt an attitude of, “If you don’t have anything nice to say, don’t say anything at all.” But in the case of ***Peachpit Press’s jQuery: Visual Quickstart Guide***, I have to make an unfortunate exception.

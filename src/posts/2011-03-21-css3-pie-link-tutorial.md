@@ -6,7 +6,7 @@ layout: layouts/post.njk
 permalink: /css3-pie-link-tutorial/
 image: default-image.jpg
 tags: ["tutorials"]
-secondary_tags: ["css"]
+secondary_tags: ["css", "legacy"]
 category: Tutorials
 ---
 *NOTE: [Grab the finished code for this tutorial over at GitHub][1] if you don’t want to read the whole thing.*
