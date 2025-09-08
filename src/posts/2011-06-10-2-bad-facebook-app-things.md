@@ -55,5 +55,4 @@ Paul Irish discusses this in his most-recent how-to video, [“HTML5, CSS3, and 
  [6]: https://www.youtube.com/watch?v=q_O9_C2ZjoA&t=1075s&ab_channel=GoogleforDevelopers
 
 
-
 So Facebook apps are now easier to create but, I feel, still need improvement in terms of page optimization. Feel free to comment and agree or disagree.
