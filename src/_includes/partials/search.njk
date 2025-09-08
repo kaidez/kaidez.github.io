@@ -1,8 +1,8 @@
 <!-- Simplified Search Component -->
 <div class="search-container">
-    <p style="color: red; font-weight: bold;">SEARCH COMPONENT LOADED</p>
+
     <div id="search" class="pagefind-search">
-        <p style="color: blue;">Pagefind container</p>
+        <p style="color: blue;"></p>
     </div>
 </div>
 
@@ -24,7 +24,7 @@
         // Check if PagefindUI is available
         if (typeof PagefindUI === 'undefined') {
             console.error('PagefindUI not found - creating fallback input');
-            searchElement.innerHTML = '<input type="text" placeholder="Search..." style="width: 100%; padding: 12px; border: 2px solid #ccc; border-radius: 8px; font-size: 16px; pointer-events: auto;">';
+            searchElement.innerHTML = '<input type="text" placeholder="Search kaidez" style="width: 100%; padding: 12px; border: 2px solid #ccc; border-radius: 8px; font-size: 16px; pointer-events: auto;">';
             return;
         }
         
@@ -36,7 +36,11 @@
                 element: "#search",
                 showImages: false,
                 showSubResults: true,
-                excerptLength: 15
+                excerptLength: 15,
+                translations: {
+                  placeholder: "Search kaidez...",
+                  zero_results: "Couldn't find [SEARCH_TERM]"
+                }
             });
             console.log('PagefindUI initialized successfully');
             
@@ -52,7 +56,7 @@
             
         } catch (error) {
             console.error('Error initializing PagefindUI:', error);
-            searchElement.innerHTML = '<input type="text" placeholder="Search (fallback)..." style="width: 100%; padding: 12px; border: 2px solid #ccc; border-radius: 8px; font-size: 16px; pointer-events: auto;">';
+            searchElement.innerHTML = '<input type="text" placeholder="Search kaidez(fallback)..." style="width: 100%; padding: 12px; border: 2px solid #ccc; border-radius: 8px; font-size: 16px; pointer-events: auto;">';
         }
     }, 1000);
 </script>
