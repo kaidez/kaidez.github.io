@@ -1,5 +1,5 @@
 ---
-title: 'TUTORIAL: Creating A Rounded Corner, Transparent CSS3 Link For IE 6 Through 8 With CSS3 Pie - ARCHIVE'
+title: 'TUTORIAL: Creating A Rounded Corner, Transparent CSS3 Link For IE 6 Through 8 With CSS3 Pie'
 date: 2011-03-21
 excerpt: A tutorial on creating a rounded corner, transparent CSS3 link in Internet Explorer 6 through 8 with CSS3 PIE
 layout: layouts/post.njk
@@ -67,7 +67,7 @@ This tutorial will first create code that’s not friendly for older versions of
 &lt;/html&gt;
 </code></pre>
 
-7).  Let’s take a moment to review the stuff in between the  tags:
+Let’s take a moment to review the stuff in between the  tags:
 <pre><code class="language-css">
 body {
   background-color:#f43a3a;
