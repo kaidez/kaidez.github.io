@@ -6,7 +6,7 @@ layout: layouts/post.njk
 permalink: /entry-level-developer-jobs-ai-changes/
 image: cs-intern.jpg
 tags: ["personal"]
-secondary_tags: ["jobs", "ai"]
+secondary_tags: ["web developer job", "ai"]
 category: Personal
 ---
 On August 26th, 2025, Stanford University released a report on how generative AI (or AI) is affecting the labor market.  It had six key findings, the first being that there were <strong>"substantial declines in employment for early-career workers (ages 22-25) in occupations most exposed to AI."</strong>
