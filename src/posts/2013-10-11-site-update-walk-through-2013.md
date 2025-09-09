@@ -268,7 +268,7 @@ Media Temple recently began offering a [DV Developer Package](https://www.godadd
 
 <a name="grunt-deployment-workflow"></a>
 ## Grunt &amp; My Deployment Workflow
-So far, we've discussed using Jekyll to build out my site for deployment, managing my CSS with Sass, using Bower to manage site runtime dependencies, creating a cache manifest, running Modernizr, using RequireJS to manage/concate/minify a lot of JavaScript and concatenating/minifying other assets.
+So far, we've discussed using Jekyll to build out my site for deployment, managing my CSS with Sass, using Bower to manage site runtime dependencies, creating a cache manifest, running Modernizr, using RequireJS to manage/concat/minify a lot of JavaScript and concatenating/minifying other assets.
 
 All these various processes means various tasks need to run at various times. And instead of manually performing the tasks one-by-one when needed, I've automated all of them under [Grunt](http://gruntjs.com "Go get Grunt: the JavScript task runner").
 

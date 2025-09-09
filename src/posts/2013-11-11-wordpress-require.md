@@ -69,7 +69,7 @@ Tipue needs four separate JS files to work and should be listed in the following
 
 1. `jquery.js`: the core jQuery library.
 2. `tipuesearch_content.js`: the file that contains the JSON object with the site content.
-3. `tipuesearch_set.js`: the file that sets rules for certain words inputed into the search field, rules such as "ignore words like 'the' and 'or' in search inputs".
+3. `tipuesearch_set.js`: the file that sets rules for certain words inputted into the search field, rules such as "ignore words like 'the' and 'or' in search inputs".
 4. `tipuesearch.js`: the core Tipue plugin code.
 
 In the past, setting up this functionality usually meant placing all these files in `<script>` tags on your HTML page in the order above, then putting your custom Tipue code somewhere below them. RequireJS allows for an easier process.

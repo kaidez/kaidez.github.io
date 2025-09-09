@@ -9,7 +9,7 @@ category: Personal
 tags: ["personal"]
 secondary_tags: ["javascript","twitter/x"]
 ---
-<p>My click to tweet tutorial has been doing pretty well in terms of appearing early in search results. When my <a href="/github-tutorial-update/">Git tutorial</a> started to do the same, I tweaked it to give it an SEO push and have seen some positive ressults.</p>
+<p>My click to tweet tutorial has been doing pretty well in terms of appearing early in search results. When my <a href="/github-tutorial-update/">Git tutorial</a> started to do the same, I tweaked it to give it an SEO push and have seen some positive results.</p>
 
 <p>Therefore, I'm doing the same thing with the click to tweet tutorial.</p>
 

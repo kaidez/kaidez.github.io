@@ -128,7 +128,7 @@ Why do things need to be done this way? First, we need to be clear about the dif
 
 *Git* is version control software that tracks changes to your code repository on your local machine. It also retains the entire change history that's also on your local machine.
 
-You upload your code repo's changes and change history to *GitHub*, the online web service that provides a feature-rich graphical user interface to manage the repo. Most of these features are centered around project managment.
+You upload your code repo's changes and change history to *GitHub*, the online web service that provides a feature-rich graphical user interface to manage the repo. Most of these features are centered around project management.
 
 If your only Git education up to this point is doing what GitHub tells you to do when you creating a repo, you should be familiar with `git add`. You use it as part of a command sequence in Terminal when you either add new files to GitHub or update existing ones.
 
@@ -162,7 +162,7 @@ $ git push
 
 Why is all this necessary? Because Git views any type of update to your repo as a "change." Git can detect these changes but has absolutely no idea what to do with them: it's *your* job to tell Git what to do with them.
 
-We just deleted a file from our project folder in the last command sequence with `git rm`, meaning we made a change to our repo. Then, by "committing" this change with `git commit`, we told our repo "this file really MUST go". Lastly, we uploaded these changes to our remote repo on GitHub with `git push`. After the push was completed, GitHub saw that a delete was performed against on our local machine's repo; therefore, GitHub deleted `myFile.html` from the its brower-based view.
+We just deleted a file from our project folder in the last command sequence with `git rm`, meaning we made a change to our repo. Then, by "committing" this change with `git commit`, we told our repo "this file really MUST go". Lastly, we uploaded these changes to our remote repo on GitHub with `git push`. After the push was completed, GitHub saw that a delete was performed against on our local machine's repo; therefore, GitHub deleted `myFile.html` from the its browser-based view.
 
 The "changes" concept is a central characteristic of Git and is key to understanding the Git/GitHub relationship. Git's job is to "track," or "watch," every single, solitary change that occurs inside your local repo...adds, deletes, updates...whatever. GitHub can only "change" itself based on what your local Git repo actually tells it to "change". So in the case of deletions, if you don't use `git rm` to tell Git to remove a file, Git can't tell GitHub to remove it after you do a `git push`.
 
@@ -176,7 +176,7 @@ Obviously your first stop. The site went through a major redesign a while back, 
 ### [Try Git »](https://web.archive.org/web/20141229113843/https://try.github.io/levels/1/challenges/1)
 If you need your hand held a bit when first learning Git (which is not a sin), you can check this site out. Sponsored by [Code School](http://codeschool.com/ "Visit Code School"), Try Git is a Codecademy-styled learning tool that takes you through some Git commands and processes that you may not be familiar with.
 
-### [GitHub Training »](https://www.linkedin.com/learning/complete-guide-to-git/history?resume=false "Review Git/GitHub traing course from GitHub")
+### [GitHub Training »](https://www.linkedin.com/learning/complete-guide-to-git/history?resume=false "Review Git/GitHub training course from GitHub")
 One of the reasons that GitHub has become popular is the same reason that [Chris Coyier](http://css-tricks.com/ "Visit Chris Coyier's CSS Tricks site") and [Paul Irish](http://paulirish.com/ "vist Paul Irish's site") have become popular: their desire to share as much knowledge as humanly possible. While some of the training things they offer cost money, they offer many things for free.
 
 ### [A Note About Git Commit Messages »](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html "Read Tim Pope's well-known article on proper Git commits")
@@ -194,7 +194,7 @@ If you want to Git works under the hood, check out this excellent post. Nick Far
 ### ["What is Version Control: Centralized vs. DVCS" by Giancarlo Lionetti »](https://web.archive.org/web/20210224084517/https://www.atlassian.com/blog/software-teams/version-control-centralized-dvcs)
 I *really* want you to understand that Git is a distributed version control system as well as understand what that means. It's the part that makes sharing code via GitHub a snap and, let's be honest, a major reason behind their success. Lionetti provides the most in-depth, easy-to-understand article on the subject that I could find.
 
-### [*Pro Git* by Scott Chacon »](http://git-scm.com/book "Read the free Pro Git Book")
+### [*Pro Git* by Scott chaco »](http://git-scm.com/book "Read the free Pro Git Book")
 *The* Git Book, and it's free! It's a little dense and doesn't flow as easily as these other resources…I'll admit that I haven't read all of it. But I have read enough of it to know that it's an important Git resource.
 
 <a name="conclusion"></a>

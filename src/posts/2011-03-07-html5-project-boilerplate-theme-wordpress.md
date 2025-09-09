@@ -9,7 +9,7 @@ tags: [coding-best-practices]
 secondary_tags: ["html5", "wordpress", "legacy"]
 category: Coding Tips
 ---
-<em>(Author's note - This post is out-of-date but it's pretty important read from a historical perspective. It discusses HTML5 Boilerplate, which was an important cataylst for groth in the front-end development world...give it a read!!! Also, this post mentions "HTML5 Project," a project of mine that's now defunct-k)</em>
+<em>(Author's note - This post is out-of-date but it's pretty important read from a historical perspective. It discusses HTML5 Boilerplate, which was an important catalyst for groth in the front-end development world...give it a read!!! Also, this post mentions "HTML5 Project," a project of mine that's now defunct-k)</em>
 
 *IMPORTANT: This article discusses [the HTML5 Boilerplate template][1] and assumes that you have, at least, a basic understanding of its page layout. I will discuss the layout in a very roundabout way, not in depth. I STRONGLY suggest that you not only [read the HTML5 Boilerplate documentation][2], but also [watch the really good 40 minute walk-through video of the code][3].*
 

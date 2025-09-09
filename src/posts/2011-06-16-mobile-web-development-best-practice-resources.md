@@ -30,7 +30,7 @@ Web developer Peter-Paul Koch, also known as PPK, is next on the speed guru list
 
  [5]: http://www.quirksmode.org/mobile/
 
-As he lives in Amsterdam, PPK can perform thorough tests on the Symbian browser, which not only gets heavy usage in Europe, but is also the world’s most popular mobile web browser. So…American-based web developers need to read his Symbiam results on his [Quirksmode blog][7] because they will have to code for it sooner than later.
+As he lives in Amsterdam, PPK can perform thorough tests on the Symbian browser, which not only gets heavy usage in Europe, but is also the world’s most popular mobile web browser. So…American-based web developers need to read his Symbian results on his [Quirksmode blog][7] because they will have to code for it sooner than later.
 
  [7]: http://www.quirksmode.org/
 

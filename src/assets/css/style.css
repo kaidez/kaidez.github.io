@@ -474,6 +474,13 @@ svg {
   font-family: var(--font-family-kaidez-secondary-font)
 }
 
+.footer-profile-pic {
+  position: relative;
+  right: 26px;
+  border: 1px solid #491f5a;
+  border-radius: 50%;
+}
+
 .pagination-buttons {
   display: inline-block;
   padding: 0.75rem 1.5rem;

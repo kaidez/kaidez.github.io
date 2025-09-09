@@ -44,7 +44,7 @@ Here are a few of the tasks...
   <img src="/assets/img/atom_02.jpg" class="imgBorder" alt="Screenshot of how Atom tracks your current Git branch">
   <figcaption class="postFigureCaption">Current Git branch appears in the bottom-left corner of your editor</figcaption>
 </figure>
-* Atom uses color-coding to indicate that files need to be commited to your git repo.
+* Atom uses color-coding to indicate that files need to be committed to your git repo.
 <figure class="postFigure">
   <img src="/assets/img/atom_03.jpg" class="imgBorder" alt="Screenshot of how Atom tracks your current Git branch">
   <figcaption class="postFigureCaption">Orange indicates that an already-existing file has been updated while green indicates that a new file has been added to the project, but hasn't been committed yet</figcaption>
