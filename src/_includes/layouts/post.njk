@@ -45,6 +45,7 @@
 </head>
 
 <body data-categories='{{ category | dump | safe }}'> <!-- custom data- attribute that holds the post's category name -->
+  <a name="main-content"></a>
   {% include "partials/header.njk" %}
   <div class="post-tag-and-category-container">
       <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
