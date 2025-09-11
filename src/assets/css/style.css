@@ -812,6 +812,11 @@ svg {
   gap: 20px;
 }
 
+.error-404-description-text {
+  color: var(--color-kaidez-supreme-red);
+  font-weight: 400;
+}
+
 .error-404-image {
   width: 100%;
   max-width: 400px;
