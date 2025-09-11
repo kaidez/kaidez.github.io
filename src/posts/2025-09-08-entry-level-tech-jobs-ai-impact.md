@@ -59,6 +59,7 @@ A lot of tech things I <em>thought</em> would happen didn't. This post may certa
 I purposely wrote this post in a way that I hope drives that point home. Mentioning the year it was written, using phrases like "for now" and "at the time of this blog post," etc.
 
 The truth is, no one can predict the long-term effects that AI will have on tech labor. AI could evolve to create more tech jobs than it eliminates across all age ranges... many in tech are optimistic about this.
+
 But it's also true that when it comes to steady employment, we all live in a knowledge-based economy.  And we all need to know something this year that we didn't know last year...AI is one of those "somethings."
 
 <h2>Conclusion</h2>
