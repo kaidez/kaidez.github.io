@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if title %}{{ title }} - {% endif %}{{ site.title }}</title>
+  <title data-pagefind-ignore>{% if title %}{{ title }} - {% endif %}{{ site.title }}</title>
   <meta name="description" content="{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}{% endif %}">
 
   <!-- Open Graph -->
@@ -40,7 +40,7 @@
   {% include "partials/googleAnalytics.njk" %}
 </head>
 
-<body class="{% if bodyClass %}{{ bodyClass }}{% endif %}" data-pagefind-body>
+<body class="{% if bodyClass %}{{ bodyClass }}{% endif %}">
   <a name="main-content"></a>
   {% include "partials/header.njk" %}
 
