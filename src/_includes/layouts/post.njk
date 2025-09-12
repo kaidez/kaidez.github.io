@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if title %}{{ title }} - {% endif %}{{ site.title }}</title>
+  <title data-pagefind-ignore>{% if title %}{{ title }} - {% endif %}{{ site.title }}</title>
   <meta name="description" content="{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}{% endif %}">
 
   <!-- Open Graph -->
@@ -68,7 +68,7 @@
     </div>
   </div>
 
-  <main class="post-content">
+  <main class="post-content" data-pagefind-body>
     <h1 class="post-title">{{ title }}</h1>
     {# <time datetime="{{ date | htmlDateString }}">
       {{ date | readableDate }}
