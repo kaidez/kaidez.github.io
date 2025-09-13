@@ -24,6 +24,7 @@ Table of Contents
 7. [Conclusion](#conclusion)
 
 <a name="how-data-attributes-work"></a>
+
 <h2>How data attributes work</h2>
 
 Data attributes are customizable attributes that store data in page elements.  They're written as <code>data-&lt;name&gt;</code>, where the `<name>` value can be any text string you choose:
@@ -54,6 +55,7 @@ All of this means we use JavaScript to find these properties and display them on
 Before we create our final-production-ready code with fallbacks, we'll create some incremental examples to gain a better understanding of how all this works.
 
 <a name="simple-example"></a>
+
 <h2>A simple example (<a href="http://codepen.io/kaidez/pen/VYLxqG" target="blank">See the  demo</a>)</h2>
 
 We'll start by creating code that changes just one set of data attributes with JavaScript. Let's start with the CSS, which will be applied to all future code samples and demos:
@@ -203,6 +205,7 @@ Depending on the page layout, this will force the page to jump to the top. Which
 
 <a name="proper-naming-data-attributes"></a>
 <h2>Proper naming of data attributes (<a href="http://codepen.io/kaidez/pen/WbvEab" target="blank">See the  demo</a>)</h2>
+
 Here's one of the quirks of data attributes...
 
 As just mentioned, `teamInfo.dataset.team` is a direct reference to the `data-team` attribute...that makes sense. It's also the same thing with the manager information: `teamInfo.dataset.manager` is a direct reference to the `data-manager` attribute.
@@ -222,6 +225,7 @@ Because of this, I suggest keeping your data attributes and `dataset` properties
 
 <a name="store-data-attributes-link"></a>
 <h2>Store the data attributes in a link (<a href="http://codepen.io/kaidez/pen/dPoexg" target="blank">See the  demo</a>)</h2>
+
 The first example separated the link and the data attribute content for the sake of a clearer explanation, but a real-world use case is to store the attributes in the link being clicked on. Using the same CSS, that code would look like this:
 
 __The HTML__
@@ -336,6 +340,7 @@ In the HTML we've removed the id property while adding a class called `teamLink`
 So every time a link with the `teamLink` class gets clicked, the `this` keyword forces our JavaScript code to look at the data attributes for that link only, then load them onto the page.
 
 <h2><a name="getattribute-fallback"></a>
+
 Use `getAttribute()` as fallback code for `dataset` (<a href="http://codepen.io/kaidez/pen/QwbJBZ" target="blank">See the  demo</a>)</h2>
 `dataset` is awesome but, as mentioned in the beginning, isn't cross-browser compliant and doesn't work in all browsers. We can write fallback code with the `getAttribute()` method for those browsers, specifically IE 10 and lower.
 
