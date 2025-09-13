@@ -224,9 +224,9 @@ time {
 
 .header-content {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 172px 295px 1fr;
   align-items: center;
-  gap: var(--space-6);
+  gap: 5px;
   height: var(--header-height);
   /* padding: var(--space-4) 0; */
 }
