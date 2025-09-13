@@ -96,7 +96,7 @@ Some other HTML5 SEO things...
   * Microdata only works if placed into a page with the bare minimum of HTML5 formatting. [Read my tutorial on this](/create-html5-page/).
   * If you try to hide microdata on your page (i.e. putting it into a page tag set to display:none), Google will totally ignore it.
   * Microdata must be placed in the main content of your web page; if you place it among header or footer content, Google will totally ignore it.
-  * ~~Bing and Yahoo! use microdata as well. To be fair, Bing was the first search engine to use it…go and read more about this.~~; So erroneus, it's not even funny.
+  * ~~Bing and Yahoo! use microdata as well. To be fair, Bing was the first search engine to use it…go and read more about this.~~; So erroneous, it's not even funny.
   * Update (Jan 28, 2011): this may or may not be true…am in the middle of verifying this.
   * Update (Feb 02, 2011): Have to strikethrough this line…see this comment below.
   * "Person" is just one of nine vocabularies currently stored over at data-vocabulary.org. The complete list as of this post is: Person, Event, Organization, Product, Review, Review-aggregate, Breadcrumb, Offer and Offer-aggregate. [Go and read about all of them](https://schema.org/).

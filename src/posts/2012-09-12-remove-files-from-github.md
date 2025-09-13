@@ -177,7 +177,7 @@ Obviously your first stop. The site went through a major redesign a while back, 
 If you need your hand held a bit when first learning Git (which is not a sin), you can check this site out. Sponsored by [Code School](http://codeschool.com/ "Visit Code School"), Try Git is a Codecademy-styled learning tool that takes you through some Git commands and processes that you may not be familiar with.
 
 ### [GitHub Training »](https://www.linkedin.com/learning/complete-guide-to-git/history?resume=false "Review Git/GitHub training course from GitHub")
-One of the reasons that GitHub has become popular is the same reason that [Chris Coyier](http://css-tricks.com/ "Visit Chris Coyier's CSS Tricks site") and [Paul Irish](http://paulirish.com/ "vist Paul Irish's site") have become popular: their desire to share as much knowledge as humanly possible. While some of the training things they offer cost money, they offer many things for free.
+One of the reasons that GitHub has become popular is the same reason that [Chris Coyier](http://css-tricks.com/ "Visit Chris Coyier's CSS Tricks site") and [Paul Irish](http://paulirish.com/ "visit Paul Irish's site") have become popular: their desire to share as much knowledge as humanly possible. While some of the training things they offer cost money, they offer many things for free.
 
 ### [A Note About Git Commit Messages »](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html "Read Tim Pope's well-known article on proper Git commits")
 Written five years from the time of this post, this Tim Pope article on how to create a proper Git commit has become required reading for developers. Rarely will you find a software pro NOT follow these rules so it's best to include them in your workflow.

@@ -37,7 +37,7 @@ The About Lynda documentary from October 2009 (viewable [here][2]) boasted that 
 
 [![Photoshop tutorials][4]][4]
 
-The depth of the PhotoShop courses highlight lynda.com’s key strength. PhotoShop is an insanely dense application in terms of features and functions. Lynda does a great job of trying to break up the density by offering courses on specific PhotoShop topics such as smart objects, selection methods and photo retouching. The InDesign, Ilustrator, Flash and other like courses cover their respected topics in the same way, but PhotoShop does it the best.
+The depth of the PhotoShop courses highlight lynda.com’s key strength. PhotoShop is an insanely dense application in terms of features and functions. Lynda does a great job of trying to break up the density by offering courses on specific PhotoShop topics such as smart objects, selection methods and photo retouching. The InDesign, Illustrator, Flash and other like courses cover their respected topics in the same way, but PhotoShop does it the best.
 
  []: http://www.lynda.com/home/photoshop.aspx?utm_medium=affiliate&utm_source=ldc_affiliate&utm_content=550&utm_campaign=CD2146&bid=550&aid=CD2146&opt=
 
