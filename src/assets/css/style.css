@@ -260,9 +260,7 @@ svg {
   text-decoration: none;
 }
 
-.site-nav {
-  width: 100%;
-}
+/* .site-nav width: 100% removed to allow CSS Grid to control width */
 
 /* Navigation */
 .site-nav ul {
@@ -273,9 +271,7 @@ svg {
   padding: 0;
 }
 
-.site-nav li{
-  margin-left: auto;
-}
+/* Removed .site-nav li margin-left: auto to allow grid layout to work properly */
 
 .site-nav a {
   color: var(--color-black);
