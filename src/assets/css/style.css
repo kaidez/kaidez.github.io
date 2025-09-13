@@ -223,12 +223,15 @@ time {
 }
 
 .header-content {
-  display: grid;
-  grid-template-columns: 172px 295px 1fr;
+  display: flex;  
   align-items: center;
-  gap: 5px;
+  gap: 4px;
   height: var(--header-height);
-  /* padding: var(--space-4) 0; */
+  padding: var(--space-4);
+}
+
+.header-content--item {
+  flex: 1;
 }
 
 .header-content--hidden-text {
@@ -242,12 +245,13 @@ time {
   font-weight: 700;
   color: var(--color-black);
   text-decoration: none;
+  display: table-cell;
+  height: 58px;
 }
 
 .site-logo {
   width: 170px;
   height: 64px;
-  /* resize: both; */
   overflow: auto;
 }
 
@@ -268,7 +272,7 @@ svg {
   list-style: none;
   gap: var(--space-6);
   margin: 0;
-  padding: 0;
+  padding-right: 40px;
 }
 
 /* Removed .site-nav li margin-left: auto to allow grid layout to work properly */
