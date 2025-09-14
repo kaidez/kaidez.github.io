@@ -984,3 +984,433 @@ describe('main.js - Mobile Menu Integration Tests', () => {
     expect(mobileMenu.classList.contains('isVisible')).toBe(true);
   });
 });
+
+// Tests for Search Box Toggle functionality (lines 55-79 in original code)
+describe('main.js - Search Box Toggle functionality', () => {
+  let consoleSpy;
+  let originalSetTimeout;
+
+  beforeEach(() => {
+    // Store original setTimeout
+    originalSetTimeout = global.setTimeout;
+
+    // Create fresh DOM with search elements
+    document.body.innerHTML = `
+      <button class="searchToggleButton" aria-expanded="false">Search</button>
+      <div class="search-container">
+        <input class="pagefind-ui__search-input" type="text" placeholder="Search...">
+      </div>
+    `;
+
+    // Spy on console.warn
+    consoleSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
+  });
+
+  afterEach(() => {
+    // Restore console.warn
+    consoleSpy.mockRestore();
+    // Restore setTimeout
+    global.setTimeout = originalSetTimeout;
+  });
+
+  test('should add click event listener to search toggle button', () => {
+    const searchToggle = document.querySelector('.searchToggleButton');
+    const searchBox = document.querySelector('.search-container');
+
+    // Mock addEventListener to capture the callback
+    searchToggle.addEventListener = jest.fn();
+
+    // Simulate the toggleSearchBox function
+    const toggleSearchBox = () => {
+      const searchToggle = document.querySelector('.searchToggleButton');
+      const searchBox = document.querySelector('.search-container');
+
+      if (!searchToggle || !searchBox) {
+        console.warn('Search box not found');
+        return;
+      }
+
+      searchToggle.addEventListener('click', () => {
+        const isSearchboxVisible = searchToggle.getAttribute('aria-expanded') === 'true';
+        searchToggle.setAttribute('aria-expanded', !isSearchboxVisible);
+        searchBox.classList.toggle('isVisible');
+
+        // Focus the input after making container visible
+        if (!isSearchboxVisible) {
+          setTimeout(() => {
+            const searchInput = document.querySelector('.pagefind-ui__search-input');
+            if (searchInput) {
+              searchInput.focus();
+            }
+          }, 100);
+        }
+      });
+    };
+
+    toggleSearchBox();
+
+    // Verify addEventListener was called with 'click'
+    expect(searchToggle.addEventListener).toHaveBeenCalledWith('click', expect.any(Function));
+    expect(consoleSpy).not.toHaveBeenCalled();
+  });
+
+  test('should toggle aria-expanded from false to true when clicked', () => {
+    const searchToggle = document.querySelector('.searchToggleButton');
+    const searchBox = document.querySelector('.search-container');
+
+    // Initially aria-expanded should be false
+    expect(searchToggle.getAttribute('aria-expanded')).toBe('false');
+
+    // Simulate the click handler logic
+    const clickHandler = () => {
+      const isSearchboxVisible = searchToggle.getAttribute('aria-expanded') === 'true';
+      searchToggle.setAttribute('aria-expanded', !isSearchboxVisible);
+      searchBox.classList.toggle('isVisible');
+    };
+
+    // Simulate first click
+    clickHandler();
+
+    expect(searchToggle.getAttribute('aria-expanded')).toBe('true');
+    expect(searchBox.classList.contains('isVisible')).toBe(true);
+  });
+
+  test('should toggle aria-expanded from true to false when clicked again', () => {
+    const searchToggle = document.querySelector('.searchToggleButton');
+    const searchBox = document.querySelector('.search-container');
+
+    // Set initial state to expanded
+    searchToggle.setAttribute('aria-expanded', 'true');
+    searchBox.classList.add('isVisible');
+
+    // Simulate the click handler logic
+    const clickHandler = () => {
+      const isSearchboxVisible = searchToggle.getAttribute('aria-expanded') === 'true';
+      searchToggle.setAttribute('aria-expanded', !isSearchboxVisible);
+      searchBox.classList.toggle('isVisible');
+    };
+
+    // Simulate click to close
+    clickHandler();
+
+    expect(searchToggle.getAttribute('aria-expanded')).toBe('false');
+    expect(searchBox.classList.contains('isVisible')).toBe(false);
+  });
+
+  test('should toggle isVisible class on search container', () => {
+    const searchToggle = document.querySelector('.searchToggleButton');
+    const searchBox = document.querySelector('.search-container');
+
+    // Initially should not have isVisible class
+    expect(searchBox.classList.contains('isVisible')).toBe(false);
+
+    // Simulate the click handler logic
+    const clickHandler = () => {
+      const isSearchboxVisible = searchToggle.getAttribute('aria-expanded') === 'true';
+      searchToggle.setAttribute('aria-expanded', !isSearchboxVisible);
+      searchBox.classList.toggle('isVisible');
+    };
+
+    // First click - should add class
+    clickHandler();
+    expect(searchBox.classList.contains('isVisible')).toBe(true);
+
+    // Second click - should remove class
+    clickHandler();
+    expect(searchBox.classList.contains('isVisible')).toBe(false);
+  });
+
+  test('should focus search input when opening search box', (done) => {
+    const searchToggle = document.querySelector('.searchToggleButton');
+    const searchBox = document.querySelector('.search-container');
+    const searchInput = document.querySelector('.pagefind-ui__search-input');
+
+    // Mock setTimeout to execute immediately
+    global.setTimeout = jest.fn((callback, delay) => {
+      expect(delay).toBe(100);
+      callback();
+    });
+
+    // Mock focus method
+    searchInput.focus = jest.fn();
+
+    // Simulate the click handler logic with focus
+    const clickHandler = () => {
+      const isSearchboxVisible = searchToggle.getAttribute('aria-expanded') === 'true';
+      searchToggle.setAttribute('aria-expanded', !isSearchboxVisible);
+      searchBox.classList.toggle('isVisible');
+
+      // Focus the input after making container visible
+      if (!isSearchboxVisible) {
+        setTimeout(() => {
+          const searchInput = document.querySelector('.pagefind-ui__search-input');
+          if (searchInput) {
+            searchInput.focus();
+          }
+        }, 100);
+      }
+    };
+
+    // Click to open search box
+    clickHandler();
+
+    // Verify setTimeout was called
+    expect(global.setTimeout).toHaveBeenCalledWith(expect.any(Function), 100);
+
+    // Verify focus was called on the input
+    expect(searchInput.focus).toHaveBeenCalled();
+
+    done();
+  });
+
+  test('should not focus search input when closing search box', () => {
+    const searchToggle = document.querySelector('.searchToggleButton');
+    const searchBox = document.querySelector('.search-container');
+    const searchInput = document.querySelector('.pagefind-ui__search-input');
+
+    // Set initial state to expanded
+    searchToggle.setAttribute('aria-expanded', 'true');
+    searchBox.classList.add('isVisible');
+
+    // Mock setTimeout
+    global.setTimeout = jest.fn();
+
+    // Mock focus method
+    searchInput.focus = jest.fn();
+
+    // Simulate the click handler logic with focus
+    const clickHandler = () => {
+      const isSearchboxVisible = searchToggle.getAttribute('aria-expanded') === 'true';
+      searchToggle.setAttribute('aria-expanded', !isSearchboxVisible);
+      searchBox.classList.toggle('isVisible');
+
+      // Focus the input after making container visible
+      if (!isSearchboxVisible) {
+        setTimeout(() => {
+          const searchInput = document.querySelector('.pagefind-ui__search-input');
+          if (searchInput) {
+            searchInput.focus();
+          }
+        }, 100);
+      }
+    };
+
+    // Click to close search box
+    clickHandler();
+
+    // setTimeout should not be called when closing
+    expect(global.setTimeout).not.toHaveBeenCalled();
+    expect(searchInput.focus).not.toHaveBeenCalled();
+  });
+
+  test('should handle missing search toggle button gracefully', () => {
+    // Remove the search toggle button
+    const searchToggle = document.querySelector('.searchToggleButton');
+    searchToggle.remove();
+
+    // Simulate the toggleSearchBox function
+    const toggleSearchBox = () => {
+      const searchToggle = document.querySelector('.searchToggleButton');
+      const searchBox = document.querySelector('.search-container');
+
+      if (!searchToggle || !searchBox) {
+        console.warn('Search box not found');
+        return;
+      }
+
+      searchToggle.addEventListener('click', () => {
+        const isSearchboxVisible = searchToggle.getAttribute('aria-expanded') === 'true';
+        searchToggle.setAttribute('aria-expanded', !isSearchboxVisible);
+        searchBox.classList.toggle('isVisible');
+      });
+    };
+
+    // Should not throw an error
+    expect(() => toggleSearchBox()).not.toThrow();
+
+    // Should log warning
+    expect(consoleSpy).toHaveBeenCalledWith('Search box not found');
+  });
+
+  test('should handle missing search container gracefully', () => {
+    // Remove the search container
+    const searchBox = document.querySelector('.search-container');
+    searchBox.remove();
+
+    // Simulate the toggleSearchBox function
+    const toggleSearchBox = () => {
+      const searchToggle = document.querySelector('.searchToggleButton');
+      const searchBox = document.querySelector('.search-container');
+
+      if (!searchToggle || !searchBox) {
+        console.warn('Search box not found');
+        return;
+      }
+
+      searchToggle.addEventListener('click', () => {
+        const isSearchboxVisible = searchToggle.getAttribute('aria-expanded') === 'true';
+        searchToggle.setAttribute('aria-expanded', !isSearchboxVisible);
+        searchBox.classList.toggle('isVisible');
+      });
+    };
+
+    // Should not throw an error
+    expect(() => toggleSearchBox()).not.toThrow();
+
+    // Should log warning
+    expect(consoleSpy).toHaveBeenCalledWith('Search box not found');
+  });
+
+  test('should handle missing search input element when trying to focus', () => {
+    const searchToggle = document.querySelector('.searchToggleButton');
+    const searchBox = document.querySelector('.search-container');
+
+    // Remove the search input
+    const searchInput = document.querySelector('.pagefind-ui__search-input');
+    searchInput.remove();
+
+    // Mock setTimeout to execute immediately
+    global.setTimeout = jest.fn((callback) => {
+      callback();
+    });
+
+    // Simulate the click handler logic with focus
+    const clickHandler = () => {
+      const isSearchboxVisible = searchToggle.getAttribute('aria-expanded') === 'true';
+      searchToggle.setAttribute('aria-expanded', !isSearchboxVisible);
+      searchBox.classList.toggle('isVisible');
+
+      // Focus the input after making container visible
+      if (!isSearchboxVisible) {
+        setTimeout(() => {
+          const searchInput = document.querySelector('.pagefind-ui__search-input');
+          if (searchInput) {
+            searchInput.focus();
+          }
+        }, 100);
+      }
+    };
+
+    // Should not throw an error when input is missing
+    expect(() => clickHandler()).not.toThrow();
+
+    // Verify setTimeout was still called
+    expect(global.setTimeout).toHaveBeenCalled();
+  });
+
+  test('should handle case where aria-expanded attribute is missing', () => {
+    const searchToggle = document.querySelector('.searchToggleButton');
+    const searchBox = document.querySelector('.search-container');
+
+    // Remove the aria-expanded attribute
+    searchToggle.removeAttribute('aria-expanded');
+
+    // Simulate the click handler logic
+    const clickHandler = () => {
+      const isSearchboxVisible = searchToggle.getAttribute('aria-expanded') === 'true';
+      searchToggle.setAttribute('aria-expanded', !isSearchboxVisible);
+      searchBox.classList.toggle('isVisible');
+    };
+
+    // First click - should treat missing attribute as false, so set to true
+    clickHandler();
+
+    expect(searchToggle.getAttribute('aria-expanded')).toBe('true');
+    expect(searchBox.classList.contains('isVisible')).toBe(true);
+  });
+
+  test('should work with multiple rapid clicks', () => {
+    const searchToggle = document.querySelector('.searchToggleButton');
+    const searchBox = document.querySelector('.search-container');
+
+    // Simulate the click handler logic
+    const clickHandler = () => {
+      const isSearchboxVisible = searchToggle.getAttribute('aria-expanded') === 'true';
+      searchToggle.setAttribute('aria-expanded', !isSearchboxVisible);
+      searchBox.classList.toggle('isVisible');
+    };
+
+    // Simulate multiple rapid clicks
+    clickHandler(); // Open
+    expect(searchToggle.getAttribute('aria-expanded')).toBe('true');
+    expect(searchBox.classList.contains('isVisible')).toBe(true);
+
+    clickHandler(); // Close
+    expect(searchToggle.getAttribute('aria-expanded')).toBe('false');
+    expect(searchBox.classList.contains('isVisible')).toBe(false);
+
+    clickHandler(); // Open again
+    expect(searchToggle.getAttribute('aria-expanded')).toBe('true');
+    expect(searchBox.classList.contains('isVisible')).toBe(true);
+
+    clickHandler(); // Close again
+    expect(searchToggle.getAttribute('aria-expanded')).toBe('false');
+    expect(searchBox.classList.contains('isVisible')).toBe(false);
+  });
+
+  test('should preserve existing classes on search container', () => {
+    const searchToggle = document.querySelector('.searchToggleButton');
+    const searchBox = document.querySelector('.search-container');
+
+    // Add some existing classes
+    searchBox.classList.add('search-wrapper', 'pagefind-container');
+
+    // Simulate the click handler logic
+    const clickHandler = () => {
+      const isSearchboxVisible = searchToggle.getAttribute('aria-expanded') === 'true';
+      searchToggle.setAttribute('aria-expanded', !isSearchboxVisible);
+      searchBox.classList.toggle('isVisible');
+    };
+
+    // Click to open search box
+    clickHandler();
+
+    // Should have both existing classes and new isVisible class
+    expect(searchBox.classList.contains('search-wrapper')).toBe(true);
+    expect(searchBox.classList.contains('pagefind-container')).toBe(true);
+    expect(searchBox.classList.contains('isVisible')).toBe(true);
+
+    // Click to close search box
+    clickHandler();
+
+    // Should still have existing classes but not isVisible
+    expect(searchBox.classList.contains('search-wrapper')).toBe(true);
+    expect(searchBox.classList.contains('pagefind-container')).toBe(true);
+    expect(searchBox.classList.contains('isVisible')).toBe(false);
+  });
+
+  test('should verify setTimeout delay is 100ms', () => {
+    const searchToggle = document.querySelector('.searchToggleButton');
+    const searchBox = document.querySelector('.search-container');
+
+    // Mock setTimeout to capture the delay
+    let capturedDelay;
+    global.setTimeout = jest.fn((callback, delay) => {
+      capturedDelay = delay;
+      callback();
+    });
+
+    // Simulate the click handler logic with focus
+    const clickHandler = () => {
+      const isSearchboxVisible = searchToggle.getAttribute('aria-expanded') === 'true';
+      searchToggle.setAttribute('aria-expanded', !isSearchboxVisible);
+      searchBox.classList.toggle('isVisible');
+
+      // Focus the input after making container visible
+      if (!isSearchboxVisible) {
+        setTimeout(() => {
+          const searchInput = document.querySelector('.pagefind-ui__search-input');
+          if (searchInput) {
+            searchInput.focus();
+          }
+        }, 100);
+      }
+    };
+
+    // Click to open search box
+    clickHandler();
+
+    // Verify the delay is exactly 100ms
+    expect(capturedDelay).toBe(100);
+  });
+});

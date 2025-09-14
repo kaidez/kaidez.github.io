@@ -37,19 +37,19 @@
     }
 
     function toggleMobileMenu() {
-        const menuToggle = document.querySelector('.mobile-menu-icon');
-        const mobileMenu = document.querySelector('.site-nav ul');
-        
-        if (!menuToggle || !mobileMenu) {
-            console.warn('Mobile menu elements not found');
-            return;
-        }
-        
-        menuToggle.addEventListener('click', () => {
-            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-            menuToggle.setAttribute('aria-expanded', !isExpanded);
-            mobileMenu.classList.toggle('isVisible');
-        });
+      const menuToggle = document.querySelector('.mobile-menu-icon');
+      const mobileMenu = document.querySelector('.site-nav ul');
+      
+      if (!menuToggle || !mobileMenu) {
+          console.warn('Mobile menu elements not found');
+          return;
+      }
+      
+      menuToggle.addEventListener('click', () => {
+          const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+          menuToggle.setAttribute('aria-expanded', !isExpanded);
+          mobileMenu.classList.toggle('isVisible');
+      });
     }
 
     function toggleSearchBox() {
@@ -77,7 +77,6 @@
             }
         });
     }
-
 
     // Initialize all functionality
     function init() {
