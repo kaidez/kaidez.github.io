@@ -976,9 +976,9 @@ svg {
   .search-container.isVisible  {
     display: inline;
     margin: 10px auto;
-    width: 100%;
+    width: 96%;
     position: absolute;
-    top: 128%;
+    top: 118%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin-right: 0px;
