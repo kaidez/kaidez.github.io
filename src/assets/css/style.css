@@ -294,6 +294,11 @@ svg {
   text-decoration: none;
 }
 
+.searchToggleButton {
+  z-index: 200;
+  cursor: pointer;
+}
+
 /* Hero Section */
 .hero {
   padding: var(--space-20) 0;

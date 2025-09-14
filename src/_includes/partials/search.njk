@@ -20,7 +20,7 @@
         // Check if PagefindUI is available
         if (typeof PagefindUI === 'undefined') {
             console.error('PagefindUI not found - creating fallback input');
-            searchElement.innerHTML = '<input type="text" placeholder="Search kaidez" style="width: 100%; padding: 12px; border: 2px solid #ccc; border-radius: 8px; font-size: 16px; pointer-events: auto;">';
+          searchElement.innerHTML = '<input type="text" placeholder="" style="width: 100%; padding: 12px; border: 2px solid #ccc; border-radius: 8px; font-size: 16px; pointer-events: auto;">';
             return;
         }
         
@@ -34,7 +34,7 @@
                 showSubResults: true,
                 excerptLength: 15,
                 translations: {
-                  placeholder: "Search kaidez...",
+                  placeholder: "",
                   zero_results: "Couldn't find [SEARCH_TERM]"
                 }
             });
@@ -60,8 +60,16 @@
 <style>
 /* Simple search styling */
 .search-container {
-    width: 295px;
-    border-radius: 4px;
+  display: none;
+}
+
+.search-container.isVisible  {
+  display: inline;
+  width: 666px;
+  border-radius: 4px;
+  position: absolute;
+  top: 7px;
+  margin-right: 0px;
 }
 
 .pagefind-search {
@@ -82,6 +90,10 @@
     min-height: 20px !important;
     display: block !important;
     visibility: visible !important;
+}
+
+.pagefind-ui__form.svelte-e9gkc3:before {
+  display: none;
 }
 
 .pagefind-ui__search-input:focus {

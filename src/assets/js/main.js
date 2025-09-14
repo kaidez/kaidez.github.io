@@ -52,10 +52,30 @@
         });
     }
 
+    function toggleSearchBox() {
+        const searchToggle = document.querySelector('.searchToggleButton');
+        const searchBox = document.querySelector('.search-container');
+        
+        if (!searchToggle || !searchBox) {
+            console.warn('Search box not found');
+            return;
+        }
+        
+        searchToggle.addEventListener('click', () => {
+            const isExpanded = searchToggle.getAttribute('aria-expanded') === 'true';
+            searchToggle.setAttribute('aria-expanded', !isExpanded);
+            document.querySelector('.search-container').focus();
+            searchBox.classList.toggle('isVisible');
+        });
+    }
+
+
     // Initialize all functionality
     function init() {
         copyrightYear();
         toggleMobileMenu();
+        initializePagefind();
+        toggleSearchBox();
     }
     
     // Ensure DOM is loaded
