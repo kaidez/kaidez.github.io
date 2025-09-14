@@ -68,12 +68,12 @@
 
             // Focus the input after making container visible
             if (!isSearchboxVisible) {
-                setTimeout(() => {
-                    const searchInput = document.querySelector('.pagefind-ui__search-input');
-                    if (searchInput) {
-                        searchInput.focus();
-                    }
-                }, 100);
+              setTimeout(() => {
+                const searchInput = document.querySelector('.pagefind-ui__search-input');
+                if (searchInput) {
+                  searchInput.focus();
+                }
+              }, 100);
             }
         });
     }
