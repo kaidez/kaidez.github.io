@@ -215,7 +215,7 @@ time {
 .site-header {
   border-bottom: 1px solid var(--color-border);
   background-color: var(--color-kaidez-supreme-red);
-  position: sticky;
+  /* position: sticky; ---may bring this back */
   top: 0;
   z-index: 100;
   backdrop-filter: blur(10px);
@@ -972,6 +972,18 @@ svg {
     right: 78px;
     bottom: 12px;
   }
+
+  .search-container.isVisible  {
+    display: inline;
+    margin: 10px auto;
+    width: 100%;
+    position: absolute;
+    top: 128%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-right: 0px;
+  }
+
 
   .fa-ellipsis {
     margin-top: 0px;
