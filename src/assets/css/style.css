@@ -35,7 +35,7 @@
   --text-sm: 0.875rem;
   --text-base: 1rem;
   --text-lg: 1.125rem;
-  --text-xl: 1.25rem;
+  3: 1.25rem;
   --text-2xl: 1.5rem;
   --text-3xl: 1.875rem;
   --text-4xl: 2.25rem;
@@ -180,7 +180,6 @@ h6 {
 
 p {
   margin-bottom: var(--space-4);
-  max-width: var(--max-width-prose);
 }
 
 a {
@@ -835,9 +834,6 @@ svg {
   margin-bottom: 2px;
 }
 
-
-
-
 .error-404-pronunciation {
   margin-bottom: var(--space-2);
 }
@@ -966,6 +962,15 @@ svg {
     font-weight: 600;
     top: 29px;
     left: 6px;
+  }
+
+  .searchToggleButton {
+    font-size: var(--text-3xl);
+    font-weight: 900;
+    color: var(--color-white);
+    position: relative;
+    right: 78px;
+    bottom: 12px;
   }
 
   .fa-ellipsis {
