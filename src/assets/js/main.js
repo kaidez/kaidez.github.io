@@ -62,12 +62,12 @@
         }
 
         searchToggle.addEventListener('click', () => {
-            const isExpanded = searchToggle.getAttribute('aria-expanded') === 'true';
-            searchToggle.setAttribute('aria-expanded', !isExpanded);
+            const isSearchboxVisible = searchToggle.getAttribute('aria-expanded') === 'true';
+            searchToggle.setAttribute('aria-expanded', !isSearchboxVisible);
             searchBox.classList.toggle('isVisible');
 
             // Focus the input after making container visible
-            if (!isExpanded) {
+            if (!isSearchboxVisible) {
                 setTimeout(() => {
                     const searchInput = document.querySelector('.pagefind-ui__search-input');
                     if (searchInput) {
