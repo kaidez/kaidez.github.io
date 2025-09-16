@@ -49,7 +49,7 @@
   {% include "partials/googleAnalytics.njk" %}
 </head>
 
-<body data-categories='{{ category | dump | safe }}'> <!-- custom data- attribute that holds the post's category name -->
+<body data-category='{{ category | dump | safe }}'>
   <a name="main-content"></a>
   {% include "partials/header.njk" %}
   <div class="post-tag-and-category-container">
@@ -59,11 +59,6 @@
 
     <div class="post-tag-container">
       tags:
-
-      {# {%- for tag in tags -%}
-        <a href="/tags/{{ tag }}/" class="post-tag-or-category">{{ tag }}</a>
-        {%- if not loop.last %}, {% endif %}
-      {%- endfor -%} #}
     
     {%- if secondary_tags and secondary_tags.length > 0 -%}
     {%- for secondary_tags in secondary_tags -%}
@@ -73,14 +68,10 @@
     </div>
   </div>
 
-  <main class="post-content" data-pagefind-body>
+  <main class="post-content">
     <h1 class="post-title">{{ title }}</h1>
-    {# <time datetime="{{ date | htmlDateString }}">
-      {{ date | readableDate }}
-    </time> #}
     <img src="/assets/img/{{ image }}" alt="image for '{{ title }}' post" class="header-image " />
     {{ content | safe }}
-    {# {% if image %} #}
     {% if related %}
       <aside class="related-posts">
         <h2 class="related-posts-header">related posts</h2>
@@ -95,25 +86,13 @@
     {% endif %}
   </main>
 
-  {# {% include "partials/footer.njk" %}
-
   <script src="/assets/js/relatedPosts.js"></script>
   <script>
     window.pageData = {
       category: "{{ category }}"
     };
-  </script> #}
-
-
-  <!--
-  <script>
-    // The `category` array is injected directly into the script.
-    // We use JSON.stringify to safely convert the array to a string.
-    window.pageData = {
-        category: {{ category | dump | safe }}
-    };
   </script>
-  -->
+
   {% include "partials/footer.njk" %}
   <script src="/assets/js/main.js"></script>
   <!-- Prism.js for syntax highlighting -->
