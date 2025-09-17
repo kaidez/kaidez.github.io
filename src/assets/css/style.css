@@ -488,7 +488,6 @@ svg {
 
 .footer-colophon-item {
   flex: 1; /* Makes columns take up equal available space */
-  padding: 15px;
 }
 
 
