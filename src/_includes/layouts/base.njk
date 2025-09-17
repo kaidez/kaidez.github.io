@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if title %}{{ title }} - {% endif %}{{ site.title }}</title>
+  <title>{% if title %}{{ title }} - {% endif %}{{ site.title }}</title>
   <meta name="description" content="{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}{% endif %}">
 
   <!-- Open Graph -->
@@ -17,7 +17,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 
   <!-- Preload critical resources -->
   <link rel="preload" href="/assets/css/style.css" as="style">
@@ -32,7 +33,8 @@
 
   <meta property="article:publisher" content="https://facebook.com/kaidezblog" />
   <meta property="article:section" content="Web Development" />
-  <meta property="og:image" content="https://kaidez.com/assets/img/{% if image %}{{ image }}{% else %}default-og.jpg{% endif %}" />
+  <meta property="og:image"
+    content="https://kaidez.com/assets/img/{% if image %}{{ image }}{% else %}default-og.jpg{% endif %}" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}" />
@@ -40,7 +42,8 @@
   <meta name="twitter:site" content="@kaidez" />
   <meta name="twitter:creator" content="@kaidez" />
   <meta name="twitter:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}" />
-  <meta name="twitter:image" content="https://kaidez.com/assets/img/{% if image %}{{ image }}{% else %}default-og.jpg{% endif %}" />
+  <meta name="twitter:image"
+    content="https://kaidez.com/assets/img/{% if image %}{{ image }}{% else %}default-og.jpg{% endif %}" />
   <meta name="twitter:description" content="{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}{% endif %}" />
   {% include "partials/JSON-LD.njk" %}
   {% include "partials/googleAnalytics.njk" %}
@@ -50,14 +53,14 @@
   <a name="main-content"></a>
   {% include "partials/header.njk" %}
 
-   
-    <main class="main-content" role="main" aria-label="Main content">
-        {{ content | safe }}
-    </main>
 
-    {% include "partials/footer.njk" %}
+  <main class="main-content" role="main" aria-label="Main content">
+    {{ content | safe }}
+  </main>
 
-    <script src="/assets/js/main.js" defer></script>
+  {% include "partials/footer.njk" %}
+
+  <script src="/assets/js/main.js" defer></script>
 
 </body>
 

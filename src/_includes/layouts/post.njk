@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if title %}{{ title }} - {% endif %}{{ site.title }}</title>
+  <title>{% if title %}{{ title }} - {% endif %}{{ site.title }}</title>
   <meta name="description" content="{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}{% endif %}">
 
   <!-- Open Graph -->
@@ -17,7 +17,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
@@ -49,18 +50,18 @@
   <a name="main-content"></a>
   {% include "partials/header.njk" %}
   <div class="post-tag-and-category-container">
-      <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
-      <span class="post-date-separator">|</span>
-      <a href="/{{ tags }}" class="post-tag-or-category post-category">{{ category }}</a>  
+    <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+    <span class="post-date-separator">|</span>
+    <a href="/{{ tags }}" class="post-tag-or-category post-category">{{ category }}</a>
 
     <div class="post-tag-container">
       tags:&nbsp;
-    
-    {%- if secondary_tags and secondary_tags.length > 0 -%}
-    {%- for secondary_tags in secondary_tags -%}
+
+      {%- if secondary_tags and secondary_tags.length > 0 -%}
+      {%- for secondary_tags in secondary_tags -%}
       <a href="/tags/{{ secondary_tags }}/" class="post-tag-or-category">{{ secondary_tags }}</a>
-    {%- endfor -%}
-    {%- endif -%}
+      {%- endfor -%}
+      {%- endif -%}
     </div>
   </div>
 
@@ -71,9 +72,9 @@
 
     <aside class="related-posts" role="complementary" aria-labelledby="related-posts-heading">
       <h2 id="related-posts-heading" class="related-posts-header">Related Posts</h2>
-          <ul role="list">
-            {{ relatedPosts(category, page.url, collections.posts, 3) | safe }}
-          </ul>
+      <ul role="list">
+        {{ relatedPosts(category, page.url, collections.posts, 3) | safe }}
+      </ul>
     </aside>
 
   </main>

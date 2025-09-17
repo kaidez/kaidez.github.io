@@ -6,26 +6,27 @@ permalink: "404.html"
 <a name="main-content"></a>
 <main class="container">
   <h1 class="sr-only">404 Error - Page Not Found</h1>
-  
+
   <article class="error-404-content">
-    <img src="/assets/img/404.jpg" alt="404 error illustration" class="error-404-image"/>
-    
+    <img src="/assets/img/404.jpg" alt="404 error illustration" class="error-404-image" />
+
     <div class="error-404-text">
       <header>
         <h2 class="error-404-header">Moved to Atlanta</h2>
         <p class="error-404-pronunciation"><i>(/muvd tu at-lan-tuh/)</i></p>
         <p class="error-404-word-type"><strong>verb phrase</strong></p>
       </header>
-      
+
       <div class="error-404-definition">
-        <p><i>def. - </i>a slang term for when a page generates a <span class="error-404-description-text">404 - page not found</span> error...like this one has. "404" refers to the area code for Atlanta, Georgia. (USA).</p>
+        <p><i>def. - </i>a slang term for when a page generates a <span class="error-404-description-text">404 - page
+            not found</span> error...like this one has. "404" refers to the area code for Atlanta, Georgia. (USA).</p>
       </div>
-      
+
       <p>Since you're here, I'd like you to look around my site.</p>
       <p>The last thing I wrote was
         {% set postslist = collections.posts %}
-          {% if postslist.length %}
-            <a href="{{ postslist[0].url }}">{{ postslist[0].data.title }}</a>{% endif %}. You may want to check it out.
+        {% if postslist.length %}
+        <a href="{{ postslist[0].url }}">{{ postslist[0].data.title }}</a>{% endif %}. You may want to check it out.
       </p>
       <p>I also have blog posts broken down by category:</p>
       <nav class="error-404-navigation" aria-label="Error page navigation">
