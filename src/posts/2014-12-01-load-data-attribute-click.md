@@ -27,7 +27,7 @@ Table of Contents
 
 <h2>How data attributes work</h2>
 
-Data attributes are customizable attributes that store data in page elements.  They're written as <code>data-&lt;name&gt;</code>, where the `<name>` value can be any text string you choose:
+Data attributes are customizable attributes that store data in page elements.  They're written as <code>data-&lt;name&gt;</code>, where `<name>` can be any text string you choose:
 <pre><code class="language-markup">
 &lt;div id="teamInfo"
      data-team="Chelsea FC"

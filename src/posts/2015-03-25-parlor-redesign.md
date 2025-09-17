@@ -62,7 +62,7 @@ Managing search engine optimization is pretty easy with WordPress. It's SEO-read
 
 But Parlor is a local business and there are other hair salons in the area competing for the same dollar. So placing higher in search results isn't easy: a local SEO strategy was required.
 
-We spent some time reviewing what other salons were doing for their websites, SEO-wise. And while some dropped the ball completely, there were much more that were doing things right then wrong.
+We spent some time reviewing what other salons were doing for their websites, SEO-wise. And while some dropped the ball completely, there were much more that were doing things right than wrong.
 
 We looked at their web presence and code to see where we can better them. I'm not going to go into great detail about what we did because, well, competition is competition.
 
