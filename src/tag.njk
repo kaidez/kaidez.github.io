@@ -41,8 +41,6 @@ permalink: /tags/{{ tagName }}/
             
             {% if post.data.excerpt %}
             <p class="post-excerpt">{{ post.data.excerpt }}</p>
-            {% else %}
-            <p class="post-excerpt">{{ post.templateContent | excerpt }}</p>
             {% endif %}
         </article>
         {% endfor %}
