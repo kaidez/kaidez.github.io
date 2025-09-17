@@ -11,13 +11,19 @@ async function getPostData(url) {
     const pageCategory = await window.pageData.category;
     const postsByCategory = data.filter(post => post.category.toLowerCase() === pageCategory.toLowerCase());
     const filterByLegacyTag = postsByCategory.filter(post => !post.secondary_tags.includes('legacy'));
-    const getRelatedPosts = filterByLegacyTag.length < 3 ? getRandomIndexes(postsByCategory) : getRandomIndexes(filterByLegacyTag);
+
+    // Use the appropriate array based on availability
+    const postsToUse = filterByLegacyTag.length >= 3 ? filterByLegacyTag : postsByCategory;
+    const randomIndexes = getRandomIndexes(postsToUse);
 
     const relatedPostsContainer = document.querySelector('.related-posts ul');
 
-    getRelatedPosts.forEach(postIndex => {
-      relatedPostsContainer.insertAdjacentHTML("beforeend", `<li><a href="${filterByLegacyTag[postIndex].url}">${filterByLegacyTag[postIndex].title}</a></li>`);
-    });
+    // Build HTML string first, then insert once
+    const htmlString = randomIndexes
+      .map(index => `<li><a href="${postsToUse[index].url}">${postsToUse[index].title}</a></li>`)
+      .join('');
+
+    relatedPostsContainer.insertAdjacentHTML("beforeend", htmlString);
 
   } catch (error) {
     console.error('Error fetching data:', error);

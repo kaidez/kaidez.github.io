@@ -10,8 +10,7 @@ module.exports = {
   collectCoverageFrom: [
     'src/assets/js/**/*.js',
     '!src/assets/js/**/*.min.js',
-    '!src/assets/js/prism.js',
-    '!src/assets/js/relatedPosts.js'
+    '!src/assets/js/prism.js'
   ],
   setupFilesAfterEnv: [],
   verbose: true
