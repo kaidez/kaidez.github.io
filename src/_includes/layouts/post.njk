@@ -53,11 +53,11 @@
       <a href="/{{ tags }}" class="post-tag-or-category post-category">{{ category }}</a>  
 
     <div class="post-tag-container">
-      tags:
+      tags:&nbsp;
     
     {%- if secondary_tags and secondary_tags.length > 0 -%}
     {%- for secondary_tags in secondary_tags -%}
-      <a  href="/tags/{{ secondary_tags }}/" class="post-tag-or-category">{{ secondary_tags }}</a>
+      <a href="/tags/{{ secondary_tags }}/" class="post-tag-or-category">{{ secondary_tags }}</a>
     {%- endfor -%}
     {%- endif -%}
     </div>
