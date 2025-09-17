@@ -9,7 +9,7 @@ tags: [reviews]
 secondary_tags: ["conferences"]
 category: Reviews
 ---
-*Correction: In a previous version of this article, Farrah Bostic was incorrectly identified as Kristin Volk in a photo caption, and vice versa. All of the opening statistics, starting with “only 30% of the mobile users have a smartphone,” were incorrectly attributed to coming from Kristen Volk only).*
+(*Correction: In a previous version of this article, Farrah Bostic was incorrectly identified as Kristin Volk in a photo caption, and vice versa. All of the opening statistics, starting with “only 30% of the mobile users have a smartphone,” were incorrectly attributed to coming from Kristen Volk only).*
 
 As mentioned in my last post, a friend at JWT got me into the top two panels for [NYC Social Media Week 2011][1]: the social listening one, titled **“Pay Attention! Social Listening Done Right;”** and the mobile promotion one, titled **Cross-Mobile Brand Strategy**.
 
