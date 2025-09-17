@@ -44,7 +44,7 @@ module.exports = function(eleventyConfig) {
   // Syntax highlighting plugin for code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
 
-  
+
 // Add collection for blog posts
 eleventyConfig.addCollection("posts", function(collectionApi) {
   return collectionApi.getFilteredByGlob("src/posts/*.md").reverse();
@@ -131,31 +131,6 @@ eleventyConfig.addCollection("codingBestPractices", function(collectionApi) {
     });
   });
 
-  // Pagefind build hook
-  eleventyConfig.on('eleventy.after', async ({ dir, results, runMode, outputMode }) => {
-    // Only run Pagefind in build mode, not serve mode
-    if (runMode === 'build') {
-      try {
-        console.log('[11ty] Running Pagefind indexing...');
-        console.log('[11ty] Output directory:', dir.output);
-        execSync(`npx pagefind --site ${dir.output} --verbose`, { stdio: 'inherit' });
-        console.log('[11ty] Pagefind indexing complete!');
-        
-        // Check if files were created
-        const fs = require('fs');
-        const pagefindDir = `${dir.output}/pagefind`;
-        if (fs.existsSync(pagefindDir)) {
-          const files = fs.readdirSync(pagefindDir);
-          console.log('[11ty] Pagefind files created:', files);
-        } else {
-          console.log('[11ty] Warning: Pagefind directory not found');
-        }
-      } catch (error) {
-        console.error('[11ty] Pagefind indexing failed:', error.message);
-      }
-    }
-  });
-
   // XML Sitemap configuration
   eleventyConfig.addPlugin(sitemap, {
     sitemap: {
@@ -163,9 +138,6 @@ eleventyConfig.addCollection("codingBestPractices", function(collectionApi) {
     },
   });
 
-  
-  
-  
   return {
     templateFormats: [
       "md",
