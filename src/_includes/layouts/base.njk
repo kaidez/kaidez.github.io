@@ -30,16 +30,17 @@
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
 
-  <meta property="article:publisher" content="http://facebook.com/kaidezblog" />
-  <meta property="article:section" content="Personal" />
-  <meta property="og:image" content="http://www.kaidez.com/assets/img/{{ image }}" />
-  <meta property="og:image:width" content="700" />
-  <meta property="og:image:height" content="300" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="article:publisher" content="https://facebook.com/kaidezblog" />
+  <meta property="article:section" content="Web Development" />
+  <meta property="og:image" content="https://kaidez.com/assets/img/{% if image %}{{ image }}{% else %}default-og.jpg{% endif %}" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@kaidez" />
   <meta name="twitter:creator" content="@kaidez" />
-  <meta name="twitter:title" content="{{ title }} » kaidez" />
-  <meta name="twitter:image" content="http://www.kaidez.com/assets/img/{{ image }}" />
+  <meta name="twitter:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}" />
+  <meta name="twitter:image" content="https://kaidez.com/assets/img/{% if image %}{{ image }}{% else %}default-og.jpg{% endif %}" />
   <meta name="twitter:description" content="{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}{% endif %}" />
   {% include "partials/JSON-LD.njk" %}
   {% include "partials/googleAnalytics.njk" %}
@@ -50,7 +51,7 @@
   {% include "partials/header.njk" %}
 
    
-    <main class="main-content">
+    <main class="main-content" role="main" aria-label="Main content">
         {{ content | safe }}
     </main>
 

@@ -1106,6 +1106,16 @@ svg {
   z-index: 1000;
 }
 
+/* Enhanced focus indicators for WCAG compliance */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 3px solid #4A90E2;
+  outline-offset: 2px;
+}
+
 .skip-link:focus {
   top: 6px;
 }
