@@ -45,7 +45,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
 
   
-  
 // Add collection for blog posts
 eleventyConfig.addCollection("posts", function(collectionApi) {
   return collectionApi.getFilteredByGlob("src/posts/*.md").reverse();
