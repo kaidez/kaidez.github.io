@@ -1,22 +1,25 @@
 module.exports = function(eleventyConfig) {
   eleventyConfig.addNunjucksGlobal("relatedPosts", function(currentCategory, currentUrl, allPosts, count = 3) {
-    // Simple validation
-    if (!currentCategory || !currentUrl || !allPosts) {
+    // Simple validation - allow empty string but not null/undefined
+    if (currentCategory === null || currentCategory === undefined || !currentUrl || !allPosts) {
       return '';
     }
 
-    const categoryLower = currentCategory.toLowerCase();
+    const categoryLower = String(currentCategory).toLowerCase();
 
     // Filter posts by same category, excluding current post
     const postsByCategory = allPosts.filter(post =>
-      post.data.category &&
-      post.data.category.toLowerCase() === categoryLower &&
+      post.data.category !== undefined &&
+      post.data.category !== null &&
+      String(post.data.category).toLowerCase() === categoryLower &&
       post.url !== currentUrl
     );
 
     // Filter out legacy posts if we have enough non-legacy posts
     const nonLegacyPosts = postsByCategory.filter(post =>
-      !post.data.secondary_tags || !post.data.secondary_tags.includes('legacy')
+      !post.data.secondary_tags ||
+      !Array.isArray(post.data.secondary_tags) ||
+      !post.data.secondary_tags.includes('legacy')
     );
 
     // Use non-legacy posts if we have enough, otherwise fall back to all posts in category

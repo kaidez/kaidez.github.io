@@ -2,7 +2,7 @@ const { execSync } = require('child_process');
 const moment = require("moment");
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const relatedPostsPlugin = require("./src/_includes/relatedPosts");
+const relatedPostsPlugin = require("./src/config/plugins/relatedPosts");
 
 module.exports = function(eleventyConfig) {
 

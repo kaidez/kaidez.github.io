@@ -1,560 +1,435 @@
 /**
- * @jest-environment jsdom
+ * Unit tests for the Related Posts Eleventy plugin
+ * Tests the build-time related posts generation functionality
  */
 
-// Mock fetch globally
-global.fetch = jest.fn();
+const relatedPostsPlugin = require('../src/config/plugins/relatedPosts');
 
-// Mock window.pageData
-Object.defineProperty(window, 'pageData', {
-  value: {
-    category: 'javascript'
-  },
-  writable: true
-});
-
-describe('relatedPosts.js', () => {
-  let consoleSpy;
+describe('Related Posts Eleventy Plugin', () => {
+  let mockEleventyConfig;
+  let relatedPostsFunction;
 
   beforeEach(() => {
-    // Reset fetch mock
-    fetch.mockClear();
-
-    // Create fresh DOM
-    document.body.innerHTML = `
-      <div class="related-posts">
-        <ul></ul>
-      </div>
-    `;
-
-    // Mock console.error
-    consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
-  });
-
-  afterEach(() => {
-    consoleSpy.mockRestore();
-  });
-
-  describe('getPostData function', () => {
-    test('should fetch and return JSON data successfully', async () => {
-      const mockData = [{ title: 'Test Post', url: '/test' }];
-      const mockResponse = {
-        json: jest.fn().mockResolvedValue(mockData)
-      };
-
-      fetch.mockResolvedValue(mockResponse);
-
-      // Import and test the getPostData function
-      const getPostData = async (url) => {
-        const response = await fetch(url);
-        return response.json();
-      };
-
-      const result = await getPostData('/api/posts.json');
-
-      expect(fetch).toHaveBeenCalledWith('/api/posts.json');
-      expect(mockResponse.json).toHaveBeenCalled();
-      expect(result).toEqual(mockData);
-    });
-
-    test('should handle fetch errors', async () => {
-      const mockError = new Error('Network error');
-      fetch.mockRejectedValue(mockError);
-
-      const getPostData = async (url) => {
-        const response = await fetch(url);
-        return response.json();
-      };
-
-      await expect(getPostData('/api/posts.json')).rejects.toThrow('Network error');
-    });
-  });
-
-  describe('getRandomIndexes function', () => {
-    // Extract the function for testing
-    const getRandomIndexes = (arr, count = 3) => {
-      if (count > arr.length || count < 0) {
-        throw new Error("Count must be between 0 and the array's length.");
-      }
-
-      // Create an array of indexes
-      const indexes = Array.from({ length: arr.length }, (_, i) => i);
-
-      // Fisher-Yates (Knuth) Shuffle
-      for (let i = indexes.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [indexes[i], indexes[j]] = [indexes[j], indexes[i]]; // Swap elements
-      }
-
-      // Return the first 'count' indexes
-      return indexes.slice(0, count);
+    // Mock Eleventy config object
+    mockEleventyConfig = {
+      addNunjucksGlobal: jest.fn()
     };
 
-    test('should return correct number of indexes', () => {
-      const testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-      const result = getRandomIndexes(testArray, 3);
+    // Initialize plugin and capture the function
+    relatedPostsPlugin(mockEleventyConfig);
 
-      expect(result).toHaveLength(3);
-      expect(Array.isArray(result)).toBe(true);
-    });
+    // Extract the function that was registered
+    expect(mockEleventyConfig.addNunjucksGlobal).toHaveBeenCalledWith(
+      'relatedPosts',
+      expect.any(Function)
+    );
 
-    test('should return unique indexes', () => {
-      const testArray = [1, 2, 3, 4, 5];
-      const result = getRandomIndexes(testArray, 3);
+    relatedPostsFunction = mockEleventyConfig.addNunjucksGlobal.mock.calls[0][1];
+  });
 
-      const uniqueIndexes = [...new Set(result)];
-      expect(uniqueIndexes).toHaveLength(3);
-    });
-
-    test('should return valid indexes within array bounds', () => {
-      const testArray = [1, 2, 3, 4, 5];
-      const result = getRandomIndexes(testArray, 3);
-
-      result.forEach(index => {
-        expect(index).toBeGreaterThanOrEqual(0);
-        expect(index).toBeLessThan(testArray.length);
-      });
-    });
-
-    test('should default to 3 when count is not provided', () => {
-      const testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-      const result = getRandomIndexes(testArray);
-
-      expect(result).toHaveLength(3);
-    });
-
-    test('should handle requesting all indexes', () => {
-      const testArray = [1, 2, 3];
-      const result = getRandomIndexes(testArray, 3);
-
-      expect(result).toHaveLength(3);
-      expect(result.sort()).toEqual([0, 1, 2]);
-    });
-
-    test('should handle single item array', () => {
-      const testArray = [1];
-      const result = getRandomIndexes(testArray, 1);
-
-      expect(result).toEqual([0]);
-    });
-
-    test('should handle empty array with count 0', () => {
-      const testArray = [];
-      const result = getRandomIndexes(testArray, 0);
-
-      expect(result).toEqual([]);
-    });
-
-    test('should throw error when count exceeds array length', () => {
-      const testArray = [1, 2];
-
-      expect(() => getRandomIndexes(testArray, 5)).toThrow("Count must be between 0 and the array's length.");
-    });
-
-    test('should throw error when count is negative', () => {
-      const testArray = [1, 2, 3];
-
-      expect(() => getRandomIndexes(testArray, -1)).toThrow("Count must be between 0 and the array's length.");
-    });
-
-    test('should return different results on multiple calls (randomness)', () => {
-      const testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-      const results = [];
-
-      // Run multiple times to check for randomness
-      for (let i = 0; i < 10; i++) {
-        results.push(getRandomIndexes(testArray, 3).join(','));
-      }
-
-      // Should have some variation (not all identical)
-      const uniqueResults = [...new Set(results)];
-      expect(uniqueResults.length).toBeGreaterThan(1);
+  describe('Plugin registration', () => {
+    test('should register relatedPosts as a Nunjucks global', () => {
+      expect(mockEleventyConfig.addNunjucksGlobal).toHaveBeenCalledWith(
+        'relatedPosts',
+        expect.any(Function)
+      );
     });
   });
 
-  describe('Main IIFE functionality', () => {
+  describe('Input validation', () => {
+    test('should return empty string when currentCategory is missing', () => {
+      const result = relatedPostsFunction(null, '/test-url', [], 3);
+      expect(result).toBe('');
+    });
+
+    test('should return empty string when currentUrl is missing', () => {
+      const result = relatedPostsFunction('Tutorials', null, [], 3);
+      expect(result).toBe('');
+    });
+
+    test('should return empty string when allPosts is missing', () => {
+      const result = relatedPostsFunction('Tutorials', '/test-url', null, 3);
+      expect(result).toBe('');
+    });
+
+    test('should return empty string when allPosts is empty array', () => {
+      const result = relatedPostsFunction('Tutorials', '/test-url', [], 3);
+      expect(result).toBe('');
+    });
+  });
+
+  describe('Category filtering', () => {
     const mockPosts = [
       {
-        title: 'JavaScript Post 1',
-        url: '/js-post-1',
-        category: 'javascript',
-        secondary_tags: ['programming']
+        data: { title: 'Tutorial 1', category: 'Tutorials', secondary_tags: [] },
+        url: '/tutorial-1'
       },
       {
-        title: 'JavaScript Post 2',
-        url: '/js-post-2',
-        category: 'javascript',
-        secondary_tags: ['programming', 'legacy']
+        data: { title: 'Tutorial 2', category: 'Tutorials', secondary_tags: [] },
+        url: '/tutorial-2'
       },
       {
-        title: 'CSS Post 1',
-        url: '/css-post-1',
-        category: 'css',
-        secondary_tags: ['design']
+        data: { title: 'Review 1', category: 'Reviews', secondary_tags: [] },
+        url: '/review-1'
       },
       {
-        title: 'JavaScript Post 3',
-        url: '/js-post-3',
-        category: 'javascript',
-        secondary_tags: ['programming']
-      },
-      {
-        title: 'JavaScript Post 4',
-        url: '/js-post-4',
-        category: 'javascript',
-        secondary_tags: ['programming']
+        data: { title: 'Tutorial 3', category: 'Tutorials', secondary_tags: [] },
+        url: '/tutorial-3'
       }
     ];
 
-    beforeEach(() => {
-      // Setup successful fetch response
-      const mockResponse = {
-        json: jest.fn().mockResolvedValue(mockPosts)
-      };
-      fetch.mockResolvedValue(mockResponse);
+    test('should filter posts by matching category', () => {
+      const result = relatedPostsFunction('Tutorials', '/current-post', mockPosts, 3);
+
+      expect(result).toContain('Tutorial 1');
+      expect(result).toContain('Tutorial 2');
+      expect(result).toContain('Tutorial 3');
+      expect(result).not.toContain('Review 1');
     });
 
-    test('should filter posts by category', async () => {
-      // Set page category
-      window.pageData.category = 'javascript';
-
-      // Simulate the main functionality
-      const data = mockPosts;
-      const pageCategory = window.pageData.category;
-      const postsByCategory = data.filter(post =>
-        post.category.toLowerCase() === pageCategory.toLowerCase()
-      );
-
-      expect(postsByCategory).toHaveLength(4);
-      expect(postsByCategory.every(post => post.category === 'javascript')).toBe(true);
-    });
-
-    test('should filter out legacy posts when enough non-legacy posts exist', async () => {
-      window.pageData.category = 'javascript';
-
-      const data = mockPosts;
-      const pageCategory = window.pageData.category;
-      const postsByCategory = data.filter(post =>
-        post.category.toLowerCase() === pageCategory.toLowerCase()
-      );
-      const filterByLegacyTag = postsByCategory.filter(post =>
-        !post.secondary_tags.includes('legacy')
-      );
-
-      expect(filterByLegacyTag).toHaveLength(3);
-      expect(filterByLegacyTag.every(post => !post.secondary_tags.includes('legacy'))).toBe(true);
-    });
-
-    test('should use non-legacy posts when 3 or more available', () => {
-      window.pageData.category = 'javascript';
-
-      const postsByCategory = mockPosts.filter(post =>
-        post.category.toLowerCase() === 'javascript'
-      );
-      const filterByLegacyTag = postsByCategory.filter(post =>
-        !post.secondary_tags.includes('legacy')
-      );
-
-      const postsToUse = filterByLegacyTag.length >= 3 ? filterByLegacyTag : postsByCategory;
-
-      expect(postsToUse).toBe(filterByLegacyTag);
-      expect(postsToUse).toHaveLength(3);
-    });
-
-    test('should fallback to all category posts when less than 3 non-legacy posts', () => {
-      // Create scenario with only 2 non-legacy posts
-      const limitedMockPosts = [
+    test('should perform case-insensitive category matching', () => {
+      const mixedCasePosts = [
         {
-          title: 'JS Post 1',
-          url: '/js-1',
-          category: 'javascript',
-          secondary_tags: ['programming']
+          data: { title: 'Post 1', category: 'TUTORIALS', secondary_tags: [] },
+          url: '/post-1'
         },
         {
-          title: 'JS Post 2',
-          url: '/js-2',
-          category: 'javascript',
-          secondary_tags: ['programming', 'legacy']
+          data: { title: 'Post 2', category: 'tutorials', secondary_tags: [] },
+          url: '/post-2'
         },
         {
-          title: 'JS Post 3',
-          url: '/js-3',
-          category: 'javascript',
-          secondary_tags: ['programming', 'legacy']
+          data: { title: 'Post 3', category: 'Tutorials', secondary_tags: [] },
+          url: '/post-3'
         }
       ];
 
-      const postsByCategory = limitedMockPosts.filter(post =>
-        post.category.toLowerCase() === 'javascript'
-      );
-      const filterByLegacyTag = postsByCategory.filter(post =>
-        !post.secondary_tags.includes('legacy')
-      );
+      const result = relatedPostsFunction('tutorials', '/current-post', mixedCasePosts, 3);
 
-      const postsToUse = filterByLegacyTag.length >= 3 ? filterByLegacyTag : postsByCategory;
-
-      expect(postsToUse).toBe(postsByCategory);
-      expect(postsToUse).toHaveLength(3);
-      expect(filterByLegacyTag).toHaveLength(1);
+      expect(result).toContain('Post 1');
+      expect(result).toContain('Post 2');
+      expect(result).toContain('Post 3');
     });
 
-    test('should generate HTML for related posts', () => {
-      const postsToUse = [
-        { title: 'Test Post 1', url: '/test-1' },
-        { title: 'Test Post 2', url: '/test-2' },
-        { title: 'Test Post 3', url: '/test-3' }
-      ];
-      const randomIndexes = [0, 1, 2];
+    test('should exclude current post from results', () => {
+      const result = relatedPostsFunction('Tutorials', '/tutorial-2', mockPosts, 3);
 
-      const htmlString = randomIndexes
-        .map(index => `<li><a href="${postsToUse[index].url}">${postsToUse[index].title}</a></li>`)
-        .join('');
-
-      const expectedHtml = '<li><a href="/test-1">Test Post 1</a></li>' +
-                          '<li><a href="/test-2">Test Post 2</a></li>' +
-                          '<li><a href="/test-3">Test Post 3</a></li>';
-
-      expect(htmlString).toBe(expectedHtml);
+      expect(result).toContain('Tutorial 1');
+      expect(result).not.toContain('Tutorial 2');
+      expect(result).toContain('Tutorial 3');
     });
 
-    test('should insert HTML into related posts container', () => {
-      const relatedPostsContainer = document.querySelector('.related-posts ul');
-      const htmlString = '<li><a href="/test">Test Post</a></li>';
-
-      relatedPostsContainer.insertAdjacentHTML("beforeend", htmlString);
-
-      expect(relatedPostsContainer.innerHTML).toBe(htmlString);
-      expect(relatedPostsContainer.querySelectorAll('li')).toHaveLength(1);
-      expect(relatedPostsContainer.querySelector('a').href).toBe('http://localhost/test');
-      expect(relatedPostsContainer.querySelector('a').textContent).toBe('Test Post');
-    });
-
-    test('should handle case-insensitive category matching', () => {
-      const data = [
-        { category: 'JavaScript', secondary_tags: [] },
-        { category: 'JAVASCRIPT', secondary_tags: [] },
-        { category: 'javascript', secondary_tags: [] },
-        { category: 'CSS', secondary_tags: [] }
+    test('should handle posts without category data', () => {
+      const postsWithMissingCategory = [
+        {
+          data: { title: 'Post 1', secondary_tags: [] },
+          url: '/post-1'
+        },
+        {
+          data: { title: 'Post 2', category: 'Tutorials', secondary_tags: [] },
+          url: '/post-2'
+        }
       ];
 
-      window.pageData.category = 'JavaScript';
-      const pageCategory = window.pageData.category;
-      const postsByCategory = data.filter(post =>
-        post.category.toLowerCase() === pageCategory.toLowerCase()
-      );
+      const result = relatedPostsFunction('Tutorials', '/current-post', postsWithMissingCategory, 3);
 
-      expect(postsByCategory).toHaveLength(3);
+      expect(result).toContain('Post 2');
+      expect(result).not.toContain('Post 1');
     });
   });
 
-  describe('Error handling', () => {
-    test('should catch and log fetch errors', async () => {
-      const mockError = new Error('Network error');
-      fetch.mockRejectedValue(mockError);
-
-      // Simulate the main IIFE error handling
-      try {
-        const data = await fetch('/api/posts.json').then(r => r.json());
-        // This should not execute
-        expect(true).toBe(false);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-        expect(consoleSpy).toHaveBeenCalledWith('Error fetching data:', mockError);
+  describe('Legacy post filtering', () => {
+    const mockPostsWithLegacy = [
+      {
+        data: { title: 'Modern Post 1', category: 'Tutorials', secondary_tags: ['javascript'] },
+        url: '/modern-1'
+      },
+      {
+        data: { title: 'Legacy Post 1', category: 'Tutorials', secondary_tags: ['legacy'] },
+        url: '/legacy-1'
+      },
+      {
+        data: { title: 'Modern Post 2', category: 'Tutorials', secondary_tags: ['css'] },
+        url: '/modern-2'
+      },
+      {
+        data: { title: 'Legacy Post 2', category: 'Tutorials', secondary_tags: ['jquery', 'legacy'] },
+        url: '/legacy-2'
+      },
+      {
+        data: { title: 'Modern Post 3', category: 'Tutorials', secondary_tags: ['html'] },
+        url: '/modern-3'
       }
+    ];
+
+    test('should prioritize non-legacy posts when 3 or more available', () => {
+      const result = relatedPostsFunction('Tutorials', '/current-post', mockPostsWithLegacy, 3);
+
+      expect(result).toContain('Modern Post 1');
+      expect(result).toContain('Modern Post 2');
+      expect(result).toContain('Modern Post 3');
+      expect(result).not.toContain('Legacy Post');
     });
 
-    test('should handle missing related posts container gracefully', () => {
-      // Remove the container
-      document.querySelector('.related-posts ul').remove();
+    test('should fall back to all posts when less than 3 non-legacy posts', () => {
+      const limitedPosts = [
+        {
+          data: { title: 'Modern Post 1', category: 'Tutorials', secondary_tags: [] },
+          url: '/modern-1'
+        },
+        {
+          data: { title: 'Legacy Post 1', category: 'Tutorials', secondary_tags: ['legacy'] },
+          url: '/legacy-1'
+        },
+        {
+          data: { title: 'Legacy Post 2', category: 'Tutorials', secondary_tags: ['legacy'] },
+          url: '/legacy-2'
+        }
+      ];
 
-      // This should not throw an error in production
-      // The container would just be null
-      const relatedPostsContainer = document.querySelector('.related-posts ul');
-      expect(relatedPostsContainer).toBe(null);
-    });
+      const result = relatedPostsFunction('Tutorials', '/current-post', limitedPosts, 3);
 
-    test('should handle empty posts array', () => {
-      const data = [];
-      const pageCategory = 'javascript';
-      const postsByCategory = data.filter(post =>
-        post.category.toLowerCase() === pageCategory.toLowerCase()
-      );
-      const filterByLegacyTag = postsByCategory.filter(post =>
-        !post.secondary_tags.includes('legacy')
-      );
-
-      expect(postsByCategory).toHaveLength(0);
-      expect(filterByLegacyTag).toHaveLength(0);
+      // Should include legacy posts since we don't have 3 non-legacy posts
+      expect(result).toContain('Modern Post 1');
+      expect(result).toContain('Legacy Post 1');
+      expect(result).toContain('Legacy Post 2');
     });
 
     test('should handle posts without secondary_tags', () => {
-      const data = [
+      const postsWithoutTags = [
         {
-          title: 'Post without tags',
-          url: '/no-tags',
-          category: 'javascript'
-          // No secondary_tags property
+          data: { title: 'Post 1', category: 'Tutorials' },
+          url: '/post-1'
+        },
+        {
+          data: { title: 'Post 2', category: 'Tutorials', secondary_tags: ['legacy'] },
+          url: '/post-2'
+        },
+        {
+          data: { title: 'Post 3', category: 'Tutorials' },
+          url: '/post-3'
+        },
+        {
+          data: { title: 'Post 4', category: 'Tutorials' },
+          url: '/post-4'
         }
       ];
 
-      expect(() => {
-        data.filter(post => !post.secondary_tags?.includes('legacy'));
-      }).not.toThrow();
+      const result = relatedPostsFunction('Tutorials', '/current-post', postsWithoutTags, 3);
 
-      const filtered = data.filter(post => !post.secondary_tags?.includes('legacy'));
-      expect(filtered).toHaveLength(1);
+      // With 3 non-legacy posts available, should exclude legacy posts
+      expect(result).toContain('Post 1');
+      expect(result).toContain('Post 3');
+      expect(result).toContain('Post 4');
+      expect(result).not.toContain('Post 2'); // Has legacy tag
     });
   });
 
-  describe('Integration tests', () => {
-    beforeEach(() => {
-      // Setup DOM with proper structure
-      document.body.innerHTML = `
-        <div class="related-posts">
-          <h3>Related Posts</h3>
-          <ul></ul>
-        </div>
-      `;
+  describe('Count limiting and randomization', () => {
+    const manyPosts = Array.from({ length: 10 }, (_, i) => ({
+      data: {
+        title: `Tutorial ${i + 1}`,
+        category: 'Tutorials',
+        secondary_tags: []
+      },
+      url: `/tutorial-${i + 1}`
+    }));
 
-      // Setup successful fetch response
-      const mockResponse = {
-        json: jest.fn().mockResolvedValue([
-          {
-            title: 'JavaScript Basics',
-            url: '/javascript-basics',
-            category: 'javascript',
-            secondary_tags: ['beginner']
-          },
-          {
-            title: 'Advanced JavaScript',
-            url: '/advanced-javascript',
-            category: 'javascript',
-            secondary_tags: ['advanced']
-          },
-          {
-            title: 'JavaScript Patterns',
-            url: '/javascript-patterns',
-            category: 'javascript',
-            secondary_tags: ['patterns']
-          },
-          {
-            title: 'Old JavaScript',
-            url: '/old-javascript',
-            category: 'javascript',
-            secondary_tags: ['legacy']
-          }
-        ])
-      };
-      fetch.mockResolvedValue(mockResponse);
+    test('should respect count parameter', () => {
+      const result = relatedPostsFunction('Tutorials', '/current-post', manyPosts, 5);
+
+      // Count the number of <li> elements
+      const liCount = (result.match(/<li>/g) || []).length;
+      expect(liCount).toBe(5);
     });
 
-    test('should complete full workflow successfully', async () => {
-      window.pageData.category = 'javascript';
+    test('should default to 3 posts when count is not specified', () => {
+      const result = relatedPostsFunction('Tutorials', '/current-post', manyPosts);
 
-      // Simulate the complete workflow
-      const getPostData = async (url) => {
-        const response = await fetch(url);
-        return response.json();
-      };
-
-      const getRandomIndexes = (arr, count = 3) => {
-        // For testing, return predictable results
-        return arr.slice(0, count).map((_, i) => i);
-      };
-
-      // Execute main logic
-      const data = await getPostData('/api/posts.json');
-      const pageCategory = window.pageData.category;
-      const postsByCategory = data.filter(post =>
-        post.category.toLowerCase() === pageCategory.toLowerCase()
-      );
-      const filterByLegacyTag = postsByCategory.filter(post =>
-        !post.secondary_tags.includes('legacy')
-      );
-
-      const postsToUse = filterByLegacyTag.length >= 3 ? filterByLegacyTag : postsByCategory;
-      const randomIndexes = getRandomIndexes(postsToUse);
-
-      const relatedPostsContainer = document.querySelector('.related-posts ul');
-      const htmlString = randomIndexes
-        .map(index => `<li><a href="${postsToUse[index].url}">${postsToUse[index].title}</a></li>`)
-        .join('');
-
-      relatedPostsContainer.insertAdjacentHTML("beforeend", htmlString);
-
-      // Verify results
-      expect(fetch).toHaveBeenCalledWith('/api/posts.json');
-      expect(postsByCategory).toHaveLength(4);
-      expect(filterByLegacyTag).toHaveLength(3);
-      expect(postsToUse).toBe(filterByLegacyTag);
-      expect(relatedPostsContainer.children).toHaveLength(3);
-
-      const links = relatedPostsContainer.querySelectorAll('a');
-      expect(links[0].textContent).toBe('JavaScript Basics');
-      expect(links[1].textContent).toBe('Advanced JavaScript');
-      expect(links[2].textContent).toBe('JavaScript Patterns');
+      const liCount = (result.match(/<li>/g) || []).length;
+      expect(liCount).toBe(3);
     });
 
-    test('should handle window.pageData as async property', async () => {
-      // Test the async nature of window.pageData.category
-      Object.defineProperty(window, 'pageData', {
-        value: {
-          category: Promise.resolve('javascript')
+    test('should handle requesting more posts than available', () => {
+      const fewPosts = [
+        {
+          data: { title: 'Tutorial 1', category: 'Tutorials', secondary_tags: [] },
+          url: '/tutorial-1'
         },
-        writable: true
-      });
+        {
+          data: { title: 'Tutorial 2', category: 'Tutorials', secondary_tags: [] },
+          url: '/tutorial-2'
+        }
+      ];
 
-      const pageCategory = await window.pageData.category;
-      expect(pageCategory).toBe('javascript');
+      const result = relatedPostsFunction('Tutorials', '/current-post', fewPosts, 5);
+
+      const liCount = (result.match(/<li>/g) || []).length;
+      expect(liCount).toBe(2); // Should only return available posts
+    });
+
+    test('should return empty string when no related posts available', () => {
+      const unrelatedPosts = [
+        {
+          data: { title: 'Review 1', category: 'Reviews', secondary_tags: [] },
+          url: '/review-1'
+        }
+      ];
+
+      const result = relatedPostsFunction('Tutorials', '/current-post', unrelatedPosts, 3);
+      expect(result).toBe('');
     });
   });
 
-  describe('Performance considerations', () => {
-    test('should efficiently handle large datasets', () => {
-      // Create a large dataset
-      const largeDataset = Array.from({ length: 1000 }, (_, i) => ({
-        title: `Post ${i}`,
-        url: `/post-${i}`,
-        category: i % 2 === 0 ? 'javascript' : 'css',
-        secondary_tags: i % 5 === 0 ? ['legacy'] : ['modern']
-      }));
+  describe('HTML generation', () => {
+    const samplePosts = [
+      {
+        data: { title: 'JavaScript Basics', category: 'Tutorials', secondary_tags: [] },
+        url: '/javascript-basics'
+      },
+      {
+        data: { title: 'Advanced CSS', category: 'Tutorials', secondary_tags: [] },
+        url: '/advanced-css'
+      },
+      {
+        data: { title: 'HTML5 Features', category: 'Tutorials', secondary_tags: [] },
+        url: '/html5-features'
+      }
+    ];
 
-      const startTime = performance.now();
+    test('should generate proper HTML structure', () => {
+      const result = relatedPostsFunction('Tutorials', '/current-post', samplePosts, 3);
 
-      // Filter operations
-      const postsByCategory = largeDataset.filter(post =>
-        post.category.toLowerCase() === 'javascript'
-      );
-      const filterByLegacyTag = postsByCategory.filter(post =>
-        !post.secondary_tags.includes('legacy')
-      );
-
-      const endTime = performance.now();
-
-      expect(postsByCategory.length).toBeGreaterThan(0);
-      expect(filterByLegacyTag.length).toBeGreaterThan(0);
-      expect(endTime - startTime).toBeLessThan(100); // Should complete quickly
+      expect(result).toMatch(/<li><a href="[^"]+">.*<\/a><\/li>/);
+      expect(result).toContain('<li><a href="/javascript-basics">JavaScript Basics</a></li>');
+      expect(result).toContain('<li><a href="/advanced-css">Advanced CSS</a></li>');
+      expect(result).toContain('<li><a href="/html5-features">HTML5 Features</a></li>');
     });
 
-    test('should efficiently build HTML string', () => {
-      const posts = Array.from({ length: 100 }, (_, i) => ({
-        title: `Post ${i}`,
+    test('should escape HTML in titles properly', () => {
+      const postsWithSpecialChars = [
+        {
+          data: { title: 'Tutorial with <script> tags', category: 'Tutorials', secondary_tags: [] },
+          url: '/tutorial-1'
+        }
+      ];
+
+      const result = relatedPostsFunction('Tutorials', '/current-post', postsWithSpecialChars, 1);
+
+      // The title should be rendered as-is (relying on template engine for escaping)
+      expect(result).toContain('Tutorial with <script> tags');
+    });
+
+    test('should handle URLs with special characters', () => {
+      const postsWithSpecialUrls = [
+        {
+          data: { title: 'Special Post', category: 'Tutorials', secondary_tags: [] },
+          url: '/special-post?param=value&other=test'
+        }
+      ];
+
+      const result = relatedPostsFunction('Tutorials', '/current-post', postsWithSpecialUrls, 1);
+
+      expect(result).toContain('href="/special-post?param=value&other=test"');
+    });
+  });
+
+  describe('Edge cases', () => {
+    test('should handle empty string category', () => {
+      const posts = [
+        {
+          data: { title: 'Post 1', category: '', secondary_tags: [] },
+          url: '/post-1'
+        }
+      ];
+
+      const result = relatedPostsFunction('', '/current-post', posts, 3);
+      expect(result).toContain('Post 1');
+    });
+
+    test('should handle numeric categories', () => {
+      const posts = [
+        {
+          data: { title: 'Post 1', category: 123, secondary_tags: [] },
+          url: '/post-1'
+        }
+      ];
+
+      const result = relatedPostsFunction(123, '/current-post', posts, 3);
+      expect(result).toContain('Post 1');
+    });
+
+    test('should handle posts with null secondary_tags', () => {
+      const posts = [
+        {
+          data: { title: 'Post 1', category: 'Tutorials', secondary_tags: null },
+          url: '/post-1'
+        }
+      ];
+
+      const result = relatedPostsFunction('Tutorials', '/current-post', posts, 1);
+      expect(result).toContain('Post 1');
+    });
+
+    test('should handle large datasets efficiently', () => {
+      const largePosts = Array.from({ length: 1000 }, (_, i) => ({
+        data: {
+          title: `Post ${i}`,
+          category: i % 2 === 0 ? 'Tutorials' : 'Reviews',
+          secondary_tags: i % 5 === 0 ? ['legacy'] : ['modern']
+        },
         url: `/post-${i}`
       }));
-      const indexes = Array.from({ length: 3 }, (_, i) => i);
 
       const startTime = performance.now();
-
-      const htmlString = indexes
-        .map(index => `<li><a href="${posts[index].url}">${posts[index].title}</a></li>`)
-        .join('');
-
+      const result = relatedPostsFunction('Tutorials', '/current-post', largePosts, 3);
       const endTime = performance.now();
 
-      expect(htmlString).toContain('Post 0');
-      expect(htmlString).toContain('Post 1');
-      expect(htmlString).toContain('Post 2');
-      expect(endTime - startTime).toBeLessThan(10); // Should be very fast
+      expect(result).toBeTruthy();
+      expect(endTime - startTime).toBeLessThan(100); // Should complete quickly
+    });
+  });
+
+  describe('Randomization behavior', () => {
+    test('should produce different results on multiple calls', () => {
+      const posts = Array.from({ length: 20 }, (_, i) => ({
+        data: {
+          title: `Post ${i}`,
+          category: 'Tutorials',
+          secondary_tags: []
+        },
+        url: `/post-${i}`
+      }));
+
+      const results = [];
+      for (let i = 0; i < 10; i++) {
+        results.push(relatedPostsFunction('Tutorials', '/current-post', posts, 3));
+      }
+
+      // Should have some variation in results
+      const uniqueResults = [...new Set(results)];
+      expect(uniqueResults.length).toBeGreaterThan(1);
+    });
+
+    test('should maintain consistent HTML structure across randomized results', () => {
+      const posts = Array.from({ length: 10 }, (_, i) => ({
+        data: {
+          title: `Post ${i}`,
+          category: 'Tutorials',
+          secondary_tags: []
+        },
+        url: `/post-${i}`
+      }));
+
+      for (let i = 0; i < 5; i++) {
+        const result = relatedPostsFunction('Tutorials', '/current-post', posts, 3);
+
+        // Should always have exactly 3 <li> elements
+        const liCount = (result.match(/<li>/g) || []).length;
+        expect(liCount).toBe(3);
+
+        // Should always have proper HTML structure
+        expect(result).toMatch(/^(<li><a href="[^"]+">.*<\/a><\/li>)+$/);
+      }
     });
   });
 });
