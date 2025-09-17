@@ -2,6 +2,7 @@ const { execSync } = require('child_process');
 const moment = require("moment");
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const relatedPostsPlugin = require("./src/_includes/relatedPosts");
 
 module.exports = function(eleventyConfig) {
 
@@ -43,6 +44,9 @@ module.exports = function(eleventyConfig) {
 
   // Syntax highlighting plugin for code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
+
+  // Related posts plugin
+  eleventyConfig.addPlugin(relatedPostsPlugin);
 
 
 // Add collection for blog posts
