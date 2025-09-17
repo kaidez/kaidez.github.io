@@ -364,3 +364,13 @@ I've fixed the Nunjucks template JavaScript syntax error. The issue was that VSC
   ```
 
 This approach follows best practices for passing server-side data to client-side JavaScript and should eliminate the VSCode syntax errors you were experiencing while maintaining the same functionality.
+
+
+WHAT IS CLAUDE GOOD AT:
+
+* unit testing
+* WCAG compliance
+* HTTP/2 compliance
+
+
+That ,htaccess suggestion when doing an HTTP/2 review didn't work because GH Pages doesn't accept .htaccess files.
