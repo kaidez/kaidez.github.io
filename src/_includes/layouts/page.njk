@@ -21,11 +21,6 @@
   <!-- Styles -->
   <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="/assets/css/style.css">
-
-  <!-- Load Pagefind -->
-  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
-  <script src="/pagefind/pagefind-ui.js"></script>
-
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
 
@@ -44,7 +39,7 @@
   {% include "partials/googleAnalytics.njk" %}
 </head>
 
-<body class="{% if bodyClass %}{{ bodyClass }}{% endif %}" data-pagefind-body>
+<body class="{% if bodyClass %}{{ bodyClass }}{% endif %}">
   <a name="main-content"></a>
   {% include "partials/header.njk" %}=
   <main class="post-content">
