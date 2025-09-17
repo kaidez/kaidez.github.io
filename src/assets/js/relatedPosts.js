@@ -10,8 +10,14 @@ async function getPostData(url) {
     const data = await getPostData('/api/posts.json');
     const pageCategory = await window.pageData.category;
     const postsByCategory = data.filter(post => post.category.toLowerCase() === pageCategory.toLowerCase());
-    const getRelatedPosts = getRandomIndexes(postsByCategory)
-    console.log(getRelatedPosts)
+    const filterByLegacyTag = postsByCategory.filter(post => !post.secondary_tags.includes('legacy'));
+    const getRelatedPosts = filterByLegacyTag.length < 3 ? getRandomIndexes(postsByCategory) : getRandomIndexes(filterByLegacyTag);
+
+    const relatedPostsContainer = document.querySelector('.related-posts ul');
+
+    getRelatedPosts.forEach(postIndex => {
+      relatedPostsContainer.insertAdjacentHTML("beforeend", `<li><a href="${filterByLegacyTag[postIndex].url}">${filterByLegacyTag[postIndex].title}</a></li>`);
+    });
 
   } catch (error) {
     console.error('Error fetching data:', error);
@@ -35,6 +41,5 @@ function getRandomIndexes(arr, count = 3) {
   }
 
   // Return the first 'count' indexes
-  // console.log("indexes",indexes.slice(0, count));
   return indexes.slice(0, count);
 }
