@@ -478,11 +478,25 @@ svg {
   font-family: var(--font-family-kaidez-secondary-font)
 }
 
+.footer-colophon {
+  display: flex; /* Enables Flexbox */
+  flex-wrap: wrap; /* Allows columns to wrap to the next line on smaller screens */
+  gap: 20px; /* Adds space between columns */
+
+  margin: 0 40px;
+}
+
+.footer-colophon-item {
+  flex: 1; /* Makes columns take up equal available space */
+  padding: 15px;
+}
+
+
 .footer-profile-pic {
-  position: relative;
-  right: 26px;
-  border: 1px solid #491f5a;
-  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+
+  max-width: 300px;
 }
 
 .pagination-buttons {
