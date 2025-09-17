@@ -70,7 +70,7 @@ The last point is a surprise…
 
 <h2 id="panelContent">The Panel Discussion Content</h2>
 
-At one point in the discussion, Kristin Volk from MediaVest showed a picture of a Tibetan monk in the middle of his asceticism, being without worldly possessions for a year. But he had a cell phone stuck to his ear: he's supposed to own nothing for a year, she said, but this monk simply could not be without his cell phone.
+At one point in the discussion, Kristin Volk from MediaVest showed a picture of a Tibetan monk in the middle of his asceticism, his being without worldly possessions for a year. But he had a cell phone stuck to his ear: he's supposed to own nothing for a year, she said, but this monk simply could not be without his cell phone.
 
 A picture is worth a thousand words...it's definitely a mobile world that we live in.
 
@@ -148,13 +148,15 @@ One of the panels during the Lucky Magazine presentation
 While the panel didn't spend a lot of time talking about smartphones, they did bring them up. Again, they came armed with real-world stats and, again, they brought us all down to Earth:
 
 Android is gaining on the iPhone: this fact has appeared multiple times in the press but was reiterated by the panel.
+
 Blackberry is slipping against everything else: newer models such as the Torch and the Storm may pick up speed. But according to Farrah Bostic of Digitas, Blackberry use is steadily shrinking, at least among consumers on the receiving end of mobile promotions.
-Mobile tutorials
+
 <h2 id="women">Women Rule!</h2>
 
 Staying on smartphones, Bostic broke down gender myth with the following stats..at least she broke it down for me:
 
 55% of women ages 15-24 own smartphones.
+
 Baby Boomer women are adopting smartphones at a faster pace than any other segment of the population.
 <h2 id="conclusion">Conclusion</h2>
 

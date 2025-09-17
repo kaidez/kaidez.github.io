@@ -50,7 +50,7 @@ If you have front end web development experience, you will get a job. You may en
 
 But as long as you have verifiable web development experience, you will get a web dev job. End of story.
 
-<h2>...But how fast you get one will depend on your library/framework experience/h2>
+<h2>...But how fast you get one will depend on your library/framework experience</h2>
 
 I tweeted this once in 2016:
 

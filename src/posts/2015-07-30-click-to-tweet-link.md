@@ -619,7 +619,7 @@ http://kaidez.com/samples/click-to-tweet/03/?query=some_query&amp;value=some_val
   <li>
     <code>host</code> 
     grabs the link's domain: 
-    <code>samples.kadiez.com</code>
+    <code>samples.kaidez.com</code>
   </li>
   <li>
     <code>path</code> 
