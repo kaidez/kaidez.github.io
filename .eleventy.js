@@ -2,7 +2,6 @@ const { execSync } = require('child_process');
 const moment = require("moment");
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const contentRecommendation = require("./config/plugins/contentRecommendation");
 
 module.exports = function(eleventyConfig) {
 
@@ -41,9 +40,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("dateReformat", () => {
     return moment().format("MMMM Do, YYYY");
   });
-
-  // Content recommendation plugin
-  eleventyConfig.addPlugin(contentRecommendation);
 
   // Syntax highlighting plugin for code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
