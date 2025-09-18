@@ -6,8 +6,10 @@
   "scripts": {
     "start": "eleventy --serve --port=8080",
     "build": "eleventy",
+    "build:prod": "eleventy && npm run purge-css",
+    "purge-css": "purgecss --css _site/assets/css/style.css --content '_site/**/*.html' --output _site/assets/css/ --safelist 'fas fab far fa-facebook fa-twitter fa-linkedin fa-github fa-envelope fa-bars fa-times skip-link sr-only visually-hidden container'",
     "clean": "rm -rf _site",
-    "deploy": "npm run build && gh-pages -d _site",
+    "deploy": "npm run build:prod && gh-pages -d _site",
     "test": "jest",
     "test:watch": "jest --watch",
     "debug11ty": "ELEVENTY_DEBUG=true eleventy",
@@ -23,7 +25,8 @@
     "jest-environment-jsdom": "^30.1.2",
     "luxon": "^3.7.2",
     "markdown-it": "^14.1.0",
-    "moment": "^2.30.1"
+    "moment": "^2.30.1",
+    "purgecss": "^7.0.2"
   },
   "keywords": [
     "11ty",

@@ -15,7 +15,7 @@ Today, May 7th, 2015, marks my final day as a Revlon Cosmetics employee. I start
 
 I came on as consultant that created mostly Flash sitelets (remember those?) and eventually became a full-time employee that had to learn the ins and outs of object-oriented programming. I also learned to drop my bias of corporate environments and learned that doing web stack work in such an environment is just as good as working for a startup...even better in some ways.
 
-But while I was doing the web stack work that I liked (HTML, CSS, JavaScript), I wasn't doing enough of it. This was due to the changing needs of the company and this is neither a good or bad thing...it's just the way it is.
+But while I was doing the web stack work that I liked (HTML, CSS, JavaScript), I wasn't doing enough of it. This was due to the changing needs of the company and this is neither a good thing nor bad thing...it's just the way it is.
 
 <h2>Moving to Everyday Health</h2>
 
