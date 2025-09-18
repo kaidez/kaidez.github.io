@@ -148,7 +148,7 @@ Feel free to share any responsive web design resources that you like…and your 
  [13]: https://cloudfour.com/thinks/css-media-query-for-mobile-is-fools-gold/
  [14]: http://www.quirksmode.org/blog/archives/2010/08/combining_media.html
  [15]: http://www.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/
- [16]: http://kaidez.com/html5-project-update-completed-wireframes/
+ [16]: https://kaidez.com/html5-project-update-completed-wireframes/
  [17]: http://5by5.tv/bigwebshow/9
  [18]: http://vimeo.com/15986231
  [19]: http://www.lynda.com/CSS-training/css3-first-look/73288-2C.html
@@ -159,20 +159,3 @@ Feel free to share any responsive web design resources that you like…and your 
  [24]: http://twitter.com/#!/abookapart
  [25]: /html5-project-update-january-21-2011/
  [26]: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Grids
-
- <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "HTML5 Project Update: Changing To A Responsive Web Design Using CSS3 Media Queries",
-    "description": "An article on responsive web design, CSS3 media queries and using it in kaidez's HTML5 Project, resource list of links at the end",
-    "author": {
-        "@type": "Person",
-        "name": "Kai Gittens",
-        "url": "http://kaidez.com/"
-    },
-    "datePublished": "2011-03-16",
-    "dateModified": "2025-08-26",
-    "programmingLanguage": "CSS"
-}
-</script>

@@ -19,7 +19,7 @@ category: Personal
 
 [Continuing the “portfolio wireframe” series][1] for my [HTML5 Project][4], we’ll be reviewing the main Work page, the three Work subcategory pages and the Niko’s Playlist page. Discussion will focus on the proper use of the  tag.
 
- [4]: http://kaidez.com/html5-project/
+ [4]: https://kaidez.com/html5-project/
 
 *(Important: I’ll be sending the final site to [HTML5 Doctor][5] and/or [HTML5 Gallery][6] for review when it’s done. While I’m confident that my site conforms to the HTML5 specification, these guys may say it doesn’t. Please keep that in mind when reading this.)*
 
@@ -81,24 +81,7 @@ Based on the location of the  tag, it’s tempting to treat it like a traditiona
 [Intro»][1] | [Page 1»][2] | Page 2» | [Page 3»][3]***
 
  [9]: /img/Work.jpg
- [12]: http://kaidez.com/html5-project-series-1-homepage-wireframe/
- [13]: http://kaidez.com/html5-project-series-1-homepage-wireframe/#articleSection
+ [12]: https://kaidez.com/html5-project-series-1-homepage-wireframe/
+ [13]: https://kaidez.com/html5-project-series-1-homepage-wireframe/#articleSection
  [16]: /img/Experiments-02.jpg
  [15]: http://html5doctor.com/aside-revisited/
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "HTML5 Project: WIREFRAME SERIES #2 –  WORK & NIKO'S PLAYLIST PAGES",
-    "description": "Part Two of my explanation on how I created wireframed my HTML5 site before I developed and designed it",
-    "author": {
-        "@type": "Person",
-        "name": "Kai Gittens",
-		    "url" : "http://kaidez.com/"
-    },
-    "datePublished": "2011-02-09",
-    "dateModified": "2025-08-27",
-    "programmingLanguage": "HTML"
-}
-</script>

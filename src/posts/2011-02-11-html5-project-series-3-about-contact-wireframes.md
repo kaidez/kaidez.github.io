@@ -14,13 +14,13 @@ category: Personal
 ***Read the entire “Wireframe Series”
 [Intro»][1]  [Page 1»][2]  [Page 2»][3]  Page 3»***
 
- [1]: http://kaidez.com/html5-project-update-completed-wireframes/
- [2]: http://kaidez.com/html5-project-series-1-homepage-wireframe/
- [3]: http://kaidez.com/html5-project-series-2-work-subcategory-playlist-wireframes/
+ [1]: https://kaidez.com/html5-project-update-completed-wireframes/
+ [2]: https://kaidez.com/html5-project-series-1-homepage-wireframe/
+ [3]: https://kaidez.com/html5-project-series-2-work-subcategory-playlist-wireframes/
 
 This concludes [the “portfolio wireframe” series][1] for my [HTML5 Project][4]. We’ll be reviewing the easiest pages from a coding standpoint: the About and Contact pages.
 
- [4]: http://kaidez.com/html5-project/
+ [4]: https://kaidez.com/html5-project/
 
 *(Important: I’ll be sending the final site to [HTML5 Doctor][5] and/or [HTML5 Gallery][6] for review when it’s done. While I’m confident that my site conforms to the HTML5 specification, these guys may say it doesn’t. Please keep that in mind when reading this.)*
 
@@ -112,20 +112,3 @@ Thanks for sticking with me through my series. And again, any and all feedback i
 [18]: /nyc-social-media-week-event-recap-cross-mobile-promotion/
 
 > ***Read the entire “Wireframe Series”: [Intro»][1] | [Page 1»][2] | [Page 2»][3] | Page 3»***
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "HTML5 Project: WIREFRAME SERIES #3 –  ABOUT & CONTACT PAGES",
-    "description": "Final article in the HTML5 wireframe series for the kaidez portfolio site",
-    "author": {
-        "@type": "Person",
-        "name": "Kai Gittens",
-		    "url" : "http://kaidez.com/"
-    },
-    "datePublished": "2011-02-09",
-    "dateModified": "2025-08-27",
-    "programmingLanguage": "HTML"
-}
-</script>

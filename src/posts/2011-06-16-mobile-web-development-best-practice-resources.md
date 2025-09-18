@@ -61,7 +61,7 @@ Prior to jQ Mobile’s release, Resig did a boatload of mobile device research, 
 
 [I’ve mentioned this before][15] but let me be crystal clear right now: HTML5 Boilerplate’s build script does an incredible job of optimizing site files. With a simple command line prompt (or Windows batch file), you can run all your site files through YUI Compresser, optipng, jpegtran and many other applications to dramatically reduce their file size. The end-result is a faster-loading site.
 
- [15]: http://kaidez.com/html5-boilerplate-version-1/
+ [15]: https://kaidez.com/html5-boilerplate-version-1/
 
 Watch the Boilerplate how-to video..it’s well worth 28 minutes of your time:
 

@@ -214,7 +214,7 @@ As mentioned in the beginning, a default WordPress install contains jQuery other
 <pre><code class="language-javascript">
 paths: {
   // This ignores the 'baseURL' setting, but works well for Wordpress
-  http://kaidez.com/wp-includes/js/jquery/jquery.js,
+  https://kaidez.com/wp-includes/js/jquery/jquery.js,
   ...
 }
 </code></pre>

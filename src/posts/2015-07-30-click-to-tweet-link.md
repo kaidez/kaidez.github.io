@@ -478,7 +478,7 @@ window.open( "http://twitter.com/intent/tweet?url=" + tweetedLink + "&amp;text="
 
 <pre>
 <code class="language-html">
-http://kaidez.com/samples/#/some-hash-tag
+https://kaidez.com/samples/#/some-hash-tag
 </code>
 </pre>
 
@@ -488,7 +488,7 @@ http://kaidez.com/samples/#/some-hash-tag
 
 <pre>
 <code class="language-html">
-http://kaidez.com/samples/click-to-tweet/02/?query=some_query&amp;value=some_value/#/some-hash-tag
+https://kaidez.com/samples/click-to-tweet/02/?query=some_query&amp;value=some_value/#/some-hash-tag
 </code>
 </pre>
 
@@ -511,7 +511,7 @@ http://kaidez.com/samples/click-to-tweet/02/?query=some_query&amp;value=some_val
   one of them being 
   <code>origin</code> 
   which grabs the domain name&#8230;that would be 
-  <code>http://kaidez.com/samples</code>.
+  <code>https://kaidez.com/samples</code>.
 </p>
 
 <p>
@@ -543,7 +543,7 @@ var tweetedLink = window.location.origin + window.location.pathname;
 
 <pre>
 <code class="language-html">
-http://kaidez.com/samples/click-to-tweet/02/
+https://kaidez.com/samples/click-to-tweet/02/
 </code>
 </pre>
 
@@ -595,7 +595,7 @@ var tweetedLink = window.location.protocol + "//" + window.location.hostname + w
 
 <pre>
 <code class="language-html">
-http://kaidez.com/samples/click-to-tweet/03/?query=some_query&amp;value=some_value/#/some-hash-tag
+https://kaidez.com/samples/click-to-tweet/03/?query=some_query&amp;value=some_value/#/some-hash-tag
 </code>
 </pre>
 
@@ -636,7 +636,7 @@ http://kaidez.com/samples/click-to-tweet/03/?query=some_query&amp;value=some_val
 
 <pre>
 <code class="language-html">
-http://kaidez.com/samples/click-to-tweet/03/
+https://kaidez.com/samples/click-to-tweet/03/
 </code>
 </pre>
 
@@ -710,7 +710,7 @@ if(!window.location.origin) {
 </p>
 
 <p>
-  <a href="http://kaidez.com/samples/click-to-tweet/04/?query=some_query&amp;value=some_value/#/some-hash-tag" target="blank">
+  <a href="https://kaidez.com/samples/click-to-tweet/04/?query=some_query&amp;value=some_value/#/some-hash-tag" target="blank">
     <strong>SEE THE DEMO</strong>
   </a> 
   and note its long URL that contains both the query string stuff and hashtag.

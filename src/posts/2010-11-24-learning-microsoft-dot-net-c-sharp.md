@@ -11,7 +11,7 @@ category:  Personal
 ---
 [My premier post][1] included a list of skills that I needed to improve upon for may day job. I’m not changing the list but I’m attacking it in a more organized way.
 
- [1]: http://kaidez.com/welcome-back/
+ [1]: https://kaidez.com/welcome-back/
 
 The skill set list included Microsoft SharePoint, .NET C#, Microsoft Silverlight and ActionScript 3 for Adobe Flash. .NET C# has moved to the top of the list for the following reasons:
 

@@ -292,19 +292,3 @@ The fact that there are less Gulp plugins that Grunt ones ties into Gulp's philo
 <a name="conclusion"></a>
 ## Conclusion
 There weren't REALLY a lot of code challenges for me in this project...a simple one-pager like this doesn't bring any. But I pushed myself with code a little and played with some new tools. I accomplished what I wanted to and as a developer, that's enough.
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "Site I Worked On: RevlonProBrands.com",
-    "description": "kaidez developed the RevlonProBrands.com site using GitHub Atom, Jade, OOCSS, Modernizr’s yepnope functionality, Gulp & Grunt.",
-    "author": {
-        "@type": "Person",
-        "name": "Kai Gittens",
-		"url" : "http://kaidez.com/"
-    },
-    "datePublished": "2014-09-12",
-    "dateModified": "2025-08-27"
-}
-</script>

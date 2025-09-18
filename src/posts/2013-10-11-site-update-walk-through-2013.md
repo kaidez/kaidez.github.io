@@ -330,25 +330,3 @@ Utilizing all these dev tools & techniques was just as rewarding as redesigning 
 Thanks for reading this very VERY long post and feel free to ask me questions!!!
 
  -kdz
-
- <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "kaidez 2013 Site Redesign",
-    "description": " kaidez.com uses Jekyll as a blog engine, Grunt as a task runner, RequireJS for modular JavaScript management, & Bower for package management",
-    "author": {
-        "@type": "Person",
-        "name": "Kai Gittens",
-        "url": "http://kaidez.com/"
-    },
-    "datePublished": "2013-10-11",
-    "dateModified": "2025-08-26",
-    "programmingLanguage": [
-        "JavaScript",
-        "CSS",
-        "jQuery"
-    ],
-    "dependencies": "Jekyll"
-}
-</script>

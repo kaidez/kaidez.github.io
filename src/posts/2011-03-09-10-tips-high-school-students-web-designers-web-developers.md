@@ -104,21 +104,3 @@ Started by UK-based web designer Anna Debenham, Scrunchup is a fabulous resource
  [4]: https://www.maban.co.uk/18/
 
 Do any web designers/developers have tips for the younger generation? If you’re a high school student, would you follow any of these tips? And what do parents think? Feel free to comment!!!!
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "10 Tips For High Schoolers Wanting To Be Web Designers Or Developers",
-    "description": "An extensive article with tips, resources and ideas for high school students wanting to work in the web design or development field someday",
-    "author": {
-        "@type": "Person",
-        "name": "Kai Gittens",
-        "url": "http://kaidez.com"
-    },
-    "datePublished": "2011-03-09",
-    "dateModified": "2025-08-26",
-    "programmingLanguage": "JavaScript",
-    "dependencies": "jQuery 1.4.4"
-}
-</script>

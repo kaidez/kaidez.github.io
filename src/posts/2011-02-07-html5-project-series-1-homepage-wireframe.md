@@ -173,20 +173,4 @@ A major *major* characteristic of HTML5 has to do with how all the page content 
  [30]: /assets/img/entireMidSectionHomePage.jpg
  [31]: /assets/img/feeds.jpg "Feed screenshot for kaidez portfolio site"
  [32]: /assets/img/small.jpg "Small tag screen shot for the kaidez portfolio site"
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "HTML5 Project: WIREFRAME SERIES #1 – HOME PAGE",
-    "description": "Wireframes for the portfolio site of Kai Gittens, who has worked at Blue Cross/Blue Shield, JPMorgan Chase, jetBlue, MedPage Today & Revlon",
-    "author": {
-        "@type": "Person",
-        "name": "Kai Gittens",
-		    "url" : "http://kaidez.com/"
-    },
-    "datePublished": "2011-02-07",
-    "dateModified": "2025-08-27",
-    "programmingLanguage": "HTML"
-}
-</script>
+ 

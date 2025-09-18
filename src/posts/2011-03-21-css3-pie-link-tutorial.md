@@ -188,7 +188,7 @@ Please help me get better at explaining thingsâ€¦feel free to let me know if Iâ€
  [6]: /assets/img/nonIE.png "nonIE"
  [7]: /assets/img/pie-tut-IE.png "IE"
  [8]: http://twitter.com/css3pie
- [9]: http://kaidez.com/html5-project-update-january-21-2011/
+ [9]: https://kaidez.com/html5-project-update-january-21-2011/
 
 
 <style>

@@ -418,20 +418,3 @@ Because using AJAX, jQuery and HTML5 together is a hot topic, my goal is to upda
 * [Dive Into HTML5 Peeks, Pokes and Pointers Page](https://mislav.github.io/diveintohtml5/peeks-pokes-and-pointers.html)
 * [HTML5 Doctor](http://html5doctor.com)
 * [BOOK: Pro HTML5 Programming](http://www.amazon.com/Pro-HTML5-Programming-Peter-Lubbers/dp/143023864X/ref=sr_1_1?ie=UTF8&qid=1375059764&sr=8-1&keywords=pro+html5+programming)
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "HTML5 Project: WIREFRAME SERIES #1 – HOME PAGE",
-    "description": "Wireframes for the portfolio site of Kai Gittens, who has worked at Blue Cross/Blue Shield, JPMorgan Chase, jetBlue, MedPage Today & Revlon",
-    "author": {
-        "@type": "Person",
-        "name": "Kai Gittens",
-		"url" : "http://kaidez.com/"
-    },
-    "datePublished": "2011-12-01",
-    "dateModified": "2025-08-2",
-    "programmingLanguage": ["HTML", "JavaScript", "jQuery"]
-}
-</script>

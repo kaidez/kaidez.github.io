@@ -46,4 +46,4 @@ Stay Tuned!!!!!!!!!
  [3]: http://developers.whatwg.org/
  [4]: http://dev.w3.org/html5/spec-author-view/
  [5]: http://html5doctor.com/
- [6]: http://kaidez.com/remove-files-from-github/
+ [6]: https://kaidez.com/remove-files-from-github/

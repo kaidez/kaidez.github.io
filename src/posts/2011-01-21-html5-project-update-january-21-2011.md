@@ -12,7 +12,7 @@ category: Personal
 My [HTML5 Project][1] is a centerpiece of this blog. I’ve been slacking on it but I’ve now made some decisions:
 
 needs a 301 redirect
- [1]: http://kaidez.com/html5-project/
+ [1]: https://kaidez.com/html5-project/
 
 I’m going to create a personal portfolio of my web design/development work: both at Revlon and freelance. My initial goal was to create another blog, but I struggled to find a topic. Plus, I want to monetize it which meant doing a lot of research in order find the *right* topic.
 
@@ -49,20 +49,3 @@ That being said, here’s my plan for said site:
  [7]: http://css3pie.com/
 
 That’s it!!! WISH ME LUCK!!!
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "HTML5 Project Update: 1/21/11",
-    "description": "My HTML5 Project will use HTML5, CSS3, jQuery, Modernizr, maybe CSS PIE, and will be a portfolio of my work and experiments.",
-    "author": {
-        "@type": "Person",
-        "name": "Kai Gittens",
-		    "url" : "http://kaidez.com/"
-    },
-    "datePublished": "2010-01-21",
-    "dateModified": "2025-08-27",
-    "programmingLanguage": "HTML"
-}
-</script>

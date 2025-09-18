@@ -13,8 +13,8 @@ My last two articles, reviewing my work for both [the Almay/Facebook project][1]
 
 Here are the topics for this article:
 
- [1]: http://kaidez.com/almay-facebook-page/
- [2]: http://kaidez.com/mitchum-html5-site/
+ [1]: https://kaidez.com/almay-facebook-page/
+ [2]: https://kaidez.com/mitchum-html5-site/
 
 *   [Why We Need To Code For Mobile][3]
 *   [The List of Tactics][4]

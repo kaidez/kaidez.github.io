@@ -60,7 +60,7 @@ I recently created this test page with the following code:
       &lt;/dl&gt;
       &lt;h2&gt;Social Networking Info &lt;/h2&gt;
       &lt;ul&gt;
-        &lt;li&gt;&lt;a href="http://kaidez.com/" itemprop="url">Blog&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="https://kaidez.com/" itemprop="url">Blog&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href="http://facebook.com/kaidez" itemprop="url">Facebook Profile&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href="http://www.twitter.com/kaidez" itemprop="url">Twitter Page  &lt;/a&gt;&lt;/li&gt;
       &lt;/ul&gt;

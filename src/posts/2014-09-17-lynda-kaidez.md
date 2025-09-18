@@ -23,19 +23,3 @@ I'm deeply indebted to Lynda author [James Williamson (RIP, old friend)](https:/
 I also throw great thanks to both [Scott Simpson](https://www.linkedin.com/learning/instructors/scott-simpson?trk=lynda_redirect_learning "Visit Scott Simpson's lynda courses") and [Dan Weston](https://x.com/danielbweston "visit Dan Weston on Twitter"), the respective producers of my Backbone and Ember courses. I may have prepared the course content but Scott and Dan provided invaluable advice on creating as best of a course as I could.
 
 Check out the courses and [hit me up on Twitter/X](http://x.com/kaidez "contact kaidez on x") if you have any questions.
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "kaidez courses on lynda.com (now LinkedIn Learning)",
-    "description": "kaidez recorded Ember.js and Backbone.js courses for lynda.com, now LinkedIn Learning.",
-    "author": {
-        "@type": "Person",
-        "name": "Kai Gittens",
-		"url" : "http://kaidez.com/"
-    },
-    "datePublished": "2014-09-17",
-    "dateModified": "2025-08-27"
-}
-</script>

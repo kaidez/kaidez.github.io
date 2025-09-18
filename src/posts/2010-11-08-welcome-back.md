@@ -76,7 +76,7 @@ The list above is big. Do you think I’m taking on too much? Or too little? Is 
     "author": {
         "@type": "Person",
         "name": "Kai Gittens",
-		    "url" : "http://kaidez.com/"
+		    "url" : "https://kaidez.com/"
     },
     "datePublished": "2010-11-08",
     "dateModified": "2025-08-27"

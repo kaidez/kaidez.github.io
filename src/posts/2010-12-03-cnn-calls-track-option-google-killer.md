@@ -26,19 +26,3 @@ My opinion comes from knowing how this stuff works so let me just say this: if y
 The CNN story is [here][1]…and feel free to agree or disagree with my opinion.
 
  [1]: https://web.archive.org/web/20101223205418/http://money.cnn.com/2010/12/02/technology/ftc_do_not_track/index.htm?source=cnn_bin&hpt=Sbin
-
- <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "NN calls the do not track option a "Google killer"",
-    "description": "Quick recap of CNN's article on the FTC's proposal of adding a do not track feature that consumers can use for internet browsing, short opinion ",
-    "author": {
-        "@type": "Person",
-        "name": "Kai Gittens",
-		"url" : "http://kaidez.com/"
-    },
-    "datePublished": "200-12-03",
-    "dateModified": "2025-08-27"
-}
-</script>

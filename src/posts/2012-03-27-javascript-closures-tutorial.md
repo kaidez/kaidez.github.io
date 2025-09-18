@@ -306,19 +306,3 @@ Hilarious presentation from this UK-based developer.
 ## Conclusion
 
 Closures are tough to understand in the beginning, I don’t deny it. But they’re useful as hell and make your JavaScript super-efficient. Re-read this article if you need to, check out the articles on the reading list and hit me up if you have questions.
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "TUTORIAL: What NYC Subways Can Teach Us About JavaScript Closures",
-    "description": "JavaScript closures tutorial using the New York City subway to explain how they work. With demo, code samples and short reading list.",
-    "author": {
-        "@type": "Person",
-        "name": "Kai Gittens",
-        "url": "http://kaidez.com/"
-    },
-    "datePublished": "2012-03-27",
-    "dateModified": "2025-08-27"
-}
-</script>

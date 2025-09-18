@@ -71,20 +71,3 @@ The series hasn’t started yet, so I’m open to modifying the wireframes if so
 
 
 > ***Read the entire “Wireframe Series”: Intro | [Page 1»][1] | [Page 2»][2] | [Page 3»][3]***
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "HTML5 wireframe preview of kaidez.com portfolio site",
-    "description": "Part Two of my explanation on how I created wireframed my HTML5 site before I developed and designed it",
-    "author": {
-        "@type": "Person",
-        "name": "Kai Gittens",
-		    "url" : "http://kaidez.com/"
-    },
-    "datePublished": "2011-02-04",
-    "dateModified": "2025-08-27",
-    "programmingLanguage": "HTML"
-}
-</script>

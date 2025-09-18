@@ -160,7 +160,7 @@ Think I left some reasons or resources out? Feel free to comment. AND NO SPAM!! 
     "author": {
         "@type": "Person",
         "name": "Kai Gittens",
-        "url": "http://kaidez.com/"
+        "url": "https://kaidez.com/"
     },
     "datePublished": "2012-05-15",
     "dateModified": "2025-08-27"

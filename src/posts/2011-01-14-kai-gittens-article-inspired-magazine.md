@@ -34,19 +34,3 @@ I was supposed to post another jQuery related article but I was really excited t
   }
 }
 </style>
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "Read My Article At Inspired Magazine!!!",
-    "description": "Kaidez guest post at Inspired Magazine responded to Cameron Chapman's web designer article at Smashing Magazine",
-    "author": {
-        "@type": "Person",
-        "name": "Kai Gittens",
-		    "url" : "http://kaidez.com/"
-    },
-    "datePublished": "2011-01-14",
-    "dateModified": "2025-08-27"
-}
-</script>

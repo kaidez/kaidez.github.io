@@ -56,20 +56,3 @@ As an alternative to .browser, jQuery offers the .support property which detects
  [5]: http://api.jquery.com/jQuery.browser/
 
 Next up: my take on HTML5 video!
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "Two JavaScript Tasks That jQuery Does Not Replace",
-    "description": "Short article about how jQuery does not have a replacement for JavaScript's document.write and has a not-so-great replacement for its navigator.UserAgent",
-    "author": {
-        "@type": "Person",
-        "name": "Kai Gittens",
-		    "url" : "http://kaidez.com/"
-    },
-    "datePublished": "2012-01-10",
-    "dateModified": "2025-08-28",
-    "programmingLanguage": "JavaScript"
-}
-</script>
