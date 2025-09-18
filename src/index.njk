@@ -7,6 +7,7 @@ pagination:
   alias: posts
 ---
 <section class="container">
+  <h1 class="content--hidden-text">Read the last 10 blog posts on kaidez.com</h1>
   <div class="posts-homepage-post-list">
     {% for post in posts %}
     <article class="post-card">
@@ -25,12 +26,11 @@ pagination:
 
   <div class="previous-next-button-container">
     <div class="previous-next-button">
-      {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}" class="pagination-buttons"><i
-          class="fa-solid fa-arrow-left-long"></i> PREVIOUS PAGE</a>{%endif%}
+      {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}" class="pagination-buttons" aria-label="Go to previous page"><i class="fa-solid fa-arrow-left-long"></i> PREVIOUS PAGE</a>{%endif%}
     </div>
     <div class="previous-next-button">
-      {% if pagination.href.next %}<a href="{{ pagination.href.next }}" class="pagination-buttons">NEXT PAGE <i
-          class="fa-solid fa-arrow-right-long"></i></a>{% endif %}
+      {% if pagination.href.next %}<a href="{{ pagination.href.next }}" class="pagination-buttons" aria-label="Go to 
+  next page">NEXT PAGE <i class="fa-solid fa-arrow-right-long"></i></a>{% endif %}
     </div>
   </div>
 </section>

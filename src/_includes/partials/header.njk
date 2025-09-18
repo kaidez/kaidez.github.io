@@ -1,7 +1,7 @@
-<a class="skip-link" href="#main-content">Skip to main content</a>
-<a class="skip-link" href="#navigation">Skip to navigation</a>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<a href="#navigation" class="skip-link">Skip to navigation</a>
 <header class="site-header">
-  <h1 class="header-content--hidden-text">{{ site.title }}</h1>
+  <h1 class="content--hidden-text">{{ site.title }}</h1>
   <div class="container">
     <div class="header-content">
       <div class="site-logo header-content--item">
@@ -9,7 +9,9 @@
           <svg version="1.2" preserveAspectRatio="xMidYMid meet"
             viewBox="11.828859060402685 153.6600013 687.256711409396 205.66800174" zoomAndPan="magnify"
             xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" style="max-height: 500px"
-            width="687.256711409396" height="205.66800174">
+            width="687.256711409396" height="205.66800174"
+            role="img"
+            aria-label="kaidez">
             <defs>
               <clipPath id="bf88160581">
                 <path d="M 12 154.207031 L 696.75 154.207031 L 696.75 360.855469 L 12 360.855469 Z M 12 154.207031" />
@@ -28,16 +30,15 @@
         </a>
       </div>
       <div>
-        <nav class="site-nav header-content--item" aria-label="Main navigation">
-          <h2 class="header-content--hidden-text">Main Navigation</h2>
+        <nav id="navigation" class="site-nav header-content--item" aria-label="Main navigation">
+          <h2 class="content--hidden-text">Main Navigation</h2>
           <ul>
             <li><a href="/coding-best-practices/">coding tips</a></li>
             <li><a href="/tutorials/">tutorials</a></li>
             <li><a href="/personal/">personal</a></li>
             <li><a href="/reviews/">reviews</a></li>
           </ul>
-          <button class="mobile-menu-icon" aria-expanded="false" aria-controls="main-navigation"
-            aria-label="Toggle navigation menu">
+          <button class="mobile-menu-icon" aria-expanded="false" aria-controls="main-navigation" aria-label="Toggle navigation menu">
             <i class="fa-solid fa-ellipsis"></i>
             <span class="mobile-menu-text">menu</span>
           </button>

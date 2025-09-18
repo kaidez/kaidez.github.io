@@ -233,7 +233,7 @@ time {
   flex: 1;
 }
 
-.header-content--hidden-text {
+.content--hidden-text {
   position: absolute;
   clip: rect(1px 1px 1px 1px);
   margin-bottom: 0;
