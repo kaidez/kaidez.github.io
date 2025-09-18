@@ -5,11 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if title %}{{ title }} - {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="description" content="{% if excerpt %}{{ excerpt }}{% elif tagName %} Posts tagged as {{ tagName }} on kaidez.com {% else %}{{ site.description }}{% endif %}">
 
   <!-- Open Graph -->
   <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}">
-  <meta property="og:description" content="{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}{% endif %}">
+
+
+  <meta property="og:description" content="{% if excerpt %}{{ excerpt }}{% elif tagName %} Posts tagged as {{ tagName }} on kaidez.com {% else %}{{ site.description }}{% endif %}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 
@@ -45,7 +47,7 @@
   <meta name="twitter:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}" />
   <meta name="twitter:image"
     content="https://kaidez.com/assets/img/{% if image %}{{ image }}{% else %}default-og.jpg{% endif %}" />
-  <meta name="twitter:description" content="{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}{% endif %}" />
+  <meta name="twitter:description" content="{% if excerpt %}{{ excerpt }}{% elif tagName %} Posts tagged as {{ tagName }} on kaidez.com {% else %}{{ site.description }}{% endif %}">
   {% include "partials/JSON-LD.njk" %}
   {% include "partials/googleAnalytics.njk" %}
 </head>
