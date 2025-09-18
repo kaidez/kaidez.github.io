@@ -947,8 +947,9 @@ svg {
   .site-nav ul.isVisible {
     display: inline;
     position: fixed;
+    padding: 0;
     left: 0px;
-    top: 13px;
+    top: 44px;
     width: 100%;
     background: red;
     margin-top: 52px;
