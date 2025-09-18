@@ -358,7 +358,7 @@ svg {
   text-decoration: none;
 }
 
-.post-card h2 a,
+.post-card h2 a:hover,
 .post-card h3 a:hover {
   color: var(--color-danger);
 }

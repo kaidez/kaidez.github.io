@@ -17,7 +17,7 @@ permalink: "/tags/"
         {% for tag in collections.allSecondaryTags %}
         <div class="tag-card">
             <a href="/tags/{{ tag }}/" class="tag-link">
-                <h3>{{ tag }}</h3>
+                <h2>{{ tag }}</h2>
                 <p class="tag-count">
                     {% set postsWithTag = collections.all | filterBySecondaryTag(tag) %}
                     {{ postsWithTag.length }} post{% if postsWithTag.length != 1 %}s{% endif %}

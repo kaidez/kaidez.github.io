@@ -1,8 +1,9 @@
 ---
 layout: layouts/category.njk
 title: "Personal"
-description: "Personal thoughts, experiences, and reflections"
+description: "Personal thoughts, rants, and reflections from kaidez"
 permalink: "/personal/"
+image: default-image.jpg
 ---
 
 <div class="container">
@@ -19,9 +20,9 @@ permalink: "/personal/"
 
     {% if hasPersonalTag %}
     <article class="post-card">
-      <h3>
+      <h2>
         <a href="{{ post.url }}">{{ post.data.title }}</a>
-      </h3>
+      </h2>
 
       <div class="post-meta">
         <time datetime="{{ post.date | htmlDateString }}">

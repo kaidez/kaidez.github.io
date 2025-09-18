@@ -1,8 +1,9 @@
 ---
 layout: layouts/category.njk
 title: "Tutorials"
-description: "Step-by-step tutorials and how-to guides"
+description: "Step-by-step tutorials and how-to guides from kaidez"
 permalink: "/tutorials/"
+image: default-image.jpg
 ---
 
 <div class="container">
@@ -19,9 +20,9 @@ permalink: "/tutorials/"
 
     {% if hasTutorialTag %}
     <article class="post-card">
-      <h3>
+      <h2>
         <a href="{{ post.url }}">{{ post.data.title }}</a>
-      </h3>
+      </h2>
 
       <div class="post-meta">
         <time datetime="{{ post.date | htmlDateString }}">

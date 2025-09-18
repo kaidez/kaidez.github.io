@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if title %}{{ title }} - {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
 
   <!-- Open Graph -->
   <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}">
-  <meta property="og:description" content="{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 
@@ -25,29 +25,30 @@
   <!-- Styles -->
   <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="/assets/css/style.css">
+
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
 
-  <meta property="article:publisher" content="http://facebook.com/kaidezblog" />
+  <meta property="article:publisher" content="https://facebook.com/kaidezblog" />
   <meta property="article:section" content="Personal" />
-  <meta property="og:image" content="http://www.kaidez.com/assets/img/{{ image }}" />
+  <meta property="og:image" content="https://www.kaidez.com/assets/img/{{ image }}" />
   <meta property="og:image:width" content="700" />
   <meta property="og:image:height" content="300" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@kaidez" />
   <meta name="twitter:creator" content="@kaidez" />
   <meta name="twitter:title" content="{{ title }} » kaidez" />
-  <meta name="twitter:image" content="http://www.kaidez.com/assets/img/{{ image }}" />
-  <meta name="twitter:description" content="{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}{% endif %}" />
+  <meta name="twitter:image" content="https://www.kaidez.com/assets/img/{{ image }}" />
+  <meta name="twitter:description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}" />
   {% include "partials/JSON-LD.njk" %}
   {% include "partials/googleAnalytics.njk" %}
 </head>
 
 <body class="{% if bodyClass %}{{ bodyClass }}{% endif %}">
-  <a name="main-content"></a>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   {% include "partials/header.njk" %}
-  <main class="main-content">
-    <h3 class="category-header-title">the <i>"{{ title }}"</i> category</h3>
+  <main id="main-content" class="main-content" role="main" aria-label="Personal category posts">
+    <h1 class="category-header-title">the <i>"{{ title }}"</i> category</h1>
     {{ content | safe }}
   </main>
 
