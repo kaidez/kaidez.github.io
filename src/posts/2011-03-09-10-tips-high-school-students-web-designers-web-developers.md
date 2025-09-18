@@ -9,9 +9,7 @@ tags: ["personal"]
 secondary_tags: ["web developer job", "learning"]
 category: Personal
 ---
-<em>(Author's note - August 2025: This post is still relevant but there's updated post [here][1] -k)</em></p>
-
-[1]: /high-school-student-web-tips-2016/
+<p style="margin: 30px 0 40px; border-bottom: black 1px solid;"><em>(Author's note - September 2025: Generative AI has changed the hiring landscape for software developers. I wrote a post about <a href="/entry-level-developer-jobs-ai-changes/">how AI has affected hiring entry level developers</a>. Please read that article.  -k)</em></p>
 
 I have to thank my father for getting me into computers. He sampled a lot of personal PCs in the early eighties, from the Kaypro to the Apple II…eventually settling on the Apple Macintosh (what we now call the Mac). I paid attention and followed his lead, resulting in the career that I have now.
 
