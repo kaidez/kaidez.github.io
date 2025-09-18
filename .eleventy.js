@@ -1,5 +1,6 @@
 const { execSync } = require('child_process');
 const moment = require("moment");
+const htmlmin = require("html-minifier");
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const relatedPostsPlugin = require("./src/config/plugins/relatedPosts");
@@ -21,8 +22,26 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ 'src/llms.txt': '/llms.txt' });
 
-  // Add simple date filters
+  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+    if (process.env.NODE_ENV === "production" && outputPath?.endsWith(".html")) {
+      try {
+        return htmlmin.minify(content, {
+          useShortDoctype: true,
+          removeComments: true,
+          collapseWhitespace: true,
+          minifyCSS: true,
+          minifyJS: false, // Disable JS minification in HTML to avoid conflicts
+          ignoreCustomFragments: [/<%[\s\S]*?%>/, /<\?[\s\S]*?\?>/]
+        });
+      } catch (error) {
+        console.warn('HTML minification failed for', outputPath, error.message);
+        return content;
+      }
+    }
+    return content;
+  });
 
+  // Add simple date filters
   // Not being used, but kept for reference
   eleventyConfig.addFilter("readableDate", dateObj => {
     if (!dateObj) return "";
