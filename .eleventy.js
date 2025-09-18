@@ -4,32 +4,33 @@ const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const relatedPostsPlugin = require("./src/config/plugins/relatedPosts");
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
 
   // Copy Font Awesome assets from node_modules
-  eleventyConfig.addPassthroughCopy({"node_modules/@fortawesome/fontawesome-free/css": "assets/fontawesome/css"});
-  eleventyConfig.addPassthroughCopy({"node_modules/@fortawesome/fontawesome-free/webfonts": "assets/fontawesome/webfonts"});
-  
+  eleventyConfig.addPassthroughCopy({ "node_modules/@fortawesome/fontawesome-free/css": "assets/fontawesome/css" });
+  eleventyConfig.addPassthroughCopy({ "node_modules/@fortawesome/fontawesome-free/webfonts": "assets/fontawesome/webfonts" });
+
   // Copy assets to output
   eleventyConfig.addPassthroughCopy("src/assets");
 
   eleventyConfig.addPassthroughCopy({ 'src/assets/samples': '/samples' });
-  
+
   eleventyConfig.addPassthroughCopy({ 'src/ajax-tutorial': '/ajax-tutorial' });
 
   eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
+
   eleventyConfig.addPassthroughCopy({ 'src/llms.txt': '/llms.txt' });
-  
+
   // Add simple date filters
 
   // Not being used, but kept for reference
   eleventyConfig.addFilter("readableDate", dateObj => {
     if (!dateObj) return "";
     const date = new Date(dateObj);
-    return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
     });
   });
 
@@ -50,40 +51,40 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(relatedPostsPlugin);
 
 
-// Add collection for blog posts
-eleventyConfig.addCollection("posts", function(collectionApi) {
-  return collectionApi.getFilteredByGlob("src/posts/*.md").reverse();
-});
-
-// Add collections for specific categories - SIMPLE VERSION
-eleventyConfig.addCollection("personal", function(collectionApi) {
-  return collectionApi.getAll().filter(function(item) {
-    return item.data.tags && item.data.tags.includes("personal");
+  // Add collection for blog posts
+  eleventyConfig.addCollection("posts", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/posts/*.md").reverse();
   });
-});
 
-eleventyConfig.addCollection("tutorials", function(collectionApi) {
-  return collectionApi.getAll().filter(function(item) {
-    return item.data.tags && item.data.tags.includes("tutorials");
+  // Add collections for specific categories - SIMPLE VERSION
+  eleventyConfig.addCollection("personal", function (collectionApi) {
+    return collectionApi.getAll().filter(function (item) {
+      return item.data.tags && item.data.tags.includes("personal");
+    });
   });
-});
 
-eleventyConfig.addCollection("reviews", function(collectionApi) {
-  return collectionApi.getAll().filter(function(item) {
-    return item.data.tags && item.data.tags.includes("reviews");
+  eleventyConfig.addCollection("tutorials", function (collectionApi) {
+    return collectionApi.getAll().filter(function (item) {
+      return item.data.tags && item.data.tags.includes("tutorials");
+    });
   });
-});
 
-eleventyConfig.addCollection("codingBestPractices", function(collectionApi) {
-  return collectionApi.getAll().filter(function(item) {
-    return item.data.tags && item.data.tags.includes("coding-best-practices");
+  eleventyConfig.addCollection("reviews", function (collectionApi) {
+    return collectionApi.getAll().filter(function (item) {
+      return item.data.tags && item.data.tags.includes("reviews");
+    });
   });
-});
-  
-  eleventyConfig.addCollection("categories", function(collectionApi) {
+
+  eleventyConfig.addCollection("codingBestPractices", function (collectionApi) {
+    return collectionApi.getAll().filter(function (item) {
+      return item.data.tags && item.data.tags.includes("coding-best-practices");
+    });
+  });
+
+  eleventyConfig.addCollection("categories", function (collectionApi) {
     const posts = collectionApi.getFilteredByGlob("src/posts/*.md");
     const categories = new Set();
-    
+
     posts.forEach(post => {
       if (post.data.tags) {
         post.data.tags.forEach(tag => {
@@ -93,17 +94,17 @@ eleventyConfig.addCollection("codingBestPractices", function(collectionApi) {
         });
       }
     });
-    
+
     return Array.from(categories).sort();
   });
-  
+
   // Add excerpt filter
   eleventyConfig.addFilter("excerpt", (post) => {
     if (!post) return "";
     const content = post.replace(/(<([^>]+)>)/gi, "");
     return content.substr(0, 200) + "...";
   });
-  
+
   // Add head filter for getting first N items
   eleventyConfig.addFilter("head", (array, n) => {
     if (!Array.isArray(array)) return [];
@@ -111,9 +112,9 @@ eleventyConfig.addCollection("codingBestPractices", function(collectionApi) {
   });
 
   // Add collection for all secondary tags
-  eleventyConfig.addCollection("allSecondaryTags", function(collectionApi) {
+  eleventyConfig.addCollection("allSecondaryTags", function (collectionApi) {
     const allSecondaryTags = new Set();
-    
+
     collectionApi.getAll().forEach(post => {
       if (post.data.secondary_tags && Array.isArray(post.data.secondary_tags)) {
         post.data.secondary_tags.forEach(tag => {
@@ -121,18 +122,18 @@ eleventyConfig.addCollection("codingBestPractices", function(collectionApi) {
         });
       }
     });
-    
+
     return Array.from(allSecondaryTags).sort();
   });
 
   // Add filter to filter posts by secondary tag
-  eleventyConfig.addFilter("filterBySecondaryTag", function(posts, targetTag) {
+  eleventyConfig.addFilter("filterBySecondaryTag", function (posts, targetTag) {
     if (!Array.isArray(posts)) return [];
-    
+
     return posts.filter(post => {
-      return post.data.secondary_tags && 
-             Array.isArray(post.data.secondary_tags) && 
-             post.data.secondary_tags.includes(targetTag);
+      return post.data.secondary_tags &&
+        Array.isArray(post.data.secondary_tags) &&
+        post.data.secondary_tags.includes(targetTag);
     });
   });
 
