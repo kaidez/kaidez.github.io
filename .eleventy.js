@@ -18,6 +18,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ 'src/ajax-tutorial': '/ajax-tutorial' });
 
   eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
+  eleventyConfig.addPassthroughCopy({ 'src/llms.txt': '/llms.txt' });
   
   // Add simple date filters
 
