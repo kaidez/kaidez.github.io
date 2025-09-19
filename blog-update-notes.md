@@ -1,3 +1,72 @@
+
+
+
+There is a cost for using AI. it may be too expensive to use exclusively learn a new language.
+
+Great for unit testing...catches edge cases
+
+Claude fixed my 404 page semantically and help make responsive, which was a problem I knew about but didn't address.
+
+Hiring a bunch of developers to code in AI will be expensive. a lot of request tokens will need to be bought, energy resources, etc.
+
+MCPs are the thing to watch.
+
+I'm im using Cline extension inside of Claude inside VS Code.
+
+That company that created an agent called Morpheus...that didn't help. 
+https://www.linkedin.com/learning/agentic-ai-fundamentals-architectures-frameworks-and-applications/applications-and-use-cases-of-agentic-ai?autoSkip=true&resume=false
+
+Alex Maccaw vibe coding article
+https://blog.alexmaccaw.com/how-to-vibe-code-as-a-senior-engineer/
+
+Claude reverse engineered:
+https://www.youtube.com/watch?v=i0P56Pm1Q3U&ab_channel=Yifan-BeyondtheHype
+
+tool for reverse engineering JavaScript...download this later:
+https://www.npmjs.com/package/webcrack
+
+Brad Traversy article on AI making him like coding again
+https://www.traversymedia.com/blog/ai-passion
+
+Excellent related post tutorial
+https://saadbess.com/blog/creating-a-content-recommendation-plugin-in-11ty/
+
+
+Yes, broken external links can harm your site's SEO by creating a poor user experience, tarnishing your site's reputation for being well-maintained, and potentially preventing link equity from passing to other sites. While Google's documentation doesn't explicitly state "broken external links hurt SEO," it confirms that 404 (Not Found) errors are a sign of poor site quality. Google's Search Console can help you find these errors, and tools like Screaming Frog can be used to audit your site regularly to fix them. 
+
+Read this:
+https://simplifiedseoconsulting.com/why-fixing-broken-links-is-crucial-for-your-seo-and-user-experience/
+
+https://yoast.com/should-you-keep-old-content/
+
+https://www.stsdigitalsolutions.com/blog/how-optimize-your-blog-for-chatgpt-gemini-and-claude-responses/#:~:text=Creating%20Conversational%20and%20Intent%2DFocused,blog%20as%20a%20reliable%20source.
+
+https://schema.org/TechArticle
+
+https://www.w3.org/TR/json-ld11/
+
+RICH SNIPPETS:
+https://search.google.com/test/rich-results/result?id=53M17oKlMl_MvDLvHpc2oA
+
+Use JSON Lint if it doesn't work:
+https://jsonlint.com/
+
+JSON-LD PLAYGROUND:
+https://json-ld.org/playground/
+
+Claude's really good at knocking out unit tests
+https://www.youtube.com/watch?v=gv0WHhKelSE&t=505s&ab_channel=Anthropic (around 8:40)
+
+YOAST STUFF:
+https://yoast.com/llm-seo-optimization-techniques-including-llms-txt/
+https://yoast.com/generative-ai-and-seo/
+
+
+CHRISTIAN HEILMANN AI:
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7364649229081870339?compact=1" height="399" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+
+
+
 I have successfully applied the title tag enhancement to improve the SEO of the JavaScript books post.
 
 ## Title Enhancement Applied:
