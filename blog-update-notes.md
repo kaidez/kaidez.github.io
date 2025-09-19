@@ -62,6 +62,13 @@ https://yoast.com/llm-seo-optimization-techniques-including-llms-txt/
 https://yoast.com/generative-ai-and-seo/
 
 
+ADDY OSMANI ON CLINE:
+https://addyo.substack.com/p/why-i-use-cline-for-ai-engineering
+
+
+ADDY OSMANI ON CONTEXT ENGINEERING:
+https://addyo.substack.com/p/context-engineering-bringing-engineering
+
 CHRISTIAN HEILMANN AI:
 <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7364649229081870339?compact=1" height="399" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
 
