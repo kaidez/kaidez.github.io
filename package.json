@@ -43,6 +43,7 @@
   "main": "index.js",
   "type": "commonjs",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^7.0.1"
+    "@fortawesome/fontawesome-free": "^7.0.1",
+    "eleventy-plugin-reading-time": "^0.0.1"
   }
 }

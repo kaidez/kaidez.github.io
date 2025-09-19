@@ -4,6 +4,7 @@ const htmlmin = require("html-minifier");
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const relatedPostsPlugin = require("./src/config/plugins/relatedPosts");
+const readingTime = require('eleventy-plugin-reading-time');
 
 module.exports = function (eleventyConfig) {
 
@@ -68,6 +69,9 @@ module.exports = function (eleventyConfig) {
 
   // Related posts plugin
   eleventyConfig.addPlugin(relatedPostsPlugin);
+
+  // Reading time plugin
+  eleventyConfig.addPlugin(readingTime);
 
 
   // Add collection for blog posts
