@@ -4,8 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>{% if title %}{{ title }} - {% endif %}{{ site.title }}</title>
   <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="author" content="Kai Gittens">
+  
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="+Tj7sEh2RH2PLG8XnLRer4x3YQq9PBT-IqZLqtbI8Eq8=" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}">
