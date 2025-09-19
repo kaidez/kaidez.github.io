@@ -74,7 +74,7 @@
 
   <main id="main-content" class="post-content" role="main" aria-label="Article content">
     <h1 class="post-title">{{ title }}</h1>
-    <img src="/assets/img/{{ image }}" alt="image for '{{ title }}' post" class="header-image " />
+    <img src="/assets/img/{{ image }}" alt="{% if imageAltText %}{{ imageAltText }}{% else %}image for the '{{ title }}' post"{% endif %} class="header-image" />
     {{ content | safe }}
 
     <aside class="related-posts" role="complementary" aria-labelledby="related-posts-heading">
