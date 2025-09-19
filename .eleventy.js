@@ -43,7 +43,6 @@ module.exports = function (eleventyConfig) {
   });
 
   // Add simple date filters
-  // Not being used, but kept for reference
   eleventyConfig.addFilter("readableDate", dateObj => {
     if (!dateObj) return "";
     const date = new Date(dateObj);
@@ -60,6 +59,7 @@ module.exports = function (eleventyConfig) {
     return date.toISOString().split('T')[0];
   });
 
+  // Current not being used
   eleventyConfig.addFilter("dateReformat", () => {
     return moment().format("MMMM Do, YYYY");
   });
