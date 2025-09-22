@@ -8,9 +8,9 @@ image: kdz-header.jpg
 tags: [coding-best-practices]
 secondary_tags: ["build tools", "javascript", "node"]
 category: Coding Tips
-  schema_type: "TechArticle"
-  dependencies: "Node.js, JavaScript, Grunt, Gulp, LESS, CoffeeScript"
-  proficiency_level: "Advanced"
+schema_type: "TechArticle"
+dependencies: "Node.js, JavaScript, Grunt, Gulp, LESS, CoffeeScript"
+proficiency_level: "Advanced"
 ---
 I came up with some cool techniques after working on a bunch of web development projects, techniques based mostly around front-end tooling.  I knew I would use these techniques and tools in future projects, and also knew that I had to find a way to easily set them up at the start of each project.
 

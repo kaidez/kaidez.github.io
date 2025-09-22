@@ -8,6 +8,9 @@ image: site-relaunch.jpg
 tags: ["personal"]
 secondary_tags: ["javascript", "build tools", "jekyll"]
 category: Personal
+schema_type: "TechArticle"
+dependencies: "Jekyll, Grunt, RequireJS, Bower, JavaScript, Ruby"
+proficiency_level: "Advanced"
 ---
 <em>(Author's note - August 2025: as of this note, this post is 12 years old. But while it no longer uses Jekyll to generate the static site, it does use the [Eleventy/11ty](https://www.11ty.dev/) static site generator.  It also doesn't use any of the Tipue search functionality (although the web site now points to what appears to be [a pretty interesting book](https://tipue.com/)!!! Lots of links in this post were now point to their [Wayback Machine](https://web.archive.org/) equivalent. Past all this, you may want to read this post to get some historical perspective -k)</em>
 
