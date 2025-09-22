@@ -8,6 +8,9 @@ image: search-autocomplete.jpg
 tags: [coding-best-practices]
 secondary_tags: ["typescript", "javascript"]
 category: Coding Tips
+schema_type: "TechArticle"
+dependencies: "TypeScript, JavaScript, Fetch API"
+proficiency_level: "Intermediate"
 ---
 My employer has a lot of acronyms for business terms that we use throughout the day. I created a proof-of-concept for an acronym search engine, with the goal of releasing it internally.
 

@@ -8,6 +8,9 @@ image: duck-simulator-image.jpg
 tags: [coding-best-practices]
 secondary_tags: ["typescript", "javascript"]
 category: Coding Tips
+schema_type: "TechArticle"
+dependencies: "TypeScript, JavaScript, Node.js"
+proficiency_level: "Intermediate"
 ---
 
 TypeScript is a superset language of JavaScript. It gives JavaScript tools for building and organizing large scale web applications…tools that already exist in languages like C# and Java.
