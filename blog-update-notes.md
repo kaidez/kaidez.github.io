@@ -562,3 +562,5 @@ SCHEMA INFO
   total_time: "PT15M"
 
   But your current redesign post is perfect as-is with just TechArticle schema.
+
+  Claude really helped my do eleventy stuff/suggestionbs
