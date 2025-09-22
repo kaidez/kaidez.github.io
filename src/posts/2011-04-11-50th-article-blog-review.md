@@ -4,7 +4,7 @@ date: 2011-04-11
 excerpt: kaidez reviews his progress with learning web development and how his blog is doing in terms of content, SEO and social network promotion
 layout: layouts/post.njk
 permalink: /50th-article-blog-review/
-image: default-image.jpg
+# image: default-image.jpg
 tags: ["personal"]
 secondary_tags: ["my work"]
 category: Personal

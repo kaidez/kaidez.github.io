@@ -4,7 +4,7 @@ date: 2011-01-28
 excerpt: HTML5's Microdata feature is a good tactic if properly formatted
 layout: layouts/post.njk
 permalink: /html5-seo-microdata/
-image: default-image.jpg
+# image: default-image.jpg
 tags: [coding-best-practices]
 secondary_tags: ["html5", "legacy"]
 category: Coding Tips

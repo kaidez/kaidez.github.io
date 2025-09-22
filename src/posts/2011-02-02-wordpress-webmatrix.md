@@ -4,7 +4,7 @@ date: 2011-02-02
 excerpt: Using WebMatrix to create a WordPress development site
 layout: layouts/post.njk
 permalink: /wordpress-webmatrix/
-image: default-image.jpg
+# image: default-image.jpg
 tags: [coding-best-practices]
 secondary_tags: ["html5", "legacy"]
 category: Coding Tips
