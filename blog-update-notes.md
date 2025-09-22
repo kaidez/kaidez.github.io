@@ -450,3 +450,115 @@ WHAT IS CLAUDE GOOD AT:
 
 
 That ,htaccess suggestion when doing an HTTP/2 review didn't work because GH Pages doesn't accept .htaccess files.
+
+SCHEMA INFO
+
+
+  For the site redesign post:
+  ---
+  title: "Kaidez 2025 Site Redesign"
+  schema_type: "TechArticle"
+  dependencies: "Eleventy, Node.js, Claude AI, GitHub Pages"
+  proficiency_level: "Intermediate"
+  ---
+
+  For tutorial posts:
+  ---
+  title: "jQuery Image Fade Tutorial"
+  schema_type: "HowTo"
+  total_time: "PT15M"
+  supplies: ["jQuery library", "Two images"]
+  tools: ["Text editor", "Web browser"]
+  steps:
+    - name: "Set up CSS"
+      text: "Create CSS positioning for images"
+    - name: "Add jQuery"
+      text: "Include jQuery library"
+  ---
+
+  For regular posts: Just omit schema_type and it defaults to BlogPosting.
+
+> looks great!  one question, what does the "total_time: "PT15M" mean in the above example?
+
+⏺ PT15M is the ISO 8601 duration format that Schema.org requires for time values.
+
+  PT15M breakdown:
+  - P = Period (required prefix)
+  - T = Time (separates date from time components)
+  - 15M = 15 minutes
+
+  Other examples:
+  - PT30M = 30 minutes
+  - PT1H = 1 hour
+  - PT2H30M = 2 hours 30 minutes
+  - PT45S = 45 seconds
+  - P1D = 1 day
+
+  For your site redesign post, you might use something like PT1H (1 hour) or PT2H (2 hours)
+  depending on how long you estimate it would take someone to follow your process.
+
+> is this a firm Schema.org requirement?
+
+⏺ Yes, it's a firm Schema.org requirement. The duration property specifically requires ISO
+  8601 duration format.
+
+  From Schema.org documentation, duration values must be in the format defined by ISO 8601.
+  Search engines like Google will not properly parse other formats like "15 minutes" or "1
+  hour".
+
+  If you don't provide the correct format, the schema validation will fail and search
+  engines won't recognize the duration property for rich snippets or enhanced search
+  results.
+
+> in the context of this discussion, you said "follow your process." Does that have the same 
+  meaning as "read"?
+
+⏺ No, they have different meanings in this context:
+
+  - "Read" = the time to read through your blog post (maybe 5-10 minutes)
+  - "Follow your process" = the time to actually implement what you describe (redesigning a
+  site with Eleventy, setting up Claude AI, etc.)
+
+  For a HowTo schema, totalTime should reflect the time to complete the task, not just read
+  about it.
+
+  For your site redesign post, someone following your process might need:
+  - PT8H (8 hours) for a basic implementation
+  - PT2D (2 days) for a more thorough rebuild
+
+  Since your post is more of a case study than a step-by-step tutorial, TechArticle schema
+  (which you're already using) is actually more appropriate than HowTo.
+
+> should every blog host have a PT value?
+
+⏺ No, only specific schema types require totalTime with PT values:
+
+  Schema types that need totalTime:
+  - HowTo - time to complete the tutorial/process
+  - Recipe - cooking/prep time
+  - Course - duration of educational content
+
+  Schema types that DON'T need totalTime:
+  - BlogPosting - just a regular blog post
+  - TechArticle - technical article/case study
+  - Article - general article
+
+  Your site redesign post uses TechArticle schema, so it doesn't need a totalTime field. The
+   dynamic template I created only adds totalTime when schema_type is set to HowTo.
+
+  Most of your blog posts will probably use BlogPosting or TechArticle and won't need PT
+  duration values.
+
+> ok.  so this post doesn't need it for now I think. but tutorials so
+
+⏺ Exactly!
+
+  Your site redesign post = TechArticle (no totalTime needed)
+
+  Tutorial posts = HowTo (needs totalTime with PT format)
+
+  So for future tutorial posts like "How to create jQuery image fades" you'd add:
+  schema_type: "HowTo"
+  total_time: "PT15M"
+
+  But your current redesign post is perfect as-is with just TechArticle schema.
