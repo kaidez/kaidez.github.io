@@ -1,16 +1,4 @@
 ---
-<<<<<<< HEAD:_posts/2025-09-08-entry-level-tech-jobs-ai-impact.md
-layout: post
-comments: true
-title: How AI is Changing Entry-Level Tech Jobs (And What New Developers Can Do)
-date: 2025-09-08
-categories: coding-best-practices
-category-name: Coding Tips
-permalink: /entry-level-developer-jobs-ai-changes/
-excerpt: "A Stanford study shows AI hurting entry-level tech jobs. Young developers need experience to compete in 2025 job market."
-og-image: cs-intern.jpg
-thumb-image: cs-intern-thumb.jpeg
-=======
 title: How AI is Changing Entry-Level Tech Jobs (And What New Developers Can Do)
 date: 2025-09-08
 excerpt: "A Stanford study shows is AI hurting entry-level tech jobs. Young developers need experience to compete in 2025 job market."
@@ -20,7 +8,6 @@ image: cs-intern.jpg
 tags: ["personal"]
 secondary_tags: ["web developer job", "ai"]
 category: Personal
->>>>>>> dev-branch:src/posts/2025-09-08-entry-level-tech-jobs-ai-impact.md
 ---
 On August 26th, 2025, Stanford University released a report on how generative AI (or AI) is affecting the labor market.  It had six key findings, the first being that there were <strong>"substantial declines in employment for early-career workers (ages 22-25) in occupations most exposed to AI."</strong>
 
@@ -39,15 +26,6 @@ Job opportunities in tech fluctuate; sometimes there are tons of open positions 
 As a result, <strong>young workers looking for their first tech job should try and gain <em>some</em> experience, at least for now</strong>.  And if I were a young worker, here's how I would begin:
 
 <ul>
-<<<<<<< HEAD:_posts/2025-09-08-entry-level-tech-jobs-ai-impact.md
-  <li class="post__list-item">
-    <b>Start interning:</b> This is the obvious start, but it bears repeating. Interning at an office while doing tech work is the best way to get your foot in the job market door.  And it doesn't need to be a tech company: non-tech sectors such as banking, real estate, and healthcare have tons of software development work that needs to get done.
-  </li>
-  <li class="post__list-item">
-    <b>Get a GitHub account & start showing your code samples:</b> <a href="https://github.com/" title="Visit GitHub, a platform for hosting and collaborating on code repositories">GitHub</a> is still the best, free way to display and quantify your coding skills.  And don't just post the code and walk away from it: put some effort into the README file, explaining what you did and why.
-  </li>
-    <li class="post__list-item">
-=======
   <li>
     <b>Start interning:</b> This is the obvious start, but it bears repeating. Interning at an office while doing tech work is the best way to get your foot in the job market door.  And it doesn't need to be a tech company: non-tech sectors such as banking, real estate, and healthcare have tons of software development work that needs to get done.
   </li>
@@ -55,7 +33,6 @@ As a result, <strong>young workers looking for their first tech job should try a
     <b>Get a GitHub account & start showing your code samples:</b> <a href="https://github.com/" title="Visit GitHub, a platform for hosting and collaborating on code repositories" aria-label="Visit GitHub to create an account and showcase your code samples">GitHub</a> is still the best, free way to display and quantify your coding skills.  And don't just post the code and walk away from it: put some effort into the README file, explaining what you did and why.
   </li>
     <li>
->>>>>>> dev-branch:src/posts/2025-09-08-entry-level-tech-jobs-ai-impact.md
     <b>Start blogging about software development:</b> It may seem like a dated practice in a full-on social media world, but it's still effective. Try. Build. Fail or Be Successful. Then write about it and post it online.
   </li>
 </ul>
@@ -65,17 +42,10 @@ As a result, <strong>young workers looking for their first tech job should try a
 But this list is, I believe, a pretty clear-cut path on what to do. There are some other things that young workers can do that may not be as obvious:
 
 <ul>
-<<<<<<< HEAD:_posts/2025-09-08-entry-level-tech-jobs-ai-impact.md
-  <li class="post__list-item">
-    <b>Take AI seriously:</b> A permeating mantra in the software development world is "AI won't take your job, but a developer using AI will." And while anything can happen, I'm personally starting to see the benefits of coding alongside AI tools.  At the time of this post, I've been redesign/recoding this blog with the help of <a href="https://claude.ai/" title="Visit Claude AI, an AI assistant developed by Anthropic">Anthropic's Claude AI tool</a> and really like it. I certainly didn't (and wouldn't) use Claude to write every line of code, but it was a great helper.  Generating unit tests, reviewing blog posts to see if they meet <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" title="Web Content Accessibility Guidelines for making web content accessible">WCAG accessibility standards</a>, fixing bugs I couldn't fix after spending 20 minutes trying to fix them. Claude excelled here. And even if you're against using AI in coding, lots of employers doing the hiring are currently for it. So, having knowledge in this arena is a good thing and can only help you in the hiring process.
-  </li>
-  <li class="post__list-item">
-=======
   <li>
     <b>Take AI seriously:</b> A permeating mantra in the software development world is "AI won't take your job, but a developer using AI will." And while anything can happen, I'm personally starting to see the benefits of coding alongside AI tools.  At the time of this post, I've been redesign/recoding this blog with the help of <a href="https://claude.ai/" title="Visit Claude AI, an AI assistant developed by Anthropic">Anthropic's Claude AI tool</a> and really like it. I certainly didn't (and wouldn't) use Claude to write every line of code, but it was a great helper.  Generating unit tests, reviewing blog posts to see if they meet <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" title="Web Content Accessibility Guidelines for making web content accessible">WCAG accessibility standards</a>, fixing bugs I couldn't fix after spending 20 minutes trying to fix them. Claude excelled here. And even if you're against using AI in coding, lots of employers doing the hiring are currently for it. So, having knowledge in this arena is a good thing and can only help you in the hiring process.
   </li>
   <li>
->>>>>>> dev-branch:src/posts/2025-09-08-entry-level-tech-jobs-ai-impact.md
     <b>Participate in open source:</b> It may be intimidating, but it's worth trying. GitHub has tons of projects looking for help, from writing new classes and subclasses to writing documentation. Go to such projects, see what their backlog tasks are, and see how you can help. And don't let <a href="https://stackoverflow.blog/2023/09/11/what-we-talk-about-when-we-talk-about-imposter-syndrome/" title="Article on imposter syndrome from Stack Overflow blog">imposter syndrome</a> hold you back: it's OK to not know everything as you move forward.
   </li>
 </ul>
@@ -84,28 +54,16 @@ But this list is, I believe, a pretty clear-cut path on what to do. There are so
 
 I mentioned that I'm redoing my blog, and this includes reviewing older posts for potential archiving. I have a lot of old posts that discuss a certain tech subject that was popular at the time.
 
-<<<<<<< HEAD:_posts/2025-09-08-entry-level-tech-jobs-ai-impact.md
-A lot of tech subjects I <i>thought</i> would happen didn't. This post may certainly fall into this category someday.
-=======
 A lot of tech things I <em>thought</em> would happen didn't. This post may certainly fall into this category someday.
->>>>>>> dev-branch:src/posts/2025-09-08-entry-level-tech-jobs-ai-impact.md
 
 I purposely wrote this post in a way that I hope drives that point home. Mentioning the year it was written, using phrases like "for now" and "at the time of this blog post," etc.
 
 The truth is, no one can predict the long-term effects that AI will have on tech labor. AI could evolve to create more tech jobs than it eliminates across all age ranges... many in tech are optimistic about this.
 
-<<<<<<< HEAD:_posts/2025-09-08-entry-level-tech-jobs-ai-impact.md
-It's also true that when it comes to steady employment, we all live in a knowledge-based economy.  We must continuously learn new skills to remain employable.
-=======
 But it's also true that when it comes to steady employment, we all live in a knowledge-based economy.  And we all need to know something this year that we didn't know last year...AI is one of those "somethings."
->>>>>>> dev-branch:src/posts/2025-09-08-entry-level-tech-jobs-ai-impact.md
 
 <h2>Conclusion</h2>
 
 I firmly believe that the Stanford report's findings (which are well corroborated) mean that you should at least consider following these tips. If for no other reason than they're a best practice regardless of what's going on in the job market.
 
-<<<<<<< HEAD:_posts/2025-09-08-entry-level-tech-jobs-ai-impact.md
 But while I'm saying "prepare for the worst but hope for the best," be prepared for things to shift.  That's just the tech labor world that we live in.
-=======
-But while I'm saying "prepare for the worst but hope for the best," be prepared for things to shift.  That's just the tech labor world that we live in.
->>>>>>> dev-branch:src/posts/2025-09-08-entry-level-tech-jobs-ai-impact.md

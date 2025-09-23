@@ -1,17 +1,8 @@
 _site
 node_modules/
-<<<<<<< HEAD
-coverage/
-yarn.lock
-=======
->>>>>>> dev-branch
 .DS_Store
 .vscode/
 package-lock.json
 .bundle/
-<<<<<<< HEAD
-vendor/
-=======
 coverage
 _drafts
->>>>>>> dev-branch
