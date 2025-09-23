@@ -1,0 +1,136 @@
+{% if layout == "layouts/post.njk" %}
+<!-- Dynamic Schema for Individual Posts -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "{% if schema_type %}{{ schema_type }}{% else %}BlogPosting{% endif %}",
+    "headline": "{{ title }}",
+    "description": "{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}{%
+  endif %}",
+    "url": "{{ site.url }}{{ page.url }}",
+    "datePublished": "{{ date | htmlDateString }}",
+    "dateModified": "{{ date | htmlDateString }}",
+    {% if schema_type == "TechArticle" %}
+    "dependencies": {% if dependencies %}"{{ dependencies }}"{% else %}"Web Development, JavaScript"{% endif %},
+    "proficiencyLevel": "{% if proficiency_level %}{{ proficiency_level }}{% else %}Intermediate{% endif %}",
+    "applicationCategory": "WebApplication",
+    {% endif %}
+    {% if schema_type == "HowTo" %}
+    "totalTime": "{% if total_time %}{{ total_time }}{% else %}PT15M{% endif %}",
+    {% if supplies %}
+    "supply": [
+      {% for supply in supplies %}
+      {
+        "@type": "HowToSupply",
+        "name": "{{ supply }}"
+      }{% if not loop.last %},{% endif %}
+      {% endfor %}
+    ],
+    {% endif %}
+    {% if tools %}
+    "tool": [
+      {% for tool in tools %}
+      {
+        "@type": "HowToTool",
+        "name": "{{ tool }}"
+      }{% if not loop.last %},{% endif %}
+      {% endfor %}
+    ],
+    {% endif %}
+    {% if steps %}
+    "step": [
+      {% for step in steps %}
+      {
+        "@type": "HowToStep",
+        "name": "{{ step.name }}",
+        "text": "{{ step.text }}"
+      }{% if not loop.last %},{% endif %}
+      {% endfor %}
+    ],
+    {% endif %}
+    {% endif %}
+    "author": {
+      "@type": "Person",
+      "name": "Kai Gittens",
+      "url": "https://kaidez.com",
+      "sameAs": [
+        "https://x.com/kaidez",
+        "https://www.facebook.com/kaidezblog",
+        "https://www.linkedin.com/in/kaigittens/",
+        "https://bsky.app/profile/kaidezg.bsky.social",
+        "https://github.com/kaidez"
+      ]
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Kai Gittens"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ site.url }}{{ page.url }}"
+    },
+    "inLanguage": "en"
+  }
+  </script>
+
+{% elif page.url == "/" %}
+<!-- WebSite Schema for Homepage -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "kaidez - Web Development Tutorials & JavaScript Coding Tips",
+    "url": "https://kaidez.com/",
+    "description": "Expert web development tutorials, JavaScript tips, and coding best 
+  practices. Learn modern web development with React, Node.js, TypeScript, and more from
+   an experienced developer.",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "Kai Gittens",
+      "url": "https://kaidez.com",
+      "sameAs": [
+        "https://x.com/kaidez",
+        "https://www.facebook.com/kaidezblog",
+        "https://www.linkedin.com/in/kaigittens/",
+        "https://bsky.app/profile/kaidezg.bsky.social",
+        "https://github.com/kaidez"
+      ]
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Kai Gittens"
+    }
+  }
+  </script>
+
+{% else %}
+<!-- Default Blog Schema for Other Pages -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "kaidez - Tutorials & Articles about Web Development",
+    "url": "https://kaidez.com/",
+    "description": "Web development tips and opinions/rants from an experienced 
+  developer.",
+    "inLanguage": "en",
+    "dateModified": "2025-08-29",
+    "author": {
+      "@type": "Person",
+      "name": "Kai Gittens",
+      "sameAs": [
+        "https://x.com/kaidez",
+        "https://www.facebook.com/kaidezblog",
+        "https://www.linkedin.com/in/kaigittens/",
+        "https://bsky.app/profile/kaidezg.bsky.social",
+        "https://github.com/kaidez"
+      ]
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Kai Gittens"
+    }
+  }
+  </script>
+{% endif %}

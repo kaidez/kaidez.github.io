@@ -1,0 +1,16 @@
+---
+title: 'jQuery T-shirt - Geek Gift To Myself'
+date: 2010-12-30
+excerpt: My cool jQuery t-shirt
+layout: layouts/post.njk
+permalink: /jquery-tshirt-geek-gift/
+tags: ["personal"]
+secondary_tags: ["jquery"]
+category: Personal
+image: default-image.jpg
+---
+jQuery T-shirt...how cool am I? All my friends know I like t-shirts so no one should be surprised by my new one, considering the man-crush I have on jQuery. Will probably rock this the next warm day that comes around.
+
+You can get yours [here](http://devswag.com/products/classic-jquery-tshirt).
+
+<img src="/assets/img/jqueryShirt.jpg" class="post-pic" />

@@ -1,0 +1,24 @@
+---
+title: "I'm Focusing On .NET C#"
+date:   2010-11-24
+layout: layouts/post.njk
+excerpt: kaidez lays out a plan on how he'll learn .NET/C#.
+permalink: /learning-microsoft-dot-net-c-sharp/
+image: default-image.jpg
+tags: ["personal"]
+secondary_tags: ["learning", "legacy"]
+category:  Personal
+---
+[My premier post][1] included a list of skills that I needed to improve upon for may day job. I’m not changing the list but I’m attacking it in a more organized way.
+
+ [1]: https://kaidez.com/welcome-back/
+
+The skill set list included Microsoft SharePoint, .NET C#, Microsoft Silverlight and ActionScript 3 for Adobe Flash. .NET C# has moved to the top of the list for the following reasons:
+
+*   With enough practice, I can use .NET C# right away at work.
+*   It’s better to learn some .NET C# before jumping into Silverlight and extensive SharePoint development.
+*   .NET C# helps me understand object-oriented programming better.
+
+The stuff that I need to learn for personal growth hasn’t changed, especially the HTML5/CSS3 stuff.
+
+Now…where to find the time to do all this…s

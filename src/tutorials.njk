@@ -1,0 +1,41 @@
+---
+layout: layouts/category.njk
+title: "Tutorials"
+description: "Step-by-step tutorials and how-to guides from kaidez"
+permalink: "/tutorials/"
+image: default-image.jpg
+---
+
+<div class="container">
+
+  <div>
+    {% for post in collections.posts %}
+    {% if post.data.tags %}
+    {% set hasTutorialTag = false %}
+    {% for tag in post.data.tags %}
+    {% if tag == "tutorials" %}
+    {% set hasTutorialTag = true %}
+    {% endif %}
+    {% endfor %}
+
+    {% if hasTutorialTag %}
+    <article class="post-card">
+      <h2>
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+      </h2>
+
+      <div class="post-meta">
+        <time datetime="{{ post.date | htmlDateString }}">
+          {{ post.date | readableDate }}
+        </time>
+      </div>
+
+      {% if post.data.excerpt %}
+      <p class="post-excerpt">{{ post.data.excerpt }}</p>
+      {% endif %}
+    </article>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>

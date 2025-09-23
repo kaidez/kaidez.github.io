@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{% if title %}{{ title }} - {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="author" content="Kai Gittens">
+  
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="+Tj7sEh2RH2PLG8XnLRer4x3YQq9PBT-IqZLqtbI8Eq8=" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+
+  <!-- Canonical Link -->
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link href="/assets/css/prism.css" rel="stylesheet" />
+
+  <!-- JS -->
+  <script src="/assets/js/prism.js" defer></script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+  <meta property="article:publisher" content="https://facebook.com/kaidezblog" />
+  <meta property="article:section" content="Personal" />
+  <meta property="og:image" content="https://www.kaidez.com/assets/img/{{ image }}" />
+  <meta property="og:image:width" content="700" />
+  <meta property="og:image:height" content="300" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@kaidez" />
+  <meta name="twitter:creator" content="@kaidez" />
+  <meta name="twitter:title" content="{{ title }} » kaidez" />
+  <meta name="twitter:image" content="https://www.kaidez.com/assets/img/{{ image }}" />
+  <meta name="twitter:description" content="{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}{% endif %}" />
+  {% include "partials/JSON-LD.njk" %}
+  {% include "partials/googleAnalytics.njk" %}
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  {% include "partials/header.njk" %}
+  <div class="post-tag-and-category-container">
+    <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+    <span class="post-date-separator">|</span>
+    <span class="reading-time">reading time: {{ content | readingTime }}</span>
+    <span class="post-date-separator">|</span>
+    <a href="/{{ tags }}" class="post-tag-or-category post-category">{{ category }}</a>
+
+    <div class="post-tag-container">
+      tags:&nbsp;
+
+      {%- if secondary_tags and secondary_tags.length > 0 -%}
+      {%- for secondary_tags in secondary_tags -%}
+      <a href="/tags/{{ secondary_tags }}/" class="post-tag-or-category">{{ secondary_tags }}</a>
+      {%- endfor -%}
+      {%- endif -%}
+    </div>
+  </div>
+
+  <main id="main-content" class="post-content" role="main" aria-label="Article content">
+    <h1 class="post-title">{{ title }}</h1>
+    
+    {%- if image -%}
+    <img src="/assets/img/{{ image }}" alt="{% if imageAltText %}{{ imageAltText }}{% else %}image for the '{{ title }}' post"{% endif %} class="header-image" />
+    {%- endif -%}
+
+    {{ content | safe }}
+
+    <aside class="related-posts" role="complementary" aria-labelledby="related-posts-heading">
+      <h2 id="related-posts-heading" class="related-posts-header">Related Posts</h2>
+      <ul role="list">
+        {{ relatedPosts(category, page.url, collections.posts, 3) | safe }}
+      </ul>
+    </aside>
+
+  </main>
+
+  {% include "partials/footer.njk" %}
+  <script src="/assets/js/main.js" defer></script>
+
+  <!-- Prism.js for syntax highlighting -->
+  <script src="/assets/js/prism.js" defer></script>
+</body>
+
+</html>

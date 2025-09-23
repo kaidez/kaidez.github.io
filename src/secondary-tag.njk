@@ -1,0 +1,58 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: collections.allSecondaryTags
+  size: 1
+  alias: tagName
+permalink: /tags/{{ tagName }}/
+---
+
+<div class="container">
+  <header>
+    <h1 class="category-header-title">stuff with a <i>"{{ tagName }}"</i> tag</h1>
+    {{ content | safe }}
+  </header>
+
+  <div>
+    {% set taggedPosts = collections.all | filterBySecondaryTag(tagName) %}
+    {% for post in taggedPosts | reverse %}
+    <article class="post-card">
+      <h2>
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+      </h2>
+      <div class="post-meta">
+        <time datetime="{{ post.date | htmlDateString }}">
+          {{ post.date | readableDate }}
+        </time>
+      </div>
+      {% if post.data.excerpt %}
+      <p class="post-excerpt">{{ post.data.excerpt }}</p>
+      {% endif %}
+    </article>
+    {% endfor %}
+
+    {% if taggedPosts.length == 0 %}
+    <div class="no-posts">
+      <p>No posts with this secondary tag yet.</p>
+      <a href="/tags/" class="button">Back to Tags</a>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  .post-secondary-tags {
+    margin-top: var(--space-2);
+  }
+
+  .secondary-tag {
+    display: inline-block;
+    background: var(--color-accent);
+    color: white;
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--text-xs);
+    margin-right: var(--space-1);
+    margin-bottom: var(--space-1);
+  }
+</style>
