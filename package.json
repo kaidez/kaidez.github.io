@@ -10,7 +10,7 @@
     "purge-css": "purgecss --css _site/assets/css/style.css --content '_site/**/*.html' --output _site/assets/css/ --safelist 'fas fab far fa-facebook fa-twitter fa-linkedin fa-github fa-envelope fa-bars fa-times skip-link sr-only visually-hidden container' && cleancss -o _site/assets/css/style.css _site/assets/css/style.css",
     "minify-js": "esbuild _site/assets/js/main.js --minify --allow-overwrite --outfile=_site/assets/js/main.js",
     "clean": "rm -rf _site",
-    "deploy": "npm run build:prod && gh-pages -d _site",
+    "deploy": "npm run build:prod && gh-pages -d _site -b dev-branch",
     "test": "jest",
     "test:watch": "jest --watch",
     "debug11ty": "ELEVENTY_DEBUG=true eleventy",
