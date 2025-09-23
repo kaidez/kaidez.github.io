@@ -24,6 +24,9 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ 'src/llms.txt': '/llms.txt' });
 
+  // Copy .nojekyll file to disable Jekyll processing on GitHub Pages
+  eleventyConfig.addPassthroughCopy({ '.nojekyll': '/.nojekyll' });
+
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     if (process.env.NODE_ENV === "production" && outputPath?.endsWith(".html")) {
       try {
