@@ -1,0 +1,76 @@
+name: Deploy 11ty Site
+
+on:
+  push:
+    branches: [deploy-branch]
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout deploy-branch
+        uses: actions/checkout@v4
+        with:
+          ref: deploy-branch
+          fetch-depth: 0 # Fetch all history for all branches
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build 11ty site
+        run: npm run build:prod
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: gh-pages # GitHub Pages will serve from this branch
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: 'Deploy from deploy-branch: ${{ github.sha }}'
+      
+      - name: Update main branch
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          
+          # Switch to main branch
+          git checkout main
+          git pull origin main
+          
+          # Merge deploy-branch into main
+          git merge deploy-branch --no-ff -m "Auto-merge deploy-branch to main: ${{ github.sha }}"
+          
+          # Push updated main branch
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  notify-completion:
+    needs: build-and-deploy
+    runs-on: ubuntu-latest
+    if: always()
+    
+    steps:
+      - name: Report deployment status
+        run: |
+          if [ "${{ needs.build-and-deploy.result }}" == "success" ]; then
+            echo "✅ Deployment successful!"
+            echo "🚀 Site is now live at: https://kaidez.github.io"
+            echo "📋 Summary:"
+            echo "  - Built from deploy-branch"
+            echo "  - Deployed to GitHub Pages"
+            echo "  - Updated main branch"
+          else
+            echo "❌ Deployment failed!"
+            echo "Check the build logs for details."
+          fi
