@@ -9,10 +9,9 @@ This repository uses a structured branching strategy with automated deployment v
 ```
 dev-branch (development) 
     ↓ (merge when ready)
-deploy-branch (staging/deployment trigger)
+main (production/single source of truth)
     ↓ (automated via GitHub Actions)
-gh-pages (GitHub Pages source)
-main (production/archive)
+gh-pages (GitHub Pages source - built site)
 ```
 
 ## Workflow Process
@@ -30,19 +29,18 @@ When you're ready to deploy:
 npm run deploy:full
 
 # Option B: Manual process
-git checkout deploy-branch
-git pull origin deploy-branch
+git checkout main
+git pull origin main
 git merge dev-branch
-git push origin deploy-branch
+git push origin main
 ```
 
 ### 3. Automated Deployment
-When you push to `deploy-branch`, GitHub Actions automatically:
+When you push to `main`, GitHub Actions automatically:
 
 1. **Builds** your 11ty site with production optimizations
 2. **Deploys** to GitHub Pages (gh-pages branch)
-3. **Updates** main branch with the latest code
-4. **Reports** deployment status
+3. **Reports** deployment status
 
 ## NPM Scripts
 
@@ -53,8 +51,8 @@ When you push to `deploy-branch`, GitHub Actions automatically:
 
 ### Deployment Scripts
 - `npm run deploy:dev` - Switch to and update dev-branch
-- `npm run deploy:merge` - Merge dev-branch into deploy-branch
-- `npm run deploy:push` - Push deploy-branch (triggers deployment)
+- `npm run deploy:merge` - Merge dev-branch into main
+- `npm run deploy:push` - Push main (triggers deployment)
 - `npm run deploy:full` - Complete merge and push process
 
 ### Legacy Script
@@ -63,16 +61,15 @@ When you push to `deploy-branch`, GitHub Actions automatically:
 ## GitHub Actions Workflow
 
 The deployment workflow (`.github/workflows/deploy.yml`) runs when:
-- You push to `deploy-branch`
+- You push to `main`
 - You manually trigger it from the Actions tab
 
 ### What it does:
-1. Checks out `deploy-branch`
+1. Checks out `main`
 2. Installs Node.js and dependencies
 3. Runs production build (`npm run build:prod`)
 4. Deploys built site to GitHub Pages
-5. Merges `deploy-branch` into `main`
-6. Reports deployment status
+5. Reports deployment status
 
 ## Typical Development Cycle
 
@@ -110,15 +107,10 @@ The deployment workflow (`.github/workflows/deploy.yml`) runs when:
 - **Use**: Daily work, experiments, draft posts
 - **Deploy**: Never directly deployed
 
-### `deploy-branch`
-- **Purpose**: Deployment trigger
-- **Use**: Only receives merges from dev-branch
-- **Deploy**: Automatically triggers GitHub Actions
-
 ### `main`
-- **Purpose**: Production archive
-- **Use**: Automatically updated by GitHub Actions
-- **Deploy**: Read-only, represents live site code
+- **Purpose**: Single source of truth (production-ready code)
+- **Use**: Receives merges from dev-branch, triggers deployment
+- **Deploy**: Automatically triggers GitHub Actions when updated
 
 ### `gh-pages`
 - **Purpose**: GitHub Pages source
@@ -141,7 +133,7 @@ The deployment workflow (`.github/workflows/deploy.yml`) runs when:
 1. If branches get out of sync, you can manually sync:
    ```bash
    git checkout dev-branch
-   git pull origin main  # Sync with production if needed
+   git pull origin main  # Sync with production code if needed
    ```
 
 ## GitHub Pages Configuration
@@ -155,8 +147,8 @@ Ensure your repository's GitHub Pages settings are configured to:
 
 1. **Clean Development**: Work freely on dev-branch without affecting production
 2. **Automated Deployment**: No manual build/deploy steps
-3. **Production Archive**: Main branch always reflects live site
-4. **Easy Rollback**: Can revert to previous deploy-branch commits if needed
+3. **Single Source of Truth**: Main branch contains production-ready code
+4. **Easy Rollback**: Can revert to previous main branch commits if needed
 5. **CI/CD Integration**: Automatic testing and deployment on every release
 
 ## Quick Reference
@@ -170,4 +162,4 @@ Ensure your repository's GitHub Pages settings are configured to:
 
 ---
 
-**Note**: Always work on `dev-branch` and use the deployment scripts to promote changes to production. Never directly push to `main` or `gh-pages` branches.
+**Note**: Always work on `dev-branch` and use the deployment scripts to promote changes to production. Never directly push to `gh-pages` branch, and only push to `main` through the deployment process.
