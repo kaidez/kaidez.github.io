@@ -2,7 +2,7 @@ _site
 node_modules/
 .DS_Store
 .vscode/
-package-lock.json
+# package-lock.json
 .bundle/
 coverage
 _drafts
