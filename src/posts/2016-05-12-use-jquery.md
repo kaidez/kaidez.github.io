@@ -121,7 +121,7 @@ category: Coding Tips
 
 <h2>Conclusion</h2>
 
-<p>There have been some <em>great</em> arguments for limiting jQuery usage. My two favorites come from <a href="https://twitter.com/patrickkunka">Patrick Kunka</a> and his "A Year Without jQuery"q post (where he talks about how not using jQuery for a year forced him to get better at pure JavaScript....but <strong> this post is now broken</strong>), and <a href="https://twitter.com/leaverou">Lea Verou</a> and her <a href="http://lea.verou.me/2015/04/jquery-considered-harmful/">&#8220;jQuery considered harmful&#8221;</a> post (where she highlights how over-zealous jQuery usage can lead to a sloppy codebase that's hard to fix and maintain).</p>
+<p>There have been some <em>great</em> arguments for limiting jQuery usage. My two favorites come from <a href="https://twitter.com/patrickkunka">Patrick Kunka</a> and his "A Year Without jQuery" post (where he talks about how not using jQuery for a year forced him to get better at pure JavaScript....but <strong> this post is now broken</strong>), and <a href="https://twitter.com/leaverou">Lea Verou</a> and her <a href="http://lea.verou.me/2015/04/jquery-considered-harmful/">&#8220;jQuery considered harmful&#8221;</a> post (where she highlights how over-zealous jQuery usage can lead to a sloppy codebase that's hard to fix and maintain).</p>
 
 <p><a href="https://twitter.com/rem">Remy Sharp</a> also wrote <a href="https://remysharp.com/2013/04/19/i-know-jquery-now-what">an article on the subject</a>. I think he summarized the best approach: don't let jQuery be your default starting point for writing JavaScript and start by writing pure JS instead (this is what I do).</p>
 

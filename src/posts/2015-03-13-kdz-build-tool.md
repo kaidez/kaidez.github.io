@@ -68,6 +68,7 @@ There was no time to refactor it during work hours due to other projects on my t
 
 <a name="the-problem"></a>
 <h2>The Problem</h2>
+
 Recreating this setup was a pain in the a**. Since I was only refactoring _parts_ of the site code and not the _entire site_, the tooling need to be adjusted in some spots.
 
 For example: I didn't need all the dependencies listed in the `package.json` and `bower.json` files. I just needed the ones related to the code pieces I was refactoring, so I had to spend some time removing unneeded dependencies.
@@ -102,6 +103,7 @@ I knew I would use this setup again and again, so containing it in a template I 
 
 <a name="more-problems"></a>
 <h2>More Problems</h2>
+
 The template started off as a bunch of files in a GitHub repo. It contained the `.less` and `.json` files and other things, like the Grunt &amp; Gulp files and a `.gitignore` file.
 
 Another set of problems soon appeared:
@@ -124,12 +126,14 @@ But what I wanted was too specific so I doubted the Yeoman could help. So I deci
 
 <a name="tool-building-process"></a>
 <h2>The Tool-Building Process</h2>
+
 I asked around and did some Google searches, trying to figure out the best way to do this. It took me two nights to get files and folders to either download or be created with a Node command.
 
 From there, I became ridiculously anal-retentive and spent three weeks (THREE WEEKS) getting things to look and act how I wanted them to.  This was mostly centered around logging: what messages were sent to the terminal console as the app progressed, what it took to get them to appear in the proper order, etc.
 
 <a name="final-command"></a>
 <h2>The Final Command</h2>
+
 The end result of all this is `kdz`: a Node tool that lets me scaffold  a project and add small set of options. It downloads files from a GitHub repo, and it also creates files &amp; folders....all in a programmatic way.
 
 After you install it, typing `kdz` from anywhere in the terminal runs the `--help` command and outputs this:
@@ -258,6 +262,7 @@ Some interesting points about how "kdz" works behind the scenes:
 
 <a name="todo"></a>
 <h2>What's Left To Do</h2>
+
 A lot. The repo's README has a [TODO list](https://github.com/kaidez/kdz#todowish-list) of things I need/want to do, but here are the main things:
 
 * __get "kdz" working on Windows:__ we're at the point where there's no good reason for a Node app to work on Unix-like systems only.  Microsoft's done far too much good work in getting Node to work on their operating systems and Azure: I think "kdz" should respect that.
@@ -278,6 +283,7 @@ The [Node API docs](https://nodejs.org/api/ "Read the Node API") are also a read
 
 <a name="conclusion"></a>
 <h2>Conclusion</h2>
+
 "kdz" gives me the flexibility I needed. So back to the pre-processor conversation, I can add LESS and Sass files to a project by passing one of their respective options, but don't have to pass any options if I want to use Rework.
 
 And if every want to be able to configure Stylus or Jade for a project, I can just add an option to "kdz".  This will be really easy if I add a method library.
@@ -289,6 +295,6 @@ But this project exposed me to ton of Node stuff. I gained a really good underst
 
 I also learned more about Promises and much they go hand-in-hand with Node. For all the issues with my Promise code, I better understand them now and see how they make Node development easier.
 
- I still have more work to do: I really want to add more "Node stuff" to "kdz" instead of adding more "Node modules". By that, I mean that I want to use things like `.pipe()` and `process.nextTick()` to see if they let me do things without requiring a bunch of pre-built npm modules.
+I still have more work to do: I really want to add more "Node stuff" to "kdz" instead of adding more "Node modules". By that, I mean that I want to use things like `.pipe()` and `process.nextTick()` to see if they let me do things without requiring a bunch of pre-built npm modules.
 
 But overall, creating "kdz" was one of the best web development experiences I've had in a while and can't wait to continue developing it. If not to continue solving a problem, then to get Node to bend to my will some more.
