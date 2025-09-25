@@ -56,29 +56,34 @@
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
   {% include "partials/header.njk" %}
-  <div class="post-tag-and-category-container">
-    <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
-    <span class="post-date-separator">|</span>
-    <a href="/{{ tags }}" class="post-tag-or-category post-category">{{ category }}</a>
-
-    <div class="post-tag-container">
-      tags:&nbsp;
-
-      {%- if secondary_tags and secondary_tags.length > 0 -%}
-      {%- for secondary_tags in secondary_tags -%}
-      <a href="/tags/{{ secondary_tags }}/" class="post-tag-or-category">{{ secondary_tags }}</a>
-      {%- endfor -%}
-      {%- endif -%}
-    </div>
-  </div>
 
   <main id="main-content" class="post-content" role="main" aria-label="Article content">
     <h1 class="post-title">{{ title }}</h1>
-    
+      <div class="post-tag-and-category-container">
+        By Kai Gittens <span class="post-date-separator">|</span>
+        <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+        <span class="post-date-separator">|</span>
+        
+        <a href="/{{ tags }}" class="post-tag-or-category post-category">{{ category }}</a>
+        <span class="post-date-separator">|</span>tags:&nbsp;
+      
+          {%- if secondary_tags and secondary_tags.length > 0 -%}
+          {%- for secondary_tags in secondary_tags -%}
+          <a href="/tags/{{ secondary_tags }}/" class="post-tag-or-category">{{ secondary_tags }}</a>
+          {%- endfor -%}
+          {%- endif -%}
+          <span class="post-date-separator">|</span>
+          <span class="reading-time">reading time: {{ content | readingTime }}</span>
+
+      </div>
+
+      <div class="post-tag-container"></div>
+
+
     {%- if image -%}
     <img src="/assets/img/{{ image }}" alt="{% if imageAltText %}{{ imageAltText }}{% else %}image for the '{{ title }}' post"{% endif %} class="header-image" />
     {%- endif -%}
-      <span class="reading-time">reading time: {{ content | readingTime }}</span>
+      
     {{ content | safe }}
 
     <aside class="related-posts" role="complementary" aria-labelledby="related-posts-heading">
