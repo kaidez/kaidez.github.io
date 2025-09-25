@@ -15,6 +15,7 @@
     "deploy:merge": "git checkout main && git pull origin main && git merge dev-branch",
     "deploy:push": "git push origin main",
     "deploy:full": "npm run deploy:merge && npm run deploy:push",
+    "deploy-and-switch": "npm run deploy:full && deploy:dev",
     "test": "jest",
     "test:watch": "jest --watch",
     "debug11ty": "ELEVENTY_DEBUG=true eleventy",
