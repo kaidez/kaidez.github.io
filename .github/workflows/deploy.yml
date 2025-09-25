@@ -1,4 +1,4 @@
-name: Deploy 11ty Site
+name: Deploy kaidez.com
 
 on:
   push:
@@ -9,6 +9,11 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     
+    # Required permissions for GitHub Pages deployment
+    permissions:
+      pages: write
+      id-token: write
+    
     steps:
       - name: Checkout main
         uses: actions/checkout@v4
@@ -16,27 +21,29 @@ jobs:
           ref: main
           fetch-depth: 0 # Fetch all history for all branches
       
-      - name: Setup Node.js
+      - name: Setup Node.js # Need to run npm scripts while running the workflow
         uses: actions/setup-node@v4
         with:
           node-version: '18'
           cache: 'npm'
       
       - name: Install dependencies
-        run: npm ci
+        run: npm ci # Use npm ci for clean install based on package-lock.json
       
-      - name: Build 11ty site
+      - name: Build kaidez.com
         run: npm run build:prod
       
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
-          publish_branch: gh-pages # GitHub Pages will serve from this branch
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
-          commit_message: 'Deploy from main: ${{ github.sha }}'
+          path: ./_site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
 
   notify-completion:
     needs: build-and-deploy
@@ -48,7 +55,7 @@ jobs:
         run: |
           if [ "${{ needs.build-and-deploy.result }}" == "success" ]; then
             echo "✅ Deployment successful!"
-            echo "🚀 Site is now live at: https://kaidez.github.io"
+            echo "🚀 Site is now live at: https://kaidez.com"
             echo "📋 Summary:"
             echo "  - Built from main branch"
             echo "  - Deployed to GitHub Pages"
