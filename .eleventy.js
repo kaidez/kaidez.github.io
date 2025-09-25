@@ -24,6 +24,9 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ 'src/llms.txt': '/llms.txt' });
 
+  // Copy CNAME file to the root of the output
+  eleventyConfig.addPassthroughCopy({ 'CNAME': '/CNAME' });
+
   // Copy .nojekyll file to disable Jekyll processing on GitHub Pages
   eleventyConfig.addPassthroughCopy({ '.nojekyll': '/.nojekyll' });
 
