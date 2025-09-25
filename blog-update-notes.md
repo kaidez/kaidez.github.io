@@ -563,4 +563,6 @@ SCHEMA INFO
 
   But your current redesign post is perfect as-is with just TechArticle schema.
 
-  Claude really helped my do eleventy stuff/suggestionbs
+  Claude really helped my do eleventy stuff/suggestions
+
+  There is a cost for using AI. it may be too expensive to use exclusively learn a new language

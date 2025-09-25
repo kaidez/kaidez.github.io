@@ -1,1 +1,0 @@
-There is a cost for using AI. it may be too expensive to use exclusively learn a new language
