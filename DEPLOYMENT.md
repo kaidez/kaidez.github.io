@@ -65,11 +65,20 @@ The deployment workflow (`.github/workflows/deploy.yml`) runs when:
 - You manually trigger it from the Actions tab
 
 ### What it does:
-1. Checks out `main`
-2. Installs Node.js and dependencies
-3. Runs production build (`npm run build:prod`)
-4. Deploys built site to GitHub Pages
-5. Reports deployment status
+1. **Checks out `main`** branch
+2. **Installs Node.js and dependencies** with caching for faster builds
+3. **Runs production build** (`npm run build:prod`) with optimizations
+4. **Sets up GitHub Pages** configuration
+5. **Uploads built site** as deployment artifact
+6. **Deploys to GitHub Pages** using official GitHub actions
+7. **Reports deployment status**
+
+### Technical Details:
+- **Uses official GitHub actions**: `actions/configure-pages`, `actions/upload-pages-artifact`, `actions/deploy-pages`
+- **Requires permissions**: `pages: write` and `id-token: write` 
+- **Uses deployment environment**: `github-pages` for proper deployment tracking
+- **Preserves HTTPS enforcement**: Won't reset your repository settings
+- **No gh-pages branch needed**: Deploys via artifact upload system
 
 ## Typical Development Cycle
 
@@ -112,10 +121,10 @@ The deployment workflow (`.github/workflows/deploy.yml`) runs when:
 - **Use**: Receives merges from dev-branch, triggers deployment
 - **Deploy**: Automatically triggers GitHub Actions when updated
 
-### `gh-pages`
-- **Purpose**: GitHub Pages source
-- **Use**: Automatically managed by GitHub Actions
-- **Deploy**: Serves the actual website
+### `gh-pages` *(No longer used)*
+- **Previous purpose**: GitHub Pages source branch
+- **Current status**: Not created or used by new deployment method
+- **Note**: Can be safely deleted if it exists from previous deployments
 
 ## Troubleshooting
 
@@ -138,10 +147,22 @@ The deployment workflow (`.github/workflows/deploy.yml`) runs when:
 
 ## GitHub Pages Configuration
 
-Ensure your repository's GitHub Pages settings are configured to:
-- **Source**: Deploy from a branch
-- **Branch**: `gh-pages`
-- **Folder**: `/ (root)`
+**IMPORTANT**: Your repository's GitHub Pages settings must be configured as:
+- **Source**: GitHub Actions ← **Must be set to this**
+- ~~**Branch**: `gh-pages`~~ ← **No longer used**
+- ~~**Folder**: `/ (root)`~~ ← **No longer needed**
+
+### How to Change Settings:
+1. Go to your repository on GitHub.com
+2. Click **Settings** → **Pages**  
+3. Under **Source**, select **"GitHub Actions"**
+4. Enable **"Enforce HTTPS"** (this setting will now be preserved)
+
+### Why This Change:
+- **Preserves HTTPS enforcement**: The old method reset this setting on each deploy
+- **No branch management**: No need to manage a separate `gh-pages` branch
+- **Faster deployments**: Direct artifact upload is more efficient
+- **Better security**: Uses OIDC tokens instead of repository tokens
 
 ## Benefits of This Workflow
 
@@ -150,6 +171,9 @@ Ensure your repository's GitHub Pages settings are configured to:
 3. **Single Source of Truth**: Main branch contains production-ready code
 4. **Easy Rollback**: Can revert to previous main branch commits if needed
 5. **CI/CD Integration**: Automatic testing and deployment on every release
+6. **HTTPS Enforcement Preserved**: Settings won't be reset on each deployment
+7. **Official GitHub Actions**: Uses supported, maintained deployment methods
+8. **Faster Deployments**: Direct artifact upload without branch management
 
 ## Quick Reference
 
