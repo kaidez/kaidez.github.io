@@ -131,6 +131,7 @@ That answer went above and beyond what I asked and expressed confidence in my sk
 I got the contract.
 
 <h2>Coding bootcamps have affected the interview process</h2>
+
 Three days before a startup interview, I reviewed the position’s required skillset. It listed a few things I wasn’t that experienced with.
 
 I asked the team if they still wanted to meet me despite this and they said yes. When we met, they admitted to padding the skillset with things not needed for the job.
@@ -138,6 +139,7 @@ I asked the team if they still wanted to meet me despite this and they said yes.
 Why? Because it limited the amount of applications coming from less-experienced coding bootcamp graduates.
 
 <p style="font-size: 175px; margin-bottom: 0;">😮</p>
+
 I had similar conversations with another interviewer and a recruiter. Based on those conversations, bootcamp grads <em>must</em> know the following:
 
 Many people are graduating from bootcamps like General Assembly in 2017. Then applying for front end web developer jobs with an average $70,000USD salary.
