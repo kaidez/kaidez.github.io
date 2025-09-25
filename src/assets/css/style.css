@@ -716,7 +716,6 @@ svg {
 .post-tag-or-category {
   display: inline-block;
   font-weight: 600;
-  margin-right: 20px;
   cursor: pointer;
   text-decoration: underline;
 }
@@ -748,7 +747,7 @@ svg {
 }
 
 .post-date-separator {
-  margin: 0 10px;
+  margin: 0 6px;
   color: var(--color-text-muted);
 }
 

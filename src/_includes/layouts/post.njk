@@ -59,8 +59,6 @@
   <div class="post-tag-and-category-container">
     <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
     <span class="post-date-separator">|</span>
-    <span class="reading-time">reading time: {{ content | readingTime }}</span>
-    <span class="post-date-separator">|</span>
     <a href="/{{ tags }}" class="post-tag-or-category post-category">{{ category }}</a>
 
     <div class="post-tag-container">
@@ -80,7 +78,7 @@
     {%- if image -%}
     <img src="/assets/img/{{ image }}" alt="{% if imageAltText %}{{ imageAltText }}{% else %}image for the '{{ title }}' post"{% endif %} class="header-image" />
     {%- endif -%}
-
+      <span class="reading-time">reading time: {{ content | readingTime }}</span>
     {{ content | safe }}
 
     <aside class="related-posts" role="complementary" aria-labelledby="related-posts-heading">
