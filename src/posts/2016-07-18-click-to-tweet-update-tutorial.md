@@ -21,4 +21,4 @@ secondary_tags: ["javascript","twitter/x"]
 
 <h2>Using the SEO Plugin</h2>
 
-<p>The BIG reason I'm doing all this was that my WordPress-based site uses <a href="https://wordpress.org/plugins/wordpress-seo/">Yoast's WordPress SEO plugin</a>. The plugin has always been great, but it's REALLY improved over the last few months.</p><p>Along with its great SEO analyzing engine, it also includes a Readability analyzing engine. The latter gives tips on how readable a post is&#8230;I followed its advice and made a few adjustments to the text&#8230;and all is good.</p><p>Read the click to tweet tutorial
+<p>The BIG reason I'm doing all this was that my WordPress-based site uses <a href="https://wordpress.org/plugins/wordpress-seo/">Yoast's WordPress SEO plugin</a>. The plugin has always been great, but it's REALLY improved over the last few months.</p><p>Along with its great SEO analyzing engine, it also includes a Readability analyzing engine. The latter gives tips on how readable a post is&#8230;I followed its advice and made a few adjustments to the text&#8230;and all is good.</p><p><a href="/click-to-tweet-link/">Read the click to tweet tutorial</a>

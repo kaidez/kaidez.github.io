@@ -56,6 +56,7 @@ The best way to learn JavaScript unit testing is to realize you should write cod
 
 <a name="before-we-begin"></a>
 <h2>Before we begin...</h2>
+
 While this post talks about functional programming, it’s written more as a beginner’s guide to JavaScript unit testing. The post demonstrates how FP makes unit testing easier, but doesn’t discuss FP beyond that.
 
 Even with that, this post isn’t an in-depth JavaScript unit testing tutorial. It covers just enough to get you up and running: <strong>assertions, test suites, test coverage and test-driven development</strong>.
@@ -64,6 +65,7 @@ The resources at the end of this post cover JavaScript unit testing and function
 
 <a name="not-doing-js-unit-testing"></a>
 <h2>Haven’t done JavaScript unit testing yet? That’s fine.</h2>
+
 First of all, it’s OK if you haven’t regularly unit tested your JavaScript up to this point. This is because unit testing isn’t encouraged in the JS community like it is in other programming communities like Java.
 
 JavaScript was built to be a low barrier of entry for beginner programmers: JS creator <a href="https://devchat.tv/js-jabber/124-jsj-the-origin-of-javascript-with-brendan-eich">Brendan Eich has said that</a>. JS was used for simple things like dropdown menus, rollover effects and cookies when it first came out; therefore, ignoring JS unit testing was acceptable.
@@ -85,6 +87,7 @@ The rules of functional programming are:
   <li>If a function gives the same input, it should always produce the same output.</li>
   <li>Most of all, functions must be small and reusable.</li>
 </ul>
+
 This is just an FP summary: you can read more about it by clicking on this article’s various links. But the last point is the most relevant to JavaScript unit testing:
 
 <blockquote><p><em>Functions must be small and reusable.</em></p>
@@ -171,7 +174,7 @@ Next is the previously-mentioned <code>app.js</code> which contains the code get
 
 The empty &lt;script&gt; tag is where we’ll write our tests.
 
-Finally, we have two <code><div></code> tags: <code><div id="qunit" /></code> and <code>div#qunit-fixture</code>. QUnit’s test results load into <code><div id="qunit" /></code> and we’ll use <code>div#qunit-fixture</code> to test DOM manipulation.
+Finally, we have two `<div>` tags: `<div id="qunit" />` and `div#qunit-fixture`. QUnit’s test results load into `<div id="qunit" />` and we’ll use `div#qunit-fixture` to test DOM manipulation.
 
 <a name="about-qunit"></a>
 <h2>A quick note about QUnit</h2>
@@ -273,6 +276,7 @@ Finally, the callback uses one of the <code>assert</code> methods we have access
   <li class="post__list-item">the <strong>expected</strong>  behavior: what we expect the test result to be (or, what we’re “asserting”).</li>
   <li class="post__list-item">what message should display if the test passes.</li>
 </ol>
+
 For the first assertion, we are:
 
 <ol>
@@ -294,8 +298,9 @@ For the next assertion, we are:
 
 Our QUnit test suite shows failing tests when we load <code>test/tests.html</code> in a browser...
 <img src="/assets/img/unit-testing-image-01.jpg" alt="First failing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+
 First failing test image for the learn JavaScript unit testing post
-We can make the test pass by adding James’ original log() code to app.js. And note the ES5 "use strict" statement: it will be important later on..
+We can make the test pass by adding James’ original `log()` code to `app.js`. And note the ES5 "use strict" statement: it will be important later on..
 
 We can make the test pass by adding James’ original <code>log()</code> code to <code>app.js</code>. And note the ES5 <code>"use strict"</code> statement: it will be important later on...
 <pre><code class="language-javascript">
@@ -366,7 +371,9 @@ Next, we test if either a function or an ES6 Symbol is being passed. <a href="ht
 
 This produces failing tests:
 <img src="/assets/img/unit-testing-image-03.jpg" alt="Second failing test image for the learn JavaScript unit testing post post" class="post__image" style="float: none; margin-top: 10px;">
-The tests pass when in true TDD form, we refactor <code>log()</code>:
+
+The tests pass when in true TDD form, we refactor `log()`:
+
 <pre><code class="language-javascript">
 // app.js
 ...
@@ -381,6 +388,7 @@ var log = function(someVariable) {
 </code></pre>
 And we go back and check our tests...
 <img src="/assets/img/unit-testing-image-04.jpg" alt="Second passing test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+
 The test suite confirms that <code>log()</code> throws errors when its parameter is not a string with at least one character. So if we update the <code>log()</code> call in <code>scripts.js</code> to look like this...
 <pre><code class="language-javascript">
 // scripts.js
@@ -866,6 +874,7 @@ First addMagic code coverage test image for the learn JavaScript unit testing po
 
 And we see that the tests pass, but not with 100% code coverage.
 <img src="/assets/img/unit-testing-image-17.jpg" alt="Second addMagic code coverage test image for the learn JavaScript unit testing post" class="post__image" style="float: none; margin-top: 10px;">
+
 This is due to our not testing <code>addMagic</code>‘s error throwing functionality. Adding a couple of <code>assert.throws()</code> tests will fix this...
 
 <pre><code class="language-markup">
