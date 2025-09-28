@@ -65,7 +65,7 @@ I used AI tooling for various tasks, and I'll discuss them all. But the core tas
   <li>Installing <a href="https://www.11ty.dev/">11ty</a> as a static site generator.</li>
   <li>Reviewing my blog posts for clarity.</li>
   <li>Making sure my blog was both SEO-friendly an accessible as per <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG accessibility standards</a>.</li>
-  <li>Helping me fix code stuff when I asked AI for it.</li>
+  <li>Helping me fix code when I asked AI for it.</li>
 </ul>
 
 <h2 id="conclusion">Conclusion</h2>
