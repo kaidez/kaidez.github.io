@@ -16,7 +16,7 @@ category: Coding Tips
 ---
 I used generative AI (or AI) to <a href="/site-redesign-2025/">redesign my blog in 2025</a>. Along the way, I spent time considering AI's long-term impact on the software development process.
 
-I'm still learning coding to use tools like <a href="https://claude.ai/">Claude</a> and <a href="https://chatgpt.com/">ChatGPT</a>. But right now, I, cautiously, believe AI will be a permanent part of software development, and don't think that's bad.
+I'm still learning coding using tools like <a href="https://claude.ai/">Claude</a> and <a href="https://chatgpt.com/">ChatGPT</a>. But right now, I cautiously believe AI will be a permanent part of software development, and don't think that's bad.
 
 <h2>Table of Contents</h2>
 
@@ -59,11 +59,13 @@ As mentioned in my 2025 blog update post, I used Claude as a coding assistant wh
 
 In other words, Cline lets you use whatever LLM you want inside VS Code: Claude, Chat GPT, Google Gemini, etc.  I tried various LLMs but stuck with Claude since it's the one most-favored by developers.
 
-I used AI tooling for various tasks but the core tasks were:
+I used AI tooling for various tasks, and I'll discuss them all. But the core tasks were:
+
 <ul>
-  <li>Installing 11ty as a static site generator.</li>
+  <li>Installing <a href="https://www.11ty.dev/">11ty</a> as a static site generator.</li>
   <li>Reviewing my blog posts for clarity.</li>
   <li>Making sure my blog was both SEO-friendly an accessible as per <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG accessibility standards</a>.</li>
+  <li>Helping me fix code stuff when I asked AI for it.</li>
 </ul>
 
 <h2 id="conclusion">Conclusion</h2>
