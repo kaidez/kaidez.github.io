@@ -55,6 +55,15 @@ I'm still learning coding to use tools like <a href="https://claude.ai/">Claude<
 
 <h2 id="my-ai-process">My AI Coding Process</h2>
 
-As mentioned in my 2025 blog update post, I used Claude as a coding assistant while integrated into VS Code. Also, I used the <a href="https://cline.bot/">Cline plugin for VS Code</a>, which is a "swiss army knife" for Large Language Models(LLMs).
+As mentioned in my 2025 blog update post, I used Claude as a coding assistant while integrated into VS Code. Also, I used the <a href="https://cline.bot/">Cline plugin for VS Code</a>, which is a "swiss army knife" for Large Language Models (LLMs).
+
+In other words, Cline lets you use whatever LLM you want inside VS Code: Claude, Chat GPT, Google Gemini, etc.  I tried various LLMs but stuck with Claude since it's the one most-favored by developers.
+
+I used AI tooling for various tasks but the core tasks were:
+<ul>
+  <li>Installing 11ty as a static site generator.</li>
+  <li>Reviewing my blog posts for clarity.</li>
+  <li>Making sure my blog was both SEO-friendly an accessible as per <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG accessibility standards</a>.</li>
+</ul>
 
 <h2 id="conclusion">Conclusion</h2>
