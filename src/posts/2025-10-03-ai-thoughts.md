@@ -1,5 +1,5 @@
 ---
-title: "Thoughts On AI As A Software Developer..."
+title: "AI Thoughts As A Software Developer..."
 date: 2150-10-03T12:00:00-05:00
 draft: true
 excerpt: Random thoughts on software development using tools like Claude AI and methods like spec-driven development.
@@ -25,7 +25,7 @@ I'm still learning coding using tools like <a href="https://claude.ai/">Claude</
     <a href="#ai-tools-and-tasks">My AI Coding Tools & Their Tasks</a>
   </li>
   <li>
-    <a href="#11ty">Eleventy</a>
+    <a href="#11ty">11ty</a>
   </li>
   <li>
     <a href="#conclusion">Conclusion</a>
@@ -41,12 +41,20 @@ In other words, Cline lets you use whatever LLM you want inside VS Code: Claude,
 I used AI tooling for various tasks, and I'll discuss them all. But the core tasks were:
 
 <ul>
-  <li>Installing <a href="https://www.11ty.dev/">11ty</a> as a static site generator.</li>
+  <li>Installing <a href="https://www.11ty.dev/">Eleventy (11ty)</a> as a static site generator.</li>
   <li>Reviewing my blog posts for clarity.</li>
   <li>Making sure my blog was both SEO-friendly an accessible as per <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG accessibility standards</a>.</li>
   <li>Helping me fix code when I asked AI for it.</li>
 </ul>
 
-<h2 id="11ty">Eleventy</h2>
+<h2 id="11ty">11ty</h2>
+
+Claude makes mistakes like any other LLM. In fact, its very honest about it once you log on:
+
+<img src="/assets/img/claude-opening.jpg" />
 
 <h2 id="conclusion">Conclusion</h2>
+
+
+
+https://www.youtube.com/watch?v=EssztxE9P28
