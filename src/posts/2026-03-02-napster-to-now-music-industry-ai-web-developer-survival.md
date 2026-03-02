@@ -41,3 +41,9 @@ Because customers were now purchasing high-speed internet services for their hom
 Now, I was already familiar with MP3s at this point — I'd been tinkering on the internet and knew people were sharing them via email and newsgroups.
 
 But to know this required knowing how to navigate the internet underground.   The <i>Vibe</i> article was one of the first times MP3s were exposed to the public in a pop culture format.
+
+Truthfully, I didn't really think about the Vibe article and viewed it as a one-time thing. Then <i>Spin</i> ran a story, as did MTV.
+
+At that point, I thought the music business really <em>was</em> in trouble.  So I bought a Gateway computer and a bunch of <a href="https://www.peachpit.com/">Peachpit Press</a> books and taught myself about web design and development.
+
+<h2>Napster Shows Up</h2>
