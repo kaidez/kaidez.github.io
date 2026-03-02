@@ -50,4 +50,4 @@ So I bought a Gateway computer and a bunch of <a href="https://www.peachpit.com/
 
 <h2>Napster Shows Up</h2>
 
-In the middle of all this studying, a team of developers led by Shawn Fanning released Napster. It was software that allowed its users to share MP3s on their computers with others over the internet.
+In the middle of all this studying, Shawn Fanning and his team released Napster — software that let users share MP3s with others over the internet.
