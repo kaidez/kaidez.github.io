@@ -20,6 +20,6 @@ The posts and comments are both negative and positive, and the negative ones sha
 
 Being unemployed, I probably should be worrying about this. But I worked in the music business before I wrote code, and that industry went through a very similar disruption.
 
-That disruption was the rise of digital downloading, specifically the rise of <a href="https://www.britannica.com/topic/Napster">Napster</a>. And 
+That disruption was the rise of digital downloading — specifically, <a href="https://www.britannica.com/topic/Napster">Napster</a>.
 
 https://www.youtube.com/watch?v=EssztxE9P28
