@@ -34,4 +34,10 @@ With that affinity for retail, I eventually moved into sales jobs at various rec
 
 Strictly Rhythm, the world-renowned dance label, was the first office job I had in the music business. This was in the late 1990s...one day, I bought a copy of <i>Vibe</i> Magazine.
 
-Inside that magazine was an article on the rising popularity of MP3 files — digital files containing individual songs.
+Inside that magazine was an article on the rising popularity of MP3 files — digital files containing individual songs. MP3s were relatively small in size — 3-4 MB at most.
+
+Because customers were now purchasing high-speed internet services for their homes (DSL, cable, etc.), downloading multiple music files of this size over the internet was easy.  The article predicted that all of this would crater the music industry.
+
+Now, I was already familiar with MP3s at this point — I'd been tinkering on the internet and knew people were sharing them via email and newsgroups.
+
+But to know this required knowing how to navigate the internet underground.   The <i>Vibe</i> article was one of the first times MP3s were exposed to the public in a pop culture format.
