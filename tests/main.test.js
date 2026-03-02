@@ -16,16 +16,16 @@ function createTestableFunction() {
   if (!copyrightMatch) {
     throw new Error('Could not extract copyrightYear function from IIFE');
   }
-  
+
   // Create testable function
   const copyrightBody = copyrightMatch[1];
-  
+
   const copyrightYear = new Function('', `
     function copyrightYear() {${copyrightBody}
     }
     return copyrightYear;
   `)();
-  
+
   return copyrightYear;
 }
 
@@ -42,18 +42,18 @@ describe('main.js - copyrightYear function', () => {
   beforeEach(() => {
     // Create fresh DOM for each test
     document.body.innerHTML = '<div class="footer-bottom"></div>';
-    
+
     // Store original Date constructor
     originalDate = global.Date;
-    
+
     // Spy on console.warn
-    consoleSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
+    consoleSpy = jest.spyOn(console, 'warn').mockImplementation(() => { });
   });
 
   afterEach(() => {
     // Restore original Date constructor
     global.Date = originalDate;
-    
+
     // Restore console.warn
     consoleSpy.mockRestore();
   });
@@ -71,7 +71,7 @@ describe('main.js - copyrightYear function', () => {
     // Check if paragraph was created with correct content
     const footerElement = document.querySelector('.footer-bottom');
     const paragraphs = footerElement.querySelectorAll('p');
-    
+
     expect(paragraphs).toHaveLength(1);
     // 2025 % 100 = 25
     expect(paragraphs[0].innerHTML).toBe('©2008-25 Kai "kaidez" Gittens. All rights reserved.');
@@ -88,7 +88,7 @@ describe('main.js - copyrightYear function', () => {
 
     const footerElement = document.querySelector('.footer-bottom');
     const paragraph = footerElement.querySelector('p');
-    
+
     // 2024 % 100 = 24
     expect(paragraph.innerHTML).toBe('©2008-24 Kai "kaidez" Gittens. All rights reserved.');
   });
@@ -121,7 +121,7 @@ describe('main.js - copyrightYear function', () => {
 
     const footerElement = document.querySelector('.footer-bottom');
     const addedElement = footerElement.lastElementChild;
-    
+
     expect(addedElement.tagName.toLowerCase()).toBe('p');
   });
 
@@ -132,12 +132,12 @@ describe('main.js - copyrightYear function', () => {
 
     const footerElement = document.querySelector('.footer-bottom');
     const paragraphs = footerElement.querySelectorAll('p');
-    
+
     // Should have 2 paragraphs since the function doesn't prevent duplicates
     // But this won't happen in production since we fixed the duplicate script loading
     expect(paragraphs).toHaveLength(2);
-    expect(paragraphs[0].innerHTML).toBe('©2008-25 Kai "kaidez" Gittens. All rights reserved.');
-    expect(paragraphs[1].innerHTML).toBe('©2008-25 Kai "kaidez" Gittens. All rights reserved.');
+    expect(paragraphs[0].innerHTML).toBe('©2008-26 Kai "kaidez" Gittens. All rights reserved.');
+    expect(paragraphs[1].innerHTML).toBe('©2008-26 Kai "kaidez" Gittens. All rights reserved.');
   });
 });
 
@@ -207,10 +207,10 @@ describe('main.js - DOM ready functionality', () => {
   beforeEach(() => {
     // Store original readyState
     originalReadyState = document.readyState;
-    
+
     // Mock addEventListener
-    mockAddEventListener = jest.spyOn(document, 'addEventListener').mockImplementation(() => {});
-    
+    mockAddEventListener = jest.spyOn(document, 'addEventListener').mockImplementation(() => { });
+
     // Create fresh DOM
     document.body.innerHTML = '<div class="footer-bottom"></div>';
   });
@@ -221,7 +221,7 @@ describe('main.js - DOM ready functionality', () => {
       writable: true,
       value: originalReadyState
     });
-    
+
     // Restore addEventListener
     mockAddEventListener.mockRestore();
   });
@@ -241,12 +241,12 @@ describe('main.js - DOM ready functionality', () => {
         copyrightYear();
       }
     `;
-    
+
     eval(domReadyCode);
 
     // Should not have added event listener
     expect(mockAddEventListener).not.toHaveBeenCalled();
-    
+
     // Should have created the paragraph immediately
     const paragraph = document.querySelector('.footer-bottom p');
     expect(paragraph).toBeTruthy();
@@ -267,12 +267,12 @@ describe('main.js - DOM ready functionality', () => {
         copyrightYear();
       }
     `;
-    
+
     eval(domReadyCode);
 
     // Should have added event listener
     expect(mockAddEventListener).toHaveBeenCalledWith('DOMContentLoaded', copyrightYear);
-    
+
     // Should not have created paragraph yet
     const paragraph = document.querySelector('.footer-bottom p');
     expect(paragraph).toBeFalsy();
@@ -295,9 +295,9 @@ describe('main.js - Mobile Menu Toggle functionality', () => {
         </ul>
       </nav>
     `;
-    
+
     // Spy on console.warn
-    consoleSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
+    consoleSpy = jest.spyOn(console, 'warn').mockImplementation(() => { });
   });
 
   afterEach(() => {
@@ -308,30 +308,30 @@ describe('main.js - Mobile Menu Toggle functionality', () => {
   test('should add click event listener to mobile menu toggle', () => {
     const menuToggle = document.querySelector('.mobile-menu-icon');
     const mobileMenu = document.querySelector('.site-nav ul');
-    
+
     // Mock addEventListener to capture the callback
     const mockCallback = jest.fn();
     menuToggle.addEventListener = jest.fn();
-    
+
     // Simulate the toggleMobileMenu function
     const toggleMobileMenu = () => {
       const menuToggle = document.querySelector('.mobile-menu-icon');
       const mobileMenu = document.querySelector('.site-nav ul');
-      
+
       if (!menuToggle || !mobileMenu) {
         console.warn('Mobile menu elements not found');
         return;
       }
-      
+
       menuToggle.addEventListener('click', () => {
         const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
         menuToggle.setAttribute('aria-expanded', !isExpanded);
         mobileMenu.classList.toggle('isVisible');
       });
     };
-    
+
     toggleMobileMenu();
-    
+
     // Verify addEventListener was called with 'click'
     expect(menuToggle.addEventListener).toHaveBeenCalledWith('click', expect.any(Function));
     expect(consoleSpy).not.toHaveBeenCalled();
@@ -340,20 +340,20 @@ describe('main.js - Mobile Menu Toggle functionality', () => {
   test('should toggle aria-expanded from false to true when clicked', () => {
     const menuToggle = document.querySelector('.mobile-menu-icon');
     const mobileMenu = document.querySelector('.site-nav ul');
-    
+
     // Initially aria-expanded should be false
     expect(menuToggle.getAttribute('aria-expanded')).toBe('false');
-    
+
     // Simulate the click handler logic
     const clickHandler = () => {
       const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
       menuToggle.setAttribute('aria-expanded', !isExpanded);
       mobileMenu.classList.toggle('isVisible');
     };
-    
+
     // Simulate first click
     clickHandler();
-    
+
     expect(menuToggle.getAttribute('aria-expanded')).toBe('true');
     expect(mobileMenu.classList.contains('isVisible')).toBe(true);
   });
@@ -361,21 +361,21 @@ describe('main.js - Mobile Menu Toggle functionality', () => {
   test('should toggle aria-expanded from true to false when clicked again', () => {
     const menuToggle = document.querySelector('.mobile-menu-icon');
     const mobileMenu = document.querySelector('.site-nav ul');
-    
+
     // Set initial state to expanded
     menuToggle.setAttribute('aria-expanded', 'true');
     mobileMenu.classList.add('isVisible');
-    
+
     // Simulate the click handler logic
     const clickHandler = () => {
       const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
       menuToggle.setAttribute('aria-expanded', !isExpanded);
       mobileMenu.classList.toggle('isVisible');
     };
-    
+
     // Simulate click to close
     clickHandler();
-    
+
     expect(menuToggle.getAttribute('aria-expanded')).toBe('false');
     expect(mobileMenu.classList.contains('isVisible')).toBe(false);
   });
@@ -383,21 +383,21 @@ describe('main.js - Mobile Menu Toggle functionality', () => {
   test('should toggle isVisible class on mobile menu', () => {
     const menuToggle = document.querySelector('.mobile-menu-icon');
     const mobileMenu = document.querySelector('.site-nav ul');
-    
+
     // Initially should not have isVisible class
     expect(mobileMenu.classList.contains('isVisible')).toBe(false);
-    
+
     // Simulate the click handler logic
     const clickHandler = () => {
       const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
       menuToggle.setAttribute('aria-expanded', !isExpanded);
       mobileMenu.classList.toggle('isVisible');
     };
-    
+
     // First click - should add class
     clickHandler();
     expect(mobileMenu.classList.contains('isVisible')).toBe(true);
-    
+
     // Second click - should remove class
     clickHandler();
     expect(mobileMenu.classList.contains('isVisible')).toBe(false);
@@ -407,27 +407,27 @@ describe('main.js - Mobile Menu Toggle functionality', () => {
     // Remove the mobile menu toggle button
     const menuToggle = document.querySelector('.mobile-menu-icon');
     menuToggle.remove();
-    
+
     // Simulate the toggleMobileMenu function
     const toggleMobileMenu = () => {
       const menuToggle = document.querySelector('.mobile-menu-icon');
       const mobileMenu = document.querySelector('.site-nav ul');
-      
+
       if (!menuToggle || !mobileMenu) {
         console.warn('Mobile menu elements not found');
         return;
       }
-      
+
       menuToggle.addEventListener('click', () => {
         const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
         menuToggle.setAttribute('aria-expanded', !isExpanded);
         mobileMenu.classList.toggle('isVisible');
       });
     };
-    
+
     // Should not throw an error
     expect(() => toggleMobileMenu()).not.toThrow();
-    
+
     // Should log warning
     expect(consoleSpy).toHaveBeenCalledWith('Mobile menu elements not found');
   });
@@ -436,27 +436,27 @@ describe('main.js - Mobile Menu Toggle functionality', () => {
     // Remove the mobile menu ul element
     const mobileMenu = document.querySelector('.site-nav ul');
     mobileMenu.remove();
-    
+
     // Simulate the toggleMobileMenu function
     const toggleMobileMenu = () => {
       const menuToggle = document.querySelector('.mobile-menu-icon');
       const mobileMenu = document.querySelector('.site-nav ul');
-      
+
       if (!menuToggle || !mobileMenu) {
         console.warn('Mobile menu elements not found');
         return;
       }
-      
+
       menuToggle.addEventListener('click', () => {
         const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
         menuToggle.setAttribute('aria-expanded', !isExpanded);
         mobileMenu.classList.toggle('isVisible');
       });
     };
-    
+
     // Should not throw an error
     expect(() => toggleMobileMenu()).not.toThrow();
-    
+
     // Should log warning
     expect(consoleSpy).toHaveBeenCalledWith('Mobile menu elements not found');
   });
@@ -464,20 +464,20 @@ describe('main.js - Mobile Menu Toggle functionality', () => {
   test('should handle case where aria-expanded attribute is missing', () => {
     const menuToggle = document.querySelector('.mobile-menu-icon');
     const mobileMenu = document.querySelector('.site-nav ul');
-    
+
     // Remove the aria-expanded attribute
     menuToggle.removeAttribute('aria-expanded');
-    
+
     // Simulate the click handler logic
     const clickHandler = () => {
       const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
       menuToggle.setAttribute('aria-expanded', !isExpanded);
       mobileMenu.classList.toggle('isVisible');
     };
-    
+
     // First click - should treat missing attribute as false, so set to true
     clickHandler();
-    
+
     expect(menuToggle.getAttribute('aria-expanded')).toBe('true');
     expect(mobileMenu.classList.contains('isVisible')).toBe(true);
   });
@@ -485,27 +485,27 @@ describe('main.js - Mobile Menu Toggle functionality', () => {
   test('should work with multiple rapid clicks', () => {
     const menuToggle = document.querySelector('.mobile-menu-icon');
     const mobileMenu = document.querySelector('.site-nav ul');
-    
+
     // Simulate the click handler logic
     const clickHandler = () => {
       const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
       menuToggle.setAttribute('aria-expanded', !isExpanded);
       mobileMenu.classList.toggle('isVisible');
     };
-    
+
     // Simulate multiple rapid clicks
     clickHandler(); // Open
     expect(menuToggle.getAttribute('aria-expanded')).toBe('true');
     expect(mobileMenu.classList.contains('isVisible')).toBe(true);
-    
+
     clickHandler(); // Close
     expect(menuToggle.getAttribute('aria-expanded')).toBe('false');
     expect(mobileMenu.classList.contains('isVisible')).toBe(false);
-    
+
     clickHandler(); // Open again
     expect(menuToggle.getAttribute('aria-expanded')).toBe('true');
     expect(mobileMenu.classList.contains('isVisible')).toBe(true);
-    
+
     clickHandler(); // Close again
     expect(menuToggle.getAttribute('aria-expanded')).toBe('false');
     expect(mobileMenu.classList.contains('isVisible')).toBe(false);
@@ -514,28 +514,28 @@ describe('main.js - Mobile Menu Toggle functionality', () => {
   test('should preserve existing classes on mobile menu', () => {
     const menuToggle = document.querySelector('.mobile-menu-icon');
     const mobileMenu = document.querySelector('.site-nav ul');
-    
+
     // Add some existing classes
     mobileMenu.classList.add('menu-list', 'navigation');
-    
+
     // Simulate the click handler logic
     const clickHandler = () => {
       const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
       menuToggle.setAttribute('aria-expanded', !isExpanded);
       mobileMenu.classList.toggle('isVisible');
     };
-    
+
     // Click to open menu
     clickHandler();
-    
+
     // Should have both existing classes and new isVisible class
     expect(mobileMenu.classList.contains('menu-list')).toBe(true);
     expect(mobileMenu.classList.contains('navigation')).toBe(true);
     expect(mobileMenu.classList.contains('isVisible')).toBe(true);
-    
+
     // Click to close menu
     clickHandler();
-    
+
     // Should still have existing classes but not isVisible
     expect(mobileMenu.classList.contains('menu-list')).toBe(true);
     expect(mobileMenu.classList.contains('navigation')).toBe(true);
@@ -552,23 +552,23 @@ describe('main.js - Mobile Menu Toggle functionality', () => {
         </ul>
       </div>
     `;
-    
+
     const menuToggle = document.querySelector('.mobile-menu-icon');
     const mobileMenu = document.querySelector('.site-nav ul');
-    
+
     expect(menuToggle).toBeTruthy();
     expect(mobileMenu).toBeTruthy();
     expect(mobileMenu.id).toBe('main-menu');
-    
+
     // Simulate the click handler logic
     const clickHandler = () => {
       const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
       menuToggle.setAttribute('aria-expanded', !isExpanded);
       mobileMenu.classList.toggle('isVisible');
     };
-    
+
     clickHandler();
-    
+
     expect(menuToggle.getAttribute('aria-expanded')).toBe('true');
     expect(mobileMenu.classList.contains('isVisible')).toBe(true);
   });
@@ -596,8 +596,8 @@ describe('main.js - Mobile Menu Integration Tests', () => {
       <main></main>
       <footer class="footer-bottom"></footer>
     `;
-    
-    consoleSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
+
+    consoleSpy = jest.spyOn(console, 'warn').mockImplementation(() => { });
   });
 
   afterEach(() => {
@@ -607,49 +607,49 @@ describe('main.js - Mobile Menu Integration Tests', () => {
   test('should initialize mobile menu functionality when DOM is ready', () => {
     const menuToggle = document.querySelector('.mobile-menu-icon');
     const mobileMenu = document.querySelector('.site-nav ul');
-    
+
     // Mock the addEventListener method to capture the callback
     const originalAddEventListener = menuToggle.addEventListener;
     let clickHandler;
-    
+
     menuToggle.addEventListener = jest.fn((event, handler) => {
       if (event === 'click') {
         clickHandler = handler;
       }
     });
-    
+
     // Simulate the complete toggleMobileMenu function
     const toggleMobileMenu = () => {
       const menuToggle = document.querySelector('.mobile-menu-icon');
       const mobileMenu = document.querySelector('.site-nav ul');
-      
+
       if (!menuToggle || !mobileMenu) {
         console.warn('Mobile menu elements not found');
         return;
       }
-      
+
       menuToggle.addEventListener('click', () => {
         const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
         menuToggle.setAttribute('aria-expanded', !isExpanded);
         mobileMenu.classList.toggle('isVisible');
       });
     };
-    
+
     // Initialize the mobile menu
     toggleMobileMenu();
-    
+
     // Verify event listener was added
     expect(menuToggle.addEventListener).toHaveBeenCalledWith('click', expect.any(Function));
     expect(consoleSpy).not.toHaveBeenCalled();
-    
+
     // Get the actual click handler that was registered
     const actualHandler = menuToggle.addEventListener.mock.calls[0][1];
-    
+
     // Test the click behavior
     actualHandler();
     expect(menuToggle.getAttribute('aria-expanded')).toBe('true');
     expect(mobileMenu.classList.contains('isVisible')).toBe(true);
-    
+
     actualHandler();
     expect(menuToggle.getAttribute('aria-expanded')).toBe('false');
     expect(mobileMenu.classList.contains('isVisible')).toBe(false);
@@ -660,19 +660,19 @@ describe('main.js - Mobile Menu Integration Tests', () => {
     const footerElement = document.querySelector('.footer-bottom');
     const menuToggle = document.querySelector('.mobile-menu-icon');
     const mobileMenu = document.querySelector('.site-nav ul');
-    
+
     // Simulate both functions working together
     expect(footerElement).toBeTruthy();
     expect(menuToggle).toBeTruthy();
     expect(mobileMenu).toBeTruthy();
-    
+
     // Both should be able to function independently
     const clickHandler = () => {
       const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
       menuToggle.setAttribute('aria-expanded', !isExpanded);
       mobileMenu.classList.toggle('isVisible');
     };
-    
+
     clickHandler();
     expect(menuToggle.getAttribute('aria-expanded')).toBe('true');
     expect(mobileMenu.classList.contains('isVisible')).toBe(true);
