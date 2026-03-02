@@ -18,4 +18,8 @@ I became unemployed recently so I've been spending a lot of time on <a href="htt
 
 The posts and comments are both negative and positive, and the negative ones share a recurring idea. GenAI, armed with the ability to code up entire apps in minutes, is rapidly taking software dev jobs.
 
+Being unemployed, I probably should be worrying about this. But I worked in the music business before I wrote code, and that industry went through a very similar disruption.
+
+That disruption was the rise of digital downloading, specifically the rise of <a href="https://www.britannica.com/topic/Napster">Napster</a>. And 
+
 https://www.youtube.com/watch?v=EssztxE9P28
