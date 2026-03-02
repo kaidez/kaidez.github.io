@@ -20,6 +20,10 @@ The posts and comments are both negative and positive, and the negative ones sha
 
 Being unemployed, I probably should be worrying about this. But I worked in the music business before I wrote code, and that industry went through a very similar disruption.
 
-That disruption was the rise of digital downloading — specifically, <a href="https://www.britannica.com/topic/Napster">Napster</a>.
+That disruption was digital music downloading — specifically, <a href="https://www.britannica.com/topic/Napster">Napster</a>. And while Napster didn't destroy the music business altogether, Napster certainly forced it to change.
+
+So, yes, GenAI has placed developers in a position I've been in before. And I'll pivot my software development career the same way I pivoted back when I was in the music business.
+
+<h2>Back When I Was In The Music Business</h2>
 
 https://www.youtube.com/watch?v=EssztxE9P28
