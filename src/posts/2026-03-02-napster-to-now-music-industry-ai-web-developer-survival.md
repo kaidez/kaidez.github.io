@@ -20,7 +20,7 @@ The posts and comments are both negative and positive, and the negative ones sha
 
 Being unemployed, you'd think I'd be worried. But I worked in the music business before I wrote code, and that industry went through a very similar disruption.
 
-That disruption was digital music downloading — specifically, <a href="https://www.britannica.com/topic/Napster" title="Napster - Britannica Encyclopedia" aria-label="Learn about Napster on Britannica" rel="noopener noreferrer">Napster</a>. And while Napster didn't destroy the music business altogether, it certainly forced the industry to change.
+That disruption was digital music downloading — particularly, <a href="https://www.britannica.com/topic/Napster" title="Napster - Britannica Encyclopedia" aria-label="Learn about Napster on Britannica" rel="noopener noreferrer">Napster</a>. And while Napster didn't destroy the music business altogether, it certainly forced the industry to change.
 
 That change meant the music industry — artists and employees alike — had to adapt to a digital music world.  That experience has taught me that developers need to adapt to an AI-driven world.
 
@@ -58,6 +58,6 @@ Napster pushed MP3 downloading to critical mass. Hundreds of thousands of people
 
 The recording industry would win in court and Napster would eventually shut down.  But the damage to the industry was already done.
 
-People would find other ways to download music for free and get more stealth about it. A global recession — driven by the dot-com crash and 9/11 — made things worse. People simply didn't want to pay for music anymore.
+People would find other ways to download music for free and get more stealth about it. A global recession — driven in part by the <a href="https://en.wikipedia.org/wiki/Dot-com_bubble" title="Dot-com bubble - Wikipedia" aria-label="Learn about the dot-com bubble and crash on Wikipedia" rel="noopener noreferrer"">dot-com crash</a> and 9/11 — made things worse. People simply didn't want to pay for music anymore.
 
-The industry lost thousands of jobs.
+As a result, the industry lost thousands of traditional jobs, especially in sales. 
