@@ -42,8 +42,12 @@ Now, I was already familiar with MP3s at this point — I'd been tinkering on th
 
 But to know this required knowing how to navigate the internet underground.   The <i>Vibe</i> article was one of the first times MP3s were exposed to the public in a pop culture format.
 
-Truthfully, I didn't really think about the Vibe article and viewed it as a one-time thing. Then <i>Spin</i> ran a story, as did MTV.
+Truthfully, I didn't really think much about the <i>Vibe</i> article — I viewed it as a one-time thing. Then <i>Spin</i> ran a story, as did MTV.
 
-At that point, I thought the music business really <em>was</em> in trouble.  So I bought a Gateway computer and a bunch of <a href="https://www.peachpit.com/">Peachpit Press</a> books and taught myself about web design and development.
+At that point, I thought the music business really <em>was</em> in trouble.  I knew I needed a "Plan B": a plan for if the music business suddenly disappeared.
+
+So I bought a Gateway computer and a bunch of <a href="https://www.peachpit.com/" title="Peachpit Press - web design and development books" aria-label="Visit Peachpit Press, publisher of web design and development books" rel="noopener noreferrer">Peachpit Press</a> books and taught myself about web design and development.
 
 <h2>Napster Shows Up</h2>
+
+In the middle of all this studying, a team of developers led by Shawn Fanning released Napster.  was software that allowed its users to share MP3s on their computers with others over the internet.
