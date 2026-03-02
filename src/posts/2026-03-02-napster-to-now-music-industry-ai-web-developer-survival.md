@@ -53,3 +53,11 @@ So I bought a Gateway computer and a bunch of <a href="https://www.peachpit.com/
 <h2>Napster Shows Up</h2>
 
 In the middle of all this studying, Shawn Fanning and his team released Napster.  It was software that let users share MP3s with others over the internet.
+
+Napster pushed MP3 downloading to critical mass. Hundreds of thousands of people worldwide shared music for free. Then the recording industry sued — and those numbers turned into millions.
+
+The recording industry would win in court and Napster would eventually shut down.  But the damage to the industry was already done.
+
+People would find other ways to download music for free and get more stealth about it. A global recession — driven by the dot-com crash and 9/11 — made things worse. People simply didn't want to pay for music anymore.
+
+The industry lost thousands of jobs.
