@@ -14,16 +14,18 @@ schema_type: "TechArticle"
 dependencies: "AI"
 proficiency_level: "Beginner"
 ---
-I became unemployed recently so I've been spending a lot of time on <a href="https://www.linkedin.com/in/kaigittens/">LinkedIn</a>. Consequently, I've seen lots of LinkedIn posts and comments from software developers about how Generative AI currently affects their industry.
+I recently became unemployed, so I've been spending a lot of time on <a href="https://www.linkedin.com/in/kaigittens/">LinkedIn</a>. I've seen lots of posts and comments from software developers about how Generative AI currently affects their industry.
 
-The posts and comments are both negative and positive, and the negative ones share a recurring idea. GenAI, armed with the ability to code up entire apps in minutes, is rapidly taking software dev jobs.
+The posts and comments are both negative and positive, and the negative ones share a common fear. GenAI, armed with the ability to code up entire apps in minutes, is rapidly taking software dev jobs.
 
-Being unemployed, I probably should be worrying about this. But I worked in the music business before I wrote code, and that industry went through a very similar disruption.
+Being unemployed, you'd think I'd be worried. But I worked in the music business before I wrote code, and that industry went through a very similar disruption.
 
-That disruption was digital music downloading — specifically, <a href="https://www.britannica.com/topic/Napster">Napster</a>. And while Napster didn't destroy the music business altogether, Napster certainly forced it to change.
+That disruption was digital music downloading — specifically, <a href="https://www.britannica.com/topic/Napster">Napster</a>. And while Napster didn't destroy the music business altogether, it certainly forced the industry to change.
 
-So, yes, GenAI has placed developers in a position I've been in before. And I'll pivot my software development career the same way I pivoted back when I was in the music business.
+That change meant the music industry — artists and employees alike — had to adapt to a digital music world.  That experience has taught me that developers need to adapt to an AI-driven world.
 
-<h2>Back When I Was In The Music Business</h2>
+<h2>When I Was In The Music Business</h2>
+
+I got into the business by interning first at Concrete Managaement
 
 https://www.youtube.com/watch?v=EssztxE9P28
