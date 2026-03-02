@@ -26,6 +26,6 @@ That change meant the music industry — artists and employees alike — had to 
 
 <h2>Back When I Was In The Music Business</h2>
 
-I worked in the music business for 15 years: starting off by doing things like interning and working in the mailroom. I worked at a record store along the way (long live <A href="https://daily.redbullmusicacademy.com/2016/02/vinylmania-oral-history" title="Vinylmania NYC - Red Bull Music Academy oral history" aria-label="Read the oral history of Vinylmania NYC record store" rel="noopener noreferrer">Vinylmania NYC</a>).
+I worked in the music business for 15 years: starting off by doing things like interning and working in the mailroom. I worked at a record store along the way (long live <a href="https://daily.redbullmusicacademy.com/2016/02/vinylmania-oral-history" title="Vinylmania NYC - Red Bull Music Academy oral history" aria-label="Read the oral history of Vinylmania NYC record store" rel="noopener noreferrer">Vinylmania NYC</a>).
 
 https://www.youtube.com/watch?v=EssztxE9P28
