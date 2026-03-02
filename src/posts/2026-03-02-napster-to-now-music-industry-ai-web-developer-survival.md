@@ -26,19 +26,21 @@ That change meant the music industry — artists and employees alike — had to 
 
 <h2>Back When I Was In The Music Business</h2>
 
-I worked in the music business for 15 years, beginning with internships and mailroom work. I also worked at the famed <a href="https://daily.redbullmusicacademy.com/2016/02/vinylmania-oral-history" title="Vinylmania NYC - Red Bull Music Academy oral history" aria-label="Read the oral history of Vinylmania NYC record store" rel="noopener noreferrer">Vinylmania Records</a> in New York City — not surprising, since I'd been living in record stores since I was ten years old.
+I worked in the music business for 15 years, beginning with internships and mailroom work. I also worked at the famed <a href="https://daily.redbullmusicacademy.com/2016/02/vinylmania-oral-history" title="Vinylmania NYC - Red Bull Music Academy oral history" aria-label="Read the oral history of Vinylmania NYC record store" rel="noopener noreferrer">Vinylmania Record Store</a> in New York City. 
 
-With that affinity for retail, I eventually moved into sales jobs at various record labels, doing some marketing along the way, but mostly sales. I also worked at some pretty cool labels over the years: Big Life, K-Tel Distribution, Putumayo, Giant Step, Jive.
+I'd been living in record stores since I was ten years old, so I really loved that job. With that affinity for retail, I eventually moved into sales jobs at various record labels. I did some marketing on the side, but mostly sales.
+
+I worked at some pretty cool labels over the years: Big Life, K-Tel Distribution, Putumayo, Giant Step, Jive. I also worked at Strictly Rhythm, the world-renowned dance label — my first office job in the music business.
 
 <h2>When I Noticed Things Starting To Change</h2>
 
-Strictly Rhythm, the world-renowned dance label, was the first office job I had in the music business. This was in the late 1990s...one day, I bought a copy of <i>Vibe</i> Magazine.
+One day, when I was still working at Strictly, I bought a copy of <i>Vibe</i> Magazine during my lunch break.  Inside that magazine was an article on the rising popularity of MP3 files.
 
-Inside that magazine was an article on the rising popularity of MP3 files — digital files containing individual songs. MP3s were relatively small in size — 3-4 MB at most.
+MP3s were digital files containing individual songs. They were relatively small in size — 3-4 MB at most.
 
-Because customers were now purchasing high-speed internet services for their homes (DSL, cable, etc.), downloading multiple music files of this size over the internet was easy.  The article predicted that all of this would crater the music industry.
+By then, customers were buying high-speed internet at home — DSL, cable, and the like. Downloading multiple music files was suddenly easy. The article predicted that all of this would crater the music industry.
 
-Now, I was already familiar with MP3s at this point — I'd been tinkering on the internet and knew people were sharing them via email and newsgroups.
+Now, I was already familiar with MP3s at this point.  I'd been tinkering on the internet and knew people were sharing them via email and newsgroups.
 
 But to know this required knowing how to navigate the internet underground.   The <i>Vibe</i> article was one of the first times MP3s were exposed to the public in a pop culture format.
 
@@ -46,8 +48,8 @@ Truthfully, I didn't really think much about the <i>Vibe</i> article — I viewe
 
 At that point, I thought the music business really <em>was</em> in trouble.  I knew I needed a "Plan B": a plan for if the music business suddenly disappeared.
 
-So I bought a Gateway computer and a bunch of <a href="https://www.peachpit.com/" title="Peachpit Press - web design and development books" aria-label="Visit Peachpit Press, publisher of web design and development books" rel="noopener noreferrer">Peachpit Press</a> books and taught myself about web design and development.
+So I bought a Gateway computer and a bunch of <a href="https://www.peachpit.com/" title="Peachpit Press - web design and development books" aria-label="Visit Peachpit Press, publisher of web design and development books" rel="noopener noreferrer">Peachpit Press</a> books. I taught myself web design and development.
 
 <h2>Napster Shows Up</h2>
 
-In the middle of all this studying, Shawn Fanning and his team released Napster — software that let users share MP3s with others over the internet.
+In the middle of all this studying, Shawn Fanning and his team released Napster.  It was software that let users share MP3s with others over the internet.
