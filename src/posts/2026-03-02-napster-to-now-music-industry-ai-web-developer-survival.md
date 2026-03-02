@@ -58,6 +58,10 @@ Napster pushed MP3 downloading to critical mass. Hundreds of thousands of people
 
 The recording industry would win in court and Napster would eventually shut down.  But the damage to the industry was already done.
 
-People would find other ways to download music for free and get more stealth about it. A global recession — driven in part by the <a href="https://en.wikipedia.org/wiki/Dot-com_bubble" title="Dot-com bubble - Wikipedia" aria-label="Learn about the dot-com bubble and crash on Wikipedia" rel="noopener noreferrer"">dot-com crash</a> and 9/11 — made things worse. People simply didn't want to pay for music anymore.
+People would find other ways to download music for free and get stealthier about it. A global recession — driven in part by the <a href="https://en.wikipedia.org/wiki/Dot-com_bubble" title="Dot-com bubble - Wikipedia" aria-label="Learn about the dot-com bubble and crash on Wikipedia" rel="noopener noreferrer">dot-com crash</a> and 9/11 — made things worse. People simply didn't want to pay for music anymore.
 
-As a result, the industry lost thousands of traditional jobs, especially in sales. 
+As a result, the industry lost thousands of traditional jobs, especially in sales. The industry would rebuild itself around things like iTunes, Spotify, and a new licensing structure.
+
+But many who lost their jobs left the music business altogether. Me? I stayed in the business for four years after Napster shut down, taking on freelance web design work at that time.
+
+After that, I moved into web design work at Revlon Cosmetics.  I haven't looked back.
