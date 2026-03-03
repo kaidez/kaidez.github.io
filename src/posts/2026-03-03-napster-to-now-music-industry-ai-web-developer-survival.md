@@ -1,7 +1,7 @@
 ---
 title: "From Napster to Now: What My 15 Years in the Music Business Taught Me About Surviving AI as a Web Developer"
 date: 2026-03-03T12:00:00-05:00
-excerpt: I spent 15 years in music sales and marketing and watched the industry get disrupted. Here's what web developers need to know about AI
+excerpt: I spent 15 years in music sales and marketing and watched the industry get disrupted. Here's what web developers need to know about AI.
 draft: true
 layout: layouts/post.njk
 permalink: /napster-to-now-music-industry-ai-web-developer-survival/
@@ -70,22 +70,19 @@ After that, I got a web design job at Revlon Cosmetics. And my career progressed
 
 <h2>Adapting</h2>
 
-I do miss the music business sometimes, but I really haven't looked back.  And when I do look back, I accept that adapting to change meant leaving the business altogether.
+Many music biz employees complained that Napster was destroying their careers (ironic considering how many of them were using Napster themselves). But despite this and the very valid legal issues, the fact remains that Napster succeeded because it gave consumers <em>EXACTLY</em> what they wanted.
 
-The rise of GenAI has convinced me I need to adapt again in order to continue in my career. But unlike my music industry pivot, I have no plans to leave software development.
+AI is providing consumers the exact same thing. Businesses, developers of all skill levels, family members...they all want to use AI in their daily lives.
 
-Software developers that want to stay in this business need to adapt as well.
+When I look back at my time in the music business, I accept that adapting to change, in my case, meant leaving the business altogether. But unlike my music industry pivot, I have no plans to leave software development, and
 
-Many music biz employees complained that Napster was destroying their careers, which is ironic considering how many of those employees were using Napster themselves. But despites and the very accurate legal issues, the very simple truth is this:
+Instead, I'm choosing to adapt to AI. I believe the best way to adapt is understanding <em>AI's role in system design</em>.
 
-<blockquote>
-  <p>
-    <em>Napster gave people EXACTLY what they wanted.</em>
-  </p>
-</blockquote>
+The role looks like this:
 
-Like it or not, customers of all types want to use GenAI. Developers need to position themselves to support that need.
+<ul>
+  <li><b>Clear communication about a project still comes first:</b> This has always been important but more than ever now. A project with solid, written-down requirements should be in place before an AI tool receives even the simplest prompt.</li>
+  <li><a href="https://agentskills.io/home">Agent Skills Open Standard</a></li>
+</ul>
 
-I could embellish more on this if I had to. But things are really that simple to explain.
-
-<h2>Guessing On What Will Happen Next<h2>
+<h2>Guessing On What Will Happen Next</h2>
