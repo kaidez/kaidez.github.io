@@ -64,13 +64,15 @@ As a result, the industry lost thousands of traditional jobs, especially in sale
 
 But many who lost their jobs left the music business altogether. Me? I stayed in the business for four years after Napster shut down, continuing to take on as much freelance web design work as possible.
 
-After that, I got a web design job at Revlon Cosmetics.  I haven't looked back.
+After that, I got a web design job at Revlon Cosmetics.  And while I miss the music business sometimes, I really haven't looked back.
 
 <i>Side note: Joseph Menn's book, <a href="https://www.amazon.com/All-Rave-Shawn-Fannings-Napster/dp/0609610937" title="All the Rave: The Rise and Fall of Shawn Fanning's Napster - Amazon" aria-label="Buy All the Rave: The Rise and Fall of Shawn Fanning's Napster on Amazon" rel="noopener noreferrer">All the Rave: The Rise and Fall of Shawn Fanning's Napster</a> is a fascinating recap of Napster's history. <a href="/books-dotcom-rush/" title="Kai Gittens reviews All the Rave" aria-label="Read Kai Gittens' review of All the Rave">Read my review</a>.</i>
 
-<h2>Adapting Is Key</h2>
+<h2>Adapting</h2>
 
-I don't miss the music business, so I know I made the right decision. But I knew I had to adapt if I wanted to pay the bills.
+
+
+I had to adapt to the digital music world if I wanted to pay the bills.
 
 The rise of GenAI has convinced me I need to adapt again. But unlike my music industry pivot, I have no plans to leave software development.
 
@@ -85,3 +87,7 @@ Many music biz employees complained that Napster was destroying their careers, w
 </blockquote>
 
 Like it or not, customers of all types want to use GenAI. Developers need to position themselves to support that need.
+
+I could embellish more on this if I had to. But things are really that simple to explain.
+
+<h2>Guessing On What Will Happen Next<h2>
