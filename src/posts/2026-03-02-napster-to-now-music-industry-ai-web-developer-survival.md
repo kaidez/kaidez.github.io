@@ -76,12 +76,12 @@ The rise of GenAI has convinced me I need to adapt again. But unlike my music in
 
 Software developers that complaining about AI need to adapt as well.  Simply put, they have no choice.
 
-Many music biz employees complained that Napster was destroying their careers, which is ironic considering how many of those employees were using Napster themselves. But despites and the very accurate legal issues, the truth is this:
+Many music biz employees complained that Napster was destroying their careers, which is ironic considering how many of those employees were using Napster themselves. But despites and the very accurate legal issues, the very simple truth is this:
 
 <blockquote>
   <p>
-    <em>Napster gave consumers EXACTLY what they wanted.</em>
+    <em>Napster gave people EXACTLY what they wanted.</em>
   </p>
 </blockquote>
 
-Like it or not, companies and developers want GenAI in their lives.
+Like it or not, customers of all types want to use GenAI. Developers need to position themselves to support that need.
