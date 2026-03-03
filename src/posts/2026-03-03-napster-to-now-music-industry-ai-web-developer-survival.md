@@ -2,6 +2,7 @@
 title: "From Napster to Now: What My 15 Years in the Music Business Taught Me About Surviving AI as a Web Developer"
 date: 2026-03-03T12:00:00-05:00
 excerpt: I spent 15 years in music sales and marketing and watched the industry get disrupted. Here's what web developers need to know about AI
+draft: true
 layout: layouts/post.njk
 permalink: /napster-to-now-music-industry-ai-web-developer-survival/
 image: smallKaidezLogo.jpg
@@ -63,19 +64,17 @@ As a result, the industry lost thousands of traditional jobs, especially in sale
 
 But many who lost their jobs left the music business altogether. Me? I stayed in the business for four years after Napster shut down, continuing to take on as much freelance web design work as possible.
 
-After that, I got a web design job at Revlon Cosmetics.  And while I miss the music business sometimes, I really haven't looked back.
+After that, I got a web design job at Revlon Cosmetics. And my career progressed from there.
 
 <i>Side note: Joseph Menn's book, <a href="https://www.amazon.com/All-Rave-Shawn-Fannings-Napster/dp/0609610937" title="All the Rave: The Rise and Fall of Shawn Fanning's Napster - Amazon" aria-label="Buy All the Rave: The Rise and Fall of Shawn Fanning's Napster on Amazon" rel="noopener noreferrer">All the Rave: The Rise and Fall of Shawn Fanning's Napster</a> is a fascinating recap of Napster's history. <a href="/books-dotcom-rush/" title="Kai Gittens reviews All the Rave" aria-label="Read Kai Gittens' review of All the Rave">Read my review</a>.</i>
 
 <h2>Adapting</h2>
 
+I do miss the music business sometimes, but I really haven't looked back.  And when I do look back, I accept that adapting to change meant leaving the business altogether.
 
+The rise of GenAI has convinced me I need to adapt again in order to continue in my career. But unlike my music industry pivot, I have no plans to leave software development.
 
-I had to adapt to the digital music world if I wanted to pay the bills.
-
-The rise of GenAI has convinced me I need to adapt again. But unlike my music industry pivot, I have no plans to leave software development.
-
-Software developers that complaining about AI need to adapt as well.  Simply put, they have no choice.
+Software developers that want to stay in this business need to adapt as well.
 
 Many music biz employees complained that Napster was destroying their careers, which is ironic considering how many of those employees were using Napster themselves. But despites and the very accurate legal issues, the very simple truth is this:
 
