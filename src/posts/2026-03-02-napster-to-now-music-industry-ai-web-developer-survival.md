@@ -20,15 +20,15 @@ The posts and comments are both negative and positive, and the negative ones sha
 
 Being unemployed, you'd think I'd be worried. But I worked in the music business before I wrote code, and that industry went through a very similar disruption.
 
-That disruption was digital music downloading — particularly, <a href="https://www.britannica.com/topic/Napster" title="Napster - Britannica Encyclopedia" aria-label="Learn about Napster on Britannica" rel="noopener noreferrer">Napster</a>. And while Napster didn't destroy the music business altogether, it certainly forced the industry to change.
+That disruption was digital music downloading — particularly, <a href="https://www.britannica.com/topic/Napster" title="Napster - Britannica Encyclopedia" aria-label="Learn about Napster on Britannica" rel="noopener noreferrer">Napster</a>. And as noted in <a href="/downloaded-movie-review/" title="Kai Gittens reviews the Napster documentary" aria-label="Read Kai Gittens' review of the Napster documentary">my Napster documentary review</a>, Napster was the first time that the new internet business model directly challenged the traditional, non-internet one 
 
-That change meant the music industry — artists and employees alike — had to adapt to a digital music world.  That experience has taught me that developers need to adapt to an AI-driven world.
+While Napster didn't destroy the music business altogether, it forced the industry to change. That experience has taught me that developers need to adapt to an AI-driven world.
 
 <h2>Back When I Was In The Music Business</h2>
 
 I worked in the music business for 15 years, beginning with internships and mailroom work. I also worked at the famed <a href="https://daily.redbullmusicacademy.com/2016/02/vinylmania-oral-history" title="Vinylmania NYC - Red Bull Music Academy oral history" aria-label="Read the oral history of Vinylmania NYC record store" rel="noopener noreferrer">Vinylmania Record Store</a> in New York City. 
 
-I'd been living in record stores since I was ten years old, so I really loved that job. With that affinity for retail, I eventually moved into sales jobs at various record labels. I did some marketing on the side, but mostly sales.
+I'd been living in record stores since I was ten years old, so I <em>really</em> loved that job. With that affinity for retail, I eventually moved into sales jobs at various record labels. I did some marketing on the side, but mostly sales.
 
 I worked at some pretty cool labels over the years: Big Life, K-Tel Distribution, Putumayo, Giant Step, Jive. I also worked at Strictly Rhythm, the world-renowned dance label — my first office job in the music business.
 
@@ -48,11 +48,11 @@ Truthfully, I didn't really think much about the <i>Vibe</i> article — I viewe
 
 At that point, I thought the music business really <em>was</em> in trouble.  I knew I needed a "Plan B": a plan for if the music business suddenly disappeared.
 
-So I bought a Gateway computer and a bunch of <a href="https://www.peachpit.com/" title="Peachpit Press - web design and development books" aria-label="Visit Peachpit Press, publisher of web design and development books" rel="noopener noreferrer">Peachpit Press</a> books. I taught myself web design and development.
+So I bought a Gateway computer and a bunch of <a href="https://www.peachpit.com/" title="Peachpit Press - web design and development books" aria-label="Visit Peachpit Press, publisher of web design and development books" rel="noopener noreferrer">Peachpit Press</a> books. I taught myself web design and development, and grabbed as many freelance jobs as I could.
 
 <h2>Napster Shows Up</h2>
 
-In the middle of all this studying, Shawn Fanning and his team released Napster.  It was software that let users share MP3s with others over the internet.
+In the middle of all this studying, a team of coders led by <a href="https://en.wikipedia.org/wiki/Shawn_Fanning" title="Shawn Fanning - Wikipedia" aria-label="Learn about Shawn Fanning on Wikipedia" rel="noopener noreferrer">Shawn Fanning</a> built and released Napster.  It was software that let users share MP3s with other Napster users over the internet.
 
 Napster pushed MP3 downloading to critical mass. Hundreds of thousands of people worldwide shared music for free. Then the recording industry sued — and those numbers turned into millions.
 
@@ -62,6 +62,8 @@ People would find other ways to download music for free and get stealthier about
 
 As a result, the industry lost thousands of traditional jobs, especially in sales. The industry would rebuild itself around things like iTunes, Spotify, and a new licensing structure.
 
-But many who lost their jobs left the music business altogether. Me? I stayed in the business for four years after Napster shut down, taking on freelance web design work at that time.
+But many who lost their jobs left the music business altogether. Me? I stayed in the business for four years after Napster shut down, continuing to take on as much freelance web design work as possible.
 
-After that, I moved into web design work at Revlon Cosmetics.  I haven't looked back.
+After that, I got a web design job at Revlon Cosmetics.  I haven't looked back.
+
+<i>Side note: Joseph Menn's book, <b><a href="https://www.amazon.com/All-Rave-Shawn-Fannings-Napster/dp/0609610937" title="All the Rave: The Rise and Fall of Shawn Fanning's Napster - Amazon" aria-label="Buy All the Rave: The Rise and Fall of Shawn Fanning's Napster on Amazon" rel="noopener noreferrer">All the Rave: The Rise and Fall of Shawn Fanning's Napster </a></b> is a fascinating recap of Napster's history. <a href="/books-dotcom-rush/" title="Kai Gittens reviews All the Rave" aria-label="Read Kai Gittens' review of All the Rave">Read my review</a>.</i>
