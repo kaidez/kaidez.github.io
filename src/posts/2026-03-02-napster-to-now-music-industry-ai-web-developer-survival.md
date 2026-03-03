@@ -1,6 +1,6 @@
 ---
 title: "From Napster to Now: What My 15 Years in the Music Business Taught Me About Surviving AI as a Web Developer"
-date: 2026-02-03T12:00:00-05:00
+date: 2026-03-03T12:00:00-05:00
 draft: true
 excerpt: I spent 15 years in music sales and marketing and watched the industry get disrupted. Here's what web developers need to know about AI
 layout: layouts/post.njk
@@ -66,4 +66,22 @@ But many who lost their jobs left the music business altogether. Me? I stayed in
 
 After that, I got a web design job at Revlon Cosmetics.  I haven't looked back.
 
-<i>Side note: Joseph Menn's book, <b><a href="https://www.amazon.com/All-Rave-Shawn-Fannings-Napster/dp/0609610937" title="All the Rave: The Rise and Fall of Shawn Fanning's Napster - Amazon" aria-label="Buy All the Rave: The Rise and Fall of Shawn Fanning's Napster on Amazon" rel="noopener noreferrer">All the Rave: The Rise and Fall of Shawn Fanning's Napster </a></b> is a fascinating recap of Napster's history. <a href="/books-dotcom-rush/" title="Kai Gittens reviews All the Rave" aria-label="Read Kai Gittens' review of All the Rave">Read my review</a>.</i>
+<i>Side note: Joseph Menn's book, <a href="https://www.amazon.com/All-Rave-Shawn-Fannings-Napster/dp/0609610937" title="All the Rave: The Rise and Fall of Shawn Fanning's Napster - Amazon" aria-label="Buy All the Rave: The Rise and Fall of Shawn Fanning's Napster on Amazon" rel="noopener noreferrer">All the Rave: The Rise and Fall of Shawn Fanning's Napster</a> is a fascinating recap of Napster's history. <a href="/books-dotcom-rush/" title="Kai Gittens reviews All the Rave" aria-label="Read Kai Gittens' review of All the Rave">Read my review</a>.</i>
+
+<h2>Adapting Is Key</h2>
+
+I don't miss the music business, so I know I made the right decision. But I knew I had to adapt if I wanted to pay the bills.
+
+The rise of GenAI has convinced me I need to adapt again. But unlike my music industry pivot, I have no plans to leave software development.
+
+Software developers that complaining about AI need to adapt as well.  Simply put, they have no choice.
+
+Many music biz employees complained that Napster was destroying their careers, which is ironic considering how many of those employees were using Napster themselves. But despites and the very accurate legal issues, the truth is this:
+
+<blockquote>
+  <p>
+    <em>Napster gave consumers EXACTLY what they wanted.</em>
+  </p>
+</blockquote>
+
+Like it or not, companies and developers want GenAI in their lives.
