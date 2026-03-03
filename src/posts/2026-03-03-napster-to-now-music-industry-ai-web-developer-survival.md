@@ -1,7 +1,6 @@
 ---
 title: "From Napster to Now: What My 15 Years in the Music Business Taught Me About Surviving AI as a Web Developer"
 date: 2026-03-03T12:00:00-05:00
-draft: true
 excerpt: I spent 15 years in music sales and marketing and watched the industry get disrupted. Here's what web developers need to know about AI
 layout: layouts/post.njk
 permalink: /napster-to-now-music-industry-ai-web-developer-survival/
