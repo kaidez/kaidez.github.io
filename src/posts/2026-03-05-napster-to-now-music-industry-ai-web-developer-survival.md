@@ -43,7 +43,7 @@ Now, I was already familiar with MP3s at this point. I'd been tinkering on the i
 
 But to know this required knowing how to navigate the internet underground. The <i>Vibe</i> article was one of the first discussions of MP3s outside of this underground and inside pop culture.
 
-Truthfully, I didn't really think much about the <i>Vibe</i> article — I viewed it as a one-time thing. Then <i>Spin</i> ran a story, as did MTV.
+Truthfully, I didn't really think much about the <i>Vibe</i> article — I viewed it as a one-time thing. Then <i>Spin</i> ran a similar story, as did MTV.
 
 At that point, I thought the music business really <em>was</em> in trouble. I knew I needed a "Plan B": a plan for if the music business suddenly disappeared.
 
