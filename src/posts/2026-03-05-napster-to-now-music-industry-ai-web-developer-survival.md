@@ -29,7 +29,7 @@ I worked in the music business for 15 years, beginning with internships and mail
 
 Record stores were basically my second home ever since I was ten years old, so I <em>really</em> loved that job. With that affinity for retail, I eventually moved into sales jobs at various record labels. I did some marketing on the side, but mostly sales.
 
-I worked at some pretty cool labels over the years: Big Life, K-Tel Distribution, Putumayo, Giant Step, Jive. I also worked at Strictly Rhythm, the world-renowned dance label — my first office job in the music business.
+I worked at some pretty cool companies over the years: Concrete, Caroline, K-Tel, Putumayo, Giant Step, Jive. I also worked at Strictly Rhythm, the world-renowned dance label — my first office job in the music business.
 
 <h2>When I Noticed Things Starting To Change</h2>
 
