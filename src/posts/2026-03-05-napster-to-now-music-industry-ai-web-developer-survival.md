@@ -63,9 +63,9 @@ People would find other ways to download music for free and get stealthier about
 
 As a result, the industry lost thousands of traditional jobs, especially in sales. The industry would rebuild itself around things like iTunes, Spotify, and a new licensing structure.
 
-But many who lost their jobs left the music business altogether. I stayed in the business for four years after Napster shut down, taking on all the freelance web design work I could.
+But many who lost their jobs left the music business altogether. I stayed four more years, building a freelance web design portfolio on the side.
 
-After building a strong resume of freelance work, I got a web design job at Revlon Cosmetics. And my career progressed from there.
+That portfolio was eventually strong enough to land me a web design job at Revlon Cosmetics. And my career progressed from there.
 
 <i>(Side note: Joseph Menn's book, <a href="https://www.amazon.com/All-Rave-Shawn-Fannings-Napster/dp/0609610937" title="All the Rave: The Rise and Fall of Shawn Fanning's Napster - Amazon" aria-label="Buy All the Rave: The Rise and Fall of Shawn Fanning's Napster on Amazon" rel="noopener noreferrer">All the Rave: The Rise and Fall of Shawn Fanning's Napster</a> is a fascinating recap of Napster's history. <a href="/books-dotcom-rush/" title="Kai Gittens reviews All the Rave" aria-label="Read Kai Gittens' review of All the Rave">Read my review</a>.)</i>
 
