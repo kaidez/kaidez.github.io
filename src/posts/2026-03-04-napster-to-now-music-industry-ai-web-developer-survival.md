@@ -28,7 +28,7 @@ While Napster didn't destroy the music business altogether, it forced the indust
 
 I worked in the music business for 15 years, beginning with internships and mailroom work. I also worked at the famed <a href="https://daily.redbullmusicacademy.com/2016/02/vinylmania-oral-history" title="Vinylmania NYC - Red Bull Music Academy oral history" aria-label="Read the oral history of Vinylmania NYC record store" rel="noopener noreferrer">Vinylmania Record Store</a> in New York City. 
 
-I'd been living in record stores since I was ten years old, so I <em>really</em> loved that job. With that affinity for retail, I eventually moved into sales jobs at various record labels. I did some marketing on the side, but mostly sales.
+Record stores were basically my second home ever since I was ten years old, so I <em>really</em> loved that job. With that affinity for retail, I eventually moved into sales jobs at various record labels. I did some marketing on the side, but mostly sales.
 
 I worked at some pretty cool labels over the years: Big Life, K-Tel Distribution, Putumayo, Giant Step, Jive. I also worked at Strictly Rhythm, the world-renowned dance label — my first office job in the music business.
 
@@ -38,7 +38,7 @@ One day, when I was still working at Strictly, I bought a copy of <i>Vibe</i> Ma
 
 MP3s were digital files containing individual songs. They were relatively small in size — 3-4 MB at most.
 
-By then, customers were installing high-speed internet in homes — DSL, cable, and the like. So downloading multiple 3-4 MB music files was suddenly easy. The article predicted that all this would crater the music industry.
+People were installing high-speed internet in homes by then — DSL, cable, and the like. So downloading multiple 3-4 MB music files was suddenly easy. The article predicted that all this would crater the music industry.
 
 Now, I was already familiar with MP3s at this point. I'd been tinkering on the internet and knew people were sharing them via email and newsgroups.
 
@@ -54,7 +54,7 @@ So I bought a Gateway computer and a bunch of <a href="https://www.peachpit.com/
 
 In the middle of all this studying, a team of coders led by <a href="https://en.wikipedia.org/wiki/Shawn_Fanning" title="Shawn Fanning - Wikipedia" aria-label="Learn about Shawn Fanning on Wikipedia" rel="noopener noreferrer">Shawn Fanning</a> built and released Napster. It was software that let users share MP3s with other Napster users over the internet.
 
-Napster pushed MP3 downloading to critical mass. Hundreds of thousands of people worldwide shared music for free. Then the recording industry sued — and those numbers turned into millions.
+Napster pushed MP3 downloading to critical mass. Hundreds of thousands of people worldwide shared music for free. Then the recording industry sued the company, generating a ton of free publicity for it in the process.  And those numbers turned into millions.
 
 The recording industry would win in court and Napster would eventually shut down. But the damage to the industry was already done.
 
@@ -72,13 +72,13 @@ After that, I got a web design job at Revlon Cosmetics. And my career progressed
 
 Many music business employees complained that Napster was destroying their careers (ironic considering how many of them were using Napster themselves). But the fact remains: Napster succeeded because it gave consumers <em>EXACTLY</em> what they wanted.
 
-AI is providing consumers the exact same thing. Businesses, developers of all skill levels, family members...they all want to use AI in their daily lives.
+AI is doing the exact same thing. Businesses, developers of all skill levels, family members...they all want to use AI in their daily lives.
 
 Looking back at my time in the music business, I accept that adapting to change meant leaving the business altogether. But unlike my music industry pivot, I have no plans to leave software development.
 
-Instead, I'm choosing to adapt to AI. I believe the best way to adapt is understanding <em>AI's role in system design</em>.
+Instead, I'm choosing to adapt to AI. I believe the best way to adapt is <b>understanding AI's role in system design</b>.
 
-To adapt like this, I first believe a solid understanding of the application's requirements still. A project with solid, written-down requirements should be completed before an LLM receives a single prompt.
+To adapt like this, first,  a solid understanding of the application's requirements is a must. A project with solid, written-down requirements should be completed before an LLM receives a single prompt.
 
 Second, flat-out vibe coding — building an app with a handful of prompts — can only get you so far. Understanding the software powering your app is still essential, at least in the short-term. Prompting an LLM to generate a React app wired to AWS does NOT mean you can skip learning React or AWS.
 
@@ -88,10 +88,12 @@ I think Alex Maccaw's <a href="https://blog.alexmaccaw.com/how-to-vibe-code-as-a
 
 <blockquote>
   <p>
-  Contrary to popular belief, I believe Vibe coding is most effective for senior engineers. If you know what you're doing, have a deep understanding of the frameworks and libraries, and a clear idea of the way you like to do things, Vibe coding is like adding Nitroglycerin to your productivity.
+    Contrary to popular belief, I believe Vibe coding is most effective for senior engineers. If you know what you're doing, have a deep understanding of the frameworks and libraries, and a clear idea of the way you like to do things, Vibe coding is like adding Nitroglycerin to your productivity.
   </p>
 </blockquote>
 
+Also, I'd like to research using AI outside of building web apps. Many companies are asking the question "How can our employees us AI to be more productive?"
 
+My previous employer asked its employess to research automating tasks with AI. Using it to automatically pull data from emails and laying it out in spreadsheets and then sharing it in group chats...things like that.
 
-<h2>Guessing On What Will Happen Next</h2>
+<h2>Conclusion</h2>
