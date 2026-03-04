@@ -1,12 +1,11 @@
 ---
 title: "From Napster to Now: What My 15 Years in the Music Business Taught Me About Surviving AI as a Web Developer"
-date: 2026-03-04T12:00:00-02:00
+date: 2026-03-05T12:00:00-02:00
 excerpt: I spent 15 years in music sales and marketing and watched the industry get disrupted. Here's what web developers need to know about AI.
 draft: true
 layout: layouts/post.njk
 permalink: /napster-to-now-music-industry-ai-web-developer-survival/
-image: smallKaidezLogo.jpg
-imageAltText: Kaidez blog logo featuring bold red typography in Barbara Kruger-inspired design
+image: napster-ai.jpeg
 tags: [personal]
 secondary_tags: ["ai", "rant"]
 category: Personal
@@ -62,7 +61,7 @@ People would find other ways to download music for free and get stealthier about
 
 As a result, the industry lost thousands of traditional jobs, especially in sales. The industry would rebuild itself around things like iTunes, Spotify, and a new licensing structure.
 
-But many who lost their jobs left the music business altogether. I stayed in the business for four years after Napster shut down, continuing to take on as much freelance web design work as possible.
+But many who lost their jobs left the music business altogether. I stayed in the business for four years after Napster shut down, taking on all the freelance web design work I could.
 
 After that, I got a web design job at Revlon Cosmetics. And my career progressed from there.
 
@@ -80,7 +79,7 @@ Instead, I'm choosing to adapt to AI. I believe the best way to adapt is <b>unde
 
 To adapt like this, first, a solid understanding of the application's requirements is a must. A project with solid, written-down requirements should be completed before an LLM receives a single prompt.
 
-Second, flat-out vibe coding — building an app with a handful of prompts — can only get you so far. Understanding the software powering your app is still essential, at least in the short-term. Prompting an LLM to generate a React app wired to AWS does NOT mean you can skip learning React or AWS.
+Second, flat-out vibe coding — building an app with a handful of prompts — can only get you so far. Understanding the software powering your app is still essential, at least in the short-term. Using an LLM to build a React app doesn't replace knowing React. The same goes for AWS.
 
 You still need to know those tools, as well as continuous integration (CI), GitHub hooks, Jenkins Jobs, Docker instances, etc. I also believe that implementing the <a href="https://agentskills.io/home" title="Agent Skills Open Format" aria-label="Learn about the Agent Skills Open Standard" rel="noopener noreferrer">Agent Skills Open Standard</a> into AI-built apps is a must-do.
 
@@ -104,7 +103,7 @@ AI has also received its share of bad press. In the few days prior to this post'
 
 I saw a lot of bad press about Claude over those days. I didn't see any stories about people stopping to use it as a result.
 
-Regardless of pessimistic posts and comments on LinkedIn and any negative publicity that pops up, AI is here to stay in one form or another.
+The negative posts, the outages, the bans — none of it will stop AI.
 
 <h2>Conclusion</h2>
 
@@ -112,9 +111,9 @@ My "Plan B" moment, buying a computer and teaching myself web design, was me doi
 
 The seismic shift that Generative AI has placed on software developers is similar to what happened to the music business and Napster. That business didn't disappear, but it was forced to do a hard reset of itself.
 
-That hard reset included people leaving the business altogether, including me. I'm not leaving this time and I don't want to experienced developers do the same thing.
+That hard reset included people leaving the business altogether, including me. I'm not leaving this time and I don't want experienced developers to do the same thing.
 
-AI has opened a new world to our developer community. We can build a lot of really complex stuff really, really fast.
+AI has opened a new world to our developer community. We can build a lot of really complex stuff, fast.
 
 We have a world of creativity at our fingertips...we just need to embrace it.
 
