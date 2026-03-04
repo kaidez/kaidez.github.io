@@ -54,7 +54,7 @@ So I bought a Gateway computer and a bunch of <a href="https://www.peachpit.com/
 
 In the middle of all this studying, a team of coders led by <a href="https://en.wikipedia.org/wiki/Shawn_Fanning" title="Shawn Fanning - Wikipedia" aria-label="Learn about Shawn Fanning on Wikipedia" rel="noopener noreferrer">Shawn Fanning</a> built and released Napster. It was software that let users share MP3s with other Napster users over the internet.
 
-Napster pushed MP3 downloading to critical mass. Hundreds of thousands of people worldwide shared music for free. Then the recording industry sued the company, generating a ton of free publicity for it in the process.  And those numbers turned into millions.
+Napster pushed MP3 downloading to critical mass. Hundreds of thousands of people worldwide shared music for free. Then the recording industry sued Naspter, generating a ton of free publicity for the company as a result. Hundreds of thousands of people quickly turned into millions.
 
 The recording industry would win in court and Napster would eventually shut down. But the damage to the industry was already done.
 
@@ -92,8 +92,8 @@ I think Alex Maccaw's <a href="https://blog.alexmaccaw.com/how-to-vibe-code-as-a
   </p>
 </blockquote>
 
-Also, I'd like to research using AI outside of building web apps. Many companies are asking the question "How can our employees us AI to be more productive?"
-
-My previous employer asked its employess to research automating tasks with AI. Using it to automatically pull data from emails and laying it out in spreadsheets and then sharing it in group chats...things like that.
+My previous employer asked its employees to research automating tasks with AI. Using it to automatically pull data from emails and laying it out in spreadsheets and then sharing it in group chats...things like that.
 
 <h2>Conclusion</h2>
+
+Regarding those negative posts and comments I saw on LinkedIn, I did see just as many positive ones. But my music business experience has made the negative ones stick out.
