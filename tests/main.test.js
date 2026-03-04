@@ -325,7 +325,7 @@ describe('main.js - Mobile Menu Toggle functionality', () => {
 
       menuToggle.addEventListener('click', () => {
         const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-        menuToggle.setAttribute('aria-expanded', !isExpanded);
+        menuToggle.setAttribute('aria-expanded', String(!isExpanded));
         mobileMenu.classList.toggle('isVisible');
       });
     };
@@ -420,7 +420,7 @@ describe('main.js - Mobile Menu Toggle functionality', () => {
 
       menuToggle.addEventListener('click', () => {
         const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-        menuToggle.setAttribute('aria-expanded', !isExpanded);
+        menuToggle.setAttribute('aria-expanded', String(!isExpanded));
         mobileMenu.classList.toggle('isVisible');
       });
     };
@@ -449,7 +449,7 @@ describe('main.js - Mobile Menu Toggle functionality', () => {
 
       menuToggle.addEventListener('click', () => {
         const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-        menuToggle.setAttribute('aria-expanded', !isExpanded);
+        menuToggle.setAttribute('aria-expanded', String(!isExpanded));
         mobileMenu.classList.toggle('isVisible');
       });
     };
@@ -609,14 +609,7 @@ describe('main.js - Mobile Menu Integration Tests', () => {
     const mobileMenu = document.querySelector('.site-nav ul');
 
     // Mock the addEventListener method to capture the callback
-    const originalAddEventListener = menuToggle.addEventListener;
-    let clickHandler;
-
-    menuToggle.addEventListener = jest.fn((event, handler) => {
-      if (event === 'click') {
-        clickHandler = handler;
-      }
-    });
+    menuToggle.addEventListener = jest.fn();
 
     // Simulate the complete toggleMobileMenu function
     const toggleMobileMenu = () => {
@@ -630,7 +623,7 @@ describe('main.js - Mobile Menu Integration Tests', () => {
 
       menuToggle.addEventListener('click', () => {
         const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-        menuToggle.setAttribute('aria-expanded', !isExpanded);
+        menuToggle.setAttribute('aria-expanded', String(!isExpanded));
         mobileMenu.classList.toggle('isVisible');
       });
     };
