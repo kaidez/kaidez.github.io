@@ -39,7 +39,7 @@ MP3s were digital files containing individual songs. They were relatively small 
 
 People were installing high-speed internet in homes by then — DSL, cable, and the like. So downloading multiple 3-4 MB music files was suddenly easy. The article predicted that all this would crater the music industry.
 
-Now, I was already familiar with MP3s at this point. I'd been tinkering on the internet and knew people were sharing them via email and newsgroups.
+Now, I was already familiar with MP3s at this point. I'd been tinkering on the internet and knew people were sharing them via email, ftp and newsgroups.
 
 But to know this required knowing how to navigate the internet underground. The <i>Vibe</i> article was one of the first discussions of MP3s outside of this underground and inside pop culture.
 
@@ -53,7 +53,9 @@ So I bought a Gateway computer and a bunch of <a href="https://www.peachpit.com/
 
 In the middle of all this studying, a team of coders led by <a href="https://en.wikipedia.org/wiki/Shawn_Fanning" title="Shawn Fanning - Wikipedia" aria-label="Learn about Shawn Fanning on Wikipedia" rel="noopener noreferrer">Shawn Fanning</a> built and released Napster. It was software that let users share MP3s with other Napster users over the internet.
 
-Napster pushed MP3 downloading to critical mass. Hundreds of thousands of people worldwide shared music for free. Then the recording industry sued Napster, generating a ton of free publicity for the company as a result. Hundreds of thousands of people quickly turned into millions.
+Napster pushed MP3 downloading to critical mass. Hundreds of thousands of people worldwide shared music for free.
+
+Then the recording industry sued Napster, generating a ton of free publicity for the company as a result. Hundreds of thousands of people quickly turned into millions.
 
 The recording industry would win in court and Napster would eventually shut down. But the damage to the industry was already done.
 
@@ -63,7 +65,7 @@ As a result, the industry lost thousands of traditional jobs, especially in sale
 
 But many who lost their jobs left the music business altogether. I stayed in the business for four years after Napster shut down, taking on all the freelance web design work I could.
 
-After that, I got a web design job at Revlon Cosmetics. And my career progressed from there.
+After building a strong resume of freelance work, I got a web design job at Revlon Cosmetics. And my career progressed from there.
 
 <i>(Side note: Joseph Menn's book, <a href="https://www.amazon.com/All-Rave-Shawn-Fannings-Napster/dp/0609610937" title="All the Rave: The Rise and Fall of Shawn Fanning's Napster - Amazon" aria-label="Buy All the Rave: The Rise and Fall of Shawn Fanning's Napster on Amazon" rel="noopener noreferrer">All the Rave: The Rise and Fall of Shawn Fanning's Napster</a> is a fascinating recap of Napster's history. <a href="/books-dotcom-rush/" title="Kai Gittens reviews All the Rave" aria-label="Read Kai Gittens' review of All the Rave">Read my review</a>.)</i>
 
@@ -79,9 +81,9 @@ Instead, I'm choosing to adapt to AI. I believe the best way to adapt is <b>unde
 
 To adapt like this, first, a solid understanding of the application's requirements is a must. A project with solid, written-down requirements should be completed before an LLM receives a single prompt.
 
-Second, flat-out vibe coding — building an app with a handful of prompts — can only get you so far. Understanding the software powering your app is still essential, at least in the short-term. Using an LLM to build a React app doesn't replace knowing React. The same goes for AWS.
+Second, flat-out vibe coding — building an app with a handful of prompts — can only get you so far. Knowing what's under the hood still matters. Using an LLM to build a React app doesn't replace knowing React.
 
-You still need to know those tools, as well as continuous integration (CI), GitHub hooks, Jenkins Jobs, Docker instances, etc. I also believe that implementing the <a href="https://agentskills.io/home" title="Agent Skills Open Format" aria-label="Learn about the Agent Skills Open Standard" rel="noopener noreferrer">Agent Skills Open Standard</a> into AI-built apps is a must-do.
+You still need to understand things like React, as well as continuous integration (CI), GitHub hooks, Jenkins Jobs, etc. I also believe that implementing the <a href="https://agentskills.io/home" title="Agent Skills Open Standard" aria-label="Learn about the Agent Skills Open Standard" rel="noopener noreferrer">Agent Skills Open Standard</a> into AI-built apps is a must-do.
 
 I think Alex Maccaw's <a href="https://blog.alexmaccaw.com/how-to-vibe-code-as-a-senior-engineer/" title="How to Vibe Code as a Senior Engineer - Alex Maccaw" aria-label="Read Alex Maccaw's blog post on vibe coding as a senior engineer" rel="noopener noreferrer">"vibe coding" blog post</a> captures both points well:
 
@@ -97,9 +99,9 @@ Even if people think implementing AI in software development is ineffective, it'
 
 One of the major AI complaints I see on LinkedIn is that it generates buggy code. It also has a bad reputation for handling types in Typescript.
 
-Issues like this are well-known and LLM companies tend to fix these issues real quick. Plus, a patient, seasoned developer will be able to address them by either fixing it themselves or pointing the LLM in the right direction.
+Issues like this are well-known and LLM companies tend to fix them quickly. Plus, a seasoned developer can step in — either fixing it themselves or redirecting the LLM.
 
-AI has also received its share of bad press. In the few days prior to this post's publish date, <a href="https://techcrunch.com/2026/03/02/anthropics-claude-reports-widespread-outage/" title="Anthropic Claude outage report - TechCrunch" aria-label="Read about Anthropic's Claude outage on TechCrunch" rel="noopener noreferrer">Anthropic experienced an outage that affected its Claude tool</a>. Also, <a href="https://www.reuters.com/sustainability/society-equity/defense-contractors-like-lockheed-seen-removing-anthropics-ai-after-trump-ban-2026-03-04/" title="Federal ban on Claude AI - Reuters" aria-label="Read about the federal ban on Claude AI on Reuters" rel="noopener noreferrer">Donald Trump announced a federal agency-wide ban on the use of Claude</a> due to a dispute about its usage in the military.
+AI has also received its share of bad press. In the few days prior to this post's publish date, <a href="https://techcrunch.com/2026/03/02/anthropics-claude-reports-widespread-outage/" title="Anthropic Claude outage report - TechCrunch" aria-label="Read about Anthropic's Claude outage on TechCrunch" rel="noopener noreferrer">Anthropic experienced an outage that affected its Claude tool</a>. Also, <a href="https://www.reuters.com/sustainability/society-equity/defense-contractors-like-lockheed-seen-removing-anthropics-ai-after-trump-ban-2026-03-04/" title="Federal ban on Claude AI - Reuters" aria-label="Read about the federal ban on Claude AI on Reuters" rel="noopener noreferrer">Donald Trump announced a federal ban on Claude</a> — citing a dispute over its use in the military.
 
 I saw a lot of bad press about Claude over those days. I didn't see any stories about people stopping to use it as a result.
 
@@ -107,9 +109,9 @@ The negative posts, the outages, the bans — none of it will stop AI.
 
 <h2>Conclusion</h2>
 
-My "Plan B" moment, buying a computer and teaching myself web design, was me doing what I had to do. I wasn't thrilled about possibly leaving music — but I also wasn't thrilled about not being able to pay the bills.
+My "Plan B" moment, buying a computer and teaching myself web design, was the right call. Leaving music wasn't what I wanted. But not paying the bills wasn't an option either.
 
-The seismic shift that Generative AI has placed on software developers is similar to what happened to the music business and Napster. That business didn't disappear, but it was forced to do a hard reset of itself.
+Generative AI has brought a seismic shift to software development — just like Napster did to music. That business didn't disappear, but it was forced to do a hard reset of itself.
 
 That hard reset included people leaving the business altogether, including me. I'm not leaving this time and I don't want experienced developers to do the same thing.
 
