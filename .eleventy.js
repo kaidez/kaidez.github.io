@@ -4,7 +4,7 @@ const htmlmin = require("html-minifier");
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
-const relatedPostsPlugin = require("./src/config/plugins/relatedPosts");
+const relatedPostsPlugin = require("./src/assets/js/relatedPosts");
 const readingTime = require('eleventy-plugin-reading-time');
 
 module.exports = function (eleventyConfig) {

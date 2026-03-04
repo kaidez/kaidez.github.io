@@ -1,5 +1,19 @@
-module.exports = function(eleventyConfig) {
-  eleventyConfig.addNunjucksGlobal("relatedPosts", function(currentCategory, currentUrl, allPosts, count = 3) {
+type EleventyConfig = {
+  addNunjucksGlobal: (name: string, fn: (currentCategory: string | null | undefined, currentUrl: string, allPosts: Post[], count?: number) => string) => void;
+};
+
+// Create a Post TS type for better type safety
+type Post = {
+  url: string;
+  data: {
+    category: string | null | undefined;
+    secondary_tags: string[] | undefined;
+    title: string;
+  };
+};
+
+module.exports = (eleventyConfig: EleventyConfig) => {
+  eleventyConfig.addNunjucksGlobal("relatedPosts", function (currentCategory, currentUrl, allPosts, count = 3) {
     // Simple validation - allow empty string but not null/undefined
     if (currentCategory === null || currentCategory === undefined || !currentUrl || !allPosts) {
       return '';
