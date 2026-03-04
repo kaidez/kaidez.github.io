@@ -20,7 +20,7 @@ The posts and comments are both negative and positive, and the negative ones sha
 
 Being unemployed, you'd think I'd be worried. But I worked in the music business before I wrote code, and that industry went through a similar disruption.
 
-That disruption was digital music downloading — particularly, <a href="https://www.britannica.com/topic/Napster" title="Napster - Britannica Encyclopedia" aria-label="Learn about Napster on Britannica" rel="noopener noreferrer">Napster</a>. As noted in <a href="/downloaded-movie-review/" title="Kai Gittens reviews the Napster documentary" aria-label="Read Kai Gittens' review of the Napster documentary">my Napster documentary review</a>, Napster was the first time the new internet business models directly challenged the traditional, non-internet ones.
+That disruption was digital music downloading — particularly, <a href="https://www.britannica.com/topic/Napster" title="Napster - Britannica Encyclopedia" aria-label="Learn about Napster on Britannica" rel="noopener noreferrer">Napster</a>. As noted in <a href="/downloaded-movie-review/" title="Kai Gittens reviews the Napster documentary" aria-label="Read Kai Gittens' review of the Napster documentary">my Napster documentary review</a>, Napster was the first time the new internet business models directly challenged the traditional brick-and-mortar ones.
 
 While Napster didn't destroy the music business altogether, it forced the industry to change. That experience has taught me that developers need to adapt to an AI-driven world.
 
@@ -38,7 +38,7 @@ One day, when I was still working at Strictly, I bought a copy of <i>Vibe</i> Ma
 
 MP3s were digital files containing individual songs. They were relatively small in size — 3-4 MB at most.
 
-By then, customers were buying high-speed internet at home — DSL, cable, and the like. Downloading multiple music files was suddenly easy. The article predicted that all of this would crater the music industry.
+By then, customers were installing high-speed internet in homes — DSL, cable, and the like. So downloading multiple 3-4 MB music files was suddenly easy. The article predicted that all this would crater the music industry.
 
 Now, I was already familiar with MP3s at this point. I'd been tinkering on the internet and knew people were sharing them via email and newsgroups.
 
@@ -66,11 +66,11 @@ But many who lost their jobs left the music business altogether. I stayed in the
 
 After that, I got a web design job at Revlon Cosmetics. And my career progressed from there.
 
-<i>Side note: Joseph Menn's book, <a href="https://www.amazon.com/All-Rave-Shawn-Fannings-Napster/dp/0609610937" title="All the Rave: The Rise and Fall of Shawn Fanning's Napster - Amazon" aria-label="Buy All the Rave: The Rise and Fall of Shawn Fanning's Napster on Amazon" rel="noopener noreferrer">All the Rave: The Rise and Fall of Shawn Fanning's Napster</a> is a fascinating recap of Napster's history. <a href="/books-dotcom-rush/" title="Kai Gittens reviews All the Rave" aria-label="Read Kai Gittens' review of All the Rave">Read my review</a>.</i>
+<i>(Side note: Joseph Menn's book, <a href="https://www.amazon.com/All-Rave-Shawn-Fannings-Napster/dp/0609610937" title="All the Rave: The Rise and Fall of Shawn Fanning's Napster - Amazon" aria-label="Buy All the Rave: The Rise and Fall of Shawn Fanning's Napster on Amazon" rel="noopener noreferrer">All the Rave: The Rise and Fall of Shawn Fanning's Napster</a> is a fascinating recap of Napster's history. <a href="/books-dotcom-rush/" title="Kai Gittens reviews All the Rave" aria-label="Read Kai Gittens' review of All the Rave">Read my review</a>.)</i>
 
 <h2>Adapting</h2>
 
-Many music business employees complained that Napster was destroying their careers (ironic considering how many of them were using Napster themselves). But despite this and the very valid legal issues, the fact remains that Napster succeeded because it gave consumers <em>EXACTLY</em> what they wanted.
+Many music business employees complained that Napster was destroying their careers (ironic considering how many of them were using Napster themselves). But the fact remains: Napster succeeded because it gave consumers <em>EXACTLY</em> what they wanted.
 
 AI is providing consumers the exact same thing. Businesses, developers of all skill levels, family members...they all want to use AI in their daily lives.
 
@@ -78,13 +78,13 @@ Looking back at my time in the music business, I accept that adapting to change 
 
 Instead, I'm choosing to adapt to AI. I believe the best way to adapt is understanding <em>AI's role in system design</em>.
 
-To adapt like this, I believe a solid understanding of the application's requirements still comes first. A project with solid, written-down requirements should be completed before an LLM receives a single prompt.
+To adapt like this, I first believe a solid understanding of the application's requirements still. A project with solid, written-down requirements should be completed before an LLM receives a single prompt.
 
-Second, understanding the software powering your app is still essential, at least in the short-term. Prompting an LLM to generate a React app wired to AWS does NOT mean you can skip learning React or AWS.
+Second, flat-out vibe coding — building an app with a handful of prompts — can only get you so far. Understanding the software powering your app is still essential, at least in the short-term. Prompting an LLM to generate a React app wired to AWS does NOT mean you can skip learning React or AWS.
 
-You still need to know those tools, as well as continuous integration (CI), GitHub hooks, Jenkins Jobs, Docker instances, etc. I also believe that implementing the <a href="https://agentskills.io/home" title="Agent Skills Open Format"  rel="noopener noreferrer">Agent Skills Open Standard</a> into AI-built apps is a must-do.
+You still need to know those tools, as well as continuous integration (CI), GitHub hooks, Jenkins Jobs, Docker instances, etc. I also believe that implementing the <a href="https://agentskills.io/home" title="Agent Skills Open Format" aria-label="Learn about the Agent Skills Open Standard" rel="noopener noreferrer">Agent Skills Open Standard</a> into AI-built apps is a must-do.
 
-I think Alex Maccaw summed up this point nicely in his <a href="https://blog.alexmaccaw.com/how-to-vibe-code-as-a-senior-engineer/" title="How to Vibe Code as a Senior Engineer - Alex Maccaw" aria-label="Read Alex Maccaw's blog post on vibe coding as a senior engineer" rel="noopener noreferrer">"vibe coding" blog post</a>:
+I think Alex Maccaw's <a href="https://blog.alexmaccaw.com/how-to-vibe-code-as-a-senior-engineer/" title="How to Vibe Code as a Senior Engineer - Alex Maccaw" aria-label="Read Alex Maccaw's blog post on vibe coding as a senior engineer" rel="noopener noreferrer">"vibe coding" blog post</a> captures both points well — knowing your requirements and knowing your tools:
 
 <blockquote>
   <p>
