@@ -63,7 +63,7 @@ People would find other ways to download music for free and get stealthier about
 
 As a result, the industry lost thousands of traditional jobs, especially in sales. The industry would rebuild itself around things like iTunes, Spotify, and a new licensing structure.
 
-But many who lost their jobs left the music business altogether. I stayed four more years, building a freelance web design portfolio on the side.
+But many who lost their jobs left the music business altogether. I stayed four more years, still doing freelance web design work on the side and building a portfolio.
 
 That portfolio was eventually strong enough to land me a web design job at Revlon Cosmetics. And my career progressed from there.
 
