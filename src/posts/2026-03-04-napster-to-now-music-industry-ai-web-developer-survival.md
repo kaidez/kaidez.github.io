@@ -54,7 +54,7 @@ So I bought a Gateway computer and a bunch of <a href="https://www.peachpit.com/
 
 In the middle of all this studying, a team of coders led by <a href="https://en.wikipedia.org/wiki/Shawn_Fanning" title="Shawn Fanning - Wikipedia" aria-label="Learn about Shawn Fanning on Wikipedia" rel="noopener noreferrer">Shawn Fanning</a> built and released Napster. It was software that let users share MP3s with other Napster users over the internet.
 
-Napster pushed MP3 downloading to critical mass. Hundreds of thousands of people worldwide shared music for free. Then the recording industry sued Naspter, generating a ton of free publicity for the company as a result. Hundreds of thousands of people quickly turned into millions.
+Napster pushed MP3 downloading to critical mass. Hundreds of thousands of people worldwide shared music for free. Then the recording industry sued Napster, generating a ton of free publicity for the company as a result. Hundreds of thousands of people quickly turned into millions.
 
 The recording industry would win in court and Napster would eventually shut down. But the damage to the industry was already done.
 
@@ -78,13 +78,13 @@ Looking back at my time in the music business, I accept that adapting to change 
 
 Instead, I'm choosing to adapt to AI. I believe the best way to adapt is <b>understanding AI's role in system design</b>.
 
-To adapt like this, first,  a solid understanding of the application's requirements is a must. A project with solid, written-down requirements should be completed before an LLM receives a single prompt.
+To adapt like this, first, a solid understanding of the application's requirements is a must. A project with solid, written-down requirements should be completed before an LLM receives a single prompt.
 
 Second, flat-out vibe coding — building an app with a handful of prompts — can only get you so far. Understanding the software powering your app is still essential, at least in the short-term. Prompting an LLM to generate a React app wired to AWS does NOT mean you can skip learning React or AWS.
 
 You still need to know those tools, as well as continuous integration (CI), GitHub hooks, Jenkins Jobs, Docker instances, etc. I also believe that implementing the <a href="https://agentskills.io/home" title="Agent Skills Open Format" aria-label="Learn about the Agent Skills Open Standard" rel="noopener noreferrer">Agent Skills Open Standard</a> into AI-built apps is a must-do.
 
-I think Alex Maccaw's <a href="https://blog.alexmaccaw.com/how-to-vibe-code-as-a-senior-engineer/" title="How to Vibe Code as a Senior Engineer - Alex Maccaw" aria-label="Read Alex Maccaw's blog post on vibe coding as a senior engineer" rel="noopener noreferrer">"vibe coding" blog post</a> captures both points well — knowing your requirements and knowing your tools:
+I think Alex Maccaw's <a href="https://blog.alexmaccaw.com/how-to-vibe-code-as-a-senior-engineer/" title="How to Vibe Code as a Senior Engineer - Alex Maccaw" aria-label="Read Alex Maccaw's blog post on vibe coding as a senior engineer" rel="noopener noreferrer">"vibe coding" blog post</a> captures both points well:
 
 <blockquote>
   <p>
@@ -92,8 +92,30 @@ I think Alex Maccaw's <a href="https://blog.alexmaccaw.com/how-to-vibe-code-as-a
   </p>
 </blockquote>
 
-My previous employer asked its employees to research automating tasks with AI. Using it to automatically pull data from emails and laying it out in spreadsheets and then sharing it in group chats...things like that.
+<h2>Pessimism Will Get Us Nowhere</h2>
+
+Even if people think implementing AI in software development is ineffective, it's here to stay.
+
+One of the major AI complaints I see on LinkedIn is that it generates buggy code. It also has a bad reputation for handling types in Typescript.
+
+Issues like this are well-known and LLM companies tend to fix these issues real quick. Plus, a patient, seasoned developer will be able to address them by either fixing it themselves or pointing the LLM in the right direction.
+
+AI has also received its share of bad press. In the few days prior to this post's publish date, <a href="https://techcrunch.com/2026/03/02/anthropics-claude-reports-widespread-outage/" title="Anthropic Claude outage report - TechCrunch" aria-label="Read about Anthropic's Claude outage on TechCrunch" rel="noopener noreferrer">Anthropic experienced an outage that affected its Claude tool</a>. Also, <a href="https://www.reuters.com/sustainability/society-equity/defense-contractors-like-lockheed-seen-removing-anthropics-ai-after-trump-ban-2026-03-04/" title="Federal ban on Claude AI - Reuters" aria-label="Read about the federal ban on Claude AI on Reuters" rel="noopener noreferrer">Donald Trump announced a federal agency-wide ban on the use of Claude</a> due to a dispute about its usage in the military.
+
+I saw a lot of bad press about Claude over those days. I didn't see any stories about people stopping to use it as a result.
+
+Regardless of pessimistic posts and comments on LinkedIn and any negative publicity that pops up, AI is here to stay in one form or another.
 
 <h2>Conclusion</h2>
 
-Regarding those negative posts and comments I saw on LinkedIn, I did see just as many positive ones. But my music business experience has made the negative ones stick out.
+My "Plan B" moment, buying a computer and teaching myself web design, was me doing what I had to do. I wasn't thrilled about possibly leaving music — but I also wasn't thrilled about not being able to pay the bills.
+
+The seismic shift that Generative AI has placed on software developers is similar to what happened to the music business and Napster. That business didn't disappear, but it was forced to do a hard reset of itself.
+
+That hard reset included people leaving the business altogether, including me. I'm not leaving this time and I don't want to experienced developers do the same thing.
+
+AI has opened a new world to our developer community. We can build a lot of really complex stuff really, really fast.
+
+We have a world of creativity at our fingertips...we just need to embrace it.
+
+At least, that's what I'm doing. Because I have no choice.
