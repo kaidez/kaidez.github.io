@@ -47,7 +47,7 @@ Truthfully, I didn't really think much about the <i>Vibe</i> article — I viewe
 
 At that point, I thought the music business really <em>was</em> in trouble. I knew I needed a "Plan B": a plan for if the music business suddenly disappeared.
 
-So I bought a $2000 Gateway computer and a bunch of <a href="https://www.peachpit.com/" title="Peachpit Press - web design and development books" aria-label="Visit Peachpit Press, publisher of web design and development books" rel="noopener noreferrer">Peachpit Press</a> books. I taught myself web design and development, and grabbed as many freelance jobs as I could.
+So I bought a $2,000 Gateway computer and a bunch of <a href="https://www.peachpit.com/" title="Peachpit Press - web design and development books" aria-label="Visit Peachpit Press, publisher of web design and development books" rel="noopener noreferrer">Peachpit Press</a> books. I taught myself web design and development, and grabbed as many freelance jobs as I could.
 
 <h2>Napster Shows Up</h2>
 
