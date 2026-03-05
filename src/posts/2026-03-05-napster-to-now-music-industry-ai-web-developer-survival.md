@@ -55,17 +55,17 @@ In the middle of all this studying, a team of coders led by <a href="https://en.
 
 Napster pushed MP3 downloading to critical mass. Hundreds of thousands of people worldwide shared music for free.
 
-Then the recording industry sued Napster, generating a ton of free publicity for the company. And as a result, that group of hundreds of thousands of people grew to millions seemingly overnight.
+Then the recording industry sued Napster, generating a ton of free publicity for the company. As a result, that group of hundreds of thousands of people grew to millions seemingly overnight.
 
-The recording industry would win in court and Napster would eventually shut down. But the damage to the industry was already done.
+The recording industry would eventually win in court and Napster would be forced to shut down. But the damage to the industry was already done.
 
-People would find other ways to download music for free and get stealthier about it. A global recession — driven in part by the <a href="https://en.wikipedia.org/wiki/Dot-com_bubble" title="Dot-com bubble - Wikipedia" aria-label="Learn about the dot-com bubble and crash on Wikipedia" rel="noopener noreferrer">dot-com crash</a> and 9/11 — made things worse. People simply didn't want to pay for music anymore.
+People would find other ways to download music for free and get stealthier about it. A recession — driven in part by the <a href="https://en.wikipedia.org/wiki/Dot-com_bubble" title="Dot-com bubble - Wikipedia" aria-label="Learn about the dot-com bubble and crash on Wikipedia" rel="noopener noreferrer">dot-com crash</a> and the 9/11 tragedy— made things worse. People simply didn't want to pay for music anymore.
 
 As a result, the industry lost thousands of traditional jobs, especially in sales. The industry would rebuild itself around things like iTunes, Spotify, and a new licensing structure.
 
-But many who lost their jobs left the music business altogether.  Many simply quit — frustrated by watching people refuse to pay for music.
+But many who lost their jobs left the music business altogether. Many simply quit — frustrated by watching people refuse to pay for music.
 
-I remember a colleague emailing to say he was leaving his senior music role at a well-established company. When I called him to ask why, his simple answer was, <em>I'm done competing with free!!</em>
+I remember a colleague emailing to say he was leaving his senior music role at a well-established company. When I called him to ask why, his simple answer was, <em>"I'm done competing with free!!"</em>
 
 I stayed four more years, still doing freelance web design work on the side and building a portfolio. That portfolio was eventually strong enough to land me a web design job at Revlon Cosmetics. And my career progressed from there.
 
@@ -83,9 +83,9 @@ Instead, I'm choosing to adapt to AI. I believe the best way to adapt is <b>unde
 
 To adapt like this, first, a solid understanding of the application's requirements is a must. A project with solid, written-down requirements should be completed before an LLM receives a single prompt.
 
-Second, flat-out vibe coding — building an app with a handful of prompts — can only get you so far. Knowing what's under the hood still matters. Using an LLM to build a React app doesn't replace knowing React.
+Second, flat-out vibe coding — building an app with a handful of prompts — can only get you so far. Knowing what's under the hood still matters. Using an LLM to build a React app doesn't replace knowing React..
 
-You still need to understand things like React, as well as continuous integration (CI), GitHub hooks, Jenkins Jobs, etc. I also believe that implementing the <a href="https://agentskills.io/home" title="Agent Skills Open Standard" aria-label="Learn about the Agent Skills Open Standard" rel="noopener noreferrer">Agent Skills Open Standard</a> into AI-built apps is a must-do.
+You still need to understand it, as well as continuous integration (CI), GitHub hooks, Jenkins Jobs, etc. I also believe that implementing the <a href="https://agentskills.io/home" title="Agent Skills Open Standard" aria-label="Learn about the Agent Skills Open Standard" rel="noopener noreferrer">Agent Skills Open Standard</a> into AI-built apps is a must-do.
 
 I think Alex Maccaw's <a href="https://blog.alexmaccaw.com/how-to-vibe-code-as-a-senior-engineer/" title="How to Vibe Code as a Senior Engineer - Alex Maccaw" aria-label="Read Alex Maccaw's blog post on vibe coding as a senior engineer" rel="noopener noreferrer">"vibe coding" blog post</a> captures both points well:
 
