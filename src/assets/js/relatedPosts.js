@@ -1,51 +1,33 @@
-
-async function getPostData(url) {
-  const response = await fetch(url);
-  return response.json();
-}
-
-// Wrap the async code in an IIFE to handle the await properly
-(async () => {
-  try {
-    const data = await getPostData('/api/posts.json');
-    const pageCategory = await window.pageData.category;
-    const postsByCategory = data.filter(post => post.category.toLowerCase() === pageCategory.toLowerCase());
-    const filterByLegacyTag = postsByCategory.filter(post => !post.secondary_tags.includes('legacy'));
-
-    // Use the appropriate array based on availability
-    const postsToUse = filterByLegacyTag.length >= 3 ? filterByLegacyTag : postsByCategory;
-    const randomIndexes = getRandomIndexes(postsToUse);
-
-    const relatedPostsContainer = document.querySelector('.related-posts ul');
-
-    // Build HTML string first, then insert once
-    const htmlString = randomIndexes
-      .map(index => `<li><a href="${postsToUse[index].url}">${postsToUse[index].title}</a></li>`)
-      .join('');
-
-    relatedPostsContainer.insertAdjacentHTML("beforeend", htmlString);
-
-  } catch (error) {
-    console.error('Error fetching data:', error);
-  }
-})();
-
-
-function getRandomIndexes(arr, count = 3) {
-
-  if (count > arr.length || count < 0) {
-    throw new Error("Count must be between 0 and the array's length.");
-  }
-
-  // Create an array of indexes
-  const indexes = Array.from({ length: arr.length }, (_, i) => i);
-
-  // Fisher-Yates (Knuth) Shuffle
-  for (let i = indexes.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [indexes[i], indexes[j]] = [indexes[j], indexes[i]]; // Swap elements
-  }
-
-  // Return the first 'count' indexes
-  return indexes.slice(0, count);
-}
+"use strict";
+module.exports = (eleventyConfig) => {
+    eleventyConfig.addNunjucksGlobal("relatedPosts", function (currentCategory, currentUrl, allPosts, count = 3) {
+        // Simple validation - allow empty string but not null/undefined
+        if (currentCategory === null || currentCategory === undefined || !currentUrl || !allPosts) {
+            return '';
+        }
+        const categoryLower = String(currentCategory).toLowerCase();
+        // Filter posts by same category, excluding current post
+        const postsByCategory = allPosts.filter(post => post.data.category !== undefined &&
+            post.data.category !== null &&
+            String(post.data.category).toLowerCase() === categoryLower &&
+            post.url !== currentUrl);
+        // Filter out legacy posts if we have enough non-legacy posts
+        const nonLegacyPosts = postsByCategory.filter(post => !post.data.secondary_tags ||
+            !Array.isArray(post.data.secondary_tags) ||
+            !post.data.secondary_tags.includes('legacy'));
+        // Use non-legacy posts if we have enough, otherwise fall back to all posts in category
+        const postsToUse = nonLegacyPosts.length >= count ? nonLegacyPosts : postsByCategory;
+        // If we don't have enough posts, return empty
+        if (postsToUse.length === 0) {
+            return '';
+        }
+        // Shuffle and select random posts
+        const shuffled = [...postsToUse].sort(() => Math.random() - 0.5);
+        const selectedPosts = shuffled.slice(0, Math.min(count, shuffled.length));
+        // Generate HTML
+        const listItems = selectedPosts
+            .map(post => `<li><a href="${post.url}">${post.data.title}</a></li>`)
+            .join('');
+        return listItems;
+    });
+};

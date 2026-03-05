@@ -3,7 +3,7 @@
  * Tests the build-time related posts generation functionality
  */
 
-const relatedPostsPlugin = require('../src/config/plugins/relatedPosts');
+const relatedPostsPlugin = require('../src/assets/js/relatedPosts');
 
 describe('Related Posts Eleventy Plugin', () => {
   let mockEleventyConfig;

@@ -1,6 +1,6 @@
 ---
 title: 'TUTORIAL: A Simple, Effective jQuery Image Rollover'
-date: 2010-01-12
+date: 2011-01-12
 excerpt: A very popular, cross-browser complaint jQuery image rollover
 layout: layouts/post.njk
 permalink: /tutorial-simple-effective-jquery-image-rollover/
