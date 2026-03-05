@@ -7,7 +7,7 @@ permalink: /requirejs-wordpress/
 image: require-wordpress.jpg
 tags: [coding-best-practices]
 secondary_tags: ["wordpress", "javascript", "css", "jquery"]
-category: Reviews
+category: Coding Best Practices
 ---
 As mentioned in [my 2013 site redesign post](/site-redesign-2013/ "A walk-through of how kaidez.com was redesigned"), I started redesigning this site on top of [WordPress](http://wordpress.org/ "Go to WordPress.org") but eventually switched over to [Jekyll](http://jekyllrb.com/ "Go to the Jekyll blog engine site"). This was because my goal was to use [RequireJS](http://requirejs.org/ "Go to requirejs.org") to control all the site's JavaScript in a specific way, and WordPress kept me from doing this.
 
