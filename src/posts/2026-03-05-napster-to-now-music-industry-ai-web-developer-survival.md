@@ -21,7 +21,7 @@ Being unemployed, you'd think I'd be worried. But I worked in the music business
 
 That disruption was digital music downloading — particularly, <a href="https://www.britannica.com/topic/Napster" title="Napster - Britannica Encyclopedia" aria-label="Learn about Napster on Britannica" rel="noopener noreferrer">Napster</a>. As noted in <a href="/downloaded-movie-review/" title="Kai Gittens reviews the Napster documentary" aria-label="Read Kai Gittens' review of the Napster documentary">my Napster documentary review</a>, Napster was the first time the new internet business models directly challenged the traditional brick-and-mortar ones.
 
-While Napster didn't destroy the music business altogether, it forced the industry to change. That experience has taught me that developers need to adapt to an AI-driven world.
+While Napster didn't destroy the music business altogether, it forced the industry to change. That experience has taught me that <strong>developers need to adapt to an AI-driven world</strong>.
 
 <h2>Back When I Was In The Music Business</h2>
 
@@ -29,7 +29,7 @@ I worked in the music business for 15 years, beginning with internships and mail
 
 Record stores were basically my second home ever since I was ten years old, so I <em>really</em> loved that job. With that affinity for retail, I eventually moved into sales jobs at various record labels. I did some marketing on the side, but mostly sales.
 
-I worked at some pretty cool companies over the years: Concrete, Caroline, K-Tel, Putumayo, Giant Step, Jive. I also worked at Strictly Rhythm, the world-renowned dance label — my first office job in the music business.
+I worked and interned at some pretty cool companies over the years: Concrete, Caroline, K-Tel, Putumayo, Giant Step, Jive. I also worked at Strictly Rhythm, the world-renowned dance label — my first office job in the music business.
 
 <h2>When I Noticed Things Starting To Change</h2>
 
@@ -37,7 +37,7 @@ One day, when I was still working at Strictly, I bought a copy of <i>Vibe</i> Ma
 
 MP3s were digital files containing individual songs. They were relatively small in size — 3-4 MB at most.
 
-People were installing high-speed internet in homes by then — DSL, cable, and the like. So downloading multiple 3-4 MB music files was suddenly easy. The article predicted that all this would crater the music industry.
+People were installing high-speed internet in homes by then — DSL, cable, and the like. So downloading multiple 3-4 MB music files was suddenly easy. The article claimed that all this could potentially crater the music industry.
 
 Now, I was already familiar with MP3s at this point. I'd been tinkering on the internet and knew people were sharing them via email, ftp and newsgroups.
 
@@ -55,7 +55,7 @@ In the middle of all this studying, a team of coders led by <a href="https://en.
 
 Napster pushed MP3 downloading to critical mass. Hundreds of thousands of people worldwide shared music for free.
 
-Then the recording industry sued Napster, generating a ton of free publicity for the company as a result. Hundreds of thousands of people quickly turned into millions.
+Then the recording industry sued Napster, generating a ton of free publicity for the company as a result. That group of hundreds of thousands of people grew to millions seemingly overnight.
 
 The recording industry would win in court and Napster would eventually shut down. But the damage to the industry was already done.
 
@@ -63,9 +63,11 @@ People would find other ways to download music for free and get stealthier about
 
 As a result, the industry lost thousands of traditional jobs, especially in sales. The industry would rebuild itself around things like iTunes, Spotify, and a new licensing structure.
 
-But many who lost their jobs left the music business altogether. I stayed four more years, still doing freelance web design work on the side and building a portfolio.
+But many who lost their jobs left the music business altogether.  Many simply quit — frustrated by watching people refuse to pay for music.
 
-That portfolio was eventually strong enough to land me a web design job at Revlon Cosmetics. And my career progressed from there.
+I remember a colleague emailing to say he was leaving his senior music role at a well-established company. When I called him to ask why, his simple answer was, <em>I'm done competing with free!!</em>
+
+I stayed four more years, still doing freelance web design work on the side and building a portfolio. That portfolio was eventually strong enough to land me a web design job at Revlon Cosmetics. And my career progressed from there.
 
 <i>(Side note: Joseph Menn's book, <a href="https://www.amazon.com/All-Rave-Shawn-Fannings-Napster/dp/0609610937" title="All the Rave: The Rise and Fall of Shawn Fanning's Napster - Amazon" aria-label="Buy All the Rave: The Rise and Fall of Shawn Fanning's Napster on Amazon" rel="noopener noreferrer">All the Rave: The Rise and Fall of Shawn Fanning's Napster</a> is a fascinating recap of Napster's history. <a href="/books-dotcom-rush/" title="Kai Gittens reviews All the Rave" aria-label="Read Kai Gittens' review of All the Rave">Read my review</a>.)</i>
 
