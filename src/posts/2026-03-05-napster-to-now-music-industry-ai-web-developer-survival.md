@@ -55,7 +55,7 @@ In the middle of all this studying, a team of coders led by <a href="https://en.
 
 Napster pushed MP3 downloading to critical mass. Hundreds of thousands of people worldwide shared music for free.
 
-Then the recording industry sued Napster, generating a ton of free publicity for the company as a result. That group of hundreds of thousands of people grew to millions seemingly overnight.
+Then the recording industry sued Napster, generating a ton of free publicity for the company. And as a result, that group of hundreds of thousands of people grew to millions seemingly overnight.
 
 The recording industry would win in court and Napster would eventually shut down. But the damage to the industry was already done.
 
