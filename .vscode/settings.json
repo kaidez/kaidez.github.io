@@ -1,0 +1,110 @@
+{
+  "cSpell.words": [
+    "Addy",
+    "agentic",
+    "allowscriptaccess",
+    "Almay",
+    "Ateş",
+    "bootcamps",
+    "Canarsie",
+    "cheerleading",
+    "cleancss",
+    "Coolsite",
+    "Coolsites",
+    "curently",
+    "currstyle",
+    "Dreamweaver",
+    "fontawesome",
+    "Futura",
+    "Geolocation",
+    "getattribute",
+    "Gittens",
+    "Joost",
+    "Jost",
+    "kaidez",
+    "Kethinov",
+    "llms",
+    "luxon",
+    "Maccaw",
+    "Maccaw's",
+    "mailroom",
+    "microdata",
+    "Modernizr",
+    "Modernizr's",
+    "Montclair",
+    "muvd",
+    "Niko",
+    "Octopress",
+    "Osmani",
+    "Packt",
+    "Peachpit",
+    "Pederick's",
+    "postslist",
+    "quasibit",
+    "Resig",
+    "rgba",
+    "Silverlight",
+    "Stefanov",
+    "Stoyan",
+    "syntaxhighlight",
+    "Tipue",
+    "tipuesearch",
+    "über",
+    "Valk",
+    "Vinylmania",
+    "Wayback",
+    "WCAG",
+    "webfonts",
+    "webmatrix",
+    "wmode",
+    "Yoast",
+    "yoursite"
+  ],
+  "cSpell.ignoreWords": [
+    "Glynn",
+    "Schwarz",
+    "aculo",
+    "someFileCommited"
+  ],
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.autoIndent": "full",
+  "[javascript]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false
+  },
+  "[typescript]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false
+  },
+  "[html]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.formatOnSave": false
+  },
+  "[css]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false
+  },
+  "[json]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false
+  },
+  "[yaml]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.autoIndent": "keep"
+  },
+  "files.associations": {
+    "*.njk": "html"
+  }
+}

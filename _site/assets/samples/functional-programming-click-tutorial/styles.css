@@ -1,0 +1,10 @@
+.post-link-hook {
+  width: 400px;
+  height: 72px;
+  margin-bottom: 20px;
+  padding:6px;
+
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+}
