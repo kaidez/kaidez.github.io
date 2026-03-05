@@ -37,7 +37,7 @@ One day, when I was still working at Strictly, I bought a copy of <i>Vibe</i> Ma
 
 MP3s were digital files containing individual songs. They were relatively small in size — 3-4 MB at most.
 
-People were installing high-speed internet in homes by then — DSL, cable, and the like. So downloading multiple 3-4 MB music files was suddenly easy. The article claimed that all this could potentially crater the music industry.
+People were installing high-speed internet in homes by then — DSL, cable, and the like. So downloading multiple 3-4 MB music files was suddenly easy. The article claimed that all this could eventually crater the music industry.
 
 Now, I was already familiar with MP3s at this point. I'd been tinkering on the internet and knew people were sharing them via email, ftp and newsgroups.
 
