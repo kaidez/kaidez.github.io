@@ -28,12 +28,18 @@ I'm assuming that you're familiar with the Generative AI landscape that's so pre
   <li>And most importantly: that, at some point, you will <a href="https://platform.claude.com/docs/en/home">read the Claude API documentation</a> if you haven't already.  Perhaps after you've read his post? &#128522;</li>
 </ol>
 
-<h2>Understanding What Claude Actually <i>Is</i></h2>
+<h2>Understanding How Claude<i>Actually</i> Works</i></h2>
 
 Most people know Claude as a powerful desktop AI app or a powerful CLI tool favored by coders/developers. But understanding how it works under the hood is important:
 
-At its core, Claude is powerful, stateless piece of prediction software. You send Claude text and, based on its training, it guesses a response and sends it back.
+At its core, Claude is a powerful, stateless piece of prediction software. You send Claude text and, based on its training, it guesses a response and sends it back.
 
 The word "stateless" is key here. Claude doesn't remember previous conversations...only the one it's having at that very moment.
 
 For every new prompt you send, the entire message history — your messages and Claude's responses — gets resent.  This is how Claude gets the conversation's context.
+
+<em>Side note: that message history obviously gets big. That's why Claude Code will prompt you to run `/compact`  from time-to-time. Also, <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching">Claude's API has a "prompt caching" feature</a> that you can pass to requests.  Doing both of these things can lower your Claude costs.</em>
+
+The word "guesses" is also fundamental. Claude predicts its answer, but it doesn't "think" the way humans do.
+
+Claude isn't reasoning through a response the way a human would. Instead, it pattern-matches on training data (a ton of human-written text) instead of engaging in conscious thinking.
