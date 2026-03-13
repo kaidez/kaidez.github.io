@@ -28,7 +28,7 @@ I'm assuming that you're familiar with the Generative AI landscape that's so pre
   <li>And most importantly: that, at some point, you will <a href="https://platform.claude.com/docs/en/home">read the Claude API documentation</a> if you haven't already.  Perhaps after you've read his post? &#128522;</li>
 </ol>
 
-<h2>Understanding How Claude<i>Actually</i> Works</i></h2>
+<h2>Understanding How Claude <i>Actually</i> Works</i></h2>
 
 Most people know Claude as a powerful desktop AI app or a powerful CLI tool favored by coders/developers. But understanding how it works under the hood is important:
 
