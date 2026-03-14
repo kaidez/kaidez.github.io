@@ -10,7 +10,7 @@ tags: ["coding-best-practices"]
 secondary_tags: ["claude", "ai", "typescript"]
 category: Coding Tips
 schema_type: "TechArticle"
-dependencies: "TypeScript, Zod, Claude API"
+dependencies: "TypeScript, Zod, Claude API, Python"
 proficiency_level: "Intermediate"
 ---
 I needed a firmer grasp on how Claude's API works, so I built four quick tools in Visual Studio Code. Alongside Claude and VS Code, I also used TypeScript (naturally), and Mocha for testing.
@@ -77,3 +77,5 @@ The first three tools I wrote were VS Code extensions that used the Messages API
   <li><b>Claude Prompt Reader:</b> Similar to the Save Selected Text extension except you don't select and right-click on the text. Instead, the VS Code extension launches from the Command Palette, sends the prompt to Claude, then displays the response.</li>
   <li><b>GitHub Triage Tracker:</b> Fetches the first 10 open issues from Microsoft's VS Code repo. Each issue is then sent to Claude through the Messages API, which classifies its severity, writes a plain-English summary, and suggests a next action for the maintainers.</li>
 </ol>
+
+The fourth project was building <a href="https://www.anthropic.com/news/model-context-protocol" title="Anthropic's Model Context Protocol" aria-label="Read about Anthropic's Model Context Protocol" rel="noopener noreferrer">Model Context Protocol connecters for Claude</a>: one in TypeScript and another in Python.
