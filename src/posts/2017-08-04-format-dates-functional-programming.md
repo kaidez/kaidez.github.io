@@ -6,7 +6,7 @@ layout: layouts/post.njk
 permalink: /format-dates-functional-programming/
 image: functional-programming-react.jpg
 tags: [coding-best-practices]
-secondary_tags: ["typescript", "javascript"]
+secondary_tags: ["javascript"]
 category: Coding Tips
 schema_type: "TechArticle"
 dependencies: "JavaScript, React, Functional Programming"
