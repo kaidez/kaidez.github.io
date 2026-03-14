@@ -15,7 +15,7 @@ proficiency_level: "Intermediate"
 ---
 I needed a firmer grasp on how Claude's API works, so I built four quick tools in Visual Studio Code. Alongside Claude and VS Code, I also used TypeScript (naturally), and Mocha for testing.
 
-As things progressed, I also gained an even firmer grasp of how all this relates to integration engineering. That may be the even <i>bigger</i> payoff!!!
+As things progressed, I also gained an even firmer grasp of proper approaches to system design and integration engineering. That may be the even <i>bigger</i> payoff!!!
 
 <h2>Assumptions</h2>
 
@@ -42,7 +42,7 @@ For every new prompt you send, the entire message history — your messages and 
 
 The word "guesses" is also key. Claude predicts its answer, but it doesn't "think about it" the way humans do.
 
-Claude isn't reasoning through a response the way a human would. Instead, it pattern-matches against training data (a ton of human-written text) rather than thinking consciously.
+Claude isn't thinking through an answer the way a human would. Instead, it pattern-matches against training data (a ton of human-written text) rather than do so consciously.
 
 So in this context, Claude is guessing how to respond to prompts it receives. That's different from "<a href="https://www.ibm.com/think/topics/predictive-ai" title="What is Predictive AI" aria-label="Read IBM's definition of Predictive AI" rel="noopener noreferrer">Predictive AI</a>", which estimates a fixed result — a number, a category, a yes/no — from past data.
 
