@@ -25,7 +25,7 @@ I assume that you're familiar with the Generative AI landscape that's so common 
   <li>That you have the <a href="https://claude.com/download" title="Claude Desktop App" aria-label="Download a Claude Desktop app" rel="noopener noreferrer">Claude Desktop</a> app (the $20USD/month kind of app at the bare minimum).</li>
   <li>That you have a Claude API key...if you don't have one, <a href="https://platform.claude.com/settings/keys" title="Claude API Key" aria-label="Get a Claude API key" rel="noopener noreferrer">get a Claude API key here</a>.</li>
   <li>That you're willing to pay for Claude API credits if needed.</li>
-  <li>And most importantly: that, at some point, you will <a href="https://platform.claude.com/docs/en/home" title="Claude API Documentation" aria-label="Read the Claude API documentation" rel="noopener noreferrer">read the Claude API documentation</a> if you haven't already.  Perhaps after you've read this post? &#128522;</li>
+  <li>And most importantly: that, at some point, you will <a href="https://platform.claude.com/docs/en/api/overview" title="Claude API Documentation" aria-label="Read the Claude API documentation" rel="noopener noreferrer">read the Claude API documentation</a> if you haven't already.  Perhaps after you've read this post? &#128522;</li>
 </ol>
 
 <h2>How Claude <i>Actually</i> Works</h2>
@@ -48,5 +48,22 @@ Claude doesn't predict a fixed outcome. Instead, it "generates" new content in r
 
 <h2>The Claude API</h2>
 
-So Claude has a brain with really good guessing capabilities. The Claude API allows you to pass those capabilities to your applications.
+So Claude has a brain with really good guessing capabilities. The Claude API lets you pass those capabilities to your applications.
 
+This API is a REST API built on the standard request/response pattern. An application sends a formatted request to a remote server. The server responds to the request by sending structured data back.
+
+At the time of this post's published date, the production-ready version of the Claude API is relatively small.  It has four operations:
+
+<ol>
+  <li><b>Messages:</b> lets the application send messages to Claude and receive responses as if they were having a conversation.</li>
+  <li><b>Messages Batches:</b> processes message requests asynchronously at a reduced cost.</li>
+  <li><b>Token Counting:</b> counts the amount of tokens in your request before sending it, helping you manage costs.</li>
+  <li><b>Models:</b> lets the application retrieve information about Claude's various models such as Sonnet and Haiku.</li>
+</ol>
+
+Two other API operations are in beta as of this writing:
+
+<ol>
+  <li><b>Files:</b> sending and receiving files.</li>
+  <li><b>Skills:</b> used to create skills for custom agents.</li>
+</ol>
