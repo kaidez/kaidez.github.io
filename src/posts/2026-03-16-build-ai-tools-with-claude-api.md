@@ -78,4 +78,4 @@ The first three tools I wrote were VS Code extensions that used the Messages API
   <li><b>GitHub Triage Tracker:</b> Fetches the first 10 open issues from Microsoft's VS Code repo. Each issue is then sent to Claude through the Messages API, which classifies its severity, writes a plain-English summary, and suggests a next action for the maintainers.</li>
 </ol>
 
-The fourth project was building <a href="https://www.anthropic.com/news/model-context-protocol" title="Anthropic's Model Context Protocol" aria-label="Read about Anthropic's Model Context Protocol" rel="noopener noreferrer">Model Context Protocol connecters for Claude</a>: one in TypeScript and another in Python.
+The fourth project was building <a href="https://www.anthropic.com/news/model-context-protocol" title="Anthropic's Model Context Protocol" aria-label="Read about Anthropic's Model Context Protocol" rel="noopener noreferrer">Model Context Protocol connecters for the Claude Desktop App.</a>. 
