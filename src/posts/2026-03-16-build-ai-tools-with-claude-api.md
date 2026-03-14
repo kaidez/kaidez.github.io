@@ -7,7 +7,7 @@ layout: layouts/post.njk
 permalink: /building-ai-tools-claude-api/
 image:
 tags: ["coding-best-practices"]
-secondary_tags: ["claude", "ai", "typescript", "zod"]
+secondary_tags: ["claude", "ai", "typescript"]
 category: Coding Tips
 schema_type: "TechArticle"
 dependencies: "TypeScript, Zod, Claude API"
@@ -28,7 +28,7 @@ I assume that you're familiar with the Generative AI landscape that's so common 
   <li>And most importantly: that, at some point, you will <a href="https://platform.claude.com/docs/en/home" title="Claude API Documentation" aria-label="Read the Claude API documentation" rel="noopener noreferrer">read the Claude API documentation</a> if you haven't already.  Perhaps after you've read this post? &#128522;</li>
 </ol>
 
-<h2>Understanding How Claude <i>Actually</i> Works</h2>
+<h2>How The Claude API <i>Actually</i> Works</h2>
 
 Most people know Claude as a powerful desktop AI app or a powerful CLI tool favored by coders/developers. But knowing how it works under the hood is important:
 
