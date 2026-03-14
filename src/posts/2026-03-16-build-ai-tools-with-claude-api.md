@@ -67,3 +67,6 @@ Two other API operations are in beta as of this writing:
   <li><b>Files:</b> sending and receiving files.</li>
   <li><b>Skills:</b> used to create skills for custom agents.</li>
 </ol>
+
+<h2>Things I Built With The API</h2>
+
