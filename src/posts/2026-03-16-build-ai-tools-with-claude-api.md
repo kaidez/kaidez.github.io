@@ -55,7 +55,7 @@ This API is a REST API built on the standard request/response pattern. An applic
 At the time of this post's published date, the production-ready version of the Claude API is relatively small.  It has four operations:
 
 <ol>
-  <li><b>Messages:</b> lets the application send messages to Claude and receive responses as if they were having a conversation.</li>
+  <li><b>Messages:</b> lets the application send messages to Claude and receive responses as if they were having a conversation. Since sending and receiving messages is core to its functionality, this is Claude's main API.</li>
   <li><b>Messages Batches:</b> processes message requests asynchronously at a reduced cost.</li>
   <li><b>Token Counting:</b> counts the amount of tokens in your request before sending it, helping you manage costs.</li>
   <li><b>Models:</b> lets the application retrieve information about Claude's various models such as Sonnet and Haiku.</li>
@@ -68,5 +68,12 @@ Two other API operations are in beta as of this writing:
   <li><b>Skills:</b> used to create skills for custom agents.</li>
 </ol>
 
-<h2>Things I Built With The API</h2>
+<h2>What I Built With the Claude API</h2>
 
+The first three tools I wrote were VS Code extensions that used the Messages API: 
+
+<ol>
+  <li><b>Save Selected Text:</b> Right-click on selected text in VS Code to treat it like a prompt sent to the Claude API. Claude then responds to it.</li>
+  <li><b>Claude Prompt Reader:</b> Similar to the Save Selected Text extension except you don't select and right-click on the text. Instead, the VS Code extension launches from the Command Palette, sends the prompt to Claude, then displays the response.</li>
+  <li><b>GitHub Triage Tracker:</b> Fetches the first 10 open issues from Microsoft's VS Code repo. Each issue is then sent to Claude through the Messages API, which classifies its severity, writes a plain-English summary, and suggests a next action for the maintainers.</li>
+</ol>
