@@ -28,7 +28,7 @@ I assume that you're familiar with the Generative AI landscape that's so common 
   <li>And most importantly: that, at some point, you will <a href="https://platform.claude.com/docs/en/home" title="Claude API Documentation" aria-label="Read the Claude API documentation" rel="noopener noreferrer">read the Claude API documentation</a> if you haven't already.  Perhaps after you've read this post? &#128522;</li>
 </ol>
 
-<h2>How The Claude API <i>Actually</i> Works</h2>
+<h2>How Claude <i>Actually</i> Works</h2>
 
 Most people know Claude as a powerful desktop AI app or a powerful CLI tool favored by coders/developers. But knowing how it works under the hood is important:
 
@@ -40,10 +40,13 @@ For every new prompt you send, the entire message history — your messages and 
 
 <em>Side note: that message history clearly gets big...that's why Claude Code will prompt you to run `/compact` from time-to-time. Also, <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching" title="The Claude API's prompt caching feature" aria-label="Read about the prompt caching with the Claude API" rel="noopener noreferrer">Claude's API has a "prompt caching" feature</a> that you can pass to requests.  Doing both of these things can lower your Claude costs.</em>
 
-The word "guesses" is also key. Claude predicts its answer, but it doesn't "think about it" the way humans do.
+The word "guesses" is also key: Claude predicts its answer but doesn't "think about it" the way humans do. Instead, it pattern-matches against training data (a ton of human-written text) rather than do so consciously.
 
-Claude isn't thinking through an answer the way a human would. Instead, it pattern-matches against training data (a ton of human-written text) rather than do so consciously.
+Claude is guessing how to respond to prompts it receives. That's different from "<a href="https://www.ibm.com/think/topics/predictive-ai" title="What is Predictive AI" aria-label="Read IBM's definition of Predictive AI?" rel="noopener noreferrer">Predictive AI</a>", which estimates a fixed result — a number, a category, a yes/no — from past data.
 
-So in this context, Claude is guessing how to respond to prompts it receives. That's different from "<a href="https://www.ibm.com/think/topics/predictive-ai" title="What is Predictive AI" aria-label="Read IBM's definition of Predictive AI" rel="noopener noreferrer">Predictive AI</a>", which estimates a fixed result — a number, a category, a yes/no — from past data.
+Claude doesn't predict a fixed outcome. Instead, it "generates" new content in response to whatever prompt it receives. This is the core definition of "<a href="https://www.ibm.com/think/topics/generative-ai" title="What is Generative AI?" aria-label="Read IBM's definition of Generative AI" rel="noopener noreferrer">Generative AI</a>".
 
-Claude doesn't predict a fixed outcome. It "generates" new content in response to whatever prompt it receives. That's the core meaning of <a href="https://www.ibm.com/think/topics/generative-ai" title="What is Generative AI" aria-label="Read IBM's definition of Generative AI" rel="noopener noreferrer">"Generative AI"</a>.
+<h2>The Claude API</h2>
+
+So Claude has a brain with really good guessing capabilities. The Claude API allows you to pass those capabilities to your applications.
+
