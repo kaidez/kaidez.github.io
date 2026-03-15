@@ -4,9 +4,9 @@
   "description": "Personal blog of Kai Gittens",
   "repository": "https://github.com/kaidez/kaidez.github.io.git",
   "scripts": {
-    "start": "eleventy --serve --port=8080",
-    "build": "eleventy",
-    "build:prod": "NODE_ENV=production eleventy && npm run purge-css && npm run minify-js",
+    "start": "esbuild ts_src/main.ts --bundle --platform=browser --outfile=src/assets/js/main.js && eleventy --serve --port=8080",
+    "build": "esbuild ts_src/main.ts --bundle --platform=browser --outfile=src/assets/js/main.js && eleventy",
+    "build:prod": "NODE_ENV=production eleventy && npm run purge-css && npm run minify-js && npm run compile-main",
     "purge-css": "purgecss --css _site/assets/css/style.css --content '_site/**/*.html' --output _site/assets/css/ --safelist 'fas fab far fa-facebook fa-twitter fa-linkedin fa-github fa-envelope fa-bars fa-times skip-link sr-only visually-hidden container' && cleancss -o _site/assets/css/style.css _site/assets/css/style.css",
     "minify-js": "esbuild _site/assets/js/main.js --minify --allow-overwrite --outfile=_site/assets/js/main.js",
     "compile-main": "esbuild ts_src/main.ts --bundle --platform=browser --outfile=src/assets/js/main.js",
