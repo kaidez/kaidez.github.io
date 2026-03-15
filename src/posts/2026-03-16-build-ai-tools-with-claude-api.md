@@ -28,6 +28,10 @@ I assume that you're familiar with the Generative AI landscape that's so common 
   <li>And most importantly: that, at some point, you will <a href="https://platform.claude.com/docs/en/api/overview" title="Claude API Documentation" aria-label="Read the Claude API documentation" rel="noopener noreferrer">read the Claude API documentation</a> if you haven't already.  Perhaps after you've read this post? &#128522;</li>
 </ol>
 
+Lastly, it's best practice to scaffold out the codebase for a VS Code extension with <a href="https://yeoman.io/" title="Yeoman Scaffolding Tool" aria-label="Scaffold out your web application with Yeoman" rel="noopener noreferrer">Yeoman</a>. I point out the code snippets that Yeoman generates, but I assume you'll be able to do that on your own.
+
+Read the documentation on <a href="https://code.visualstudio.com/api/get-started/your-first-extension"  title="Create a VS Code extension codebase" aria-label="Read how to create a VS Code extension codebase" rel="noopener noreferrer">how to scaffold out the codebase for VS Code extensions</a>.
+
 <h2>How Claude <i>Actually</i> Works</h2>
 
 Most people know Claude as a desktop AI app or a CLI tool favored by coders/developers. But knowing how it works under the hood is important.
@@ -40,7 +44,7 @@ For every new prompt you send, the entire message history — your messages and 
 
 <em>Side note: that message history clearly gets big...that's why Claude Code will prompt you to run `/compact` from time-to-time. Also, <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching" title="The Claude API's prompt caching feature" aria-label="Read about the prompt caching with the Claude API" rel="noopener noreferrer">Claude's API has a "prompt caching" feature</a> that you can pass to requests.  Doing both of these things can lower your Claude costs.</em>
 
-The word "guesses" is also key: Claude predicts its answer but doesn't "think about it" the way humans do. Instead, it pattern-matches against training data (a ton of human-written text) rather than do so consciously.
+The word "guesses" is also key: Claude predicts its answer but doesn't "think about it" the way humans do. Instead, it pattern-matches against training data (a ton of human-written text) rather than reasoning through it consciously.
 
 Claude is guessing how to respond to prompts it receives. That's different from "<a href="https://www.ibm.com/think/topics/predictive-ai" title="What is Predictive AI" aria-label="Read IBM's definition of Predictive AI?" rel="noopener noreferrer">Predictive AI</a>", which estimates a fixed result — a number, a category, a yes/no — from past data.
 
@@ -78,9 +82,13 @@ The first three tools I wrote were VS Code extensions that used the Messages API
   <li><b>GitHub Triage Tracker:</b> Fetches the first 10 open issues from Microsoft's VS Code repo. Each issue is then sent to Claude through the Messages API, which classifies its severity, writes a plain-English summary, and suggests a next action for the maintainers. <a href="https://github.com/kaidez/github-issue-triage" title="GitHub Triage Tracker Demo Repository on GitHub" aria-label="Go to the GitHub Triage Tracker Demo Repository on GitHub" rel="noopener noreferrer">View the repo</a>.</li>
 </ol>
 
-The fourth project was building <a href="https://www.anthropic.com/news/model-context-protocol" title="Anthropic's Model Context Protocol" aria-label="Read about Anthropic's Model Context Protocol" rel="noopener noreferrer">Model Context Protocol</a> connectors for the Claude Desktop App. Based on your prompt, it looks in a folder of text files and performs one of three commands. <a href="https://github.com/kaidez/mcp-prompt-server" title="MCP Prompt Server Repository on GitHub" aria-label="Go to the MCP Prompt Server Repository on GitHub" rel="noopener noreferrer">View the repo</a>.
+The fourth project was building <a href="https://www.anthropic.com/news/model-context-protocol" title="Anthropic's Model Context Protocol" aria-label="Read about Anthropic's Model Context Protocol" rel="noopener noreferrer">Model Context Protocol</a> connectors for the Claude Desktop App. Based on your prompt, the server looks in a folder of text files and performs one of three commands. <a href="https://github.com/kaidez/mcp-prompt-server" title="MCP Prompt Server Repository on GitHub" aria-label="Go to the MCP Prompt Server Repository on GitHub" rel="noopener noreferrer">View the repo</a>.
 
 The code is mostly the same across the three VS Code extensions.  So I'll walk through what the first one does while pointing out the unique code blocks of the other two.
+
+<h2>Configure `package.json` for VS Code Extensions</h2>
+
+
 
 <h2>Save Selected Text Extension</h2>
 
@@ -191,3 +199,13 @@ import Anthropic from '@anthropic-ai/sdk';
 We're importing the entire `vscode` module so our code can interact with the VS Code editor. We're also importing Node's `fs` and `path` modules to read/write files and build file paths.
 
 The Anthropic SDK is imported so we can send API requests to the Claude Messages API.
+
+<pre><code class="language-javascript">
+export function activate(context: vscode.ExtensionContext) {
+  ...
+} 
+</code></pre>
+
+The function that connects our extension to VS Code. It <i>must</i> be named `activate`.
+
+The function <i>must</i> also have a `context` parameter, allowing it to interact with specific methods inside the `vscode` object. The `vscode.ExtensionContext` type is the exact type this extension needs.
