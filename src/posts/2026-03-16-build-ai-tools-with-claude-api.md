@@ -30,7 +30,7 @@ I assume that you're familiar with the Generative AI landscape that's so common 
 
 <h2>How Claude <i>Actually</i> Works</h2>
 
-Most people know Claude as a powerful desktop AI app or a powerful CLI tool favored by coders/developers. But knowing how it works under the hood is important:
+Most people know Claude as a desktop AI app or a CLI tool favored by coders/developers. But knowing how it works under the hood is important.
 
 At its core, Claude is a powerful, stateless piece of prediction software. You send Claude text and, based on its training, it guesses a response and sends it back.
 
@@ -55,7 +55,7 @@ This API is a REST API built on the standard request/response pattern. An applic
 At the time of this post's published date, the production-ready version of the Claude API is relatively small.  It has four operations:
 
 <ol>
-  <li><b>Messages:</b> lets the application send messages to Claude and receive responses as if they were having a conversation. Since sending and receiving messages is core to its functionality, this is Claude's main API.</li>
+  <li><b>Messages:</b> Claude's primary API that lets the application send messages to Claude and receive responses as if they were having a conversation.</li>
   <li><b>Messages Batches:</b> processes message requests asynchronously at a reduced cost.</li>
   <li><b>Token Counting:</b> counts the amount of tokens in your request before sending it, helping you manage costs.</li>
   <li><b>Models:</b> lets the application retrieve information about Claude's various models such as Sonnet and Haiku.</li>
@@ -73,9 +73,119 @@ Two other API operations are in beta as of this writing:
 The first three tools I wrote were VS Code extensions that used the Messages API: 
 
 <ol>
-  <li><b>Save Selected Text:</b> Right-click on selected text in VS Code to treat it like a prompt sent to the Claude API. Claude then responds to it.</li>
-  <li><b>Claude Prompt Reader:</b> Similar to the Save Selected Text extension except you don't select and right-click on the text. Instead, the VS Code extension launches from the Command Palette, sends the prompt to Claude, then displays the response.</li>
-  <li><b>GitHub Triage Tracker:</b> Fetches the first 10 open issues from Microsoft's VS Code repo. Each issue is then sent to Claude through the Messages API, which classifies its severity, writes a plain-English summary, and suggests a next action for the maintainers.</li>
+  <li><b>Save Selected Text:</b> Right-click on selected text in VS Code to treat it like a prompt sent to the Claude API. Claude then responds to it. <a href="https://github.com/kaidez/save-selected-text" title="Save Selected Text Demo Repository on GitHub" aria-label="Go to the Save Selected Text Demo Repository on GitHub" rel="noopener noreferrer">View the repo</a>.</li>
+  <li><b>Claude Prompt Reader:</b> Similar to the Save Selected Text extension except you don't select and right-click on the text. Instead, the VS Code extension launches from the Command Palette, sends the prompt to Claude, then displays the response. <a href="https://github.com/kaidez/claude-prompt-reader" title="Claude Prompt Reader Demo Repository on GitHub" aria-label="Go to the Claude Prompt Reader Demo Repository on GitHub" rel="noopener noreferrer">View the repo</a>.</li>
+  <li><b>GitHub Triage Tracker:</b> Fetches the first 10 open issues from Microsoft's VS Code repo. Each issue is then sent to Claude through the Messages API, which classifies its severity, writes a plain-English summary, and suggests a next action for the maintainers. <a href="https://github.com/kaidez/github-issue-triage" title="GitHub Triage Tracker Demo Repository on GitHub" aria-label="Go to the GitHub Triage Tracker Demo Repository on GitHub" rel="noopener noreferrer">View the repo</a>.</li>
 </ol>
 
-The fourth project was building <a href="https://www.anthropic.com/news/model-context-protocol" title="Anthropic's Model Context Protocol" aria-label="Read about Anthropic's Model Context Protocol" rel="noopener noreferrer">Model Context Protocol connecters for the Claude Desktop App.</a>. 
+The fourth project was building <a href="https://www.anthropic.com/news/model-context-protocol" title="Anthropic's Model Context Protocol" aria-label="Read about Anthropic's Model Context Protocol" rel="noopener noreferrer">Model Context Protocol</a> connectors for the Claude Desktop App. Based on your prompt, it looks in a folder of text files and performs one of three commands. <a href="https://github.com/kaidez/mcp-prompt-server" title="MCP Prompt Server Repository on GitHub" aria-label="Go to the MCP Prompt Server Repository on GitHub" rel="noopener noreferrer">View the repo</a>.
+
+The code is mostly the same across the three VS Code extensions.  So I'll walk through what the first one does while pointing out the unique code blocks of the other two.
+
+<h2>Save Selected Text Extension</h2>
+
+<pre><code class="language-javascript">
+import * as vscode from 'vscode';
+import * as fs from 'fs';
+import * as path from 'path';
+import Anthropic from '@anthropic-ai/sdk';
+
+export function activate(context: vscode.ExtensionContext) {
+
+  let disposable = vscode.commands.registerCommand('save-selected-text.saveSelection', async () => {
+
+    // Guard check 1: is there an active editor?
+    const editor = vscode.window.activeTextEditor;
+    if (!editor) {
+      vscode.window.showErrorMessage('No active editor found.');
+      return;
+    }
+
+    // Guard check 2: is there a selected text?
+    const selectedText = editor.document.getText(editor.selection);
+    if (!selectedText) {
+      vscode.window.showErrorMessage('No text selected. Please highlight some text first.');
+      return;
+    }
+
+    // Guard check 3: is there a workspace folder open?
+    const workspacePath = vscode.workspace.workspaceFolders?.[0].uri.fsPath;
+    if (!workspacePath) {
+      vscode.window.showErrorMessage('No workspace folder found.');
+      return;
+    }
+
+    // Get config values
+    const apiKey = vscode.workspace.getConfiguration('saveSelectedText').get<string>('apiKey');
+    if (!apiKey) {
+      vscode.window.showErrorMessage('No API key found. Please add it in Settings → Save Selected Text → Api Key.');
+      return;
+    }
+
+    const claudeModel = vscode.workspace.getConfiguration('saveSelectedText')
+      .get<string>('chooseYourModel') ?? 'claude-sonnet-4-6';
+
+    // Create prompts folder if it doesn't exist
+    const promptsPath = path.join(workspacePath, 'prompts');
+    if (!fs.existsSync(promptsPath)) {
+      fs.mkdirSync(promptsPath);
+    }
+
+    // Save selected text to a timestamped file
+    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+    const fileName = `prompt-${timestamp}.txt`;
+    const filePath = path.join(promptsPath, fileName);
+
+    vscode.window.showInformationMessage(`Saved "${fileName}" — sending to Claude...`);
+
+    const client = new Anthropic({ apiKey });
+
+    await vscode.window.withProgress({
+      location: vscode.ProgressLocation.Notification,
+      title: `Claude is thinking...`,
+      cancellable: false
+    }, async () => {
+      try {
+        const message = await client.messages.create({
+          model: claudeModel,
+          max_tokens: 1024,
+          messages: [{ role: 'user', content: selectedText }]
+        });
+
+        const response = message.content[0].type === 'text'
+          ? message.content[0].text
+          : 'No response received.';
+
+        // save the selected text to the file after getting the response, so we don't create files for failed API calls
+        fs.writeFileSync(filePath, selectedText, 'utf8');
+
+        const doc = await vscode.workspace.openTextDocument({
+          content: `SELECTED TEXT:\n${selectedText}\n\n---\n\nCLAUDE'S RESPONSE:\n${response}`,
+          language: 'markdown'
+        });
+
+        await vscode.window.showTextDocument(doc);
+
+      } catch (error) {
+        vscode.window.showErrorMessage(`Claude API error: ${error}`);
+      }
+    });
+  });
+
+  context.subscriptions.push(disposable);
+}
+
+export function deactivate() { }
+</code></pre>
+
+Breaking this down...
+
+<pre><code class="language-javascript">
+import * as vscode from 'vscode';
+import * as fs from 'fs';
+import * as path from 'path';
+import Anthropic from '@anthropic-ai/sdk';
+...
+</code></pre>
+
+We're importing the entire `vscode` module so our code can interact with the VS Code editor. We're also importing Node's `fs` and `path` modules to read/write files and build file paths.
