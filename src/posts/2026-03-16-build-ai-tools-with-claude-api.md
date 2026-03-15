@@ -189,3 +189,5 @@ import Anthropic from '@anthropic-ai/sdk';
 </code></pre>
 
 We're importing the entire `vscode` module so our code can interact with the VS Code editor. We're also importing Node's `fs` and `path` modules to read/write files and build file paths.
+
+The Anthropic SDK is imported so we can send API requests to the Claude Messages API.
