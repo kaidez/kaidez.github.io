@@ -6,3 +6,4 @@ node_modules/
 .bundle/
 coverage
 _drafts
+src/assets/js/main.js
