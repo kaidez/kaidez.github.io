@@ -2,59 +2,28 @@
  * @jest-environment jsdom
  */
 
-const fs = require('fs');
-const path = require('path');
+beforeAll(() => {
+  jest.spyOn(console, 'warn').mockImplementation(() => { });
+});
 
-// Read the main.js file content
-const mainJsPath = path.join(__dirname, '../src/assets/js/main.js');
-const mainJsContent = fs.readFileSync(mainJsPath, 'utf8');
+afterAll(() => {
+  jest.restoreAllMocks();
+});
 
-// Extract the copyrightYear function from the IIFE for testing
-function createTestableFunction() {
-  // Extract the copyrightYear function body
-  const copyrightMatch = mainJsContent.match(/function copyrightYear\(\) \{([\s\S]*?)\n    \}/);
-  if (!copyrightMatch) {
-    throw new Error('Could not extract copyrightYear function from IIFE');
-  }
-
-  // Create testable function
-  const copyrightBody = copyrightMatch[1];
-
-  const copyrightYear = new Function('', `
-    function copyrightYear() {${copyrightBody}
-    }
-    return copyrightYear;
-  `)();
-
-  return copyrightYear;
-}
+const { copyrightYear, toggleMobileMenu } = require('../ts_src/main');
 
 describe('main.js - copyrightYear function', () => {
-  let copyrightYear;
   let originalDate;
   let consoleSpy;
 
-  beforeAll(() => {
-    // Create testable function
-    copyrightYear = createTestableFunction();
-  });
-
   beforeEach(() => {
-    // Create fresh DOM for each test
     document.body.innerHTML = '<div class="footer-bottom"></div>';
-
-    // Store original Date constructor
     originalDate = global.Date;
-
-    // Spy on console.warn
     consoleSpy = jest.spyOn(console, 'warn').mockImplementation(() => { });
   });
 
   afterEach(() => {
-    // Restore original Date constructor
     global.Date = originalDate;
-
-    // Restore console.warn
     consoleSpy.mockRestore();
   });
 
@@ -142,12 +111,6 @@ describe('main.js - copyrightYear function', () => {
 });
 
 describe('main.js - Year calculation edge cases', () => {
-  let copyrightYear;
-
-  beforeAll(() => {
-    // Create testable function
-    copyrightYear = createTestableFunction();
-  });
 
   beforeEach(() => {
     // Create fresh DOM for each test
@@ -195,14 +158,6 @@ describe('main.js - Year calculation edge cases', () => {
 });
 
 describe('main.js - DOM ready functionality', () => {
-  let copyrightYear;
-  let originalReadyState;
-  let mockAddEventListener;
-
-  beforeAll(() => {
-    // Create testable function
-    copyrightYear = createTestableFunction();
-  });
 
   beforeEach(() => {
     // Store original readyState

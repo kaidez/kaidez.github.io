@@ -4,6 +4,10 @@ module.exports = {
     '**/tests/**/*.test.js',
     '**/__tests__/**/*.js'
   ],
+  transform: {
+    '^.+\\.ts$': 'ts-jest'
+  },
+  moduleFileExtensions: ['ts', 'js', 'json'],
   collectCoverage: true,
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
