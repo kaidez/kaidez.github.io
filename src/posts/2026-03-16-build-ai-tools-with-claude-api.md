@@ -341,9 +341,26 @@ Both `const apiKey ` and `const claudeModel` read the values entered in the Sett
 `claude-haiku-4-5-20251001`  is the default — used when no model is manually selected.  At this post's publish date, Haiku is cheapest per token.
 
 <pre><code class="language-javascript">
+const promptsPath = path.join(workspacePath, 'prompts');
+if (!fs.existsSync(promptsPath)) {
+  fs.mkdirSync(promptsPath);
+}
+
 const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
 const fileName = `prompt-${timestamp}.txt`;
 const filePath = path.join(promptsPath, fileName);
 
 vscode.window.showInformationMessage(`Saved "${fileName}" — sending to Claude...`);
 </code></pre>
+
+First, Node's `fs` functionality checks if a `prompts` folder exists. It creates one on the fly if it doesn't.
+
+Next, three things happen:
+
+<ol>
+  <li>The current date and time are stored in `const timestamp` using JavaScript's `Date()` object.</li>
+  <li>`timestamp` is used to create a file name that's stored in `const fileName`.</li>
+  <li>Using Node's `path` functionality, `promptsPath` and `fileName` are combined into a full file path. That path is stored in `const filePath`.</li>
+</ol>
+
+Finally, VS Code displays an information message and sends the selected text to the Claude API. The file is only written to disk after Claude responds successfully. This prevents files from being created when an API call fails.
