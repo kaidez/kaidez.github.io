@@ -5,7 +5,7 @@ excerpt: "What I learned building AI tools with the Claude API: stateless conver
 draft: true
 layout: layouts/post.njk
 permalink: /building-ai-tools-claude-api/
-image:
+image: napster-ai.jpeg
 tags: ["coding-best-practices"]
 secondary_tags: ["claude", "ai", "typescript"]
 category: Coding Tips
@@ -15,7 +15,7 @@ proficiency_level: "Intermediate"
 ---
 I needed a firmer grasp on how Claude's API works, so I built four quick tools in Visual Studio Code. Alongside Claude and VS Code, I also used TypeScript (naturally), and Mocha for testing.
 
-As things progressed, I also came away with a deeper understanding of system design and integration engineering. That may be the even <i>bigger</i> payoff!!
+As things progressed, I also came away with a deeper understanding of system design and integration engineering. That may be the even <i>bigger</i> payoff!
 
 <h2>Assumptions</h2>
 
@@ -86,7 +86,7 @@ The fourth project was building <a href="https://www.anthropic.com/news/model-co
 
 The code is mostly the same across the three VS Code extensions.  So I'll walk through what the first one does while pointing out the unique code blocks of the other two.
 
-<h2>package.json for Save Selected Text/VS Code Extension</h2>
+<h2>The Save Selected Text `package.json`</h2>
 
 You can <a href="https://github.com/kaidez/save-selected-text/blob/main/package.json" title="Save Selected Text VS Code extension for package.json" aria-label="Review the package.json for Save Selected Text VS Code extension" rel="noopener noreferrer">view the complete `package.json` file</a> on the repo. But here are the core configs as they relate to VS Code extensions:
 
@@ -156,8 +156,12 @@ The extension gets triggered by selecting a menu item with a right-click. In `co
 
 In `menus["editor/context"][]`, the `command` value needs to be added, and <i>must</i> match the value in `contributes.commands[]`. `when` defines when the menu appears — when text is selected in this case. `group` decides which menu group the item appears in — `navigation` in this case.
 
+The `configuration` object defines how the extension gets configured in VS Code's `Settings` window...see the screenshot below:
 
-<h2>Save Selected Text Extension</h2>
+<img src="/assets/img/vs-code-settings-menu.jpg" alt="screen shot of the extension's configuration window in VS Code" />
+
+
+<h2>The Save Selected Text `extension.ts`</h2>
 
 <pre><code class="language-javascript">
 import * as vscode from 'vscode';
