@@ -162,7 +162,7 @@ The `configuration` object defines how the extension gets configured in VS Code'
 
 The name of the extension in settings as well as the input fields and their respective descriptions are all inside this object.  The `enum` array forces a dropdown menu of options to select. `enumDescriptions` creates a one-to-one mapping of the description of the items in `enum`.
 
-<h2>The Save Selected Text extension.ts</h2>
+<h2>The Save Selected Text <code>extension.ts</code></h2>
 
 Your extension file can be named whatever you want, but a Yeoman-generated scaffold automatically names it `extension.ts`.
 
