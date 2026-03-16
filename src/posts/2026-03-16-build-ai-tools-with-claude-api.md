@@ -86,7 +86,7 @@ The fourth project was building <a href="https://www.anthropic.com/news/model-co
 
 The code is mostly the same across the three VS Code extensions.  So I'll walk through what the first one does while pointing out the unique code blocks of the other two.
 
-<h2>package.json for VS Code Extension for Save Selected Text</h2>
+<h2>package.json for Save Selected Text/VS Code Extension</h2>
 
 You can <a href="https://github.com/kaidez/save-selected-text/blob/main/package.json" title="Save Selected Text VS Code extension for package.json" aria-label="Review the package.json for Save Selected Text VS Code extension" rel="noopener noreferrer">view the complete `package.json` file</a> on the repo. But here are the core configs as they relate to VS Code extensions:
 
@@ -104,8 +104,9 @@ You can <a href="https://github.com/kaidez/save-selected-text/blob/main/package.
 "contributes": {
   "commands": [
     {
+     
+      "title": "Claude: Save Selected Text",
       "command": "save-selected-text.saveSelection",
-      "title": "Claude: Save Selected Text"
     }
   ],
   "menus": {
@@ -150,6 +151,10 @@ You can <a href="https://github.com/kaidez/save-selected-text/blob/main/package.
 `activationEvents` controls when the extension loads and `contributes` registers commands/menus/settings. In VS Code 1.74 and newer, explicit `activationEvents` entries are optional — VS Code automatically infers when to load the extension from what's declared in `contributes`.
 
 Extension developers coding for 1.74 and higher tend to leave `activationEvents` in the file to indicate that they intentionally chose automatic activation. So I left it there.
+
+The extension gets triggered by selecting a menu item with a right-click. In `contributes.commands[]`, the `title` value defines the command's label in the menu. `command` registers the unique command ID with VS Code.
+
+In `menus["editor/context"][]`, the `command` value needs to be added, and <i>must</i> match the value in `contributes.commands[]`. `when` defines when the menu appears — when text is selected in this case. `group` decides which menu group the item appears in — `navigation` in this case.
 
 
 <h2>Save Selected Text Extension</h2>
