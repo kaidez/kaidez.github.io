@@ -1,6 +1,6 @@
 ---
 title: "Building AI Tools with the Claude API: What I Learned"
-date: 2026-03-16T12:00:00-02:00
+date: 2026-03-17T12:00:00-02:00
 excerpt: "What I learned building AI tools with the Claude API: stateless conversations, Zod for LLM output validation, and keeping costs low."
 draft: true
 layout: layouts/post.njk
@@ -15,7 +15,7 @@ proficiency_level: "Intermediate"
 ---
 I needed a firmer grasp on how Claude's API works, so I built four quick tools in Visual Studio Code. Alongside Claude and VS Code, I also used TypeScript (naturally), and Mocha for testing.
 
-As things progressed, I also gained an even firmer grasp of proper approaches to system design and integration engineering. That may be the even <i>bigger</i> payoff!!!
+As things progressed, I also came away with a deeper understanding of system design and integration engineering. That may be the even <i>bigger</i> payoff!!
 
 <h2>Assumptions</h2>
 
@@ -34,7 +34,7 @@ Read the documentation on <a href="https://code.visualstudio.com/api/get-started
 
 <h2>How Claude <i>Actually</i> Works</h2>
 
-Most people know Claude as a desktop AI app or a CLI tool favored by coders/developers. But knowing how it works under the hood is important.
+Most people know Claude as a desktop AI app or a CLI tool favored by developers. But knowing how it works under the hood is important.
 
 At its core, Claude is a powerful, stateless piece of prediction software. You send Claude text and, based on its training, it guesses a response and sends it back.
 
@@ -86,8 +86,70 @@ The fourth project was building <a href="https://www.anthropic.com/news/model-co
 
 The code is mostly the same across the three VS Code extensions.  So I'll walk through what the first one does while pointing out the unique code blocks of the other two.
 
-<h2>Configure `package.json` for VS Code Extensions</h2>
+<h2>package.json for VS Code Extension for Save Selected Text</h2>
 
+You can <a href="https://github.com/kaidez/save-selected-text/blob/main/package.json" title="Save Selected Text VS Code extension for package.json" aria-label="Review the package.json for Save Selected Text VS Code extension" rel="noopener noreferrer">view the complete `package.json` file</a> on the repo. But here are the core configs as they relate to VS Code extensions:
+
+<pre><code class="language-javascript">
+...
+"engines": {
+  "vscode": "^1.74.0"
+},
+"categories": [
+  "Other"
+],
+...
+"activationEvents": [],
+...
+"contributes": {
+  "commands": [
+    {
+      "command": "save-selected-text.saveSelection",
+      "title": "Claude: Save Selected Text"
+    }
+  ],
+  "menus": {
+    "editor/context": [
+      {
+        "command": "save-selected-text.saveSelection",
+        "when": "editorHasSelection",
+        "group": "navigation"
+      }
+    ]
+  },
+  "configuration": {
+    "title": "Save Selected Text",
+    "properties": {
+      "saveSelectedText.apiKey": {
+        "type": "string",
+        "default": "",
+        "description": "Your Anthropic API key"
+      },
+      "saveSelectedText.chooseYourModel": {
+        "type": "string",
+        "default": "claude-sonnet-4-6",
+        "enum": [
+          "claude-haiku-4-5-20251001",
+          "claude-sonnet-4-6",
+          "claude-opus-4-6"
+        ],
+        "enumDescriptions": [
+          "Claude Haiku — fastest and most affordable",
+          "Claude Sonnet — balanced speed and intelligence (recommended)",
+          "Claude Opus — most powerful, slower and more expensive"
+        ],
+        "description": "Select which Claude model to use"
+      }
+    }
+  }
+}
+</code></pre>
+
+`engines` refers to the minimum version VS Code needs to run the extension (this will be important later). `categories` refers to how the extension should be categorized in the VS Code Extension marketplace.
+
+`activationEvents` controls when the extension loads and `contributes` registers commands/menus/settings. In VS Code 1.74 and newer, explicit `activationEvents` entries are optional — VS Code automatically infers when to load the extension from what's declared in `contributes`.
+
+Extension developers coding for 1.74 and higher tend to leave `activationEvents` in the file to indicate that they intentionally chose automatic activation. So I left it there.
 
 
 <h2>Save Selected Text Extension</h2>
