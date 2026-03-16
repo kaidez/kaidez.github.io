@@ -164,7 +164,7 @@ The name of the extension in settings as well as the input fields and their resp
 
 <h2>The Save Selected Text `extension.ts`</h2>
 
-An extension file <i>must</i> be named `extension.ts`.
+Your extension file can be named whatever you want, but Yeoman's convention is to name it `extension.ts`.
 
 <pre><code class="language-javascript">
 import * as vscode from 'vscode';
@@ -176,21 +176,18 @@ export function activate(context: vscode.ExtensionContext) {
 
   let disposable = vscode.commands.registerCommand('save-selected-text.saveSelection', async () => {
 
-    // Guard check 1: is there an active editor?
     const editor = vscode.window.activeTextEditor;
     if (!editor) {
       vscode.window.showErrorMessage('No active editor found.');
       return;
     }
 
-    // Guard check 2: is there a selected text?
     const selectedText = editor.document.getText(editor.selection);
     if (!selectedText) {
       vscode.window.showErrorMessage('No text selected. Please highlight some text first.');
       return;
     }
 
-    // Guard check 3: is there a workspace folder open?
     const workspacePath = vscode.workspace.workspaceFolders?.[0].uri.fsPath;
     if (!workspacePath) {
       vscode.window.showErrorMessage('No workspace folder found.');
@@ -280,9 +277,9 @@ export function activate(context: vscode.ExtensionContext) {
 } 
 </code></pre>
 
-The function that connects our extension to VS Code. It doesn't have to be named `activate`, but it's usually done that way.
+The function that connects our extension to VS Code. It <i>must</i> be named `activate`.
 
-But the function <i>must</i> also have a `context` parameter, allowing it to interact with specific methods inside the `vscode` object. The param `must` be typed as `vscode.ExtensionContext`.
+The function <i>must</i> also have a `context` parameter, allowing it to interact with specific methods inside the `vscode` object. The param <i>must</i> be typed as `vscode.ExtensionContext`.
 
 <pre><code class="language-javascript">
 let disposable = vscode.commands.registerCommand('save-selected-text.saveSelection', async () => {
@@ -296,3 +293,35 @@ context.subscriptions.push(disposable);
 But I'm guessing it does this to silently reference VS Code's internal `Disposable` object. `vscode.commands.registerCommand()` returns `Disposable`, which has the method `dispose()`. And `Disposable.dispose()` unregisters the command and releases its resources.
 
 `context.subscriptions.push(disposable)` registers that `disposable` with the extension context. VS Code then automatically calls `dispose()` on it when the extension is deactivated — for any reason: a closed window, VS Code shutting down, or something similar.
+
+<pre><code class="language-javascript">
+...
+const editor = vscode.window.activeTextEditor;
+if (!editor) {
+  vscode.window.showErrorMessage('No active editor found.');
+  return;
+}
+
+const selectedText = editor.document.getText(editor.selection);
+if (!selectedText) {
+  vscode.window.showErrorMessage('No text selected. Please highlight some text first.');
+  return;
+}
+
+const workspacePath = vscode.workspace.workspaceFolders?.[0].uri.fsPath;
+if (!workspacePath) {
+  vscode.window.showErrorMessage('No workspace folder found.');
+  return;
+}
+...
+</code></pre>
+
+`disposable`'s first job is to confirm if all of the following is true:
+
+<ol>
+  <li> There's an open editor window.</li>
+  <li> There's selected text.</li>
+  <li> There's a VS Code workspace.</li>
+</ol>
+
+If any of those things are false, a `return` is fired off and exits that function early.
