@@ -44,9 +44,9 @@ For every new prompt you send, the entire message history — your messages and 
 
 <em>Side note: that message history clearly gets big...that's why Claude Code will prompt you to run `/compact` from time-to-time. Also, <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching" title="The Claude API's prompt caching feature" aria-label="Read about the prompt caching with the Claude API" rel="noopener noreferrer">Claude's API has a "prompt caching" feature</a> that you can pass to requests.  Doing both of these things can lower your Claude costs.</em>
 
-The word "guesses" is also key: Claude predicts its answer but doesn't "think about it" the way humans do. Instead, it pattern-matches against training data (a ton of human-written text) rather than reasoning through it consciously.
+The word "guesses" is also key: Claude predicts its answer but doesn't "think about it" like humans do. Instead, it pattern-matches against training data (a ton of human-written text) rather than reasoning through it consciously.
 
-Claude is guessing how to respond to prompts it receives. That's different from "<a href="https://www.ibm.com/think/topics/predictive-ai" title="What is Predictive AI" aria-label="Read IBM's definition of Predictive AI?" rel="noopener noreferrer">Predictive AI</a>", which estimates a fixed result — a number, a category, a yes/no — from past data.
+Claude is guessing how to respond to prompts it receives. That differs from "<a href="https://www.ibm.com/think/topics/predictive-ai" title="What is Predictive AI" aria-label="Read IBM's definition of Predictive AI?" rel="noopener noreferrer">Predictive AI</a>", which outputs a fixed result — a number, a category, a yes/no."
 
 Claude doesn't predict a fixed outcome. Instead, it "generates" new content in response to whatever prompt it receives. This is the core definition of "<a href="https://www.ibm.com/think/topics/generative-ai" title="What is Generative AI?" aria-label="Read IBM's definition of Generative AI" rel="noopener noreferrer">Generative AI</a>".
 
@@ -79,7 +79,7 @@ The first three tools I wrote were VS Code extensions that used the Messages API
 <ol>
   <li><b>Save Selected Text:</b> Right-click on selected text in VS Code to treat it like a prompt sent to the Claude API. Claude then responds to it. <a href="https://github.com/kaidez/save-selected-text" title="Save Selected Text Demo Repository on GitHub" aria-label="Go to the Save Selected Text Demo Repository on GitHub" rel="noopener noreferrer">View the repo</a>.</li>
   <li><b>Claude Prompt Reader:</b> Similar to the Save Selected Text extension except you don't select and right-click on the text. Instead, the VS Code extension launches from the Command Palette, sends the prompt to Claude, then displays the response. <a href="https://github.com/kaidez/claude-prompt-reader" title="Claude Prompt Reader Demo Repository on GitHub" aria-label="Go to the Claude Prompt Reader Demo Repository on GitHub" rel="noopener noreferrer">View the repo</a>.</li>
-  <li><b>GitHub Triage Tracker:</b> Fetches the first 10 open issues from Microsoft's VS Code repo. Each issue is then sent to Claude through the Messages API, which classifies its severity, writes a plain-English summary, and suggests a next action for the maintainers. <a href="https://github.com/kaidez/github-issue-triage" title="GitHub Triage Tracker Demo Repository on GitHub" aria-label="Go to the GitHub Triage Tracker Demo Repository on GitHub" rel="noopener noreferrer">View the repo</a>.</li>
+  <li><b>GitHub Triage Tracker:</b> Fetches the first 10 open issues from Microsoft's VS Code repo. Each issue is sent to Claude via the Messages API. Claude classifies its severity, writes a plain-English summary, and suggests a next action for the maintainers. <a href="https://github.com/kaidez/github-issue-triage" title="GitHub Triage Tracker Demo Repository on GitHub" aria-label="Go to the GitHub Triage Tracker Demo Repository on GitHub" rel="noopener noreferrer">View the repo</a>.</li>
 </ol>
 
 The fourth project was building <a href="https://www.anthropic.com/news/model-context-protocol" title="Anthropic's Model Context Protocol" aria-label="Read about Anthropic's Model Context Protocol" rel="noopener noreferrer">Model Context Protocol</a> connectors for the Claude Desktop App. Based on your prompt, the server looks in a folder of text files and performs one of three commands. <a href="https://github.com/kaidez/mcp-prompt-server" title="MCP Prompt Server Repository on GitHub" aria-label="Go to the MCP Prompt Server Repository on GitHub" rel="noopener noreferrer">View the repo</a>.
@@ -148,9 +148,9 @@ You can <a href="https://github.com/kaidez/save-selected-text/blob/main/package.
 
 `engines` refers to the minimum version VS Code needs to run the extension: version 1.74 in this case. `categories` refers to how the extension should be categorized in the VS Code Extension marketplace.
 
-`activationEvents` controls when the extension loads and `contributes` registers commands/menus/settings. In VS Code 1.74 and newer, explicit `activationEvents` entries are optional — VS Code automatically infers when to load the extension from what's declared in `contributes`.
+`activationEvents` controls when the extension loads and `contributes` registers commands/menus/settings. In VS Code 1.74+, `activationEvents` entries are optional — VS Code infers activation from `contributes`.
 
-Developers targeting 1.74+ often keep `activationEvents` to signal they chose automatic activation. So I left it there to do the just that.
+Developers targeting 1.74+ often keep `activationEvents` to signal they chose automatic activation. So I left it there to do just that.
 
 The extension gets triggered by selecting a menu item with a right-click. In `contributes.commands[]`, the `title` value defines the command's label in the menu. `command` registers the unique command ID with VS Code.
 
@@ -160,7 +160,7 @@ The `configuration` object defines how the extension gets configured in VS Code'
 
 <img src="/assets/img/vs-code-settings-menu.jpg" alt="screen shot of the extension's configuration window in VS Code" />
 
-The name of the extension in settings as well as the input fields and their respective descriptions are all inside this object.  The `enum` array forces a dropdown menu of options to select. `enumDescriptions` creates a one-to-one mapping of the description of the items in `enum`.
+This object defines the extension name, input fields, and their descriptions in VS Code Settings.  The `enum` array forces a dropdown menu of options to select. `enumDescriptions` creates a one-to-one mapping of the description of the items in `enum`.
 
 <h2>The Save Selected Text <code>extension.ts</code></h2>
 
@@ -279,7 +279,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 The function that connects our extension to VS Code. It <i>must</i> be named `activate`.
 
-It must also take a `context` parameter to access methods on the vscode object. For TypeScript's strong-typing requirements, the param <i>must</i> be typed as `vscode.ExtensionContext`.
+It must also take a `context` parameter to access methods on the `vscode` object. For TypeScript's strong-typing requirements, the param <i>must</i> be typed as `vscode.ExtensionContext`.
 
 <pre><code class="language-javascript">
 let disposable = vscode.commands.registerCommand('save-selected-text.saveSelection', async () => {
@@ -336,9 +336,9 @@ if (!apiKey) {
 const claudeModel = vscode.workspace.getConfiguration('saveSelectedText').get<string>('chooseYourModel') ?? 'claude-haiku-4-5-20251001';
 </code></pre>
 
-Both `const apiKey ` and `const claudeModel` read the values entered in the Settings window displayed in the screenshot above. Those are, respectively, your Claude API key and a model-selection dropdown.
+Both `const apiKey` and `const claudeModel` read the values entered in the Settings window displayed in the screenshot above. Those are, respectively, your Claude API key and a model-selection dropdown.
 
-`claude-haiku-4-5-20251001`  is the default — used when no model is manually selected.  At this post's publish date, Haiku is cheapest per token.
+`claude-haiku-4-5-20251001` is the default — used when no model is manually selected. At this post's publish date, Haiku is cheapest per token.
 
 <pre><code class="language-javascript">
 const promptsPath = path.join(workspacePath, 'prompts');
