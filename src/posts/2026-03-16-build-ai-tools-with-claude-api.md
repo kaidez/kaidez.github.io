@@ -358,9 +358,9 @@ First, Node's `fs` functionality checks if a `prompts` folder exists. It creates
 Next, three things happen:
 
 <ol>
-  <li>The current date and time are stored in `const timestamp` using JavaScript's `Date()` object.</li>
-  <li>`timestamp` is used to create a file name that's stored in `const fileName`.</li>
-  <li>Using Node's `path` functionality, `promptsPath` and `fileName` are combined into a full file path. That path is stored in `const filePath`.</li>
+  <li>The current date and time are stored in <code>const timestamp</code> using JavaScript's <code>Date()</code> object.</li>
+  <li><code>timestamp</code> is used to create a file name that's stored in <code>const fileName</code>.</li>
+  <li>Using Node's <code>path</code> functionality, <code>promptsPath</code> and <code>fileName</code> are combined into a full file path. That path is stored in <code>const filePath</code>.</li>
 </ol>
 
 Finally, VS Code displays an information message and sends the selected text to the Claude API. The file is only written to disk after Claude responds successfully. This prevents files from being created when an API call fails.
