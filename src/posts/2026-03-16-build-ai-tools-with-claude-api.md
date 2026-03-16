@@ -164,6 +164,8 @@ The name of the extension in settings as well as the input fields and their resp
 
 <h2>The Save Selected Text `extension.ts`</h2>
 
+An extension file <i>must</i> be named `extension.ts`.
+
 <pre><code class="language-javascript">
 import * as vscode from 'vscode';
 import * as fs from 'fs';
@@ -278,6 +280,19 @@ export function activate(context: vscode.ExtensionContext) {
 } 
 </code></pre>
 
-The function that connects our extension to VS Code. It <i>must</i> be named `activate`.
+The function that connects our extension to VS Code. It doesn't have to be named `activate`, but it's usually done that way.
 
-The function <i>must</i> also have a `context` parameter, allowing it to interact with specific methods inside the `vscode` object. The `vscode.ExtensionContext` type is the exact type this extension needs.
+But the function <i>must</i> also have a `context` parameter, allowing it to interact with specific methods inside the `vscode` object. The param `must` be typed as `vscode.ExtensionContext`.
+
+<pre><code class="language-javascript">
+let disposable = vscode.commands.registerCommand('save-selected-text.saveSelection', async () => {
+  ...
+});
+context.subscriptions.push(disposable);
+</code></pre>
+
+`disposable` is the variable that connects the extension to VS Code. It doesn't <i>have</i> to be named `disposable`: Yeoman just does this by default.
+
+But I'm guessing it does this to silently reference VS Code's internal `Disposable` object. `vscode.commands.registerCommand()` returns `Disposable`, which has the method `dispose()`. And `Disposable.dispose()` unregisters the command and releases its resources.
+
+`context.subscriptions.push(disposable)` registers that `disposable` with the extension context. VS Code then automatically calls `dispose()` on it when the extension is deactivated — for any reason: a closed window, VS Code shutting down, or something similar.
