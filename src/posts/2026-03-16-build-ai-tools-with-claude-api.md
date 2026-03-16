@@ -160,6 +160,7 @@ The `configuration` object defines how the extension gets configured in VS Code'
 
 <img src="/assets/img/vs-code-settings-menu.jpg" alt="screen shot of the extension's configuration window in VS Code" />
 
+The name of the extension in settings as well as the input fields and their respective descriptions are all inside this object.  `enum` forces a dropdown menu of options to select.
 
 <h2>The Save Selected Text `extension.ts`</h2>
 
