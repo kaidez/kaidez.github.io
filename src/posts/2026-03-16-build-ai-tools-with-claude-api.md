@@ -28,7 +28,7 @@ I assume that you're familiar with the Generative AI landscape that's so common 
   <li>And most importantly: that, at some point, you will <a href="https://platform.claude.com/docs/en/api/overview" title="Claude API Documentation" aria-label="Read the Claude API documentation" rel="noopener noreferrer">read the Claude API documentation</a> if you haven't already.  Perhaps after you've read this post? &#128522;</li>
 </ol>
 
-Lastly, it's best practice to scaffold out the codebase for a VS Code extension with <a href="https://yeoman.io/" title="Yeoman Scaffolding Tool" aria-label="Scaffold out your web application with Yeoman" rel="noopener noreferrer">Yeoman</a>. I point out the code snippets that Yeoman generates, but I assume you'll be able to do that on your own.
+Lastly, it's best practice to scaffold out the codebase for a VS Code extension with <a href="https://yeoman.io/" title="Yeoman Scaffolding Tool" aria-label="Scaffold out your web application with Yeoman" rel="noopener noreferrer">Yeoman</a>. I'll point out the VS Code-specific code snippets that Yeoman generates, but I assume you can handle the setup.
 
 Read the documentation on <a href="https://code.visualstudio.com/api/get-started/your-first-extension"  title="Create a VS Code extension codebase" aria-label="Read how to create a VS Code extension codebase" rel="noopener noreferrer">how to scaffold out the codebase for VS Code extensions</a>.
 
@@ -56,7 +56,7 @@ So Claude has a brain with really good guessing capabilities. The Claude API let
 
 This API is a REST API built on the standard request/response pattern. An application sends a formatted request to a remote server. The server responds to the request by sending structured data back.
 
-At the time of this post's published date, the production-ready version of the Claude API is relatively small.  It has four operations:
+At the time of this post's published date, the stable version of the Claude API is relatively small.  It has four operations:
 
 <ol>
   <li><b>Messages:</b> Claude's primary API that lets the application send messages to Claude and receive responses as if they were having a conversation.</li>
@@ -86,7 +86,7 @@ The fourth project was building <a href="https://www.anthropic.com/news/model-co
 
 The code is mostly the same across the three VS Code extensions.  So I'll walk through what the first one does while pointing out the unique code blocks of the other two.
 
-<h2>The Save Selected Text `package.json`</h2>
+<h2>The Save Selected Text <code>package.json</code></h2>
 
 You can <a href="https://github.com/kaidez/save-selected-text/blob/main/package.json" title="Save Selected Text VS Code extension for package.json" aria-label="Review the package.json for Save Selected Text VS Code extension" rel="noopener noreferrer">view the complete `package.json` file</a> on the repo. But here are the core configs as they relate to VS Code extensions:
 
@@ -128,7 +128,7 @@ You can <a href="https://github.com/kaidez/save-selected-text/blob/main/package.
       },
       "saveSelectedText.chooseYourModel": {
         "type": "string",
-        "default": "claude-sonnet-4-6",
+        "default": "claude-haiku-4-5-20251001",
         "enum": [
           "claude-haiku-4-5-20251001",
           "claude-sonnet-4-6",
@@ -146,27 +146,29 @@ You can <a href="https://github.com/kaidez/save-selected-text/blob/main/package.
 }
 </code></pre>
 
-`engines` refers to the minimum version VS Code needs to run the extension (this will be important later). `categories` refers to how the extension should be categorized in the VS Code Extension marketplace.
+`engines` refers to the minimum version VS Code needs to run the extension: version 1.74 in this case. `categories` refers to how the extension should be categorized in the VS Code Extension marketplace.
 
 `activationEvents` controls when the extension loads and `contributes` registers commands/menus/settings. In VS Code 1.74 and newer, explicit `activationEvents` entries are optional — VS Code automatically infers when to load the extension from what's declared in `contributes`.
 
-Extension developers coding for 1.74 and higher tend to leave `activationEvents` in the file to indicate that they intentionally chose automatic activation. So I left it there.
+Developers targeting 1.74+ often keep `activationEvents` to signal they chose automatic activation. So I left it there to do the just that.
 
 The extension gets triggered by selecting a menu item with a right-click. In `contributes.commands[]`, the `title` value defines the command's label in the menu. `command` registers the unique command ID with VS Code.
 
 In `menus["editor/context"][]`, the `command` value needs to be added, and <i>must</i> match the value in `contributes.commands[]`. `when` defines when the menu appears — when text is selected in this case. `group` decides which menu group the item appears in — `navigation` in this case.
 
-The `configuration` object defines how the extension gets configured in VS Code's `Settings` window...see the screenshot below:
+The `configuration` object defines how the extension gets configured in VS Code's `Settings` window. See the screenshot below:
 
 <img src="/assets/img/vs-code-settings-menu.jpg" alt="screen shot of the extension's configuration window in VS Code" />
 
-The name of the extension in settings as well as the input fields and their respective descriptions are all inside this object.  `enum` forces a dropdown menu of options to select.
+The name of the extension in settings as well as the input fields and their respective descriptions are all inside this object.  The `enum` array forces a dropdown menu of options to select. `enumDescriptions` creates a one-to-one mapping of the description of the items in `enum`.
 
-<h2>The Save Selected Text `extension.ts`</h2>
+<h2>The Save Selected Text extension.ts</h2>
 
-Your extension file can be named whatever you want, but Yeoman's convention is to name it `extension.ts`.
+Your extension file can be named whatever you want, but a Yeoman-generated scaffold automatically names it `extension.ts`.
 
 <pre><code class="language-javascript">
+// extensions.ts
+
 import * as vscode from 'vscode';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -194,15 +196,13 @@ export function activate(context: vscode.ExtensionContext) {
       return;
     }
 
-    // Get config values
     const apiKey = vscode.workspace.getConfiguration('saveSelectedText').get<string>('apiKey');
     if (!apiKey) {
       vscode.window.showErrorMessage('No API key found. Please add it in Settings → Save Selected Text → Api Key.');
       return;
     }
 
-    const claudeModel = vscode.workspace.getConfiguration('saveSelectedText')
-      .get<string>('chooseYourModel') ?? 'claude-sonnet-4-6';
+    const claudeModel = vscode.workspace.getConfiguration('saveSelectedText').get<string>('chooseYourModel') ?? 'claude-haiku-4-5-20251001';
 
     // Create prompts folder if it doesn't exist
     const promptsPath = path.join(workspacePath, 'prompts');
@@ -267,7 +267,7 @@ import Anthropic from '@anthropic-ai/sdk';
 ...
 </code></pre>
 
-We're importing the entire `vscode` module so our code can interact with the VS Code editor. We're also importing Node's `fs` and `path` modules to read/write files and build file paths.
+We're importing the entire `vscode` module so our code can interact with the VS Code editor. We're also importing Node's `fs` and `path` modules to, respectively, read/write files and build file paths.
 
 The Anthropic SDK is imported so we can send API requests to the Claude Messages API.
 
@@ -279,7 +279,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 The function that connects our extension to VS Code. It <i>must</i> be named `activate`.
 
-The function <i>must</i> also have a `context` parameter, allowing it to interact with specific methods inside the `vscode` object. The param <i>must</i> be typed as `vscode.ExtensionContext`.
+It must also take a `context` parameter to access methods on the vscode object. For TypeScript's strong-typing requirements, the param <i>must</i> be typed as `vscode.ExtensionContext`.
 
 <pre><code class="language-javascript">
 let disposable = vscode.commands.registerCommand('save-selected-text.saveSelection', async () => {
@@ -290,9 +290,9 @@ context.subscriptions.push(disposable);
 
 `disposable` is the variable that connects the extension to VS Code. It doesn't <i>have</i> to be named `disposable`: Yeoman just does this by default.
 
-But I'm guessing it does this to silently reference VS Code's internal `Disposable` object. `vscode.commands.registerCommand()` returns `Disposable`, which has the method `dispose()`. And `Disposable.dispose()` unregisters the command and releases its resources.
+But I'm guessing Yeoman does this to silently reference VS Code's internal `Disposable` object. `vscode.commands.registerCommand()` returns `Disposable`, which has the method `dispose()`. And `Disposable.dispose()` unregisters the command and releases its resources.
 
-`context.subscriptions.push(disposable)` registers that `disposable` with the extension context. VS Code then automatically calls `dispose()` on it when the extension is deactivated — for any reason: a closed window, VS Code shutting down, or something similar.
+`context.subscriptions.push(disposable)` registers that `disposable` with the extension context. VS Code then calls `dispose()` when the extension is deactivated — for any reason: a closed window, VS Code shutting down, etc.
 
 <pre><code class="language-javascript">
 ...
@@ -325,3 +325,25 @@ if (!workspacePath) {
 </ol>
 
 If any of those things are false, a `return` is fired off and exits that function early.
+
+<pre><code class="language-javascript">
+const apiKey = vscode.workspace.getConfiguration('saveSelectedText').get<string>('apiKey');
+if (!apiKey) {
+  vscode.window.showErrorMessage('No API key found. Please add it in Settings → Save Selected Text → Api Key.');
+  return;
+}
+
+const claudeModel = vscode.workspace.getConfiguration('saveSelectedText').get<string>('chooseYourModel') ?? 'claude-haiku-4-5-20251001';
+</code></pre>
+
+Both `const apiKey ` and `const claudeModel` read the values entered in the Settings window displayed in the screenshot above. Those are, respectively, your Claude API key and a model-selection dropdown.
+
+`claude-haiku-4-5-20251001`  is the default — used when no model is manually selected.  At this post's publish date, Haiku is cheapest per token.
+
+<pre><code class="language-javascript">
+const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+const fileName = `prompt-${timestamp}.txt`;
+const filePath = path.join(promptsPath, fileName);
+
+vscode.window.showInformationMessage(`Saved "${fileName}" — sending to Claude...`);
+</code></pre>
