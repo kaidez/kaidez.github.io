@@ -5,7 +5,7 @@ excerpt: "What I learned building AI tools with the Claude API: stateless conver
 draft: true
 layout: layouts/post.njk
 permalink: /building-ai-tools-claude-api/
-image: napster-ai.jpeg
+image: claude-api.jpg
 tags: ["coding-best-practices"]
 secondary_tags: ["claude", "ai", "typescript"]
 category: Coding Tips
