@@ -235,7 +235,6 @@ export function activate(context: vscode.ExtensionContext) {
           ? message.content[0].text
           : 'No response received.';
 
-        // save the selected text to the file after getting the response, so we don't create files for failed API calls
         fs.writeFileSync(filePath, selectedText, 'utf8');
 
         const doc = await vscode.workspace.openTextDocument({
@@ -416,3 +415,9 @@ This callback makes the API request, handles Claude's response, and processes th
 The request is in `const message = await client.messages.create()`. It includes the model chosen in VS Code settings — the model that processes our prompt.
 
 It defines the maximum number of tokens in Claude's response. It also defines who's sending the message, the `user`, and the content of the message.
+
+`const response` is a string extracted from Claude's response object. It does a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator">ternary check</a> for if the `message.content[0]` is a text block, then pulls the text from it.
+
+`response` contains Claude's response to our prompt (the selected text). It will be placed in a Markdown file (`const doc`) headlining our prompt as "SELECTED TEXT",  and Claude's response to it headlined as 'CLAUDE'S RESPONSE'.
+
+The selected text is saved to the `prompts` folder. A separate document showing both the prompt and Claude's response is then opened in a new VS Code tab.
