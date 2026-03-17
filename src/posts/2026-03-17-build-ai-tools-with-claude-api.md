@@ -25,7 +25,7 @@ I assume that you're familiar with the Generative AI landscape that's so common 
   <li>That you have the <a href="https://claude.com/download" title="Claude Desktop App" aria-label="Download a Claude Desktop app" rel="noopener noreferrer">Claude Desktop</a> app (the $20USD/month kind of app at the bare minimum).</li>
   <li>That you have a Claude API key...if you don't have one, <a href="https://platform.claude.com/settings/keys" title="Claude API Key" aria-label="Get a Claude API key" rel="noopener noreferrer">get a Claude API key here</a>.</li>
   <li>That you're willing to pay for Claude API credits if needed.</li>
-  <li>And most importantly: that, at some point, you will <a href="https://platform.claude.com/docs/en/api/overview" title="Claude API Documentation" aria-label="Read the Claude API documentation" rel="noopener noreferrer">read the Claude API documentation</a> if you haven't already.  Perhaps after you've read this post? &#128522;</li>
+  <li>And most importantly: that, at some point, you will <a href="https://platform.claude.com/docs/en/api/overview" title="Claude API Documentation" aria-label="Read the Claude API documentation" rel="noopener noreferrer">read the Claude API documentation</a> if you haven't already. Perhaps after you've read this post? &#128522;</li>
 </ol>
 
 Lastly, it's best practice to scaffold out the codebase for a VS Code extension with <a href="https://yeoman.io/" title="Yeoman Scaffolding Tool" aria-label="Scaffold out your web application with Yeoman" rel="noopener noreferrer">Yeoman</a>. I'll point out the VS Code-specific code snippets that Yeoman generates, but I assume you can handle the setup.
@@ -40,9 +40,9 @@ At its core, Claude is a powerful, stateless piece of prediction software. You s
 
 The word "stateless" is key here. Claude doesn't remember previous conversations...only the one it's having at that very moment.
 
-For every new prompt you send, the entire message history — your messages and Claude's responses — gets resent.  This is how Claude gets the conversation's context.
+For every new prompt you send, the entire message history — your messages and Claude's responses — gets resent. This is how Claude gets the conversation's context.
 
-<em>Side note: that message history clearly gets big...that's why Claude Code will prompt you to run `/compact` from time-to-time. Also, <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching" title="The Claude API's prompt caching feature" aria-label="Read about the prompt caching with the Claude API" rel="noopener noreferrer">Claude's API has a "prompt caching" feature</a> that you can pass to requests.  Doing both of these things can lower your Claude costs.</em>
+<em>Side note: that message history clearly gets big...that's why Claude Code will prompt you to run `/compact` from time-to-time. Also, <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching" title="The Claude API's prompt caching feature" aria-label="Read about the prompt caching with the Claude API" rel="noopener noreferrer">Claude's API has a "prompt caching" feature</a> that you can pass to requests. Doing both of these things can lower your Claude costs.</em>
 
 The word "guesses" is also key: Claude predicts its answer but doesn't "think about it" like humans do. Instead, it pattern-matches against training data (a ton of human-written text) rather than reasoning through it consciously.
 
@@ -77,7 +77,7 @@ Two other API operations are in beta as of this writing:
 The first three tools I wrote were VS Code extensions that used the Messages API: 
 
 <ol>
-  <li><b>Save Selected Text:</b> Right-click on selected text in VS Code to treat it like a prompt sent to the Claude API. Claude then responds to it and saves its response in a text file. <a href="https://github.com/kaidez/save-selected-text" title="Save Selected Text Demo Repository on GitHub" aria-label="Go to the Save Selected Text Demo Repository on GitHub" rel="noopener noreferrer">View the repo</a>.</li>
+  <li><b>Save Selected Text:</b> Right-click on selected text in VS Code to treat it like a prompt sent to Claude. Claude then responds to it via its API and saves its response in a text file. <a href="https://github.com/kaidez/save-selected-text" title="Save Selected Text Demo Repository on GitHub" aria-label="Go to the Save Selected Text Demo Repository on GitHub" rel="noopener noreferrer">View the repo</a>.</li>
   <li><b>Claude Prompt Reader:</b> Similar to the Save Selected Text extension except you don't select and right-click on the text. Instead, the VS Code extension launches from the Command Palette, sends the prompt to Claude, then displays the response. <a href="https://github.com/kaidez/claude-prompt-reader" title="Claude Prompt Reader Demo Repository on GitHub" aria-label="Go to the Claude Prompt Reader Demo Repository on GitHub" rel="noopener noreferrer">View the repo</a>.</li>
   <li><b>GitHub Triage Tracker:</b> Fetches the first 10 open issues from Microsoft's VS Code repo. Each issue is sent to Claude via the Messages API. Claude classifies its severity, writes a plain-English summary, and suggests a next action for the maintainers. <a href="https://github.com/kaidez/github-issue-triage" title="GitHub Triage Tracker Demo Repository on GitHub" aria-label="Go to the GitHub Triage Tracker Demo Repository on GitHub" rel="noopener noreferrer">View the repo</a>.</li>
 </ol>
@@ -292,7 +292,7 @@ context.subscriptions.push(disposable);
 
 But I'm guessing Yeoman does this to silently reference VS Code's internal `Disposable` object. `vscode.commands.registerCommand()` returns `Disposable`, which has the method `dispose()`. And `Disposable.dispose()` unregisters the command and releases its resources.
 
-`context.subscriptions.push(disposable)` registers that `disposable` with the extension context. VS Code then calls `dispose()` when the extension is deactivated — for any reason: a closed window, VS Code shutting down, etc.
+`context.subscriptions.push(disposable)` registers that `disposable` with the extension context. VS Code calls `dispose()` when the extension is deactivated — for any reason: a closed window, VS Code shutting down, etc.
 
 <pre><code class="language-javascript">
 ...
@@ -382,3 +382,37 @@ await vscode.window.withProgress({
 `vscode.window.withProgress` configures the progress notification appearing at the bottom-right corner of the screen. It displays the text "Claude is thinking...".
 
 We could put a Cancel button in that notification but choose not to. So we pass a `cancellable: false` value to our `withProgress` call.
+
+<pre><code class="language-javascript">
+async () => {
+  try {
+    const message = await client.messages.create({
+      model: claudeModel,
+      max_tokens: 1024,
+      messages: [{ role: 'user', content: selectedText }]
+    });
+
+    const response = message.content[0].type === 'text'
+      ? message.content[0].text
+      : 'No response received.';
+
+    fs.writeFileSync(filePath, selectedText, 'utf8');
+
+    const doc = await vscode.workspace.openTextDocument({
+      content: `SELECTED TEXT:\n${selectedText}\n\n---\n\nCLAUDE'S RESPONSE:\n${response}`,
+      language: 'markdown'
+    });
+
+    await vscode.window.showTextDocument(doc);
+
+  } catch (error) {
+    vscode.window.showErrorMessage(`Claude API error: ${error}`);
+  }
+}
+</code></pre>
+
+This callback makes the API request, handles Claude's response, and processes the returned text. It's wrapped in a standard JavaScript `try/catch` block.
+
+The request is in `const message = await client.messages.create()`. It includes the model chosen in VS Code settings — the model that processes our prompt.
+
+It defines the maximum number of tokens in Claude's response. It also defines who's sending the message, the `user`, and the content of the message.
