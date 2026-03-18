@@ -42,7 +42,7 @@ The word "stateless" is key here. Claude doesn't remember previous conversations
 
 For every new prompt you send, the entire message history — your messages and Claude's responses — gets resent. This is how Claude gets the conversation's context.
 
-<em>Side note: obviously, that message history clearly can get big...that's why Claude Code will prompt you to run `/compact` from time-to-time. Also, <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching" title="The Claude API's prompt caching feature" aria-label="Read about the prompt caching with the Claude API" rel="noopener noreferrer">Claude's API has a "prompt caching" feature</a> that you can pass to requests. Doing both of these things can lower your Claude costs.</em>
+<em>Side note: obviously, that message history can get big...that's why Claude Code will prompt you to run `/compact` from time-to-time. Also, <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching" title="The Claude API's prompt caching feature" aria-label="Read about the prompt caching with the Claude API" rel="noopener noreferrer">Claude's API has a "prompt caching" feature</a> that you can pass to requests. Doing both of these things can lower your Claude costs.</em>
 
 The word "guesses" is also key: Claude predicts its answer but doesn't "think about it" like humans do. Instead, it pattern-matches against training data (a ton of human-written text) rather than reasoning through it consciously.
 
@@ -163,9 +163,7 @@ That's ("Claude: Save Selected Text") in this case. It looks like this when in a
 
 In `menus["editor/context"][]`, the `command` value needs to be added, and <i>must</i> match the value in `contributes.commands[]`. `when` defines when the menu appears — when text is selected in this case. `group` decides which menu group the item appears in — `navigation` in this case.
 
-The `configuration` object defines how the extension gets configured in VS Code's `Settings` window. See the screenshot below:
-
-<img src="/assets/img/vs-code-settings-menu.jpg" alt="Screenshot of the Save Selected Text extension settings in VS Code" />
+The `configuration` object defines how the extension gets configured in VS Code's "Settings" window.
 
 This object defines the extension name, input fields, and their descriptions in VS Code Settings. The `enum` array forces a dropdown menu of options to select. `enumDescriptions` creates a one-to-one mapping of the description of the items in `enum`.
 
@@ -342,7 +340,7 @@ if (!apiKey) {
 const claudeModel = vscode.workspace.getConfiguration('saveSelectedText').get<string>('chooseYourModel') ?? 'claude-haiku-4-5-20251001';
 </code></pre>
 
-Both `const apiKey` and `const claudeModel` read the values entered in the Settings window displayed in the screenshot above. Those are, respectively, your Claude API key and a model-selection dropdown.
+Both `const apiKey` and `const claudeModel` read the values entered in the Settings window. Those are, respectively, your Claude API key and a model-selection dropdown.
 
 `claude-haiku-4-5-20251001` is the default — used when no model is manually selected. At this post's publish date, Haiku is cheapest per token.
 
@@ -429,8 +427,14 @@ It defines the maximum number of tokens in Claude's response. It also defines wh
 
 The selected text is saved to the `prompts` folder. A separate document showing both the prompt and Claude's response is then opened in a new VS Code tab.
 
-The end result will work like this:
+<h2>Manually Testing In VS Code</h2>
+
+Testing this is pretty straightforward. Open `extension.ts`, then click "Run > Start Debugging".
+
+It's here where you both enter your Claude API key and choose which model you want to use. You would do this in "Code > Settings > Settings" on a Mac, or "File > Preferences > Settings" on a Windows PC.
+
+<img src="/assets/img/vs-code-settings-menu.jpg" alt="Screenshot of the Save Selected Text extension settings in VS Code" />
+
+And when the extension gets put to work in VS Code, it will work like this:
 
 <img src="/assets/img/claude-save-select-text.gif" alt="Animated demo of the Save Selected Text VS Code extension in action" />
-
-<h2>Manually Testing In VS Code</h2>
