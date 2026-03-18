@@ -578,6 +578,8 @@ Again, Node's `path` module is used to build file paths, and `fs` is used to rea
 
 Any chat history generated during a session is saved in JSON format and stored in a `history` folder. `getHistoryPath()` builds the file path for the chat history. `loadHistory()` then reads and returns it.
 
+`saveHistory()` writes the full conversation history array to the JSON file, replacing whatever was there before. `clearHistory()` clears that history via a command in the Command Palette.
+
 <h2 id="claude-prompt-reader-extension-ts">The Claude Prompt Reader <code>extension.ts</code></h2>
 
 <pre><code class="language-javascript">
