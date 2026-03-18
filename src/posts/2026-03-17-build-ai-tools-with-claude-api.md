@@ -42,7 +42,7 @@ The word "stateless" is key here. Claude doesn't remember previous conversations
 
 For every new prompt you send, the entire message history — your messages and Claude's responses — gets resent. This is how Claude gets the conversation's context.
 
-<em>Side note: that message history clearly gets big...that's why Claude Code will prompt you to run `/compact` from time-to-time. Also, <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching" title="The Claude API's prompt caching feature" aria-label="Read about the prompt caching with the Claude API" rel="noopener noreferrer">Claude's API has a "prompt caching" feature</a> that you can pass to requests. Doing both of these things can lower your Claude costs.</em>
+<em>Side note: obviously, that message history clearly can get big...that's why Claude Code will prompt you to run `/compact` from time-to-time. Also, <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching" title="The Claude API's prompt caching feature" aria-label="Read about the prompt caching with the Claude API" rel="noopener noreferrer">Claude's API has a "prompt caching" feature</a> that you can pass to requests. Doing both of these things can lower your Claude costs.</em>
 
 The word "guesses" is also key: Claude predicts its answer but doesn't "think about it" like humans do. Instead, it pattern-matches against training data (a ton of human-written text) rather than reasoning through it consciously.
 
@@ -98,7 +98,7 @@ You can <a href="https://github.com/kaidez/save-selected-text/blob/main/package.
 "categories": [
   "Other"
 ],
-...
+"main": "./out/extension.js",
 "activationEvents": [],
 ...
 "contributes": {
@@ -147,6 +147,8 @@ You can <a href="https://github.com/kaidez/save-selected-text/blob/main/package.
 </code></pre>
 
 `engines` refers to the minimum version VS Code needs to run the extension: version 1.74 in this case. `categories` refers to how the extension should be categorized in the VS Code Extension marketplace.
+
+`main` is the entry point for our app.  In this case, it's `extension.ts`.
 
 `activationEvents` controls when the extension loads and `contributes` registers commands/menus/settings. In VS Code 1.74+, `activationEvents` entries are optional — VS Code infers activation from `contributes`.
 
@@ -418,6 +420,10 @@ It defines the maximum number of tokens in Claude's response. It also defines wh
 
 `const response` is a string extracted from Claude's response object. It does a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator">ternary check</a> for if the `message.content[0]` is a text block, then pulls the text from it.
 
-`response` contains Claude's response to our prompt (the selected text). It will be placed in a Markdown file (`const doc`) headlining our prompt as "SELECTED TEXT",  and Claude's response to it headlined as 'CLAUDE'S RESPONSE'.
+`response` contains Claude's response to our prompt (the selected text). It will be placed in a Markdown file (`const doc`) headlining our prompt as "SELECTED TEXT", and Claude's response to it headlined as 'CLAUDE'S RESPONSE'.
 
 The selected text is saved to the `prompts` folder. A separate document showing both the prompt and Claude's response is then opened in a new VS Code tab.
+
+The end result will work like this:
+
+<img src="/assets/img/claude-save-select-text.gif" alt="Animated demo of the Save Selected Text VS Code extension in action" />
