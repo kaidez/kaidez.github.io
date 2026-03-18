@@ -148,7 +148,7 @@ You can <a href="https://github.com/kaidez/save-selected-text/blob/main/package.
 
 `engines` refers to the minimum version VS Code needs to run the extension: version 1.74 in this case. `categories` refers to how the extension should be categorized in the VS Code Extension marketplace.
 
-`main` is the entry point for our app.  In this case, it's `extension.ts`.
+`main` is the entry point for our app. In this case, it's `extension.ts`.
 
 `activationEvents` controls when the extension loads and `contributes` registers commands/menus/settings. In VS Code 1.74+, `activationEvents` entries are optional — VS Code infers activation from `contributes`.
 
