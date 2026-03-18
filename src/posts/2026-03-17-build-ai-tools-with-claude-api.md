@@ -154,7 +154,9 @@ You can <a href="https://github.com/kaidez/save-selected-text/blob/main/package.
 
 Developers targeting 1.74+ often keep `activationEvents` to signal they chose automatic activation. So I left it there to do just that.
 
-The extension gets triggered by selecting a menu item with a right-click. In `contributes.commands[]`, the `title` value defines the command's label in the menu. `command` registers the unique command ID with VS Code.
+The extension gets triggered by selecting a menu item with a right-click. In `contributes.commands[]`, the `title` value defines the command's label in the menu ("Claude: Save Selected Text") in this case. `command` registers the unique command ID with VS Code.
+
+<img src="/assets/img/save-selected-text-menu.jpg" alt="screen shot of the extension's configuration window in VS Code" />
 
 In `menus["editor/context"][]`, the `command` value needs to be added, and <i>must</i> match the value in `contributes.commands[]`. `when` defines when the menu appears — when text is selected in this case. `group` decides which menu group the item appears in — `navigation` in this case.
 
