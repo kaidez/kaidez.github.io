@@ -17,7 +17,20 @@ I needed a firmer grasp on how Claude's API works, so I built four quick tools i
 
 As things progressed, I also came away with a deeper understanding of system design and integration engineering. That may be the even <i>bigger</i> payoff!
 
-<h2>Assumptions</h2>
+<h2>Table of Contents</h2>
+
+1. [Assumptions](#assumptions)
+2. [How Claude <i>Actually</i> Works](#how-claude-works)
+3. [The Claude API](#claude-api)
+4. [What I Built With the Claude API](#what-i-built-with-claude-api)
+5. [The Save Selected Text `package.json`](#package-json)
+6. [The Save Selected Text `extension.ts`](#extension-js)
+7. [Manually Testing In VS Code](#manual-testing)
+8. [What's Left To Do](#todo)
+9. [Further Reading](#further-reading)
+10. [Conclusion](#conclusion)
+
+<h2 id="assumptions">Assumptions</h2>
 
 I assume that you're familiar with the Generative AI landscape that's so common at the time of this post. And if you want to use Claude to do all this, I'm also assuming the following:
 
@@ -32,7 +45,7 @@ Lastly, it's best practice to scaffold out the codebase for a VS Code extension 
 
 Read the documentation on <a href="https://code.visualstudio.com/api/get-started/your-first-extension" title="Create a VS Code extension codebase" aria-label="Read how to create a VS Code extension codebase" rel="noopener noreferrer">how to scaffold out the codebase for VS Code extensions</a>.
 
-<h2>How Claude <i>Actually</i> Works</h2>
+<h2 id="how-claude-works">How Claude <i>Actually</i> Works</h2>
 
 Most people know Claude as a desktop AI app or a CLI tool favored by developers. But knowing how it works under the hood is important.
 
@@ -50,7 +63,7 @@ Claude is guessing how to respond to prompts it receives. That differs from "<a 
 
 Claude doesn't predict a fixed outcome. Instead, it "generates" new content in response to whatever prompt it receives. This is the core definition of "<a href="https://www.ibm.com/think/topics/generative-ai" title="What is Generative AI?" aria-label="Read IBM's definition of Generative AI" rel="noopener noreferrer">Generative AI</a>".
 
-<h2>The Claude API</h2>
+<h2 id="claude-api">The Claude API</h2>
 
 So Claude has a brain with really good guessing capabilities. The Claude API lets you pass those capabilities to your applications.
 
@@ -72,7 +85,7 @@ Two other API operations are in beta as of this writing:
   <li><b>Skills:</b> used to create skills for custom agents.</li>
 </ol>
 
-<h2>What I Built With the Claude API</h2>
+<h2 id="what-i-built-with-claude-api">What I Built With the Claude API</h2>
 
 The first three tools I wrote were VS Code extensions that used the Messages API: 
 
@@ -86,7 +99,7 @@ The fourth project was building <a href="https://www.anthropic.com/news/model-co
 
 The code is mostly the same across the three VS Code extensions. So I'll walk through what the first one does while pointing out the unique code blocks of the other two.
 
-<h2>The Save Selected Text <code>package.json</code></h2>
+<h2 id="package-json">The Save Selected Text <code>package.json</code></h2>
 
 You can <a href="https://github.com/kaidez/save-selected-text/blob/main/package.json" title="Save Selected Text VS Code extension for package.json" aria-label="Review the package.json for Save Selected Text VS Code extension" rel="noopener noreferrer">view the complete `package.json` file</a> on the repo. But here are the core configs as they relate to VS Code extensions:
 
@@ -167,7 +180,7 @@ The `configuration` object defines how the extension gets configured in VS Code'
 
 This object defines the extension name, input fields, and their descriptions in VS Code Settings. The `enum` array forces a dropdown menu of options to select. `enumDescriptions` creates a one-to-one mapping of the description of the items in `enum`.
 
-<h2>The Save Selected Text <code>extension.ts</code></h2>
+<h2 id="extension-js">The Save Selected Text <code>extension.ts</code></h2>
 
 Your extension file can be named whatever you want, but a Yeoman-generated scaffold automatically names it `extension.ts`.
 
@@ -427,7 +440,7 @@ It defines the maximum number of tokens in Claude's response. It also defines wh
 
 The selected text is saved to the `prompts` folder. A separate document showing both the prompt and Claude's response is then opened in a new VS Code tab.
 
-<h2>Manually Testing In VS Code</h2>
+<h2 id="manual-testing">Manually Testing In VS Code</h2>
 
 Testing this is pretty straightforward. Open `extension.ts`, then click "Run > Start Debugging".
 
