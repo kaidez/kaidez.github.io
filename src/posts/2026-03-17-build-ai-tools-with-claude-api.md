@@ -23,12 +23,13 @@ As things progressed, I also came away with a deeper understanding of system des
 2. [How Claude <i>Actually</i> Works](#how-claude-works)
 3. [The Claude API](#claude-api)
 4. [What I Built With the Claude API](#what-i-built-with-claude-api)
-5. [The Save Selected Text `package.json`](#package-json)
+5. [The Save Selected Text `package.json`](#save-selected-text-package-json)
 6. [The Save Selected Text `extension.ts`](#extension-js)
 7. [Manually Testing In VS Code](#manual-testing)
-8. [What's Left To Do](#todo)
-9. [Further Reading](#further-reading)
-10. [Conclusion](#conclusion)
+8. [The Claude Prompt Reader `package.json`](#claude-prompt-reader-package-json)
+9. [What's Left To Do](#todo)
+10. [Further Reading](#further-reading)
+11. [Conclusion](#conclusion)
 
 <h2 id="assumptions">Assumptions</h2>
 
@@ -99,11 +100,12 @@ The fourth project was building <a href="https://www.anthropic.com/news/model-co
 
 The code is mostly the same across the three VS Code extensions. So I'll walk through what the first one does while pointing out the unique code blocks of the other two.
 
-<h2 id="package-json">The Save Selected Text <code>package.json</code></h2>
+<h2 id="save-selected-text-package-json">The Save Selected Text <code>package.json</code></h2>
 
 You can <a href="https://github.com/kaidez/save-selected-text/blob/main/package.json" title="Save Selected Text VS Code extension for package.json" aria-label="Review the package.json for Save Selected Text VS Code extension" rel="noopener noreferrer">view the complete `package.json` file</a> on the repo. But here are the core configs as they relate to VS Code extensions:
 
 <pre><code class="language-javascript">
+// package.json
 ...
 "engines": {
   "vscode": "^1.74.0"
@@ -154,6 +156,10 @@ You can <a href="https://github.com/kaidez/save-selected-text/blob/main/package.
         "description": "Select which Claude model to use"
       }
     }
+  },
+  ...
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.78.0"
   }
 }
 </code></pre>
@@ -179,6 +185,8 @@ In `menus["editor/context"][]`, the `command` value needs to be added, and <i>mu
 The `configuration` object defines how the extension gets configured in VS Code's "Settings" window.
 
 This object defines the extension name, input fields, and their descriptions in VS Code Settings. The `enum` array forces a dropdown menu of options to select. `enumDescriptions` creates a one-to-one mapping of the description of the items in `enum`.
+
+The Anthropic SDK is needed to interact with Claude remotely and has been brought in as a dependency.
 
 <h2 id="extension-js">The Save Selected Text <code>extension.ts</code></h2>
 
@@ -453,3 +461,74 @@ And when the extension gets put to work in VS Code, it will work like this:
 <img src="/assets/img/claude-save-select-text.gif" alt="Animated demo of the Save Selected Text VS Code extension in action" />
 
 A new document shows the prompt under SELECTED TEXT and Claude's reply under CLAUDE'S RESPONSE. Plus, our prompt is saved in a time-stamped filename in our `prompts` folder. The `prompts` folder didn't exist when the extension ran, so one was created on the fly.
+
+<h2 id="claude-prompt-reader-package-json">The Claude Prompt Reader <code>package.json</code></h2>
+
+Where the "Save Selected Text" extension starts by right-clicking on text, the Claude Prompt Reader starts from the VS Code Command Palette.
+
+You can <a href="https://github.com/kaidez/claude-prompt-reader/blob/main/package.json" title="Claude Prompt Reader VS Code extension for package.json" aria-label="Review the package.json for Claude Prompt Reader VS Code extension" rel="noopener noreferrer">review the prompt reader's `package.json`</a> file, but there are differences between it and the Save Selected Text code:
+
+<pre><code class="language-javascript">
+{
+...
+  "contributes": {
+    "commands": [
+      {
+        "command": "claude-prompt-reader.readPrompts",
+        "title": "Claude Prompt Reader: Read Prompts"
+      },
+      {
+        "command": "claude-prompt-reader.clearHistory",
+        "title": "Claude Prompt Reader: Clear History"
+      }
+    ],
+    "configuration": {
+      "title": "Claude Prompt Reader",
+      "properties": {
+        "claudePromptReader.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "Your Anthropic API key"
+        },
+        "claudePromptReader.modelDropdown": {
+          "type": "string",
+          "default": "claude-sonnet-4-6",
+          "enum": [
+            "claude-haiku-4-5-20251001",
+            "claude-sonnet-4-6",
+            "claude-opus-4-6"
+          ],
+          "enumDescriptions": [
+            "Claude Haiku — fastest and most affordable",
+            "Claude Sonnet — balanced speed and intelligence (recommended)",
+            "Claude Opus — most powerful, slower and more expensive"
+          ],
+          "description": "Select which Claude model to use for processing prompts"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^9.0.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^25.5.0",
+    "@types/sinon": "^21.0.0",
+    "@types/vscode": "^1.110.0",
+    "@vscode/test-electron": "^2.5.2",
+    "glob": "^13.0.6",
+    "mocha": "^11.7.5",
+    "sinon": "^21.0.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.78.0"
+  }
+}
+</code></pre>
