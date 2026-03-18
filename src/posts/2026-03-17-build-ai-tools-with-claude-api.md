@@ -30,7 +30,7 @@ I assume that you're familiar with the Generative AI landscape that's so common 
 
 Lastly, it's best practice to scaffold out the codebase for a VS Code extension with <a href="https://yeoman.io/" title="Yeoman Scaffolding Tool" aria-label="Scaffold out your web application with Yeoman" rel="noopener noreferrer">Yeoman</a>. I'll point out the VS Code-specific code snippets that Yeoman generates, but I assume you can handle the setup.
 
-Read the documentation on <a href="https://code.visualstudio.com/api/get-started/your-first-extension"  title="Create a VS Code extension codebase" aria-label="Read how to create a VS Code extension codebase" rel="noopener noreferrer">how to scaffold out the codebase for VS Code extensions</a>.
+Read the documentation on <a href="https://code.visualstudio.com/api/get-started/your-first-extension" title="Create a VS Code extension codebase" aria-label="Read how to create a VS Code extension codebase" rel="noopener noreferrer">how to scaffold out the codebase for VS Code extensions</a>.
 
 <h2>How Claude <i>Actually</i> Works</h2>
 
@@ -59,7 +59,7 @@ This API is a REST API built on the standard request/response pattern. An applic
 At the time of this post's published date, the stable version of the Claude API is relatively small. It has four operations:
 
 <ol>
-  <li><b>Messages:</b> Claude's primary API that lets the application send messages to Claude and receive responses as if they were having a conversation.</li>
+  <li><b>Messages:</b> Claude's primary API for sending messages to Claude and receiving responses as if a conversation was going on.</li>
   <li><b>Messages Batches:</b> processes message requests asynchronously at a reduced cost.</li>
   <li><b>Token Counting:</b> counts the amount of tokens in your request before sending it, helping you manage costs.</li>
   <li><b>Models:</b> lets the application retrieve information about Claude's various models such as Sonnet and Haiku.</li>
@@ -104,7 +104,6 @@ You can <a href="https://github.com/kaidez/save-selected-text/blob/main/package.
 "contributes": {
   "commands": [
     {
-     
       "title": "Claude: Save Selected Text",
       "command": "save-selected-text.saveSelection",
     }
@@ -154,15 +153,19 @@ You can <a href="https://github.com/kaidez/save-selected-text/blob/main/package.
 
 Developers targeting 1.74+ often keep `activationEvents` to signal they chose automatic activation. So I left it there to do just that.
 
-The extension gets triggered by selecting a menu item with a right-click. In `contributes.commands[]`, the `title` value defines the command's label in the menu ("Claude: Save Selected Text") in this case. `command` registers the unique command ID with VS Code.
+The extension gets triggered by selecting a menu item with a right-click. In `contributes.commands[]`, the `title` value defines the command's label in the menu.
 
-<img src="/assets/img/save-selected-text-menu.jpg" alt="screen shot of the extension's configuration window in VS Code" />
+That's ("Claude: Save Selected Text") in this case. It looks like this when in action:
+
+<img src="/assets/img/save-selected-text-menu.jpg" alt="Screenshot of the Save Selected Text right-click context menu in VS Code" />
+
+`command` registers the unique command ID with VS Code.
 
 In `menus["editor/context"][]`, the `command` value needs to be added, and <i>must</i> match the value in `contributes.commands[]`. `when` defines when the menu appears — when text is selected in this case. `group` decides which menu group the item appears in — `navigation` in this case.
 
 The `configuration` object defines how the extension gets configured in VS Code's `Settings` window. See the screenshot below:
 
-<img src="/assets/img/vs-code-settings-menu.jpg" alt="screen shot of the extension's configuration window in VS Code" />
+<img src="/assets/img/vs-code-settings-menu.jpg" alt="Screenshot of the Save Selected Text extension settings in VS Code" />
 
 This object defines the extension name, input fields, and their descriptions in VS Code Settings. The `enum` array forces a dropdown menu of options to select. `enumDescriptions` creates a one-to-one mapping of the description of the items in `enum`.
 
@@ -171,7 +174,7 @@ This object defines the extension name, input fields, and their descriptions in 
 Your extension file can be named whatever you want, but a Yeoman-generated scaffold automatically names it `extension.ts`.
 
 <pre><code class="language-javascript">
-// extensions.ts
+// extension.ts
 
 import * as vscode from 'vscode';
 import * as fs from 'fs';
@@ -429,3 +432,5 @@ The selected text is saved to the `prompts` folder. A separate document showing 
 The end result will work like this:
 
 <img src="/assets/img/claude-save-select-text.gif" alt="Animated demo of the Save Selected Text VS Code extension in action" />
+
+<h2>Manually Testing In VS Code</h2>
