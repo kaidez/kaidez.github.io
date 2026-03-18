@@ -24,12 +24,13 @@ As things progressed, I also came away with a deeper understanding of system des
 3. [The Claude API](#claude-api)
 4. [What I Built With the Claude API](#what-i-built-with-claude-api)
 5. [The Save Selected Text `package.json`](#save-selected-text-package-json)
-6. [The Save Selected Text `extension.ts`](#extension-js)
+6. [The Save Selected Text `extension.ts`](#save-selected-text-extension-ts)
 7. [Manually Testing In VS Code](#manual-testing)
-8. [The Claude Prompt Reader `package.json`](#claude-prompt-reader-package-json)
-9. [What's Left To Do](#todo)
-10. [Further Reading](#further-reading)
-11. [Conclusion](#conclusion)
+8. [The Claude Prompt Reader](#claude-prompt-reader)
+9. [The Claude Prompt Reader `package.json`](#claude-prompt-reader-package-json)
+10. [The Claude Prompt Reader `history.ts`](#claude-prompt-reader-history-ts)
+11. [The Claude Prompt Reader `extension.ts`](#claude-prompt-reader-extension-ts)
+12. [Conclusion](#conclusion)
 
 <h2 id="assumptions">Assumptions</h2>
 
@@ -188,7 +189,7 @@ This object defines the extension name, input fields, and their descriptions in 
 
 The Anthropic SDK is needed to interact with Claude remotely and has been brought in as a dependency.
 
-<h2 id="extension-js">The Save Selected Text <code>extension.ts</code></h2>
+<h2 id="save-selected-text-extension-ts">The Save Selected Text <code>extension.ts</code></h2>
 
 Your extension file can be named whatever you want, but a Yeoman-generated scaffold automatically names it `extension.ts`.
 
@@ -462,73 +463,349 @@ And when the extension gets put to work in VS Code, it will work like this:
 
 A new document shows the prompt under SELECTED TEXT and Claude's reply under CLAUDE'S RESPONSE. Plus, our prompt is saved in a time-stamped filename in our `prompts` folder. The `prompts` folder didn't exist when the extension ran, so one was created on the fly.
 
+<h2 id="claude-prompt-reader">The Claude Prompt Reader</h2>
+
+Where the "Save Selected Text" extension starts by right-clicking on text, the Claude Prompt Reader starts from the VS Code Command Palette. Also, the chat history is saved in a `history` folder in JSON format.
+
 <h2 id="claude-prompt-reader-package-json">The Claude Prompt Reader <code>package.json</code></h2>
 
-Where the "Save Selected Text" extension starts by right-clicking on text, the Claude Prompt Reader starts from the VS Code Command Palette.
-
-You can <a href="https://github.com/kaidez/claude-prompt-reader/blob/main/package.json" title="Claude Prompt Reader VS Code extension for package.json" aria-label="Review the package.json for Claude Prompt Reader VS Code extension" rel="noopener noreferrer">review the prompt reader's `package.json`</a> file, but there are differences between it and the Save Selected Text code:
+You can <a href="https://github.com/kaidez/claude-prompt-reader/blob/main/package.json" title="Claude Prompt Reader VS Code extension for package.json" aria-label="Review the package.json for Claude Prompt Reader VS Code extension" rel="noopener noreferrer">review the prompt reader's `package.json`</a> file. There are slight differences between it and the Save Selected Text JSON file:
 
 <pre><code class="language-javascript">
 {
+// package.json
 ...
-  "contributes": {
-    "commands": [
-      {
-        "command": "claude-prompt-reader.readPrompts",
-        "title": "Claude Prompt Reader: Read Prompts"
+"contributes": {
+  "commands": [
+    {
+      "title": "Claude Prompt Reader: Read Prompts",
+      "command": "claude-prompt-reader.readPrompts"
+    },
+    {
+      "title": "Claude Prompt Reader: Clear History",
+      "command": "claude-prompt-reader.clearHistory"
+    }
+  ],
+  "configuration": {
+    "title": "Claude Prompt Reader",
+    "properties": {
+      "claudePromptReader.apiKey": {
+        "type": "string",
+        "default": "",
+        "description": "Your Anthropic API key"
       },
-      {
-        "command": "claude-prompt-reader.clearHistory",
-        "title": "Claude Prompt Reader: Clear History"
-      }
-    ],
-    "configuration": {
-      "title": "Claude Prompt Reader",
-      "properties": {
-        "claudePromptReader.apiKey": {
-          "type": "string",
-          "default": "",
-          "description": "Your Anthropic API key"
-        },
-        "claudePromptReader.modelDropdown": {
-          "type": "string",
-          "default": "claude-sonnet-4-6",
-          "enum": [
-            "claude-haiku-4-5-20251001",
-            "claude-sonnet-4-6",
-            "claude-opus-4-6"
-          ],
-          "enumDescriptions": [
-            "Claude Haiku — fastest and most affordable",
-            "Claude Sonnet — balanced speed and intelligence (recommended)",
-            "Claude Opus — most powerful, slower and more expensive"
-          ],
-          "description": "Select which Claude model to use for processing prompts"
-        }
+      "claudePromptReader.modelDropdown": {
+        "type": "string",
+        "default": "claude-haiku-4-5-20251001",
+        "enum": [
+          "claude-haiku-4-5-20251001",
+          "claude-sonnet-4-6",
+          "claude-opus-4-6"
+        ],
+        "enumDescriptions": [
+          "Claude Haiku — fastest and most affordable",
+          "Claude Sonnet — balanced speed and intelligence (recommended)",
+          "Claude Opus — most powerful, slower and more expensive"
+        ],
+        "description": "Select which Claude model to use for processing prompts"
       }
     }
-  },
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "pretest": "npm run compile",
-    "test": "node ./out/test/runTest.js"
-  },
-  "devDependencies": {
-    "@types/glob": "^9.0.0",
-    "@types/mocha": "^10.0.10",
-    "@types/node": "^25.5.0",
-    "@types/sinon": "^21.0.0",
-    "@types/vscode": "^1.110.0",
-    "@vscode/test-electron": "^2.5.2",
-    "glob": "^13.0.6",
-    "mocha": "^11.7.5",
-    "sinon": "^21.0.2",
-    "typescript": "^5.9.3"
-  },
-  "dependencies": {
-    "@anthropic-ai/sdk": "^0.78.0"
   }
 }
+...
+}
+</code></pre>
+
+A second command, `clearHistory`, is added. There's no `menus` section — this extension launches from the Command Palette instead of a right-click menu. And the `model` config property is renamed to `modelDropdown`.
+
+<h2 id="claude-prompt-reader-history-ts">The Claude Prompt Reader <code>history.ts</code></h2>
+
+`history.ts` is a helper file used by the prompt reader's `extension.ts`. It exports both a TypeScript interface and four helper methods.
+
+<pre><code class="language-javascript">
+// history.ts
+
+import * as fs from 'fs';
+import * as path from 'path';
+
+export interface Message {
+  role: 'user' | 'assistant';
+  content: string;
+}
+
+export function getHistoryPath(workspacePath: string, promptFilePath: string): string {
+  const historyDir = path.join(workspacePath, 'history');
+  const promptFileName = path.basename(promptFilePath);
+  return path.join(historyDir, `${promptFileName}.json`);
+}
+
+export function loadHistory(workspacePath: string, promptFilePath: string): Message[] {
+  const historyPath = getHistoryPath(workspacePath, promptFilePath);
+
+  if (!fs.existsSync(historyPath)) {
+    return [];
+  }
+
+  try {
+    const raw = fs.readFileSync(historyPath, 'utf8');
+    return JSON.parse(raw) as Message[];
+  } catch {
+    return [];
+  }
+}
+
+export function saveHistory(workspacePath: string, promptFilePath: string, messages: Message[]): void {
+  const historyDir = path.join(workspacePath, 'history');
+
+  if (!fs.existsSync(historyDir)) {
+    fs.mkdirSync(historyDir, { recursive: true });
+  }
+
+  const historyPath = getHistoryPath(workspacePath, promptFilePath);
+  fs.writeFileSync(historyPath, JSON.stringify(messages, null, 2), 'utf8');
+}
+
+export function clearHistory(workspacePath: string, promptFilePath: string): void {
+  const historyPath = getHistoryPath(workspacePath, promptFilePath);
+
+  if (fs.existsSync(historyPath)) {
+    fs.unlinkSync(historyPath);
+  }
+}
+</code></pre>
+
+Again, Node's `path` module is used to build file paths, and `fs` is used to read and write files. The `Message` interface defines the shape of each conversation history entry — a `role` and a `content` string.
+
+Any chat history generated during a session is saved in JSON format and stored in a `history` folder. `getHistoryPath()` builds the file path for the chat history. `loadHistory()` then reads and returns it.
+
+<h2 id="claude-prompt-reader-extension-ts">The Claude Prompt Reader <code>extension.ts</code></h2>
+
+<pre><code class="language-javascript">
+import * as vscode from 'vscode';
+import * as fs from 'fs';
+import * as path from 'path';
+import Anthropic from '@anthropic-ai/sdk';
+import { Message, loadHistory, saveHistory, clearHistory } from './history';
+
+export function activate(context: vscode.ExtensionContext) {
+
+  // ─── Helper: send prompt to Claude with history ───────────────────────────
+  async function sendToClaudeWithHistory(
+    promptFilePath: string,
+    promptText: string,
+    progressTitle: string
+  ): Promise<void> {
+    const apiKey = vscode.workspace.getConfiguration('claudePromptReader').get<string>('apiKey');
+    const claudeModel = vscode.workspace.getConfiguration('claudePromptReader').get<string>('modelDropdown');
+
+    if (!apiKey) {
+      vscode.window.showErrorMessage('No API key found. Please add it in Settings → Claude Prompt Reader → Api Key.');
+      return;
+    }
+
+    const workspacePath = vscode.workspace.workspaceFolders?.[0].uri.fsPath;
+    if (!workspacePath) {
+      vscode.window.showErrorMessage('No workspace folder found.');
+      return;
+    }
+
+    const client = new Anthropic({ apiKey });
+
+    await vscode.window.withProgress({
+      location: vscode.ProgressLocation.Notification,
+      title: progressTitle,
+      cancellable: false
+    }, async () => {
+      try {
+        const history = loadHistory(workspacePath, promptFilePath);
+
+        const updatedHistory: Message[] = [
+          ...history,
+          { role: 'user', content: promptText }
+        ];
+
+        const message = await client.messages.create({
+          model: claudeModel ?? 'claude-haiku-4-5-20251001',
+          max_tokens: 1024,
+          messages: updatedHistory
+        });
+
+        const response = message.content[0].type === 'text'
+          ? message.content[0].text
+          : 'No response received.';
+
+        const finalHistory: Message[] = [
+          ...updatedHistory,
+          { role: 'assistant', content: response }
+        ];
+        saveHistory(workspacePath, promptFilePath, finalHistory);
+
+        const turnCount = Math.floor(finalHistory.length / 2);
+        const doc = await vscode.workspace.openTextDocument({
+          content: `CONVERSATION TURN ${turnCount}\n\nPROMPT:\n${promptText}\n\n---\n\nCLAUDE'S RESPONSE:\n${response}`,
+          language: 'markdown'
+        });
+
+        await vscode.window.showTextDocument(doc);
+
+      } catch (error) {
+        vscode.window.showErrorMessage(`Claude API error: ${error}`);
+      }
+    });
+  }
+
+  // ─── Helper: get watched file selection ───────────────────────────────────
+  async function selectWatchedFile(promptsPath: string): Promise<string | undefined> {
+    const files = fs.readdirSync(promptsPath)
+      .filter(f => f.endsWith('.txt') || f.endsWith('.md'));
+
+    if (files.length === 0) {
+      vscode.window.showErrorMessage('No .txt or .md files found in prompts folder.');
+      return undefined;
+    }
+
+    if (files.length === 1) {
+      return files[0];
+    }
+
+    return await vscode.window.showQuickPick(files, {
+      placeHolder: 'Select a prompt file to watch'
+    });
+  }
+
+  // ─── Command: Read Prompts ─────────────────────────────────────────────────
+  const readPromptsCommand = vscode.commands.registerCommand(
+    'claude-prompt-reader.readPrompts',
+    async () => {
+      const workspacePath = vscode.workspace.workspaceFolders?.[0].uri.fsPath;
+      if (!workspacePath) {
+        vscode.window.showErrorMessage('No workspace folder found.');
+        return;
+      }
+
+      const promptsPath = path.join(workspacePath, 'prompts');
+      if (!fs.existsSync(promptsPath)) {
+        vscode.window.showErrorMessage('No prompts folder found in this workspace.');
+        return;
+      }
+
+      // Check if the focused editor is a prompt file
+      const activeEditor = vscode.window.activeTextEditor;
+      const activePath = activeEditor?.document.uri.fsPath;
+      const isPromptFile = activePath &&
+        activePath.startsWith(promptsPath) &&
+        (activePath.endsWith('.txt') || activePath.endsWith('.md'));
+
+      let selectedFilePath: string;
+
+      if (isPromptFile && activePath) {
+        // Use the focused file directly — no QuickPick needed
+        selectedFilePath = activePath;
+      } else {
+        // No prompt file focused — fall back to QuickPick
+        const selectedFile = await selectWatchedFile(promptsPath);
+        if (!selectedFile) { return; }
+        selectedFilePath = path.join(promptsPath, selectedFile);
+      }
+
+      const promptText = fs.readFileSync(selectedFilePath, 'utf8');
+      await sendToClaudeWithHistory(
+        selectedFilePath,
+        promptText,
+        `Sending "${path.basename(selectedFilePath)}" to Claude...`
+      );
+    }
+  );
+
+  // ─── Command: Clear History ────────────────────────────────────────────────
+  const clearHistoryCommand = vscode.commands.registerCommand(
+    'claude-prompt-reader.clearHistory',
+    async () => {
+      const workspacePath = vscode.workspace.workspaceFolders?.[0].uri.fsPath;
+      if (!workspacePath) {
+        vscode.window.showErrorMessage('No workspace folder found.');
+        return;
+      }
+
+      const promptsPath = path.join(workspacePath, 'prompts');
+      if (!fs.existsSync(promptsPath)) {
+        vscode.window.showErrorMessage('No prompts folder found.');
+        return;
+      }
+
+      const scope = await vscode.window.showQuickPick(
+        [
+          { label: 'Clear history for one prompt file', value: 'single' },
+          { label: 'Clear all history for all prompt files', value: 'all' }
+        ],
+        { placeHolder: 'What would you like to clear?' }
+      );
+
+      if (!scope) { return; }
+
+      if (scope.value === 'all') {
+        const confirm = await vscode.window.showWarningMessage(
+          'This will delete history for all prompt files. Are you sure?',
+          'Yes, clear all',
+          'Cancel'
+        );
+        if (confirm !== 'Yes, clear all') { return; }
+
+        const historyDir = path.join(workspacePath, 'history');
+        if (fs.existsSync(historyDir)) {
+          fs.readdirSync(historyDir).forEach(file => {
+            fs.unlinkSync(path.join(historyDir, file));
+          });
+        }
+        vscode.window.showInformationMessage('All history cleared.');
+        return;
+      }
+
+      const selectedFile = await selectWatchedFile(promptsPath);
+      if (!selectedFile) { return; }
+
+      const filePath = path.join(promptsPath, selectedFile);
+      clearHistory(workspacePath, filePath);
+      vscode.window.showInformationMessage(`History cleared for "${selectedFile}".`);
+    }
+  );
+
+  // ─── File Watcher Setup ────────────────────────────────────────────────────
+  let watchedFile: string | undefined;
+
+  const watcher = vscode.workspace.createFileSystemWatcher('**/prompts/**');
+
+  watcher.onDidChange(async (uri) => {
+    const fileName = path.basename(uri.fsPath);
+
+    // Guard: ignore non-prompt files
+    if (!uri.fsPath.endsWith('.txt') && !uri.fsPath.endsWith('.md')) {
+      return;
+    }
+
+    // First save — ask the user which file to watch
+    if (!watchedFile) {
+      const workspacePath = vscode.workspace.workspaceFolders?.[0].uri.fsPath;
+      if (!workspacePath) { return; }
+
+      const promptsPath = path.join(workspacePath, 'prompts');
+      watchedFile = await selectWatchedFile(promptsPath);
+      if (!watchedFile) { return; }
+    }
+
+    // Only process the watched file
+    if (fileName !== watchedFile) { return; }
+
+    const promptText = fs.readFileSync(uri.fsPath, 'utf8');
+    await sendToClaudeWithHistory(
+      uri.fsPath,
+      promptText,
+      `Auto-detected change in "${fileName}", sending to Claude...`
+    );
+  });
+
+  context.subscriptions.push(readPromptsCommand, clearHistoryCommand, watcher);
+}
+
+export function deactivate() { }
 </code></pre>
