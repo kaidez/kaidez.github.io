@@ -438,3 +438,5 @@ It's here where you both enter your Claude API key and choose which model you wa
 And when the extension gets put to work in VS Code, it will work like this:
 
 <img src="/assets/img/claude-save-select-text.gif" alt="Animated demo of the Save Selected Text VS Code extension in action" />
+
+Note a new file with the header SELECTED TEXT is generated. Plus, our prompt is saved in a time-stamped filename in our `prompts` folder. The `prompts` folder didn't exist when the extension ran, so one was created on the fly.
