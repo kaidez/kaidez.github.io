@@ -516,7 +516,7 @@ You can <a href="https://github.com/kaidez/claude-prompt-reader/blob/main/packag
 }
 </code></pre>
 
-A second command, `clearHistory`, is added. There's no `menus` section — this extension launches from the Command Palette instead of a right-click menu. And the `model` config property is renamed to `modelDropdown`.
+A second command, `clearHistory`, is added. There's no `menus` section; therefore, this extension launches from the Command Palette by default instead of a right-click menu. And the `model` config property is renamed to `modelDropdown`.
 
 <h2 id="claude-prompt-reader-history-ts">The Claude Prompt Reader <code>history.ts</code></h2>
 
