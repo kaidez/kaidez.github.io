@@ -824,7 +824,7 @@ export function activate(context: vscode.ExtensionContext) {
 export function deactivate() { }
 </code></pre>
 
-Claude Prompt Reader's `extension.ts` code has differences from the Save Selected Text one.  Highlighting the differences...
+Claude Prompt Reader's `extension.ts` code has differences from the Save Selected Text one. Highlighting the differences...
 
 <pre><code class="language-javascript">
 ...
@@ -864,9 +864,7 @@ It's a Promise-powered function taking three parameters:
 <pre><code class="language-javascript">
 ...
 const client = new Anthropic({ apiKey });
-
 ...
-
 await vscode.window.withProgress({
   location: vscode.ProgressLocation.Notification,
   title: progressTitle,
@@ -907,10 +905,14 @@ await vscode.window.withProgress({
 })
 </code></pre>
 
-`withProgress()` is here again, taking in the same parameters as it did in Save Selected Text in order to build a progress message. And, again, the code's wrapped in a `try/catch`.
+`withProgress()` is here again, taking in the same parameters as it did in Save Selected Text in order to build a progress message. And, again, the code is wrapped in a `try/catch`.
 
 `const history` points to the chat history stored in the JSON file in the `history` folder. `const updatedHistory` takes that value and appends the new prompt.
 
 Again, `const message` makes a request to the Claude API, with `updatedHistory` included in the request. And, again, `const response` pulls the message text out from the response as a text string.
 
-`const finalHistory` represents the final, updated chat history in the JSON file.  The `saveHistory()` method from `history.ts` saves the new JSON in our `history` folder.
+`const finalHistory` represents the final, updated chat history in the JSON file. The `saveHistory()` method from `history.ts` saves the new JSON in our `history` folder.
+
+`const turnCount` keeps count the number of single back-and-forth conversations. `const doc` includes that number with response to the last prompt and places it in a text document.
+
+`await vscode.window.showTextDocument(doc)` displays that document in a VS Code window.
