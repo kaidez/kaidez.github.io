@@ -469,7 +469,9 @@ A new document shows the prompt under SELECTED TEXT and Claude's reply under CLA
 
 <h2 id="claude-prompt-reader">The Claude Prompt Reader</h2>
 
-Where the "Save Selected Text" extension starts by right-clicking on text, the Claude Prompt Reader starts from the VS Code Command Palette. Also, the chat history is saved in a `history` folder in JSON format.
+Where the "Save Selected Text" extension starts by right-clicking on text, the Claude Prompt Reader starts from the VS Code Command Palette. This extension looks an open text file and treats its text as our new prompt, then sends it out to the Claude API.
+
+Also, the chat history is saved in a `history` folder in a JSON file.
 
 <h2 id="claude-prompt-reader-package-json">The Claude Prompt Reader <code>package.json</code></h2>
 
@@ -591,6 +593,8 @@ Any chat history generated during a session is saved in JSON format and stored i
 <h2 id="claude-prompt-reader-extension-ts">The Claude Prompt Reader <code>extension.ts</code></h2>
 
 <pre><code class="language-javascript">
+// Claude Prompt Reader - extension.ts
+
 import * as vscode from 'vscode';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -820,7 +824,7 @@ export function activate(context: vscode.ExtensionContext) {
 export function deactivate() { }
 </code></pre>
 
-Breaking it down...
+Claude Prompt Reader's `extension.ts` code has differences from the Save Selected Text one.  Highlighting the differences...
 
 <pre><code class="language-javascript">
 ...
@@ -844,21 +848,7 @@ async function sendToClaudeWithHistory(
 ): Promise<void> {
   const apiKey = vscode.workspace.getConfiguration('claudePromptReader').get<string>('apiKey');
   const claudeModel = vscode.workspace.getConfiguration('claudePromptReader').get<string>('modelDropdown');
-
-  if (!apiKey) {
-    vscode.window.showErrorMessage('No API key found. Please add it in Settings → Claude Prompt Reader → Api Key.');
-    return;
-  }
-
-  const workspacePath = vscode.workspace.workspaceFolders?.[0].uri.fsPath;
-  if (!workspacePath) {
-    vscode.window.showErrorMessage('No workspace folder found.');
-    return;
-  }
-
-  const client = new Anthropic({ apiKey });
 ...
-}
 </code></pre>
 
 As mentioned earlier, every new prompt sent to Claude sends the entire chat history with it. Our `sendToClaudeWithHistory()` does this exactly.
@@ -870,3 +860,57 @@ It's a Promise-powered function taking three parameters:
   <li><code>promptText</code>: references our prompt.</li>
   <li><code>progressTitle</code>: references the text displayed in the VS Code progress notification, including the filename of our prompt file.</li>
 </ol>
+
+<pre><code class="language-javascript">
+...
+const client = new Anthropic({ apiKey });
+
+...
+
+await vscode.window.withProgress({
+  location: vscode.ProgressLocation.Notification,
+  title: progressTitle,
+  cancellable: false
+}, async () => {
+  try {
+    const history = loadHistory(workspacePath, promptFilePath);
+
+    const updatedHistory: Message[] = [
+      ...history,
+      { role: 'user', content: promptText }
+    ];
+
+    const message = await client.messages.create({
+      model: claudeModel ?? 'claude-haiku-4-5-20251001',
+      max_tokens: 1024,
+      messages: updatedHistory
+    });
+
+    const response = message.content[0].type === 'text'
+      ? message.content[0].text
+      : 'No response received.';
+
+    const finalHistory: Message[] = [
+      ...updatedHistory,
+      { role: 'assistant', content: response }
+    ];
+    saveHistory(workspacePath, promptFilePath, finalHistory);
+
+    const turnCount = Math.floor(finalHistory.length / 2);
+    const doc = await vscode.workspace.openTextDocument({
+      content: `CONVERSATION TURN ${turnCount}\n\nPROMPT:\n${promptText}\n\n---\n\nCLAUDE'S RESPONSE:\n${response}`,
+      language: 'markdown'
+    });
+
+    await vscode.window.showTextDocument(doc);
+  }
+})
+</code></pre>
+
+`withProgress()` is here again, taking in the same parameters as it did in Save Selected Text in order to build a progress message. And, again, the code's wrapped in a `try/catch`.
+
+`const history` points to the chat history stored in the JSON file in the `history` folder. `const updatedHistory` takes that value and appends the new prompt.
+
+Again, `const message` makes a request to the Claude API, with `updatedHistory` included in the request. And, again, `const response` pulls the message text out from the response as a text string.
+
+`const finalHistory` represents the final, updated chat history in the JSON file.  The `saveHistory()` method from `history.ts` saves the new JSON in our `history` folder.
