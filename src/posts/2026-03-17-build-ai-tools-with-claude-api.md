@@ -301,11 +301,15 @@ The Anthropic SDK is imported so we can send API requests to the Claude Messages
 export function activate(context: vscode.ExtensionContext) {
   ...
 } 
+
+`export function deactivate() { }`
 </code></pre>
 
 The function that connects our extension to VS Code. It <i>must</i> be named `activate`.
 
 It must also take a `context` parameter to access methods on the `vscode` object. For TypeScript's strong-typing requirements, the param <i>must</i> be typed as `vscode.ExtensionContext`.
+
+`deactivate()` does exactly what it says...it "deactivates" our extension on shutdown.
 
 <pre><code class="language-javascript">
 let disposable = vscode.commands.registerCommand('save-selected-text.saveSelection', async () => {
@@ -362,7 +366,7 @@ if (!apiKey) {
 const claudeModel = vscode.workspace.getConfiguration('saveSelectedText').get<string>('chooseYourModel') ?? 'claude-haiku-4-5-20251001';
 </code></pre>
 
-Both `const apiKey` and `const claudeModel` read the values entered in the Settings window. Those are, respectively, your Claude API key and a model-selection dropdown.
+`const apiKey` and `const claudeModel` are, your Claude API key and model-selection dropdown as the appear in VS Code Settings. They're located with the help of the `getConfiguration()` method.
 
 `claude-haiku-4-5-20251001` is the default — used when no model is manually selected. At this post's publish date, Haiku is cheapest per token.
 
@@ -517,6 +521,10 @@ You can <a href="https://github.com/kaidez/claude-prompt-reader/blob/main/packag
 </code></pre>
 
 A second command, `clearHistory`, is added. There's no `menus` section; therefore, this extension launches from the Command Palette by default instead of a right-click menu. And the `model` config property is renamed to `modelDropdown`.
+
+VS Code uses `claudePromptReader` as the configuration namespace for this extension's settings. It's of VS Code finds it
+
+it's how VS Code finds our extension.
 
 <h2 id="claude-prompt-reader-history-ts">The Claude Prompt Reader <code>history.ts</code></h2>
 
@@ -811,3 +819,54 @@ export function activate(context: vscode.ExtensionContext) {
 
 export function deactivate() { }
 </code></pre>
+
+Breaking it down...
+
+<pre><code class="language-javascript">
+...
+import { Message, loadHistory, saveHistory, clearHistory } from './history';
+
+export function activate(context: vscode.ExtensionContext) {
+...
+}
+
+export function deactivate() { }
+</code></pre>
+
+Same dependencies that were in "Save Selected Text" get imported in, along with `history.ts`. All the extension code still gets wrapped up in an `activate` function, and `deactivate()` still deactivates on shutdown.
+
+<pre><code class="language-javascript">
+// ─── Helper: send prompt to Claude with history ───────────────────────────
+async function sendToClaudeWithHistory(
+  promptFilePath: string,
+  promptText: string,
+  progressTitle: string
+): Promise<void> {
+  const apiKey = vscode.workspace.getConfiguration('claudePromptReader').get<string>('apiKey');
+  const claudeModel = vscode.workspace.getConfiguration('claudePromptReader').get<string>('modelDropdown');
+
+  if (!apiKey) {
+    vscode.window.showErrorMessage('No API key found. Please add it in Settings → Claude Prompt Reader → Api Key.');
+    return;
+  }
+
+  const workspacePath = vscode.workspace.workspaceFolders?.[0].uri.fsPath;
+  if (!workspacePath) {
+    vscode.window.showErrorMessage('No workspace folder found.');
+    return;
+  }
+
+  const client = new Anthropic({ apiKey });
+...
+}
+</code></pre>
+
+As mentioned earlier, every new prompt sent to Claude sends the entire chat history with it. Our `sendToClaudeWithHistory()` does this exactly.
+
+It's a Promise-powered function taking three parameters:
+
+<ol>
+  <li><code>promptFilePath</code>: references the full path of our file in the <code>prompts</code> folder.</li>
+  <li><code>promptText</code>: references our prompt.</li>
+  <li><code>progressTitle</code>: references the text displayed in the VS Code progress notification, including the filename of our prompt file.</li>
+</ol>
