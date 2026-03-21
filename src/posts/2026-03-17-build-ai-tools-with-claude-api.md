@@ -912,7 +912,7 @@ Again, `const message` makes a request to the Claude API, with `updatedHistory` 
 
 `const finalHistory` represents the final, updated chat history in the JSON file. The `saveHistory()` function from `history.ts` saves the new JSON in our `history` folder.
 
-`const turnCount` keeps count the number of single back-and-forth conversations. `const doc` includes that number with response to the last prompt and places it in a text document.
+`const turnCount` keeps count of  the number of single back-and-forth conversations. `const doc` includes that number with the response to the last prompt and places it in a text document.
 
 `await vscode.window.showTextDocument(doc)` displays that document in a VS Code window.
 
@@ -936,6 +936,6 @@ async function selectWatchedFile(promptsPath: string): Promise<string | undefine
 }
 </code></pre>
 
-`selectWatchedFile` will be part of conditional check later in our code. It will check the `prompts` folder for either text or Markdown files to treat as a prompt.
+`selectWatchedFile` will be part of a conditional check later in our code. It will check the `prompts` folder for either text or Markdown files to treat as a prompt.
 
-If there aren't, an error message will show. If there are, the Command Pallette will display the files in `prompts` as list for us to choose from.
+If there aren't, an error message will show. If there are, `showQuickPick()` tells the Command Palette to display the files in `prompts` for us to choose from.
