@@ -52,7 +52,7 @@
   "main": "index.js",
   "type": "commonjs",
   "dependencies": {
-    "@11ty/eleventy-plugin-rss": "^2.0.4",
+    "@11ty/eleventy-plugin-rss": "^3.0.0",
     "@fortawesome/fontawesome-free": "^7.2.0",
     "eleventy-plugin-reading-time": "^0.0.1"
   }
