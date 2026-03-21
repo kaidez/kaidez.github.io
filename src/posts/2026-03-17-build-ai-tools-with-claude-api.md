@@ -939,3 +939,54 @@ async function selectWatchedFile(promptsPath: string): Promise<string | undefine
 `selectWatchedFile` will be part of a conditional check later in our code. It will check the `prompts` folder for either text or Markdown files to treat as a prompt.
 
 If there aren't, an error message will show. If there are, `showQuickPick()` tells the Command Palette to display the files in `prompts` for us to choose from.
+
+<pre><code class="language-javascript">
+const readPromptsCommand = vscode.commands.registerCommand(
+  'claude-prompt-reader.readPrompts',
+  async () => {
+    const workspacePath = vscode.workspace.workspaceFolders?.[0].uri.fsPath;
+    if (!workspacePath) {
+      vscode.window.showErrorMessage('No workspace folder found.');
+      return;
+    }
+
+    const promptsPath = path.join(workspacePath, 'prompts');
+    if (!fs.existsSync(promptsPath)) {
+      vscode.window.showErrorMessage('No prompts folder found in this workspace.');
+      return;
+    }
+
+    // Check if the focused editor is a prompt file
+    const activeEditor = vscode.window.activeTextEditor;
+    const activePath = activeEditor?.document.uri.fsPath;
+    const isPromptFile = activePath &&
+      activePath.startsWith(promptsPath) &&
+      (activePath.endsWith('.txt') || activePath.endsWith('.md'));
+
+    let selectedFilePath: string;
+
+    if (isPromptFile && activePath) {
+      // Use the focused file directly — no QuickPick needed
+      selectedFilePath = activePath;
+    } else {
+      // No prompt file focused — fall back to QuickPick
+      const selectedFile = await selectWatchedFile(promptsPath);
+      if (!selectedFile) { return; }
+      selectedFilePath = path.join(promptsPath, selectedFile);
+    }
+
+    const promptText = fs.readFileSync(selectedFilePath, 'utf8');
+    await sendToClaudeWithHistory(
+      selectedFilePath,
+      promptText,
+      `Sending "${path.basename(selectedFilePath)}" to Claude...`
+    );
+  }
+);
+</code></pre>
+
+`const readPromptsCommand` registers our "read-prompts" command to VS Code. Like "Save Selected Text," it exits early if things aren't present: specifically, the VS Code workspace and the `prompts` folder.
+
+If they are, then checks begin for what files should be looked at as prompts. `const activeEditor` looks at the active editor window while `const activePath` gets the file system path of whatever file is open in the editor.
+
+`const isPromptFile` then looks at that file in the window and sees if it's either a text or Markdown file inside `prompts`.
