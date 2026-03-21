@@ -840,7 +840,6 @@ export function deactivate() { }
 Same dependencies that were in "Save Selected Text" get imported in, along with `history.ts`. All the extension code still gets wrapped up in an `activate` function, and `deactivate()` still deactivates on shutdown.
 
 <pre><code class="language-javascript">
-// ─── Helper: send prompt to Claude with history ───────────────────────────
 async function sendToClaudeWithHistory(
   promptFilePath: string,
   promptText: string,
@@ -905,14 +904,38 @@ await vscode.window.withProgress({
 })
 </code></pre>
 
-`withProgress()` is here again, taking in the same parameters as it did in Save Selected Text in order to build a progress message. And, again, the code is wrapped in a `try/catch`.
+`withProgress()` reappears, taking in the same parameters it did in Save Selected Text in order to build a progress message. And, again, the code is wrapped in a `try/catch`.
 
 `const history` points to the chat history stored in the JSON file in the `history` folder. `const updatedHistory` takes that value and appends the new prompt.
 
 Again, `const message` makes a request to the Claude API, with `updatedHistory` included in the request. And, again, `const response` pulls the message text out from the response as a text string.
 
-`const finalHistory` represents the final, updated chat history in the JSON file. The `saveHistory()` method from `history.ts` saves the new JSON in our `history` folder.
+`const finalHistory` represents the final, updated chat history in the JSON file. The `saveHistory()` function from `history.ts` saves the new JSON in our `history` folder.
 
 `const turnCount` keeps count the number of single back-and-forth conversations. `const doc` includes that number with response to the last prompt and places it in a text document.
 
 `await vscode.window.showTextDocument(doc)` displays that document in a VS Code window.
+
+<pre><code class="language-javascript">
+async function selectWatchedFile(promptsPath: string): Promise<string | undefined> {
+  const files = fs.readdirSync(promptsPath)
+    .filter(f => f.endsWith('.txt') || f.endsWith('.md'));
+
+  if (files.length === 0) {
+    vscode.window.showErrorMessage('No .txt or .md files found in prompts folder.');
+    return undefined;
+  }
+
+  if (files.length === 1) {
+    return files[0];
+  }
+
+  return await vscode.window.showQuickPick(files, {
+    placeHolder: 'Select a prompt file to watch'
+  });
+}
+</code></pre>
+
+`selectWatchedFile` will be part of conditional check later in our code. It will check the `prompts` folder for either text or Markdown files to treat as a prompt.
+
+If there aren't, an error message will show. If there are, the Command Pallette will display the files in `prompts` as list for us to choose from.
