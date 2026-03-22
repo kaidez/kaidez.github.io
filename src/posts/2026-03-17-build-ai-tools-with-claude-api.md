@@ -912,7 +912,7 @@ Again, `const message` makes a request to the Claude API, with `updatedHistory` 
 
 `const finalHistory` represents the final, updated chat history in the JSON file. The `saveHistory()` function from `history.ts` saves the new JSON in our `history` folder.
 
-`const turnCount` keeps count of  the number of single back-and-forth conversations. `const doc` includes that number with the response to the last prompt and places it in a text document.
+`const turnCount` keeps count of the number of single back-and-forth conversations. `const doc` includes that number with the response to the last prompt and places it in a text document.
 
 `await vscode.window.showTextDocument(doc)` displays that document in a VS Code window.
 
@@ -938,7 +938,7 @@ async function selectWatchedFile(promptsPath: string): Promise<string | undefine
 
 `selectWatchedFile` will be part of a conditional check later in our code. It will check the `prompts` folder for either text or Markdown files to treat as a prompt.
 
-If there aren't, an error message will show. If there are, `showQuickPick()` tells the Command Palette to display the files in `prompts` for us to choose from.
+If there aren't, an error message will show. If there are, `showQuickPick()` displays the files in `prompts` for us to choose from.
 
 <pre><code class="language-javascript">
 const readPromptsCommand = vscode.commands.registerCommand(
@@ -987,6 +987,10 @@ const readPromptsCommand = vscode.commands.registerCommand(
 
 `const readPromptsCommand` registers our "read-prompts" command to VS Code. Like "Save Selected Text," it exits early if things aren't present: specifically, the VS Code workspace and the `prompts` folder.
 
-If they are, then checks begin for what files should be looked at as prompts. `const activeEditor` looks at the active editor window while `const activePath` gets the file system path of whatever file is open in the editor.
+If they are, then checks begin for what files should be looked at as prompts. `const activeEditor` looks at the active editor window. `const activePath` gets the file system path of whatever file is open in it.
 
-`const isPromptFile` then looks at that file in the window and sees if it's either a text or Markdown file inside `prompts`.
+`const isPromptFile` then looks at that file and confirms it's either a text or Markdown file inside `prompts`. If that focused-on file is a properly formatted one in `prompts`, it gets stored in `let selectedFilePath`. But if it's not, our `selectWatchedFile` function displays a choice of files to be sent out as a prompt.
+
+And whatever file gets chosen is stored in `let selectedFilePath`. If no file is chosen, the function exits.
+
+From there, the selected file is read into `const promptText`. Finally, `promptText` gets sent out as a request via `sendToClaudeWithHistory()`. 
