@@ -1,7 +1,7 @@
 ---
 title: "Building AI Tools with the Claude API: What I Learned"
 date: 2026-03-24T12:00:00-02:00
-excerpt: "What I learned building AI tools with the Claude API: stateless conversations, Zod for LLM output validation, and keeping costs low."
+excerpt: "What I learned building two VS Code extensions with the Claude API: stateless conversations, TypeScript integration, and system design."
 draft: true
 layout: layouts/post.njk
 permalink: /building-ai-tools-claude-api/
@@ -10,10 +10,10 @@ tags: ["coding-best-practices"]
 secondary_tags: ["claude", "ai", "typescript"]
 category: Coding Tips
 schema_type: "TechArticle"
-dependencies: "TypeScript, Zod, Claude API, Python"
+dependencies: "TypeScript, Claude API"
 proficiency_level: "Intermediate"
 ---
-I needed a firmer grasp on how Claude's API works, so I built four quick tools in Visual Studio Code. Alongside Claude and VS Code, I also used TypeScript (naturally), and Mocha for testing.
+I needed a firmer grasp on how Claude's API works, so I built two quick tools in Visual Studio Code. Alongside Claude and VS Code, I also used TypeScript (naturally), and Mocha for testing.
 
 As things progressed, I also came away with a deeper understanding of system design and integration engineering. That may be the even <i>bigger</i> payoff!
 
@@ -89,17 +89,14 @@ Two other API operations are in beta as of this writing:
 
 <h2 id="what-i-built-with-claude-api">What I Built With the Claude API</h2>
 
-The first three tools I wrote were VS Code extensions that used the Messages API: 
+The first two tools I wrote were VS Code extensions that used the Messages API: 
 
 <ol>
   <li><b>Save Selected Text:</b> Right-click on selected text in VS Code to treat it like a prompt sent to Claude. Claude then responds to it via its API and saves its response in a text file. <a href="https://github.com/kaidez/save-selected-text" title="Save Selected Text Demo Repository on GitHub" aria-label="Go to the Save Selected Text Demo Repository on GitHub" rel="noopener noreferrer">View the repo</a>.</li>
   <li><b>Claude Prompt Reader:</b> Similar to the Save Selected Text extension except you don't select and right-click on the text. Instead, the VS Code extension launches from the Command Palette, sends the prompt to Claude, then displays the response. <a href="https://github.com/kaidez/claude-prompt-reader" title="Claude Prompt Reader Demo Repository on GitHub" aria-label="Go to the Claude Prompt Reader Demo Repository on GitHub" rel="noopener noreferrer">View the repo</a>.</li>
-  <li><b>GitHub Triage Tracker:</b> Fetches the first 10 open issues from Microsoft's VS Code repo. Each issue is sent to Claude via the Messages API. Claude classifies its severity, writes a plain-English summary, and suggests a next action for the maintainers. <a href="https://github.com/kaidez/github-issue-triage" title="GitHub Triage Tracker Demo Repository on GitHub" aria-label="Go to the GitHub Triage Tracker Demo Repository on GitHub" rel="noopener noreferrer">View the repo</a>.</li>
 </ol>
 
-The fourth project was building <a href="https://www.anthropic.com/news/model-context-protocol" title="Anthropic's Model Context Protocol" aria-label="Read about Anthropic's Model Context Protocol" rel="noopener noreferrer">Model Context Protocol</a> connectors for the Claude Desktop App. Based on your prompt, the server looks in a folder of text files and performs one of three commands. <a href="https://github.com/kaidez/mcp-prompt-server" title="MCP Prompt Server Repository on GitHub" aria-label="Go to the MCP Prompt Server Repository on GitHub" rel="noopener noreferrer">View the repo</a>.
-
-The code is mostly the same across the three VS Code extensions. So I'll walk through what the first one does while pointing out the unique code blocks of the other two.
+The code is mostly the same across the two VS Code extensions. So I'll walk through what the first one does while pointing out the unique code blocks of the second one.
 
 <h2 id="save-selected-text-package-json">The Save Selected Text <code>package.json</code></h2>
 
@@ -302,7 +299,7 @@ export function activate(context: vscode.ExtensionContext) {
   ...
 } 
 
-`export function deactivate() { }`
+export function deactivate() { }
 </code></pre>
 
 The function that connects our extension to VS Code. It <i>must</i> be named `activate`.
@@ -524,13 +521,11 @@ You can <a href="https://github.com/kaidez/claude-prompt-reader/blob/main/packag
 
 A second command, `clearHistory`, is added. There's no `menus` section; therefore, this extension launches from the Command Palette by default instead of a right-click menu. And the `model` config property is renamed to `modelDropdown`.
 
-VS Code uses `claudePromptReader` as the configuration namespace for this extension's settings. It's of VS Code finds it
-
-it's how VS Code finds our extension.
+VS Code uses `claudePromptReader` as the configuration namespace for this extension's settings. It's of VS Code finds our extension.
 
 <h2 id="claude-prompt-reader-history-ts">The Claude Prompt Reader <code>history.ts</code></h2>
 
-`history.ts` is a helper file used by the prompt reader's `extension.ts`. It exports both a TypeScript interface and four helper methods.
+`history.ts` is a helper file used by the prompt reader's `extension.ts`. It exports both a TypeScript interface and four helper functions.
 
 <pre><code class="language-javascript">
 // history.ts
