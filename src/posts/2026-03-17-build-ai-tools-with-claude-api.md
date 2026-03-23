@@ -993,4 +993,55 @@ If they are, then checks begin for what files should be looked at as prompts. `c
 
 And whatever file gets chosen is stored in `let selectedFilePath`. If no file is chosen, the function exits.
 
-From there, the selected file is read into `const promptText`. Finally, `promptText` gets sent out as a request via `sendToClaudeWithHistory()`. 
+From there, the selected file is read into `const promptText`. Finally, `promptText` gets sent out as a request via `sendToClaudeWithHistory()`.
+
+<pre><code class="language-javascript">
+const clearHistoryCommand = vscode.commands.registerCommand(
+  'claude-prompt-reader.clearHistory',
+  async () => {
+...
+    const scope = await vscode.window.showQuickPick(
+      [
+        { label: 'Clear history for one prompt file', value: 'single' },
+        { label: 'Clear all history for all prompt files', value: 'all' }
+      ],
+      { placeHolder: 'What would you like to clear?' }
+    );
+
+    if (!scope) { return; }
+
+    if (scope.value === 'all') {
+      const confirm = await vscode.window.showWarningMessage(
+        'This will delete history for all prompt files. Are you sure?',
+        'Yes, clear all',
+        'Cancel'
+      );
+      if (confirm !== 'Yes, clear all') { return; }
+
+      const historyDir = path.join(workspacePath, 'history');
+      if (fs.existsSync(historyDir)) {
+        fs.readdirSync(historyDir).forEach(file => {
+          fs.unlinkSync(path.join(historyDir, file));
+        });
+      }
+      vscode.window.showInformationMessage('All history cleared.');
+      return;
+    }
+
+    const selectedFile = await selectWatchedFile(promptsPath);
+    if (!selectedFile) { return; }
+
+    const filePath = path.join(promptsPath, selectedFile);
+    clearHistory(workspacePath, filePath);
+    vscode.window.showInformationMessage(`History cleared for "${selectedFile}".`);
+  }
+);
+</code></pre>
+
+Like `readPromptsCommand`, `const clearHistoryCommand` registers a command to VS Code, but for deleting the chat history. This command is also triggered by the Command Palette.
+
+When opened, `clearHistoryCommand` runs `showQuickPick()`, which displays a list of options. The user's selection gets stored in `const scope`. You can delete either one of the chat history JSON files in the `history` folder or all of them.
+
+Choosing to delete all of them will trigger `const confirm` and open a warning message about what you're about to do. Choosing to delete the files will be done using Node's `fs.unlinkSync()`, passing a message confirming you did it.
+
+But if you just want to delete one file, `const selectedFile` kicks in and points to that one file. And in that case, the `clearHistory()` from `history.ts` is the command to delete it.
