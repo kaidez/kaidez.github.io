@@ -83,6 +83,11 @@ module.exports = function (eleventyConfig) {
   // Reading time plugin
   eleventyConfig.addPlugin(readingTime);
 
+  eleventyConfig.addFilter("readingTimeProseOnly", function (content) {
+    const stripped = content.replace(/<pre[\s\S]*?<\/pre>/gi, '');
+    return require('./node_modules/eleventy-plugin-reading-time/lib/reading-time')(stripped);
+  });
+
 
   // Add collection for blog posts
   eleventyConfig.addCollection("posts", function (collectionApi) {
