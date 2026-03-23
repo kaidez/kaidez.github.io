@@ -1,6 +1,6 @@
 ---
 title: "Building AI Tools with the Claude API: What I Learned"
-date: 2026-03-17T12:00:00-02:00
+date: 2026-03-24T12:00:00-02:00
 excerpt: "What I learned building AI tools with the Claude API: stateless conversations, Zod for LLM output validation, and keeping costs low."
 draft: true
 layout: layouts/post.njk
@@ -57,7 +57,7 @@ The word "stateless" is key here. Claude doesn't remember previous conversations
 
 For every new prompt you send, the entire message history — your messages and Claude's responses — gets resent. This is how Claude gets the conversation's context.
 
-<em>Side note: obviously, that message history can get big...that's why Claude Code will prompt you to run `/compact` from time-to-time. Also, <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching" title="The Claude API's prompt caching feature" aria-label="Read about the prompt caching with the Claude API" rel="noopener noreferrer">Claude's API has a "prompt caching" feature</a> that you can pass to requests. Doing both of these things can lower your Claude costs.</em>
+<em>Side note: obviously, that message history can get big...that's why Claude will prompt you to run `/compact` from time-to-time. Also, <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching" title="The Claude API's prompt caching feature" aria-label="Read about the prompt caching with the Claude API" rel="noopener noreferrer">Claude's API has a "prompt caching" feature</a> that you can pass to requests. Doing both of these things can lower your Claude costs.</em>
 
 The word "guesses" is also key: Claude predicts its answer but doesn't "think about it" like humans do. Instead, it pattern-matches against training data (a ton of human-written text) rather than reasoning through it consciously.
 
@@ -792,7 +792,6 @@ export function activate(context: vscode.ExtensionContext) {
   watcher.onDidChange(async (uri) => {
     const fileName = path.basename(uri.fsPath);
 
-    // Guard: ignore non-prompt files
     if (!uri.fsPath.endsWith('.txt') && !uri.fsPath.endsWith('.md')) {
       return;
     }
@@ -1045,3 +1044,43 @@ When opened, `clearHistoryCommand` runs `showQuickPick()`, which displays a list
 Choosing to delete all of them will trigger `const confirm` and open a warning message about what you're about to do. Choosing to delete the files will be done using Node's `fs.unlinkSync()`, passing a message confirming you did it.
 
 But if you just want to delete one file, `const selectedFile` kicks in and points to that one file. And in that case, the `clearHistory()` from `history.ts` is the command to delete it.
+
+<pre><code class="language-javascript">
+...
+  let watchedFile: string | undefined;
+
+  const watcher = vscode.workspace.createFileSystemWatcher('**/prompts/**');
+
+  watcher.onDidChange(async (uri) => {
+    const fileName = path.basename(uri.fsPath);
+
+    // Guard: ignore non-prompt files
+    if (!uri.fsPath.endsWith('.txt') && !uri.fsPath.endsWith('.md')) {
+      return;
+    }
+
+    // First save — ask the user which file to watch
+    if (!watchedFile) {
+      const workspacePath = vscode.workspace.workspaceFolders?.[0].uri.fsPath;
+      if (!workspacePath) { return; }
+
+      const promptsPath = path.join(workspacePath, 'prompts');
+      watchedFile = await selectWatchedFile(promptsPath);
+      if (!watchedFile) { return; }
+    }
+
+    // Only process the watched file
+    if (fileName !== watchedFile) { return; }
+
+    const promptText = fs.readFileSync(uri.fsPath, 'utf8');
+    await sendToClaudeWithHistory(
+      uri.fsPath,
+      promptText,
+      `Auto-detected change in "${fileName}", sending to Claude...`
+    );
+  });
+
+  context.subscriptions.push(readPromptsCommand, clearHistoryCommand, watcher);
+  </code></pre>
+
+  The watcher file is straight-forward. `const watcher` uses `createFileSystemWatcher()` method to watch changes to files in the `prompts` folder.
