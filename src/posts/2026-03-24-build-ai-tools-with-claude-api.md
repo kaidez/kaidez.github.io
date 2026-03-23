@@ -1076,8 +1076,6 @@ But if you just want to delete one file, `const selectedFile` kicks in and point
       `Auto-detected change in "${fileName}", sending to Claude...`
     );
   });
-
-  context.subscriptions.push(readPromptsCommand, clearHistoryCommand, watcher);
   </code></pre>
 
   The watcher code is straightforward. `const watcher` uses `createFileSystemWatcher()` method to watch changes to files in the `prompts` folder.
