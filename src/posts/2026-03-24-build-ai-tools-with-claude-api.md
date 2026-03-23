@@ -1073,10 +1073,12 @@ But if you just want to delete one file, `const selectedFile` kicks in and point
   });
   </code></pre>
 
-  The watcher code is straightforward. `const watcher` uses `createFileSystemWatcher()` method to watch changes to files in the `prompts` folder.
+The watcher code is straightforward. `const watcher` uses `createFileSystemWatcher()` method to watch changes to files in the `prompts` folder.
 
-  The file being watched at runtime gets stored in `let watchedFile`. `watcher.onDidChange()` fires when that file is saved.
+The file being watched at runtime gets stored in `let watchedFile`. `watcher.onDidChange()` fires when that file is saved.
 
-  First, it checks to see if a file is being watched. If not, `selectWatchedFile()` asks you to choose a file to watch. From there, it sends it to Claude for processing.
+First, it checks to see if a file is being watched. If not, `selectWatchedFile()` asks you to choose a file to watch. From there, it sends it to Claude for processing.
 
-  From that point on, the file is being watched.
+From that point on, the file is being watched.
+
+<h2 id="conclusion">Conclusion</h2>
