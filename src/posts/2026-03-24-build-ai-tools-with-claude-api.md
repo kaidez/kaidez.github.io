@@ -1054,12 +1054,10 @@ But if you just want to delete one file, `const selectedFile` kicks in and point
   watcher.onDidChange(async (uri) => {
     const fileName = path.basename(uri.fsPath);
 
-    // Guard: ignore non-prompt files
     if (!uri.fsPath.endsWith('.txt') && !uri.fsPath.endsWith('.md')) {
       return;
     }
 
-    // First save — ask the user which file to watch
     if (!watchedFile) {
       const workspacePath = vscode.workspace.workspaceFolders?.[0].uri.fsPath;
       if (!workspacePath) { return; }
@@ -1069,7 +1067,6 @@ But if you just want to delete one file, `const selectedFile` kicks in and point
       if (!watchedFile) { return; }
     }
 
-    // Only process the watched file
     if (fileName !== watchedFile) { return; }
 
     const promptText = fs.readFileSync(uri.fsPath, 'utf8');
@@ -1083,4 +1080,10 @@ But if you just want to delete one file, `const selectedFile` kicks in and point
   context.subscriptions.push(readPromptsCommand, clearHistoryCommand, watcher);
   </code></pre>
 
-  The watcher file is straight-forward. `const watcher` uses `createFileSystemWatcher()` method to watch changes to files in the `prompts` folder.
+  The watcher code is straightforward. `const watcher` uses `createFileSystemWatcher()` method to watch changes to files in the `prompts` folder.
+
+  The file being watched at runtime gets stored in `let watchedFile`. `watcher.onDidChange()` fires when that file is saved.
+
+  First, it checks to see if a file is being watched. If not, `selectWatchedFile()` asks you to choose a file to watch. From there, it sends it to Claude for processing.
+
+  From that point on, the file is being watched.
