@@ -13,7 +13,7 @@ schema_type: "TechArticle"
 dependencies: "TypeScript, Claude API"
 proficiency_level: "Intermediate"
 ---
-I needed a firmer grasp on how Claude's API works, so I built two quick tools in Visual Studio Code. Alongside Claude and VS Code, I also used TypeScript (naturally), and Mocha for testing.
+I needed a firmer grasp on how Claude's API works, so I built two quick tools in Visual Studio Code. Alongside Claude and VS Code, I also used TypeScript...naturally.
 
 As things progressed, I also came away with a deeper understanding of system design and integration engineering. That may be the even <i>bigger</i> payoff!
 
@@ -363,8 +363,7 @@ if (!apiKey) {
 const claudeModel = vscode.workspace.getConfiguration('saveSelectedText').get<string>('chooseYourModel') ?? 'claude-haiku-4-5-20251001';
 </code></pre>
 
-`const apiKey` and `const claudeModel` are your Claude API key and model-selection dropdown as the appear in VS Code Settings. They're located with the help of the `getConfiguration()` method (see below).
-
+`const apiKey` and `const claudeModel` are your Claude API key and model-selection dropdown as the appear in VS Code Settings. They're located with the help of the `getConfiguration()` method and are formatted like this in VS Code:
 
 <img src="/assets/img/vs-code-settings-menu.jpg" alt="Screenshot of the Save Selected Text extension settings in VS Code" />
 
