@@ -38,7 +38,7 @@ I assume that you're familiar with the Generative AI landscape that's so common 
 
 <ol>
   <li>That you have the <a href="https://claude.com/download" title="Claude Desktop App" aria-label="Download a Claude Desktop app" rel="noopener noreferrer">Claude Desktop</a> app (the $20USD/month kind of app at the bare minimum).</li>
-  <li>That you have a Claude API key...if you don't have one, <a href="https://platform.claude.com/settings/keys" title="Claude API Key" aria-label="Get a Claude API key" rel="noopener noreferrer">get a Claude API key here</a>.</li>
+  <li>That you have a Claude API key...if you don't have one, <a href="https://platform.claude.com/dashboard" title="Claude API Key" aria-label="Get a Claude API key" rel="noopener noreferrer">get a Claude API key here</a>.</li>
   <li>That you're willing to pay for Claude API credits if needed.</li>
   <li>And most importantly: that, at some point, you will <a href="https://platform.claude.com/docs/en/api/overview" title="Claude API Documentation" aria-label="Read the Claude API documentation" rel="noopener noreferrer">read the Claude API documentation</a> if you haven't already. Perhaps after you've read this post? &#128522;</li>
 </ol>
