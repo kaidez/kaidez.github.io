@@ -43,7 +43,7 @@ I assume that you're familiar with the Generative AI landscape that's so common 
   <li>And most importantly: that, at some point, you will <a href="https://platform.claude.com/docs/en/api/overview" title="Claude API Documentation" aria-label="Read the Claude API documentation" rel="noopener noreferrer">read the Claude API documentation</a> if you haven't already. Perhaps after you've read this post? &#128522;</li>
 </ol>
 
-Lastly, it's best practice to scaffold out the codebase for a VS Code extension with <a href="https://yeoman.io/" title="Yeoman Scaffolding Tool" aria-label="Scaffold out your web application with Yeoman" rel="noopener noreferrer">Yeoman</a>. I'll point out the VS Code-specific code snippets that Yeoman generates, but I assume you can handle the setup.
+Lastly, the current best practice for scaffolding out the codebase for a VS Code extension is to use <a href="https://yeoman.io/" title="Yeoman Scaffolding Tool" aria-label="Scaffold out your web application with Yeoman" rel="noopener noreferrer">Yeoman</a>. I'll point out the VS Code-specific code snippets that Yeoman generates, but I assume you can handle the setup.
 
 Read the documentation on <a href="https://code.visualstudio.com/api/get-started/your-first-extension" title="Create a VS Code extension codebase" aria-label="Read how to create a VS Code extension codebase" rel="noopener noreferrer">how to scaffold out the codebase for VS Code extensions</a>.
 
@@ -57,7 +57,7 @@ The word "stateless" is key here. Claude doesn't remember previous conversations
 
 For every new prompt you send, the entire message history — your messages and Claude's responses — gets resent. This is how Claude gets the conversation's context.
 
-<em>Side note: obviously, that message history can get big...that's why Claude will prompt you to run `/compact` from time-to-time. Also, <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching" title="The Claude API's prompt caching feature" aria-label="Read about the prompt caching with the Claude API" rel="noopener noreferrer">Claude's API has a "prompt caching" feature</a> that you can pass to requests. Doing both of these things can lower your Claude costs.</em>
+<em>(Side note: obviously, that message history can get big.  That's why Claude will occasionally  suggest you condense the conversation by running `/compact`. Also, <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching" title="The Claude API's prompt caching feature" aria-label="Read about the prompt caching with the Claude API" rel="noopener noreferrer">Claude's API has a "prompt caching" feature</a> that you can pass to requests. Doing both of these things can lower your Claude costs.)</em>
 
 The word "guesses" is also key: Claude predicts its answer but doesn't "think about it" like humans do. Instead, it pattern-matches against training data (a ton of human-written text) rather than reasoning through it consciously.
 
@@ -67,7 +67,7 @@ Claude doesn't predict a fixed outcome. Instead, it "generates" new content in r
 
 <h2 id="claude-api">The Claude API</h2>
 
-So Claude has a brain with really good guessing capabilities. The Claude API lets you pass those capabilities to your applications.
+So Claude has a brain with superior guessing capabilities. <strong>The Claude API lets you pass those superior guessing capabilities to your applications.</strong>
 
 This API is a REST API built on the standard request/response pattern. An application sends a formatted request to a remote server. The server responds to the request by sending structured data back.
 
@@ -89,14 +89,14 @@ Two other API operations are in beta as of this writing:
 
 <h2 id="what-i-built-with-claude-api">What I Built With the Claude API</h2>
 
-The first two tools I wrote were VS Code extensions that used the Messages API: 
+The two tools I wrote were VS Code extensions that used the Messages API: 
 
 <ol>
   <li><b>Save Selected Text:</b> Right-click on selected text in VS Code to treat it like a prompt sent to Claude. Claude then responds to it via its API and saves its response in a text file. <a href="https://github.com/kaidez/save-selected-text" title="Save Selected Text Demo Repository on GitHub" aria-label="Go to the Save Selected Text Demo Repository on GitHub" rel="noopener noreferrer">View the repo</a>.</li>
   <li><b>Claude Prompt Reader:</b> Similar to the Save Selected Text extension except you don't select and right-click on the text. Instead, the VS Code extension launches from the Command Palette, sends the prompt to Claude, then displays the response. <a href="https://github.com/kaidez/claude-prompt-reader" title="Claude Prompt Reader Demo Repository on GitHub" aria-label="Go to the Claude Prompt Reader Demo Repository on GitHub" rel="noopener noreferrer">View the repo</a>.</li>
 </ol>
 
-The code is mostly the same across the two VS Code extensions. So I'll walk through what the first one does while pointing out the unique code blocks of the second one.
+The code is mostly the same across these extensions. So I'll walk through what the first one does while pointing out the unique code blocks of the second one.
 
 <h2 id="save-selected-text-package-json">The Save Selected Text <code>package.json</code></h2>
 
@@ -304,7 +304,7 @@ export function deactivate() { }
 
 The function that connects our extension to VS Code. It <i>must</i> be named `activate`.
 
-It must also take a `context` parameter to access methods on the `vscode` object. For TypeScript's strong-typing requirements, the param <i>must</i> be typed as `vscode.ExtensionContext`.
+It <i>must</i> also take a `context` parameter to access methods on the `vscode` object. For TypeScript's strong-typing requirements, the param <i>must</i> be typed as `vscode.ExtensionContext`.
 
 `deactivate()` does exactly what it says...it "deactivates" our extension on shutdown.
 
@@ -363,9 +363,12 @@ if (!apiKey) {
 const claudeModel = vscode.workspace.getConfiguration('saveSelectedText').get<string>('chooseYourModel') ?? 'claude-haiku-4-5-20251001';
 </code></pre>
 
-`const apiKey` and `const claudeModel` are, your Claude API key and model-selection dropdown as the appear in VS Code Settings. They're located with the help of the `getConfiguration()` method.
+`const apiKey` and `const claudeModel` are your Claude API key and model-selection dropdown as the appear in VS Code Settings. They're located with the help of the `getConfiguration()` method (see below).
 
-`claude-haiku-4-5-20251001` is the default — used when no model is manually selected. At this post's publish date, Haiku is cheapest per token.
+
+<img src="/assets/img/vs-code-settings-menu.jpg" alt="Screenshot of the Save Selected Text extension settings in VS Code" />
+
+`claude-haiku-4-5-20251001` is the default — used when no model is manually selected. At this post's publish date, Haiku is cheapest per token: i.e., <b>it will save you money!!!</b>.
 
 <pre><code class="language-javascript">
 const promptsPath = path.join(workspacePath, 'prompts');
@@ -456,8 +459,6 @@ Testing this is pretty straightforward. Open `extension.ts`, then click "Run > S
 
 It's here where you both enter your Claude API key and choose which model you want to use. You would do this in "Code > Settings > Settings" on a Mac, or "File > Preferences > Settings" on a Windows PC.
 
-<img src="/assets/img/vs-code-settings-menu.jpg" alt="Screenshot of the Save Selected Text extension settings in VS Code" />
-
 And when the extension gets put to work in VS Code, it will work like this:
 
 <img src="/assets/img/claude-save-select-text.gif" alt="Animated demo of the Save Selected Text VS Code extension in action" />
@@ -466,7 +467,7 @@ A new document shows the prompt under SELECTED TEXT and Claude's reply under CLA
 
 <h2 id="claude-prompt-reader">The Claude Prompt Reader</h2>
 
-Where the "Save Selected Text" extension starts by right-clicking on text, the Claude Prompt Reader starts from the VS Code Command Palette. This extension looks an open text file and treats its text as our new prompt, then sends it out to the Claude API.
+Where the "Save Selected Text" extension starts by right-clicking on selected text, the Claude Prompt Reader starts from the VS Code Command Palette. This extension looks at an open text file and treats its text as our new prompt, then sends it out to the Claude API.
 
 Also, the chat history is saved in a `history` folder in a JSON file.
 
@@ -519,9 +520,11 @@ You can <a href="https://github.com/kaidez/claude-prompt-reader/blob/main/packag
 }
 </code></pre>
 
-A second command, `clearHistory`, is added. There's no `menus` section; therefore, this extension launches from the Command Palette by default instead of a right-click menu. And the `model` config property is renamed to `modelDropdown`.
+VS Code uses `claudePromptReader` as the configuration namespace for this extension's settings. It's how VS Code finds our extension.
 
-VS Code uses `claudePromptReader` as the configuration namespace for this extension's settings. It's of VS Code finds our extension.
+A second command, `claude-prompt-reader.clearHistory()`, is added. There's no `menus` section; therefore, this extension launches from the Command Palette by default instead of a right-click menu.
+
+The previous extension and a dropdown called `saveSelectedText.chooseYourModel` where the user could choose a Claude Model. This one does too, but it's called `claudePromptReader.modelDropdown`.
 
 <h2 id="claude-prompt-reader-history-ts">The Claude Prompt Reader <code>history.ts</code></h2>
 
@@ -579,7 +582,7 @@ export function clearHistory(workspacePath: string, promptFilePath: string): voi
 }
 </code></pre>
 
-Again, Node's `path` module is used to build file paths, and `fs` is used to read and write files. The `Message` interface defines the shape of each conversation history entry — a `role` and a `content` string.
+Again, Node's `fs` module is used to read and write files and `path` module is used to build file paths. The `Message` interface defines the shape of each conversation history entry — a `role` and a `content` string.
 
 Any chat history generated during a session is saved in JSON format and stored in a `history` folder. `getHistoryPath()` builds the file path for the chat history. `loadHistory()` then reads and returns it.
 
@@ -842,9 +845,10 @@ async function sendToClaudeWithHistory(
   const apiKey = vscode.workspace.getConfiguration('claudePromptReader').get<string>('apiKey');
   const claudeModel = vscode.workspace.getConfiguration('claudePromptReader').get<string>('modelDropdown');
 ...
+}
 </code></pre>
 
-As mentioned earlier, every new prompt sent to Claude sends the entire chat history with it. Our `sendToClaudeWithHistory()` does this exactly.
+As mentioned earlier, every new prompt sent to Claude sends the entire chat history with it. Our `sendToClaudeWithHistory()` does exactly this.
 
 It's a Promise-powered function taking three parameters:
 
@@ -983,7 +987,7 @@ const readPromptsCommand = vscode.commands.registerCommand(
 
 If they are, then checks begin for what files should be looked at as prompts. `const activeEditor` looks at the active editor window. `const activePath` gets the file system path of whatever file is open in it.
 
-`const isPromptFile` then looks at that file and confirms it's either a text or Markdown file inside `prompts`. If that focused-on file is a properly formatted one in `prompts`, it gets stored in `let selectedFilePath`. But if it's not, our `selectWatchedFile` function displays a choice of files to be sent out as a prompt.
+`const isPromptFile` then looks at that file and confirms it's either a text or Markdown file inside `prompts`. If that focused-on file is properly formatted (either a .txt or .md file), it gets stored in `let selectedFilePath`. But if it's not, our `selectWatchedFile` function displays a choice of files to be sent out as a prompt.
 
 And whatever file gets chosen is stored in `let selectedFilePath`. If no file is chosen, the function exits.
 
@@ -1036,9 +1040,9 @@ Like `readPromptsCommand`, `const clearHistoryCommand` registers a command to VS
 
 When opened, `clearHistoryCommand` runs `showQuickPick()`, which displays a list of options. The user's selection gets stored in `const scope`. You can delete either one of the chat history JSON files in the `history` folder or all of them.
 
-Choosing to delete all of them will trigger `const confirm` and open a warning message about what you're about to do. Choosing to delete the files will be done using Node's `fs.unlinkSync()`, passing a message confirming you did it.
+Choosing to delete all of them will trigger `const confirm` and open a warning message about what you're about to do. The files get deleted using Node's `fs.unlinkSync()`.
 
-But if you just want to delete one file, `const selectedFile` kicks in and points to that one file. And in that case, the `clearHistory()` from `history.ts` is the command to delete it.
+But if you just want to delete one file, `const selectedFile` kicks in and points to that one file. And in that case, the `clearHistory()` from `history.ts` is the function to delete it.
 
 <pre><code class="language-javascript">
 ...
@@ -1073,12 +1077,28 @@ But if you just want to delete one file, `const selectedFile` kicks in and point
   });
   </code></pre>
 
-The watcher code is straightforward. `const watcher` uses `createFileSystemWatcher()` method to watch changes to files in the `prompts` folder.
+The watcher code is straightforward. `const watcher` uses `createFileSystemWatcher()` function to watch changes to files in the `prompts` folder.
 
 The file being watched at runtime gets stored in `let watchedFile`. `watcher.onDidChange()` fires when that file is saved.
 
 First, it checks to see if a file is being watched. If not, `selectWatchedFile()` asks you to choose a file to watch. From there, it sends it to Claude for processing.
 
 From that point on, the file is being watched.
+
+When a file is saved and sent out as a prompt, the process looks like this:
+
+<img src="/assets/img/claude-prompt-reader_01.gif" alt="First animated GIF of the Claude Prompt Reader Sending a text file out as a prompt" />
+
+A text file is saved in the `prompts` folder.  When "Claude Prompt Reader: Read Prompts" gets clicked on in the Command Palette, the file gets sent out as a prompt to the Claude API. A response comes back and the entire conversation is saved in the `history` folder. 
+
+The conversation can continue by updating the text file. Saving the file triggers the sending and receiving of prompts as well as saving the chat history.
+
+That looks like this:
+
+<img src="/assets/img/claude-prompt-reader_02.gif" alt="Second animated GIF of the Claude Prompt Reader Sending a text file out as a prompt" />
+
+Finally, clear the entire chat history. We can do it for either one chat or all of them, but this is what it looks like for doing all of them:
+
+<img src="/assets/img/claude-prompt-reader_03.gif" alt="Third animated GIF of the Claude Prompt Reader Sending a text file out as a prompt" />
 
 <h2 id="conclusion">Conclusion</h2>
