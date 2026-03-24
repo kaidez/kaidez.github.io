@@ -1,6 +1,6 @@
 ---
 title: "Building AI Tools with the Claude API: What I Learned"
-date: 2026-03-24T12:00:00-02:00
+date: 2026-03-25T12:00:00-02:00
 excerpt: "What I learned building two VS Code extensions with the Claude API: stateless conversations, TypeScript integration, and system design."
 draft: true
 layout: layouts/post.njk
