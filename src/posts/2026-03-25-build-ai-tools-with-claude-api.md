@@ -363,7 +363,7 @@ if (!apiKey) {
 const claudeModel = vscode.workspace.getConfiguration('saveSelectedText').get<string>('chooseYourModel') ?? 'claude-haiku-4-5-20251001';
 </code></pre>
 
-`const apiKey` and `const claudeModel` are your Claude API key and model-selection dropdown as the appear in VS Code Settings. They're located with the help of the `getConfiguration()` method and are formatted like this in VS Code:
+`const apiKey` and `const claudeModel` are your Claude API key and model-selection dropdown as they appear in VS Code Settings. They're located with the help of the `getConfiguration()` method and are formatted like this in VS Code:
 
 <img src="/assets/img/vs-code-settings-menu.jpg" alt="Screenshot of the Save Selected Text extension settings in VS Code" width="740" height="352" />
 
