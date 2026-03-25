@@ -164,7 +164,7 @@ You can <a href="https://github.com/kaidez/save-selected-text/blob/main/package.
 
 `engines` refers to the minimum version VS Code needs to run the extension: version 1.74 in this case. `categories` refers to how the extension should be categorized in the VS Code Extension marketplace.
 
-`main` is the entry point for our app. In this case, it's `extension.ts`.
+`main` is the entry point for our app. In this case, it's the Typescript-compiled `.out/extension.js`.
 
 `activationEvents` controls when the extension loads and `contributes` registers commands/menus/settings. In VS Code 1.74+, `activationEvents` entries are optional — VS Code infers activation from `contributes`.
 
@@ -446,7 +446,8 @@ The request is in `const message = await client.messages.create()`. It includes 
 
 It defines the maximum number of tokens in Claude's response. It also defines who's sending the message, the `user`, and the content of the message.
 
-`const response` is a string extracted from Claude's response object. It does a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator">ternary check</a> for if the `message.content[0]` is a text block, then pulls the text from it.
+`const response` is a string extracted from Claude's response object. It does a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator" title="Ternary Operator - MDN Web Docs" aria-label="Read about the ternary operator on MDN" rel="noopener noreferrer">ternary check</a>
+ternary check</a> for if the `message.content[0]` is a text block, then pulls the text from it.
 
 `response` contains Claude's response to our prompt (the selected text). It will be placed in a Markdown file (`const doc`) headlining our prompt as "SELECTED TEXT", and Claude's response to it headlined as 'CLAUDE'S RESPONSE'.
 
@@ -523,7 +524,7 @@ VS Code uses `claudePromptReader` as the configuration namespace for this extens
 
 A second command, `claude-prompt-reader.clearHistory()`, is added. There's no `menus` section; therefore, this extension launches from the Command Palette by default instead of a right-click menu.
 
-The previous extension and a dropdown called `saveSelectedText.chooseYourModel` where the user could choose a Claude Model. This one does too, but it's called `claudePromptReader.modelDropdown`.
+The previous extension had a dropdown called `saveSelectedText.chooseYourModel` where the user could choose a Claude Model. This one does too, but it's called `claudePromptReader.modelDropdown`.
 
 <h2 id="claude-prompt-reader-history-ts">The Claude Prompt Reader <code>history.ts</code></h2>
 
@@ -1086,7 +1087,7 @@ From that point on, the file is being watched.
 
 When a file is saved and sent out as a prompt, the process looks like this:
 
-<img src="/assets/img/claude-prompt-reader_01.gif" alt="First animated GIF of the Claude Prompt Reader Sending a text file out as a prompt" />
+<img src="/assets/img/claude-prompt-reader_01.gif" alt="Claude Prompt Reader: selecting a prompt file from the Command Palette and receiving a response" />
 
 A text file is saved in the `prompts` folder.  When "Claude Prompt Reader: Read Prompts" gets clicked on in the Command Palette, the file gets sent out as a prompt to the Claude API. A response comes back and the entire conversation is saved in the `history` folder. 
 
@@ -1094,11 +1095,11 @@ The conversation can continue by updating the text file. Saving the file trigger
 
 That looks like this:
 
-<img src="/assets/img/claude-prompt-reader_02.gif" alt="Second animated GIF of the Claude Prompt Reader Sending a text file out as a prompt" />
+<img src="/assets/img/claude-prompt-reader_02.gif" alt="Claude Prompt Reader: updating a prompt file and continuing the conversation" />
 
 Finally, clear the entire chat history. We can do it for either one chat or all of them, but this is what it looks like for doing all of them:
 
-<img src="/assets/img/claude-prompt-reader_03.gif" alt="Third animated GIF of the Claude Prompt Reader Sending a text file out as a prompt" />
+<img src="/assets/img/claude-prompt-reader_03.gif" alt="Claude Prompt Reader: clearing chat history for all prompt files" />
 
 <h2 id="conclusion">Conclusion</h2>
 
@@ -1112,4 +1113,4 @@ TypeScript held everything together at the boundaries. Wherever data crossed int
 
 The takeaway: Claude didn't replace the engineering. It eased the integration.
 
-And, truthfully? This is where I see GenAI's power in software development.
+That's where GenAI earns its place in software development.
