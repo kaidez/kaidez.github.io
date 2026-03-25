@@ -1104,6 +1104,12 @@ Finally, clear the entire chat history. We can do it for either one chat or all 
 
 After finishing these projects, I have a clearer sense of the role of Claude and similar GenAI tools in software development:
 
-My VS Code extensions followed the basic, but important, <a href="https://www.ibm.com/think/topics/etl" title="ETL Design Pattern" aria-label="Read IBM's ETL Design Pattern definition" rel="noopener noreferrer">Extract → Transform → Load (ETL) design pattern</a>. Each one pulls (extracts) data from somewhere, sends it to Claude to be transformed, then loads the result back to the user.
+Both extensions follow the <a href="https://www.ibm.com/think/topics/etl" title="ETL Design Pattern" aria-label="Read IBM's ETL Design Pattern definition" rel="noopener noreferrer">Extract → Transform → Load (ETL) design pattern</a>. Extract the input. Send it to Claude. Load the result. That's the whole loop.
 
-It was all done within the confines of VS Code.  It had to be done within their Extension API constraints.
+The extensions had to operate within VS Code's Extension API — its system for reading files, running commands, and talking to the editor. Claude was just one node in that system.
+
+TypeScript held everything together at the boundaries. Wherever data crossed into or out of the Claude API, TypeScript enforced its shape.
+
+The takeaway: Claude didn't replace the engineering. It eased the integration.
+
+And, truthfully? This is where I see GenAI's power in software development.
