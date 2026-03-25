@@ -164,7 +164,7 @@ You can <a href="https://github.com/kaidez/save-selected-text/blob/main/package.
 
 `engines` refers to the minimum version VS Code needs to run the extension: version 1.74 in this case. `categories` refers to how the extension should be categorized in the VS Code Extension marketplace.
 
-`main` is the entry point for our app. In this case, it's the Typescript-compiled `.out/extension.js`.
+`main` is the entry point for our app. In this case, it's the TypeScript-compiled `.out/extension.js`.
 
 `activationEvents` controls when the extension loads and `contributes` registers commands/menus/settings. In VS Code 1.74+, `activationEvents` entries are optional — VS Code infers activation from `contributes`.
 
@@ -174,7 +174,7 @@ The extension gets triggered by selecting a menu item with a right-click. In `co
 
 That's ("Claude: Save Selected Text") in this case. It looks like this when in action:
 
-<img src="/assets/img/save-selected-text-menu.jpg" alt="Screenshot of the Save Selected Text right-click context menu in VS Code" />
+<img src="/assets/img/save-selected-text-menu.jpg" alt="Screenshot of the Save Selected Text right-click context menu in VS Code" width="740" height="374"  />
 
 `command` registers the unique command ID with VS Code.
 
@@ -365,7 +365,7 @@ const claudeModel = vscode.workspace.getConfiguration('saveSelectedText').get<st
 
 `const apiKey` and `const claudeModel` are your Claude API key and model-selection dropdown as the appear in VS Code Settings. They're located with the help of the `getConfiguration()` method and are formatted like this in VS Code:
 
-<img src="/assets/img/vs-code-settings-menu.jpg" alt="Screenshot of the Save Selected Text extension settings in VS Code" />
+<img src="/assets/img/vs-code-settings-menu.jpg" alt="Screenshot of the Save Selected Text extension settings in VS Code" width="740" height="352" />
 
 `claude-haiku-4-5-20251001` is the default — used when no model is manually selected. At this post's publish date, Haiku is cheapest per token: i.e., <b>it will save you money!!!</b>.
 
@@ -446,8 +446,7 @@ The request is in `const message = await client.messages.create()`. It includes 
 
 It defines the maximum number of tokens in Claude's response. It also defines who's sending the message, the `user`, and the content of the message.
 
-`const response` is a string extracted from Claude's response object. It does a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator" title="Ternary Operator - MDN Web Docs" aria-label="Read about the ternary operator on MDN" rel="noopener noreferrer">ternary check</a>
-ternary check</a> for if the `message.content[0]` is a text block, then pulls the text from it.
+`const response` is a string extracted from Claude's response object. It does a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator" title="Ternary Operator - MDN Web Docs" aria-label="Read about the ternary operator on MDN" rel="noopener noreferrer">ternary check</a> for if the `message.content[0]` is a text block, then pulls the text from it.
 
 `response` contains Claude's response to our prompt (the selected text). It will be placed in a Markdown file (`const doc`) headlining our prompt as "SELECTED TEXT", and Claude's response to it headlined as 'CLAUDE'S RESPONSE'.
 
@@ -461,7 +460,7 @@ It's here where you both enter your Claude API key and choose which model you wa
 
 And when the extension gets put to work in VS Code, it will work like this:
 
-<img src="/assets/img/claude-save-select-text.gif" alt="Animated demo of the Save Selected Text VS Code extension in action" />
+<img src="/assets/img/claude-save-select-text.gif" alt="Animated demo of the Save Selected Text VS Code extension in action" width="740" height="529" />
 
 A new document shows the prompt under SELECTED TEXT and Claude's reply under CLAUDE'S RESPONSE. Plus, our prompt is saved in a time-stamped filename in our `prompts` folder. The `prompts` folder didn't exist when the extension ran, so one was created on the fly.
 
@@ -1087,7 +1086,7 @@ From that point on, the file is being watched.
 
 When a file is saved and sent out as a prompt, the process looks like this:
 
-<img src="/assets/img/claude-prompt-reader_01.gif" alt="Claude Prompt Reader: selecting a prompt file from the Command Palette and receiving a response" />
+<img src="/assets/img/claude-prompt-reader_01.gif" alt="Claude Prompt Reader: selecting a prompt file from the Command Palette and receiving a response" width="740" height="462" />
 
 A text file is saved in the `prompts` folder.  When "Claude Prompt Reader: Read Prompts" gets clicked on in the Command Palette, the file gets sent out as a prompt to the Claude API. A response comes back and the entire conversation is saved in the `history` folder. 
 
@@ -1095,11 +1094,11 @@ The conversation can continue by updating the text file. Saving the file trigger
 
 That looks like this:
 
-<img src="/assets/img/claude-prompt-reader_02.gif" alt="Claude Prompt Reader: updating a prompt file and continuing the conversation" />
+<img src="/assets/img/claude-prompt-reader_02.gif" alt="Claude Prompt Reader: updating a prompt file and continuing the conversation" width="740" height="471" />
 
 Finally, clear the entire chat history. We can do it for either one chat or all of them, but this is what it looks like for doing all of them:
 
-<img src="/assets/img/claude-prompt-reader_03.gif" alt="Claude Prompt Reader: clearing chat history for all prompt files" />
+<img src="/assets/img/claude-prompt-reader_03.gif" alt="Claude Prompt Reader: clearing chat history for all prompt files" width="740" height="477" />
 
 <h2 id="conclusion">Conclusion</h2>
 
