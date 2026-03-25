@@ -1101,3 +1101,9 @@ Finally, clear the entire chat history. We can do it for either one chat or all 
 <img src="/assets/img/claude-prompt-reader_03.gif" alt="Third animated GIF of the Claude Prompt Reader Sending a text file out as a prompt" />
 
 <h2 id="conclusion">Conclusion</h2>
+
+After finishing these projects, I have a clearer sense of the role of Claude and similar GenAI tools in software development:
+
+My VS Code extensions followed the basic, but important, <a href="https://www.ibm.com/think/topics/etl" title="ETL Design Pattern" aria-label="Read IBM's ETL Design Pattern definition" rel="noopener noreferrer">Extract → Transform → Load (ETL) design pattern</a>. Each one pulls (extracts) data from somewhere, sends it to Claude to be transformed, then loads the result back to the user.
+
+It was all done within the confines of VS Code.  It had to be done within their Extension API constraints.
