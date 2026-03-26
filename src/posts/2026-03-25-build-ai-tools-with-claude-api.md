@@ -1114,4 +1114,4 @@ TypeScript held everything together at the boundaries. Wherever data crossed int
 
 The takeaway: Claude didn't replace the engineering. <b>It eased the integration</b>.
 
-Claude, Copilot, ChatGPT and the like continue to make system design and integration engineering simpler to execute within software development. I believe, where this tooling will win...unless they already have.
+Claude, Copilot, ChatGPT and the like continue to make system design and integration engineering simpler to execute within software development. I believe this is where GenAI tooling will have its biggest impact — unless it already does.
