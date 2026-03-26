@@ -103,7 +103,7 @@ The code is mostly the same across these extensions. So I'll walk through what t
 You can <a href="https://github.com/kaidez/save-selected-text/blob/main/package.json" title="Save Selected Text VS Code extension for package.json" aria-label="Review the package.json for Save Selected Text VS Code extension" rel="noopener noreferrer">view the complete `package.json` file</a> on the repo. But here are the core configs as they relate to VS Code extensions:
 
 <pre><code class="language-javascript">
-// package.json
+// Save Selected Text package.json
 ...
 "engines": {
   "vscode": "^1.74.0"
@@ -172,7 +172,7 @@ Developers targeting 1.74+ often keep `activationEvents` to signal they chose au
 
 The extension gets triggered by selecting a menu item with a right-click. In `contributes.commands[]`, the `title` value defines the command's label in the menu.
 
-That's ("Claude: Save Selected Text") in this case. It looks like this when in action:
+That's "Claude: Save Selected Text" in this case. It looks like this when in action:
 
 <img src="/assets/img/save-selected-text-menu.jpg" alt="Screenshot of the Save Selected Text right-click context menu in VS Code" width="740" height="374"  />
 
@@ -315,7 +315,7 @@ let disposable = vscode.commands.registerCommand('save-selected-text.saveSelecti
 context.subscriptions.push(disposable);
 </code></pre>
 
-`disposable` is the variable that connects the extension to VS Code. It doesn't <i>have</i> to be named `disposable`: Yeoman just does this by default.
+`disposable` is the function being executed when right-clicking on selected text. It doesn't <i>have</i> to be named `disposable`: Yeoman just does this by default.
 
 But I'm guessing Yeoman does this to silently reference VS Code's internal `Disposable` object. `vscode.commands.registerCommand()` returns `Disposable`, which has the method `dispose()`. And `Disposable.dispose()` unregisters the command and releases its resources.
 
@@ -466,9 +466,9 @@ A new document shows the prompt under SELECTED TEXT and Claude's reply under CLA
 
 <h2 id="claude-prompt-reader">The Claude Prompt Reader</h2>
 
-Where the "Save Selected Text" extension starts by right-clicking on selected text, the Claude Prompt Reader starts from the VS Code Command Palette. This extension looks at an open text file and treats its text as our new prompt, then sends it out to the Claude API.
+Where the "Save Selected Text" extension starts by right-clicking on selected text, the Claude Prompt Reader starts from the VS Code Command Palette. This extension looks at a text file and treats its text as our new prompt, then sends it out to the Claude API.
 
-Also, the chat history is saved in a `history` folder in a JSON file.
+Also, the chat history is saved as a JSON file in a `history` folder.
 
 <h2 id="claude-prompt-reader-package-json">The Claude Prompt Reader <code>package.json</code></h2>
 
@@ -476,7 +476,7 @@ You can <a href="https://github.com/kaidez/claude-prompt-reader/blob/main/packag
 
 <pre><code class="language-javascript">
 {
-// package.json
+// Claude Prompt Reader package.json
 ...
 "contributes": {
   "commands": [
@@ -527,7 +527,7 @@ The previous extension had a dropdown called `saveSelectedText.chooseYourModel` 
 
 <h2 id="claude-prompt-reader-history-ts">The Claude Prompt Reader <code>history.ts</code></h2>
 
-`history.ts` is a helper file used by the prompt reader's `extension.ts`. It exports both a TypeScript interface and four helper functions.
+`history.ts` is a helper file used by the prompt reader's `extension.ts`. It exports a TypeScript interface and four helper functions.
 
 <pre><code class="language-javascript">
 // history.ts
@@ -1114,4 +1114,4 @@ TypeScript held everything together at the boundaries. Wherever data crossed int
 
 The takeaway: Claude didn't replace the engineering. <b>It eased the integration</b>.
 
-Claude, Copilot, ChatGPT and the like continue to make system design and integration engineering simpler to execute within software development. I believe, where this tooling will win...unless they've done so already.
+Claude, Copilot, ChatGPT and the like continue to make system design and integration engineering simpler to execute within software development. I believe, where this tooling will win...unless they already have.
