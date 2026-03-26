@@ -3,7 +3,7 @@ const moment = require("moment");
 const htmlmin = require("html-minifier");
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const { rssPlugin } = require('@11ty/eleventy-plugin-rss');
+const pluginRss = require('@11ty/eleventy-plugin-rss');
 const relatedPostsPlugin = require("./src/assets/js/relatedPosts");
 const readingTime = require('eleventy-plugin-reading-time');
 
@@ -75,7 +75,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
 
   // RSS plugin
-  eleventyConfig.addPlugin(rssPlugin);
+  eleventyConfig.addPlugin(pluginRss);
 
   // Related posts plugin
   eleventyConfig.addPlugin(relatedPostsPlugin);
