@@ -3,7 +3,7 @@ const moment = require("moment");
 const htmlmin = require("html-minifier");
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const rssPlugin = require('@11ty/eleventy-plugin-rss');
+const { rssPlugin } = require('@11ty/eleventy-plugin-rss');
 const relatedPostsPlugin = require("./src/assets/js/relatedPosts");
 const readingTime = require('eleventy-plugin-reading-time');
 
@@ -82,6 +82,11 @@ module.exports = function (eleventyConfig) {
 
   // Reading time plugin
   eleventyConfig.addPlugin(readingTime);
+
+  eleventyConfig.addFilter("readingTimeProseOnly", function (content) {
+    const stripped = content.replace(/<pre[\s\S]*?<\/pre>/gi, '');
+    return require('./node_modules/eleventy-plugin-reading-time/lib/reading-time')(stripped);
+  });
 
 
   // Add collection for blog posts
