@@ -521,7 +521,7 @@ You can <a href="https://github.com/kaidez/claude-prompt-reader/blob/main/packag
 
 VS Code uses `claudePromptReader` as the configuration namespace for this extension's settings. It's how VS Code finds our extension.
 
-A second command, `claude-prompt-reader.clearHistory()`, is added. There's no `menus` section; therefore, this extension launches from the Command Palette by default instead of a right-click menu.
+A second command, `claude-prompt-reader.clearHistory`, is added. There's no `menus` section; therefore, this extension launches from the Command Palette by default instead of a right-click menu.
 
 The previous extension had a dropdown called `saveSelectedText.chooseYourModel` where the user could choose a Claude Model. This one does too, but it's called `claudePromptReader.modelDropdown`.
 
@@ -1108,8 +1108,10 @@ Both extensions follow the <a href="https://www.ibm.com/think/topics/etl" title=
 
 The extensions had to operate within VS Code's Extension API — its system for reading files, running commands, and talking to the editor. Claude was just one node in that system.
 
+That's the truth about <b>system design</b>.  Knowing what each part does, and where the boundaries are.
+
 TypeScript held everything together at the boundaries. Wherever data crossed into or out of the Claude API, TypeScript enforced its shape.
 
-The takeaway: Claude didn't replace the engineering. It eased the integration.
+The takeaway: Claude didn't replace the engineering. <b>It eased the integration</b>.
 
-That's where GenAI earns its place in software development.
+Claude, Copilot, ChatGPT and the like continue to make system design and integration engineering simpler to execute within software development. I believe, where this tooling will win...unless they've done so already.
