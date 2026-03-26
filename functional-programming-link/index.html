@@ -8,7 +8,7 @@
   <title>Setup Link Functionality with Functional Programming - kaidez - Web Development Tutorials &amp; JavaScript Coding Tips</title>
   <meta name="description" content="Use JavaScript functional programming to set click-to-link functionality on a set of elements. Code sample has a basic webpack/Babel setup.">
   <meta name="author" content="Kai Gittens">
-  
+
   <!-- Google Site Verification -->
   <meta name="google-site-verification" content="+Tj7sEh2RH2PLG8XnLRer4x3YQq9PBT-IqZLqtbI8Eq8=" />
 
@@ -25,7 +25,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
@@ -154,18 +155,20 @@
 
   <main id="main-content" class="post-content" role="main" aria-label="Article content">
     <h1 class="post-title">Setup Link Functionality with Functional Programming</h1>
-      <div class="post-tag-and-category-container">
-        By Kai Gittens <span class="post-date-separator">|</span>
-        <time datetime="2017-08-19">August 18, 2017</time>
-        <span class="post-date-separator">|</span>
-        
-        <a href="/tutorials" class="post-tag-or-category post-category">Tutorials</a>
-        <span class="post-date-separator">|</span>tags:&nbsp;<a href="/tags/javascript/" class="post-tag-or-category">javascript</a><span class="post-date-separator">|</span>
-          <span class="reading-time">reading time: 5 min</span>
+    <div class="post-tag-and-category-container">
+      By Kai Gittens <span class="post-date-separator">|</span>
+      <time datetime="2017-08-19">August 18, 2017</time>
+      <span class="post-date-separator">|</span>
 
-      </div>
+      <a href="/tutorials" class="post-tag-or-category post-category">Tutorials</a>
+      <span class="post-date-separator">|</span>tags:&nbsp;<a href="/tags/javascript/" class="post-tag-or-category">javascript</a><span class="post-date-separator">|</span>
+      <span class="reading-time">reading time: 4 min</span>
 
-      <div class="post-tag-container"></div><img src="/assets/img/functional-programming-react.jpg" alt="image for the 'Setup Link Functionality with Functional Programming' post" class="header-image" /><p><a href="/samples/functional-programming-click-tutorial/">See the demo »</a> <a href="https://github.com/kaidez/functional-programming-click-tutorial/">Grab the code from Github »</a></p>
+    </div>
+
+    <div class="post-tag-container"></div><img src="/assets/img/functional-programming-react.jpg"
+      alt="image for the 'Setup Link Functionality with Functional Programming' post" 
+      class="header-image" /><p><a href="/samples/functional-programming-click-tutorial/">See the demo »</a> <a href="https://github.com/kaidez/functional-programming-click-tutorial/">Grab the code from Github »</a></p>
 <p>I lost my WordPress blog due to a sloppy, &quot;newbie-to-databases&quot; error. I've been rebuilding it slowly with <a href="https://jekyllrb.com/">Jekyll</a>, adding new functionality here and there.</p>
 <p>One thing I added was on the homepage, where post snippets inside <code>div</code>s go to a certain link when they get clicked.  To apply that functionality to <em>ALL</em> those links, functional programming made sense.</p>
 <p>The file structure looks like this, roughly:</p>
@@ -427,22 +430,24 @@ goToPage(getPostDiv[1])
     <aside class="related-posts" role="complementary" aria-labelledby="related-posts-heading">
       <h2 id="related-posts-heading" class="related-posts-header">Related Posts</h2>
       <ul role="list">
-        <li><a href="/javascript-off-dom/">SCREENCAST TUTORIAL: Using JavaScript Off-DOM</a></li><li><a href="/filter-content-jquery/">TUTORIAL: Filter Content With jQuery.filter() & jQuery Selectors</a></li><li><a href="/create-html5-page/">TUTORIAL: Create The Building Blocks For An HTML5 Page</a></li>
+        <li><a href="/temperatures-functional-programming/">Display Temperature Averages with JavaScript Functional Programming</a></li><li><a href="/javascript-closures-tutorial/">TUTORIAL: What NYC Subways Can Teach Us About JavaScript Closures</a></li><li><a href="/javascript-for-loop-creates-jquery-fade/">SCREENCAST TUTORIAL: JavaScript for() loop That Creates A jQuery Fade In/Fade Out</a></li>
       </ul>
     </aside>
 
   </main>
 
   <footer class="site-footer">
-  <h1 class="content--hidden-text">About Kaidez/Contact Kaidez</h1>  
+  <h1 class="content--hidden-text">About Kaidez/Contact Kaidez</h1>
   <div class="container">
     <div class="footer-content">
       <div class="footer-main">
         <div class="footer-colophon">
-          <img src="/assets/img/footer-profile-pic.jpg" class="footer-profile-pic" alt="Footer image of Kai 'kaidez' Gittens">
+          <img src="/assets/img/footer-profile-pic.jpeg" class="footer-profile-pic"
+            alt="Footer image of Kai 'kaidez' Gittens">
           <div class="footer-colophon-item">
             Kai "kaidez" Gittens is an automation and front end web developer who has contributed
-            to web experiences for Blue Cross Blue Shield, JPMorgan Chase, Revlon, jetBlue, Everyday Health and the United Nations.
+            to web experiences for Blue Cross Blue Shield, JPMorgan Chase, Revlon, jetBlue, Everyday Health and the
+            United Nations.
             He lives in the Raleigh-Durham area of North Carolina, USA and is an avid supporter of both
             Chelsea F.C. and Real Madrid C.F.
             <div class="social-links">
