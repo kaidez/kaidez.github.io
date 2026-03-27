@@ -8,3 +8,4 @@ coverage
 _drafts
 src/assets/js/main.js
 .claude/reports/
+.ncurc
