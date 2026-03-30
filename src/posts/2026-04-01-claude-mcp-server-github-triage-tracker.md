@@ -11,3 +11,6 @@ category: Coding Tips
 schema_type: "TechArticle"
 draft: true
 ---
+I previously wrote about <a href="/building-ai-tools-claude-api/" title="Building AI Tools with the Claude API">building two VS Code extensions with the Claude API</a>. But I also built an MCP Prompt Server and a GitHub Triage Tracker.
+
+These weren't Earth-shattering apps, but building them increased my Claude knowledge.  Here's the write-up on the latter two tools.
