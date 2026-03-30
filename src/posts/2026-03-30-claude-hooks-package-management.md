@@ -46,20 +46,20 @@ One less thing to worry about.
 
 <h2>3. Building a Safety Net With Claude Code Hooks</h2>
 
-I discovered the broken versions the hard way: build failures on every deploy.
+I discovered the broken package versions the hard way: build failures on every deploy.
 
-When I ran `npm run build:prod` locally it worked — but my GitHub Actions deployment kept failing. The issues related to the `typescript` and `@11ty/eleventy-plugin-rss` packages broke the build every time.
+When I pushed to GitHub, a GitHub Actions deployment kept failing. The issues related to the `typescript` and `@11ty/eleventy-plugin-rss` packages broke the build every time.
 
-Claude Code supports <a href="https://platform.claude.com/docs/en/agent-sdk/hooks" title="Read about Claude Code Hooks" rel="noopener noreferrer">hooks</a>: shell scripts that fire in response to tool events. A `PostToolUse` hook on the `Bash` tool fires after any terminal command Claude runs.
+Claude Code supports <a href="https://code.claude.com/docs/en/hooks" title="Read about Claude Code Hooks" rel="noopener noreferrer">hooks</a>: shell scripts that fire in response to tool events. A `PostToolUse` hook on the `Bash` tool fires after any terminal command Claude runs.
 
 So every time `npm install` runs, the hook detects it and kicks off a production build. Then the hook writes a timestamped Markdown report to `.claude/reports/` every time it runs.
 
-You can <a href="https://github.com/kaidez/kaidez.github.io/blob/dev-branch/.claude/hooks/post-npm-install.sh" title="View the post-npm-install hook script on GitHub" rel="noopener noreferrer">my hook script</a>
- on GitHub.
+To test it: I reverted `package.json` to the broken state and ran `npm install`. The build failed, the hook caught it, and the report showed exactly why — the RSS plugin incompatibility.
 
-That report was generated during a test run where I intentionally reverted `package.json` to the broken state. The build failed, the hook caught it, and the report showed exactly why — the RSS plugin incompatibility.
+Then I ran `git reset --hard HEAD`, ran `npm install` again, and the next report came back PASSED.
 
-Then I ran `git reset --hard HEAD`, ran `npm install` again, and the next report came back **PASSED**.
+You can <a href="https://github.com/kaidez/kaidez.github.io/blob/dev-branch/.claude/hooks/post-npm-install.sh" title="View the post-npm-install hook script on GitHub" rel="noopener noreferrer">view my hook script</a> on GitHub. You can also review both <a href="https://github.com/kaidez/kaidez.github.io/blob/dev-branch/.claude/reports/build-2026-03-27T18-34-38_SUCCESS_SAMPLE.md" title="Read a successful build report" rel="noopener noreferrer">an example of a successful report</a> and <a href="https://github.com/kaidez/kaidez.github.io/blob/dev-branch/.claude/reports/build-2026-03-27T18-46-33_FAILED_SAMPLE.md"  title="Read a failed report" rel="noopener noreferrer"> an example of a failed report</a>.
+
 
 <h2>The Bigger Takeaway</h2>
 
