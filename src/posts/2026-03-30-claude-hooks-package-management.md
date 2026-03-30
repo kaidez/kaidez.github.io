@@ -50,9 +50,37 @@ I discovered the broken package versions the hard way: build failures on every d
 
 When I pushed to GitHub, a GitHub Actions deployment kept failing. The issues related to the `typescript` and `@11ty/eleventy-plugin-rss` packages broke the build every time.
 
-Claude Code supports <a href="https://code.claude.com/docs/en/hooks" title="Read about Claude Code Hooks" rel="noopener noreferrer">hooks</a>: shell scripts that fire in response to tool events. A `PostToolUse` hook on the `Bash` tool fires after any terminal command Claude runs.
+Claude Code supports <a href="https://code.claude.com/docs/en/hooks" title="Read about Claude Code Hooks" rel="noopener noreferrer">hooks</a>: shell scripts that fire in response to tool events. A `PostToolUse` hook on the `Bash` tool is configured in my `settings.json` file.
 
-So every time `npm install` runs, the hook detects it and kicks off a production build. Then the hook writes a timestamped Markdown report to `.claude/reports/` every time it runs.
+<pre><code class="language-javascript">
+// settings.json
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx tsc --noEmit 2>&1 | head -20"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/post-npm-install.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
+</code></pre>
+
+So `settings.json` watches for any Bash commands Claude runs. If the command is `npm install`, the hook kicks off a production build via `.claude/hooks/post-npm-install.sh`.
 
 To test it: I reverted `package.json` to the broken state and ran `npm install`. The build failed, the hook caught it, and the report showed exactly why — the RSS plugin incompatibility.
 
