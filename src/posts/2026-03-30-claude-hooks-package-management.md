@@ -34,7 +34,7 @@ I LOOOOOOOOVE constantly checking if my npm dependencies are up-to-date and use 
 
 Locked or not, `npm-check-updates` doesn't know or care about those constraints. It sees a newer version on the registry and updates `package.json` every time. The next `npm install` would then silently install broken versions.
 
-The fix was to exclude them from update checks automatically with an `.ncurc` config file at the project root:
+My `/insights` report suggested excluding them from update checks. An `.ncurc` config file at the project root does exactly that:
 
 <pre><code class="language-yaml">
 reject:
