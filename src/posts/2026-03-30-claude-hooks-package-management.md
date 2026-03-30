@@ -1,7 +1,7 @@
 ---
 title: "What /insights Taught Me About My Claude Workflow"
 date: 2026-03-30T12:00:00-02:00
-excerpt: "Running Claude Code's /insights command led me down a rabbit hole — and I came out the other side with better package management and automated build reporting."
+excerpt: "Running Claude Code's /insights command led me down a rabbit hole, but I came out the other side with better package management and automated build reporting."
 layout: layouts/post.njk
 draft: true
 permalink: /claude-insights-hooks-package-management/
@@ -60,9 +60,12 @@ Then I ran `git reset --hard HEAD`, ran `npm install` again, and the next report
 
 You can <a href="https://github.com/kaidez/kaidez.github.io/blob/dev-branch/.claude/hooks/post-npm-install.sh" title="View the post-npm-install hook script on GitHub" rel="noopener noreferrer">view my hook script</a> on GitHub. You can also review both <a href="https://github.com/kaidez/kaidez.github.io/blob/dev-branch/.claude/reports/build-2026-03-27T18-34-38_SUCCESS_SAMPLE.md" title="Read a successful build report" rel="noopener noreferrer">an example of a successful report</a> and <a href="https://github.com/kaidez/kaidez.github.io/blob/dev-branch/.claude/reports/build-2026-03-27T18-46-33_FAILED_SAMPLE.md"  title="Read a failed report" rel="noopener noreferrer"> an example of a failed report</a>.
 
+<h2>Conclusion</h2>
 
-<h2>The Bigger Takeaway</h2>
+I'm still learning what Claude Code can do. The `/insights` command didn't hand me a to-do list — it just prompted me to look more carefully.
 
-I'm still learning what Claude Code can do. The `/insights` command didn't hand me a to-do list — it just prompted me to look more carefully. The problems I found and fixed today weren't dramatic. But they were real, and they were invisible until I went looking.
+The problems I found and fixed today weren't dramatic. But they were real, and they were invisible until I went looking.
 
-That's the part I keep noticing as I work with Claude more: it's not just about what you ask it to do. It's about what it prompts you to think about. The tool is only as useful as the questions you bring to it — and I'm getting better at asking them.
+That's the part I keep noticing as I work with Claude more: it's not just about what you ask it to do. It's about what it prompts you to think about.
+
+The end-all-be-all rule about Clade is, it's only as useful as the questions you bring to it. I'm getting better at asking them.
