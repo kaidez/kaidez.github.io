@@ -2,15 +2,16 @@
  * @jest-environment jsdom
  */
 
+let copyrightYear, toggleMobileMenu;
+
 beforeAll(() => {
   jest.spyOn(console, 'warn').mockImplementation(() => { });
+  ({ copyrightYear, toggleMobileMenu } = require('../ts_src/main'));
 });
 
 afterAll(() => {
   jest.restoreAllMocks();
 });
-
-const { copyrightYear, toggleMobileMenu } = require('../ts_src/main');
 
 describe('main.js - copyrightYear function', () => {
   let originalDate;
