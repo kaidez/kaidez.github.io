@@ -29,8 +29,8 @@ As a result, I created a `/review-post` slash command. It does the following:
 
 I LOOOOOOOOVE constantly checking if my npm dependencies are up-to-date and use `npx npm-check-updates -u` to do just that. But two packages needed to stay locked to specific versions — upgrading either one would break the build:
 
-- **`typescript`** — locked to `5.9.3` because `ts-jest@29` breaks with TypeScript 6+
-- **`@11ty/eleventy-plugin-rss`** — locked to `^2.0.0` because v3 is ESM-only, and this project uses CommonJS
+- **`typescript`**: locked to `5.9.3` because `ts-jest@29` (used for unit tests) breaks with TypeScript 6+.
+- **`@11ty/eleventy-plugin-rss`**: locked to `^2.0.0` because v3+ is ESM-only, and this project uses CommonJS.
 
 Locked or not, `npm-check-updates` doesn't know or care about those constraints. It sees a newer version on the registry and updates `package.json` every time. The next `npm install` would then silently install broken versions.
 
