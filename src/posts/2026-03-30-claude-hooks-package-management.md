@@ -11,7 +11,7 @@ secondary_tags: ["ai", "claude"]
 category: Coding Tips
 schema_type: "TechArticle"
 ---
-I built up a lot of AI prompt habits when I was writing my <a href="/building-ai-tools-claude-api/" title="Building AI Tools with the Claude API">Claude API tooling post</a>. I reviewed them using `/insights`, a Claude Code slash command that summarizes your last 30 days of usage and session activity.
+I built up a lot of AI prompt habits when I was writing my <a href="/building-ai-tools-claude-api/" title="Building AI Tools with the Claude API">Claude API tooling post</a>. I reviewed them using `/insights`, a Claude Code slash command that summarizes your last 30 days of usage and session activity. <a href="/samples/claude-report-sample.html" title="Read a sample Claude Code /insights report">Read a sample `/insights` report</a>.
 
 After reviewing, I came up with things that would increase my workflow and productivity. Three things in total:
 
@@ -58,7 +58,7 @@ To test it: I reverted `package.json` to the broken state and ran `npm install`.
 
 Then I ran `git reset --hard HEAD`, ran `npm install` again, and the next report came back PASSED.
 
-You can <a href="https://github.com/kaidez/kaidez.github.io/blob/dev-branch/.claude/hooks/post-npm-install.sh" title="View the post-npm-install hook script on GitHub" rel="noopener noreferrer">view my hook script</a> on GitHub. You can also review both <a href="https://github.com/kaidez/kaidez.github.io/blob/dev-branch/.claude/reports/build-2026-03-27T18-34-38_SUCCESS_SAMPLE.md" title="Read a successful build report" rel="noopener noreferrer">an example of a successful report</a> and <a href="https://github.com/kaidez/kaidez.github.io/blob/dev-branch/.claude/reports/build-2026-03-27T18-46-33_FAILED_SAMPLE.md"  title="Read a failed report" rel="noopener noreferrer"> an example of a failed report</a>.
+You can <a href="https://github.com/kaidez/kaidez.github.io/blob/dev-branch/.claude/hooks/post-npm-install.sh" title="View the post-npm-install hook script on GitHub" rel="noopener noreferrer">view my hook script</a> on GitHub. You can also review both <a href="https://github.com/kaidez/kaidez.github.io/blob/dev-branch/.claude/reports/build-2026-03-27T18-34-38_SUCCESS_SAMPLE.md" title="Read a successful build report" rel="noopener noreferrer">an example of a successful report</a> and <a href="https://github.com/kaidez/kaidez.github.io/blob/dev-branch/.claude/reports/build-2026-03-27T18-46-33_FAILED_SAMPLE.md" title="Read a failed report" rel="noopener noreferrer">an example of a failed report</a>.
 
 <h2>Conclusion</h2>
 
@@ -68,4 +68,4 @@ The problems I found and fixed today weren't dramatic. But they were real, and t
 
 That's the part I keep noticing as I work with Claude more: it's not just about what you ask it to do. It's about what it prompts you to think about.
 
-The end-all-be-all rule about Clade is, it's only as useful as the questions you bring to it. I'm getting better at asking them.
+The end-all-be-all rule about Claude is, it's only as useful as the questions you bring to it. I'm getting better at asking them.
