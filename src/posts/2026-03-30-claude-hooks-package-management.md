@@ -11,7 +11,7 @@ secondary_tags: ["ai", "claude"]
 category: Coding Tips
 schema_type: "TechArticle"
 ---
-I built up a lot of AI prompt habits when I was writing my <a href="/building-ai-tools-claude-api/" title="Building AI Tools with the Claude API">Claude API tooling post</a>. I reviewed them using `/insights`, a Claude Code slash command that summarizes your last 30 days of usage and session activity. <a href="/samples/claude-report-sample.html" title="Read a sample Claude Code /insights report">Read a sample `/insights` report</a>.
+I built up a lot of AI prompt habits when I was writing my <a href="/building-ai-tools-claude-api/" title="Building AI Tools with the Claude API">Claude API tooling post</a>. I reviewed them using `/insights`, a Claude Code slash command that summarizes your last 30 days of usage and session activity. <a href="/samples/claude-report-sample.html" title="Read a sample Claude Code /insights report">Read a sample <code>/insights</code> report</a>.
 
 After reviewing, I came up with things that would increase my workflow and productivity. Three things in total:
 
