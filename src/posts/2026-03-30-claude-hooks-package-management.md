@@ -50,19 +50,12 @@ I discovered the broken versions the hard way: build failures on every deploy.
 
 When I ran `npm run build:prod` locally it worked — but my GitHub Actions deployment kept failing. The issues related to the `typescript` and `@11ty/eleventy-plugin-rss` packages broke the build every time.
 
-Claude Code supports <a href="https://platform.claude.com/docs/en/hooks.html" title="Read about Claude Code Hooks" rel="noopener noreferrer">hooks</a>: shell scripts that fire in response to tool events. A `PostToolUse` hook on the `Bash` tool fires after any terminal command Claude runs. I used that to detect `npm install` and kick off a production build.
+Claude Code supports <a href="https://platform.claude.com/docs/en/agent-sdk/hooks" title="Read about Claude Code Hooks" rel="noopener noreferrer">hooks</a>: shell scripts that fire in response to tool events. A `PostToolUse` hook on the `Bash` tool fires after any terminal command Claude runs.
 
-The hook also writes a timestamped Markdown report to `.claude/reports/` every time it runs:
+So every time `npm install` runs, the hook detects it and kicks off a production build. Then the hook writes a timestamped Markdown report to `.claude/reports/` every time it runs.
 
-<pre><code class="language-markdown"># Build Report: 2026-03-27T18-46-33
-
-**Status:** &lt;span style="color: red;"&gt;FAILED&lt;/span&gt;
-**Command:** `npm run build:prod`
-**Triggered by:** `npm install`
-
-## Output
-...eleventy fatal error: Invalid plugin signature...
-</code></pre>
+You can <a href="https://github.com/kaidez/kaidez.github.io/blob/dev-branch/.claude/hooks/post-npm-install.sh" title="View the post-npm-install hook script on GitHub" rel="noopener noreferrer">my hook script</a>
+ on GitHub.
 
 That report was generated during a test run where I intentionally reverted `package.json` to the broken state. The build failed, the hook caught it, and the report showed exactly why — the RSS plugin incompatibility.
 
