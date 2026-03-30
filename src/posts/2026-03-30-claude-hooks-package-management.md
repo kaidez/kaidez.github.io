@@ -11,8 +11,8 @@ secondary_tags: ["ai", "claude"]
 category: Coding Tips
 schema_type: "TechArticle"
 ---
-I built up a lot of AI prompt habits when I was writing my <a href="/building-ai-tools-claude-api/" title="Building AI Tools with the Claude API">Claude API tooling post</a>
-. I reviewed them using `/insights`, a Claude Code slash command that reports on the last 30 days of your usage patterns and session activity.
+I built up a lot of AI prompt habits when I was writing my <a href="/building-ai-tools-claude-api/" title="Building AI Tools with the Claude API">Claude API tooling post</a>. I reviewed them using `/insights`, a Claude Code slash command that reports on the last 30 days of your usage patterns and session activity.
+
 
 After reviewing, I came up with things that would increase my workflow and productivity. Three things in total:
 
@@ -22,29 +22,28 @@ After writing a new paragraph or two, I'd tell Claude to review it for SEO-frien
 
 As a result, I created a `/review-post` slash command. It does the following:
 
-<ul>
-  <li>Reviews the text clarity.
-  <li>Confirms that all `<a>` and `<img>` tags are SEO-friendly.
-  <li>Computes a <a href="https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests">Flesch-Kincaid readability score</a> to see how easy-to-read the post is.
-</ul>
+- Reviews the text clarity.
+- Confirms that all `<a>` and `<img>` tags are SEO-friendly.
+- Computes a <a href="https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests" title="Flesch-Kincaid readability score" rel="noopener noreferrer">Flesch-Kincaid readability score</a> to see how easy-to-read the post is.
 
-<h2>The Problem With Running npm-check-updates</h2>
+<h2>2. Prevent Certain Packages From Being Updated</h2>
 
-I use `npx npm-check-updates -u` to keep dependencies fresh. What I didn't realize was that it was quietly overwriting two manually pinned packages every time I ran it:
+I LOOOOOOOOVE constantly checking if my npm dependencies are up-to-date and use `npx npm-check-updates -u` to do just that. But two packages needed to stay locked to specific versions — upgrading either one would break the build:
 
-- **`typescript`** — pinned to `5.9.3` because `ts-jest@29` breaks with TypeScript 6+
-- **`@11ty/eleventy-plugin-rss`** — pinned to `^2.0.0` because v3 is ESM-only, and this project uses CommonJS
+- **`typescript`** — locked to `5.9.3` because `ts-jest@29` breaks with TypeScript 6+
+- **`@11ty/eleventy-plugin-rss`** — locked to `^2.0.0` because v3 is ESM-only, and this project uses CommonJS
 
-`npm-check-updates` doesn't know or care about those constraints. It sees a newer version on the registry and updates `package.json`. Every time. The next `npm install` would then silently install broken versions.
+Locked or not, `npm-check-updates` doesn't know or care about those constraints. It sees a newer version on the registry and updates `package.json` every time. The next `npm install` would then silently install broken versions.
 
-The fix was a `.ncurc` config file at the project root:
+The fix was to exclude them from update checks automatically with an `.ncurc` config file at the project root:
 
-<pre><code class="language-yaml">reject:
+<pre><code class="language-yaml">
+reject:
   - typescript
   - "@11ty/eleventy-plugin-rss"
 </code></pre>
 
-Now those packages are excluded from update checks automatically. One less thing to remember manually.
+One less thing to worry about.
 
 <h2>Building a Safety Net With Claude Code Hooks</h2>
 
