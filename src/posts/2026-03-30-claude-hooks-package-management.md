@@ -11,8 +11,7 @@ secondary_tags: ["ai", "claude"]
 category: Coding Tips
 schema_type: "TechArticle"
 ---
-I built up a lot of AI prompt habits when I was writing my <a href="/building-ai-tools-claude-api/" title="Building AI Tools with the Claude API">Claude API tooling post</a>. I reviewed them using `/insights`, a Claude Code slash command that reports on the last 30 days of your usage patterns and session activity.
-
+I built up a lot of AI prompt habits when I was writing my <a href="/building-ai-tools-claude-api/" title="Building AI Tools with the Claude API">Claude API tooling post</a>. I reviewed them using `/insights`, a Claude Code slash command that summarizes your last 30 days of usage and session activity.
 
 After reviewing, I came up with things that would increase my workflow and productivity. Three things in total:
 
@@ -45,11 +44,13 @@ reject:
 
 One less thing to worry about.
 
-<h2>Building a Safety Net With Claude Code Hooks</h2>
+<h2>3. Building a Safety Net With Claude Code Hooks</h2>
 
-The second thing I did was add a hook that runs `npm run build:prod` automatically after every `npm install` — before anything gets committed or pushed.
+I discovered the broken versions the hard way: build failures on every deploy.
 
-Claude Code supports [hooks](https://platform.claude.com/docs/en/hooks.html): shell scripts that fire in response to tool events. A `PostToolUse` hook on the `Bash` tool fires after any terminal command Claude runs. I used that to detect `npm install` and kick off a production build.
+When I ran `npm run build:prod` locally it worked — but my GitHub Actions deployment kept failing. The issues related to the `typescript` and `@11ty/eleventy-plugin-rss` packages broke the build every time.
+
+Claude Code supports <a href="https://platform.claude.com/docs/en/hooks.html" title="Read about Claude Code Hooks" rel="noopener noreferrer">hooks</a>: shell scripts that fire in response to tool events. A `PostToolUse` hook on the `Bash` tool fires after any terminal command Claude runs. I used that to detect `npm install` and kick off a production build.
 
 The hook also writes a timestamped Markdown report to `.claude/reports/` every time it runs:
 
