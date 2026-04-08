@@ -29,4 +29,8 @@ For the GitHub Triage Tracker, the Claude API works pretty much the same way it 
   <li>Calling the Claude API requires an API key. <a href="https://platform.claude.com/docs/en/api/admin/api_keys/retrieve" title="Get a Claude API key" rel="noopener noreferrer">Get a Claude API key here</a>.</li>
 </ul>
 
+Using a Node CLI command, this tracker pulls open issues in <a href="https://github.com/microsoft/vscode" title="Microsoft's VS Code Repo on GitHub" aria-label="Go to Microsoft's VS Code Repo on GitHub" rel="noopener noreferrer">VS Code's public repo</a>. It then uses Claude's API to determine how severe they are.
+
+From there, the open issues are retrieved in JSON format and outputted to the command line. Plus, the JSON data is saved to a local file.
+
 <h2 id="conclusion">Conclusion</h2>
