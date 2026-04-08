@@ -11,9 +11,9 @@ category: Coding Tips
 schema_type: "TechArticle"
 draft: true
 ---
-I previously wrote about <a href="/building-ai-tools-claude-api/" title="Building AI Tools with the Claude API">building two VS Code extensions with the Claude API</a>. But I also used Claude to build a <a href="https://github.com/kaidez/github-issue-triage" title="GitHub Triage Tracker Repository on GitHub" aria-label="Go to the GitHub Triage Tracker Repository on GitHub" rel="noopener noreferrer">GitHub Triage Tracker</a> and an <a href="https://github.com/kaidez/mcp-prompt-server" title="GitHub Triage Tracker Repository on GitHub" aria-label="Go to the GitHub Triage Tracker Repository on GitHub" rel="noopener noreferrer">MCP Prompt Server</a>.
+I previously wrote about <a href="/building-ai-tools-claude-api/" title="Building AI Tools with the Claude API">building two VS Code extensions with the Claude API</a>. But I also used Claude to build a <a href="https://github.com/kaidez/github-issue-triage" title="GitHub Triage Tracker Repository on GitHub" aria-label="Go to the GitHub Triage Tracker Repository on GitHub" rel="noopener noreferrer">GitHub Triage Tracker</a> and an <a href="https://github.com/kaidez/mcp-prompt-server" title="MCP Prompt Server Repository on GitHub" aria-label="Go to the MCP Prompt Server Repository on GitHub" rel="noopener noreferrer">MCP Prompt Server</a>.
 
-These weren't Earth-shattering apps, but building them increased my Claude knowledge.  Here's the write-up on the latter two tools.
+These weren't Earth-shattering apps, but building them increased my Claude API knowledge.  Here's the write-up on the latter two tools.
 
 <h2>Table of Contents</h2>
 
@@ -22,7 +22,7 @@ These weren't Earth-shattering apps, but building them increased my Claude knowl
 
 <h2 id="how-claude-works">How Claude Works With the Triage Tracker</h2>
 
-For the GitHub Triage Tracker, Claude works pretty much the same way it did with the VS Code extensions. A reminder of how it works:
+For the GitHub Triage Tracker, the Claude API works pretty much the same way it did with the VS Code extensions. A reminder of how it works:
 
 <ul>
   <li>Claude is stateless: if you're "having a conversation with it" through prompts, it doesn't remember your past prompts. Instead, it sends the past conversation with each new prompt, then uses it as context when it responds.</li>
