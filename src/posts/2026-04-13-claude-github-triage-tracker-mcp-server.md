@@ -21,8 +21,9 @@ These weren't Earth-shattering apps, but building them increased my Claude API k
 1. [How Claude Works With the Triage Tracker](#how-claude-works)
 2. [A Quick Chat About Zod](#zod)
 3. [Code Architecture](#code-architecture)
-4. [Triage Tracker `index.ts`](#index.ts)
-5. [Conclusion](#conclusion)
+4. [Triage Tracker - `validate.ts`](#validate.ts)
+5. [Triage Tracker - `index.ts`](#index.ts)
+6. [Conclusion](#conclusion)
 
 <h2 id="how-claude-works">How Claude Works With the Triage Tracker</h2>
 
@@ -36,11 +37,11 @@ For the Triage Tracker, the Claude API works pretty much the same way it did wit
 
 The tracker sends a request to GitHub's API to pull open issues from <a href="https://github.com/microsoft/vscode" title="Microsoft's VS Code Repo on GitHub" aria-label="Go to Microsoft's VS Code Repo on GitHub" rel="noopener noreferrer">VS Code's public repo</a>. Claude's API then analyzes those issues, using its powerful 'guessing' ability to determine how severe they are.
 
-From there, this data is saved to a JSON file, which is then outputted to the command line. Plus, the data is saved to a local Markdown file.
+From there, this data is saved to a JSON file, which is then outputted to the command line. The JSON data is also saved to a local Markdown file.
 
 <h2 id="zod">A Quick Chat About Zod</h2>
 
-The Triage Tracker is written in TypeScript (TS) and because of how it interprets the Claude's data output, <a href="https://zod.dev/" title="Zod Validation Library" aria-label="Go to the Zod Validation Library's site" rel="noopener noreferrer">Zod</a> is needed. And if we're talking about TS development, Zod is worth a discussion.
+The Triage Tracker is written in TypeScript (TS) and because of how it interprets Claude's data output, <a href="https://zod.dev/" title="Zod Validation Library" aria-label="Go to the Zod Validation Library's site" rel="noopener noreferrer">Zod</a> is needed. And if we're talking about TS development, Zod is worth a discussion.
 
 Zod is a validation library. You declare the shape you expect your data to have, and Zod checks that incoming data actually matches that shape at runtime.
 
@@ -54,17 +55,41 @@ Much like <a href="https://jquery.com/" title="jQuery JavaScript Library" aria-l
 
 <h2 id="code-architecture">Code Architecture</h2>
 
-The tracker is coded up using a standard <a href="https://learn.microsoft.com/en-us/azure/architecture/data-guide/relational-data/etl" title="ETL Design Pattern" aria-label="Go to Microsoft's definition of the ETL Design Pattern" rel="noopener noreferrer">ETL</a> pattern, split across five modular files, each with its own responsibility.
+The tracker is coded up using a standard <a href="https://learn.microsoft.com/en-us/azure/architecture/data-guide/relational-data/etl" title="ETL Design Pattern" aria-label="Go to Microsoft's definition of the ETL Design Pattern" rel="noopener noreferrer">ETL</a> pattern, split across five modular files, each with its own responsibility:
 
 <ol>
-  <li><code>fetch.ts</code></li>
-  <li><code> enrich.ts</code></li>
   <li><code>validate.ts</code></li>
+  <li><code>fetch.ts</code></li>
+  <li><code>enrich.ts</code></li>
   <li><code>write.ts</code></li>
   <li><code>index.ts</code></li>
 </ol>
 
-`index.ts` is the entry point. `validate.ts` manages the aforementioned data typing while running the other TypeScript modules sequentially.
+`validate.ts` manages the aforementioned data typing. `index.ts` is the entry point that runs the other TypeScript modules sequentially.
+
+<h2 id="validate.ts">Triage Tracker - <code>validate.ts</code></h2>
+
+Based on how Zod's described above, `validate.ts` is essentially a helper file.
+
+<pre><code class="language-javascript">
+import { z } from 'zod';
+
+export const EnrichedIssueSchema = z.object({
+  number: z.number(),
+  title: z.string(),
+  body: z.string().nullable(),
+  labels: z.array(z.string()),
+  created_at: z.string(),
+  comments: z.number(),
+  severity: z.enum(['Critical', 'High', 'Medium', 'Low']),
+  summary: z.string(),
+  next_action: z.string(),
+});
+
+export type EnrichedIssue = z.infer<typeof EnrichedIssueSchema>;
+</code></pre>
+
+Zod's being imported in, then it maps types to values inside an object called `EnrichedIssueSchema`. This schema is then mapped to a new custom type called `EnrichedIssue`.
 
 <h2 id="index.ts">Triage Tracker - <code>index.ts</code></h2>
 
