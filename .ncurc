@@ -1,0 +1,4 @@
+reject:
+
+- typescript
+- "@11ty/eleventy-plugin-rss"

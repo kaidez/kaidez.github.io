@@ -2,13 +2,11 @@ _site
 node_modules/
 .DS_Store
 .vscode/
-# package-lock.json
 .bundle/
 coverage
 _drafts
 src/assets/js/main.js
 .claude/reports/
-.ncurc
 .jekyll-metadata
 .sass-cache/
 vendor/
