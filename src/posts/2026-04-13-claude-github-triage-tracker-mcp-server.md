@@ -1,6 +1,6 @@
 ---
 title: 'Building A GitHub Triage Tracker and MCP Prompt Server with Claude'
-date: 2026-04-01T12:00:00-02:00
+date: 2026-04-13T12:00:00-02:00
 excerpt: "I built an MCP prompt server and a GitHub triage tracker with the Claude API — here's how Claude powers both and what I learned."
 layout: layouts/post.njk
 permalink: /claude-github-triage-tracker-mcp-server/
@@ -34,9 +34,9 @@ For the Triage Tracker, the Claude API works pretty much the same way it did wit
   <li>Calling the Claude API requires an API key. <a href="https://platform.claude.com/docs/en/api/admin/api_keys/retrieve" title="Get a Claude API key" rel="noopener noreferrer">Get a Claude API key here</a>.</li>
 </ul>
 
-The tracker sends a request to GitHub's API to pull open issues from <a href="https://github.com/microsoft/vscode" title="Microsoft's VS Code Repo on GitHub" aria-label="Go to Microsoft's VS Code Repo on GitHub" rel="noopener noreferrer">VS Code's public repo</a>. The Claude API then looks at those issues uses its powerful "guessing" ability to determine how severe they are.
+The tracker sends a request to GitHub's API to pull open issues from <a href="https://github.com/microsoft/vscode" title="Microsoft's VS Code Repo on GitHub" aria-label="Go to Microsoft's VS Code Repo on GitHub" rel="noopener noreferrer">VS Code's public repo</a>. Claude's API then analyzes those issues, using its powerful 'guessing' ability to determine how severe they are.
 
-From there, this data is saved to a JSON file, which is then outputted to the command line. Plus, the JSON data is saved to a local file.
+From there, this data is saved to a JSON file, which is then outputted to the command line. Plus, the data is saved to a local Markdown file.
 
 <h2 id="zod">A Quick Chat About Zod</h2>
 
@@ -44,11 +44,13 @@ The Triage Tracker is written in TypeScript (TS) and because of how it interpret
 
 Zod is a validation library. You declare the shape you expect your data to have, and Zod checks that incoming data actually matches that shape at runtime.
 
-In my Tracker the incoming data is the VS Code issues up on GitHub. The issues are retrieved as an object and then sent to Claude to define their severity.
+In my Tracker the incoming data is the VS Code issues up on GitHub. The issues are retrieved and then sent to Claude to define their severity.
 
-I declare the expected shape of each issue object in advance with TypeScript. But there's no guarantee that the types will match up when being sent to Claude...that's where things get error-prone.
+I declare the expected shape of each issue in advance with TypeScript. But there's no guarantee that the types will match up when being sent to Claude...that's where things get error-prone.
 
-Zod validates that each issue actually matches that declared shape before it's passed to Claude.
+Zod validates that each issue actually matches that declared shape before it's passed to Claude. We'll see this in action when we look at `validate.ts`.
+
+Much like <a href="https://jquery.com/" title="jQuery JavaScript Library" aria-label="Go to the jQuery JavaScript Library's site" rel="noopener noreferrer">jQuery</a> became a de facto standard in frontend development, Zod is now a go-to tool in TypeScript development.
 
 <h2 id="code-architecture">Code Architecture</h2>
 
