@@ -41,7 +41,13 @@ From there, this data is saved to a JSON file, which is then outputted to the co
 
 The Triage Tracker is written in TypeScript (TS) and because of how it interprets the GitHub data, <a href="https://zod.dev/" title="Zod Validation Library" aria-label="Go to the Zod Validation Library's site" rel="noopener noreferrer">Zod</a> is needed. And if we're talking about TS development, Zod is worth a discussion.
 
-Zod is a validation library: you declare the shape you expect your data to have, and Zod checks that incoming data actually matches that shape at runtime.
+Zod is a validation library. You declare the shape you expect your data to have, and Zod checks that incoming data actually matches that shape at runtime.
+
+In my Tracker the incoming data is the VS Code issues up on GitHub. The issues are retrieved as an object and then sent to Claude to define their severity.
+
+I declare the expected shape of each issue object in advance with TypeScript. But there's no guarantee that the types will match up when being sent to Claude...that's where things get error-prone.
+
+Zod validates that each issue actually matches that declared shape before it's passed to Claude.
 
 <h2 id="code-architecture">Code Architecture</h2>
 
@@ -55,7 +61,7 @@ The tracker is coded up using a standard <a href="https://learn.microsoft.com/en
   <li><code>index.ts</code></li>
 </ol>
 
-<h2 id="index.ts">Triage Tracker - `index.ts`</h2>
+<h2 id="index.ts">Triage Tracker - <code>index.ts</code></h2>
 
 `index.ts` is the entry point. It runs the other TypeScript modules sequentially.
 
