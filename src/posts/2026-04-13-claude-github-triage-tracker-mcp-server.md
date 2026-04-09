@@ -1,5 +1,5 @@
 ---
-title: 'Building A GitHub Triage Tracker and MCP Prompt Server and with Claude'
+title: 'Building A GitHub Triage Tracker and MCP Prompt Server with Claude'
 date: 2026-04-01T12:00:00-02:00
 excerpt: "I built an MCP prompt server and a GitHub triage tracker with the Claude API — here's how Claude powers both and what I learned."
 layout: layouts/post.njk
@@ -29,7 +29,8 @@ These weren't Earth-shattering apps, but building them increased my Claude API k
 For the Triage Tracker, the Claude API works pretty much the same way it did with the VS Code extensions. A reminder of how it works:
 
 <ul>
-  <li>Claude is stateless: if you're "having a conversation with it" through prompts, it doesn't remember your past prompts. Instead, it sends the past conversation with each new prompt, then uses it as context when it responds.</li>
+  <li>Claude is stateless. If you're "having a conversation with it" through prompts, it doesn't remember your past prompts. Instead, it sends the past conversation with each new prompt, then uses it as context when it responds.</li>
+  <li>Claude is powerful prediction software.  It's really REALLY good at "guessing" how it responds to prompts.</li>
   <li>Calling the Claude API requires an API key. <a href="https://platform.claude.com/docs/en/api/admin/api_keys/retrieve" title="Get a Claude API key" rel="noopener noreferrer">Get a Claude API key here</a>.</li>
 </ul>
 
