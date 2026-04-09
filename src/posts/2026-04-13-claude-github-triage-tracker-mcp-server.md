@@ -22,8 +22,8 @@ These weren't Earth-shattering apps, but building them increased my Claude API k
 2. [A Quick Chat About Zod](#zod)
 3. [Code Architecture](#code-architecture)
 4. [Triage Tracker - `validate.ts`](#validate.ts)
-5. [Triage Tracker - `index.ts`](#index.ts)
-6. [Triage Tracker - `fetch.ts`](#fetch.ts)
+5. [Triage Tracker - `fetch.ts`](#fetch.ts)
+6. [Triage Tracker - `index.ts`](#index.ts)
 7. [Conclusion](#conclusion)
 
 <h2 id="how-claude-works">How Claude Works With the Triage Tracker</h2>
@@ -48,11 +48,11 @@ The issue data is saved to a JSON file, which is then outputted to the command l
 
 The Triage Tracker is written in TypeScript (TS) and because of how it interprets Claude's data output, <a href="https://zod.dev/" title="Zod Validation Library" aria-label="Go to the Zod Validation Library's site" rel="noopener noreferrer">Zod</a> is needed. And if we're talking about TS development, Zod is worth a discussion.
 
-Zod is a validation library. You declare the shape you expect your data to have, and Zod checks that incoming data actually matches that shape at runtime.
+Zod is a validation library. You declare the shape you expect your data to have. Zod then checks that incoming data actually matches that shape at runtime.
 
 In my Tracker the incoming data is the VS Code issues up on GitHub. The issues are retrieved and then sent to Claude to define their severity.
 
-I declare the expected shape of each issue in advance with TypeScript. But there's no guarantee that the types will match up when being sent to Claude...that's where things get error-prone.
+I declare the expected shape of each issue in advance with TypeScript. But there's no guarantee that the types will match up with what Claude sends back — that's where things get error-prone.
 
 Zod validates that Claude's response actually matches that declared shape before the data is saved. We'll see this in action when we look at `validate.ts`.
 
@@ -124,6 +124,14 @@ export async function fetchIssues(limit = 10): Promise&lt;GitHubIssue[]&gt; {
   return issues;
 }
 </code></pre>
+
+This is where the Tracker makes an API request for the VS Code issues in GitHub. It uses `dotenv.config()` to load environment variables (the Anthropic API key in this case), then makes a GET request to the GitHub API.
+
+A TypeScript interface named `GitHubIssue` is created. It contains the field names listed in the returned GitHub data.
+
+The `fetchIssues()` function does a standard request/response action for the GitHub data. It takes a single parameter of `limit`, defining how many total issues to return. By default, it requests 10 issues.
+
+Finally, the data is loaded as a JSON array in `const issues`.
 
 <h2 id="index.ts">Triage Tracker - <code>index.ts</code></h2>
 
