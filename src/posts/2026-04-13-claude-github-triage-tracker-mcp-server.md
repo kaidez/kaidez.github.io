@@ -40,7 +40,7 @@ From there, this data is saved to a JSON file, which is then outputted to the co
 
 <h2 id="zod">A Quick Chat About Zod</h2>
 
-The Triage Tracker is written in TypeScript (TS) and because of how it interprets the GitHub data, <a href="https://zod.dev/" title="Zod Validation Library" aria-label="Go to the Zod Validation Library's site" rel="noopener noreferrer">Zod</a> is needed. And if we're talking about TS development, Zod is worth a discussion.
+The Triage Tracker is written in TypeScript (TS) and because of how it interprets the Claude's data output, <a href="https://zod.dev/" title="Zod Validation Library" aria-label="Go to the Zod Validation Library's site" rel="noopener noreferrer">Zod</a> is needed. And if we're talking about TS development, Zod is worth a discussion.
 
 Zod is a validation library. You declare the shape you expect your data to have, and Zod checks that incoming data actually matches that shape at runtime.
 
@@ -64,18 +64,16 @@ The tracker is coded up using a standard <a href="https://learn.microsoft.com/en
   <li><code>index.ts</code></li>
 </ol>
 
-<h2 id="index.ts">Triage Tracker - <code>index.ts</code></h2>
+`index.ts` is the entry point. `validate.ts` manages the aforementioned data typing while running the other TypeScript modules sequentially.
 
-`index.ts` is the entry point. It runs the other TypeScript modules sequentially.
+<h2 id="index.ts">Triage Tracker - <code>index.ts</code></h2>
 
 <pre><code class="language-javascript">
 import 'dotenv/config';
+import { EnrichedIssue } from './validate.js';
 import { fetchIssues } from './fetch.js';
 import { enrichIssue } from './enrich.js';
 import { writeOutput, writeToFile } from './write.js';
-
-// Import the TypeScript type inferred from the Zod schema — used to type the enriched issues array.
-import { EnrichedIssue } from './validate.js';
 
 async function run(): Promise<void> {
   console.log('Starting GitHub issue triage pipeline...');
