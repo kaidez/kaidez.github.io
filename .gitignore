@@ -9,3 +9,7 @@ _drafts
 src/assets/js/main.js
 .claude/reports/
 .ncurc
+.jekyll-metadata
+.sass-cache/
+vendor/
+yarn.lock
