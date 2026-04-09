@@ -23,21 +23,26 @@ These weren't Earth-shattering apps, but building them increased my Claude API k
 3. [Code Architecture](#code-architecture)
 4. [Triage Tracker - `validate.ts`](#validate.ts)
 5. [Triage Tracker - `index.ts`](#index.ts)
-6. [Conclusion](#conclusion)
+6. [Triage Tracker - `fetch.ts`](#fetch.ts)
+7. [Conclusion](#conclusion)
 
 <h2 id="how-claude-works">How Claude Works With the Triage Tracker</h2>
 
 For the Triage Tracker, the Claude API works pretty much the same way it did with the VS Code extensions. A reminder of how it works:
 
 <ul>
-  <li>Claude is stateless. If you're "having a conversation with it" through prompts, it doesn't remember your past prompts. Instead, it sends the past conversation with each new prompt, then uses it as context when it responds.</li>
+  <li>Claude is stateless. If you're "having a conversation with it" through prompts, it doesn't remember your past prompts. Instead, your code re-sends the full conversation history with each new request, and Claude uses that as context.</li>
   <li>Claude is powerful prediction software.  It's really REALLY good at "guessing" how it responds to prompts.</li>
-  <li>Calling the Claude API requires an API key. <a href="https://platform.claude.com/docs/en/api/admin/api_keys/retrieve" title="Get a Claude API key" rel="noopener noreferrer">Get a Claude API key here</a>.</li>
+  <li>Calling the Claude API requires an API key. <a href="https://platform.claude.com/docs/en/api/admin/api_keys/retrieve" title="Get a Claude API key" rel="noopener noreferrer">Get a Claude API key here</a> and place it in an `.env` file at the root. It should look like this:
+  <pre><code class="language-yaml">
+  ANTHROPIC_API_KEY=XX-XXXX-XXXXXX
+  </code></pre>
+  </li>
 </ul>
 
 The tracker sends a request to GitHub's API to pull open issues from <a href="https://github.com/microsoft/vscode" title="Microsoft's VS Code Repo on GitHub" aria-label="Go to Microsoft's VS Code Repo on GitHub" rel="noopener noreferrer">VS Code's public repo</a>. Claude's API then analyzes those issues, using its powerful 'guessing' ability to determine how severe they are.
 
-From there, this data is saved to a JSON file, which is then outputted to the command line. The JSON data is also saved to a local Markdown file.
+The issue data is saved to a JSON file, which is then outputted to the command line. Separately, it's saved to a local Markdown file.
 
 <h2 id="zod">A Quick Chat About Zod</h2>
 
@@ -69,7 +74,7 @@ The tracker is coded up using a standard <a href="https://learn.microsoft.com/en
 
 <h2 id="validate.ts">Triage Tracker - <code>validate.ts</code></h2>
 
-Based on how Zod's described above, `validate.ts` is essentially a helper file.
+Based on the Zod description above, `validate.ts` is essentially a helper file.
 
 <pre><code class="language-javascript">
 import { z } from 'zod';
@@ -89,7 +94,36 @@ export const EnrichedIssueSchema = z.object({
 export type EnrichedIssue = z.infer&lt;typeof EnrichedIssueSchema&gt;;
 </code></pre>
 
-Zod's being imported in, then it maps types to values inside an object called `EnrichedIssueSchema`. This schema is then mapped to a new custom type called `EnrichedIssue`.
+Zod is imported, then it defines a schema called `EnrichedIssueSchema`, where each field is assigned a Zod validator that enforces its expected type. This schema is then used to figure out a TypeScript type called `EnrichedIssue` via `z.infer`, giving you static type safety without writing the type manually.
+
+<h2 id="fetch.ts">Triage Tracker - <code>fetch.ts</code></h2>
+
+<pre><code class="language-javascript">
+import dotenv from 'dotenv';
+dotenv.config();
+
+const GITHUB_API_URL = 'https://api.github.com/repos/microsoft/vscode/issues';
+
+export interface GitHubIssue {
+  number: number;
+  title: string;
+  body: string | null;
+  labels: { name: string }[];
+  created_at: string;
+  comments: number;
+}
+
+export async function fetchIssues(limit = 10): Promise&lt;GitHubIssue[]&gt; {
+  const response = await fetch(`${GITHUB_API_URL}?state=open&per_page=${limit}`);
+
+  if (!response.ok) {
+    throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
+  }
+
+  const issues = await response.json() as GitHubIssue[];
+  return issues;
+}
+</code></pre>
 
 <h2 id="index.ts">Triage Tracker - <code>index.ts</code></h2>
 
@@ -100,7 +134,7 @@ import { fetchIssues } from './fetch.js';
 import { enrichIssue } from './enrich.js';
 import { writeOutput, writeToFile } from './write.js';
 
-async function run(): Promise<void> {
+async function run(): Promise&lt;void&gt; {
   console.log('Starting GitHub issue triage pipeline...');
 
   console.log('Step 1/3: Fetching issues from GitHub...');
