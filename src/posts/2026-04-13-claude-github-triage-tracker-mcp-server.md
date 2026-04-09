@@ -49,7 +49,7 @@ In my Tracker the incoming data is the VS Code issues up on GitHub. The issues a
 
 I declare the expected shape of each issue in advance with TypeScript. But there's no guarantee that the types will match up when being sent to Claude...that's where things get error-prone.
 
-Zod validates that each issue actually matches that declared shape before it's passed to Claude. We'll see this in action when we look at `validate.ts`.
+Zod validates that Claude's response actually matches that declared shape before the data is saved. We'll see this in action when we look at `validate.ts`.
 
 Much like <a href="https://jquery.com/" title="jQuery JavaScript Library" aria-label="Go to the jQuery JavaScript Library's site" rel="noopener noreferrer">jQuery</a> became a de facto standard in frontend development, Zod is now a go-to tool in TypeScript development.
 
@@ -86,7 +86,7 @@ export const EnrichedIssueSchema = z.object({
   next_action: z.string(),
 });
 
-export type EnrichedIssue = z.infer<typeof EnrichedIssueSchema>;
+export type EnrichedIssue = z.infer&lt;typeof EnrichedIssueSchema&gt;;
 </code></pre>
 
 Zod's being imported in, then it maps types to values inside an object called `EnrichedIssueSchema`. This schema is then mapped to a new custom type called `EnrichedIssue`.
