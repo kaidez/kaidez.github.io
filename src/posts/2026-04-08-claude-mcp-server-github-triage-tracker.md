@@ -1,40 +1,51 @@
 ---
-title: "Building an MCP Prompt Server and GitHub Triage Tracker with the Claude API"
+title: 'Building an MCP Prompt Server and GitHub Triage Tracker with the Claude API'
 date: 2026-04-01T12:00:00-02:00
 excerpt: "I built an MCP prompt server and a GitHub triage tracker with the Claude API — here's how Claude powers both and what I learned."
 layout: layouts/post.njk
 permalink: /claude-api-mcp-server-github-triage-tracker/
 image: claude-insights.jpg
-tags: ["coding-best-practices"]
-secondary_tags: ["ai", "mcp", "github", "claude"]
+tags: ['coding-best-practices']
+secondary_tags: ['ai', 'mcp', 'github', 'claude']
 category: Coding Tips
-schema_type: "TechArticle"
+schema_type: 'TechArticle'
 draft: true
 ---
+
 I previously wrote about <a href="/building-ai-tools-claude-api/" title="Building AI Tools with the Claude API">building two VS Code extensions with the Claude API</a>. But I also used Claude to build a <a href="https://github.com/kaidez/github-issue-triage" title="GitHub Triage Tracker Repository on GitHub" aria-label="Go to the GitHub Triage Tracker Repository on GitHub" rel="noopener noreferrer">GitHub Triage Tracker</a> and an <a href="https://github.com/kaidez/mcp-prompt-server" title="MCP Prompt Server Repository on GitHub" aria-label="Go to the MCP Prompt Server Repository on GitHub" rel="noopener noreferrer">MCP Prompt Server</a>.
 
-These weren't Earth-shattering apps, but building them increased my Claude API knowledge.  Here's the write-up on the latter two tools.
+These weren't Earth-shattering apps, but building them increased my Claude API knowledge. Here's the write-up on the latter two tools.
 
 <h2>Table of Contents</h2>
 
 1. [How Claude Works With the Triage Tracker](#how-claude-works)
-2. [Triage Tracker `index.ts`](#index.ts)
-3. [Conclusion](#conclusion)
+2. [A Quick Chat About Zod](#zod)
+3. [Code Architecture](#code-architecture)
+4. [Triage Tracker `index.ts`](#index.ts)
+5. [Conclusion](#conclusion)
 
 <h2 id="how-claude-works">How Claude Works With the Triage Tracker</h2>
 
-For the GitHub Triage Tracker, the Claude API works pretty much the same way it did with the VS Code extensions. A reminder of how it works:
+For the Triage Tracker, the Claude API works pretty much the same way it did with the VS Code extensions. A reminder of how it works:
 
 <ul>
   <li>Claude is stateless: if you're "having a conversation with it" through prompts, it doesn't remember your past prompts. Instead, it sends the past conversation with each new prompt, then uses it as context when it responds.</li>
   <li>Calling the Claude API requires an API key. <a href="https://platform.claude.com/docs/en/api/admin/api_keys/retrieve" title="Get a Claude API key" rel="noopener noreferrer">Get a Claude API key here</a>.</li>
 </ul>
 
-Using a Node CLI command, this tracker pulls open issues in <a href="https://github.com/microsoft/vscode" title="Microsoft's VS Code Repo on GitHub" aria-label="Go to Microsoft's VS Code Repo on GitHub" rel="noopener noreferrer">VS Code's public repo</a>. It then uses Claude's API to determine how severe they are.
+The tracker sends a request to GitHub's API to pull open issues from <a href="https://github.com/microsoft/vscode" title="Microsoft's VS Code Repo on GitHub" aria-label="Go to Microsoft's VS Code Repo on GitHub" rel="noopener noreferrer">VS Code's public repo</a>. The Claude API then looks at those issues uses its powerful "guessing" ability to determine how severe they are.
 
-From there, the open issues are retrieved in JSON format and outputted to the command line. Plus, the JSON data is saved to a local file.
+From there, this data is saved to a JSON file, which is then outputted to the command line. Plus, the JSON data is saved to a local file.
 
-All this is coded up using a standard <a href="https://learn.microsoft.com/en-us/azure/architecture/data-guide/relational-data/etl" title="ETL Design Pattern" aria-label="Go to Microsoft's definition of the ETL Design Pattern" rel="noopener noreferrer">ETL</a> pattern, split across five modular files, each with its own responsibility.
+<h2 id="zod">A Quick Chat About Zod</h2>
+
+The Triage Tracker is written in TypeScript (TS) and because of how it interprets the GitHub data, <a href="https://zod.dev/" title="Zod Validation Library" aria-label="Go to the Zod Validation Library's site" rel="noopener noreferrer">Zod</a> is needed. And if we're talking about TS development, Zod is worth a discussion.
+
+Zod is a validation library: you declare the shape you expect your data to have, and Zod checks that incoming data actually matches that shape at runtime.
+
+<h2 id="code-architecture">Code Architecture</h2>
+
+The tracker is coded up using a standard <a href="https://learn.microsoft.com/en-us/azure/architecture/data-guide/relational-data/etl" title="ETL Design Pattern" aria-label="Go to Microsoft's definition of the ETL Design Pattern" rel="noopener noreferrer">ETL</a> pattern, split across five modular files, each with its own responsibility.
 
 <ol>
   <li><code>fetch.ts</code></li>
@@ -46,7 +57,7 @@ All this is coded up using a standard <a href="https://learn.microsoft.com/en-us
 
 <h2 id="index.ts">Triage Tracker - `index.ts`</h2>
 
-`index.ts` is the entry point
+`index.ts` is the entry point. It runs the other TypeScript modules sequentially.
 
 <pre><code class="language-javascript">
 import 'dotenv/config';
