@@ -33,8 +33,8 @@ For the Triage Tracker, the Claude API works pretty much the same way it did wit
 
 <ul>
   <li>Claude is stateless. If you're "having a conversation with it" through prompts, it doesn't remember your past prompts. Instead, your code re-sends the full conversation history with each new request, and Claude uses that as context.</li>
-  <li>Claude is powerful prediction software.  It's really REALLY good at "guessing" how it responds to prompts.</li>
-  <li>Calling the Claude API requires an API key. <a href="https://platform.claude.com/docs/en/api/admin/api_keys/retrieve" title="Get a Claude API key" rel="noopener noreferrer">Get a Claude API key here</a> and place it in an <code>.env</code> file at the root. It should look like this:
+  <li>Claude is powerful prediction software. It's really REALLY good at "guessing" how it responds to prompts.</li>
+  <li>Calling the Claude API requires an API key. If you already have a Claude account, <a href="https://platform.claude.com/settings/keys" title="Get a Claude API key" rel="noopener noreferrer">get a Claude API key here</a> and place it in an <code>.env</code> file at the root. It should look like this:
   <pre><code class="language-yaml">
   ANTHROPIC_API_KEY=XX-XXXX-XXXXXX
   </code></pre>
@@ -43,7 +43,7 @@ For the Triage Tracker, the Claude API works pretty much the same way it did wit
 
 The tracker sends a request to GitHub's API and pulls open issues from <a href="https://github.com/microsoft/vscode" title="Microsoft's VS Code Repo on GitHub" aria-label="Go to Microsoft's VS Code Repo on GitHub" rel="noopener noreferrer">VS Code's public repo</a>. Claude's API then analyzes those issues, using its powerful "guessing" ability to determine how severe they are.
 
-The issue data is saved to a JSON file, which is then outputted to the command line. Separately, it's saved to a local Markdown file.
+The issue data is saved to a JSON file, which is then output to the command line. Separately, it's saved to a local Markdown file.
 
 <h2 id="zod">A Quick Chat About Zod</h2>
 
@@ -57,7 +57,7 @@ I declare the expected shape of each issue in advance with TypeScript. But there
 
 Zod validates that Claude's response actually matches that declared shape before the data is saved. We'll see this in action when we look at `validate.ts`.
 
-Much like <a href="https://jquery.com/" title="jQuery JavaScript Library" aria-label="Go to the jQuery JavaScript Library's site" rel="noopener noreferrer">jQuery</a> became a de facto standard in frontend development, Zod is now a go-to tool in TypeScript development.
+Like <a href="https://jquery.com/" title="jQuery JavaScript Library" aria-label="Go to the jQuery JavaScript Library's site" rel="noopener noreferrer">jQuery</a> became a de facto standard in frontend development, Zod is now a go-to tool in TypeScript development.
 
 <h2 id="code-architecture">Code Architecture</h2>
 
@@ -95,7 +95,7 @@ export const EnrichedIssueSchema = z.object({
 export type EnrichedIssue = z.infer&lt;typeof EnrichedIssueSchema&gt;;
 </code></pre>
 
-Zod is imported, then it defines a schema called `EnrichedIssueSchema`, where each field is assigned a Zod validator that enforces its expected type. This schema is then used to figure out a TypeScript type called `EnrichedIssue` via `z.infer`, giving you static type safety without writing the type manually.
+Zod is imported and used to define `EnrichedIssueSchema`, where each field has a Zod validator enforcing its type. This schema is then used to derive a TypeScript type called `EnrichedIssue` via `z.infer`, giving you static type safety without writing the type manually.
 
 <h2 id="fetch.ts">Triage Tracker - <code>fetch.ts</code></h2>
 
@@ -220,49 +220,10 @@ First, two `const`s are created:
   <li><code>const SYSTEM_PROMPT</code> creates the initial prompt we send to Claude when we send it the GitHub data. Note the prompt follows a Claude best practice by assigning Claude a role — 'engineering triage assistant' in this case.</li>
 </ol>
 
-Next, two functions handle prompt construction and the Claude API call. `buildUserPrompt()` does what the name says: it builds each prompt via a loop.
+Next, two functions handle prompt construction and the Claude API call. `buildUserPrompt()` is a helper function that takes a single issue and formats it into a prompt string.
 
 It takes an `issue` parameter that represents each issue the Tracker grabs from GitHub. `issue` is strongly-typed against the `GitHubIssue` interface created in `fetch.ts`.
 
-The loop takes each issue and adds it to a prompt. The completed prompt is sent to Claude, which analyzes each issue and ranks its severity. The loop then creates
+The loop takes each issue and adds it to a prompt. The completed prompt is sent to Claude, which analyzes each issue and ranks its severity. The loop then creates a prompt containing both the instructions and the individual issue data.
 
 <h2 id="index.ts">Triage Tracker - <code>index.ts</code></h2>
-
-<pre><code class="language-javascript">
-import 'dotenv/config';
-import { EnrichedIssue } from './validate.js';
-import { fetchIssues } from './fetch.js';
-import { enrichIssue } from './enrich.js';
-import { writeOutput, writeToFile } from './write.js';
-
-async function run(): Promise&lt;void&gt; {
-  console.log('Starting GitHub issue triage pipeline...');
-
-  console.log('Step 1/3: Fetching issues from GitHub...');
-  const issues = await fetchIssues(10);
-  console.log(`✓ Fetched ${issues.length} issue(s)`);
-
-  console.log('Step 2/3: Enriching issues with Claude...');
-  const enriched: EnrichedIssue[] = [];
-
-  for (const issue of issues) {
-    console.log(`  → Enriching issue #${issue.number}: ${issue.title}`);
-    const result = await enrichIssue(issue);
-    enriched.push(result);
-  }
-  console.log(`✓ Enriched ${enriched.length} issue(s)`);
-
-  console.log('Step 3/3: Writing output...');
-  await writeOutput(enriched);
-  await writeToFile(enriched);
-
-  console.log('\nPipeline complete.');
-}
-
-run().catch((error) => {
-  console.error('Pipeline failed:', error);
-  process.exit(1);
-});
-</code></pre>
-
-<h2 id="conclusion">Conclusion</h2>
