@@ -1,9 +1,9 @@
 ---
-title: 'Building A GitHub Triage Tracker and MCP Prompt Server with Claude'
+title: 'Building A GitHub Triage Tracker with Claude'
 date: 2026-04-13T12:00:00-02:00
 excerpt: "I built an MCP prompt server and a GitHub triage tracker with the Claude API — here's how Claude powers both and what I learned."
 layout: layouts/post.njk
-permalink: /claude-github-triage-tracker-mcp-server/
+permalink: /claude-github-triage-tracker/
 image: claude-insights.jpg
 tags: ['coding-best-practices']
 secondary_tags: ['ai', 'claude', 'zod']
@@ -95,7 +95,7 @@ export const EnrichedIssueSchema = z.object({
 export type EnrichedIssue = z.infer&lt;typeof EnrichedIssueSchema&gt;;
 </code></pre>
 
-Zod is imported and used to define `EnrichedIssueSchema`, where each field has a Zod validator enforcing its type. This schema is then used to derive a TypeScript type called `EnrichedIssue` via `z.infer`, giving you static type safety without writing the type manually.
+Zod is imported and used to define `EnrichedIssueSchema`, where each field has a Zod validator enforcing its type. `EnrichedIssueSchema` gets a TypeScript type called `EnrichedIssue` via `z.infer`, giving you static type safety without writing the type manually.
 
 <h2 id="fetch.ts">Triage Tracker - <code>fetch.ts</code></h2>
 
@@ -126,7 +126,7 @@ export async function fetchIssues(limit = 10): Promise&lt;GitHubIssue[]&gt; {
 }
 </code></pre>
 
-This is where the Tracker makes an API request for the VS Code issues in GitHub. It uses `dotenv.config()` to load environment variables (the Anthropic API key in this case), then makes a GET request to the GitHub API.
+This is where the Tracker makes an API request for the VS Code issues in GitHub. It calls `dotenv.config()` to load environment variables (the Anthropic API key in this case), then makes a GET request to the GitHub API.
 
 A TypeScript interface named `GitHubIssue` is created. It contains the field names listed in the returned GitHub data.
 
@@ -224,7 +224,7 @@ Next, two functions handle prompt construction and the Claude API call. `buildUs
 
 It takes an `issue` parameter that represents each issue the Tracker grabs from GitHub. `issue` is strongly-typed against the `GitHubIssue` interface created in `fetch.ts`.
 
-The loop takes each issue and adds it to a prompt. The completed prompt is sent to Claude, which analyzes each issue and ranks its severity. The loop then creates a prompt containing both the instructions and the individual issue data.
+Using JavaScript's `.map()` function, the loop takes each issue and adds it to a prompt. The completed prompt is sent to Claude, which analyzes each issue and ranks its severity. The loop then creates a prompt containing both the instructions and the individual issue data.
 
 <h2 id="index.ts">Triage Tracker - <code>index.ts</code></h2>
 
