@@ -220,6 +220,12 @@ First, two `const`s are created:
   <li><code>const SYSTEM_PROMPT</code> creates the initial prompt we send to Claude when we send it the GitHub data. Note the prompt follows a Claude best practice by assigning Claude a role — 'engineering triage assistant' in this case.</li>
 </ol>
 
+Next, two functions handle prompt construction and the Claude API call. `buildUserPrompt()` does what the name says: it builds each prompt via a loop.
+
+It takes an `issue` parameter that represents each issue the Tracker grabs from GitHub. `issue` is strongly-typed against the `GitHubIssue` interface created in `fetch.ts`.
+
+The loop takes each issue and adds it to a prompt. The completed prompt is sent to Claude, which analyzes each issue and ranks its severity.
+
 <h2 id="index.ts">Triage Tracker - <code>index.ts</code></h2>
 
 <pre><code class="language-javascript">
