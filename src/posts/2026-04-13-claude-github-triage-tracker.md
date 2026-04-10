@@ -126,7 +126,7 @@ export async function fetchIssues(limit = 10): Promise&lt;GitHubIssue[]&gt; {
 }
 </code></pre>
 
-This is where the Tracker makes an API request for the VS Code issues in GitHub. It calls `dotenv.config()` to load environment variables (the Anthropic API key in this case), then makes a GET request to the GitHub API.
+This is where the Tracker makes an API request for the VS Code issues in GitHub. It calls `dotenv.config()` to load the Anthropic API key into the process, then makes a GET request to the GitHub API.
 
 A TypeScript interface named `GitHubIssue` is created. It contains the field names listed in the returned GitHub data.
 
