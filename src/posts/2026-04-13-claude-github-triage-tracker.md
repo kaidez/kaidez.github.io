@@ -34,7 +34,7 @@ For the Triage Tracker, the Claude API works pretty much the same way it did wit
 <ul>
   <li>Claude is stateless. If you're "having a conversation with it" through prompts, it doesn't remember your past prompts. Instead, your code re-sends the full conversation history with each new request, and Claude uses that as context.</li>
   <li>Claude is powerful prediction software. It's really REALLY good at "guessing" how it responds to prompts.</li>
-  <li>Calling the Claude API requires an API key. If you already have a Claude account, <a href="https://platform.claude.com/settings/keys" title="Get a Claude API key" rel="noopener noreferrer">get a Claude API key here</a> and place it in an <code>.env</code> file at the root. It should look like this:
+  <li>Calling the Claude API requires an API key. <a href="https://platform.claude.com/settings/keys" title="Get a Claude API key" rel="noopener noreferrer">Get a Claude API key</a> and place it in an <code>.env</code> file at the root (Claude account required). It should look like this:
   <pre><code class="language-yaml">
   ANTHROPIC_API_KEY=XX-XXXX-XXXXXX
   </code></pre>
@@ -126,7 +126,7 @@ export async function fetchIssues(limit = 10): Promise&lt;GitHubIssue[]&gt; {
 }
 </code></pre>
 
-This is where the Tracker makes an API request for the VS Code issues in GitHub. It calls `dotenv.config()` to load the Anthropic API key into the process, then makes a GET request to the GitHub API.
+This is where the Tracker makes an API request for the VS Code issues in GitHub. It calls `dotenv.config()` to load the Anthropic API key, then makes a GET request to the GitHub API.
 
 A TypeScript interface named `GitHubIssue` is created. It contains the field names listed in the returned GitHub data.
 
@@ -189,7 +189,6 @@ export async function enrichIssue(
         throw new Error(`Claude returned non-JSON for issue #${issue.number}: ${raw}`);
       }
 
-    // Validate the issue data using Zod
     const result = EnrichedIssueSchema.safeParse({
       number: issue.number,
       title: issue.title,
@@ -220,9 +219,11 @@ First, two `const`s are created:
   <li><code>const SYSTEM_PROMPT</code> creates the initial prompt we send to Claude when we send it the GitHub data. Note the prompt follows a Claude best practice by assigning Claude a role — 'engineering triage assistant' in this case.</li>
 </ol>
 
-Next, two functions handle prompt construction and the Claude API call. `buildUserPrompt()` takes a single `issue` parameter — strongly typed against `GitHubIssue` from `fetch.ts` — and formats it into a prompt string for Claude.
+Next, two functions handle prompt construction and the Claude API call. `buildUserPrompt()` takes an `issue` typed as `GitHubIssue` from `fetch.ts` and formats it into a prompt string for Claude.
 
-The completed prompt is sent to Claude via `const message`, which analyzes each issue and ranks its severity. The loop then creates a prompt containing both the instructions and the individual issue data.
+`enrichIssue()` sends the prompt to Claude and stores the response in `const message`. The actual loop over all issues runs in `index.ts`, which calls `enrichIssue()` once per issue.
+
+`const raw` and `let parsed` have respective roles in formatting the data and JSON. `const result` is where Zod validates the issue data.
 
 <h2 id="index.ts">Triage Tracker - <code>index.ts</code></h2>
 
