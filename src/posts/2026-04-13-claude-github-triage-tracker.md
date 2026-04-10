@@ -14,7 +14,7 @@ draft: true
 
 I previously wrote about <a href="/building-ai-tools-claude-api/" title="Building AI Tools with the Claude API">building two VS Code extensions with the Claude API</a>. But I also used Claude to build a <a href="https://github.com/kaidez/github-issue-triage" title="GitHub Triage Tracker Repository on GitHub" aria-label="Go to the GitHub Triage Tracker Repository on GitHub" rel="noopener noreferrer">GitHub Triage Tracker</a>.
 
-This is't an Earth-shattering app, but building it increased my Claude knowledge. Here's the write-up...
+This isn't an Earth-shattering app, but building it increased my Claude knowledge. Here's the write-up...
 
 <h2>Table of Contents</h2>
 
@@ -220,9 +220,7 @@ First, two `const`s are created:
   <li><code>const SYSTEM_PROMPT</code> creates the initial prompt we send to Claude when we send it the GitHub data. Note the prompt follows a Claude best practice by assigning Claude a role — 'engineering triage assistant' in this case.</li>
 </ol>
 
-Next, two functions handle prompt construction and the Claude API call. `buildUserPrompt()` is a helper function that takes a single issue and formats it into a prompt string.
-
-It takes an `issue` parameter that represents each issue the Tracker grabs from GitHub. `issue` is strongly-typed against the `GitHubIssue` interface created in `fetch.ts`.
+Next, two functions handle prompt construction and the Claude API call. `buildUserPrompt()` takes a single `issue` parameter — strongly typed against `GitHubIssue` from `fetch.ts` — and formats it into a prompt string for Claude.
 
 The loop takes each issue and adds it to a prompt. The completed prompt is sent to Claude, which analyzes each issue and ranks its severity. The loop then creates a prompt containing both the instructions and the individual issue data.
 
