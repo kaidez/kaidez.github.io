@@ -16,6 +16,7 @@ module.exports = function (eleventyConfig) {
     'node_modules/@fortawesome/fontawesome-free/webfonts':
       'assets/fontawesome/webfonts',
   });
+
   // Don't build drafts when running in build mode
   eleventyConfig.addPreprocessor('drafts', '*', (data, content) => {
     if (data.draft && process.env.ELEVENTY_RUN_MODE === 'build') {
