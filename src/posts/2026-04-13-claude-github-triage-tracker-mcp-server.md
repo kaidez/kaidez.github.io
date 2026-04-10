@@ -14,7 +14,7 @@ draft: true
 
 I previously wrote about <a href="/building-ai-tools-claude-api/" title="Building AI Tools with the Claude API">building two VS Code extensions with the Claude API</a>. But I also used Claude to build a <a href="https://github.com/kaidez/github-issue-triage" title="GitHub Triage Tracker Repository on GitHub" aria-label="Go to the GitHub Triage Tracker Repository on GitHub" rel="noopener noreferrer">GitHub Triage Tracker</a> and an <a href="https://github.com/kaidez/mcp-prompt-server" title="MCP Prompt Server Repository on GitHub" aria-label="Go to the MCP Prompt Server Repository on GitHub" rel="noopener noreferrer">MCP Prompt Server</a>.
 
-These weren't Earth-shattering apps, but building them increased my Claude API knowledge. Here's the write-up on the latter two tools.
+These weren't Earth-shattering apps, but building them increased my Claude knowledge. Here's the write-up on the latter two tools.
 
 <h2>Table of Contents</h2>
 
@@ -33,14 +33,14 @@ For the Triage Tracker, the Claude API works pretty much the same way it did wit
 <ul>
   <li>Claude is stateless. If you're "having a conversation with it" through prompts, it doesn't remember your past prompts. Instead, your code re-sends the full conversation history with each new request, and Claude uses that as context.</li>
   <li>Claude is powerful prediction software.  It's really REALLY good at "guessing" how it responds to prompts.</li>
-  <li>Calling the Claude API requires an API key. <a href="https://platform.claude.com/docs/en/api/admin/api_keys/retrieve" title="Get a Claude API key" rel="noopener noreferrer">Get a Claude API key here</a> and place it in an `.env` file at the root. It should look like this:
+  <li>Calling the Claude API requires an API key. <a href="https://platform.claude.com/docs/en/api/admin/api_keys/retrieve" title="Get a Claude API key" rel="noopener noreferrer">Get a Claude API key here</a> and place it in an <code>.env</code> file at the root. It should look like this:
   <pre><code class="language-yaml">
   ANTHROPIC_API_KEY=XX-XXXX-XXXXXX
   </code></pre>
   </li>
 </ul>
 
-The tracker sends a request to GitHub's API to pull open issues from <a href="https://github.com/microsoft/vscode" title="Microsoft's VS Code Repo on GitHub" aria-label="Go to Microsoft's VS Code Repo on GitHub" rel="noopener noreferrer">VS Code's public repo</a>. Claude's API then analyzes those issues, using its powerful 'guessing' ability to determine how severe they are.
+The tracker sends a request to GitHub's API and pulls open issues from <a href="https://github.com/microsoft/vscode" title="Microsoft's VS Code Repo on GitHub" aria-label="Go to Microsoft's VS Code Repo on GitHub" rel="noopener noreferrer">VS Code's public repo</a>. Claude's API then analyzes those issues, using its powerful "guessing" ability to determine how severe they are.
 
 The issue data is saved to a JSON file, which is then outputted to the command line. Separately, it's saved to a local Markdown file.
 
@@ -48,11 +48,11 @@ The issue data is saved to a JSON file, which is then outputted to the command l
 
 The Triage Tracker is written in TypeScript (TS) and because of how it interprets Claude's data output, <a href="https://zod.dev/" title="Zod Validation Library" aria-label="Go to the Zod Validation Library's site" rel="noopener noreferrer">Zod</a> is needed. And if we're talking about TS development, Zod is worth a discussion.
 
-Zod is a validation library. You declare the shape you expect your data to have. Zod then checks that incoming data actually matches that shape at runtime.
+Zod is a validation library: you declare the shape you expect your data to have. Zod then checks that incoming data actually matches that shape at runtime.
 
-In my Tracker the incoming data is the VS Code issues up on GitHub. The issues are retrieved and then sent to Claude to define their severity.
+Validating data in forms is a common use case for web apps. But this tracker needs to validate the incoming VS Code issues data described above.
 
-I declare the expected shape of each issue in advance with TypeScript. But there's no guarantee that the types will match up with what Claude sends back — that's where things get error-prone.
+I declare the expected shape of each issue in advance with TypeScript. But there's no guarantee that the types I pull from GitHub will match up with what Claude sends back. That's where things get error-prone.
 
 Zod validates that Claude's response actually matches that declared shape before the data is saved. We'll see this in action when we look at `validate.ts`.
 
