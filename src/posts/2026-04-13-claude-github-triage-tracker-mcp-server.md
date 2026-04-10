@@ -6,7 +6,7 @@ layout: layouts/post.njk
 permalink: /claude-github-triage-tracker-mcp-server/
 image: claude-insights.jpg
 tags: ['coding-best-practices']
-secondary_tags: ['ai', 'mcp', 'claude']
+secondary_tags: ['ai', 'claude', 'zod']
 category: Coding Tips
 schema_type: 'TechArticle'
 draft: true
@@ -208,7 +208,7 @@ export async function enrichIssue(
 }
 </code></pre>
 
-`enrich.ts` is where the Tracker puts Zod's data validation to work.
+`enrich.ts` is where the Tracker puts Zod's data validation power to work.
 Here, the data pulled from GitHub is sent to Claude.
 
 Claude analyzes each issue, categorizes it by severity, and returns a response. Zod then validates that response against the declared schema before saving.
@@ -224,7 +224,7 @@ Next, two functions handle prompt construction and the Claude API call. `buildUs
 
 It takes an `issue` parameter that represents each issue the Tracker grabs from GitHub. `issue` is strongly-typed against the `GitHubIssue` interface created in `fetch.ts`.
 
-The loop takes each issue and adds it to a prompt. The completed prompt is sent to Claude, which analyzes each issue and ranks its severity.
+The loop takes each issue and adds it to a prompt. The completed prompt is sent to Claude, which analyzes each issue and ranks its severity. The loop then creates
 
 <h2 id="index.ts">Triage Tracker - <code>index.ts</code></h2>
 
