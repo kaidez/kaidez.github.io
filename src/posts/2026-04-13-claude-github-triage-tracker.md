@@ -1,7 +1,7 @@
 ---
 title: 'Building A GitHub Triage Tracker with Claude'
 date: 2026-04-13T12:00:00-02:00
-excerpt: "I built an MCP prompt server and a GitHub triage tracker with the Claude API — here's how Claude powers both and what I learned."
+excerpt: "I built a GitHub triage tracker with the Claude API — here's how Claude powers both and what I learned."
 layout: layouts/post.njk
 permalink: /claude-github-triage-tracker/
 image: claude-insights.jpg
