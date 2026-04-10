@@ -222,7 +222,7 @@ First, two `const`s are created:
 
 Next, two functions handle prompt construction and the Claude API call. `buildUserPrompt()` takes a single `issue` parameter — strongly typed against `GitHubIssue` from `fetch.ts` — and formats it into a prompt string for Claude.
 
-The loop takes each issue and adds it to a prompt. The completed prompt is sent to Claude, which analyzes each issue and ranks its severity. The loop then creates a prompt containing both the instructions and the individual issue data.
+The loop takes each issue and adds it to a prompt. The completed prompt is sent to Claude via `const message`, which analyzes each issue and ranks its severity. The loop then creates a prompt containing both the instructions and the individual issue data.
 
 <h2 id="index.ts">Triage Tracker - <code>index.ts</code></h2>
 
