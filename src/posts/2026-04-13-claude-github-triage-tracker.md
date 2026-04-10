@@ -242,7 +242,7 @@ interface PipelineOutput {
   issues: EnrichedIssue[];
 }
 
-export async function writeOutput(issues: EnrichedIssue[]): Promise<void> {
+export async function writeOutput(issues: EnrichedIssue[]): Promise&lt;void&gt; {
   await fs.mkdir(OUTPUT_DIR, { recursive: true });
   await Promise.all([
     fs.rm(path.join(OUTPUT_DIR, OUTPUT_FILE), { force: true }),
@@ -261,7 +261,7 @@ export async function writeOutput(issues: EnrichedIssue[]): Promise<void> {
   console.log(`✓ Wrote ${issues.length} enriched issue(s) to ${filePath}`);
 }
 
-export async function writeToFile(issues: EnrichedIssue[]): Promise<void> {
+export async function writeToFile(issues: EnrichedIssue[]): Promise&lt;void&gt; {
 
   const json = JSON.parse(await fs.readFile('output/enriched-issues.json', 'utf8'));
   const report = path.join(OUTPUT_DIR, 'report.md');
@@ -287,6 +287,14 @@ export async function writeToFile(issues: EnrichedIssue[]): Promise<void> {
 
 }
 </code></pre>
+
+This is the file that generates a JSON file with the triaged issues data. It also pulls the data from that file and loads it into a readable Markdown file.
+
+`const OUTPUT_DIR` is the folder where both of these files will live. If it doesn't exist, it's created at runtime.
+
+`const OUTPUT_FILE` is the JSON file that's created. Every new time that the Tracker runs, it's deleted and a fresh, new file is created.
+
+A `PipelineOutput` interface is created and mapped to timestamp and issues length fields at the top of the JSON. There's also an `issues` array that will contain all the triaged issues. That's validated using the Zod-powered `EnrichedIssue` schema we created in `validate.ts`.
 
 <h2 id="index.ts">Triage Tracker - <code>index.ts</code></h2>
 
