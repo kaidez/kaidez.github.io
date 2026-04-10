@@ -1,20 +1,30 @@
 const { execSync } = require('child_process');
-const moment = require("moment");
-const htmlmin = require("html-minifier");
-const sitemap = require("@quasibit/eleventy-plugin-sitemap");
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const moment = require('moment');
+const htmlmin = require('html-minifier');
+const sitemap = require('@quasibit/eleventy-plugin-sitemap');
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
-const relatedPostsPlugin = require("./src/assets/js/relatedPosts");
+const relatedPostsPlugin = require('./src/assets/js/relatedPosts');
 const readingTime = require('eleventy-plugin-reading-time');
 
 module.exports = function (eleventyConfig) {
-
   // Copy Font Awesome assets from node_modules
-  eleventyConfig.addPassthroughCopy({ "node_modules/@fortawesome/fontawesome-free/css": "assets/fontawesome/css" });
-  eleventyConfig.addPassthroughCopy({ "node_modules/@fortawesome/fontawesome-free/webfonts": "assets/fontawesome/webfonts" });
+  eleventyConfig.addPassthroughCopy({
+    'node_modules/@fortawesome/fontawesome-free/css': 'assets/fontawesome/css',
+  });
+  eleventyConfig.addPassthroughCopy({
+    'node_modules/@fortawesome/fontawesome-free/webfonts':
+      'assets/fontawesome/webfonts',
+  });
+  // Don't build drafts when running in build mode
+  eleventyConfig.addPreprocessor('drafts', '*', (data, content) => {
+    if (data.draft && process.env.ELEVENTY_RUN_MODE === 'build') {
+      return false;
+    }
+  });
 
   // Copy assets to output
-  eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy('src/assets');
 
   eleventyConfig.addPassthroughCopy({ 'src/assets/samples': '/samples' });
 
@@ -25,13 +35,16 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ 'src/llms.txt': '/llms.txt' });
 
   // Copy CNAME file to the root of the output
-  eleventyConfig.addPassthroughCopy({ 'CNAME': '/CNAME' });
+  eleventyConfig.addPassthroughCopy({ CNAME: '/CNAME' });
 
   // Copy .nojekyll file to disable Jekyll processing on GitHub Pages
   eleventyConfig.addPassthroughCopy({ '.nojekyll': '/.nojekyll' });
 
-  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
-    if (process.env.NODE_ENV === "production" && outputPath?.endsWith(".html")) {
+  eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
+    if (
+      process.env.NODE_ENV === 'production' &&
+      outputPath?.endsWith('.html')
+    ) {
       try {
         return htmlmin.minify(content, {
           useShortDoctype: true,
@@ -39,7 +52,7 @@ module.exports = function (eleventyConfig) {
           collapseWhitespace: true,
           minifyCSS: true,
           minifyJS: false, // Disable JS minification in HTML to avoid conflicts
-          ignoreCustomFragments: [/<%[\s\S]*?%>/, /<\?[\s\S]*?\?>/]
+          ignoreCustomFragments: [/<%[\s\S]*?%>/, /<\?[\s\S]*?\?>/],
         });
       } catch (error) {
         console.warn('HTML minification failed for', outputPath, error.message);
@@ -50,25 +63,25 @@ module.exports = function (eleventyConfig) {
   });
 
   // Add simple date filters
-  eleventyConfig.addFilter("readableDate", dateObj => {
-    if (!dateObj) return "";
+  eleventyConfig.addFilter('readableDate', (dateObj) => {
+    if (!dateObj) return '';
     const date = new Date(dateObj);
     return date.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
-      day: 'numeric'
+      day: 'numeric',
     });
   });
 
-  eleventyConfig.addFilter("htmlDateString", (dateObj) => {
-    if (!dateObj) return "";
+  eleventyConfig.addFilter('htmlDateString', (dateObj) => {
+    if (!dateObj) return '';
     const date = new Date(dateObj);
     return date.toISOString().split('T')[0];
   });
 
   // Current not being used
-  eleventyConfig.addFilter("dateReformat", () => {
-    return moment().format("MMMM Do, YYYY");
+  eleventyConfig.addFilter('dateReformat', () => {
+    return moment().format('MMMM Do, YYYY');
   });
 
   // Syntax highlighting plugin for code blocks
@@ -83,50 +96,51 @@ module.exports = function (eleventyConfig) {
   // Reading time plugin
   eleventyConfig.addPlugin(readingTime);
 
-  eleventyConfig.addFilter("readingTimeProseOnly", function (content) {
+  eleventyConfig.addFilter('readingTimeProseOnly', function (content) {
     const stripped = content.replace(/<pre[\s\S]*?<\/pre>/gi, '');
-    return require('./node_modules/eleventy-plugin-reading-time/lib/reading-time')(stripped);
+    return require('./node_modules/eleventy-plugin-reading-time/lib/reading-time')(
+      stripped,
+    );
   });
 
-
   // Add collection for blog posts
-  eleventyConfig.addCollection("posts", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/posts/*.md").reverse();
+  eleventyConfig.addCollection('posts', function (collectionApi) {
+    return collectionApi.getFilteredByGlob('src/posts/*.md').reverse();
   });
 
   // Add collections for specific categories - SIMPLE VERSION
-  eleventyConfig.addCollection("personal", function (collectionApi) {
+  eleventyConfig.addCollection('personal', function (collectionApi) {
     return collectionApi.getAll().filter(function (item) {
-      return item.data.tags && item.data.tags.includes("personal");
+      return item.data.tags && item.data.tags.includes('personal');
     });
   });
 
-  eleventyConfig.addCollection("tutorials", function (collectionApi) {
+  eleventyConfig.addCollection('tutorials', function (collectionApi) {
     return collectionApi.getAll().filter(function (item) {
-      return item.data.tags && item.data.tags.includes("tutorials");
+      return item.data.tags && item.data.tags.includes('tutorials');
     });
   });
 
-  eleventyConfig.addCollection("reviews", function (collectionApi) {
+  eleventyConfig.addCollection('reviews', function (collectionApi) {
     return collectionApi.getAll().filter(function (item) {
-      return item.data.tags && item.data.tags.includes("reviews");
+      return item.data.tags && item.data.tags.includes('reviews');
     });
   });
 
-  eleventyConfig.addCollection("codingBestPractices", function (collectionApi) {
+  eleventyConfig.addCollection('codingBestPractices', function (collectionApi) {
     return collectionApi.getAll().filter(function (item) {
-      return item.data.tags && item.data.tags.includes("coding-best-practices");
+      return item.data.tags && item.data.tags.includes('coding-best-practices');
     });
   });
 
-  eleventyConfig.addCollection("categories", function (collectionApi) {
-    const posts = collectionApi.getFilteredByGlob("src/posts/*.md");
+  eleventyConfig.addCollection('categories', function (collectionApi) {
+    const posts = collectionApi.getFilteredByGlob('src/posts/*.md');
     const categories = new Set();
 
-    posts.forEach(post => {
+    posts.forEach((post) => {
       if (post.data.tags) {
-        post.data.tags.forEach(tag => {
-          if (tag !== "posts") {
+        post.data.tags.forEach((tag) => {
+          if (tag !== 'posts') {
             categories.add(tag);
           }
         });
@@ -137,25 +151,25 @@ module.exports = function (eleventyConfig) {
   });
 
   // Add excerpt filter
-  eleventyConfig.addFilter("excerpt", (post) => {
-    if (!post) return "";
-    const content = post.replace(/(<([^>]+)>)/gi, "");
-    return content.substr(0, 200) + "...";
+  eleventyConfig.addFilter('excerpt', (post) => {
+    if (!post) return '';
+    const content = post.replace(/(<([^>]+)>)/gi, '');
+    return content.substr(0, 200) + '...';
   });
 
   // Add head filter for getting first N items
-  eleventyConfig.addFilter("head", (array, n) => {
+  eleventyConfig.addFilter('head', (array, n) => {
     if (!Array.isArray(array)) return [];
     return array.slice(0, n);
   });
 
   // Add collection for all secondary tags
-  eleventyConfig.addCollection("allSecondaryTags", function (collectionApi) {
+  eleventyConfig.addCollection('allSecondaryTags', function (collectionApi) {
     const allSecondaryTags = new Set();
 
-    collectionApi.getAll().forEach(post => {
+    collectionApi.getAll().forEach((post) => {
       if (post.data.secondary_tags && Array.isArray(post.data.secondary_tags)) {
-        post.data.secondary_tags.forEach(tag => {
+        post.data.secondary_tags.forEach((tag) => {
           allSecondaryTags.add(tag);
         });
       }
@@ -165,37 +179,34 @@ module.exports = function (eleventyConfig) {
   });
 
   // Add filter to filter posts by secondary tag
-  eleventyConfig.addFilter("filterBySecondaryTag", function (posts, targetTag) {
+  eleventyConfig.addFilter('filterBySecondaryTag', function (posts, targetTag) {
     if (!Array.isArray(posts)) return [];
 
-    return posts.filter(post => {
-      return post.data.secondary_tags &&
+    return posts.filter((post) => {
+      return (
+        post.data.secondary_tags &&
         Array.isArray(post.data.secondary_tags) &&
-        post.data.secondary_tags.includes(targetTag);
+        post.data.secondary_tags.includes(targetTag)
+      );
     });
   });
 
   // XML Sitemap configuration
   eleventyConfig.addPlugin(sitemap, {
     sitemap: {
-      hostname: "https://kaidez.com",
+      hostname: 'https://kaidez.com',
     },
   });
 
-
   return {
-    templateFormats: [
-      "md",
-      "njk",
-      "html"
-    ],
-    markdownTemplateEngine: "njk",
-    htmlTemplateEngine: "njk",
+    templateFormats: ['md', 'njk', 'html'],
+    markdownTemplateEngine: 'njk',
+    htmlTemplateEngine: 'njk',
     dir: {
-      input: "src",
-      includes: "_includes",
-      data: "_data",
-      output: "_site"
-    }
+      input: 'src',
+      includes: '_includes',
+      data: '_data',
+      output: '_site',
+    },
   };
 };
