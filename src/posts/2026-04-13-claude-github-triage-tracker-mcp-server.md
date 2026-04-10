@@ -227,3 +227,42 @@ It takes an `issue` parameter that represents each issue the Tracker grabs from 
 The loop takes each issue and adds it to a prompt. The completed prompt is sent to Claude, which analyzes each issue and ranks its severity. The loop then creates a prompt containing both the instructions and the individual issue data.
 
 <h2 id="index.ts">Triage Tracker - <code>index.ts</code></h2>
+
+<pre><code class="language-javascript">
+import 'dotenv/config';
+import { EnrichedIssue } from './validate.js';
+import { fetchIssues } from './fetch.js';
+import { enrichIssue } from './enrich.js';
+import { writeOutput, writeToFile } from './write.js';
+
+async function run(): Promise&lt;void&gt; {
+console.log('Starting GitHub issue triage pipeline...');
+
+console.log('Step 1/3: Fetching issues from GitHub...');
+const issues = await fetchIssues(10);
+console.log(`✓ Fetched ${issues.length} issue(s)`);
+
+console.log('Step 2/3: Enriching issues with Claude...');
+const enriched: EnrichedIssue[] = [];
+
+for (const issue of issues) {
+console.log(`  → Enriching issue #${issue.number}: ${issue.title}`);
+const result = await enrichIssue(issue);
+enriched.push(result);
+}
+console.log(`✓ Enriched ${enriched.length} issue(s)`);
+
+console.log('Step 3/3: Writing output...');
+await writeOutput(enriched);
+await writeToFile(enriched);
+
+console.log('\nPipeline complete.');
+}
+
+run().catch((error) => {
+console.error('Pipeline failed:', error);
+process.exit(1);
+});
+</code></pre>
+
+<h2 id="conclusion">Conclusion</h2>
