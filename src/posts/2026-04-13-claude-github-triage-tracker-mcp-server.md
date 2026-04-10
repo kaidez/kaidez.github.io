@@ -142,69 +142,69 @@ import { EnrichedIssueSchema, EnrichedIssue } from './validate.js';
 import { GitHubIssue } from './fetch.js';
 
 const client = new Anthropic({
-apiKey: process.env.ANTHROPIC_API_KEY,
+  apiKey: process.env.ANTHROPIC_API_KEY,
 });
 
 const SYSTEM_PROMPT = `You are an engineering triage assistant. Analyze GitHub issues and return structured JSON only. No explanation, no markdown, no code fences. Return only valid JSON.`;
 
 function buildUserPrompt(issue: GitHubIssue): string {
-const labels = issue.labels.map(l => l.name).join(', ') || 'none';
-const body = issue.body?.trim() || 'No description provided.';
+  const labels = issue.labels.map(l => l.name).join(', ') || 'none';
+  const body = issue.body?.trim() || 'No description provided.';
 
-return `Analyze this GitHub issue and return a JSON object with exactly these three fields:
+  return `Analyze this GitHub issue and return a JSON object with exactly these three fields:
 
-- "severity": one of "Critical", "High", "Medium", or "Low"
-- "summary": one sentence describing the problem in plain English
-- "next_action": a short suggested action (e.g. "Needs reproduction steps", "Ready to assign", "Duplicate — close", "Needs more info")
+  - "severity": one of "Critical", "High", "Medium", or "Low"
+  - "summary": one sentence describing the problem in plain English
+  - "next_action": a short suggested action (e.g. "Needs reproduction steps", "Ready to assign", "Duplicate — close", "Needs more info")
 
-Issue #${issue.number}
-Title: ${issue.title}
-Labels: ${labels}
-Comments: ${issue.comments}
-Body: ${body}
+  Issue #${issue.number}
+  Title: ${issue.title}
+  Labels: ${labels}
+  Comments: ${issue.comments}
+  Body: ${body}
 
-Return only the JSON object. No other text.`;
+  Return only the JSON object. No other text.`;
 }
 
 export async function enrichIssue(
-issue: GitHubIssue,
-anthropicClient: Anthropic = client
+  issue: GitHubIssue,
+  anthropicClient: Anthropic = client
 ): Promise&lt;EnrichedIssue&gt; {
 
-const message = await anthropicClient.messages.create({
-model: 'claude-haiku-4-5-20251001',
-max_tokens: 256,
-system: SYSTEM_PROMPT,
-messages: [{ role: 'user', content: buildUserPrompt(issue) }],
-});
+    const message = await anthropicClient.messages.create({
+      model: 'claude-haiku-4-5-20251001',
+      max_tokens: 256,
+      system: SYSTEM_PROMPT,
+      messages: [{ role: 'user', content: buildUserPrompt(issue) }],
+    });
 
-const raw = message.content[0].type === 'text'
-? message.content[0].text.replace(/^`json\s*/i, '').replace(/`\s\*$/, '').trim()
-: '';
+    const raw = message.content[0].type === 'text'
+      ? message.content[0].text.replace(/^`json\s*/i, '').replace(/`\s\*$/, '').trim()
+    : '';
 
-let parsed: unknown;
-try {
-parsed = JSON.parse(raw);
-} catch {
-throw new Error(`Claude returned non-JSON for issue #${issue.number}: ${raw}`);
-}
+    let parsed: unknown;
+      try {
+        parsed = JSON.parse(raw);
+      } catch {
+        throw new Error(`Claude returned non-JSON for issue #${issue.number}: ${raw}`);
+      }
 
-// Validate the issue data using Zod
-const result = EnrichedIssueSchema.safeParse({
-number: issue.number,
-title: issue.title,
-body: issue.body,
-labels: issue.labels.map(l => l.name),
-created_at: issue.created_at,
-comments: issue.comments,
-...(parsed as object),
-});
+    // Validate the issue data using Zod
+    const result = EnrichedIssueSchema.safeParse({
+      number: issue.number,
+      title: issue.title,
+      body: issue.body,
+      labels: issue.labels.map(l => l.name),
+      created_at: issue.created_at,
+      comments: issue.comments,
+      ...(parsed as object),
+    });
 
-if (!result.success) {
-throw new Error(`Zod validation failed for issue #${issue.number}: ${result.error.message}`);
-}
+    if (!result.success) {
+      throw new Error(`Zod validation failed for issue #${issue.number}: ${result.error.message}`);
+    }
 
-return result.data;
+    return result.data;
 }
 </code></pre>
 
@@ -212,6 +212,13 @@ return result.data;
 Here, the data pulled from GitHub is sent to Claude.
 
 Claude analyzes each issue, categorizes it by severity, and returns a response. Zod then validates that response against the declared schema before saving.
+
+First, two `const`s are created:
+
+<ol>
+  <li><code>const client</code> stores the Anthropic API key that was configured earlier.</li>
+  <li><code>const SYSTEM_PROMPT</code> creates the initial prompt we send to Claude when we send it the GitHub data. Note the prompt follows a Claude best practice by assigning Claude a role — 'engineering triage assistant' in this case.</li>
+</ol>
 
 <h2 id="index.ts">Triage Tracker - <code>index.ts</code></h2>
 
