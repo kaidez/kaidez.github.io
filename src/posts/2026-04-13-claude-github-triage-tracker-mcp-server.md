@@ -23,8 +23,9 @@ These weren't Earth-shattering apps, but building them increased my Claude knowl
 3. [Code Architecture](#code-architecture)
 4. [Triage Tracker - `validate.ts`](#validate.ts)
 5. [Triage Tracker - `fetch.ts`](#fetch.ts)
-6. [Triage Tracker - `index.ts`](#index.ts)
-7. [Conclusion](#conclusion)
+6. [Triage Tracker - `enrich.ts`](#enrich.ts)
+7. [Triage Tracker - `index.ts`](#index.ts)
+8. [Conclusion](#conclusion)
 
 <h2 id="how-claude-works">How Claude Works With the Triage Tracker</h2>
 
@@ -50,7 +51,7 @@ The Triage Tracker is written in TypeScript (TS) and because of how it interpret
 
 Zod is a validation library: you declare the shape you expect your data to have. Zod then checks that incoming data actually matches that shape at runtime.
 
-Validating data in forms is a common use case for web apps. But this tracker needs to validate the incoming VS Code issues data described above.
+Validating data in forms is a common use case for web apps, and Zod can help with that if needed. But this tracker needs to validate the incoming VS Code issues data described above.
 
 I declare the expected shape of each issue in advance with TypeScript. But there's no guarantee that the types I pull from GitHub will match up with what Claude sends back. That's where things get error-prone.
 
@@ -132,6 +133,85 @@ A TypeScript interface named `GitHubIssue` is created. It contains the field nam
 The `fetchIssues()` function does a standard request/response action for the GitHub data. It takes a single parameter of `limit`, defining how many total issues to return. By default, it requests 10 issues.
 
 Finally, the data is loaded as a JSON array in `const issues`.
+
+<h2 id="enrich.ts">Triage Tracker - <code>enrich.ts</code></h2>
+
+<pre><code class="language-javascript">
+import { Anthropic } from '@anthropic-ai/sdk';
+import { EnrichedIssueSchema, EnrichedIssue } from './validate.js';
+import { GitHubIssue } from './fetch.js';
+
+const client = new Anthropic({
+apiKey: process.env.ANTHROPIC_API_KEY,
+});
+
+const SYSTEM_PROMPT = `You are an engineering triage assistant. Analyze GitHub issues and return structured JSON only. No explanation, no markdown, no code fences. Return only valid JSON.`;
+
+function buildUserPrompt(issue: GitHubIssue): string {
+const labels = issue.labels.map(l => l.name).join(', ') || 'none';
+const body = issue.body?.trim() || 'No description provided.';
+
+return `Analyze this GitHub issue and return a JSON object with exactly these three fields:
+
+- "severity": one of "Critical", "High", "Medium", or "Low"
+- "summary": one sentence describing the problem in plain English
+- "next_action": a short suggested action (e.g. "Needs reproduction steps", "Ready to assign", "Duplicate — close", "Needs more info")
+
+Issue #${issue.number}
+Title: ${issue.title}
+Labels: ${labels}
+Comments: ${issue.comments}
+Body: ${body}
+
+Return only the JSON object. No other text.`;
+}
+
+export async function enrichIssue(
+issue: GitHubIssue,
+anthropicClient: Anthropic = client
+): Promise&lt;EnrichedIssue&gt; {
+
+const message = await anthropicClient.messages.create({
+model: 'claude-haiku-4-5-20251001',
+max_tokens: 256,
+system: SYSTEM_PROMPT,
+messages: [{ role: 'user', content: buildUserPrompt(issue) }],
+});
+
+const raw = message.content[0].type === 'text'
+? message.content[0].text.replace(/^`json\s*/i, '').replace(/`\s\*$/, '').trim()
+: '';
+
+let parsed: unknown;
+try {
+parsed = JSON.parse(raw);
+} catch {
+throw new Error(`Claude returned non-JSON for issue #${issue.number}: ${raw}`);
+}
+
+// Validate the issue data using Zod
+const result = EnrichedIssueSchema.safeParse({
+number: issue.number,
+title: issue.title,
+body: issue.body,
+labels: issue.labels.map(l => l.name),
+created_at: issue.created_at,
+comments: issue.comments,
+...(parsed as object),
+});
+
+if (!result.success) {
+throw new Error(`Zod validation failed for issue #${issue.number}: ${result.error.message}`);
+}
+
+return result.data;
+}
+</code></pre>
+
+`enrich.ts` is where the Tracker puts Zod's data validation to work.
+Here, the data pulled from GitHub is sent to Claude.
+
+Claude analyzes each issue, categorizes it by severity, and returns a response. Zod then validates that response against the declared schema before saving.
 
 <h2 id="index.ts">Triage Tracker - <code>index.ts</code></h2>
 
