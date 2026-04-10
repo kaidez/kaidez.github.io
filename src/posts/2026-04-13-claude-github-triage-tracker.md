@@ -1,7 +1,7 @@
 ---
 title: 'Building A GitHub Triage Tracker with Claude'
 date: 2026-04-13T12:00:00-02:00
-excerpt: "I built a GitHub triage tracker with the Claude API — here's how Claude powers both and what I learned."
+excerpt: "I built a GitHub triage tracker with the Claude API — here's what I learned."
 layout: layouts/post.njk
 permalink: /claude-github-triage-tracker/
 image: claude-insights.jpg
@@ -12,9 +12,9 @@ schema_type: 'TechArticle'
 draft: true
 ---
 
-I previously wrote about <a href="/building-ai-tools-claude-api/" title="Building AI Tools with the Claude API">building two VS Code extensions with the Claude API</a>. But I also used Claude to build a <a href="https://github.com/kaidez/github-issue-triage" title="GitHub Triage Tracker Repository on GitHub" aria-label="Go to the GitHub Triage Tracker Repository on GitHub" rel="noopener noreferrer">GitHub Triage Tracker</a> and an <a href="https://github.com/kaidez/mcp-prompt-server" title="MCP Prompt Server Repository on GitHub" aria-label="Go to the MCP Prompt Server Repository on GitHub" rel="noopener noreferrer">MCP Prompt Server</a>.
+I previously wrote about <a href="/building-ai-tools-claude-api/" title="Building AI Tools with the Claude API">building two VS Code extensions with the Claude API</a>. But I also used Claude to build a <a href="https://github.com/kaidez/github-issue-triage" title="GitHub Triage Tracker Repository on GitHub" aria-label="Go to the GitHub Triage Tracker Repository on GitHub" rel="noopener noreferrer">GitHub Triage Tracker</a>.
 
-These weren't Earth-shattering apps, but building them increased my Claude knowledge. Here's the write-up on the latter two tools.
+This is't an Earth-shattering app, but building it increased my Claude knowledge. Here's the write-up...
 
 <h2>Table of Contents</h2>
 
@@ -224,7 +224,7 @@ Next, two functions handle prompt construction and the Claude API call. `buildUs
 
 It takes an `issue` parameter that represents each issue the Tracker grabs from GitHub. `issue` is strongly-typed against the `GitHubIssue` interface created in `fetch.ts`.
 
-Using JavaScript's `.map()` function, the loop takes each issue and adds it to a prompt. The completed prompt is sent to Claude, which analyzes each issue and ranks its severity. The loop then creates a prompt containing both the instructions and the individual issue data.
+The loop takes each issue and adds it to a prompt. The completed prompt is sent to Claude, which analyzes each issue and ranks its severity. The loop then creates a prompt containing both the instructions and the individual issue data.
 
 <h2 id="index.ts">Triage Tracker - <code>index.ts</code></h2>
 
