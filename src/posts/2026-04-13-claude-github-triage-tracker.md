@@ -12,9 +12,9 @@ schema_type: 'TechArticle'
 draft: true
 ---
 
-I previously wrote about <a href="/building-ai-tools-claude-api/" title="Building AI Tools with the Claude API">building two VS Code extensions with the Claude API</a>. But I also used Claude to build a <a href="https://github.com/kaidez/github-issue-triage" title="GitHub Triage Tracker Repository on GitHub" aria-label="Go to the GitHub Triage Tracker Repository on GitHub" rel="noopener noreferrer">GitHub Triage Tracker</a>.
+<a href="/building-ai-tools-claude-api/" title="Building AI Tools with the Claude API">I built two VS Code extensions with the Claude API</a>, just so I could get a better handle on Claude. But I also used Claude to build a <a href="https://github.com/kaidez/github-issue-triage" title="GitHub Triage Tracker Repository on GitHub" aria-label="Go to the GitHub Triage Tracker Repository on GitHub" rel="noopener noreferrer">GitHub Triage Tracker</a>.
 
-This isn't an Earth-shattering app, but building it increased my Claude knowledge. Here's the write-up...
+This Tracker isn't an Earth-shattering app, but building it increased my Claude knowledge. Here's the write-up...
 
 <h2>Table of Contents</h2>
 
@@ -34,7 +34,7 @@ For the Triage Tracker, the Claude API works pretty much the same way it did wit
 
 <ul>
   <li>Claude is stateless. If you're "having a conversation with it" through prompts, it doesn't remember your past prompts. Instead, your code re-sends the full conversation history with each new request, and Claude uses that as context.</li>
-  <li>Claude is powerful prediction software. It's really REALLY good at "guessing" how it responds to prompts.</li>
+  <li>Claude is powerful prediction software. It's really REALLY good at "guessing" how to respond to prompts.</li>
   <li>Calling the Claude API requires an API key. <a href="https://platform.claude.com/settings/keys" title="Get a Claude API key" rel="noopener noreferrer">Get a Claude API key</a> and place it in an <code>.env</code> file at the root (Claude account required). It should look like this:
   <pre><code class="language-yaml">
   ANTHROPIC_API_KEY=XX-XXXX-XXXXXX
@@ -52,9 +52,9 @@ The Triage Tracker is written in TypeScript (TS) and because of how it interpret
 
 Zod is a validation library: you declare the shape you expect your data to have. Zod then checks that incoming data actually matches that shape at runtime.
 
-Validating data in forms is a common use case for web apps, and Zod can help with that if needed. But this tracker needs to validate the incoming VS Code issues data described above.
+Validating data in forms is a common use case for web apps, and Zod can help with that, too. But this tracker needs to validate the incoming VS Code issues data described above.
 
-I declare the expected shape of each issue in advance with TypeScript. But there's no guarantee that the types I pull from GitHub will match up with what Claude sends back. That's where things get error-prone.
+I declare the expected shape of each issue in advance with TypeScript. But there's no guarantee that the types I pull from GitHub will match up with what Claude sends back. That's where errors show up.
 
 Zod validates that Claude's response actually matches that declared shape before the data is saved. We'll see this in action when we look at `validate.ts`.
 
@@ -127,11 +127,11 @@ export async function fetchIssues(limit = 10): Promise&lt;GitHubIssue[]&gt; {
 }
 </code></pre>
 
-This is where the Tracker makes an API request for the VS Code issues in GitHub. It calls `dotenv.config()` to load the Anthropic API key, then makes a GET request to the GitHub API.
+This is where the Tracker makes an API request for the VS Code issues posted on GitHub. It calls `dotenv.config()` to load the Anthropic API key, then makes a GET request to the GitHub API.
 
 A TypeScript interface named `GitHubIssue` is created. It contains the field names listed in the returned GitHub data.
 
-The `fetchIssues()` function does a standard request/response action for the GitHub data. It takes a single parameter of `limit`, defining how many total issues to return. By default, it requests 10 issues.
+The `fetchIssues()` function does a standard request/response action for the GitHub data. It takes a single parameter of `limit`, defining how many total issues to return. By default, it requests 10 issues at most.
 
 Finally, the data is loaded as a JSON array in `const issues`.
 
@@ -220,9 +220,9 @@ First, two `const`s are created:
   <li><code>const SYSTEM_PROMPT</code> creates the initial prompt we send to Claude when we send it the GitHub data. Note the prompt follows a Claude best practice by assigning Claude a role — 'engineering triage assistant' in this case.</li>
 </ol>
 
-Next, two functions handle prompt construction and the Claude API call. `buildUserPrompt()` takes an `issue` typed as `GitHubIssue` from `fetch.ts` and formats it into a prompt string for Claude.
+Next, two functions handle prompt construction and the Claude API call. `buildUserPrompt()` takes an `issue` parameter typed as `GitHubIssue` from `fetch.ts` and formats it into a prompt string for Claude.
 
-`enrichIssue()` sends the prompt to Claude and stores the response in `const message`. The actual loop over all issues runs in `index.ts`, which calls `enrichIssue()` once per issue.
+`enrichIssue()` sends the prompt to Claude and stores the response in `const message`. We'll see the actual loop over all the issues later on in `index.ts`, which calls `enrichIssue()` once per issue.
 
 `const raw` and `let parsed` have respective roles in formatting the data and JSON. `const result` is where Zod validates the issue data.
 
@@ -294,7 +294,9 @@ This is the file that generates a JSON file with the triaged issues data. It als
 
 `const OUTPUT_FILE` is the JSON file that's created. Every new time that the Tracker runs, it's deleted and a fresh, new file is created.
 
-A `PipelineOutput` interface is created and mapped to timestamp and issues length fields at the top of the JSON. There's also an `issues` array that will contain all the triaged issues. That's validated using the Zod-powered `EnrichedIssue` schema we created in `validate.ts`.
+A `PipelineOutput` interface defines three top-level fields in the JSON: a `generated_at` timestamp, an `issue_count`, and an `issues` array containing all the triaged issues. That's validated using the Zod-powered `EnrichedIssue` schema we created in `validate.ts`.
+
+The `writeOutput()` function is what's used to create the JSON file.
 
 <h2 id="index.ts">Triage Tracker - <code>index.ts</code></h2>
 
