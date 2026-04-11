@@ -208,8 +208,7 @@ export async function enrichIssue(
 }
 </code></pre>
 
-`enrich.ts` is where the Tracker puts Zod's data validation power to work.
-Here, the data pulled from GitHub is sent to Claude.
+`enrich.ts` is where the Tracker puts Zod's data validation power to work. It's also where the data that was pulled from GitHub gets sent out to Claude in the form of prompts.
 
 Claude analyzes each issue, categorizes it by severity, and returns a response. Zod then validates that response against the declared schema before saving.
 
@@ -217,7 +216,7 @@ First, two `const`s are created:
 
 <ol>
   <li><code>const client</code> stores the Anthropic API key that was configured earlier.</li>
-  <li><code>const SYSTEM_PROMPT</code> creates the initial prompt we send to Claude when we send it the GitHub data. Note the prompt follows a Claude best practice by assigning Claude a role — 'engineering triage assistant' in this case.</li>
+  <li><code>const SYSTEM_PROMPT</code> creates the initial prompt we send to Claude when we send it the GitHub data. Note the prompt follows a Claude best practice by assigning Claude a role..."engineering triage assistant" in this case.</li>
 </ol>
 
 Next, two functions handle prompt construction and the Claude API call. `buildUserPrompt()` takes an `issue` parameter typed as `GitHubIssue` from `fetch.ts` and formats it into a prompt string for Claude.
@@ -294,9 +293,13 @@ This is the file that generates a JSON file with the triaged issues data. It als
 
 `const OUTPUT_FILE` is the JSON file that's created. Every new time that the Tracker runs, it's deleted and a fresh, new file is created.
 
-A `PipelineOutput` interface defines three top-level fields in the JSON: a `generated_at` timestamp, an `issue_count`, and an `issues` array containing all the triaged issues. That's validated using the Zod-powered `EnrichedIssue` schema we created in `validate.ts`.
+A `PipelineOutput` interface defines three top-level fields in the JSON: `generated_at`, `issue_count`, and `issues`. That's validated using the Zod-powered `EnrichedIssue` schema we created in `validate.ts`.
 
-The `writeOutput()` function is what's used to create the JSON file.
+The `writeOutput()` function is what's used to create the JSON file. First, it deletes any existing versions of the JSON and Markdown files using Node's `fs.rm()` method.
+
+Next, `const filePath` builds the data's file path using Node's `path.join()` method...the path being `output/enriched-issues.json`. Then Node's ` fs.writeFile()` method actually writes the data to that file.
+
+When all this is done, a success message is logged out to the console.
 
 <h2 id="index.ts">Triage Tracker - <code>index.ts</code></h2>
 
