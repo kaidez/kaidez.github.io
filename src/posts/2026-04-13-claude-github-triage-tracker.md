@@ -295,11 +295,15 @@ This is the file that generates a JSON file with the triaged issues data. It als
 
 A `PipelineOutput` interface defines three top-level fields in the JSON: `generated_at`, `issue_count`, and `issues`. That's validated using the Zod-powered `EnrichedIssue` schema we created in `validate.ts`.
 
-The `writeOutput()` function is what's used to create the JSON file. First, it deletes any existing versions of the JSON and Markdown files using Node's `fs.rm()` method.
+`writeOutput()` takes our `issues` as a parameter typed against `EnrichedIssue[]`, and is what's used to create the JSON file. First, it deletes any existing versions of the JSON and Markdown files using Node's `fs.rm()` method.
 
 Next, `const filePath` builds the data's file path using Node's `path.join()` method...the path being `output/enriched-issues.json`. Then Node's ` fs.writeFile()` method actually writes the data to that file.
 
 When all this is done, a success message is logged out to the console.
+
+`writeToFile()` is used to build the Markdown file and also takes `issues` as a parameter. This function's built similar to `writeOutput()` in terms of `const`s storing file paths and data, and console outputs.
+
+But this time, it loops over the JSON data to build a `lines` array, then writes that array to the Markdown file.e. It also has a different header...that's stored in `const lines`.
 
 <h2 id="index.ts">Triage Tracker - <code>index.ts</code></h2>
 
