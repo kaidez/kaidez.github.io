@@ -38,7 +38,7 @@ Data attributes are customizable attributes that store data in page elements. Th
 &lt;/div&gt;
 </code></pre>
 
-The element that contains these data attributes (`<div id="teamInfo">` in the above-example) has an internal property called `dataset` that stores these attributes in an object called `DOMStringMap` (an API introduced with HTML5):
+The element that contains these data attributes (`<div id="teamInfo" />` in the above-example) has an internal property called `dataset` that stores these attributes in an object called `DOMStringMap` (an API introduced with HTML5):
 
 <pre><code class="language-javascript">
 console.log(teamInfo.dataset);
