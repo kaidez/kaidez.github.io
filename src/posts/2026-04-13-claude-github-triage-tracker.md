@@ -297,13 +297,13 @@ A `PipelineOutput` interface defines three top-level fields in the JSON: `genera
 
 `writeOutput()` takes our `issues` as a parameter typed against `EnrichedIssue[]`, and is what's used to create the JSON file. First, it deletes any existing versions of the JSON and Markdown files using Node's `fs.rm()` method.
 
-Next, `const filePath` builds the data's file path using Node's `path.join()` method...the path being `output/enriched-issues.json`. Then Node's ` fs.writeFile()` method actually writes the data to that file.
+Next, `const filePath` builds the data's file path using Node's `path.join()` method...the path being `output/enriched-issues.json`. Then Node's ` fs.writeFile()` method actually writes the data to that file. <a href="https://github.com/kaidez/github-issue-triage/blob/main/output/enriched-issues.json" title="GitHub Triage Tracker JSON File" aria-label="Review a GitHub Triage Tracker JSON file" rel="noopener noreferrer">View a sample JSON file</a>.
 
 When all this is done, a success message is logged out to the console.
 
 `writeToFile()` is used to build the Markdown file and also takes `issues` as a parameter. This function's built similar to `writeOutput()` in terms of `const`s storing file paths and data, and console outputs.
 
-But this time, `const lines` stores the Markdown header. It then loops over the JSON data and writes the full array to the file.
+But this time, `const lines` stores the Markdown header. It then loops over the JSON data and writes the full array to the file. <a href="https://github.com/kaidez/github-issue-triage/blob/main/output/report.md" title="GitHub Triage Tracker Markdown Report" aria-label="Review a GitHub Triage Tracker Markdown Report" rel="noopener noreferrer">View a sample Markdown report</a>.
 
 <h2 id="index.ts">Triage Tracker - <code>index.ts</code></h2>
 
@@ -349,9 +349,9 @@ run().catch((error) => {
 `index.ts` runs all of this together in the following sequence:
 
 <ol>
-  <li><code>fetch.ts</code> uses its internal <code>fetchIssues()</code> method to grab the VS Code issue data from GitHub. `const issues` is where you can figure if you want to pull less than 10 issues...this demo only pulls five.</li>
-  <li><code>enrich.ts</code> uses its internal <code>enrichIssue()</code> method to validate the data and load it into dynamically-created prompts to send to the Claude API.</li>
-  <li><code>write.ts</code> uses <code>writeOutput()</code> to save the triaged issues as a JSON file, and <code>writeToFile()</code> to write them to a Markdown file.</li>
+  <li><code>fetch.ts</code> uses its internal <code>fetchIssues()</code> method to grab the VS Code issue data from GitHub. `const issues` is where you can figure if you want to pull less than 10 issues...this demo pulls five.</li>
+  <li><code>enrich.ts</code> uses its internal <code>enrichIssue()</code> method to validate the data and load it into dynamically-created prompts to send to Claude's API.</li>
+  <li><code>write.ts</code> saves triaged issues as JSON via <code>writeOutput()</code> and generates a Markdown report via `writeToFile()`.</li>
 </ol>
 
 <h2 id="conclusion">Conclusion</h2>
@@ -362,4 +362,4 @@ I'm starting to realize that this reasoning power is really understated when des
 
 Digging deep into Zod was also helpful. That second layer of validation caught type mismatches before any bad data could be saved.
 
-The real triage outcome here wasn't a cleaner issue list — it was a clearer picture of what these tools are actually capable of. Now if only there were a Zod schema for validating my own project ideas before I start building them.
+The real triage outcome here wasn't a cleaner issue list...it was a clearer picture of what these tools are actually capable of. Now if only there were a Zod schema for validating my own project ideas before I start building them.
