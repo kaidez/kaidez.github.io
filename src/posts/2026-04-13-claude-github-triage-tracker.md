@@ -1,5 +1,5 @@
 ---
-title: 'Building A GitHub Triage Tracker with Claude'
+title: 'Building A GitHub Triage Tracker with the Claude API'
 date: 2026-04-13T12:00:00-02:00
 excerpt: "I built a GitHub triage tracker with the Claude API — here's what I learned."
 layout: layouts/post.njk
@@ -12,7 +12,7 @@ schema_type: 'TechArticle'
 draft: true
 ---
 
-<a href="/building-ai-tools-claude-api/" title="Building AI Tools with the Claude API">I built two VS Code extensions with the Claude API</a>, just so I could get a better handle on Claude. But I also used Claude to build a <a href="https://github.com/kaidez/github-issue-triage" title="GitHub Triage Tracker Repository on GitHub" aria-label="Go to the GitHub Triage Tracker Repository on GitHub" rel="noopener noreferrer">GitHub Triage Tracker</a>.
+<a href="/building-ai-tools-claude-api/" title="Building AI Tools with the Claude API">I built two VS Code extensions with the Claude API</a>, just so I could get a better handle on Claude overall. But I also used the API to build a <a href="https://github.com/kaidez/github-issue-triage" title="GitHub Triage Tracker Repository on GitHub" aria-label="Go to the GitHub Triage Tracker Repository on GitHub" rel="noopener noreferrer">GitHub Triage Tracker</a>.
 
 This Tracker isn't an Earth-shattering app, but building it increased my Claude knowledge. Here's the write-up...
 
@@ -303,18 +303,20 @@ When all this is done, a success message is logged out to the console.
 
 `writeToFile()` is used to build the Markdown file and also takes `issues` as a parameter. This function's built similar to `writeOutput()` in terms of `const`s storing file paths and data, and console outputs.
 
-But this time, it loops over the JSON data to build a `lines` array, then writes that array to the Markdown file.e. It also has a different header...that's stored in `const lines`.
+But this time, `const lines` stores the Markdown header. It then loops over the JSON data and writes the full array to the file.
 
 <h2 id="index.ts">Triage Tracker - <code>index.ts</code></h2>
 
 <pre><code class="language-javascript">
 import 'dotenv/config';
-import { EnrichedIssue } from './validate.js';
 import { fetchIssues } from './fetch.js';
 import { enrichIssue } from './enrich.js';
 import { writeOutput, writeToFile } from './write.js';
 
-async function run(): Promise&lt;void&gt; {
+// Import the TypeScript type inferred from the Zod schema — used to type the enriched issues array.
+import { EnrichedIssue } from './validate.js';
+
+async function run(): Promise<void> {
   console.log('Starting GitHub issue triage pipeline...');
 
   console.log('Step 1/3: Fetching issues from GitHub...');
@@ -344,4 +346,18 @@ run().catch((error) => {
 });
 </code></pre>
 
+`index.ts` runs all of this together in the following sequence:
+
+<ol>
+  <li><code>fetch.ts</code> uses its internal <code>fetchIssues()</code> method to grab the VS Code issue data from GitHub.</li>
+  <li><code>enrich.ts</code> uses its internal <code>enrichIssue()</code> method to validate the data and load it into dynamically-created prompts to send to the Claude API.</li>
+  <li><code>write.ts</code> uses <code>writeOutput()</code> to save the triaged issues as a JSON file, and <code>writeToFile()</code> to write them to a Markdown file.</li>
+</ol>
+
 <h2 id="conclusion">Conclusion</h2>
+
+Claude certainly wrote <i>some</i> of this code, but not all of it. What Claude worked overtime doing was using its API to apply strong deductive reasoning to the data I gave it.
+
+I'm starting to realize that this reasoning power is really understated when describing Claude, or any LLM for that matter. People who realize it does more than generate code will have a real edge in the workplace.
+
+Digging deep into Zod was also helpful. TypeScript is such an important skill to have right now: understand its ecosystem is just as important.
