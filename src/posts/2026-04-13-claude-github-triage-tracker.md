@@ -320,7 +320,7 @@ async function run(): Promise<void> {
   console.log('Starting GitHub issue triage pipeline...');
 
   console.log('Step 1/3: Fetching issues from GitHub...');
-  const issues = await fetchIssues(10);
+  const issues = await fetchIssues(5);
   console.log(`✓ Fetched ${issues.length} issue(s)`);
 
   console.log('Step 2/3: Enriching issues with Claude...');
@@ -349,7 +349,7 @@ run().catch((error) => {
 `index.ts` runs all of this together in the following sequence:
 
 <ol>
-  <li><code>fetch.ts</code> uses its internal <code>fetchIssues()</code> method to grab the VS Code issue data from GitHub.</li>
+  <li><code>fetch.ts</code> uses its internal <code>fetchIssues()</code> method to grab the VS Code issue data from GitHub. `const issues` is where you can figure if you want to pull less than 10 issues...this demo only pulls five.</li>
   <li><code>enrich.ts</code> uses its internal <code>enrichIssue()</code> method to validate the data and load it into dynamically-created prompts to send to the Claude API.</li>
   <li><code>write.ts</code> uses <code>writeOutput()</code> to save the triaged issues as a JSON file, and <code>writeToFile()</code> to write them to a Markdown file.</li>
 </ol>
