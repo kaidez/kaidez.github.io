@@ -12,7 +12,7 @@ schema_type: 'TechArticle'
 draft: true
 ---
 
-<a href="/building-ai-tools-claude-api/" title="Building AI Tools with the Claude API">I built two VS Code extensions with the Claude API</a>, just so I could get a better handle on Claude overall. But I also used the API to build a <a href="https://github.com/kaidez/github-issue-triage" title="GitHub Triage Tracker Repository on GitHub" aria-label="Go to the GitHub Triage Tracker Repository on GitHub" rel="noopener noreferrer">GitHub Triage Tracker</a>.
+<a href="/building-ai-tools-claude-api/" title="Building AI Tools with the Claude API">I built two VS Code extensions with the Claude API</a>, just so I could get a better handle on Claude. But I also used the API to build a <a href="https://github.com/kaidez/github-issue-triage" title="GitHub Triage Tracker Repository on GitHub" aria-label="Go to the GitHub Triage Tracker Repository on GitHub" rel="noopener noreferrer">GitHub Triage Tracker</a>.
 
 This Tracker isn't an Earth-shattering app, but building it increased my Claude knowledge. Here's the write-up...
 
@@ -360,6 +360,6 @@ Claude certainly wrote <i>some</i> of this code, but not all of it. What Claude 
 
 I'm starting to realize that this reasoning power is really understated when describing Claude, or any LLM for that matter. People who realize it does more than generate code will have a real edge in the workplace.
 
-Digging deep into Zod was also helpful. That second layer of validation really prevented a lot of validation errors from happening.
+Digging deep into Zod was also helpful. That second layer of validation caught type mismatches before any bad data could be saved.
 
 The real triage outcome here wasn't a cleaner issue list — it was a clearer picture of what these tools are actually capable of. Now if only there were a Zod schema for validating my own project ideas before I start building them.
