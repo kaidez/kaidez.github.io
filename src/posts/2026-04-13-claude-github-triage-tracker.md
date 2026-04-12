@@ -4,7 +4,7 @@ date: 2026-04-13T12:00:00-02:00
 excerpt: "I built a GitHub triage tracker with the Claude API — here's what I learned."
 layout: layouts/post.njk
 permalink: /claude-github-triage-tracker/
-image: claude-insights.jpg
+image: github-triage.jpg
 tags: ['coding-best-practices']
 secondary_tags: ['ai', 'claude', 'zod']
 category: Coding Tips
@@ -360,4 +360,6 @@ Claude certainly wrote <i>some</i> of this code, but not all of it. What Claude 
 
 I'm starting to realize that this reasoning power is really understated when describing Claude, or any LLM for that matter. People who realize it does more than generate code will have a real edge in the workplace.
 
-Digging deep into Zod was also helpful. TypeScript is such an important skill to have right now: understand its ecosystem is just as important.
+Digging deep into Zod was also helpful. That second layer of validation really prevented a lot of validation errors from happening.
+
+The real triage outcome here wasn't a cleaner issue list — it was a clearer picture of what these tools are actually capable of. Now if only there were a Zod schema for validating my own project ideas before I start building them.
