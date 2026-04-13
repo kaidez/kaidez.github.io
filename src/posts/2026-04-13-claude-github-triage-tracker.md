@@ -9,7 +9,6 @@ tags: ['coding-best-practices']
 secondary_tags: ['ai', 'claude', 'zod']
 category: Coding Tips
 schema_type: 'TechArticle'
-draft: true
 ---
 
 <a href="/building-ai-tools-claude-api/" title="Building AI Tools with the Claude API">I built two VS Code extensions with the Claude API</a>, just so I could get a better handle on Claude. But I also used the API to build a <a href="https://github.com/kaidez/github-issue-triage" title="GitHub Triage Tracker Repository on GitHub" aria-label="Go to the GitHub Triage Tracker Repository on GitHub" rel="noopener noreferrer">GitHub Triage Tracker</a>.
