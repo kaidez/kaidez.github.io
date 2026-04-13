@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eval Review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js" integrity="sha384-EnyY0/GSHQGSxSgMwaIPzSESbqoOLSexfnSMN2AP+39Ckmn92stwABZynq1JyzdT" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --bg: #faf9f5;
+      --surface: #ffffff;
+      --border: #e8e6dc;
+      --text: #141413;
+      --text-muted: #b0aea5;
+      --accent: #d97757;
+      --accent-hover: #c4613f;
+      --green: #788c5d;
+      --green-bg: #eef2e8;
+      --red: #c44;
+      --red-bg: #fceaea;
+      --header-bg: #141413;
+      --header-text: #faf9f5;
+      --radius: 6px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background: var(--bg);
+      color: var(--text);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ---- Header ---- */
+    .header {
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    .header .instructions {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      margin-top: 0.25rem;
+    }
+    .header .progress {
+      font-size: 0.875rem;
+      opacity: 0.8;
+      text-align: right;
+    }
+
+    /* ---- Main content ---- */
+    .main {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    /* ---- Sections ---- */
+    .section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      flex-shrink: 0;
+    }
+    .section-header {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.75rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+    }
+    .section-body {
+      padding: 1rem;
+    }
+
+    /* ---- Config badge ---- */
+    .config-badge {
+      display: inline-block;
+      padding: 0.2rem 0.625rem;
+      border-radius: 9999px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-left: 0.75rem;
+      vertical-align: middle;
+    }
+    .config-badge.config-primary {
+      background: rgba(33, 150, 243, 0.12);
+      color: #1976d2;
+    }
+    .config-badge.config-baseline {
+      background: rgba(255, 193, 7, 0.15);
+      color: #f57f17;
+    }
+
+    /* ---- Prompt ---- */
+    .prompt-text {
+      white-space: pre-wrap;
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    /* ---- Outputs ---- */
+    .output-file {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .output-file + .output-file {
+      margin-top: 1rem;
+    }
+    .output-file-header {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      font-family: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .output-file-header .dl-btn {
+      font-size: 0.7rem;
+      color: var(--accent);
+      text-decoration: none;
+      cursor: pointer;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+    .output-file-header .dl-btn:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+    .output-file-content {
+      padding: 0.75rem;
+      overflow-x: auto;
+    }
+    .output-file-content pre {
+      font-size: 0.8125rem;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+    }
+    .output-file-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .output-file-content iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+    .output-file-content table {
+      border-collapse: collapse;
+      font-size: 0.8125rem;
+      width: 100%;
+    }
+    .output-file-content table td,
+    .output-file-content table th {
+      border: 1px solid var(--border);
+      padding: 0.375rem 0.5rem;
+      text-align: left;
+    }
+    .output-file-content table th {
+      background: var(--bg);
+      font-weight: 600;
+    }
+    .output-file-content .download-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.875rem;
+      cursor: pointer;
+    }
+    .output-file-content .download-link:hover {
+      background: var(--border);
+    }
+    .empty-state {
+      color: var(--text-muted);
+      font-style: italic;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    /* ---- Feedback ---- */
+    .prev-feedback {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.625rem 0.75rem;
+      margin-top: 0.75rem;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .prev-feedback-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.25rem;
+      color: var(--text-muted);
+    }
+    .feedback-textarea {
+      width: 100%;
+      min-height: 100px;
+      padding: 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 0.9375rem;
+      line-height: 1.5;
+      resize: vertical;
+      color: var(--text);
+    }
+    .feedback-textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+    .feedback-status {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+      min-height: 1.1em;
+    }
+
+    /* ---- Grades (collapsible) ---- */
+    .grades-toggle {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+    .grades-toggle:hover {
+      color: var(--accent);
+    }
+    .grades-toggle .arrow {
+      margin-right: 0.5rem;
+      transition: transform 0.15s;
+      font-size: 0.75rem;
+    }
+    .grades-toggle .arrow.open {
+      transform: rotate(90deg);
+    }
+    .grades-content {
+      display: none;
+      margin-top: 0.75rem;
+    }
+    .grades-content.open {
+      display: block;
+    }
+    .grades-summary {
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .grade-badge {
+      display: inline-block;
+      padding: 0.125rem 0.5rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .grade-pass { background: var(--green-bg); color: var(--green); }
+    .grade-fail { background: var(--red-bg); color: var(--red); }
+    .assertion-list {
+      list-style: none;
+    }
+    .assertion-item {
+      padding: 0.625rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.8125rem;
+    }
+    .assertion-item:last-child { border-bottom: none; }
+    .assertion-status {
+      font-weight: 600;
+      margin-right: 0.5rem;
+    }
+    .assertion-status.pass { color: var(--green); }
+    .assertion-status.fail { color: var(--red); }
+    .assertion-evidence {
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      margin-top: 0.25rem;
+      padding-left: 1.5rem;
+    }
+
+    /* ---- View tabs ---- */
+    .view-tabs {
+      display: flex;
+      gap: 0;
+      padding: 0 2rem;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .view-tab {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.625rem 1.25rem;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: var(--text-muted);
+      border-bottom: 2px solid transparent;
+      transition: all 0.15s;
+    }
+    .view-tab:hover { color: var(--text); }
+    .view-tab.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .view-panel { display: none; }
+    .view-panel.active { display: flex; flex-direction: column; flex: 1; overflow: hidden; }
+
+    /* ---- Benchmark view ---- */
+    .benchmark-view {
+      padding: 1.5rem 2rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .benchmark-table {
+      border-collapse: collapse;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 0.8125rem;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+    .benchmark-table th, .benchmark-table td {
+      padding: 0.625rem 0.75rem;
+      text-align: left;
+      border: 1px solid var(--border);
+    }
+    .benchmark-table th {
+      font-family: 'Poppins', sans-serif;
+      background: var(--header-bg);
+      color: var(--header-text);
+      font-weight: 500;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .benchmark-table tr:hover { background: var(--bg); }
+    .benchmark-table tr.benchmark-row-with { background: rgba(33, 150, 243, 0.06); }
+    .benchmark-table tr.benchmark-row-without { background: rgba(255, 193, 7, 0.06); }
+    .benchmark-table tr.benchmark-row-with:hover { background: rgba(33, 150, 243, 0.12); }
+    .benchmark-table tr.benchmark-row-without:hover { background: rgba(255, 193, 7, 0.12); }
+    .benchmark-table tr.benchmark-row-avg { font-weight: 600; border-top: 2px solid var(--border); }
+    .benchmark-table tr.benchmark-row-avg.benchmark-row-with { background: rgba(33, 150, 243, 0.12); }
+    .benchmark-table tr.benchmark-row-avg.benchmark-row-without { background: rgba(255, 193, 7, 0.12); }
+    .benchmark-delta-positive { color: var(--green); font-weight: 600; }
+    .benchmark-delta-negative { color: var(--red); font-weight: 600; }
+    .benchmark-notes {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+    }
+    .benchmark-notes h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+    }
+    .benchmark-notes ul {
+      list-style: disc;
+      padding-left: 1.25rem;
+    }
+    .benchmark-notes li {
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      margin-bottom: 0.375rem;
+    }
+    .benchmark-empty {
+      color: var(--text-muted);
+      font-style: italic;
+      text-align: center;
+      padding: 3rem;
+    }
+
+    /* ---- Navigation ---- */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      flex-shrink: 0;
+    }
+    .nav-btn {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.5rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text);
+      transition: all 0.15s;
+    }
+    .nav-btn:hover:not(:disabled) {
+      background: var(--bg);
+      border-color: var(--text-muted);
+    }
+    .nav-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    .done-btn {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.5rem 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.15s;
+    }
+    .done-btn:hover {
+      background: var(--bg);
+      border-color: var(--text-muted);
+    }
+    .done-btn.ready {
+      border: none;
+      background: var(--accent);
+      color: white;
+      font-weight: 600;
+    }
+    .done-btn.ready:hover {
+      background: var(--accent-hover);
+    }
+    /* ---- Done overlay ---- */
+    .done-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+    }
+    .done-overlay.visible {
+      display: flex;
+    }
+    .done-card {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 2rem 3rem;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      max-width: 500px;
+    }
+    .done-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .done-card p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+    .done-card .btn-row {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+    .done-card button {
+      padding: 0.5rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 0.875rem;
+    }
+    .done-card button:hover {
+      background: var(--bg);
+    }
+    /* ---- Toast ---- */
+    .toast {
+      position: fixed;
+      bottom: 5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 0.625rem 1.25rem;
+      border-radius: var(--radius);
+      font-size: 0.875rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+      z-index: 200;
+    }
+    .toast.visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="app" style="height:100vh; display:flex; flex-direction:column;">
+    <div class="header">
+      <div>
+        <h1>Eval Review: <span id="skill-name"></span></h1>
+        <div class="instructions">Review each output and leave feedback below. Navigate with arrow keys or buttons. When done, copy feedback and paste into Claude Code.</div>
+      </div>
+      <div class="progress" id="progress"></div>
+    </div>
+
+    <!-- View tabs (only shown when benchmark data exists) -->
+    <div class="view-tabs" id="view-tabs" style="display:none;">
+      <button class="view-tab active" onclick="switchView('outputs')">Outputs</button>
+      <button class="view-tab" onclick="switchView('benchmark')">Benchmark</button>
+    </div>
+
+    <!-- Outputs panel (qualitative review) -->
+    <div class="view-panel active" id="panel-outputs">
+    <div class="main">
+      <!-- Prompt -->
+      <div class="section">
+        <div class="section-header">Prompt <span class="config-badge" id="config-badge" style="display:none;"></span></div>
+        <div class="section-body">
+          <div class="prompt-text" id="prompt-text"></div>
+        </div>
+      </div>
+
+      <!-- Outputs -->
+      <div class="section">
+        <div class="section-header">Output</div>
+        <div class="section-body" id="outputs-body">
+          <div class="empty-state">No output files found</div>
+        </div>
+      </div>
+
+      <!-- Previous Output (collapsible) -->
+      <div class="section" id="prev-outputs-section" style="display:none;">
+        <div class="section-header">
+          <div class="grades-toggle" onclick="togglePrevOutputs()">
+            <span class="arrow" id="prev-outputs-arrow">&#9654;</span>
+            Previous Output
+          </div>
+        </div>
+        <div class="grades-content" id="prev-outputs-content"></div>
+      </div>
+
+      <!-- Grades (collapsible) -->
+      <div class="section" id="grades-section" style="display:none;">
+        <div class="section-header">
+          <div class="grades-toggle" onclick="toggleGrades()">
+            <span class="arrow" id="grades-arrow">&#9654;</span>
+            Formal Grades
+          </div>
+        </div>
+        <div class="grades-content" id="grades-content"></div>
+      </div>
+
+      <!-- Feedback -->
+      <div class="section">
+        <div class="section-header">Your Feedback</div>
+        <div class="section-body">
+          <textarea
+            class="feedback-textarea"
+            id="feedback"
+            placeholder="What do you think of this output? Any issues, suggestions, or things that look great?"
+          ></textarea>
+          <div class="feedback-status" id="feedback-status"></div>
+          <div class="prev-feedback" id="prev-feedback" style="display:none;">
+            <div class="prev-feedback-label">Previous feedback</div>
+            <div id="prev-feedback-text"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav" id="outputs-nav">
+      <button class="nav-btn" id="prev-btn" onclick="navigate(-1)">&#8592; Previous</button>
+      <button class="done-btn" id="done-btn" onclick="showDoneDialog()">Submit All Reviews</button>
+      <button class="nav-btn" id="next-btn" onclick="navigate(1)">Next &#8594;</button>
+    </div>
+    </div><!-- end panel-outputs -->
+
+    <!-- Benchmark panel (quantitative stats) -->
+    <div class="view-panel" id="panel-benchmark">
+      <div class="benchmark-view" id="benchmark-content">
+        <div class="benchmark-empty">No benchmark data available. Run a benchmark to see quantitative results here.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Done overlay -->
+  <div class="done-overlay" id="done-overlay">
+    <div class="done-card">
+      <h2>Review Complete</h2>
+      <p>Your feedback has been saved. Go back to your Claude Code session and tell Claude you're done reviewing.</p>
+      <div class="btn-row">
+        <button onclick="closeDoneDialog()">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // ---- Embedded data (injected by generate_review.py) ----
+    const EMBEDDED_DATA = {"skill_name": "review-post", "runs": [{"id": "eval-0-github-triage-old_skill", "prompt": "Review the blog post at src/posts/2026-04-13-claude-github-triage-tracker.md", "eval_id": 0, "outputs": [{"name": "review.md", "type": "text", "content": "# Blog Post Review: Building A GitHub Triage Tracker with the Claude API\n\n## 1. Clarity\n\n**Status: PASS**\n\nThe post maintains clear, logical progression through the project architecture. Explanations of technical concepts (Zod validation, ETL pattern, API integration) are concrete and well-grounded with code examples. The author effectively scaffolds complex ideas by introducing terminology before deep dives (e.g., explaining Zod before showing `validate.ts`). No ambiguous passages detected.\n\n---\n\n## 2. Accuracy\n\n**Status: PASS**\n\nAll technical claims verified:\n- Claude API statelessness correctly explained\n- GitHub API integration accurately described\n- TypeScript/Zod type system usage is correct\n- ETL pattern correctly applied\n- Model specification (`claude-haiku-4-5-20251001`) is valid\n- All code examples are syntactically sound\n\n---\n\n## 3. SEO Evaluation\n\n### Title & Headings\n- **Title:** \"Building A GitHub Triage Tracker with the Claude API\" \u2014 clear, keyword-rich, action-oriented \u2713\n- **Headings:** Well-structured hierarchy with descriptive H2 and H3 tags; semantic use of heading levels \u2713\n\n### Link Audit\n\n**Internal Link (Line 14):**\n- URL: `/building-ai-tools-claude-api/`\n- Link text: \"I built two VS Code extensions with the Claude API\"\n- **Issues:** Missing `rel=\"noopener noreferrer\"` attribute\n- **Verdict:** EXTERNAL link treatment needed (even though internal domain) \u2717\n\n**External Links:**\n1. **Line 14 (GitHub Triage Tracker repo)**\n   - URL: `https://github.com/kaidez/github-issue-triage`\n   - Title: \"GitHub Triage Tracker Repository on GitHub\" \u2713\n   - aria-label: Present and descriptive \u2713\n   - rel=\"noopener noreferrer\": Present \u2713\n   - Link text: \"GitHub Triage Tracker\" \u2014 descriptive \u2713\n\n2. **Line 37 (Claude API key)**\n   - URL: `https://platform.claude.com/settings/keys`\n   - Title: \"Get a Claude API key\" \u2713\n   - rel=\"noopener noreferrer\": Present \u2713\n   - Link text: \"Get a Claude API key\" \u2014 descriptive \u2713\n\n3. **Line 44 (VS Code repo)**\n   - URL: `https://github.com/microsoft/vscode`\n   - Title: \"Microsoft's VS Code Repo on GitHub\" \u2713\n   - aria-label: Present and descriptive \u2713\n   - rel=\"noopener noreferrer\": Present \u2713\n   - Link text: \"VS Code's public repo\" \u2014 slightly informal but clear \u2713\n\n4. **Line 50 (Zod library)**\n   - URL: `https://zod.dev/`\n   - Title: \"Zod Validation Library\" \u2713\n   - aria-label: Present \u2713\n   - rel=\"noopener noreferrer\": Present \u2713\n   - Link text: \"Zod\" \u2014 bare library name, minimal but acceptable in context \u2713\n\n5. **Line 60 (jQuery)**\n   - URL: `https://jquery.com/`\n   - Title: \"jQuery JavaScript Library\" \u2713\n   - aria-label: Present \u2713\n   - rel=\"noopener noreferrer\": Present \u2713\n   - Link text: \"jQuery\" \u2014 bare library name, acceptable in context \u2713\n\n6. **Line 64 (ETL pattern)**\n   - URL: `https://learn.microsoft.com/en-us/azure/architecture/data-guide/relational-data/etl`\n   - Title: \"ETL Design Pattern\" \u2713\n   - aria-label: Present and descriptive \u2713\n   - rel=\"noopener noreferrer\": Present \u2713\n   - Link text: \"ETL\" \u2014 acronym, but clearly defined in surrounding text \u2713\n\n7. **Line 299 (Sample JSON file)**\n   - URL: `https://github.com/kaidez/github-issue-triage/blob/main/output/enriched-issues.json`\n   - Title: \"GitHub Triage Tracker JSON File\" \u2713\n   - aria-label: Present and descriptive \u2713\n   - rel=\"noopener noreferrer\": Present \u2713\n   - Link text: \"View a sample JSON file\" \u2014 descriptive action text \u2713\n\n8. **Line 305 (Sample Markdown report)**\n   - URL: `https://github.com/kaidez/github-issue-triage/blob/main/output/report.md`\n   - Title: \"GitHub Triage Tracker Markdown Report\" \u2713\n   - aria-label: Present and descriptive \u2713\n   - rel=\"noopener noreferrer\": Present \u2713\n   - Link text: \"View a sample Markdown report\" \u2014 descriptive action text \u2713\n\n### Image Audit\n**Status: PASS**\n\nSingle image (`github-triage.jpg`) specified in frontmatter. No `<img>` tags embedded in post content, so detailed alt-text audit not applicable. Frontmatter image field sufficient for hero/featured image.\n\n### Link Issues Summary\n- **1 critical issue:** Line 14 internal link missing security attributes\n\n---\n\n## 4. Readability Analysis\n\n### Sentence Length Audit\n\n**Sentences flagged as 21+ words:**\n\n1. **Line 81 (23 words)** \u2717\n   - Text: \"`enrich.ts` uses its internal `enrichIssue()` method to validate the data and load it into dynamically-created prompts to send to Claude's API.\"\n   - **Issue:** Overloaded with multiple clauses; difficult to parse\n   - **Suggested rewrite:** \"`enrich.ts` uses `enrichIssue()` to validate GitHub data. It then loads this data into dynamically-created prompts that are sent to Claude's API.\"\n\n2. **Line 89 (23 words)** \u2717\n   - Text: \"The real triage outcome here wasn't a cleaner issue list...it was a clearer picture of what these tools are actually capable of.\"\n   - **Issue:** Complex double-negative structure with ellipsis; slows comprehension\n   - **Suggested rewrite:** \"The real outcome wasn't a cleaner issue list. Instead, it was a clearer picture of what these tools can do.\"\n\n### Flesch-Kincaid Grade Level Estimate\n- **Readability Score:** ~9.8 (college freshman)\n- **Assessment:** Solid technical writing appropriate for target audience. The heavy use of code syntax, technical terminology (ETL, Zod, schema, enrichment), and code-heavy sections elevate the grade level naturally. For a technical blog audience, this is appropriate.\n\n---\n\n## 5. Summary of Flagged Issues\n\n### Critical Issues (must fix)\n1. **Line 14 - Missing security attributes on internal link**\n   - Internal link to `/building-ai-tools-claude-api/` lacks `rel=\"noopener noreferrer\"`\n   - Even internal cross-site links benefit from this security practice\n   - Add: `rel=\"noopener noreferrer\"` attribute\n\n### High Priority Issues (strongly recommended)\n1. **Line 81 - Sentence length (23 words)**\n   - Split into two sentences for clarity\n   - Suggested rewrite: \"`enrich.ts` uses `enrichIssue()` to validate GitHub data. It then loads this data into dynamically-created prompts that are sent to Claude's API.\"\n\n2. **Line 89 - Sentence length (23 words)**\n   - Restructure to eliminate double-negative with ellipsis\n   - Suggested rewrite: \"The real outcome wasn't a cleaner issue list. Instead, it was a clearer picture of what these tools can do.\"\n\n---\n\n## Overall Assessment\n\n**Rating: A- (Excellent, with minor corrections)**\n\n**Strengths:**\n- Well-organized progression from overview to code walkthrough\n- Excellent use of concrete code examples\n- Clear explanations of architectural patterns and library usage\n- Strong narrative arc (problem \u2192 solution \u2192 learning)\n- Proper attention to SEO attributes on most links\n- Appropriate technical depth for target audience\n\n**Areas for Improvement:**\n- Fix one missing security attribute on internal link\n- Reduce sentence complexity in two instances for improved readability\n- Consider breaking up the longest technical explanations for better scanning\n\nThe post is publication-ready with the recommended fixes above.\n"}], "grading": null}, {"id": "eval-0-github-triage-with_skill", "prompt": "Review the blog post at src/posts/2026-04-13-claude-github-triage-tracker.md", "eval_id": 0, "outputs": [{"name": "review.md", "type": "text", "content": "# Review: Building A GitHub Triage Tracker with the Claude API\n\n## 1. Clarity\n\n**Overall Assessment:** The post is generally clear and well-structured. Technical concepts are explained before being used.\n\n**Flags:**\n- None. The post effectively explains concepts like Zod, ETL patterns, and the API workflow.\n\n---\n\n## 2. Accuracy\n\n**Overall Assessment:** Technical claims are accurate.\n\n**Verified Claims:**\n- Zod validation library behavior \u2014 correctly described\n- GitHub API endpoint format \u2014 correct (https://api.github.com/repos/microsoft/vscode/issues)\n- ETL pattern application \u2014 correctly applied\n- Claude API statelessness \u2014 accurately described\n- Anthropic SDK usage \u2014 correctly shown (apiKey configuration, message creation)\n\n**No accuracy issues detected.**\n\n---\n\n## 3. SEO\n\n### Title & Meta Description\n- **title:** \"Building A GitHub Triage Tracker with the Claude API\" (56 characters) \u2014 good length, keyword-rich\n- **excerpt:** \"I built a GitHub triage tracker with the Claude API \u2014 here's what I learned.\" (77 characters) \u2014 within 140-character limit \u2713\n- **Status:** Both fields well-formed and accurately reflect content \u2713\n\n### Link Analysis\nAll `<a>` tags reviewed:\n\n1. Line 1: Internal link to `/building-ai-tools-claude-api/` \u2014 meaningful text \u2713, no rel needed (internal)\n2. Line 1: External GitHub link \u2014 meaningful text \u2713, has `rel=\"noopener noreferrer\"` \u2713\n3. Line 21: External platform.claude.com \u2014 meaningful text \u2713, has `rel=\"noopener noreferrer\"` \u2713\n4. Line 25: External GitHub VS Code repo \u2014 meaningful text \u2713, has `rel=\"noopener noreferrer\"` \u2713\n5. Line 33: External zod.dev \u2014 meaningful text \u2713, has `rel=\"noopener noreferrer\"` \u2713\n6. Line 43: External jquery.com \u2014 meaningful text \u2713, has `rel=\"noopener noreferrer\"` \u2713\n7. Line 47: External learn.microsoft.com (ETL) \u2014 meaningful text \u2713, has `rel=\"noopener noreferrer\"` \u2713\n8. Line 133 (in write.ts section): External GitHub JSON file \u2014 meaningful text \u2713, has `rel=\"noopener noreferrer\"` \u2713\n9. Line 159 (in write.ts section): External GitHub Markdown report \u2014 meaningful text \u2713, has `rel=\"noopener noreferrer\"` \u2713\n\n**Status:** All links have meaningful text; all external links have proper rel attributes \u2713\n\n### Image Analysis\n- Front matter includes `image: github-triage.jpg`\n- No `<img>` tags found in markdown body\n- Note: Image alt text, width, and height would be handled at the Eleventy template level, not in markdown source\n- **Status:** Cannot fully audit without seeing rendered template, but no alt-text issues in markdown source \u2713\n\n---\n\n## 4. Readability\n\n### Flesch-Kincaid Estimate\nSampling sentences across the post:\n- \"I built two VS Code extensions with the Claude API, just so I could get a better handle on Claude.\" (17 words) \u2014 accessible\n- \"But I also used the API to build a GitHub Triage Tracker.\" (12 words) \u2014 accessible\n- \"Zod validates that Claude's response actually matches that declared shape before the data is saved.\" (15 words) \u2014 accessible\n- \"The tracker sends a request to GitHub's API and pulls open issues from VS Code's public repo.\" (17 words) \u2014 accessible\n- \"Claude's API then analyzes those issues, using its powerful 'guessing' ability to determine how severe they are.\" (17 words) \u2014 accessible\n- \"This is where the Tracker makes an API request for the VS Code issues posted on GitHub.\" (17 words) \u2014 accessible\n\n**Estimated Grade Level:** 11\u201313 (college freshman level)\n**Average Sentence Length:** ~15\u201318 words \u2014 well-balanced\n\n**Issues:**\nNone. The post maintains readable sentence lengths and avoids unnecessarily dense technical jargon.\n\n---\n\n## 5. Front Matter Consistency\n\n**Checked Fields:**\n- `title`: \"Building A GitHub Triage Tracker with the Claude API\" \u2713\n- `excerpt`: \"I built a GitHub triage tracker with the Claude API \u2014 here's what I learned.\" \u2713\n- `date`: 2026-04-13T12:00:00-02:00 \u2713\n- `layout`: layouts/post.njk \u2713\n- `permalink`: /claude-github-triage-tracker/ \u2713\n- `image`: github-triage.jpg \u2713\n- `tags`: ['coding-best-practices'] \u2713\n- `secondary_tags`: ['ai', 'claude', 'zod'] \u2713\n- `category`: Coding Tips \u2713\n- `schema_type`: TechArticle \u2713\n\n**Content Match:**\n- Title accurately reflects content \u2014 the post builds and explains a GitHub triage tracker using Claude API \u2713\n- Excerpt is accurate \u2014 the post does describe building the tracker and lessons learned \u2713\n- Tags match \u2014 the post is indeed about coding best practices, AI, Claude, and Zod \u2713\n- Category is appropriate \u2014 \"Coding Tips\" fits the technical tutorial format \u2713\n\n**Status:** Front matter is consistent and accurate \u2713\n\n---\n\n## 6. Accessibility (WCAG 2.1 AA)\n\n### Heading Hierarchy\n- Front matter `title` generates `<h1>` via Eleventy\n- Markdown body starts at `<h2>` \u2713\n- All heading levels are sequential:\n  - `<h2>` \"Table of Contents\"\n  - `<h2>` \"How Claude Works With the Triage Tracker\"\n  - `<h2>` \"A Quick Chat About Zod\"\n  - `<h2>` \"Code Architecture\"\n  - `<h2>` \"Triage Tracker - `validate.ts`\"\n  - `<h2>` \"Triage Tracker - `fetch.ts`\"\n  - `<h2>` \"Triage Tracker - `enrich.ts`\"\n  - `<h2>` \"Triage Tracker - `write.ts`\"\n  - `<h2>` \"Triage Tracker - `index.ts`\"\n  - `<h2>` \"Conclusion\"\n\n**No heading hierarchy violations detected** \u2713\n\n### Images\n- No `<img>` tags in markdown body (image is in front matter only)\n- Cannot audit alt text at markdown source level\n\n### Links\n- All links have descriptive text in context \u2713\n- Links are meaningful when read in isolation (e.g., \"Building AI Tools with the Claude API\", \"GitHub Triage Tracker\", \"Get a Claude API key\") \u2713\n\n### Tables\n- No tables in this post\n\n**Status:** Accessible heading structure, meaningful links \u2713\n\n---\n\n## 7. Specific Suggestions\n\n**No changes required.** The post meets all standards for:\n- Clarity and technical accuracy\n- SEO optimization (title, meta, links, rel attributes)\n- Readability (Flesch-Kincaid ~11\u201313)\n- Front matter consistency\n- WCAG 2.1 AA compliance (per markdown audit scope)\n\n---\n\n## Summary\n\n| Aspect | Status | Grade |\n|--------|--------|-------|\n| Clarity | Pass | A |\n| Accuracy | Pass | A |\n| SEO | Pass | A |\n| Readability | Pass | A |\n| Front Matter | Pass | A |\n| Accessibility | Pass | A |\n| **Overall** | **READY FOR PUBLICATION** | **A** |\n\nThe post is well-written, technically accurate, and ready to publish.\n"}], "grading": null}, {"id": "eval-1-claude-api-old_skill", "prompt": "Review the blog post at src/posts/2026-03-26-build-ai-tools-with-claude-api.md", "eval_id": 1, "outputs": [{"name": "review.md", "type": "text", "content": "# Blog Post Review: \"Building AI Tools with the Claude API: What I Learned\"\n\n**Date:** 2026-03-26  \n**URL:** `/building-ai-tools-claude-api/`  \n**Reviewer:** Claude Code\n\n---\n\n## 1. CLARITY\n\n**Overall Assessment:** The post is well-structured and generally clear. Explanations of technical concepts (stateless API calls, ETL pattern, system boundaries) are accurate and accessible to intermediate developers.\n\n**Issues Found:** None. The progression from conceptual overview \u2192 API documentation \u2192 code examples \u2192 implementation is logical and easy to follow.\n\n---\n\n## 2. ACCURACY\n\n**Technical Claims Verified:**\n\n- \u2713 Claude API is stateless; full conversation history must be resent with each request\n- \u2713 Claude uses pattern-matching (generative, not predictive AI)\n- \u2713 Four stable Claude API operations: Messages, Messages Batches, Token Counting, Models\n- \u2713 Files and Skills are in beta (accurate as of post date)\n- \u2713 Haiku model pricing/performance characterization is correct\n- \u2713 VS Code ExtensionContext and Disposable patterns are accurately described\n- \u2713 File system watcher implementation details match VS Code API behavior\n- \u2713 ETL (Extract \u2192 Transform \u2192 Load) pattern correctly applied to both extensions\n\n**No accuracy issues detected.**\n\n---\n\n## 3. SEO OPTIMIZATION\n\n### Title & Headings\n- **Title:** \"Building AI Tools with the Claude API: What I Learned\" \u2014 good keyword density (Claude API, AI tools), clear value proposition\n- **Headings:** Well-hierarchical (h2 tags), descriptive, include target keywords (Claude API, VS Code, TypeScript)\n- **Table of Contents:** Present and functional with proper anchor links\n\n### Link Analysis\n\n**External Links Found:** 14 total links (8 external, 6 internal/GitHub)\n\nAll external links properly configured with:\n- \u2713 Descriptive title attributes\n- \u2713 aria-label attributes for accessibility\n- \u2713 rel=\"noopener noreferrer\" on external links\n- \u2713 Meaningful anchor text (mostly descriptive)\n\n**Issue Found:**\n- \u26a0\ufe0f Two GitHub repository links use generic \"View the repo\" text instead of descriptive anchor text. This impacts both accessibility and SEO.\n\n### Image Analysis\n\n**Images Found:** 6 images with complete technical specifications\n\nAll images have:\n- \u2713 Descriptive alt text explaining content\n- \u2713 Width and height attributes set (all 740px wide, heights vary 352-529px)\n- \u2713 Proper file extensions (.jpg for screenshots, .gif for demos)\n\n### SEO Summary\n- \u2713 Strong keyword coverage throughout\n- \u2713 Excellent heading hierarchy and structure\n- \u2713 Comprehensive link optimization\n- \u26a0\ufe0f Minor: Two generic link texts reduce accessibility score\n- \u2713 Perfect image configuration for accessibility and performance\n\n---\n\n## 4. READABILITY & SENTENCE LENGTH ANALYSIS\n\n### Overall Readability Metrics\n\n**Total sentences analyzed:** 240  \n**Average sentence length:** 12.4 words  \n**Flesch-Kincaid Grade:** ~7.8 (Good for technical audience)  \n**Overall readability:** Excellent for intermediate technical readers\n\n### Flagged Sentences (21+ words)\n\n**FLAG #1:**\n- **Text:** \"VS Code calls `dispose()` when the extension is deactivated \u2014 for any reason: a closed window, VS Code shutting down, etc.\"\n- **Word count:** 22 words\n- **Issue:** Multiple ideas connected with em-dash; \"etc.\" adds vagueness\n- **Suggested rewrite:** \"VS Code calls `dispose()` when the extension is deactivated. This happens when you close the editor, shut down VS Code, or disable the extension.\"\n\n**FLAG #2:**\n- **Text:** \"`const apiKey` and `const claudeModel` are your Claude API key and model-selection dropdown as they appear in VS Code Settings.\"\n- **Word count:** 21 words\n- **Issue:** Two concepts combined; slightly dense construction\n- **Suggested rewrite:** \"`const apiKey` retrieves your Claude API key. `const claudeModel` retrieves the model selection, both from VS Code Settings.\"\n\n**FLAG #3:**\n- **Text:** \"It will be placed in a Markdown file (`const doc`) headlining our prompt as \"SELECTED TEXT\", and Claude's response to it headlined as 'CLAUDE'S RESPONSE'.\"\n- **Word count:** 26 words\n- **Issue:** Multiple quoted strings and complex structure; hard to parse\n- **Suggested rewrite:** \"The Markdown file (`const doc`) displays two sections: \"SELECTED TEXT\" for the prompt and \"CLAUDE'S RESPONSE\" for Claude's answer.\"\n\n**FLAG #4:**\n- **Text:** \"You would do this in \"Code > Settings > Settings\" on a Mac, or \"File > Preferences > Settings\" on a Windows PC.\"\n- **Word count:** 23 words\n- **Issue:** Menu paths make sentence long; platform specifics are dense\n- **Suggested rewrite:** \"On Mac: Code > Settings > Settings. On Windows: File > Preferences > Settings.\"\n\n**FLAG #5:**\n- **Text:** \"Where the \"Save Selected Text\" extension starts by right-clicking on selected text, the Claude Prompt Reader starts from the VS Code Command Palette.\"\n- **Word count:** 24 words\n- **Issue:** Comparative structure with two main clauses; reads as a run-on\n- **Suggested rewrite:** \"The \"Save Selected Text\" extension triggers via right-click context menu. The Claude Prompt Reader, conversely, launches from the Command Palette.\"\n\n**FLAG #6:**\n- **Text:** \"This extension looks at a text file and treats its text as our new prompt, then sends it out to the Claude API.\"\n- **Word count:** 23 words\n- **Issue:** Three sequential actions; \"treats its text\" and \"sends it out\" are slightly repetitive\n- **Suggested rewrite:** \"This extension reads a text file, uses its content as a prompt, and sends it to the Claude API.\"\n\n**FLAG #7:**\n- **Text:** \"`withProgress()` reappears, taking in the same parameters it did in Save Selected Text in order to build a progress message.\"\n- **Word count:** 21 words\n- **Issue:** Nested relative clause; \"in order to\" is wordy\n- **Suggested rewrite:** \"`withProgress()` reappears with identical parameters from Save Selected Text. It displays a progress notification to the user.\"\n\n**FLAG #8:**\n- **Text:** \"Choosing to delete all of them will trigger `const confirm` and open a warning message about what you're about to do.\"\n- **Word count:** 21 words\n- **Issue:** Ambiguous \"them\"; \"about what you're about to do\" is redundant\n- **Suggested rewrite:** \"Choosing to delete all files triggers a confirmation dialog. This warning asks you to verify the deletion.\"\n\n**FLAG #9:**\n- **Text:** \"When \"Claude Prompt Reader: Read Prompts\" gets clicked on in the Command Palette, the file gets sent out as a prompt to the Claude API.\"\n- **Word count:** 27 words\n- **Issue:** Longest sentence in post; passive voice with \"gets clicked\" and \"gets sent\" is weak\n- **Suggested rewrite:** \"When you select \"Claude Prompt Reader: Read Prompts\" from the Command Palette, the file is sent to Claude as a prompt.\"\n\n**FLAG #10:**\n- **Text:** \"We can do it for either one chat or all of them, but this is what it looks like for doing all of them:\"\n- **Word count:** 23 words\n- **Issue:** Ambiguous pronoun reference; repetition of \"them\"\n- **Suggested rewrite:** \"You can delete one chat history or all of them. Here's what clearing all history looks like:\"\n\n**FLAG #11:**\n- **Text:** \"After finishing these projects, I have a clearer sense of the role of Claude and similar GenAI tools in software development:\"\n- **Word count:** 21 words\n- **Issue:** Long introductory sentence for conclusion\n- **Suggested rewrite:** \"Finishing these projects clarified how Claude and similar GenAI tools fit into software development. Here's what I learned:\"\n\n**FLAG #12:**\n- **Text:** \"The extensions had to operate within VS Code's Extension API \u2014 its system for reading files, running commands, and talking to the editor.\"\n- **Word count:** 24 words\n- **Issue:** List of three API functions; em-dash creates dense explanation\n- **Suggested rewrite:** \"The extensions operate within VS Code's Extension API. This system manages file reading, command execution, and editor interaction.\"\n\n**FLAG #13:**\n- **Text:** \"Claude, Copilot, ChatGPT and the like continue to make system design and integration engineering simpler to execute within software development.\"\n- **Word count:** 21 words\n- **Issue:** Multiple proper nouns; awkward phrasing\n- **Suggested rewrite:** \"GenAI tools like Claude, Copilot, and ChatGPT are simplifying system design and integration engineering in modern development.\"\n\n### Sentence Length Summary\n\n- **13 flagged sentences out of 240** = 5.4% above 20-word threshold\n- **Longest sentence:** 27 words (Flag #9)\n- **Shortest sentence:** 3 words\n- **Median sentence length:** 11 words\n- **Quality assessment:** Very good for a technical post; most long sentences are technical explanations and code descriptions that justify their length\n\n---\n\n## 5. ADDITIONAL OBSERVATIONS\n\n### Strengths\n- Clear progression from theory to implementation\n- Excellent use of visual demonstrations (GIF animations)\n- Well-commented code examples\n- Strong concluding insight about system design boundaries\n- Proper use of semantic HTML with heading hierarchy\n- Consistent formatting and code styling\n\n### Technical Accuracy\n- All API documentation references verified\n- TypeScript patterns correctly explained\n- VS Code Extension API usage is accurate\n- File system operations properly described\n\n### Accessibility\n- Excellent use of aria-labels on links\n- Descriptive alt text for all images\n- Proper heading structure for screen readers\n- Code samples use syntax highlighting\n\n### Minor Issues\n1. **Link text:** Two repository links use generic \"View the repo\" (impact: accessibility, SEO)\n2. **Sentence complexity:** 13 sentences exceed recommended length (impact: readability)\n3. **Passive voice:** Flag #9 uses passive construction that could be strengthened\n\n---\n\n## RECOMMENDATIONS\n\n### Priority 1 (High Impact)\n1. Replace \"View the repo\" with:\n   - \"View the Save Selected Text repository on GitHub\"\n   - \"View the Claude Prompt Reader repository on GitHub\"\n\n### Priority 2 (Medium Impact)\n2. Split the longest/most complex sentences:\n   - FLAG #9 (27 words) - uses weak passive voice\n   - FLAG #5 (24 words) - could be two sentences\n   - FLAG #3 (26 words) - multiple quoted strings confuse meaning\n\n### Priority 3 (Polish)\n3. Minor wording improvements in FLAG #4, #8, #11 for conciseness\n\n---\n\n## Overall Assessment\n\n**Grade: A-**\n\n**Strengths:**\n- Accurate, well-researched technical content\n- Excellent structure and navigation\n- Strong SEO configuration (with one minor caveat)\n- High-quality code examples\n- Accessible to target audience (intermediate developers)\n\n**What Would Elevate to A+:**\n- Two descriptive link text updates (5-minute fix)\n- Splitting 3-4 longest sentences (5-minute edit)\n\n**Verdict:** Publication-ready. This is a strong technical blog post that will be valuable to developers learning the Claude API and VS Code extension development. The minor improvements recommended above would polish it to A+ status.\n"}], "grading": null}, {"id": "eval-1-claude-api-with_skill", "prompt": "Review the blog post at src/posts/2026-03-26-build-ai-tools-with-claude-api.md", "eval_id": 1, "outputs": [{"name": "review.md", "type": "text", "content": "# Blog Post Review: Building AI Tools with the Claude API\n\n**Post:** `/src/posts/2026-03-26-build-ai-tools-with-claude-api.md`  \n**Review Date:** 2026-04-13\n\n---\n\n## 1. Clarity\n\nThe post is generally clear and well-structured. Technical concepts are explained step-by-step with good context. No significant clarity issues detected.\n\n**Flagged item:** Line 57 reads \"For every new prompt you send, the entire message history \u2014 your messages and Claude's responses \u2014 gets resent.\" This is technically correct but could be clearer about *why* this happens (stateless nature). Consider:\n\n- **Current:** \"For every new prompt you send, the entire message history \u2014 your messages and Claude's responses \u2014 gets resent.\"\n- **Suggested:** \"For every new prompt you send, the entire message history \u2014 your messages and Claude's responses \u2014 gets resent to the API, since Claude maintains no server-side session.\"\n\n---\n\n## 2. Accuracy\n\nTechnical content is accurate and aligns with the Claude API documentation as of the post's publication date (2026-03-26). Model names, API endpoints, and architecture descriptions are correct. Code examples use valid TypeScript and VS Code API patterns.\n\n**No flagged items.**\n\n---\n\n## 3. SEO\n\n### Title & Meta Description (Front Matter)\n- **Title:** \"Building AI Tools with the Claude API: What I Learned\" (52 characters) \u2713 Optimal length\n- **Excerpt:** \"What I learned building two VS Code extensions with the Claude API: stateless conversations, TypeScript integration, and system design.\" (140 characters) \u2713 Exactly at limit\n\nBoth are well-formed, describe the content accurately, and include relevant keywords (Claude API, VS Code, TypeScript, system design).\n\n### Link Analysis\nAll external links have meaningful link text and include `rel=\"noopener noreferrer\"` on external links. Examples:\n- \u2713 \"Claude Desktop\" \u2192 descriptive, has `rel=\"noopener noreferrer\"`\n- \u2713 \"get a Claude API key here\" \u2192 descriptive, has `rel=\"noopener noreferrer\"`\n- \u2713 \"Yeoman\" \u2192 descriptive, has `rel=\"noopener noreferrer\"`\n- \u2713 \"prompt caching\" \u2192 descriptive, has `rel=\"noopener noreferrer\"`\n\nAll repository links (\"View the repo\") are descriptive and use appropriate `aria-label` attributes.\n\n**No flagged items.**\n\n### Image Analysis\nAll images include `alt` text and `width`/`height` attributes:\n- Line 176: Screenshot of VS Code context menu \u2713\n- Line 367: Screenshot of VS Code settings \u2713\n- Line 462: Animated demo of Save Selected Text extension \u2713\n- Line 1088: Prompt Reader: selecting a file \u2713\n- Line 1096: Prompt Reader: continuing conversation \u2713\n- Line 1100: Prompt Reader: clearing history \u2713\n\nAll alt text is descriptive and specific to each image's content. **No flagged items.**\n\n---\n\n## 4. Readability\n\n### Sentence-Level Analysis\nOverall readability is good. Most sentences are clear and well-constructed. Few sentences exceed 20 words, and those that do are justified.\n\n**Flagged long sentence (Line 446):**\n- **Current:** \"It includes the model chosen in VS Code settings \u2014 the model that processes our prompt.\"\n- **Issue:** Redundant phrasing (\"model...model\"). 23 words.\n- **Suggested:** \"It includes the model chosen in VS Code settings, which processes our prompt.\"\n\n**Flesch-Kincaid Grade Level Estimate:** 12.5\u201313 (College/Professional level)\n\nThe post targets intermediate developers and uses technical terminology appropriately. Sentence structures are varied and readable, with good use of lists and code blocks to break up dense paragraphs.\n\n---\n\n## 5. Front Matter Consistency\n\n### Fields Present\n- \u2713 `title` is present and well-formed\n- \u2713 `excerpt` is present and well-formed\n\n### Content Alignment\n\n**Title:** \"Building AI Tools with the Claude API: What I Learned\"\n- Accurately reflects the post content (two extensions, Claude API, lessons learned). \u2713\n\n**Excerpt:** \"What I learned building two VS Code extensions with the Claude API: stateless conversations, TypeScript integration, and system design.\"\n- Accurately reflects the post content (two extensions, key topics: stateless conversations, TypeScript, system design). \u2713\n- Character count: 140 (at strict limit). \u2713\n\n**No flagged items.**\n\n---\n\n## 6. Accessibility (WCAG 2.1 AA)\n\n### Heading Hierarchy\nThe post uses proper heading structure:\n- Front matter `title` is rendered as `<h1>` by Eleventy\n- Body headings start at `<h2>` and progress logically to subsections\n- No `<h1>` tags appear in the markdown body (correct)\n- No heading level skips detected (e.g., h2 \u2192 h4)\n\n**Table of Contents (Lines 19\u201332)** uses nested lists correctly to mirror heading hierarchy.\n\n**No flagged items.**\n\n### Images\nAll images have descriptive, non-empty `alt` text. No decorative images present. **No flagged items.**\n\n### Links\nAll links have meaningful link text:\n- No \"click here\" or bare URL links detected\n- aria-label attributes enhance accessibility\n\n**No flagged items.**\n\n### Tables\nNo tables present in this post. **N/A**\n\n---\n\n## 7. Specific Issues & Recommendations\n\n### Issue 1: Redundant phrasing (Line 446)\n- **Severity:** Minor\n- **Location:** Explanation of the API request code block\n- **Current wording:** \"It includes the model chosen in VS Code settings \u2014 the model that processes our prompt.\"\n- **Problem:** \"Model\" is repeated, which weakens the sentence\n- **Recommended fix:** \"It includes the model chosen in VS Code settings, which processes our prompt.\"\n\n### Issue 2: Clarity improvement (Line 57)\n- **Severity:** Minor (stylistic enhancement)\n- **Location:** Explanation of stateless architecture\n- **Current wording:** \"For every new prompt you send, the entire message history \u2014 your messages and Claude's responses \u2014 gets resent.\"\n- **Problem:** Does not explicitly explain why (due to stateless nature)\n- **Recommended fix:** \"For every new prompt you send, the entire message history \u2014 your messages and Claude's responses \u2014 gets resent to the API, since Claude maintains no server-side session.\"\n\n---\n\n## Summary\n\n**Overall Assessment:** Ready to Publish\n\nThe post meets all requirements:\n- Clear, accurate, and well-organized technical content\n- SEO-optimized title, excerpt, links, and images\n- Accessible heading structure and image alt text\n- Professional readability (Grade 12\u201313, appropriate for audience)\n- Front matter accurately reflects content\n- Minor style suggestion noted but not blocking\n\n**Minor recommendations:**\n1. Rephrase line 446 to eliminate redundant \"model\" language\n2. Optionally enhance line 57 for explicit clarity on stateless architecture\n\nThe post is publication-ready with or without these minor refinements.\n"}], "grading": null}, {"id": "eval-2-napster-old_skill", "prompt": "Review the blog post at src/posts/2026-03-05-napster-to-now-music-industry-ai-web-developer-survival.md", "eval_id": 2, "outputs": [{"name": "review.md", "type": "text", "content": "# Blog Post Review: From Napster to Now\n\n## 1. CLARITY\n\n### Overall Assessment\nThe post is well-structured and generally clear. The narrative arc is logical, moving from personal background through historical context to actionable advice. The writing is conversational and accessible.\n\n### Flagged Issues\nNone. No passages are unclear or ambiguous. The author effectively uses concrete examples, historical references, and personal anecdotes to support the main argument.\n\n---\n\n## 2. ACCURACY\n\n### Technical Claims\nAll major technical and historical claims are accurate:\n\n- **Napster history**: Correctly described as peer-to-peer file-sharing software that distributed MP3s. The legal challenges and eventual shutdown are accurately represented.\n- **Dot-com crash timeline**: Correctly referenced as contributing to the music industry's problems alongside the 9/11 tragedy.\n- **Digital music evolution**: iTunes, Spotify, and licensing structures are correctly identified as the industry's new model.\n- **Current AI context**: The portrayal of AI adoption and LLM capabilities is accurate for March 2026.\n- **TypeScript type handling**: Correctly noted as an area where LLMs have had historical issues.\n\n### Company References\n- Vinylmania Record Store (NYC) verified as a real, notable record store.\n- Companies listed (Concrete, Caroline, K-Tel, Putumayo, Giant Step, Jive, Strictly Rhythm) are legitimate music industry entities.\n- Book reference \"All the Rave\" by Joseph Menn is correctly cited with accurate title and subject.\n\n### Minor Note\nThe post references an Anthropic Claude outage and Trump ban \"in the few days prior to this post's publish date\" (lines 104-106). These events need verification for accuracy, as they relate to current events at the article's publication date. Both references include proper citations to TechCrunch and Reuters.\n\n---\n\n## 3. SEO EVALUATION\n\n### Title & Headings\n- **Title**: Strong, descriptive, keyword-rich (\"Napster,\" \"music,\" \"AI,\" \"web developer,\" \"survival\"). ~16 words.\n- **H2 Headings**: Clear and descriptive (5 total). All headings effectively guide the reader and support keyword distribution.\n\n### Keyword Usage\n- Primary keywords (\"AI,\" \"web developer,\" \"Napster,\" \"music business,\" \"adapt\") are naturally distributed throughout.\n- Contextual phrases like \"Generative AI,\" \"LLM,\" and \"software development\" support topical relevance.\n- Good keyword density without over-optimization.\n\n### Internal Links\n\u2713 `/downloaded-movie-review/` \u2014 Link to author's Napster documentary review. Has title, aria-label, and rel=\"noopener noreferrer\".\n\u2713 `/books-dotcom-rush/` \u2014 Link to author's book review. Has title, aria-label, and rel=\"noopener noreferrer\".\n\nAll internal links have descriptive text and proper attributes.\n\n### External Links\n\n| Link | Link Text | Title Attribute | rel Attribute | Issues |\n|------|-----------|-----------------|---------------|--------|\n| LinkedIn profile | Descriptive (\"Kai Gittens on LinkedIn\") | \u2713 Present | \u2713 noopener noreferrer me | None |\n| Britannica Napster | Descriptive (\"Napster\") | \u2713 Present | \u2713 noopener noreferrer | None |\n| Vinylmania | Descriptive (\"Vinylmania Record Store in New York City\") | \u2713 Present | \u2713 noopener noreferrer | None |\n| Peachpit Press | Descriptive (\"Peachpit Press\") | \u2713 Present | \u2713 noopener noreferrer | None |\n| Shawn Fanning Wikipedia | Descriptive (\"Shawn Fanning\") | \u2713 Present | \u2713 noopener noreferrer | None |\n| Dot-com bubble Wikipedia | Descriptive (\"dot-com crash\") | \u2713 Present | \u2713 noopener noreferrer | None |\n| Agent Skills Open Standard | Descriptive (\"Agent Skills Open Standard\") | \u2713 Present | \u2713 noopener noreferrer | None |\n| Alex Maccaw blog | Descriptive (\"Alex Maccaw's...blog post\") | \u2713 Present | \u2713 noopener noreferrer | None |\n| TechCrunch Claude outage | Descriptive (\"Anthropic experienced an outage...Claude tool\") | \u2713 Present | \u2713 noopener noreferrer | None |\n| Reuters Trump ban | Descriptive (\"Donald Trump announced a federal ban on Claude\") | \u2713 Present | \u2713 noopener noreferrer | None |\n| Amazon book link | Descriptive (\"All the Rave: The Rise and Fall...Napster\") | \u2713 Present | \u2713 noopener noreferrer | None |\n\n**Result**: All external links have descriptive text, title attributes, proper rel attributes, and meaningful link text. SEO-compliant.\n\n### Images\n- **Image file**: `napster-ai.jpeg` (referenced on line 7)\n- **Status**: Image is declared in frontmatter but no `alt` text, `width`, or `height` attributes appear in the post body.\n- **Issue**: Image is not referenced in the HTML body, only in metadata. If it is rendered (e.g., as featured image via template), ensure the template includes:\n  - `alt=\"[descriptive text]\"` (e.g., \"The evolution of disruption from Napster to AI\")\n  - `width` and `height` attributes\n\n---\n\n## 4. READABILITY ANALYSIS\n\n### Word Count by Sentence\n\n**Paragraph 1 (Line 15):**\n1. \"I recently became unemployed, so I've been spending a lot of time on LinkedIn.\" \u2014 **14 words** \u2713\n\n**Paragraph 2 (Lines 17-19):**\n2. \"The posts and comments are both negative and positive, and the negative ones share a common fear.\" \u2014 **17 words** \u2713\n3. \"GenAI, armed with the ability to code up entire apps in minutes, is rapidly taking software dev jobs.\" \u2014 **17 words** \u2713\n4. \"Being unemployed, you'd think I'd be worried.\" \u2014 **7 words** \u2713\n5. \"But I worked in the music business before I wrote code, and that industry went through a similar disruption.\" \u2014 **19 words** \u2713\n\n**Paragraph 3 (Lines 21-23):**\n6. \"That disruption was digital music downloading \u2014 particularly, Napster.\" \u2014 **9 words** \u2713\n7. \"As noted in my Napster documentary review, Napster was the first time the new internet business models directly challenged the traditional brick-and-mortar ones.\" \u2014 **25 words** \u26a0\ufe0f **FLAG**\n8. \"While Napster didn't destroy the music business altogether, it forced the industry to change.\" \u2014 **14 words** \u2713\n9. \"That experience has taught me that developers need to adapt to an AI-driven world.\" \u2014 **14 words** \u2713\n\n**Section: Back When I Was In The Music Business (Lines 27-31):**\n10. \"I worked in the music business for 15 years, beginning with internships and mailroom work.\" \u2014 **15 words** \u2713\n11. \"I also worked at the famed Vinylmania Record Store in New York City.\" \u2014 **13 words** \u2713\n12. \"Record stores were basically my second home ever since I was ten years old, so I really loved that job.\" \u2014 **20 words** \u2713\n13. \"With that affinity for retail, I eventually moved into sales jobs at various record labels.\" \u2014 **15 words** \u2713\n14. \"I did some marketing on the side, but mostly sales.\" \u2014 **10 words** \u2713\n15. \"I worked and interned at some pretty cool companies over the years: Concrete, Caroline, K-Tel, Putumayo, Giant Step, Jive.\" \u2014 **19 words** \u2713\n16. \"I also worked at Strictly Rhythm, the world-renowned dance label \u2014 my first office job in the music business.\" \u2014 **18 words** \u2713\n\n**Section: When I Noticed Things Starting To Change (Lines 35-47):**\n17. \"One day, when I was still working at Strictly, I bought a copy of Vibe Magazine during my lunch break.\" \u2014 **20 words** \u2713\n18. \"Inside that magazine was an article on the rising popularity of MP3 files.\" \u2014 **13 words** \u2713\n19. \"MP3s were digital files containing individual songs.\" \u2014 **7 words** \u2713\n20. \"They were relatively small in size \u2014 3-4 MB at most.\" \u2014 **11 words** \u2713\n21. \"People were installing high-speed internet in homes by then \u2014 DSL, cable, and the like.\" \u2014 **15 words** \u2713\n22. \"So downloading multiple 3-4 MB music files was suddenly easy.\" \u2014 **10 words** \u2713\n23. \"The article claimed that all this could eventually crater the music industry.\" \u2014 **12 words** \u2713\n24. \"Now, I was already familiar with MP3s at this point.\" \u2014 **10 words** \u2713\n25. \"I'd been tinkering on the internet and knew people were sharing them via email, ftp and newsgroups.\" \u2014 **17 words** \u2713\n26. \"But to know this required knowing how to navigate the internet underground.\" \u2014 **12 words** \u2713\n27. \"The Vibe article was one of the first discussions of MP3s outside of this underground and inside pop culture.\" \u2014 **19 words** \u2713\n28. \"Truthfully, I didn't really think much about the Vibe article \u2014 I viewed it as a one-time thing.\" \u2014 **18 words** \u2713\n29. \"Then Spin ran a similar story, as did MTV.\" \u2014 **9 words** \u2713\n30. \"At that point, I thought the music business really was in trouble.\" \u2014 **12 words** \u2713\n31. \"I knew I needed a 'Plan B': a plan for if the music business suddenly disappeared.\" \u2014 **15 words** \u2713\n32. \"So I bought a $2,000 Gateway computer and a bunch of Peachpit Press books.\" \u2014 **13 words** \u2713\n33. \"I taught myself web design and development, and grabbed as many freelance jobs as I could.\" \u2014 **16 words** \u2713\n\n**Section: Napster Shows Up (Lines 53-71):**\n34. \"In the middle of all this studying, a team of coders led by Shawn Fanning built and released Napster.\" \u2014 **19 words** \u2713\n35. \"It was software that let users share MP3s with other Napster users over the internet.\" \u2014 **15 words** \u2713\n36. \"Napster pushed MP3 downloading to critical mass.\" \u2014 **7 words** \u2713\n37. \"Hundreds of thousands of people worldwide shared music for free.\" \u2014 **10 words** \u2713\n38. \"Then the recording industry sued Napster, generating a ton of free publicity for the company.\" \u2014 **15 words** \u2713\n39. \"As a result, that group of hundreds of thousands of people grew to millions seemingly overnight.\" \u2014 **16 words** \u2713\n40. \"The recording industry would eventually win in court and Napster would be forced to shut down.\" \u2014 **16 words** \u2713\n41. \"But the damage to the industry was already done.\" \u2014 **9 words** \u2713\n42. \"People would find other ways to download music for free and get stealthier about it.\" \u2014 **15 words** \u2713\n43. \"A recession \u2014 driven in part by the dot-com crash and the 9/11 tragedy \u2014 made things worse.\" \u2014 **17 words** \u2713\n44. \"People simply didn't want to pay for music anymore.\" \u2014 **9 words** \u2713\n45. \"As a result, the industry lost thousands of traditional jobs, especially in sales.\" \u2014 **13 words** \u2713\n46. \"The industry would rebuild itself around things like iTunes, Spotify, and a new licensing structure.\" \u2014 **15 words** \u2713\n47. \"But many who lost their jobs left the music business altogether.\" \u2014 **11 words** \u2713\n48. \"Many simply quit \u2014 frustrated by watching people refuse to pay for music.\" \u2014 **13 words** \u2713\n49. \"I remember a colleague emailing to say he was leaving his senior music role at a well-established company.\" \u2014 **18 words** \u2713\n50. \"When I called him to ask why, his simple answer was, 'I'm done competing with free!!'\" \u2014 **16 words** \u2713\n51. \"I stayed four more years, still doing freelance web design work on the side and building a portfolio.\" \u2014 **17 words** \u2713\n52. \"That portfolio was eventually strong enough to land me a web design job at Revlon Cosmetics.\" \u2014 **16 words** \u2713\n53. \"And my career progressed from there.\" \u2014 **6 words** \u2713\n\n**Side note (Lines 70-71):** (Italicized parenthetical; treated as supplementary)\n54. \"(Side note: Joseph Menn's book, All the Rave: The Rise and Fall of Shawn Fanning's Napster is a fascinating recap of Napster's history.\" \u2014 **23 words** \u26a0\ufe0f **FLAG**\n55. \"Read my review.)\" \u2014 **3 words** \u2713\n\n**Section: Adapting (Lines 75-95):**\n56. \"Many music business employees complained that Napster was destroying their careers (ironic considering how many of them were using Napster themselves).\" \u2014 **21 words** \u26a0\ufe0f **FLAG**\n57. \"But the fact remains: Napster succeeded because it gave consumers EXACTLY what they wanted.\" \u2014 **14 words** \u2713\n58. \"AI is doing the exact same thing.\" \u2014 **7 words** \u2713\n59. \"Businesses, developers of all skill levels, family members...they all want to use AI in their daily lives.\" \u2014 **17 words** \u2713\n60. \"Looking back at my time in the music business, I accept that adapting to change meant leaving the business altogether.\" \u2014 **20 words** \u2713\n61. \"But unlike my music industry pivot, I have no plans to leave software development.\" \u2014 **14 words** \u2713\n62. \"Instead, I'm choosing to adapt to AI.\" \u2014 **7 words** \u2713\n63. \"I believe the best way to adapt is understanding AI's role in system design.\" \u2014 **14 words** \u2713\n64. \"To adapt like this, first, a solid understanding of the application's requirements is a must.\" \u2014 **15 words** \u2713\n65. \"A project with solid, written-down requirements should be completed before an LLM receives a single prompt.\" \u2014 **15 words** \u2713\n66. \"Second, flat-out vibe coding \u2014 building an app with a handful of prompts \u2014 can only get you so far.\" \u2014 **20 words** \u2713\n67. \"Knowing what's under the hood still matters.\" \u2014 **7 words** \u2713\n68. \"Using an LLM to build a React app doesn't replace knowing React..\" \u2014 **12 words** \u2713 (Note: double period on line 85)\n69. \"You still need to understand it, as well as continuous integration (CI), GitHub hooks, Jenkins Jobs, etc.\" \u2014 **17 words** \u2713\n70. \"I also believe that implementing the Agent Skills Open Standard into AI-built apps is a must-do.\" \u2014 **16 words** \u2713\n71. \"I think Alex Maccaw's 'vibe coding' blog post captures both points well:\" \u2014 **12 words** \u2713\n\n**Blockquote (Lines 91-95):**\n72. \"Contrary to popular belief, I believe Vibe coding is most effective for senior engineers.\" \u2014 **14 words** \u2713\n73. \"If you know what you're doing, have a deep understanding of the frameworks and libraries, and a clear idea of the way you like to do things, Vibe coding is like adding Nitroglycerin to your productivity.\" \u2014 **37 words** \u26a0\ufe0f **FLAG**\n\n**Section: Pessimism Will Get Us Nowhere (Lines 99-109):**\n74. \"Even if people think implementing AI in software development is ineffective, it's here to stay.\" \u2014 **15 words** \u2713\n75. \"One of the major AI complaints I see on LinkedIn is that it generates buggy code.\" \u2014 **16 words** \u2713\n76. \"It also has a bad reputation for handling types in Typescript.\" \u2014 **11 words** \u2713\n77. \"Issues like this are well-known and LLM companies tend to fix them quickly.\" \u2014 **13 words** \u2713\n78. \"Plus, a seasoned developer can step in \u2014 either fixing it themselves or redirecting the LLM.\" \u2014 **15 words** \u2713\n79. \"AI has also received its share of bad press.\" \u2014 **9 words** \u2713\n80. \"In the few days prior to this post's publish date, Anthropic experienced an outage that affected its Claude tool.\" \u2014 **19 words** \u2713\n81. \"Also, Donald Trump announced a federal ban on Claude \u2014 citing a dispute over its use in the military.\" \u2014 **18 words** \u2713\n82. \"I saw a lot of bad press about Claude over those days.\" \u2014 **12 words** \u2713\n83. \"I didn't see any stories about people stopping to use it as a result.\" \u2014 **14 words** \u2713\n84. \"The negative posts, the outages, the bans \u2014 none of it will stop AI.\" \u2014 **14 words** \u2713\n\n**Section: Conclusion (Lines 113-123):**\n85. \"My 'Plan B' moment, buying a computer and teaching myself web design, was the right call.\" \u2014 **16 words** \u2713\n86. \"Leaving music wasn't what I wanted.\" \u2014 **6 words** \u2713\n87. \"But not paying the bills wasn't an option either.\" \u2014 **9 words** \u2713\n88. \"Generative AI has brought a seismic shift to software development \u2014 just like Napster did to music.\" \u2014 **17 words** \u2713\n89. \"That business didn't disappear, but it was forced to do a hard reset of itself.\" \u2014 **15 words** \u2713\n90. \"That hard reset included people leaving the business altogether, including me.\" \u2014 **11 words** \u2713\n91. \"I'm not leaving this time and I don't want experienced developers to do the same thing.\" \u2014 **16 words** \u2713\n92. \"AI has opened a new world to our developer community.\" \u2014 **10 words** \u2713\n93. \"We can build a lot of really complex stuff, fast.\" \u2014 **10 words** \u2713\n94. \"We have a world of creativity at our fingertips...we just need to embrace it.\" \u2014 **14 words** \u2713\n95. \"At least, that's what I'm doing.\" \u2014 **6 words** \u2713\n96. \"Because I have no choice.\" \u2014 **5 words** \u2713\n\n---\n\n## FLAGGED SENTENCES FOR LENGTH (21+ words)\n\n### Flag #1 \u2013 Line 21\n**Sentence**: \"As noted in my Napster documentary review, Napster was the first time the new internet business models directly challenged the traditional brick-and-mortar ones.\"\n\n**Word count**: 25 words\n\n**Issue**: Compound structure with two clauses separated by comma. Slightly dense with multiple noun phrases.\n\n**Suggested rewrite**: \"As noted in my Napster documentary review, Napster was the first time internet business models directly challenged traditional brick-and-mortar ones.\" (20 words)\n\n**Or**: \"My Napster documentary review discusses this: Napster was the first time internet business models directly challenged traditional brick-and-mortar ones.\" (18 words)\n\n---\n\n### Flag #2 \u2013 Line 54 (Parenthetical side note)\n**Sentence**: \"(Side note: Joseph Menn's book, All the Rave: The Rise and Fall of Shawn Fanning's Napster is a fascinating recap of Napster's history.\"\n\n**Word count**: 23 words\n\n**Issue**: The parenthetical lacks a closing parenthesis and is quite long for a side note.\n\n**Suggested rewrite**: \"(Side note: Joseph Menn's book *All the Rave* offers a fascinating recap of Napster's history.)\" (15 words)\n\n**Or**: \"Joseph Menn's book *All the Rave: The Rise and Fall of Shawn Fanning's Napster* is a fascinating recap of Napster's history.\" (23 words \u2014 remains long but now it's a proper statement)\n\n---\n\n### Flag #3 \u2013 Line 56\n**Sentence**: \"Many music business employees complained that Napster was destroying their careers (ironic considering how many of them were using Napster themselves).\"\n\n**Word count**: 21 words\n\n**Issue**: The parenthetical qualifier, while effective rhetorically, adds length and slightly dilutes the main point.\n\n**Suggested rewrite**: \"Many music business employees complained that Napster was destroying their careers, despite using it themselves.\" (15 words)\n\n**Or**: \"Many music business employees complained that Napster was destroying their careers. (Ironically, many were using Napster themselves.)\" (17 words)\n\n---\n\n### Flag #4 \u2013 Blockquote, Line 93\n**Sentence**: \"If you know what you're doing, have a deep understanding of the frameworks and libraries, and a clear idea of the way you like to do things, Vibe coding is like adding Nitroglycerin to your productivity.\"\n\n**Word count**: 37 words\n\n**Issue**: This is a direct quote from Alex Maccaw, so it cannot be edited without changing the attribution. This is a published blockquote and should be presented as-is.\n\n**Note**: This is acceptable because it is a blockquote from an external source. Do not suggest changes.\n\n---\n\n## FLESCH-KINCAID READABILITY ESTIMATE\n\n### Calculation\n- **Total sentences**: 96\n- **Total words**: 1,897\n- **Total syllables**: 2,986 (estimated)\n\n**Formula**: 0.39(words/sentences) + 11.8(syllables/words) - 15.59\n\n**Calculation**:\n- 0.39 \u00d7 (1,897 \u00f7 96) = 0.39 \u00d7 19.76 = 7.71\n- 11.8 \u00d7 (2,986 \u00f7 1,897) = 11.8 \u00d7 1.574 = 18.57\n- 18.57 + 7.71 - 15.59 = **10.69**\n\n**Flesch-Kincaid Grade Level**: **10.7** (10th\u201311th grade level)\n\n**Interpretation**: The post is at a **college-ready/advanced high school reading level**. This is appropriate for a technical audience (web developers, technical professionals) but slightly elevated for general audiences. The conversational tone and personal anecdotes offset the technical vocabulary.\n\n---\n\n## SUMMARY\n\n### Strengths\n- Clear narrative structure with strong personal voice\n- Well-researched historical references with proper citations\n- Excellent SEO optimization (links, titles, keyword distribution)\n- Logical argument progression from personal experience to actionable advice\n- Appropriate tone for target audience (web developers)\n\n### Issues Requiring Attention\n1. **Three sentences exceed 20 words** (flags #1, #2, #3 above). Consider simplifying for improved readability.\n2. **Double period on line 85** (\"React..\" should be \"React.\"). Minor typo.\n3. **Blockquote sentence (line 93) is 37 words** but acceptable because it is a published quote from an external source.\n4. **Image alt text and dimensions** \u2014 Ensure the featured image (`napster-ai.jpeg`) includes descriptive alt text and width/height attributes in the template.\n5. **Parenthetical note on line 54** lacks closing parenthesis \u2014 formatting issue needs correction.\n\n### Readability Grade\n**Flesch-Kincaid: 10.7 (10th\u201311th grade level)** \u2014 Appropriate for technical audience but dense. Simplifying the three flagged sentences would improve flow.\n\n### SEO Assessment\n**Excellent** \u2014 All links have descriptive text, proper title attributes, rel=\"noopener noreferrer\" on external links, and meaningful link anchors. No SEO issues found.\n\n### Accuracy Assessment\n**Accurate** \u2014 All historical, technical, and factual claims verified. References and citations are appropriate.\n"}], "grading": null}, {"id": "eval-2-napster-with_skill", "prompt": "Review the blog post at src/posts/2026-03-05-napster-to-now-music-industry-ai-web-developer-survival.md", "eval_id": 2, "outputs": [{"name": "review.md", "type": "text", "content": "# Post Review: From Napster to Now\n\n## 1. Clarity\n\n**Overall Assessment**: The post is clear and well-structured. The narrative arc is logical: background \u2192 observation of change \u2192 disruption \u2192 adaptation \u2192 conclusion. Technical concepts are explained in accessible terms.\n\n**Minor Issues**:\n\n- **\"Vibe coding\" definition**: The term is introduced via blockquote (Alex Maccaw's definition) but the post uses it earlier (\"flat-out vibe coding\") without explicit definition. Readers unfamiliar with the term might be momentarily confused at first mention.\n  - **Suggestion**: Provide a one-sentence plain-language definition before the blockquote: \"Vibe coding is writing code with the help of AI, relying on intuition and LLM prompts rather than meticulously planning every line.\"\n\n- **Transition ambiguity**: \"With that affinity for retail, I eventually moved into sales jobs at various record labels.\" The phrase \"with that affinity for retail\" refers back to loving a record store job, but record label sales is not strictly \"retail.\"\n  - **Suggestion**: Revise to: \"With that love for music retail, I eventually transitioned into sales roles at various record labels.\"\n\n## 2. Accuracy\n\n**Technical Claims \u2014 All Verified as Accurate**:\n\n- **MP3 file sizes (3-4 MB)**: Historically accurate for the Napster era (late 1990s). MP3 compression at 128 kbps typically produced ~1 MB per 4 minutes of audio, matching the stated range.\n\n- **Napster history**: Correctly attributes the rise to Shawn Fanning's team, accurately describes the recording industry lawsuit, the proliferation of alternate free services post-Napster, and the industry's eventual pivot to licensed services (iTunes, Spotify).\n\n- **Dot-com crash and 9/11 as contributing factors**: Accurate timeline (dot-com crash: 2000\u20132002; 9/11: September 2001). Both did dampen digital music adoption and consumer spending.\n\n- **Alex Maccaw's \"vibe coding\" essay**: The quoted passage is paraphrased accurately. The spirit of the argument\u2014that senior engineers benefit from AI-assisted coding\u2014is well-established in industry discourse.\n\n- **Claude outage and Trump ban references**: Dated to early March 2026. These are contemporaneous events presented as factual at publication time.\n\n- **Career progression claim**: The author claims to have pivoted from music sales (15 years) to web development/design and eventually worked at Revlon Cosmetics. Internally consistent but not externally verifiable from the markdown alone.\n\n**No significant accuracy issues detected.**\n\n## 3. SEO Evaluation\n\n### Title\n- **Length**: 126 characters \u2014 **exceeds the soft warning threshold of 61 characters**.\n- **Assessment**: The title is long but keyword-rich (\"Napster,\" \"music business,\" \"AI,\" \"web developer\") and clearly communicates the post's unique angle (personal experience \u00d7 industry disruption). The length is justified by specificity.\n- **Action**: Flag as informational (not a failure). The title works well for SEO.\n\n### Headings\n- Heading structure: Uses `##` (h2) for all subheadings. No `#` (h1) in body (correct). No skipped levels.\n- **Headings present**:\n  - \"Back When I Was In The Music Business\"\n  - \"When I Noticed Things Starting To Change\"\n  - \"Napster Shows Up\"\n  - \"Adapting\"\n  - \"Pessimism Will Get Us Nowhere\"\n  - \"Conclusion\"\n- **Assessment**: Clear, descriptive headings that outline the narrative. SEO-friendly and accessible.\n\n### Links\n**All external links verified**:\n- All external links include `rel=\"noopener noreferrer\"` \n- All link text is meaningful and descriptive\n- No \"click here,\" bare URLs, or generic link text\n- Examples of strong link text: \"Shawn Fanning,\" \"Vinylmania Record Store,\" \"Agent Skills Open Standard,\" \"my Napster documentary review\"\n- **Status**: \u2713 SEO best practices followed\n\n### Images\n- **Markdown body**: No `<img>` tags present\n- **Featured image**: Declared in front matter as `image: napster-ai.jpeg`\n- **Assessment**: No images in markdown body to audit. Template responsibility to verify `alt` text, `width`, and `height`.\n\n### Excerpt Front Matter\n- **Length**: 112 characters \u2014 within the strict 140-character limit\n- **Content**: \"I spent 15 years in music sales and marketing and watched the industry get disrupted. Here's what web developers need to know about AI.\"\n- **Assessment**: Accurately summarizes the post and includes relevant keywords. Matches the content.\n\n## 4. Readability\n\n### Flesch-Kincaid Analysis\n- **Estimated Grade Level**: ~9\u201310 (high school junior level, very accessible)\n- **Sentence count**: ~180 sentences\n- **Word count**: ~2,850 words\n- **Average words per sentence**: ~15.8 words\n- **Assessment**: Excellent readability\n\n### Sentence-Level Evaluation\nReviewed all sentences exceeding or approaching 20 words. All are clear and naturally structured:\n\n- \"Record stores were basically my second home ever since I was ten years old, so I really loved that job.\" (20 words) \u2014 Clear, natural flow\n- \"Now, I was already familiar with MP3s at this point. I'd been tinkering on the internet and knew people were sharing them via email, ftp and newsgroups.\" (29 words in second sentence) \u2014 Clear structure with parallel items\n- \"Many music business employees complained that Napster was destroying their careers (ironic considering how many of them were using Napster themselves).\" (22 words) \u2014 Parenthetical well-integrated\n- \"If you know what you're doing, have a deep understanding of the frameworks and libraries, and a clear idea of the way you like to do things, Vibe coding is like adding Nitroglycerin to your productivity.\" (38 words, blockquote) \u2014 Quoted passage; intentionally dense but fluent\n\n**Conclusion**: Excellent sentence-level readability. No problematic sentences identified.\n\n## 5. Front Matter Consistency\n\n### Title\n- **Field**: `title`\n- **Content**: \"From Napster to Now: What My 15 Years in the Music Business Taught Me About Surviving AI as a Web Developer\"\n- **Accuracy Check**: Accurately reflects the post's central argument (personal experience from music business \u2192 lessons for navigating AI in web development)\n- **Status**: \u2713 Present, well-formed, accurate to body\n\n### Excerpt\n- **Field**: `excerpt`\n- **Content**: \"I spent 15 years in music sales and marketing and watched the industry get disrupted. Here's what web developers need to know about AI.\"\n- **Accuracy Check**: Accurately summarizes the post's premise with key keywords\n- **Status**: \u2713 Present, well-formed, accurate to body\n\n### Other Front Matter Fields\nAll fields are present and valid:\n- `date`: 2026-03-05T12:00:00-02:00 (valid ISO 8601 format)\n- `layout`: layouts/post.njk (valid template reference)\n- `permalink`: /napster-to-now-music-industry-ai-web-developer-survival/ (descriptive, consistent)\n- `image`: napster-ai.jpeg (appropriate featured image)\n- `tags`: [personal] (appropriate)\n- `secondary_tags`: [\"ai\", \"rant\"] (relevant)\n- `category`: Personal (matches primary tag)\n- `schema_type`: \"TechArticle\" (semantically appropriate)\n- `proficiency_level`: \"Beginner\" (matches audience level and content accessibility)\n\n**Assessment**: \u2713 All fields consistent with body content. No updates needed.\n\n## 6. Accessibility (WCAG 2.1 AA)\n\n### Heading Hierarchy\n- **H1**: Generated by Eleventy from front matter `title` (not in markdown body)\n- **H2 headings**: All six subheadings use `##` (h2)\n- **Hierarchy check**: No `#` in markdown body (correct). No skipped levels. Valid structure.\n- **Assessment**: \u2713 Valid and accessible\n\n### Images\n- **Markdown body**: No `<img>` tags present\n- **Assessment**: Template responsibility to verify `alt`, `width`, `height`\n\n### Link Accessibility\n- **All links have meaningful text**: No \"click here,\" generic placeholders, or bare URLs\n- **External links**: All include `rel=\"noopener noreferrer\"` for security\n- **Examples of strong link text**: \"LinkedIn,\" \"Napster,\" \"Shawn Fanning,\" \"my Napster documentary review,\" \"Agent Skills Open Standard\"\n- **Assessment**: \u2713 All link text is meaningful and accessible in isolation\n\n### Tables\n- **Tables present**: No tables found\n- **Assessment**: N/A\n\n### Additional Accessibility Notes\n- **Text formatting**: Appropriate use of `<em>` for emphasis and `<strong>` for stronger emphasis\n- **Blockquote**: Used correctly for the Alex Maccaw quote\n- **Content structure**: Logically organized and flows naturally\n- **Assessment**: \u2713 WCAG 2.1 AA compliant (markdown-level checks)\n\n**Limitations**: Full WCAG compliance requires checking the rendered page for color contrast, focus indicators, and ARIA roles (template/CSS responsibility).\n\n## 7. Summary & Recommendations\n\n### Strengths\n1. **Excellent narrative structure**: Logical progression from personal history \u2192 observation \u2192 disruption \u2192 adaptation \u2192 conclusion\n2. **Strong readability**: Flesch-Kincaid ~9\u201310 grade level; highly accessible\n3. **SEO best practices**: Meaningful link text, proper `rel` attributes, descriptive headings, rich keywords\n4. **Authentic voice**: Personal anecdotes and specific examples build credibility\n5. **WCAG accessibility**: Valid heading hierarchy, meaningful link text, no structural barriers\n6. **Front matter alignment**: Title and excerpt accurately reflect body content\n\n### Issues Requiring Action\n\n#### Minor (informational)\n1. **Title length**: 126 characters exceeds soft 61-character warning\n   - **Status**: Acceptable for SEO; no action required\n   - **Note**: Title is keyword-rich and specifically communicates the unique angle\n\n#### Clarifications Recommended (non-blocking)\n1. **\"Vibe coding\" term**: Introduced via blockquote but used earlier without explicit definition\n   - **Suggestion**: Add one-sentence plain-language definition before the blockquote\n\n2. **Transition ambiguity**: \"With that affinity for retail\" refers to record store work but record label sales is not strictly \"retail\"\n   - **Suggestion**: Revise to: \"With that love for music retail, I eventually transitioned into sales roles at various record labels.\"\n\n### No Critical Issues Found\n\n- **Clarity**: Excellent; no unclear passages\n- **Accuracy**: All technical claims verified\n- **SEO**: Strong link text, proper attributes, no bare URLs\n- **Readability**: Excellent; no problematic sentences\n- **Front Matter**: Fully consistent with body content\n- **Accessibility**: WCAG-compliant at markdown level\n\n---\n\n**Overall Assessment**: This is a well-executed personal essay with strong technical and narrative merit. The post successfully draws parallels between music industry disruption (Napster) and current AI disruption in software development. All SEO, accessibility, and content standards are met.\n\n**Recommendation**: Ready to publish. The two minor clarifications suggested above would polish the post further but are not essential for publication.\n"}], "grading": null}], "previous_feedback": {}, "previous_outputs": {}};
+
+    // ---- State ----
+    let feedbackMap = {};  // run_id -> feedback text
+    let currentIndex = 0;
+    let visitedRuns = new Set();
+
+    // ---- Init ----
+    async function init() {
+      // Load saved feedback from server — but only if this isn't a fresh
+      // iteration (indicated by previous_feedback being present). When
+      // previous feedback exists, the feedback.json on disk is stale from
+      // the prior iteration and should not pre-fill the textareas.
+      const hasPrevious = Object.keys(EMBEDDED_DATA.previous_feedback || {}).length > 0
+        || Object.keys(EMBEDDED_DATA.previous_outputs || {}).length > 0;
+      if (!hasPrevious) {
+        try {
+          const resp = await fetch("/api/feedback");
+          const data = await resp.json();
+          if (data.reviews) {
+            for (const r of data.reviews) feedbackMap[r.run_id] = r.feedback;
+          }
+        } catch { /* first run, no feedback yet */ }
+      }
+
+      document.getElementById("skill-name").textContent = EMBEDDED_DATA.skill_name;
+      showRun(0);
+
+      // Wire up feedback auto-save
+      const textarea = document.getElementById("feedback");
+      let saveTimeout = null;
+      textarea.addEventListener("input", () => {
+        clearTimeout(saveTimeout);
+        document.getElementById("feedback-status").textContent = "";
+        saveTimeout = setTimeout(() => saveCurrentFeedback(), 800);
+      });
+    }
+
+    // ---- Navigation ----
+    function navigate(delta) {
+      const newIndex = currentIndex + delta;
+      if (newIndex >= 0 && newIndex < EMBEDDED_DATA.runs.length) {
+        saveCurrentFeedback();
+        showRun(newIndex);
+      }
+    }
+
+    function updateNavButtons() {
+      document.getElementById("prev-btn").disabled = currentIndex === 0;
+      document.getElementById("next-btn").disabled =
+        currentIndex === EMBEDDED_DATA.runs.length - 1;
+    }
+
+    // ---- Show a run ----
+    function showRun(index) {
+      currentIndex = index;
+      const run = EMBEDDED_DATA.runs[index];
+
+      // Progress
+      document.getElementById("progress").textContent =
+        `${index + 1} of ${EMBEDDED_DATA.runs.length}`;
+
+      // Prompt
+      document.getElementById("prompt-text").textContent = run.prompt;
+
+      // Config badge
+      const badge = document.getElementById("config-badge");
+      const configMatch = run.id.match(/(with_skill|without_skill|new_skill|old_skill)/);
+      if (configMatch) {
+        const config = configMatch[1];
+        const isBaseline = config === "without_skill" || config === "old_skill";
+        badge.textContent = config.replace(/_/g, " ");
+        badge.className = "config-badge " + (isBaseline ? "config-baseline" : "config-primary");
+        badge.style.display = "inline-block";
+      } else {
+        badge.style.display = "none";
+      }
+
+      // Outputs
+      renderOutputs(run);
+
+      // Previous outputs
+      renderPrevOutputs(run);
+
+      // Grades
+      renderGrades(run);
+
+      // Previous feedback
+      const prevFb = (EMBEDDED_DATA.previous_feedback || {})[run.id];
+      const prevEl = document.getElementById("prev-feedback");
+      if (prevFb) {
+        document.getElementById("prev-feedback-text").textContent = prevFb;
+        prevEl.style.display = "block";
+      } else {
+        prevEl.style.display = "none";
+      }
+
+      // Feedback
+      document.getElementById("feedback").value = feedbackMap[run.id] || "";
+      document.getElementById("feedback-status").textContent = "";
+
+      updateNavButtons();
+
+      // Track visited runs and promote done button when all visited
+      visitedRuns.add(index);
+      const doneBtn = document.getElementById("done-btn");
+      if (visitedRuns.size >= EMBEDDED_DATA.runs.length) {
+        doneBtn.classList.add("ready");
+      }
+
+      // Scroll main content to top
+      document.querySelector(".main").scrollTop = 0;
+    }
+
+    // ---- Render outputs ----
+    function renderOutputs(run) {
+      const container = document.getElementById("outputs-body");
+      container.innerHTML = "";
+
+      const outputs = run.outputs || [];
+      if (outputs.length === 0) {
+        container.innerHTML = '<div class="empty-state">No output files</div>';
+        return;
+      }
+
+      for (const file of outputs) {
+        const fileDiv = document.createElement("div");
+        fileDiv.className = "output-file";
+
+        // Always show file header with download link
+        const header = document.createElement("div");
+        header.className = "output-file-header";
+        const nameSpan = document.createElement("span");
+        nameSpan.textContent = file.name;
+        header.appendChild(nameSpan);
+        const dlBtn = document.createElement("a");
+        dlBtn.className = "dl-btn";
+        dlBtn.textContent = "Download";
+        dlBtn.download = file.name;
+        dlBtn.href = getDownloadUri(file);
+        header.appendChild(dlBtn);
+        fileDiv.appendChild(header);
+
+        const content = document.createElement("div");
+        content.className = "output-file-content";
+
+        if (file.type === "text") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          content.appendChild(pre);
+        } else if (file.type === "image") {
+          const img = document.createElement("img");
+          img.src = file.data_uri;
+          img.alt = file.name;
+          content.appendChild(img);
+        } else if (file.type === "pdf") {
+          const iframe = document.createElement("iframe");
+          iframe.src = file.data_uri;
+          content.appendChild(iframe);
+        } else if (file.type === "xlsx") {
+          renderXlsx(content, file.data_b64);
+        } else if (file.type === "binary") {
+          const a = document.createElement("a");
+          a.className = "download-link";
+          a.href = file.data_uri;
+          a.download = file.name;
+          a.textContent = "Download " + file.name;
+          content.appendChild(a);
+        } else if (file.type === "error") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          pre.style.color = "var(--red)";
+          content.appendChild(pre);
+        }
+
+        fileDiv.appendChild(content);
+        container.appendChild(fileDiv);
+      }
+    }
+
+    // ---- XLSX rendering via SheetJS ----
+    function renderXlsx(container, b64Data) {
+      try {
+        const raw = Uint8Array.from(atob(b64Data), c => c.charCodeAt(0));
+        const wb = XLSX.read(raw, { type: "array" });
+
+        for (let i = 0; i < wb.SheetNames.length; i++) {
+          const sheetName = wb.SheetNames[i];
+          const ws = wb.Sheets[sheetName];
+
+          if (wb.SheetNames.length > 1) {
+            const sheetLabel = document.createElement("div");
+            sheetLabel.style.cssText =
+              "font-weight:600; font-size:0.8rem; color:#b0aea5; margin-top:0.5rem; margin-bottom:0.25rem;";
+            sheetLabel.textContent = "Sheet: " + sheetName;
+            container.appendChild(sheetLabel);
+          }
+
+          const htmlStr = XLSX.utils.sheet_to_html(ws, { editable: false });
+          const wrapper = document.createElement("div");
+          wrapper.innerHTML = htmlStr;
+          container.appendChild(wrapper);
+        }
+      } catch (err) {
+        container.textContent = "Error rendering spreadsheet: " + err.message;
+      }
+    }
+
+    // ---- Grades ----
+    function renderGrades(run) {
+      const section = document.getElementById("grades-section");
+      const content = document.getElementById("grades-content");
+
+      if (!run.grading) {
+        section.style.display = "none";
+        return;
+      }
+
+      const grading = run.grading;
+      section.style.display = "block";
+      // Reset to collapsed
+      content.classList.remove("open");
+      document.getElementById("grades-arrow").classList.remove("open");
+
+      const summary = grading.summary || {};
+      const expectations = grading.expectations || [];
+
+      let html = '<div style="padding: 1rem;">';
+
+      // Summary line
+      const passRate = summary.pass_rate != null
+        ? Math.round(summary.pass_rate * 100) + "%"
+        : "?";
+      const badgeClass = summary.pass_rate >= 0.8 ? "grade-pass" : summary.pass_rate >= 0.5 ? "" : "grade-fail";
+      html += '<div class="grades-summary">';
+      html += '<span class="grade-badge ' + badgeClass + '">' + passRate + '</span>';
+      html += '<span>' + (summary.passed || 0) + ' passed, ' + (summary.failed || 0) + ' failed of ' + (summary.total || 0) + '</span>';
+      html += '</div>';
+
+      // Assertions list
+      html += '<ul class="assertion-list">';
+      for (const exp of expectations) {
+        const statusClass = exp.passed ? "pass" : "fail";
+        const statusIcon = exp.passed ? "\u2713" : "\u2717";
+        html += '<li class="assertion-item">';
+        html += '<span class="assertion-status ' + statusClass + '">' + statusIcon + '</span>';
+        html += '<span>' + escapeHtml(exp.text) + '</span>';
+        if (exp.evidence) {
+          html += '<div class="assertion-evidence">' + escapeHtml(exp.evidence) + '</div>';
+        }
+        html += '</li>';
+      }
+      html += '</ul>';
+
+      html += '</div>';
+      content.innerHTML = html;
+    }
+
+    function toggleGrades() {
+      const content = document.getElementById("grades-content");
+      const arrow = document.getElementById("grades-arrow");
+      content.classList.toggle("open");
+      arrow.classList.toggle("open");
+    }
+
+    // ---- Previous outputs (collapsible) ----
+    function renderPrevOutputs(run) {
+      const section = document.getElementById("prev-outputs-section");
+      const content = document.getElementById("prev-outputs-content");
+      const prevOutputs = (EMBEDDED_DATA.previous_outputs || {})[run.id];
+
+      if (!prevOutputs || prevOutputs.length === 0) {
+        section.style.display = "none";
+        return;
+      }
+
+      section.style.display = "block";
+      // Reset to collapsed
+      content.classList.remove("open");
+      document.getElementById("prev-outputs-arrow").classList.remove("open");
+
+      // Render the files into the content area
+      content.innerHTML = "";
+      const wrapper = document.createElement("div");
+      wrapper.style.padding = "1rem";
+
+      for (const file of prevOutputs) {
+        const fileDiv = document.createElement("div");
+        fileDiv.className = "output-file";
+
+        const header = document.createElement("div");
+        header.className = "output-file-header";
+        const nameSpan = document.createElement("span");
+        nameSpan.textContent = file.name;
+        header.appendChild(nameSpan);
+        const dlBtn = document.createElement("a");
+        dlBtn.className = "dl-btn";
+        dlBtn.textContent = "Download";
+        dlBtn.download = file.name;
+        dlBtn.href = getDownloadUri(file);
+        header.appendChild(dlBtn);
+        fileDiv.appendChild(header);
+
+        const fc = document.createElement("div");
+        fc.className = "output-file-content";
+
+        if (file.type === "text") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          fc.appendChild(pre);
+        } else if (file.type === "image") {
+          const img = document.createElement("img");
+          img.src = file.data_uri;
+          img.alt = file.name;
+          fc.appendChild(img);
+        } else if (file.type === "pdf") {
+          const iframe = document.createElement("iframe");
+          iframe.src = file.data_uri;
+          fc.appendChild(iframe);
+        } else if (file.type === "xlsx") {
+          renderXlsx(fc, file.data_b64);
+        } else if (file.type === "binary") {
+          const a = document.createElement("a");
+          a.className = "download-link";
+          a.href = file.data_uri;
+          a.download = file.name;
+          a.textContent = "Download " + file.name;
+          fc.appendChild(a);
+        }
+
+        fileDiv.appendChild(fc);
+        wrapper.appendChild(fileDiv);
+      }
+
+      content.appendChild(wrapper);
+    }
+
+    function togglePrevOutputs() {
+      const content = document.getElementById("prev-outputs-content");
+      const arrow = document.getElementById("prev-outputs-arrow");
+      content.classList.toggle("open");
+      arrow.classList.toggle("open");
+    }
+
+    // ---- Feedback (saved to server -> feedback.json) ----
+    function saveCurrentFeedback() {
+      const run = EMBEDDED_DATA.runs[currentIndex];
+      const text = document.getElementById("feedback").value;
+
+      if (text.trim() === "") {
+        delete feedbackMap[run.id];
+      } else {
+        feedbackMap[run.id] = text;
+      }
+
+      // Build reviews array from map
+      const reviews = [];
+      for (const [run_id, feedback] of Object.entries(feedbackMap)) {
+        if (feedback.trim()) {
+          reviews.push({ run_id, feedback, timestamp: new Date().toISOString() });
+        }
+      }
+
+      fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ reviews, status: "in_progress" }),
+      }).then(() => {
+        document.getElementById("feedback-status").textContent = "Saved";
+      }).catch(() => {
+        // Static mode or server unavailable — no-op on auto-save,
+        // feedback will be downloaded on final submit
+        document.getElementById("feedback-status").textContent = "Will download on submit";
+      });
+    }
+
+    // ---- Done ----
+    function showDoneDialog() {
+      // Save current textarea to feedbackMap (but don't POST yet)
+      const run = EMBEDDED_DATA.runs[currentIndex];
+      const text = document.getElementById("feedback").value;
+      if (text.trim() === "") {
+        delete feedbackMap[run.id];
+      } else {
+        feedbackMap[run.id] = text;
+      }
+
+      // POST once with status: complete — include ALL runs so the model
+      // can distinguish "no feedback" (looks good) from "not reviewed"
+      const reviews = [];
+      const ts = new Date().toISOString();
+      for (const r of EMBEDDED_DATA.runs) {
+        reviews.push({ run_id: r.id, feedback: feedbackMap[r.id] || "", timestamp: ts });
+      }
+      const payload = JSON.stringify({ reviews, status: "complete" }, null, 2);
+      fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: payload,
+      }).then(() => {
+        document.getElementById("done-overlay").classList.add("visible");
+      }).catch(() => {
+        // Server not available (static mode) — download as file
+        const blob = new Blob([payload], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "feedback.json";
+        a.click();
+        URL.revokeObjectURL(url);
+        document.getElementById("done-overlay").classList.add("visible");
+      });
+    }
+
+    function closeDoneDialog() {
+      // Reset status back to in_progress
+      saveCurrentFeedback();
+      document.getElementById("done-overlay").classList.remove("visible");
+    }
+
+    // ---- Toast ----
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("visible");
+      setTimeout(() => toast.classList.remove("visible"), 2000);
+    }
+
+    // ---- Keyboard nav ----
+    document.addEventListener("keydown", (e) => {
+      // Don't capture when typing in textarea
+      if (e.target.tagName === "TEXTAREA") return;
+
+      if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+        e.preventDefault();
+        navigate(-1);
+      } else if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+        e.preventDefault();
+        navigate(1);
+      }
+    });
+
+    // ---- Util ----
+    function getDownloadUri(file) {
+      if (file.data_uri) return file.data_uri;
+      if (file.data_b64) return "data:application/octet-stream;base64," + file.data_b64;
+      if (file.type === "text") return "data:text/plain;charset=utf-8," + encodeURIComponent(file.content);
+      return "#";
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement("div");
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    // ---- View switching ----
+    function switchView(view) {
+      document.querySelectorAll(".view-tab").forEach(t => t.classList.remove("active"));
+      document.querySelectorAll(".view-panel").forEach(p => p.classList.remove("active"));
+      document.querySelector(`[onclick="switchView('${view}')"]`).classList.add("active");
+      document.getElementById("panel-" + view).classList.add("active");
+    }
+
+    // ---- Benchmark rendering ----
+    function renderBenchmark() {
+      const data = EMBEDDED_DATA.benchmark;
+      if (!data) return;
+
+      // Show the tabs
+      document.getElementById("view-tabs").style.display = "flex";
+
+      const container = document.getElementById("benchmark-content");
+      const summary = data.run_summary || {};
+      const metadata = data.metadata || {};
+      const notes = data.notes || [];
+
+      let html = "";
+
+      // Header
+      html += "<h2 style='font-family: Poppins, sans-serif; margin-bottom: 0.5rem;'>Benchmark Results</h2>";
+      html += "<p style='color: var(--text-muted); font-size: 0.875rem; margin-bottom: 1.25rem;'>";
+      if (metadata.skill_name) html += "<strong>" + escapeHtml(metadata.skill_name) + "</strong> &mdash; ";
+      if (metadata.timestamp) html += metadata.timestamp + " &mdash; ";
+      if (metadata.evals_run) html += "Evals: " + metadata.evals_run.join(", ") + " &mdash; ";
+      html += (metadata.runs_per_configuration || "?") + " runs per configuration";
+      html += "</p>";
+
+      // Summary table
+      html += '<table class="benchmark-table">';
+
+      function fmtStat(stat, pct) {
+        if (!stat) return "—";
+        const suffix = pct ? "%" : "";
+        const m = pct ? (stat.mean * 100).toFixed(0) : stat.mean.toFixed(1);
+        const s = pct ? (stat.stddev * 100).toFixed(0) : stat.stddev.toFixed(1);
+        return m + suffix + " ± " + s + suffix;
+      }
+
+      function deltaClass(val) {
+        if (!val) return "";
+        const n = parseFloat(val);
+        if (n > 0) return "benchmark-delta-positive";
+        if (n < 0) return "benchmark-delta-negative";
+        return "";
+      }
+
+      // Discover config names dynamically (everything except "delta")
+      const configs = Object.keys(summary).filter(k => k !== "delta");
+      const configA = configs[0] || "config_a";
+      const configB = configs[1] || "config_b";
+      const labelA = configA.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+      const labelB = configB.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+      const a = summary[configA] || {};
+      const b = summary[configB] || {};
+      const delta = summary.delta || {};
+
+      html += "<thead><tr><th>Metric</th><th>" + escapeHtml(labelA) + "</th><th>" + escapeHtml(labelB) + "</th><th>Delta</th></tr></thead>";
+      html += "<tbody>";
+
+      html += "<tr><td><strong>Pass Rate</strong></td>";
+      html += "<td>" + fmtStat(a.pass_rate, true) + "</td>";
+      html += "<td>" + fmtStat(b.pass_rate, true) + "</td>";
+      html += '<td class="' + deltaClass(delta.pass_rate) + '">' + (delta.pass_rate || "—") + "</td></tr>";
+
+      // Time (only show row if data exists)
+      if (a.time_seconds || b.time_seconds) {
+        html += "<tr><td><strong>Time (s)</strong></td>";
+        html += "<td>" + fmtStat(a.time_seconds, false) + "</td>";
+        html += "<td>" + fmtStat(b.time_seconds, false) + "</td>";
+        html += '<td class="' + deltaClass(delta.time_seconds) + '">' + (delta.time_seconds ? delta.time_seconds + "s" : "—") + "</td></tr>";
+      }
+
+      // Tokens (only show row if data exists)
+      if (a.tokens || b.tokens) {
+        html += "<tr><td><strong>Tokens</strong></td>";
+        html += "<td>" + fmtStat(a.tokens, false) + "</td>";
+        html += "<td>" + fmtStat(b.tokens, false) + "</td>";
+        html += '<td class="' + deltaClass(delta.tokens) + '">' + (delta.tokens || "—") + "</td></tr>";
+      }
+
+      html += "</tbody></table>";
+
+      // Per-eval breakdown (if runs data available)
+      const runs = data.runs || [];
+      if (runs.length > 0) {
+        const evalIds = [...new Set(runs.map(r => r.eval_id))].sort((a, b) => a - b);
+
+        html += "<h3 style='font-family: Poppins, sans-serif; margin-bottom: 0.75rem;'>Per-Eval Breakdown</h3>";
+
+        const hasTime = runs.some(r => r.result && r.result.time_seconds != null);
+        const hasErrors = runs.some(r => r.result && r.result.errors > 0);
+
+        for (const evalId of evalIds) {
+          const evalRuns = runs.filter(r => r.eval_id === evalId);
+          const evalName = evalRuns[0] && evalRuns[0].eval_name ? evalRuns[0].eval_name : "Eval " + evalId;
+
+          html += "<h4 style='font-family: Poppins, sans-serif; margin: 1rem 0 0.5rem; color: var(--text);'>" + escapeHtml(evalName) + "</h4>";
+          html += '<table class="benchmark-table">';
+          html += "<thead><tr><th>Config</th><th>Run</th><th>Pass Rate</th>";
+          if (hasTime) html += "<th>Time (s)</th>";
+          if (hasErrors) html += "<th>Crashes During Execution</th>";
+          html += "</tr></thead>";
+          html += "<tbody>";
+
+          // Group by config and render with average rows
+          const configGroups = [...new Set(evalRuns.map(r => r.configuration))];
+          for (let ci = 0; ci < configGroups.length; ci++) {
+            const config = configGroups[ci];
+            const configRuns = evalRuns.filter(r => r.configuration === config);
+            if (configRuns.length === 0) continue;
+
+            const rowClass = ci === 0 ? "benchmark-row-with" : "benchmark-row-without";
+            const configLabel = config.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+
+            for (const run of configRuns) {
+              const r = run.result || {};
+              const prClass = r.pass_rate >= 0.8 ? "benchmark-delta-positive" : r.pass_rate < 0.5 ? "benchmark-delta-negative" : "";
+              html += '<tr class="' + rowClass + '">';
+              html += "<td>" + configLabel + "</td>";
+              html += "<td>" + run.run_number + "</td>";
+              html += '<td class="' + prClass + '">' + ((r.pass_rate || 0) * 100).toFixed(0) + "% (" + (r.passed || 0) + "/" + (r.total || 0) + ")</td>";
+              if (hasTime) html += "<td>" + (r.time_seconds != null ? r.time_seconds.toFixed(1) : "—") + "</td>";
+              if (hasErrors) html += "<td>" + (r.errors || 0) + "</td>";
+              html += "</tr>";
+            }
+
+            // Average row
+            const rates = configRuns.map(r => (r.result || {}).pass_rate || 0);
+            const avgRate = rates.reduce((a, b) => a + b, 0) / rates.length;
+            const avgPrClass = avgRate >= 0.8 ? "benchmark-delta-positive" : avgRate < 0.5 ? "benchmark-delta-negative" : "";
+            html += '<tr class="benchmark-row-avg ' + rowClass + '">';
+            html += "<td>" + configLabel + "</td>";
+            html += "<td>Avg</td>";
+            html += '<td class="' + avgPrClass + '">' + (avgRate * 100).toFixed(0) + "%</td>";
+            if (hasTime) {
+              const times = configRuns.map(r => (r.result || {}).time_seconds).filter(t => t != null);
+              html += "<td>" + (times.length ? (times.reduce((a, b) => a + b, 0) / times.length).toFixed(1) : "—") + "</td>";
+            }
+            if (hasErrors) html += "<td></td>";
+            html += "</tr>";
+          }
+          html += "</tbody></table>";
+
+          // Per-assertion detail for this eval
+          const runsWithExpectations = {};
+          for (const config of configGroups) {
+            runsWithExpectations[config] = evalRuns.filter(r => r.configuration === config && r.expectations && r.expectations.length > 0);
+          }
+          const hasAnyExpectations = Object.values(runsWithExpectations).some(runs => runs.length > 0);
+          if (hasAnyExpectations) {
+            // Collect all unique assertion texts across all configs
+            const allAssertions = [];
+            const seen = new Set();
+            for (const config of configGroups) {
+              for (const run of runsWithExpectations[config]) {
+                for (const exp of (run.expectations || [])) {
+                  if (!seen.has(exp.text)) {
+                    seen.add(exp.text);
+                    allAssertions.push(exp.text);
+                  }
+                }
+              }
+            }
+
+            html += '<table class="benchmark-table" style="margin-top: 0.5rem;">';
+            html += "<thead><tr><th>Assertion</th>";
+            for (const config of configGroups) {
+              const label = config.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+              html += "<th>" + escapeHtml(label) + "</th>";
+            }
+            html += "</tr></thead><tbody>";
+
+            for (const assertionText of allAssertions) {
+              html += "<tr><td>" + escapeHtml(assertionText) + "</td>";
+
+              for (const config of configGroups) {
+                html += "<td>";
+                for (const run of runsWithExpectations[config]) {
+                  const exp = (run.expectations || []).find(e => e.text === assertionText);
+                  if (exp) {
+                    const cls = exp.passed ? "benchmark-delta-positive" : "benchmark-delta-negative";
+                    const icon = exp.passed ? "\u2713" : "\u2717";
+                    html += '<span class="' + cls + '" title="Run ' + run.run_number + ': ' + escapeHtml(exp.evidence || "") + '">' + icon + "</span> ";
+                  } else {
+                    html += "— ";
+                  }
+                }
+                html += "</td>";
+              }
+              html += "</tr>";
+            }
+            html += "</tbody></table>";
+          }
+        }
+      }
+
+      // Notes
+      if (notes.length > 0) {
+        html += '<div class="benchmark-notes">';
+        html += "<h3>Analysis Notes</h3>";
+        html += "<ul>";
+        for (const note of notes) {
+          html += "<li>" + escapeHtml(note) + "</li>";
+        }
+        html += "</ul></div>";
+      }
+
+      container.innerHTML = html;
+    }
+
+    // ---- Start ----
+    init();
+    renderBenchmark();
+  </script>
+</body>
+</html>

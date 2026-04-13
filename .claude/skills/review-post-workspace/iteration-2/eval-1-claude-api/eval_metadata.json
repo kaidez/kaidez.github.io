@@ -1,0 +1,13 @@
+{
+  "eval_id": 1,
+  "eval_name": "claude-api",
+  "prompt": "Review the blog post at src/posts/2026-03-26-build-ai-tools-with-claude-api.md",
+  "assertions": [
+    {"text": "Review covers all 7 required sections: Clarity, Accuracy, SEO, Readability, Front matter consistency, Accessibility, and Suggestions"},
+    {"text": "Front matter section checks both title and excerpt fields for existence and accuracy"},
+    {"text": "Front matter section applies the title 61-char soft warning and excerpt 140-char strict limit"},
+    {"text": "WCAG section notes the Eleventy h1 convention and checks heading hierarchy starting at h2"},
+    {"text": "SEO section checks every <a> tag for meaningful link text and rel=noopener noreferrer"},
+    {"text": "Readability uses judgment rather than a mechanical word-count cutoff"}
+  ]
+}

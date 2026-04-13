@@ -1,0 +1,26 @@
+{
+  "skill_name": "review-post",
+  "evals": [
+    {
+      "id": 0,
+      "eval_name": "github-triage",
+      "prompt": "Review the blog post at src/posts/2026-04-13-claude-github-triage-tracker.md",
+      "expected_output": "A structured review covering clarity, accuracy, SEO, readability, front matter consistency, and WCAG checks",
+      "files": ["src/posts/2026-04-13-claude-github-triage-tracker.md"]
+    },
+    {
+      "id": 1,
+      "eval_name": "claude-api",
+      "prompt": "Review the blog post at src/posts/2026-03-26-build-ai-tools-with-claude-api.md",
+      "expected_output": "A structured review covering clarity, accuracy, SEO, readability, front matter consistency, and WCAG checks",
+      "files": ["src/posts/2026-03-26-build-ai-tools-with-claude-api.md"]
+    },
+    {
+      "id": 2,
+      "eval_name": "napster",
+      "prompt": "Review the blog post at src/posts/2026-03-05-napster-to-now-music-industry-ai-web-developer-survival.md",
+      "expected_output": "A structured review covering clarity, accuracy, SEO, readability, front matter consistency, and WCAG checks",
+      "files": ["src/posts/2026-03-05-napster-to-now-music-industry-ai-web-developer-survival.md"]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "eval_id": 2,
+  "eval_name": "napster",
+  "prompt": "Review the blog post at src/posts/2026-03-05-napster-to-now-music-industry-ai-web-developer-survival.md",
+  "assertions": [
+    {"text": "Review covers all 7 required sections: Clarity, Accuracy, SEO, Readability, Front matter consistency, Accessibility, and Suggestions"},
+    {"text": "Front matter section checks both title and excerpt fields for existence and accuracy"},
+    {"text": "Front matter section flags the title as 61+ characters with a soft warning"},
+    {"text": "WCAG section notes the Eleventy h1 convention and checks heading hierarchy starting at h2"},
+    {"text": "SEO section checks every <a> tag for meaningful link text and rel=noopener noreferrer"},
+    {"text": "Readability uses judgment rather than a mechanical word-count cutoff"}
+  ]
+}
