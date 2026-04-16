@@ -48,7 +48,7 @@ It was Google’s move that was a surprise but, if you look some of their recent
 
 ## Google & Media Queries
 
-The primary thing that helps your site achieve high rankings in Google’s search results is to produce high quality content and, in all fairness, the process by which Google determines content as high quality is pretty fair. The second thing, which most ignore, is to make the content as easy for Google to find and understand as possible.
+The primary thing that helps your site achieve high rankings in Google’s search results is to produce high quality content and, truthfully, the process by which Google determines content as "high quality" is pretty fair. The second thing, which most ignore, is to make the content as easy for Google to find and understand as possible.
 
 If you have both a desktop and mobile version of your site, Google must crawl both versions, parse them, then decide how to properly index each site if they ever need to list the sites in their search results. It takes Google more time to do this for two sites than it would for one site.
 
