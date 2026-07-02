@@ -23,22 +23,22 @@
     "verboseDebug": "DEBUG=Eleventy* npx @11ty/eleventy"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.5",
+    "@11ty/eleventy": "^3.1.6",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
-    "@babel/preset-env": "^7.29.2",
+    "@babel/preset-env": "^8.0.2",
     "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
     "@types/jest": "^30.0.0",
     "clean-css-cli": "^5.6.3",
-    "esbuild": "^0.28.0",
+    "esbuild": "^0.28.1",
     "gh-pages": "^6.3.0",
     "html-minifier": "^4.0.0",
-    "jest": "^30.3.0",
-    "jest-environment-jsdom": "^30.3.0",
+    "jest": "^30.4.2",
+    "jest-environment-jsdom": "^30.4.1",
     "luxon": "^3.7.2",
-    "markdown-it": "^14.1.1",
+    "markdown-it": "^14.3.0",
     "moment": "^2.30.1",
     "purgecss": "^8.0.0",
-    "ts-jest": "^29.4.9",
+    "ts-jest": "^29.4.11",
     "typescript": "5.9.3"
   },
   "keywords": [
@@ -53,7 +53,7 @@
   "type": "commonjs",
   "dependencies": {
     "@11ty/eleventy-plugin-rss": "^2.0.0",
-    "@fortawesome/fontawesome-free": "^7.2.0",
+    "@fortawesome/fontawesome-free": "^7.3.0",
     "eleventy-plugin-reading-time": "^0.0.1"
   }
 }
