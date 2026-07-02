@@ -31,3 +31,8 @@ Review the specified markdown file for:
    - Tables (if any): confirm a header row is defined
 
 7. Provide specific rewrite or fix suggestions for each flagged item.
+
+8. **Preserve voice**: Kai's posts are personal and informal on purpose, and he wants them to read as clearly human-written (some tools now try to detect AI-generated text). When suggesting rewrites:
+   - Prefer targeted, minimal edits to the flagged sentence/phrase over rewriting whole paragraphs.
+   - Don't smooth away intentional quirks — informal phrasing, exclamation, asides, uneven sentence rhythm — just because they're flagged for length or "cleanliness." Only flag these if they genuinely hurt clarity.
+   - If a fix would flatten his tone into something generic, say so explicitly and offer it as an option rather than presenting it as the correct fix.
