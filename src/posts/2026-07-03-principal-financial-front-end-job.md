@@ -1,7 +1,7 @@
 ---
 title: 'I Just Did My First Code Commit at Principal Financial!'
 date: 2026-07-03T12:00:00-02:00
-excerpt: 'I started a front end developer job at Principal Financial Group...and I really like it!!!'
+excerpt: 'I started a front end engineer job at Principal Financial Group...and I really like it!!!'
 layout: layouts/post.njk
 permalink: /principal-financial-front-end-job/
 image: principal-financial-group-logo.jpg
