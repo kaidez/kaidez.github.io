@@ -16,7 +16,6 @@ After four months of unemployment, I started a new front end developer job at <a
 
 I'm assuming I can't publicly disclose the software stack I'm working in, But I will say that the stack is just as modern as any hip startup you can think of.
 
-The stack's code is well-organized and well-documented.  All the various teams take pride in keeping the <a href="https://lawsofsoftwareengineering.com/laws/broken-windows-theory/" title="Broken Windows Theory" aria-label="Go to Broken Windows Theory" rel="noopener noreferrer">"broken windows"</a> to a minimum and fix errors as quick as they can.
+The stack's code is well-organized and well-documented. All the various teams take pride in preventing the <a href="https://lawsofsoftwareengineering.com/laws/broken-windows-theory/" title="Broken Windows Theory" aria-label="Go to Broken Windows Theory" rel="noopener noreferrer">"broken windows"</a> and fix errors as quick as they can.
 
-And the teams as a whole 
-
+And the teams as a whole are really diverse
