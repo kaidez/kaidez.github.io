@@ -1,6 +1,6 @@
 export function copyrightYear(): void {
-  const footerElement = document.querySelector<HTMLElement>('.footer-bottom');
-  if (!footerElement) {
+  const footer = document.querySelector<HTMLElement>('.footer-bottom');
+  if (!footer) {
     console.warn('Footer element not found');
     return;
   }
@@ -8,7 +8,7 @@ export function copyrightYear(): void {
   const shortYear: number = currentYear % 100;
   const copyright = document.createElement('p');
   copyright.innerHTML = `&copy;2008-${shortYear} Kai "kaidez" Gittens. All rights reserved.`;
-  footerElement.appendChild(copyright);
+  footer.appendChild(copyright);
 }
 
 export function toggleMobileMenu(): void {
