@@ -19,3 +19,4 @@ I'm assuming I can't publicly disclose the software stack I'm working in, But I 
 The stack's code is well-organized and well-documented.  All the various teams take pride in keeping the <a href="https://lawsofsoftwareengineering.com/laws/broken-windows-theory/" title="Broken Windows Theory" aria-label="Go to Broken Windows Theory" rel="noopener noreferrer">"broken windows"</a> to a minimum and fix errors as quick as they can.
 
 And the teams as a whole 
+
