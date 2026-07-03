@@ -9,6 +9,7 @@ tags: ["coding-best-practices"]
 secondary_tags: ["ai", "claude"]
 category: Coding Tips
 schema_type: "TechArticle"
+proficiency_level: "Intermediate"
 ---
 I built up a lot of AI prompt habits when I was writing my <a href="/building-ai-tools-claude-api/" title="Building AI Tools with the Claude API">Claude API tooling post</a>. I reviewed them using `/insights`, a Claude Code slash command that summarizes 30 days of usage and session activity.
 

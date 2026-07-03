@@ -8,7 +8,7 @@ image: napster-ai.jpeg
 tags: [personal]
 secondary_tags: ['ai', 'rant']
 category: Personal
-schema_type: 'TechArticle'
+schema_type: 'BlogPosting'
 dependencies: 'AI'
 proficiency_level: 'Beginner'
 ---
