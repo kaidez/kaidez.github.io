@@ -13,13 +13,21 @@ Review the specified markdown file for:
 
 4. **Readability**: Evaluate readability at the sentence level. Flag sentences that feel genuinely dense or hard to follow — long sentences (roughly 20+ words) are worth examining, but use judgment rather than a hard cutoff. Not every long sentence is a problem. Compute a Flesch-Kincaid estimate.
 
-5. **Front matter consistency**: Read the `title` and `excerpt` fields (the `excerpt` field maps to the page's meta description tag). Check two things:
-   - That both fields exist and are well-formed
-   - That both accurately reflect the current content of the post — flag any mismatch as a suggested update, especially if the body has been edited since they were written
+5. **Front matter consistency**: Read the `title`, `excerpt`, `schema_type`, and `proficiency_level` fields. Check that all present fields are well-formed and accurately reflect the post content.
 
-   Length rules:
+   **title and excerpt**:
+   - Both should exist and accurately reflect the current content — flag mismatches as suggested updates
    - `title`: Soft warning if 61 characters or more (not a failure, just flag it)
    - `excerpt`: Strict limit of 140 characters — flag as an error if exceeded
+
+   **schema_type**: Controls the JSON-LD structured data output. Flag if the value doesn't match the content:
+   - `BlogPosting` — personal posts, opinion pieces, career/life updates (also the template default if the field is omitted)
+   - `TechArticle` — technical tutorials, code walkthroughs, technical reference posts
+   - `HowTo` — step-by-step instructional guides with defined steps/tools/supplies
+
+   **proficiency_level**: Only rendered in JSON-LD when `schema_type == "TechArticle"`. Flag if:
+   - `schema_type` is `TechArticle` and `proficiency_level` is missing (template defaults to `"Intermediate"`)
+   - `schema_type` is `BlogPosting` or `HowTo` — note that `proficiency_level` has no effect and can be removed
 
 6. **Accessibility (WCAG 2.1 AA)**: Check what can be verified from the markdown source.
    Note: this is not a full WCAG audit — checks requiring a rendered page (color contrast, focus indicators, ARIA roles) are out of scope here.
