@@ -8,7 +8,7 @@ image: principal-financial-group-logo.jpg
 tags: [personal]
 secondary_tags: ['web developer job', 'rant']
 category: Personal
-schema_type: 'TechArticle'
+schema_type: 'BlogPosting'
 proficiency_level: 'Beginner'
 ---
 
