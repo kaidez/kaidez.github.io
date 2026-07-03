@@ -12,7 +12,7 @@ schema_type: 'TechArticle'
 proficiency_level: 'Beginner'
 ---
 
-I recently completed my first git commit for my new job. It was small and simple, but I'm proud of it.
+I recently banged out my first git commit for my new job. It was small and simple, but I'm proud of it.
 
 The job is at <a href="https://www.principal.com/" title="Principal Financial Group" aria-label="Go to Principal Financial Group" rel="noopener noreferrer">Principal Financial Group</a>, a financial company primarily focused on providing workplace retirement plans: 401Ks, 403bs, etc. I'll be over there, doing front end development work.
 
@@ -24,4 +24,4 @@ I <em>will</em> say that the stack's code is well-organized and well-documented.
 
 The teams I'm working with are just as helpful as they are diverse. While I've searched the documentation for answers to questions, everyone I've encountered is eager to help when asked.
 
-On a more personal note,
+On a more personal note, I'm REALLY excited to work for a workplace retirement company. see, I started as a contractor when I was at <a href="https://www.revlon.com/" title="Revlon Cosmetics" aria-label="Go to Revlon Cosmetics" rel="noopener noreferrer">Revlon</a>
