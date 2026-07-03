@@ -22,13 +22,13 @@ I'm working within a software stack that's just as modern as any hip startup you
 
 But I <em>will</em> say that the stack's code is well-organized and well-documented. Plus, the various dev teams work hard to prevent the <a href="https://lawsofsoftwareengineering.com/laws/broken-windows-theory/" title="Broken Windows Theory" aria-label="Go to Broken Windows Theory" rel="noopener noreferrer">"broken windows"</a>, fixing errors as fast as they can.
 
-The teams I'm working with are just as helpful as they are diverse. While I've searched the documentation for answers to questions, everyone I've encountered is eager to help when asked.
+The teams I'm working with are just as helpful as they are diverse. I've searched the documentation for answers, but everyone I've encountered is eager to help when asked.
 
-On a personal note, I'm REALLY excited to work for a workplace retirement company. I started my <a href="https://www.revlon.com/" title="Revlon Cosmetics" aria-label="Go to Revlon Cosmetics" rel="noopener noreferrer">Revlon</a> job as a contractor, and the 401k offered by the company contracting me out was lousy.
+On a personal note, I'm REALLY excited to work for a workplace retirement company. I started my <a href="https://www.revlon.com/" title="Revlon Cosmetics" aria-label="Go to Revlon Cosmetics" rel="noopener noreferrer">Revlon</a> job as a contractor, and the 401k my staffing agency offered was lousy.
 
 I was <i>de facto</i> forced to create my own retirement plan, so I spent time researching the various investment vehicles. Roth IRAs, traditional IRAs, brokerage accounts, and so on.
 
-Consequently, this led to my "going down a rabbit hole" on personal investing. I absorbed as much knowledge as I could about how these plans, as well as mutual funds, work in general.
+Consequently, this led to my "going down a rabbit hole" on personal investing. I absorbed as much knowledge as I could about how these plans, and mutual funds, work in general.
 
 So I'm naturally curious about the business process behind investments like this. And I'm excited to learn more.
 
