@@ -1,17 +1,18 @@
 ---
-title: "From Napster to Now: What My 15 Years in the Music Business Taught Me About Surviving AI as a Web Developer"
+title: 'From Napster to Now: What My 15 Years in the Music Business Taught Me About Surviving AI as a Web Developer'
 date: 2026-03-05T12:00:00-02:00
 excerpt: I spent 15 years in music sales and marketing and watched the industry get disrupted. Here's what web developers need to know about AI.
 layout: layouts/post.njk
 permalink: /napster-to-now-music-industry-ai-web-developer-survival/
 image: napster-ai.jpeg
 tags: [personal]
-secondary_tags: ["ai", "rant"]
+secondary_tags: ['ai', 'rant']
 category: Personal
-schema_type: "TechArticle"
-dependencies: "AI"
-proficiency_level: "Beginner"
+schema_type: 'TechArticle'
+dependencies: 'AI'
+proficiency_level: 'Beginner'
 ---
+
 I recently became unemployed, so I've been spending a lot of time on <a href="https://www.linkedin.com/in/kaigittens/" title="Kai Gittens on LinkedIn" aria-label="Visit Kai Gittens' LinkedIn profile" rel="noopener noreferrer me">LinkedIn</a>. I've seen lots of posts and comments from software developers about how Generative AI currently affects their industry.
 
 The posts and comments are both negative and positive, and the negative ones share a common fear. GenAI, armed with the ability to code up entire apps in minutes, is rapidly taking software dev jobs.
@@ -22,9 +23,11 @@ That disruption was digital music downloading — particularly, <a href="https:/
 
 While Napster didn't destroy the music business altogether, it forced the industry to change. That experience has taught me that <strong>developers need to adapt to an AI-driven world</strong>.
 
+<em>(Update - July 2026: I'm now employed at Principal Financial Group...YAY!! <a href="/principal-financial-front-end-job/">Read about this here</a>)</em>
+
 <h2>Back When I Was In The Music Business</h2>
 
-I worked in the music business for 15 years, beginning with internships and mailroom work. I also worked at the famed <a href="https://daily.redbullmusicacademy.com/2016/02/vinylmania-oral-history" title="Vinylmania NYC - Red Bull Music Academy oral history" aria-label="Read the oral history of Vinylmania NYC record store" rel="noopener noreferrer">Vinylmania Record Store</a> in New York City. 
+I worked in the music business for 15 years, beginning with internships and mailroom work. I also worked at the famed <a href="https://daily.redbullmusicacademy.com/2016/02/vinylmania-oral-history" title="Vinylmania NYC - Red Bull Music Academy oral history" aria-label="Read the oral history of Vinylmania NYC record store" rel="noopener noreferrer">Vinylmania Record Store</a> in New York City.
 
 Record stores were basically my second home ever since I was ten years old, so I <em>really</em> loved that job. With that affinity for retail, I eventually moved into sales jobs at various record labels. I did some marketing on the side, but mostly sales.
 
