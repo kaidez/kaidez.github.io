@@ -12,10 +12,14 @@ schema_type: 'TechArticle'
 proficiency_level: 'Beginner'
 ---
 
-After four months of unemployment, I started a new front end developer job at <a href="https://www.principal.com/" title="Principal Financial Group" aria-label="Go to Principal Financial Group" rel="noopener noreferrer">Principal Financial Group</a>. And I'm really happy about it....but not just because I'm no longer jobless (lol)!
+I recently completed my first git commit for my new job. It was small and simple, but I'm proud of it.
 
-I'm assuming I can't publicly disclose the software stack I'm working in. But I will say that the stack is just as modern as any hip startup you can think of.
+The job is at <a href="https://www.principal.com/" title="Principal Financial Group" aria-label="Go to Principal Financial Group" rel="noopener noreferrer">Principal Financial Group</a>, a financial company primarily focused on providing workplace retirement plans: 401Ks, 403bs, etc. I'll be over there, doing front end development work.
 
-The stack's code is well-organized and well-documented. All the various teams take pride in preventing the <a href="https://lawsofsoftwareengineering.com/laws/broken-windows-theory/" title="Broken Windows Theory" aria-label="Go to Broken Windows Theory" rel="noopener noreferrer">"broken windows"</a> and fix errors as quick as they can.
+I'm really happy about getting the gig, but not just because I'm simply no longer jobless (lol)! I like happy because I really like the company.
+
+I'm working within a software stack that's just as modern as any hip startup you can think of. I'm assuming the company doesn't want me openly discussing this stack in detail, so I won't.
+
+I <em>will</em> say that the stack's code is well-organized and well-documented. Plus, the various teams works hard to prevent the <a href="https://lawsofsoftwareengineering.com/laws/broken-windows-theory/" title="Broken Windows Theory" aria-label="Go to Broken Windows Theory" rel="noopener noreferrer">"broken windows"</a> and fix errors as quick as they can.
 
 And the teams as a whole are really diverse
