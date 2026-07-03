@@ -20,6 +20,8 @@ I'm really happy about getting the gig, but not just because I'm simply no longe
 
 I'm working within a software stack that's just as modern as any hip startup you can think of. I'm assuming the company doesn't want me openly discussing this stack in detail, so I won't.
 
-I <em>will</em> say that the stack's code is well-organized and well-documented. Plus, the various teams works hard to prevent the <a href="https://lawsofsoftwareengineering.com/laws/broken-windows-theory/" title="Broken Windows Theory" aria-label="Go to Broken Windows Theory" rel="noopener noreferrer">"broken windows"</a> and fix errors as quick as they can.
+I <em>will</em> say that the stack's code is well-organized and well-documented. Plus, the various teams works hard to prevent the <a href="https://lawsofsoftwareengineering.com/laws/broken-windows-theory/" title="Broken Windows Theory" aria-label="Go to Broken Windows Theory" rel="noopener noreferrer">"broken windows"</a>, fixing errors as fast as they can.
 
-And the teams as a whole are really diverse
+The teams I'm working with are just as helpful as they are diverse. While I've searched the documentation for answers to questions, everyone I've encountered is eager to help when asked.
+
+On a more personal note,
