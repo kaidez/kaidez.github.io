@@ -6,7 +6,7 @@ layout: layouts/post.njk
 permalink: /principal-financial-front-end-job/
 image: principal-financial-group-logo.jpg
 tags: [personal]
-secondary_tags: ['web developer job', 'rant']
+secondary_tags: ['web developer job']
 category: Personal
 schema_type: 'BlogPosting'
 proficiency_level: 'Beginner'
@@ -24,14 +24,14 @@ But I <em>will</em> say that the stack's code is well-organized and well-documen
 
 The teams I'm working with are just as helpful as they are diverse. I've searched the documentation for answers, but everyone I've encountered is eager to help when asked.
 
-On a personal note, I'm REALLY excited to work for a workplace retirement company. I started my <a href="https://www.revlon.com/" title="Revlon Cosmetics" aria-label="Go to Revlon Cosmetics" rel="noopener noreferrer">Revlon</a> job as a contractor, and the 401k my staffing agency offered was lousy.
+On a personal note, I'm REALLY excited to work for a workplace retirement company. See, I started my <a href="https://www.revlon.com/" title="Revlon Cosmetics" aria-label="Go to Revlon Cosmetics" rel="noopener noreferrer">Revlon</a> job as a contractor, and the 401k my staffing agency offered was lousy.
 
-I was <i>de facto</i> forced to create my own retirement plan, so I spent time researching the various investment vehicles. Roth IRAs, traditional IRAs, brokerage accounts, and so on.
+I was <i>de facto</i> forced to create my own retirement plan, so I spent time researching the various investment vehicles. Roth IRAs, traditional IRAs, brokerage accounts, etc.
 
 Consequently, this led to my "going down a rabbit hole" on personal investing. I absorbed as much knowledge as I could about how these plans, and mutual funds, work in general.
 
 So I'm naturally curious about the business process behind investments like this. And I'm excited to learn more.
 
-If I have any issue, it's the lack of food choices close to the office. But a pretty good bagel place opened up down the street, so I have hope for growth.
+If I have any issue, it's the lack of food choices close to the office. But a pretty good bagel place just opened up down the street, so I have hope for growth.
 
 Here's to the new gig!!!
