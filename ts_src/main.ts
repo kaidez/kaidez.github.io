@@ -6,9 +6,9 @@ export function copyrightYear(): void {
   }
   const currentYear: number = new Date().getFullYear();
   const shortYear: number = currentYear % 100;
-  const paragraphTag = document.createElement('p');
-  paragraphTag.innerHTML = `&copy;2008-${shortYear} Kai "kaidez" Gittens. All rights reserved.`;
-  footerElement.appendChild(paragraphTag);
+  const copyright = document.createElement('p');
+  copyright.innerHTML = `&copy;2008-${shortYear} Kai "kaidez" Gittens. All rights reserved.`;
+  footerElement.appendChild(copyright);
 }
 
 export function toggleMobileMenu(): void {
