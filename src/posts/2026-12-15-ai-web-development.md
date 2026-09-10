@@ -19,3 +19,4 @@ Today is my sixth month anniversary as a web developer at Principal Financial Gr
 
 -AI can code heads-down very well
 
+-Spring solved a Java problem. React solved a frontend one
