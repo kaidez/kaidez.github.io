@@ -1,5 +1,5 @@
 ---
-title: 'How I THINK AI Will Change Software Development'
+title: 'How I "think" AI Will Change Software Development'
 date: 2026-12-15T12:00:00-02:00
 excerpt: "After using AI at my software developer job for a few months, I have an idea about how jobs like this will evolve."
 layout: layouts/post.njk
@@ -12,6 +12,9 @@ schema_type: 'BlogPosting'
 proficiency_level: 'Beginner'
 draft: true
 ---
+Today is my sixth month anniversary as a web developer at Principal Financial Group. Like many other developers, I'm using generative AI in my work.
 
-Today is my sixth month anniversary as a web developer at Principal FInancial Group. Like many other developers, I'm using generative AI in my work.
+
+-The developer role will change.
+-AI can code heads-down very well
 
