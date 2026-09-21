@@ -11,6 +11,7 @@ This is the personal blog of Kai "kaidez" Gittens, a web developer sharing pract
 - **Tutorials**: Step-by-step guides covering HTML5, CSS3, JavaScript, React, and modern web development workflows
 - **Coding Best Practices**: Tips and techniques for writing better, more maintainable code
 - **Personal Insights**: Reflections on the tech industry, job searching, and career development
+- **AI Tools**: Practical guides on building with AI APIs, including the Claude API and agentic workflows
 - **Reviews**: Analysis of development tools, books, and learning resources
 
 ## Core Topics Covered
@@ -18,6 +19,7 @@ This is the personal blog of Kai "kaidez" Gittens, a web developer sharing pract
 - **JavaScript**: From fundamentals to advanced concepts including closures, functional programming, and modern ES6+ features
 - **Web Development**: HTML5, CSS3, responsive design, and progressive web apps
 - **Frameworks & Libraries**: React, jQuery, and various build tools
+- **AI & Claude API**: Building real-world tools with the Claude API, GitHub automation, and agentic development patterns
 - **Career Development**: Job searching strategies, interview preparation, and industry insights
 - **Development Tools**: Git, npm, Babel, webpack, and modern development workflows
 
@@ -26,11 +28,11 @@ This is the personal blog of Kai "kaidez" Gittens, a web developer sharing pract
 - [JavaScript Closures Tutorial](/javascript-closures-tutorial/) - In-depth explanation of JavaScript closures with practical examples
 - [Learn JavaScript Before jQuery](/learn-javascript-before-jquery/) - Why understanding vanilla JavaScript is crucial before using frameworks
 - [Front End Web Developer Job Search](/front-end-web-developer-job-search/) - Comprehensive guide to finding web development positions
-- [Web Developer Job in 2022](/front-end-web-developer-job-2022/) - Updated insights on the current job market
+- [Web Developer Job in 2022](/front-end-web-developer-job-2022/) - Insights on the front-end job market from a 2022 perspective
 
 ## Technical Focus
 
-The blog emphasizes practical, real-world applications of web development concepts. Content is written for developers who want to understand not just how to implement solutions, but why certain approaches work better than others. The author draws from extensive experience at companies like JPMorgan Chase and various agencies to provide industry-relevant guidance.
+The blog emphasizes practical, real-world applications of web development concepts. Content is written for developers who want to understand not just how to implement solutions, but why certain approaches work better than others. The author draws from extensive experience at companies like JPMorgan Chase, Principal Financial Group, and various agencies to provide industry-relevant guidance.
 
 ## Content Format
 

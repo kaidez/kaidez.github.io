@@ -4,8 +4,8 @@
     <title>kaidez - Web Development Tutorials &amp; JavaScript Coding Tips</title>
     <link>https://kaidez.com</link>
     <description>Expert web development tutorials, JavaScript tips, and coding best practices. Learn modern web development with React, Node.js, TypeScript, and more from an experienced developer.</description>
-    <lastBuildDate>Thu, 26 Mar 2026 10:00:00 EDT</lastBuildDate>
-    <dc:date>Thu, 26 Mar 2026 10:00:00 EDT</dc:date>
+    <lastBuildDate>Fri, 03 Jul 2026 10:00:00 EDT</lastBuildDate>
+    <dc:date>Fri, 03 Jul 2026 10:00:00 EDT</dc:date>
     <language>en</language>
     <item>
       <title>Welcome Back!!!!!!!!</title>
@@ -878,6 +878,30 @@
       <pubDate>Thu, 26 Mar 2026 10:00:00 EDT</pubDate>
       <link>https://kaidez.com/building-ai-tools-claude-api/</link>
       <guid>https://kaidez.com/building-ai-tools-claude-api/</guid>
+    </item>
+    <item>
+      <title>What /insights Taught Me About My Claude Workflow</title>
+      <dc:creator>Kai Gittens</dc:creator>
+      <description>Running Claude Code&#39;s /insights command led me down a rabbit hole, but I came out the other side with better package management and automated build reporting.</description>
+      <pubDate>Mon, 30 Mar 2026 10:00:00 EDT</pubDate>
+      <link>https://kaidez.com/claude-insights-hooks-package-management/</link>
+      <guid>https://kaidez.com/claude-insights-hooks-package-management/</guid>
+    </item>
+    <item>
+      <title>Building A GitHub Triage Tracker with the Claude API</title>
+      <dc:creator>Kai Gittens</dc:creator>
+      <description>I built a GitHub triage tracker with the Claude API — here&#39;s what I learned.</description>
+      <pubDate>Mon, 13 Apr 2026 10:00:00 EDT</pubDate>
+      <link>https://kaidez.com/claude-github-triage-tracker/</link>
+      <guid>https://kaidez.com/claude-github-triage-tracker/</guid>
+    </item>
+    <item>
+      <title>I Just Did My First Code Commit at Principal Financial!</title>
+      <dc:creator>Kai Gittens</dc:creator>
+      <description>I started a front end engineer job at Principal Financial Group...and I really like it!!!</description>
+      <pubDate>Fri, 03 Jul 2026 10:00:00 EDT</pubDate>
+      <link>https://kaidez.com/principal-financial-front-end-job/</link>
+      <guid>https://kaidez.com/principal-financial-front-end-job/</guid>
     </item>
   </channel>
 </rss>
