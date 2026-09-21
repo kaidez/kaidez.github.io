@@ -41,23 +41,23 @@ Some comments I engaged with (mostly online) and some I didn't. But they didn't 
 
 I had real-world web developer stuff to deal with so I moved on.
 
-<h3>What Kevin said</h3>
+<h3>What Randy said</h3>
 
-Then, maybe on a subconscious impulse, I re-read <a href="https://web.archive.org/web/20130324030838/http://randyluecke.tumblr.com:80/post/45915323813/im-done-with-the-web">Kevin Luecke's "I'm done with the web" article</a>. An article that bummed me out when I first read it in 2013.
+Then, maybe on a subconscious impulse, I re-read <a href="https://web.archive.org/web/20130324030838/http://randyluecke.tumblr.com:80/post/45915323813/im-done-with-the-web">Randy Luecke's "I'm done with the web" article</a>. An article that bummed me out when I first read it in 2013.
 
-Kevin wasn't "done with the web" literally, but he was "done" with embracing the web developer community to the extent that he had. One reason for this was his frustration with why these developers hastily rejected certain JavaScript UI frameworks.
+Randy wasn't "done with the web" literally, but he was "done" with embracing the web developer community to the extent that he had. One reason for this was his frustration with why these developers hastily rejected certain JavaScript UI frameworks.
 
 Even though things like <a href="http://www.cappuccino-project.org/">Cappuccino</a> and <a href="https://www.emberjs.com/">Ember</a> solved problems, web devs shunned them because of their seemingly large, low-performant file sizes and steep learning curves. Little time, if any, was spent seeing if they solved problems: the knee-jerk reaction was to reject them based on those things.
 
-Kevin used other examples of web developers focusing on small-ish problems and he felt this was slowing web app progression. He felt that community was spending too much time worrying about the wrong stuff.
+Randy used other examples of web developers focusing on small-ish problems and he felt this was slowing web app progression. He felt that community was spending too much time worrying about the wrong stuff.
 
 He had enough of this "stagnation" as he phrased it so he, himself, moved on. From the web dev community, that is, and more towards native app development.
 
 What bummed me out about this article was how I'm a part of this community that rashly rejects stuff. Also, he made some <a href="https://www.youtube.com/watch?v=19g4n0ZxiYM&feature=youtu.be&t=2836">comments about "people that don't know how to program"</a> and I wondered if I was part of that group as well.
 
-<h3>What Kevin's article was really about</h3>
+<h3>What Randy's article was really about</h3>
 
-First, I don't know the context of Kevin Luecke's comments regarding people that don't know how to program. So I'm not going to take them <i>out</i> of context and let them bum me out.
+First, I don't know the context of Randy Luecke's comments regarding people that don't know how to program. So I'm not going to take them <i>out</i> of context and let them bum me out.
 
 I'm a self-taught, web developer: I learned web stuff at a time when those that knew even a <i>little</i> HTML were incredibly employable.  I've continued to do web stuff for a long time since then, giving me experience that <i>keeps</i> me incredibly employable.
 
@@ -93,7 +93,7 @@ Many things can slow an app down: don't put the blame for this all on JavaScript
 
 <h3>The complaints about learning curves</h3>
 
-In his post, Kevin Luecke is blunt about the defeatist attitude web devs take towards ramping up on new things. After quoting a developer who implied that it would take too long for their team to learn Ember, Luecke responded:
+In his post, Randy Luecke is blunt about the defeatist attitude web devs take towards ramping up on new things. After quoting a developer who implied that it would take too long for their team to learn Ember, Luecke responded:
 
 <blockquote class="content--blockquote-margin">
 "This reaction to Ember just baffles me. Your day job is to build a piece of web software and you can't take a few days to learn the ins and outs? Presumably you're in a large team because this project is important and will take some time to complete. Nevertheless, I've seen this reaction many times in the web culture.
@@ -143,7 +143,7 @@ I'm using React to deliver production-quality code on time. I don't see why this
 
 <h3>Web developers can learn from native developers</h3>
 
-While commenting about the complaints about learning curves, Kevin Luecke compared web developers to native developers:
+While commenting about the complaints about learning curves, Randy Luecke compared web developers to native developers:
 
 <blockquote class="content--blockquote-margin">
 "This mentality is pretty rare in the world of native development though. Almost every decent developer I know has no problem spending a weekend learning some new and cool tool, but sadly, this spirit seems to be absent from the web culture."
