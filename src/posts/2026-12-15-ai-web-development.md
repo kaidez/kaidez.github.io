@@ -17,7 +17,7 @@ Today is my sixth month anniversary as a web developer at Principal Financial Gr
 
 -The developer role will change.
 
--AI can code heads-down very well
+-AI can code heads-down very well. and it's not going anywhere
 
 -Spring solved a Java problem. React solved a frontend one
 
