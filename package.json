@@ -23,7 +23,7 @@
     "verboseDebug": "DEBUG=Eleventy* npx @11ty/eleventy"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy": "^3.1.7",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
     "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
     "@types/jest": "^30.0.0",
@@ -31,13 +31,13 @@
     "esbuild": "^0.28.2",
     "gh-pages": "^6.3.0",
     "html-minifier": "^4.0.0",
-    "jest": "^30.5.1",
-    "jest-environment-jsdom": "^30.5.1",
+    "jest": "^30.5.2",
+    "jest-environment-jsdom": "^30.5.2",
     "luxon": "^3.7.2",
-    "markdown-it": "^15.0.1",
-    "moment": "^2.30.1",
+    "markdown-it": "^15.0.3",
+    "moment": "^2.31.0",
     "purgecss": "^8.0.0",
-    "ts-jest": "^29.4.12",
+    "ts-jest": "^29.4.15",
     "typescript": "5.9.3"
   },
   "keywords": [
