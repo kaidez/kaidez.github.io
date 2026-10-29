@@ -22,3 +22,9 @@ Today is my sixth month anniversary as a web developer at Principal Financial Gr
 -Spring solved a Java problem. React solved a frontend one
 
 -Learn a wide array of things
+
+-Project managers are prepared to handle this
+
+-AI hype may be dying down...tht doesn't make it useless.
+
+-How would you describe your AI experience and ideas in a job interview?
