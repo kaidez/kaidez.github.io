@@ -27,4 +27,6 @@ Today is my sixth month anniversary as a web developer at Principal Financial Gr
 
 -AI hype may be dying down...tht doesn't make it useless.
 
+-Looking at jobs and job interviews as "coding is all that matters"
+
 -How would you describe your AI experience and ideas in a job interview?
