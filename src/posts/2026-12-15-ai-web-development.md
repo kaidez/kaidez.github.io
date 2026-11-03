@@ -30,3 +30,5 @@ Today is my sixth month anniversary as a web developer at Principal Financial Gr
 -Looking at jobs and job interviews as "coding is all that matters"
 
 -How would you describe your AI experience and ideas in a job interview?
+
+-Corporate as a whole will do interviews like this eventually, but they'll probably play catchup
