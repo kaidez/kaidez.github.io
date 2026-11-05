@@ -1,6 +1,6 @@
 ---
 title: 'How I "think" AI Will Change Software Development'
-date: 2026-12-15T12:00:00-02:00
+date: 2026-11-09T12:00:00-02:00
 excerpt: "After using AI at my software developer job for a few months, I have an idea about how jobs like this will evolve."
 layout: layouts/post.njk
 permalink: /ai-web-development/
@@ -12,7 +12,9 @@ schema_type: 'BlogPosting'
 proficiency_level: 'Beginner'
 draft: true
 ---
-Today is my sixth month anniversary as a web developer at Principal Financial Group. Like many other developers, I'm using generative AI in my work.
+At the time of this post, I've been a software developer at Principal Financial Group for almost five months. But more many more months, I've been reading lots of software dev musings about how AI will take 
+
+This post is about working as a salaried web developer/tech person. developer, designer...it doesn't matter
 
 
 -The developer role will change.
@@ -27,8 +29,10 @@ Today is my sixth month anniversary as a web developer at Principal Financial Gr
 
 -AI hype may be dying down...tht doesn't make it useless.
 
--Looking at jobs and job interviews as "coding is all that matters"
+-Looking at jobs and job interviews as "coding is all that matters" is a fading POV
 
 -How would you describe your AI experience and ideas in a job interview?
 
 -Corporate as a whole will do interviews like this eventually, but they'll probably play catchup
+
+-Open source back them helped shape the web at a time when it really needed it.  I'm not sure we're at that point anymore.
