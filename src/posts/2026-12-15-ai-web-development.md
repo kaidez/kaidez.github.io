@@ -12,7 +12,7 @@ schema_type: 'BlogPosting'
 proficiency_level: 'Beginner'
 draft: true
 ---
-At the time of this post, I've been a software developer at Principal Financial Group for almost five months. But more many more months, I've been reading lots of software dev musings about how AI will take 
+I'm coming up on my five-month anniversary of being a software developer at Principal Financial Group. But for many more months, I've been hearing about how AI will take software developers.
 
 This post is about working as a salaried web developer/tech person. developer, designer...it doesn't matter
 
