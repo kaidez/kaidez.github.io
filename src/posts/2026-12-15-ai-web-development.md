@@ -16,7 +16,7 @@ I'm coming up on my five-month anniversary of being a software developer at <a h
 
 <h2>Perspective</h2>
 
-This post is about working as a salaried web developer/tech person. developer, designer...it doesn't matter
+This post is about working as a salaried web developer/tech person. developer, designer...it doesn't matter. It's also written by someone that has a job.
 
 
 -The developer role will change.
