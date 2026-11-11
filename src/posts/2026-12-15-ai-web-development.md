@@ -12,7 +12,9 @@ schema_type: 'BlogPosting'
 proficiency_level: 'Beginner'
 draft: true
 ---
-I'm coming up on my five-month anniversary of being a software developer at Principal Financial Group. But for many more months, I've been hearing about how AI will take software developers.
+I'm coming up on my five-month anniversary of being a software developer at <a href="https://www.principal.com/" ria-label="Go to Principal Financial Group" rel="noopener noreferrer">Principal Financial Group (PFG)</a>. But for more months than that, I've been hearing about how AI will take software developers jobs.
+
+<h2>Perspective</h2>
 
 This post is about working as a salaried web developer/tech person. developer, designer...it doesn't matter
 
